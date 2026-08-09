@@ -8,8 +8,225 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#2f8a6e;--dom-lt:#8fd0b8}</style>
+<style>
+/* Palette — émeraude / jade / or ancien : la couleur de l'argent qui circule
+   et qui dure. Émeraude et jade évoquent la liquidité et la croissance (ce
+   qui coule, ce qui pousse) ; l'or ancien évoque la valeur accumulée, stockée
+   — le bilan comme richesse figée à un instant, quand le compte de résultat
+   n'est qu'un flux entre deux instants. Discipline 06 de la série. */
+:root{
+  --p1:#1f7a5c; --p1-lt:#7fc7ab;      /* émeraude — axe survie / structure */
+  --p2:#3fa78c; --p2-lt:#9fd9c5;      /* jade — axe performance / flux */
+  --p3:#b8935a; --p3-lt:#e0c48f; --p3-dk:#8a6a3c;  /* or ancien — valeur, convergence, automatisme */
+  --vert:#2f8f6d;
+  --ink:#1e3a30; --ink-soft:#4c7364;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.87);
+  --line:rgba(63,167,140,.38);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #cfead9 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 20%, #ecdfb7 0%, transparent 52%),
+    radial-gradient(1000px 720px at 34% 108%, #bfe3d0 0%, transparent 58%),
+    linear-gradient(158deg,#dcefe2 0%, #cbe7d8 42%, #e8ddb9 72%, #d2ecdf 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p3-dk);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(31,122,92,.26);
+  border-radius:26px;box-shadow:0 18px 48px rgba(30,58,48,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:200px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#164f3c;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.cbar .au{background:linear-gradient(90deg,var(--p3-lt),var(--p3))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p1)} .crd b.a{color:var(--p3-dk)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(90deg,var(--p1),var(--p3))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:640px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* diagramme des deux axes */
+.axes-wrap{position:relative;margin:26px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.axes-svg{width:100%;height:auto;display:block}
+.ax-lab{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.06em}
+.ax-box-txt{font-family:'Josefin Sans';font-size:.66rem;fill:var(--ink)}
+.ax-tag{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.08em}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(31,122,92,.24);border-radius:24px;box-shadow:0 16px 46px rgba(30,58,48,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#164f3c;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(184,147,90,.09);
+  border:1px solid rgba(184,147,90,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(31,122,92,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#256a52;
+  padding:5px 12px;border-radius:14px;background:rgba(47,143,109,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(184,147,90,.1);border:1px solid rgba(184,147,90,.5)}
+.errors .ee{background:rgba(63,167,140,.1);border:1px solid rgba(63,167,140,.45)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--p3-dk)} .errors .ee h5{color:var(--p1)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+/* compréhension / automatisme */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:14px;padding:14px 16px}
+.split .u{background:rgba(63,167,140,.1);border:1px solid rgba(63,167,140,.45)}
+.split .m{background:rgba(184,147,90,.1);border:1px solid rgba(184,147,90,.45)}
+.split h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p1)} .split .m h5{color:var(--p3-dk)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:3px 0 3px 16px;position:relative;color:var(--ink)}
+.split li::before{content:"❀";position:absolute;left:0;font-size:.55rem;top:6px;color:var(--p2)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#12432f}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(159,217,197,.16)}
+
+details.dilemma{background:rgba(255,255,255,.72);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#164f3c;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(63,167,140,.12);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p2)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(159,217,197,.22);border:1px solid var(--p2)}
+.helix{background:rgba(184,147,90,.1);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#12432f} .helix h5{color:var(--p3-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3-dk)}
+
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#256a52;
+  padding:5px 12px;border-radius:14px;background:rgba(47,143,109,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,47 +235,489 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d06">
-  <div class="tab">篇 VI</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 06</p>
-    <h3>Gestion financière</h3>
-    <p class="dmeta">S6 · 2 ECTS · Isabelle Noël · Langlois &amp; Friédérich ; Buisard</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Deux courbes sur la même chronologie : une courbe lisse et montante représentant le résultat cumulé, et une courbe en dents de scie représentant la trésorerie, qui plonge sous le seuil zéro exactement quand le résultat est au plus haut — illustrant qu'une entreprise peut être rentable et pourtant manquer de liquidités">
+      <defs>
+        <linearGradient id="danger" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e0c48f" stop-opacity=".5"/><stop offset="1" stop-color="#e0c48f" stop-opacity=".12"/>
+        </linearGradient>
+      </defs>
+      <rect x="40" y="120" width="600" height="55" fill="url(#danger)" rx="4"/>
+      <line x1="40" y1="120" x2="640" y2="120" stroke="#4c7364" stroke-width="1.4" stroke-dasharray="2 7"/>
+      <text x="44" y="112" font-family="Josefin Sans" font-size="9" letter-spacing="1" fill="#4c7364">TRÉSORERIE = 0</text>
+      <text x="48" y="171" font-family="Josefin Sans" font-size="9" letter-spacing="1" fill="#8a6a3c">zone de tension de caisse</text>
+      <!-- résultat cumulé : courbe lisse et montante -->
+      <path d="M40 150 C 140 132, 240 108, 340 94 S 520 58, 640 44" fill="none" stroke="#1f7a5c" stroke-width="3.2" stroke-linecap="round"/>
+      <text x="600" y="36" text-anchor="end" font-family="Cormorant Garamond" font-weight="600" font-size="14" fill="#1f7a5c">Résultat</text>
+      <!-- trésorerie : dents de scie, plonge sous zéro -->
+      <polyline points="40,131 95,96 140,150 190,84 240,161 300,74 360,169 420,68 480,151 540,58 600,108 640,88" fill="none" stroke="#b8935a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+      <text x="600" y="96" text-anchor="end" font-family="Cormorant Garamond" font-weight="600" font-size="14" fill="#b8935a">Trésorerie</text>
+      <!-- marqueur du paradoxe -->
+      <circle cx="360" cy="169" r="5.5" fill="#fff" stroke="#8a6a3c" stroke-width="2"/>
+      <line x1="360" y1="163" x2="360" y2="98" stroke="#4c7364" stroke-width="1" stroke-dasharray="1 5"/>
+      <circle cx="360" cy="94" r="3.5" fill="#1f7a5c" stroke="none"/>
+      <text x="390" y="186" text-anchor="middle" font-family="Spectral" font-style="italic" font-size="9.5" fill="#5a4020">même semaine : résultat au plus haut, caisse dans le rouge</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Gestion financière</h1>
+    <p class="gen-open">Une entreprise peut être <b>rentable et mourir quand même</b>. Le bénéfice se mesure sur un exercice entier ; la faillite se déclenche un jour précis, quand la caisse ne peut plus payer une échéance. Entre les deux, un décalage de calendrier que le résultat comptable ne montre jamais. Comment lire les mêmes comptes pour distinguer un problème de <b>rentabilité</b> — structurel, qui se soigne en changeant le métier — d'un problème de <b>trésorerie</b> — temporel, qui se soigne en changeant le calendrier des flux — et surtout, comment savoir sur lequel des deux agir avant qu'il ne soit trop tard ?</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:65%"></span><span class="au" style="width:35%"></span></span>
       <span class="crd">Système <b class="s">65%</b> · Automatisme <b class="a">35%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
     </div>
+    <p class="dmeta">S6 · 2 ECTS · Isabelle Noël · Références : Langlois &amp; Friédérich ; Buisard</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Une entreprise peut être <b>rentable et mourir quand même</b>. Comment lire des comptes pour distinguer un problème de rentabilité (structurel) d'un problème de trésorerie (temporel) — et agir sur le bon ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Du bilan comptable au bilan fonctionnel</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>Comptabilité C6</b> · reclassement par cycle</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>FRNG, BFR, trésorerie nette</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · <b>Ouvre :</b> tout le reste de la discipline</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Les Soldes Intermédiaires de Gestion</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : compte de résultat (Compta C6)</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>La capacité d'autofinancement</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3</b> · fait la jonction résultat ↔ bilan</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Les ratios &amp; l'effet de levier</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1, C2, C3</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Le diagnostic financier d'ensemble</b><span class="k sys">SYS</span><span class="dep">Prérequis : tous · l'épreuve type</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Import</div><div class="tc"><span class="node x">Compta générale · bilan &amp; compte de résultat</span></div></div>
-<div class="flow"><span class="fdot"></span>deux lectures parallèles du même jeu de comptes<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Deux axes</div><div class="tc"><span class="node f">C1→C2 · Axe bilan : survivre</span><span class="ar">‖</span><span class="node s">C3→C4 · Axe résultat : gagner</span></div></div>
-<div class="flow"><span class="fdot"></span>les ratios croisent les deux axes<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Croisement</div><div class="tc"><span class="node s">C5 · Ratios &amp; levier</span><span class="ar">→</span><span class="node s">C6 · Diagnostic</span></div></div>
-</div>
-    <p class="note">L'architecture est <b>binaire</b> : un axe de survie (bilan → trésorerie) et un axe de performance (résultat → rentabilité). Chaque notion appartient à l'un ou à l'autre ; les ratios les relient.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Temps entre décaissement et encaissement<i>C1·C2·C5</i></span><span class="sp">Bénéfice ≠ trésorerie<i>C2·C4</i></span><span class="sp">Cause vs conséquence : TN est un résultat<i>C2</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><path d="M14 6 L20 2 L26 6" opacity=".7"/></svg><b>Dirigeant</b><span>arbitre survie et croissance</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="16" width="28" height="16" rx="1"/><path d="M6 16 L20 6 L34 16"/><line x1="12" y1="20" x2="12" y2="28"/><line x1="20" y1="20" x2="20" y2="28"/><line x1="28" y1="20" x2="28" y2="28"/></svg><b>Banquier</b><span>prête contre des garanties</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="8"/><path d="M20 12 v16 M14 20 h12" opacity=".6"/><path d="M20 4 L23 9 L17 9 Z" fill="none"/></svg><b>Actionnaire</b><span>exige un rendement</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="18" width="6" height="12"/><rect x="15" y="12" width="6" height="18"/><rect x="24" y="6" width="6" height="24"/><circle cx="30" cy="10" r="2" fill="#fff" stroke-width="1.2"/></svg><b>Analyste</b><span>compare et note le risque</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 100 C 90 60, 120 55, 170 55 S 280 110, 330 110 S 440 150, 490 150 S 600 100, 650 100 S 800 55, 860 55" fill="none" stroke="#9fd9c5" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(20,100)"><circle r="17" fill="#b8935a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="-14" y="34" text-anchor="start">Bilan fonctionnel</text></g>
+        <g transform="translate(170,55)"><circle r="17" fill="#b8935a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="34" text-anchor="middle">FRNG · BFR · TN</text></g>
+        <g transform="translate(330,110)"><circle r="15" fill="#3fa78c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="-22" text-anchor="middle">SIG</text></g>
+        <g transform="translate(490,150)"><circle r="15" fill="#3fa78c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-24" text-anchor="middle">CAF</text></g>
+        <g transform="translate(650,100)"><circle r="15" fill="#3fa78c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">Ratios · levier</text></g>
+        <g transform="translate(860,55)"><circle r="17" fill="#1f7a5c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="-6" y="34" text-anchor="middle">Diagnostic</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="axes-wrap">
+    <p class="tl-title">Les deux axes qui structurent la discipline</p>
+    <svg class="axes-svg" viewBox="0 0 720 575" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#4c7364"/>
+        </marker>
+      </defs>
+      <text x="360" y="18" text-anchor="middle" class="ax-tag" letter-spacing="2" fill="#4c7364">DEUX LECTURES PARALLÈLES DU MÊME JEU DE COMPTES</text>
+
+      <!-- colonne gauche : survie -->
+      <text x="170" y="42" text-anchor="middle" class="ax-lab" fill="#1f7a5c" font-weight="600">AXE SURVIE — le bilan</text>
+      <g stroke="#1f7a5c" stroke-width="1.6" fill="rgba(127,199,171,.16)">
+        <rect x="60" y="50" width="220" height="46" rx="10"/>
+        <rect x="60" y="128" width="220" height="46" rx="10"/>
+        <rect x="60" y="206" width="220" height="46" rx="10"/>
+        <rect x="60" y="284" width="220" height="46" rx="10"/>
+        <rect x="60" y="362" width="220" height="52" rx="10"/>
+      </g>
+      <g class="ax-box-txt" text-anchor="middle">
+        <text x="170" y="70">Bilan comptable</text><text x="170" y="83" font-size="9" fill="#4c7364">patrimonial, classé par nature juridique</text>
+        <text x="170" y="148">Bilan fonctionnel — C1</text><text x="170" y="161" font-size="9" fill="#4c7364">reclassé par cycle économique</text>
+        <text x="170" y="226">FRNG — C2</text><text x="170" y="239" font-size="9" fill="#4c7364">ressources stables − emplois stables</text>
+        <text x="170" y="304">BFR — C2</text><text x="170" y="317" font-size="9" fill="#4c7364">actif circulant − passif circulant</text>
+        <text x="170" y="384" font-weight="600">Trésorerie nette — C2</text><text x="170" y="398" font-size="9" fill="#4c7364">= FRNG − BFR</text>
+      </g>
+      <line x1="170" y1="96" x2="170" y2="126" stroke="#1f7a5c" stroke-width="1.6" marker-end="url(#arw)"/>
+      <line x1="170" y1="174" x2="170" y2="204" stroke="#1f7a5c" stroke-width="1.6" marker-end="url(#arw)"/>
+      <line x1="170" y1="252" x2="170" y2="282" stroke="#1f7a5c" stroke-width="1.6" marker-end="url(#arw)"/>
+      <line x1="170" y1="330" x2="170" y2="360" stroke="#1f7a5c" stroke-width="1.6" marker-end="url(#arw)"/>
+
+      <!-- colonne droite : performance -->
+      <text x="550" y="42" text-anchor="middle" class="ax-lab" fill="#3fa78c" font-weight="600">AXE PERFORMANCE — le résultat</text>
+      <g stroke="#3fa78c" stroke-width="1.6" fill="rgba(159,217,197,.2)">
+        <rect x="440" y="50" width="220" height="46" rx="10"/>
+        <rect x="440" y="152" width="220" height="60" rx="10"/>
+        <rect x="440" y="278" width="220" height="46" rx="10"/>
+      </g>
+      <g class="ax-box-txt" text-anchor="middle">
+        <text x="550" y="70">Compte de résultat</text><text x="550" y="83" font-size="9" fill="#4c7364">produits et charges de l'exercice</text>
+        <text x="550" y="176">SIG en cascade — C3</text><text x="550" y="189" font-size="9" fill="#4c7364">marge → VA → EBE → RE → résultat net</text><text x="550" y="201" font-size="9" fill="#4c7364">chaque solde exclut un peu plus</text>
+        <text x="550" y="298" font-weight="600">CAF — C4</text><text x="550" y="311" font-size="9" fill="#4c7364">flux potentiel réel, hors non-décaissable</text>
+      </g>
+      <line x1="550" y1="96" x2="550" y2="150" stroke="#3fa78c" stroke-width="1.6" marker-end="url(#arw)"/>
+      <line x1="550" y1="212" x2="550" y2="276" stroke="#3fa78c" stroke-width="1.6" marker-end="url(#arw)"/>
+
+      <text x="360" y="345" text-anchor="middle" class="ax-tag" font-style="italic" fill="#4c7364">structure figée à un instant · vs · flux entre deux instants</text>
+
+      <!-- convergence -->
+      <path d="M170 414 C 220 445, 260 452, 300 460" fill="none" stroke="#b8935a" stroke-width="1.8" marker-end="url(#arw)"/>
+      <path d="M550 324 C 500 400, 460 440, 420 460" fill="none" stroke="#b8935a" stroke-width="1.8" marker-end="url(#arw)"/>
+      <text x="360" y="440" text-anchor="middle" class="ax-tag" fill="#8a6a3c">les ratios croisent structure et performance</text>
+
+      <g stroke="#b8935a" stroke-width="1.8" fill="rgba(224,196,143,.28)">
+        <rect x="240" y="465" width="240" height="46" rx="10"/>
+        <rect x="220" y="527" width="280" height="46" rx="10"/>
+      </g>
+      <g class="ax-box-txt" text-anchor="middle">
+        <text x="360" y="485" font-weight="600">Ratios &amp; effet de levier — C5</text><text x="360" y="498" font-size="9" fill="#4c7364">rapportent les masses les unes aux autres</text>
+        <text x="360" y="547" font-weight="600">Diagnostic financier d'ensemble — C6</text><text x="360" y="560" font-size="9" fill="#4c7364">synthèse argumentée · l'épreuve type</text>
+      </g>
+      <line x1="360" y1="511" x2="360" y2="525" stroke="#b8935a" stroke-width="1.8" marker-end="url(#arw)"/>
+    </svg>
+    <p class="note">Chaque notion de la discipline appartient à l'un des deux axes, jamais aux deux : le <b>bilan</b> répond à « peut-elle payer ses factures ? », le <b>résultat</b> répond à « gagne-t-elle de l'argent ? ». Les ratios (C5) ne créent aucune donnée nouvelle — ils rapportent des masses des deux colonnes l'une à l'autre pour rendre les entreprises comparables entre elles.</p>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>L'axe de survie : du bilan fonctionnel à la trésorerie</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Le bilan comptable que produit la discipline Comptabilité générale (05) est un document légal : il prouve ce que l'entreprise possède et ce qu'elle doit, classé par <b>nature juridique</b> — immobilisations, stocks, créances, dettes à plus ou moins d'un an. Mais un dirigeant qui doit payer ses fournisseurs dans trois semaines n'a pas besoin de savoir si un poste est juridiquement une immobilisation : il a besoin de savoir <b>à quel cycle économique appartient chaque ressource et chaque emploi</b>, et si les ressources qui durent financent bien les emplois qui durent. Comment transformer un document conçu pour prouver la propriété en un outil qui dit si l'entreprise a les moyens de tenir son cycle d'exploitation ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — une incertitude à assumer</h5>
+          <p>L'<b>analyse fonctionnelle du bilan</b> — ce reclassement en cycles d'investissement, de financement et d'exploitation — n'a pas d'inventeur individuel clairement identifié. C'est une méthode développée et enseignée dans la tradition comptable et financière française de la seconde moitié du XX<sup>e</sup> siècle, en complément du Plan Comptable Général (voir discipline 05 pour les dates du PCG et de l'ANC). Plutôt que d'attribuer une paternité approximative, il faut retenir ce que sa disparition changerait : sans ce reclassement, deux entreprises au même résultat net resteraient incomparables sur leur solidité financière, faute d'un langage commun sur ce qui est stable et ce qui ne l'est pas.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Le bilan fonctionnel range chaque poste selon son cycle, pas selon sa nature légale : les immobilisations reviennent à leur valeur <b>brute</b> (l'amortissement est réintégré aux ressources, comme une ressource déjà autofinancée), et les concours bancaires courants sortent des dettes financières pour rejoindre la trésorerie passif. Ce reclassement produit trois indicateurs empilés :</p>
+      <div class="chain">
+        <span class="node">FRNG = ressources stables − emplois stables</span><span class="arrow">→</span>
+        <span class="node">BFR = actif circulant − passif circulant (hors trésorerie)</span><span class="arrow">→</span>
+        <span class="node">Trésorerie nette = FRNG − BFR</span>
+      </div>
+      <p class="mech">Le <b>BFR</b> répond à un problème purement mécanique de calendrier : une entreprise paie généralement ses fournisseurs et constitue son stock <i>avant</i> d'encaisser ses clients. Ce décalage de dates, pas une invention datée, crée un besoin de financement récurrent — le BFR n'est donc pas un solde qu'on choisit d'avoir, c'est la conséquence arithmétique d'un délai. La <b>trésorerie nette</b> n'est, elle, ni gagnée ni décidée : c'est un <b>résultat</b>, la différence entre ce que le FRNG apporte de stable et ce que le BFR consomme de court terme. Un FRNG positif ne garantit rien si le BFR grossit plus vite que lui — c'est exactement ce que montre l'illustration en tête de page.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Atelier Vasseur — rentable, et pourtant à sec</h5>
+        <p>Atelier Vasseur, une menuiserie industrielle de 22 salariés, décroche coup sur coup deux gros marchés de mobilier pour des enseignes hôtelières. Le chiffre d'affaires bondit de 40% en un an, le résultat comptable est excellent. Mais pour honorer ces marchés, Vasseur doit acheter plus de bois massif et de quincaillerie <i>avant</i> de livrer, payer ses sous-traitants de finition à 30 jours, tandis que ses nouveaux clients hôteliers négocient des délais de paiement à 60 jours. Le stock grossit, les créances clients grossissent, le BFR explose plus vite que la marge dégagée — c'est <b>l'effet ciseau de la croissance</b> : plus l'entreprise gagne de nouveaux marchés, plus son besoin de financement à court terme s'aggrave, alors même que ses comptes annuels affichent un excellent résultat.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Comptabilité générale (05) <i>— fournit le bilan comptable brut à reclasser</i></span>
+        <span class="linkchip">Outils de gestion (07) <i>— la gestion des stocks pilote directement une composante majeure du BFR</i></span>
+        <span class="linkchip">Techniques du commerce international (01) <i>— un Incoterm engageant (DDP) allonge le décalage de trésorerie</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Confondre FRNG et trésorerie nette — le premier est une masse structurelle, la seconde un solde résiduel</li>
+          <li>Oublier de neutraliser les concours bancaires courants dans le passif circulant, qui appartiennent à la trésorerie</li>
+          <li>Calculer le BFR à partir du bilan comptable brut, sans passer par le reclassement fonctionnel</li>
+          <li>Croire qu'un FRNG positif suffit, à lui seul, à garantir une trésorerie positive</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Piloter uniquement sur le résultat comptable trimestriel, sans jamais suivre l'évolution du BFR en parallèle</li>
+          <li>Financer un BFR structurel et croissant par découvert court terme, un outil pensé pour un besoin ponctuel, pas permanent</li>
+          <li>Ne pas anticiper qu'une forte croissance commerciale aggrave mécaniquement le besoin de trésorerie avant de l'améliorer</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Bilan comptable vs bilan fonctionnel — ce qui change de logique</caption>
+        <thead><tr><th>Critère</th><th>Bilan comptable</th><th>Bilan fonctionnel</th></tr></thead>
+        <tbody>
+          <tr><td>Logique de classement</td><td>Juridique et patrimoniale : qui possède, qui doit</td><td>Économique : à quel cycle appartient chaque poste</td></tr>
+          <tr><td>Immobilisations</td><td>Valeur nette comptable (après amortissement)</td><td>Valeur brute ; amortissement replacé en ressource stable</td></tr>
+          <tr><td>Concours bancaires courants</td><td>Rangés en dettes financières</td><td>Isolés en trésorerie passif, hors dettes stables</td></tr>
+          <tr><td>Question posée</td><td>Qui possède quoi, et jusqu'à quand ?</td><td>L'entreprise peut-elle financer son cycle d'exploitation ?</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez Atelier Vasseur. La CAF est solide, le carnet de commandes plein, mais la trésorerie sera à sec dans trois semaines. Que faites-vous ?</p>
+        <p class="dctx">Votre banquier propose un découvert autorisé à un taux élevé ; un des deux clients hôteliers accepterait de payer comptant contre une remise de 3% ; une société d'affacturage rachèterait vos créances moyennant 1,5% du chiffre d'affaires concerné, avec versement sous 48h.</p>
+        <div class="dopts">
+          <span>A. Négocier le découvert bancaire</span>
+          <span>B. Accepter la remise de 3% pour un paiement comptant</span>
+          <span>C. Recourir à l'affacturage sur les créances les plus récentes</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique — chaque option a un coût et un risque différents. Le <b>découvert</b> est l'outil le moins cher à court terme mais mal adapté si le besoin est <i>structurel</i> (il redevient un poste permanent, ce qui inquiète le banquier au renouvellement). La <b>remise de 3%</b> coûte cher en proportion (annualisée sur un délai de 60 jours, c'est un taux implicite très supérieur à un crédit bancaire classique) mais ne crée aucune dépendance. L'<b>affacturage</b> a un coût affiché élevé mais transfère aussi le risque d'impayé et libère du temps de gestion — une option souvent sous-utilisée par méconnaissance plutôt que par calcul.</p>
+          <p>Une dirigeante avisée distingue d'abord si ce besoin est <b>ponctuel</b> (lié à ces deux marchés précis) ou <b>structurel</b> (le nouveau régime normal de l'entreprise). Dans le premier cas, le découvert suffit ; dans le second, il faut revoir en profondeur les délais de paiement négociés avec les clients — la vraie cause, en amont de toutes ces solutions correctives.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un résultat excellent ne protège de rien si le BFR croît plus vite que la CAF qui doit le financer</li>
+            <li>La croissance commerciale coûte de la trésorerie avant d'en rapporter — un signe de succès peut ressembler, en caisse, à un signe d'échec</li>
+            <li>Négocier les délais fournisseurs et clients est un levier de trésorerie aussi puissant qu'un emprunt, et gratuit</li>
+            <li>Un découvert permanent n'est pas une solution de trésorerie, c'est un symptôme non traité</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA financière frappe ici</h5>
+          <ul>
+            <li>Trésorerie prévisionnelle glissante à 90 jours, recalculée en continu à partir des délais réels constatés</li>
+            <li>Détection précoce d'un dérapage du BFR avant qu'il n'atteigne le seuil de rupture de caisse</li>
+            <li>Comparaison automatique du coût réel (annualisé) de chaque solution de financement court terme disponible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>L'axe de performance : les SIG et la CAF</h2>
+      <p class="dsub">Chapitres C3 · C4</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Le compte de résultat légal donne un chiffre unique — le résultat net — mais ne dit rien de sa <b>composition</b>. Ce résultat vient-il d'une activité commerciale saine, d'une bonne maîtrise des charges de personnel, d'un effet mécanique de faibles amortissements, ou d'un produit exceptionnel qui ne se reproduira pas l'an prochain ? Deux entreprises peuvent afficher le même résultat net pour des raisons opposées — l'une parce qu'elle crée durablement de la valeur, l'autre parce qu'elle a vendu un bâtiment cette année-là. Comment décomposer un résultat global en paliers successifs pour localiser précisément où se loge la performance, ou la dérive ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Les <b>Soldes Intermédiaires de Gestion</b> (SIG) sont une nomenclature définie par le Plan Comptable Général français (voir discipline 05 pour les dates du PCG et de l'ANC) : des reclassements du compte de résultat en paliers successifs, propres à la présentation comptable française. Il faut les distinguer des approches anglo-saxonnes de <i>ratio analysis</i>, qui comparent des masses du compte de résultat sans suivre cette même nomenclature en cascade. Sans les SIG, deux comptables formés dans deux traditions différentes ne découperaient pas le même résultat net aux mêmes endroits — chacun perdrait la possibilité de comparer une entreprise à une autre sur des bases identiques.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Marge commerciale</span><span class="arrow">→</span>
+        <span class="node">Valeur ajoutée</span><span class="arrow">→</span>
+        <span class="node">EBE</span><span class="arrow">→</span>
+        <span class="node">Résultat d'exploitation</span><span class="arrow">→</span>
+        <span class="node">Résultat net</span>
+      </div>
+      <p class="mech">Chaque solde retire une couche d'explication à celui qui précède, jusqu'à ce qu'il ne reste plus rien à retirer. Le palier le plus stratégique est l'<b>EBE</b> : il exclut la politique d'amortissement et la structure de financement — c'est-à-dire des <b>choix</b> (investir plus ou moins, s'endetter plus ou moins), pas de la performance opérationnelle. Deux entreprises au même métier, avec le même EBE mais des résultats nets très différents, n'ont pas une performance différente : elles ont fait des choix d'investissement ou de financement différents. C'est pourquoi un banquier ou un analyste financier (voir la discipline elle-même) regarde souvent l'EBE avant le résultat net.</p>
+
+      <table class="cmp">
+        <caption>La cascade des SIG — ce que chaque solde exclut, par rapport au précédent</caption>
+        <thead><tr><th>Solde</th><th>Calcul depuis le précédent</th><th>Ce qu'il exclut désormais</th><th>Ce qu'il révèle</th></tr></thead>
+        <tbody>
+          <tr><td>Marge commerciale</td><td>Ventes de marchandises − coût d'achat des marchandises vendues</td><td>Toute activité de production propre</td><td>La rentabilité du négoce pur</td></tr>
+          <tr><td>Valeur ajoutée</td><td>+ Production de l'exercice − consommations en provenance de tiers</td><td>Les achats et charges externes (sous-traitance, énergie...)</td><td>Ce que l'entreprise crée réellement, en interne</td></tr>
+          <tr><td>EBE</td><td>+ subventions − impôts et taxes − charges de personnel</td><td>La politique d'amortissement et la structure de financement</td><td>La rentabilité opérationnelle brute, comparable entre entreprises</td></tr>
+          <tr><td>Résultat d'exploitation</td><td>± dotations, reprises et autres produits/charges</td><td>Le résultat financier et l'exceptionnel</td><td>La performance du métier, une fois les investissements amortis</td></tr>
+          <tr><td>Résultat net</td><td>± résultat financier ± exceptionnel − participation − IS</td><td>Plus rien : c'est le solde final</td><td>Ce qui reste pour les actionnaires — mais mélange à nouveau tout</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u"><h5>À comprendre</h5><ul>
+          <li>Pourquoi l'EBE est indépendant des choix d'amortissement et de financement, et donc plus comparable entre entreprises que le résultat net</li>
+          <li>Pourquoi chaque solde ne fait qu'exclure une explication de plus, jamais en ajouter</li>
+          <li>Pourquoi un résultat net faible n'est pas toujours une mauvaise nouvelle une fois remonté à l'EBE</li>
+        </ul></div>
+        <div class="m"><h5>À automatiser</h5><ul>
+          <li>L'ordre exact et les intitulés officiels du PCG : marge commerciale, production, valeur ajoutée, EBE, résultat d'exploitation, RCAI, résultat exceptionnel, résultat net</li>
+          <li>La formule additive de la CAF depuis le résultat net</li>
+          <li>La formule soustractive de la CAF depuis l'EBE</li>
+        </ul></div>
+      </div>
+
+      <div class="callout" style="background:rgba(63,167,140,.09);border-color:rgba(63,167,140,.4)">
+        <svg viewBox="0 0 40 40" stroke="#256a52"><circle cx="20" cy="20" r="15"/><path d="M14 20 h12 M20 14 v12"/></svg>
+        <div>
+          <h5>La CAF — pourquoi un résultat comptable ne suffit pas</h5>
+          <p>Le résultat net contient des charges qui ne sortent jamais de la caisse — les dotations aux amortissements et provisions — et parfois des produits qui n'y entrent pas immédiatement — comme une plus-value de cession. La <b>capacité d'autofinancement</b> corrige ce résultat pour estimer le flux de trésorerie potentiel réellement généré par l'activité : <b>méthode additive</b>, on part du résultat net et on y ajoute les charges non décaissables tout en retranchant les produits non encaissables ; <b>méthode soustractive</b>, on part directement de l'EBE et on y ajoute ou retranche les éléments encaissables/décaissables du résultat financier et exceptionnel. Les deux méthodes, correctement appliquées, aboutissent au même montant — c'est cette valeur qui, ensuite, alimente le FRNG (篇 I) comme ressource stable : la CAF est la charnière qui relie l'axe performance à l'axe survie.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Atelier Vasseur, un an plus tard</h5>
+        <p>Après avoir investi dans une nouvelle machine à commande numérique pour absorber sa croissance, Atelier Vasseur voit son résultat net chuter fortement à cause d'une lourde dotation aux amortissements. Un actionnaire minoritaire s'inquiète et demande si l'entreprise perd de l'argent. Le tableau des SIG montre au contraire un EBE en hausse de 18% : l'activité s'est améliorée, seul le choix d'investir (donc d'amortir) pèse sur le résultat net affiché. La CAF, elle, reste largement positive — la machine ne coûte rien en trésorerie cette année, seulement en résultat comptable — et continue d'alimenter le FRNG, malgré la baisse du résultat net qui a inquiété l'actionnaire.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Comptabilité générale (05) <i>— fournit le compte de résultat brut et les règles d'amortissement</i></span>
+        <span class="linkchip">Outils de gestion (07) <i>— l'EBE et la CAF alimentent les tableaux de bord de pilotage</i></span>
+        <span class="linkchip">Ratios &amp; diagnostic (篇 III) <i>— l'EBE et la CAF sont les numérateurs des ratios de rentabilité économique</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Inverser l'ordre de la cascade des SIG, ou oublier qu'un solde ne peut réintégrer une charge déjà exclue plus haut</li>
+          <li>Confondre CAF et trésorerie disponible : la CAF est un flux <i>potentiel</i>, pas un solde de compte bancaire</li>
+          <li>Oublier de neutraliser les plus-values de cession dans le calcul additif de la CAF</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Communiquer uniquement sur le résultat net auprès des actionnaires, sans jamais présenter l'EBE ni la CAF</li>
+          <li>Ralentir un investissement rentable par crainte d'un résultat net dégradé, alors que l'EBE et la CAF restent solides</li>
+          <li>Distribuer un dividende calé sur le résultat net sans vérifier que la CAF le permet réellement en trésorerie</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez Atelier Vasseur. L'actionnaire minoritaire, inquiet du résultat net en baisse, demande de céder la nouvelle machine pour « limiter la casse ». Que répondez-vous ?</p>
+        <p class="dctx">L'EBE et la CAF sont solides et en hausse ; céder la machine libérerait un peu de trésorerie immédiate mais casserait la capacité de production qui a justifié les deux gros contrats gagnés.</p>
+        <div class="dopts">
+          <span>A. Céder la machine pour rassurer l'actionnaire à court terme</span>
+          <span>B. Refuser et présenter le tableau des SIG complet pour expliquer le mécanisme</span>
+          <span>C. Proposer un compromis : céder un autre actif moins stratégique pour montrer un geste</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Céder un outil de production rentable pour améliorer un seul indicateur comptable, sans changer la réalité économique, revient à sacrifier la capacité future pour un affichage présent — un choix rarement défendable une fois expliqué. Mais l'option B seule ne suffit pas non plus : un actionnaire qui ne comprend pas les SIG aujourd'hui ne les comprendra pas mieux après un exposé technique unique. La vraie réponse combine pédagogie récurrente (communiquer l'EBE et la CAF à chaque clôture, pas seulement en cas de crise) et vigilance réelle : si la baisse de résultat net masquait <i>aussi</i> une dégradation opérationnelle, l'inquiétude serait fondée — d'où l'intérêt de croiser systématiquement plusieurs soldes plutôt qu'un seul, ce qui est précisément l'objet du diagnostic financier (篇 III).</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le résultat net est le solde le plus visible et le moins informatif : il mélange l'opérationnel, le financier et l'exceptionnel</li>
+            <li>L'EBE est le langage commun avec les banquiers — il ne dépend ni de la politique d'amortissement, ni de la structure de dette</li>
+            <li>Investir fait presque toujours baisser le résultat net à court terme via l'amortissement — ce n'est pas un signal d'alarme en soi</li>
+            <li>La CAF, pas le résultat net, doit encadrer la politique de dividende pour ne jamais distribuer une trésorerie qui n'existe pas</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA financière frappe ici</h5>
+          <ul>
+            <li>Génération automatique du tableau des SIG à partir du fichier des écritures comptables (FEC), actualisée en continu</li>
+            <li>Détection d'anomalie dans la cascade — par exemple une valeur ajoutée qui stagne alors que le chiffre d'affaires progresse</li>
+            <li>Recalcul instantané de la CAF (les deux méthodes) à chaque nouvelle écriture, pour un pilotage en temps réel plutôt qu'à la clôture</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Croiser les deux axes : ratios, levier et diagnostic</h2>
+      <p class="dsub">Chapitres C5 · C6</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Un FRNG de 200 000€ ou un EBE de 80 000€ ne veulent rien dire seuls : ce sont de bons chiffres pour une PME de 20 salariés, des chiffres inquiétants pour un groupe qui en emploie 2 000. Comment comparer des entreprises de tailles différentes, ou suivre une même entreprise dans le temps indépendamment de sa croissance ? Il faut <b>rapporter</b> les masses des deux axes les unes aux autres — c'est le rôle des ratios. Et une fois ces ratios calculés, il reste la question la plus difficile de la discipline : comment les croiser tous pour porter, sur une entreprise réelle, un jugement global argumenté — l'exercice type de l'examen ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — l'effet de levier</h5>
+          <p>L'idée que l'endettement peut augmenter la rentabilité des capitaux propres — tant que le coût de la dette reste inférieur à la rentabilité économique — est une pratique empirique ancienne, utilisée par les entreprises bien avant d'être théorisée. Son cadre moderne a été formalisé dans le contexte plus large de la théorie financière du XX<sup>e</sup> siècle, notamment par <b>Franco Modigliani et Merton Miller</b>, dans leur article fondateur <i>« The Cost of Capital, Corporation Finance and the Theory of Investment »</i> (<span class="yr">American Economic Review, 1958</span>). Ce jalon théorique n'a pas inventé le levier — il a formalisé, dans un cadre rigoureux, un mécanisme déjà pratiqué de manière empirique par les entreprises et leurs banquiers. Sans ce cadre, l'intuition « s'endetter peut être rentable » resterait un savoir-faire de terrain, sans formule pour le mesurer ni pour anticiper son inversion en risque.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Rentabilité économique (Re) = résultat d'exploitation / actif économique</span><span class="arrow">→</span>
+        <span class="node">Comparer Re au coût de la dette (i)</span><span class="arrow">→</span>
+        <span class="node">Rentabilité financière (Rf) = Re + (Re − i) × Dettes/Capitaux propres</span>
+      </div>
+      <p class="mech">Le mécanisme est symétrique, et c'est ce qui en fait un risque autant qu'une opportunité : si <b>Re &gt; i</b>, chaque euro de dette supplémentaire tire la rentabilité des capitaux propres vers le haut — <b>effet de levier positif</b>. Si <b>Re &lt; i</b>, le même mécanisme joue en sens inverse et amplifie les pertes plus vite que si l'entreprise n'était pas endettée — <b>effet de massue</b>. L'endettement n'est donc jamais neutre : il agit comme un amplificateur, dans un sens ou dans l'autre, selon un seul écart qui peut changer de signe d'une année sur l'autre si la conjoncture se retourne.</p>
+
+      <table class="cmp">
+        <caption>Même rentabilité économique, deux structures financières — l'effet de levier en chiffres</caption>
+        <thead><tr><th>Indicateur</th><th>Sans dette</th><th>Avec dette (levier positif)</th></tr></thead>
+        <tbody>
+          <tr><td>Actif économique</td><td>1 000 000 €</td><td>1 000 000 €</td></tr>
+          <tr><td>Capitaux propres / Dettes financières</td><td>1 000 000 € / 0 €</td><td>400 000 € / 600 000 €</td></tr>
+          <tr><td>Résultat d'exploitation (Re = 10%)</td><td>100 000 €</td><td>100 000 €</td></tr>
+          <tr><td>Charges financières (coût de la dette i = 5%)</td><td>0 €</td><td>30 000 €</td></tr>
+          <tr><td>Résultat courant</td><td>100 000 €</td><td>70 000 €</td></tr>
+          <tr><td>Rentabilité financière (Rf)</td><td>10,0%</td><td>17,5%</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Dans cet exemple, <b>Re (10%) &gt; i (5%)</b> : l'endettement fait passer la rentabilité pour l'actionnaire de 10% à 17,5%. Si la conjoncture faisait chuter Re à 3% — sous le coût de la dette — le même montage ferait chuter Rf bien en dessous de 3% : l'effet de massue joue exactement à l'inverse, avec la même intensité.</p>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u"><h5>À comprendre</h5><ul>
+          <li>Pourquoi le levier amplifie dans les deux sens, et pourquoi son signe peut s'inverser d'un exercice sur l'autre</li>
+          <li>Pourquoi la rentabilité économique doit être jugée par rapport au coût de la dette, jamais dans l'absolu</li>
+          <li>Pourquoi les ratios ne créent aucune information nouvelle — ils rendent seulement des masses comparables entre elles</li>
+        </ul></div>
+        <div class="m"><h5>À automatiser</h5><ul>
+          <li>La formule exacte : Rf = Re + (Re − i) × D/CP</li>
+          <li>Le calcul du coût moyen de la dette (charges financières / dettes financières moyennes)</li>
+          <li>Les ratios usuels de structure : autonomie financière, liquidité générale, capacité de remboursement</li>
+        </ul></div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret — le diagnostic complet</p>
+      <div class="example">
+        <h5>Atelier Vasseur, synthèse de fin d'exercice</h5>
+        <p>En croisant les deux axes, le diagnostic d'Atelier Vasseur devient lisible : sur l'axe survie, le FRNG est correct mais le BFR a bondi plus vite que lui, d'où une trésorerie nette tendue — un problème <b>temporel</b>. Sur l'axe performance, l'EBE et la CAF progressent, le résultat net a seulement baissé sous l'effet d'un amortissement — pas un problème de <b>rentabilité</b>. Les ratios confirment : la rentabilité économique dépasse largement le coût de la dette contractée pour la nouvelle machine, l'endettement est donc un levier sain, pas un risque. Le diagnostic conclut que Vasseur n'a pas de problème de fond — elle a un problème de calendrier de trésorerie lié à sa croissance, qui se résout par une renégociation des délais clients, pas par un ralentissement de l'activité.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Bilan fonctionnel (篇 I) <i>— fournit l'actif économique et les capitaux propres des ratios</i></span>
+        <span class="linkchip">SIG &amp; CAF (篇 II) <i>— fournissent l'EBE et le résultat d'exploitation des ratios de rentabilité</i></span>
+        <span class="linkchip">Outils de gestion (07) <i>— les ratios de rotation des stocks et délais clients/fournisseurs prolongent le diagnostic</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Comparer Re et i sans vérifier leur cohérence de période (taux annuel vs charges d'un exercice)</li>
+          <li>Traiter chaque ratio isolément à l'examen, sans les croiser pour construire un diagnostic argumenté</li>
+          <li>Oublier que le diagnostic financier doit conclure par une recommandation, pas seulement un constat chiffré</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>S'endetter fortement en période favorable sans stress-tester ce qui se passe si Re chute sous i</li>
+          <li>Communiquer un seul ratio flatteur aux partenaires financiers en isolant du reste du diagnostic</li>
+          <li>Confondre un problème de trésorerie ponctuel avec un problème de rentabilité structurel, et y répondre par le mauvais levier</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes le banquier d'Atelier Vasseur. L'entreprise demande un prêt supplémentaire à 6% pour financer son expansion ; sa rentabilité économique actuelle est de 7%, mais 70% de son chiffre d'affaires dépend d'un seul client hôtelier.</p>
+        <p class="dctx">Le dossier est rentable sur le papier — Re (7%) reste au-dessus du taux proposé (6%) — mais la marge de sécurité est faible et la dépendance client est un risque non financier qui n'apparaît dans aucun ratio du bilan.</p>
+        <div class="dopts">
+          <span>A. Accorder le prêt, les ratios sont favorables</span>
+          <span>B. Refuser, la marge de sécurité entre Re et i est trop faible</span>
+          <span>C. Accorder un prêt réduit, conditionné à une diversification progressive de la clientèle</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Un banquier strictement chiffré accorderait le prêt : Re dépasse i, le levier reste positif. Mais un diagnostic financier complet ne s'arrête jamais aux ratios calculés — il questionne leur <b>fragilité</b>. Si le client hôtelier renégociait ses prix ou partait, Re chuterait probablement sous i, transformant le même levier en effet de massue. L'option C illustre ce que fait un bon diagnostic : il ne se limite pas à dire oui ou non, il identifie le risque réel derrière un ratio favorable et propose une condition qui le réduit, sans pour autant bloquer une entreprise par ailleurs saine. Il n'existe pas de seuil universel « Re − i » au-delà duquel un prêt devient automatiquement sûr — c'est un jugement, pas un calcul.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>L'endettement n'est ni bon ni mauvais en soi — il amplifie ce qui existe déjà, dans un sens ou dans l'autre</li>
+            <li>Un ratio favorable calculé sur une seule année ne dit rien de sa robustesse si la conjoncture se retourne</li>
+            <li>Le diagnostic financier n'est utile que s'il débouche sur une décision — sinon ce n'est qu'un constat chiffré de plus</li>
+            <li>La dépendance à un client ou un marché unique est un risque que les ratios financiers ne mesurent jamais directement</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA financière frappe ici</h5>
+          <ul>
+            <li>Scoring en continu de l'écart entre rentabilité économique et coût de la dette, avec alerte avant tout basculement en effet de massue</li>
+            <li>Benchmark automatique des ratios contre des entreprises comparables du même secteur et de la même taille</li>
+            <li>Génération assistée d'un rapport de diagnostic financier croisant les deux axes, avec préconisations hiérarchisées</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Décalage encaissement / décaissement<i>C1·C2·C5</i></span>
+        <span class="sp">Bénéfice ≠ trésorerie<i>C2·C4·C6</i></span>
+        <span class="sp">Ce que chaque solde exclut du précédent<i>C3·C4</i></span>
+        <span class="sp">La trésorerie nette est un résultat, pas une décision<i>C2</i></span>
+        <span class="sp">Le levier amplifie dans les deux sens<i>C5</i></span>
+        <span class="sp">Structure (bilan) dit si l'on survit ; flux (résultat) dit si l'on gagne<i>tous</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="05-comptabilite-generale.html">← Comptabilité générale</a>
@@ -67,5 +726,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .axes-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .axes-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .axes-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

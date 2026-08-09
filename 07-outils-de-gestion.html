@@ -8,8 +8,223 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#c98a3a;--dom-lt:#f0c988}</style>
+<style>
+/* Palette — ambre / terracotta / sarcelle : la couleur du pilotage et de
+   l'incertitude maîtrisée. Ambre et terracotta portent l'alerte et le seuil
+   (le point mort qui approche, le stock qui descend sous son niveau
+   d'alerte) ; la sarcelle porte l'équilibre retrouvé — le tableau de bord
+   qui, en bout de chaîne, resynthétise tout ce que les six premiers
+   chapitres ont dû deviner sous incertitude. Discipline 07 : hybride
+   Système/Automatisme, donc les deux logiques (comprendre / calculer)
+   doivent être visuellement distinguables partout où elles coexistent. */
+:root{
+  --amb:#c98a3a; --amb-lt:#f0c988;
+  --terr:#c1633f; --terr-lt:#e8a98c;
+  --sar:#2f8a82; --sar-lt:#8fcac4;
+  --ink:#3b2c1f; --ink-soft:#82705a;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(193,99,63,.32);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #f6ddab 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 18%, #a9dcd2 0%, transparent 52%),
+    radial-gradient(1000px 720px at 32% 108%, #ecc09a 0%, transparent 58%),
+    linear-gradient(158deg,#f8eeda 0%, #f1ddbf 42%, #e6c9a8 72%, #efe1c4 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--terr);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--terr);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(193,99,63,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(59,44,31,.16);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:210px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--terr);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#6b3f26;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--terr)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--amb-lt),var(--amb))}
+.cbar .au{background:linear-gradient(90deg,var(--terr-lt),var(--terr))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--amb)} .crd b.a{color:var(--terr)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(120deg,var(--amb),var(--terr))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+@media(max-width:680px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 10px 12px;
+  text-align:center}
+.actor svg{width:40px;height:40px;stroke:var(--terr);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.64rem;letter-spacing:.03em;margin-top:7px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.7rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--terr);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.55rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* arbre de dépendance */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+.tr-lbl{font-family:'Josefin Sans';font-size:10px;letter-spacing:.14em;fill:var(--ink-soft);text-transform:uppercase}
+.tr-node{font-family:'Josefin Sans';font-size:11px;fill:var(--ink)}
+
+/* concepts-colonnes */
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--sar);color:#215f58;
+  padding:5px 12px;border-radius:14px;background:rgba(47,138,130,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(193,99,63,.26);border-radius:24px;box-shadow:0 16px 46px rgba(59,44,31,.15)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--terr),var(--amb));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#6b3f26;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--terr);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--terr) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--terr-lt) 0 12.5%, transparent 0 25%, var(--terr-lt) 0 37.5%, transparent 0 50%, var(--terr-lt) 0 62.5%, transparent 0 75%, var(--terr-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--terr)}
+.problem b{color:var(--terr);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(201,138,58,.09);
+  border:1px solid rgba(201,138,58,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--amb);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--terr);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--terr-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(193,99,63,.08);border-left:3px solid var(--terr);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terr);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--sar);color:#215f58;
+  padding:5px 12px;border-radius:14px;background:rgba(47,138,130,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(201,138,58,.1);border:1px solid rgba(201,138,58,.5)}
+.errors .ee{background:rgba(47,138,130,.1);border:1px solid rgba(47,138,130,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--amb)} .errors .ee h5{color:var(--sar)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--terr)}
+
+/* compréhension / automatisme */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(47,138,130,.09);border:1px solid rgba(47,138,130,.42)}
+.split .m{background:rgba(193,99,63,.09);border:1px solid rgba(193,99,63,.42)}
+.split h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--sar)} .split .m h5{color:var(--terr)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:4px 0 4px 16px;position:relative;color:var(--ink)}
+.split li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--amb)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding:0 14px 8px}
+table.cmp th{background:var(--terr-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#4a2e1c}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(240,201,136,.16)}
+
+details.dilemma{background:rgba(255,255,255,.72);border:1.5px dashed var(--terr);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--terr);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#6b3f26;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(201,138,58,.12);border-radius:10px;padding:7px 12px;border-left:3px solid var(--amb)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sar);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(240,201,136,.24);border:1px solid var(--amb)}
+.helix{background:rgba(47,138,130,.09);border:1px solid var(--sar)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#8a5a1e} .helix h5{color:var(--sar)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--amb);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--sar)}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--terr);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--terr);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--terr);border-color:var(--terr)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,49 +233,579 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d07">
-  <div class="tab">篇 VII</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 07</p>
-    <h3>Outils de gestion</h3>
-    <p class="dmeta">S6 · 2 ECTS · Isabelle Noël · contrôle de gestion appliqué</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 200" role="img" aria-label="Un graphique de seuil de rentabilité : une droite de charges totales et une droite de chiffre d'affaires qui se croisent en un point mort, avec la zone de perte et la zone de profit distinguées">
+      <defs>
+        <linearGradient id="lossz" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#c1633f" stop-opacity=".16"/><stop offset="1" stop-color="#c1633f" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="profz" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2f8a82" stop-opacity="0"/><stop offset="1" stop-color="#2f8a82" stop-opacity=".18"/>
+        </linearGradient>
+      </defs>
+      <!-- zones -->
+      <path d="M60 160 L330 90 L60 90 Z" fill="url(#lossz)"/>
+      <path d="M330 90 L600 20 L600 90 Z" fill="url(#profz)"/>
+      <!-- axes -->
+      <g stroke="#8a7a63" stroke-width="1.6" stroke-linecap="round">
+        <line x1="60" y1="20" x2="60" y2="160"/>
+        <line x1="60" y1="160" x2="620" y2="160"/>
+      </g>
+      <!-- charges fixes, ligne pointillée horizontale -->
+      <line x1="60" y1="130" x2="600" y2="130" stroke="#c98a3a" stroke-width="1.4" stroke-dasharray="1 6" stroke-linecap="round"/>
+      <text x="66" y="124" font-family="Josefin Sans" font-size="10" fill="#c98a3a">Charges fixes</text>
+      <!-- droite des charges totales -->
+      <path d="M60 130 L600 50" fill="none" stroke="#c1633f" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="606" y="48" font-family="Josefin Sans" font-size="11" fill="#c1633f">Charges totales</text>
+      <!-- droite du chiffre d'affaires -->
+      <path d="M60 160 L600 20" fill="none" stroke="#2f8a82" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="606" y="22" font-family="Josefin Sans" font-size="11" fill="#2f8a82">Chiffre d'affaires</text>
+      <!-- point mort -->
+      <line x1="330" y1="90" x2="330" y2="160" stroke="#6b3f26" stroke-width="1.2" stroke-dasharray="2 4"/>
+      <line x1="60" y1="90" x2="330" y2="90" stroke="#6b3f26" stroke-width="1.2" stroke-dasharray="2 4"/>
+      <circle cx="330" cy="90" r="6" fill="#fff" stroke="#6b3f26" stroke-width="2"/>
+      <text x="336" y="82" font-family="Cormorant Garamond" font-weight="600" font-size="15" fill="#6b3f26">Point mort</text>
+      <text x="330" y="176" text-anchor="middle" font-family="Josefin Sans" font-size="9" fill="#82705a">Quantité / temps</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Outils de gestion</h1>
+    <p class="gen-open">Toute décision de gestion se prend avant de savoir ce qui va réellement se vendre. Combien fabriquer ce mois-ci ? Combien commander, et quand, sachant qu'un fournisseur met parfois trois semaines à livrer ? À quel niveau d'activité l'entreprise cesse-t-elle de perdre de l'argent ? Aucune de ces questions n'a de réponse certaine — mais toutes ont une réponse <b>chiffrable</b>, à condition de savoir de combien on risque de se tromper. Les outils de gestion ne prédisent pas l'avenir : ils bornent l'incertitude assez précisément pour agir quand même, puis mesurent après coup où l'écart s'est produit.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:50%"></span><span class="au" style="width:50%"></span></span>
       <span class="crd">Système <b class="s">50%</b> · Automatisme <b class="a">50%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
+    </div>
+    <p class="dmeta">S6 · 2 ECTS · Isabelle Noël · contrôle de gestion appliqué</p>
+  </div>
+
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="8" y="6" width="20" height="28" rx="2"/><line x1="13" y1="13" x2="23" y2="13"/><polyline points="13,26 17,20 21,23 25,15"/><circle cx="32" cy="14" r="6"/><line x1="30" y1="14" x2="34" y2="14"/><line x1="32" y1="12" x2="32" y2="16"/></svg><b>Contrôleur de gestion</b><span>calcule seuils, coûts, écarts</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="7"/><path d="M15 12 l3 3 l7 -7"/><rect x="8" y="24" width="24" height="10" rx="2"/><line x1="14" y1="24" x2="14" y2="34"/><line x1="26" y1="24" x2="26" y2="34"/></svg><b>Responsable production</b><span>décide quoi fabriquer, combien</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="7" y="20" width="12" height="12" rx="1"/><rect x="21" y="20" width="12" height="12" rx="1"/><rect x="14" y="8" width="12" height="12" rx="1"/><line x1="10" y1="24" x2="16" y2="24"/><line x1="24" y1="24" x2="30" y2="24"/></svg><b>Resp. achats &amp; stocks</b><span>commande, réceptionne, stocke</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="11" r="6"/><path d="M9 33 C9 24 31 24 31 33"/><line x1="20" y1="17" x2="20" y2="24"/><path d="M20 24 L27 20 M20 24 L27 28"/></svg><b>Dirigeant</b><span>arbitre structure et risque</span></div>
+  </div>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des sept chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet">
+      <path d="M40 100 C 90 62, 130 55, 175 55 S 265 135, 310 135 S 400 55, 445 55 S 535 135, 580 135 S 670 55, 715 55 S 815 100, 860 100" fill="none" stroke="#e8a98c" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(40,100)"><circle r="18" fill="#c98a3a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="38" text-anchor="middle">Fixe / variable</text></g>
+        <g transform="translate(175,55)"><circle r="15" fill="#c1633f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Seuil</text></g>
+        <g transform="translate(310,135)"><circle r="15" fill="#c98a3a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="34" text-anchor="middle">Levier</text></g>
+        <g transform="translate(445,55)"><circle r="15" fill="#c1633f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Stocks</text></g>
+        <g transform="translate(580,135)"><circle r="15" fill="#c98a3a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">ABC</text></g>
+        <g transform="translate(715,55)"><circle r="15" fill="#c1633f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Prévision</text></g>
+        <g transform="translate(860,100)"><circle r="18" fill="#2f8a82" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">7</text><text class="tl-med" x="-6" y="38" text-anchor="middle">Tableau de bord</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Deux branches indépendantes, une seule réunion</p>
+    <div class="tree">
+      <svg viewBox="0 0 760 350" width="100%" style="max-width:720px">
+        <g font-family="Josefin Sans">
+          <!-- liens -->
+          <g stroke="#c9a98c" stroke-width="2" fill="none">
+            <path d="M380 58 L210 112"/>
+            <path d="M380 58 L560 112"/>
+            <path d="M210 148 L210 202"/>
+            <path d="M560 148 L560 202"/>
+            <path d="M210 238 L340 292"/>
+            <path d="M560 238 L420 292"/>
+          </g>
+          <!-- C6 -> C5 -->
+          <path d="M690 220 L596 220" stroke="#c1633f" stroke-width="2" fill="none" marker-end="url(#arrhd)"/>
+          <defs>
+            <marker id="arrhd" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#c1633f"/></marker>
+          </defs>
+          <text class="tr-lbl" x="210" y="88" text-anchor="middle">Branche A</text>
+          <text class="tr-lbl" x="560" y="88" text-anchor="middle">Branche B</text>
+          <!-- C1 -->
+          <g transform="translate(380,40)"><circle r="20" fill="#c98a3a" stroke="#fff" stroke-width="2"/><text class="tl-num" y="4" text-anchor="middle">C1</text></g>
+          <text class="tr-node" x="380" y="10" text-anchor="middle" font-weight="600">Charges fixes / variables — préalable</text>
+          <!-- C2 -->
+          <g transform="translate(210,130)"><circle r="18" fill="#c1633f" stroke="#fff" stroke-width="2"/><text class="tl-num" y="4" text-anchor="middle">C2</text></g>
+          <text class="tr-node" x="210" y="106" text-anchor="middle">Seuil de rentabilité</text>
+          <!-- C3 -->
+          <g transform="translate(210,220)"><circle r="16" fill="#c98a3a" stroke="#fff" stroke-width="2"/><text class="tl-num" y="4" text-anchor="middle">C3</text></g>
+          <text class="tr-node" x="210" y="252" text-anchor="middle">Levier d'exploitation</text>
+          <!-- C4 -->
+          <g transform="translate(560,130)"><circle r="18" fill="#c1633f" stroke="#fff" stroke-width="2"/><text class="tl-num" y="4" text-anchor="middle">C4</text></g>
+          <text class="tr-node" x="560" y="106" text-anchor="middle">Gestion des stocks</text>
+          <!-- C5 -->
+          <g transform="translate(560,220)"><circle r="16" fill="#c98a3a" stroke="#fff" stroke-width="2"/><text class="tl-num" y="4" text-anchor="middle">C5</text></g>
+          <text class="tr-node" x="560" y="252" text-anchor="middle">Méthode ABC</text>
+          <!-- C6 -->
+          <g transform="translate(700,220)"><circle r="16" fill="#c1633f" stroke="#fff" stroke-width="2"/><text class="tl-num" y="4" text-anchor="middle">C6</text></g>
+          <text class="tr-node" x="700" y="252" text-anchor="middle">Prévision</text>
+          <!-- C7 -->
+          <g transform="translate(380,300)"><circle r="22" fill="#2f8a82" stroke="#fff" stroke-width="2.4"/><text class="tl-num" y="5" text-anchor="middle" font-size="13">C7</text></g>
+          <text class="tr-node" x="380" y="334" text-anchor="middle" font-weight="600">Tableau de bord — réunion des deux branches</text>
+        </g>
+      </svg>
+    </div>
+    <p class="note">Lecture : C6 alimente d'abord C4 — c'est la prévision qui recalcule le point de commande et le stock de sécurité — puis, par ricochet, C5 hérite de coûts de stockage mieux estimés ; le schéma résume ce double effet par une flèche directe vers C5. <b>Le stock est de la trésorerie déguisée en marchandise</b> : C4 et C5 rejoignent directement le BFR de la Gestion financière (discipline 06).</p>
+    <div class="spine">
+      <span class="sp">Comportement des coûts<i>C1 · C2 · C3</i></span>
+      <span class="sp">Optimum = minimum d'une somme<i>C4 · C5</i></span>
+      <span class="sp">Décider sous incertitude<i>C6 · C7</i></span>
+      <span class="sp">Le stock, trésorerie déguisée<i>C4 · C5 → BFR</i></span>
     </div>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Toutes les décisions de gestion doivent être prises <b>avant</b> de connaître la demande réelle. Comment décider quoi produire, quoi commander et quand, sans information certaine — et savoir de combien on peut se tromper ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Charges fixes vs variables : la reconstruction du réel</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : Compta C3 · distinction absente du PCG, à reconstruire</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Le seuil de rentabilité &amp; le point mort</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> — dépendance totale</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Le levier d'exploitation &amp; les choix de structure</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b></span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>La gestion des stocks : Wilson, alerte, sécurité</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> · nature des coûts</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>La méthode ABC</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C4</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>La prévision : tendance &amp; saisonnalité</b><span class="k auto">AUT</span><span class="dep">Prérequis : statistiques de base · <b>Alimente :</b> C4</span></div></li>
-<li><span class="cnum">C7</span><div class="cbody"><b>Le tableau de bord</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C4, C6</b> · agrège tout le reste</span></div></li></ol>
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Reconstruire le réel : coûts et seuil de rentabilité</h2>
+      <p class="dsub">Chapitres C1 · C2 · C3 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">La comptabilité générale (discipline 05) classe les charges par <b>nature</b> — achats, salaires, loyers, énergie — parce que c'est ce que le Plan Comptable Général impose pour produire un bilan et un compte de résultat opposables aux tiers. Mais cette classification ne répond à aucune des questions qu'un dirigeant se pose avant de décider : si je vends 10% de moins ce trimestre, quelles charges baissent avec les ventes, et lesquelles restent identiques que je vende zéro ou mille unités ? <b>Comment séparer ce qui bouge avec l'activité de ce qui ne bouge pas</b>, alors que le PCG ne fait pas cette distinction et que les deux logiques sont mélangées dans les mêmes comptes ? Une fois cette séparation faite, une deuxième question se pose aussitôt : à partir de quel niveau d'activité l'entreprise cesse-t-elle de perdre de l'argent ? Et une troisième : entre deux façons d'organiser la production — l'une qui immobilise beaucoup de charges fixes, l'autre qui reste légère mais paie plus cher chaque unité — laquelle choisir, sachant que la première est plus rentable si tout va bien et plus dangereuse si tout va mal ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Préalable</div><div class="tc"><span class="node f">C1 · Fixe / variable</span></div></div>
-<div class="flow"><span class="fdot"></span>deux branches indépendantes, réunies à la fin<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Branche A</div><div class="tc"><span class="node s">C2 · Seuil</span><span class="ar">→</span><span class="node s">C3 · Levier</span></div></div>
-<div class="tier"><div class="tl">Branche B</div><div class="tc"><span class="node s">C4 · Stocks</span><span class="ar">→</span><span class="node s">C5 · ABC</span><span class="ar">←</span><span class="node a">C6 · Prévision</span></div></div>
-<div class="flow"><span class="fdot"></span>réunion<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Pilotage</div><div class="tc"><span class="node s">C7 · Tableau de bord</span></div></div>
-</div>
-    <p class="note">Le stock est de la trésorerie déguisée en marchandise : C4 et C5 rejoignent directement le BFR de la Gestion financière.</p>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><rect x="7" y="8" width="26" height="24" rx="2"/><line x1="7" y1="16" x2="33" y2="16"/><line x1="13" y1="22" x2="19" y2="22"/><line x1="22" y1="22" x2="28" y2="22"/><line x1="13" y1="27" x2="24" y2="27"/></svg>
+        <div>
+          <h5>Origine de la règle — une reconstruction, pas une invention datée</h5>
+          <p>Contrairement aux Incoterms ou au crédit documentaire, la distinction charges fixes / charges variables n'a <b>pas d'inventeur individuel identifiable ni de date de publication fondatrice</b> : elle appartient à la tradition de la <b>comptabilité de gestion</b> (management accounting), qui s'est construite progressivement à partir de la fin du XIXe siècle dans les usines américaines et britanniques (comptabilité industrielle, puis analytique), en parallèle et en tension avec la comptabilité générale normée. Il n'existe pas, à notre connaissance, de texte fondateur unique attribuable à un auteur et une année précise pour cette distinction précise — <b>point d'incertitude assumé ici plutôt que comblé par une attribution approximative.</b> Ce qui est vérifiable, en revanche, c'est l'absence de cette distinction dans le PCG lui-même : elle doit être reconstruite à chaque fois, en interne, à partir des comptes par nature.</p>
+        </div>
+      </div>
 
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Comportement des coûts<i>C1·C2·C3</i></span><span class="sp">Optimum = minimum d'une somme<i>C4</i></span><span class="sp">Décider sous incertitude<i>C6·C7</i></span></div>
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C1 : reclasser sans réécrire</p>
+      <p class="mech">Reclasser une charge ne change rien à son montant comptable — cela ajoute une deuxième étiquette, invisible pour le bilan, indispensable pour piloter :</p>
+      <div class="chain">
+        <span class="node">Charge observée en compta (classe 6)</span><span class="arrow">→</span>
+        <span class="node">Varie-t-elle avec le volume produit/vendu ?</span><span class="arrow">→</span>
+        <span class="node">Non → fixe · Oui → variable</span><span class="arrow">→</span>
+        <span class="node">Reclassement interne, pour décider — pas pour le bilan</span>
+      </div>
+      <p class="mech">La difficulté réelle n'est pas la règle mais son application : beaucoup de charges ne sont ni franchement fixes ni franchement proportionnelles. Une charge <b>semi-variable</b> (l'électricité d'un atelier, qui a un socle fixe et une part liée au volume) doit être scindée ; une charge <b>par paliers</b> (un deuxième chef d'équipe embauché au-delà d'un certain volume) reste fixe sur une plage, puis saute à un nouveau palier fixe — ce n'est presque jamais une ligne droite parfaite.</p>
 
-    <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p><div class="split"><div class="u"><h5>À comprendre</h5><ul><li>Pourquoi on divise par le <em>taux</em> de MCV et non par la MCV</li><li>Pourquoi l'optimum de Wilson est un minimum de somme, pas de coût</li><li>Pourquoi une structure lourde en fixes est rentable ET risquée</li></ul></div><div class="m"><h5>À automatiser</h5><ul><li>MCV → taux → SR → point mort → marge de sécurité</li><li>Formule de Wilson et cohérence des unités</li><li>Moindres carrés et coefficients saisonniers</li><li>Point d'indifférence entre deux structures</li></ul></div></div>
-  </div>
-</section>
+      <div class="example">
+        <h5>Un atelier de menuiserie sur mesure</h5>
+        <p>Manufacture Aubry (18 salariés, Jura) fabrique du mobilier sur commande. Le loyer de l'atelier, les salaires des deux menuisiers permanents et l'assurance sont <b>fixes</b> : ils tombent chaque mois, que l'atelier livre deux meubles ou vingt. Le bois, la quincaillerie et la sous-traitance ponctuelle de vernissage sont <b>variables</b> : chaque commande supplémentaire en consomme un peu plus. L'électricité est <b>semi-variable</b> : un socle pour l'éclairage et le chauffage, plus une part liée aux machines en fonctionnement. Et si les commandes dépassent la capacité des deux menuisiers, l'atelier embauche un troisième salarié à temps plein — une charge qui reste fixe, mais à un <b>palier</b> supérieur : le graphique des coûts totaux n'est plus une droite, c'est un escalier.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C2 : du coût variable au seuil de rentabilité</p>
+      <p class="mech">Une fois les charges séparées, la question « à partir de quand gagne-t-on de l'argent ? » se résout en chaîne — et c'est l'enchaînement, pas chaque formule isolée, qui compte :</p>
+      <div class="chain">
+        <span class="node">Prix − Coût variable unitaire = Marge sur coût variable (MCV)</span><span class="arrow">→</span>
+        <span class="node">MCV ÷ Prix = Taux de MCV</span><span class="arrow">→</span>
+        <span class="node">Charges fixes ÷ Taux de MCV = Seuil de rentabilité (en €)</span><span class="arrow">→</span>
+        <span class="node">Seuil ÷ CA moyen par jour = Point mort (une date)</span>
+      </div>
+      <p class="mech">Le piège classique : diviser les charges fixes par la <b>MCV</b> (un montant par unité) au lieu du <b>taux</b> de MCV (une proportion du chiffre d'affaires) donne un résultat qui n'a de sens que si l'on raisonne en quantités homogènes ; dès qu'un produit a plusieurs prix ou que l'analyse se fait en euros de chiffre d'affaires, seul le taux fonctionne. Le seuil est un montant de <b>chiffre d'affaires</b>, pas une quantité — il ne devient une quantité qu'après division par le prix de vente unitaire.</p>
+
+      <div class="split">
+        <div class="u">
+          <h5>C2 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi on divise les charges fixes par le <em>taux</em> de MCV et non par la MCV elle-même — le taux est une proportion du CA, la MCV un montant par unité : les mélanger fausse le seuil dès qu'on change d'unité</li>
+            <li>Pourquoi le seuil de rentabilité est un montant de chiffre d'affaires, pas une quantité de produits</li>
+            <li>Pourquoi la marge de sécurité (CA réel moins seuil) mesure un risque, jamais une performance en tant que telle</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C2 — à automatiser</h5>
+          <ul>
+            <li>Prix − Coût variable unitaire = MCV unitaire</li>
+            <li>MCV ÷ CA (ou prix) = Taux de MCV</li>
+            <li>Charges fixes ÷ Taux de MCV = Seuil de rentabilité (€)</li>
+            <li>Seuil ÷ Prix = Point mort en quantité · Seuil ÷ CA journalier moyen = point mort en date</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="example">
+        <h5>Le seuil de Manufacture Aubry</h5>
+        <p>Charges fixes annuelles : 240 000 €. Prix de vente moyen d'un meuble : 2 000 €. Coût variable moyen (bois, quincaillerie, vernissage sous-traité) : 1 200 €. MCV unitaire = 800 €, taux de MCV = 800 ÷ 2 000 = 40%. Seuil de rentabilité = 240 000 ÷ 0,40 = 600 000 € de chiffre d'affaires, soit 300 meubles par an. Si l'atelier ferme trois semaines l'été et concentre ses ventes sur onze mois, le <b>point mort</b> — la date à laquelle ce seuil est atteint dans l'année — se déplace mécaniquement, même si le seuil en euros, lui, ne change pas.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C3 : le levier d'exploitation et le choix de structure</p>
+      <p class="mech">Le seuil connu, une question stratégique se pose : Aubry envisage d'acheter une machine à commande numérique. Elle augmente les charges fixes (amortissement, maintenance) mais réduit le coût variable de chaque meuble (moins de main-d'œuvre par pièce). Le <b>levier d'exploitation</b> mesure à quel point le résultat réagit à une variation d'activité :</p>
+      <div class="chain">
+        <span class="node">Levier = MCV totale ÷ Résultat d'exploitation</span><span class="arrow">→</span>
+        <span class="node">% variation du résultat ≈ Levier × % variation de l'activité</span><span class="arrow">→</span>
+        <span class="node">Plus le levier est élevé, plus l'effet est amplifié — dans les deux sens</span>
+      </div>
+      <p class="mech">Une structure à charges fixes élevées relève son seuil de rentabilité (il faut vendre plus pour commencer à gagner) mais amplifie le résultat au-delà de ce seuil, parce que chaque unité supplémentaire coûte peu à produire. C'est un pari sur le volume : rentable si l'activité dépasse largement le seuil, dangereux si elle reste proche ou en dessous.</p>
+
+      <table class="cmp">
+        <caption>Deux structures possibles pour Manufacture Aubry</caption>
+        <thead><tr><th>Structure</th><th>Seuil de rentabilité</th><th>Rentabilité au-delà du seuil</th><th>Risque en-deçà du seuil</th></tr></thead>
+        <tbody>
+          <tr><td>Charges variables élevées <i>(sous-traitance, pas de machine)</i></td><td>Plus bas — atteint plus vite</td><td>Modérée — chaque unité coûte presque autant à produire</td><td>Faible — les coûts suivent l'activité vers le bas</td></tr>
+          <tr><td>Charges fixes élevées <i>(machine à commande numérique)</i></td><td>Plus haut — atteint plus tard</td><td>Forte — chaque unité au-delà du seuil dégage une marge élevée</td><td>Élevé — les charges fixes tombent même si l'activité chute</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Comptabilité générale <i>— C1 reclasse les comptes de charges par nature (classe 6) que le PCG a déjà enregistrés</i></span>
+        <span class="linkchip">Gestion financière <i>— l'investissement en machine (C3) mobilise la capacité d'autofinancement et se juge aussi en rentabilité des capitaux</i></span>
+        <span class="linkchip">C4 — Gestion des stocks <i>— la nature fixe/variable des coûts de stockage, établie ici, conditionne tout le chapitre suivant</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Confondre l'axe <b>fixe/variable</b> (comportement par rapport au volume) avec l'axe <b>direct/indirect</b> (traçabilité à un produit) — ce sont deux classifications indépendantes, pas synonymes</li>
+          <li>Traiter toutes les charges variables comme strictement proportionnelles, en ignorant les effets de palier</li>
+          <li>Diviser les charges fixes par la MCV unitaire au lieu du taux de MCV dès que plusieurs produits sont mélangés</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Classer une charge fixe/variable une fois pour toutes et ne jamais revoir ce classement quand un palier de capacité est franchi</li>
+          <li>Investir dans une structure lourde en charges fixes sur la base d'une demande moyenne, sans tester le scénario où l'activité reste durablement sous le seuil</li>
+          <li>Oublier de refacturer le coût d'une machine dans le prix de vente, en confondant amortissement comptable et coût réel à couvrir</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez Manufacture Aubry. La machine à commande numérique coûte 180 000 €, relève le seuil de rentabilité de 600 000 € à 780 000 € de chiffre d'affaires, mais fait passer le taux de MCV de 40% à 58% au-delà de ce seuil. Investissez-vous ?</p>
+        <p class="dctx">Le chiffre d'affaires actuel est de 640 000 €, en croissance irrégulière de 3 à 4% par an selon les années — parfois moins en période difficile.</p>
+        <div class="dopts">
+          <span>A. Investir — la croissance passée justifie le pari sur le volume</span>
+          <span>B. Ne pas investir — le CA actuel (640 000 €) est trop proche du futur seuil (780 000 €) pour absorber une mauvaise année</span>
+          <span>C. Investir dans une version d'occasion ou en crédit-bail, pour réduire la charge fixe immédiate</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. L'option B est la plus prudente : avec un CA actuel de 640 000 € pour un futur seuil à 780 000 €, la marge de sécurité tomberait à 640 000 − 780 000, c'est-à-dire négative — l'entreprise serait en perte tant que la croissance espérée ne se matérialise pas, ce qui est un pari risqué compte tenu de la croissance irrégulière observée. L'option C est souvent la plus réaliste en pratique : elle cherche à obtenir une partie du gain de taux de MCV sans subir la totalité du saut de charges fixes, par exemple via un crédit-bail qui transforme une part de l'investissement en charge quasi-variable (le loyer peut parfois être suspendu ou renégocié, contrairement à un amortissement). L'option A n'est défendable que si l'entreprise dispose d'une trésorerie de réserve suffisante pour absorber au moins une mauvaise année sous le nouveau seuil.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le seuil de rentabilité n'est pas un chiffre qu'on calcule une fois — c'est une jauge qu'on recalcule à chaque changement de structure de coûts</li>
+            <li>Un investissement qui baisse le coût unitaire mais relève le seuil n'est un bon calcul que si l'activité future dépasse largement le nouveau seuil, pas juste en moyenne</li>
+            <li>Le levier d'exploitation est une politique de risque assumée, jamais un hasard résultant d'achats successifs non coordonnés</li>
+            <li>Un point de charge fixe non refacturé dans le prix est une marge qui s'évapore silencieusement</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Reclassement automatique et continu des charges fixe/variable à partir des écritures comptables, avec alerte sur les charges qui changent de nature (effet de palier détecté)</li>
+            <li>Simulation en temps réel du nouveau seuil et du nouveau levier pour chaque scénario d'investissement, avant la décision</li>
+            <li>Stress-test automatique de la marge de sécurité sur l'historique réel de variabilité du chiffre d'affaires, pas seulement sur sa moyenne</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Les stocks et leur coût caché</h2>
+      <p class="dsub">Chapitres C4 · C5</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Un stock résout un problème et en crée un autre. Il protège contre la rupture — le client qui commande alors que rien n'est disponible — mais chaque unité stockée immobilise de la trésorerie, occupe de l'espace, se dévalue parfois, et doit être assurée. <b>Combien commander à la fois, et à quel moment déclencher la commande</b>, pour minimiser le coût total sans jamais tomber à zéro avant l'arrivée de la livraison suivante ? Une fois cette question posée à l'échelle d'une seule référence, une deuxième surgit à l'échelle de toute l'entreprise : les charges indirectes (structure, contrôle qualité, manutention) doivent être réparties entre les produits pour connaître leur coût réel — mais sur quelle base répartir des charges qui, par définition, ne se rattachent à aucun produit en particulier sans un choix arbitraire ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — Ford W. Harris, 1913</h5>
+          <p>Le modèle de la <b>quantité économique de commande</b> — la formule permettant de calculer la quantité à commander qui minimise la somme du coût de passation des commandes et du coût de possession du stock — est dérivé pour la première fois par l'ingénieur américain <b>Ford W. Harris</b>, dans un article intitulé « How Many Parts to Make at Once », publié dans le magazine <i>Factory, The Magazine of Management</i> en <span class="yr">1913</span>. Sans ce modèle, chaque responsable de stock fixerait ses quantités de commande à l'instinct, sans méthode pour arbitrer objectivement entre trop de petites commandes (coûts de passation cumulés) et trop peu de grosses commandes (coût de possession excessif).</p>
+        </div>
+      </div>
+      <div class="callout" style="background:rgba(193,99,63,.09);border-color:rgba(193,99,63,.4)">
+        <svg viewBox="0 0 40 40" stroke="#c1633f"><rect x="6" y="18" width="10" height="10"/><rect x="18" y="12" width="10" height="16"/><rect x="30" y="18" width="4" height="10"/><line x1="6" y1="32" x2="34" y2="32"/></svg>
+        <div>
+          <h5>Un point d'exactitude central : la popularisation qui efface l'inventeur</h5>
+          <p>Le nom usuel en français, « <b>formule de Wilson</b> », vient du consultant <b>R. H. Wilson</b>, qui applique et popularise cette formule auprès d'entreprises industrielles au cours des <span class="yr">années 1930</span> — soit près de deux décennies après l'article de Harris. Wilson n'en est pas l'auteur original ; il en est le diffuseur. L'attribution usuelle en France efface ainsi le véritable inventeur : Ford Harris a publié la dérivation complète en 1913, mais c'est le nom d'un consultant qui a popularisé la formule vingt ans plus tard qui est resté attaché à son nom dans l'usage courant. Une fiche ou un devoir qui attribue la formule à « Wilson » sans mentionner Harris répète cette erreur d'attribution plutôt que de la corriger.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C4 : la quantité optimale, l'alerte et la sécurité</p>
+      <p class="mech">Le modèle de Harris repose sur un arbitrage entre deux coûts qui varient en sens inverse selon la taille de la commande :</p>
+      <div class="chain">
+        <span class="node">Commander gros et rare</span><span class="arrow">→</span>
+        <span class="node">Coût de passation ↓ mais coût de possession ↑</span>
+      </div>
+      <div class="chain">
+        <span class="node">Commander petit et souvent</span><span class="arrow">→</span>
+        <span class="node">Coût de possession ↓ mais coût de passation ↑</span>
+      </div>
+      <p class="mech">La quantité économique Q* est celle qui <b>minimise la somme</b> des deux coûts — pas celle qui minimise l'un des deux pris isolément, une confusion fréquente. Une fois Q* connue, deux notions opérationnelles en découlent : le <b>point de commande</b> (le niveau de stock qui déclenche une nouvelle commande, calculé pour que la livraison arrive juste avant la rupture) et le <b>stock de sécurité</b> (une marge supplémentaire pour absorber un délai de livraison plus long ou une demande plus forte que prévu — la protection contre l'incertitude elle-même, distincte du calcul de Q*, qui suppose lui une demande connue).</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 640 220" width="100%" style="max-width:640px" role="img" aria-label="Niveau de stock en dents de scie, avec point de commande, stock de sécurité et délai de livraison">
+          <g stroke="#8a7a63" stroke-width="1.4">
+            <line x1="50" y1="20" x2="50" y2="190"/>
+            <line x1="50" y1="190" x2="600" y2="190"/>
+          </g>
+          <!-- zone stock de sécurité -->
+          <rect x="50" y="165" width="550" height="25" fill="#c1633f" opacity=".12"/>
+          <line x1="50" y1="165" x2="600" y2="165" stroke="#c1633f" stroke-width="1.4" stroke-dasharray="1 5"/>
+          <text x="56" y="180" font-family="Josefin Sans" font-size="10" fill="#c1633f">Stock de sécurité</text>
+          <!-- point de commande -->
+          <line x1="50" y1="110" x2="600" y2="110" stroke="#c98a3a" stroke-width="1.4" stroke-dasharray="1 5"/>
+          <text x="56" y="105" font-family="Josefin Sans" font-size="10" fill="#c98a3a">Point de commande</text>
+          <!-- dents de scie -->
+          <polyline points="50,45 195,165 200,45 345,165 350,45 495,165 500,45 600,120" fill="none" stroke="#2f8a82" stroke-width="2.4" stroke-linejoin="round"/>
+          <!-- délai de livraison bracket -->
+          <path d="M195 205 L195 200 L245 200 L245 205" fill="none" stroke="#3b2c1f" stroke-width="1.2"/>
+          <text x="220" y="216" text-anchor="middle" font-family="Josefin Sans" font-size="9" fill="#3b2c1f">délai de livraison</text>
+          <text x="325" y="212" text-anchor="middle" font-family="Josefin Sans" font-size="9" fill="#82705a">temps</text>
+        </svg>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>C4 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi Q* est un minimum de <em>somme</em> de deux coûts opposés, jamais un minimum de coût unique</li>
+            <li>Pourquoi le point de commande dépend du délai fournisseur, alors que Q* n'en dépend pas directement</li>
+            <li>Pourquoi le stock de sécurité protège contre l'incertitude sur la demande ou le délai, un problème distinct de l'optimisation de Q*</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C4 — à automatiser</h5>
+          <ul>
+            <li>Q* = √(2 × Demande annuelle × Coût de passation ÷ Coût de possession unitaire)</li>
+            <li>Point de commande = Demande pendant le délai de livraison + Stock de sécurité</li>
+            <li>Nombre de commandes par an = Demande annuelle ÷ Q*</li>
+            <li>Vérifier la cohérence des unités (demande et coûts sur la même période) avant tout calcul</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="example">
+        <h5>Un entrepôt de pièces détachées</h5>
+        <p>Un distributeur de pièces mécaniques (Franche-Comté) vend une référence à 4 000 unités par an. Chaque commande passée au fournisseur coûte 60 € (traitement administratif, transport). Posséder une unité en stock coûte 2 € par an (espace, assurance, dépréciation, coût d'opportunité de la trésorerie immobilisée). Q* = √(2 × 4 000 × 60 ÷ 2) = √240 000 ≈ 490 unités par commande, soit environ huit commandes par an. Si le fournisseur livre en dix jours et que la consommation moyenne est de 4 000 ÷ 365 ≈ 11 unités par jour, le point de commande se situe autour de 110 unités, majoré d'un stock de sécurité si la demande ou le délai sont irréguliers.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C5 : répartir ce qui ne se rattache à rien</p>
+      <p class="problem">Une fois les stocks maîtrisés, une charge de fond réapparaît : comment savoir ce que coûte réellement chaque produit, quand une part croissante des charges — supervision, contrôle qualité, maintenance, service après-vente — ne se rattache directement à aucune unité produite ? La méthode traditionnelle répartit ces charges indirectes au prorata d'une seule clé, le plus souvent les heures de main-d'œuvre directe. Tant que cette main-d'œuvre représentait l'essentiel du coût de fabrication, l'approximation restait acceptable. Mais à mesure que l'automatisation a réduit la main-d'œuvre directe et que la part des charges de structure a augmenté, cette clé unique a cessé de refléter ce qui consomme réellement les ressources indirectes — un produit fabriqué presque sans main-d'œuvre, mais nécessitant un contrôle qualité intensif, se retrouvait artificiellement sous-coûté.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — Kaplan &amp; Cooper, fin des années 1980</h5>
+          <p>La méthode <b>ABC</b> (Activity-Based Costing, comptabilité par activités) est développée et formalisée à la fin des années 1980 par les chercheurs américains <b>Robert S. Kaplan</b> et <b>Robin Cooper</b> (Harvard Business School), notamment via une série d'articles publiés entre <span class="yr">1987 et 1988</span> dans la <i>Harvard Business Review</i>. Leur constat : répartir les charges indirectes au prorata d'une seule clé, souvent les heures de main-d'œuvre directe, devenait trompeur à mesure que ces charges indirectes prenaient une part croissante des coûts totaux dans l'industrie moderne. L'ABC propose de rattacher les charges non pas directement aux produits, mais à des <b>activités</b> (régler une machine, contrôler un lot, traiter une commande), puis de répartir le coût de chaque activité selon un <b>inducteur de coût</b> propre — le nombre de réglages, de contrôles, de commandes — plus proche de ce qui consomme réellement la ressource.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C5 : de l'activité au produit</p>
+      <div class="chain">
+        <span class="node">Identifier les activités (régler, contrôler, expédier…)</span><span class="arrow">→</span>
+        <span class="node">Affecter les charges indirectes à chaque activité</span><span class="arrow">→</span>
+        <span class="node">Choisir un inducteur de coût par activité</span><span class="arrow">→</span>
+        <span class="node">Répartir le coût de l'activité sur les produits selon leur consommation de l'inducteur</span>
+      </div>
+
+      <div class="example">
+        <h5>Deux gammes dans le même atelier</h5>
+        <p>Un fabricant de petites pièces plastiques produit une gamme standard en très grandes séries et une gamme sur mesure en petites séries fréquemment reconfigurées. La méthode traditionnelle, répartissant les charges indirectes au prorata des heures machine, sous-coûte structurellement la gamme sur mesure — qui consomme pourtant beaucoup plus de réglages, de contrôles qualité et de gestion de commandes par unité produite. En ABC, l'inducteur « nombre de réglages » révèle que chaque pièce sur mesure porte un coût de structure très supérieur à celui affiché par la méthode traditionnelle — ce qui peut renverser une décision commerciale prise sur un coût faussé.</p>
+      </div>
+
+      <table class="cmp">
+        <caption>Imputation traditionnelle et méthode ABC</caption>
+        <thead><tr><th></th><th>Base de répartition</th><th>Précision</th><th>Coût de mise en œuvre</th></tr></thead>
+        <tbody>
+          <tr><td>Méthode traditionnelle</td><td>Une seule clé, souvent les heures de main-d'œuvre directe</td><td>Fiable si les charges indirectes sont faibles et homogènes ; trompeuse sinon</td><td>Faible — peu de données à collecter</td></tr>
+          <tr><td>Méthode ABC</td><td>Plusieurs inducteurs, un par activité identifiée</td><td>Plus fine, reflète la diversité réelle de consommation des ressources</td><td>Élevé — identifier les activités et suivre chaque inducteur prend du temps</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Gestion financière <i>— le stock immobilisé est une composante directe du besoin en fonds de roulement (BFR)</i></span>
+        <span class="linkchip">Comptabilité générale <i>— les charges indirectes réparties par l'ABC restent, en amont, enregistrées par nature au PCG</i></span>
+        <span class="linkchip">C1 — Fixe/variable <i>— le coût de possession du stock mêle une part fixe (espace loué) et une part variable (assurance proportionnelle à la valeur)</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Attribuer la formule de quantité économique à « Wilson » sans mentionner Harris, son inventeur réel de 1913</li>
+          <li>Croire que Q* minimise le coût de possession ou le coût de passation isolément, plutôt que leur somme</li>
+          <li>Choisir un inducteur de coût ABC arbitraire, sans vérifier qu'il reflète réellement la consommation de ressource par activité</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Fixer des quantités de commande à l'expérience, sans recalculer Q* quand les coûts de passation ou de possession changent</li>
+          <li>Maintenir une clé de répartition unique héritée d'une époque où la main-d'œuvre directe dominait, malgré une automatisation croissante</li>
+          <li>Sous-dimensionner le stock de sécurité en période de croissance de la demande, provoquant des ruptures qui coûtent souvent plus cher que le sur-stockage qu'on cherchait à éviter</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez le fabricant de pièces plastiques. Le passage à l'ABC révèle que la gamme sur mesure, présentée jusqu'ici comme rentable, est en réalité vendue à perte une fois les coûts de structure correctement répartis. Que faites-vous ?</p>
+        <p class="dctx">La gamme sur mesure représente 15% du chiffre d'affaires mais fidélise vos plus gros clients, qui achètent aussi la gamme standard en grande quantité.</p>
+        <div class="dopts">
+          <span>A. Augmenter immédiatement les prix de la gamme sur mesure pour refléter son vrai coût</span>
+          <span>B. Abandonner la gamme sur mesure, désormais jugée non rentable</span>
+          <span>C. Garder les prix, en traitant la perte apparente comme un coût d'acquisition et de fidélisation des gros clients</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. L'ABC révèle un coût réel, mais ne dit pas seul quoi en faire commercialement. L'option B ignore que la gamme sur mesure peut avoir une valeur stratégique — fidéliser des clients qui achètent aussi la gamme standard rentable — que le coût ABC, par construction, ne mesure pas. L'option A risque de faire fuir des clients vers un concurrent si la hausse est brutale et mal expliquée. Une approche réaliste combine souvent une hausse de prix progressive et ciblée (option A partielle) avec une clarification explicite, en interne, du fait que la gamme sur mesure est en partie un investissement commercial et non une activité censée s'autofinancer — décision qui doit être assumée consciemment, pas subie par ignorance du vrai coût comme c'était le cas avant l'ABC.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un stock mal dimensionné n'est jamais un problème logistique isolé — c'est de la trésorerie immobilisée qui n'existe plus pour investir ou absorber un choc</li>
+            <li>La quantité économique de commande est un point de départ à recalculer dès que les coûts changent, pas une constante figée une fois pour toutes</li>
+            <li>Une méthode d'imputation des coûts trop simple peut faire vendre à perte des produits qu'on croit rentables, sans que personne ne s'en aperçoive avant l'ABC</li>
+            <li>Le coût de mise en œuvre de l'ABC doit être mis en balance avec l'enjeu réel — inutile sur une gamme homogène, décisif sur une gamme diversifiée</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Recalcul continu de Q*, du point de commande et du stock de sécurité à partir des coûts réels et de la variabilité observée de la demande, plutôt qu'un calcul figé une fois par an</li>
+            <li>Suivi automatique des inducteurs de coût ABC à partir des données de production, réduisant le coût de mise en œuvre qui freine aujourd'hui son adoption</li>
+            <li>Alerte de rentabilité produit dès qu'un coût réel recalculé s'écarte significativement du coût affiché par la méthode traditionnelle</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Prévoir et piloter</h2>
+      <p class="dsub">Chapitres C6 · C7 — la réunion des deux branches</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Le point de commande calculé au 篇 II suppose une demande connue — mais elle ne l'est jamais vraiment : elle varie selon la saison, la tendance de fond du marché, des à-coups imprévisibles. <b>Comment estimer une demande future à partir d'une demande passée</b>, en séparant ce qui est une tendance durable de ce qui se répète chaque année à la même période ? Et une fois cette estimation faite, comment vérifier que toute la mécanique de la discipline — coûts, seuil, stocks, prévision — reste sous contrôle mois après mois, sans devoir recalculer chaque formule séparément à chaque réunion de direction ? Ces deux questions se répondent l'une l'autre : la prévision alimente le pilotage, et le pilotage révèle quand la prévision se trompe.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><path d="M6 30 L14 18 L20 22 L28 10 L34 14" fill="none"/><circle cx="14" cy="18" r="1.6" fill="#c98a3a" stroke="none"/><circle cx="28" cy="10" r="1.6" fill="#c98a3a" stroke="none"/></svg>
+        <div>
+          <h5>Origine de la règle — une méthode sans auteur unique daté, comme au chapitre C1</h5>
+          <p>Contrairement à la quantité économique de commande ou à l'ABC, la décomposition d'une série de ventes en <b>tendance</b> (par ajustement linéaire) et en <b>coefficients saisonniers</b> ne provient pas d'un article fondateur unique attribuable à une personne et une date précises, transmis dans le brief de cette fiche. Ces techniques relèvent de la statistique descriptive et se sont diffusées progressivement au cours du XXe siècle à travers des usages institutionnels et industriels variés. <b>Point d'incertitude assumé :</b> plutôt que d'attribuer approximativement cette méthode à un auteur ou une décennie précise, cette fiche traite C6, comme C1, comme une reconstruction analytique d'usage courant plutôt que comme une invention datée — à la différence de Harris (1913) ou de Kaplan &amp; Cooper (1987-1988), cités avec précision parce que le brief transmis pour cette fiche fournit leurs dates vérifiées.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C6 : séparer tendance et saisonnalité</p>
+      <div class="chain">
+        <span class="node">Historique des ventes (plusieurs années)</span><span class="arrow">→</span>
+        <span class="node">Ajustement linéaire (moindres carrés) = tendance</span><span class="arrow">→</span>
+        <span class="node">Écart entre valeur réelle et tendance, par période = coefficient saisonnier</span><span class="arrow">→</span>
+        <span class="node">Tendance future × coefficient saisonnier = prévision</span>
+      </div>
+      <p class="mech">L'erreur la plus fréquente est de projeter la tendance seule, en oubliant la saisonnalité — ou inversement, d'appliquer un coefficient saisonnier à une base qui n'a pas été désaisonnalisée au préalable, ce qui double l'effet de la saison au lieu de l'isoler. Cette prévision alimente directement le point de commande du 篇 II : un pic saisonnier anticipé doit relever la demande pendant le délai de livraison utilisée pour fixer le point de commande, avant même que le pic ne soit visible dans les ventes réelles.</p>
+
+      <div class="split">
+        <div class="u">
+          <h5>C6 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi la tendance et la saisonnalité doivent être séparées avant d'être recombinées, sous peine de doubler l'effet saisonnier</li>
+            <li>Pourquoi une prévision reste une estimation bornée par une incertitude, jamais une certitude chiffrée</li>
+            <li>Pourquoi une rupture de tendance récente (nouveau concurrent, changement d'usage) invalide un ajustement linéaire fondé sur un historique trop ancien</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C6 — à automatiser</h5>
+          <ul>
+            <li>Ajustement linéaire par la méthode des moindres carrés sur l'historique</li>
+            <li>Coefficient saisonnier = valeur réelle moyenne de la période ÷ tendance de cette période</li>
+            <li>Prévision = tendance projetée × coefficient saisonnier de la période visée</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="example">
+        <h5>Un fabricant d'équipements de sport d'hiver</h5>
+        <p>Un fabricant vosgien de fixations de ski vend l'essentiel de sa production entre septembre et décembre. Sur cinq ans, la tendance de fond est en légère hausse (+4% par an, portée par l'export). Le coefficient saisonnier de novembre est très supérieur à 1, celui de juin très inférieur. Pour fixer le point de commande de composants importés (délai fournisseur : six semaines) avant le pic de novembre, l'entreprise doit combiner la tendance projetée de cette année et le coefficient de novembre — utiliser la demande moyenne annuelle reviendrait à sous-commander gravement juste avant le pic, provoquant une rupture au moment le plus coûteux de l'année.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C7 : agréger sans se noyer</p>
+      <p class="problem">Chaque chapitre précédent produit un indicateur : un seuil, un levier, une quantité économique, un coût par activité, une prévision. Pris séparément, aucun ne dit si l'entreprise est, ce mois-ci, en train de dériver ou de tenir sa trajectoire. <b>Comment synthétiser des indicateurs de nature très différente — financiers et non financiers, monétaires et physiques — en un outil unique que le dirigeant peut lire en quelques minutes</b>, sans recalculer chaque formule séparément à chaque réunion ?</p>
+
+      <div class="callout" style="background:rgba(47,138,130,.09);border-color:rgba(47,138,130,.4)">
+        <svg viewBox="0 0 40 40" stroke="#2f8a82"><rect x="6" y="8" width="28" height="24" rx="2"/><line x1="12" y1="16" x2="18" y2="16"/><rect x="12" y="20" width="6" height="8"/><rect x="22" y="14" width="6" height="14"/></svg>
+        <div>
+          <h5>Un jalon — Kaplan &amp; Norton, 1992</h5>
+          <p>Le concept du <b>Balanced Scorecard</b>, formalisé par Robert S. Kaplan (encore lui) et <b>David Norton</b> dans leur article « The Balanced Scorecard — Measures That Drive Performance », <i>Harvard Business Review</i>, <span class="yr">1992</span>, a largement structuré et popularisé l'idée d'un tableau de bord combinant indicateurs financiers et non financiers autour de plusieurs axes (financier, clients, processus internes, apprentissage). Il faut le présenter honnêtement : ce n'est pas l'invention du tableau de bord de gestion en tant que tel — des synthèses d'indicateurs plus rudimentaires existaient bien avant 1992 — mais un cadre qui a donné à cette pratique un langage et une structure largement adoptés depuis.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C7 : choisir peu, mais choisir juste</p>
+      <div class="chain">
+        <span class="node">Sélectionner un petit nombre d'indicateurs clés (issus de C2, C4, C6…)</span><span class="arrow">→</span>
+        <span class="node">Fixer une cible et un seuil d'alerte pour chacun</span><span class="arrow">→</span>
+        <span class="node">Comparer le réel à la cible, périodiquement</span><span class="arrow">→</span>
+        <span class="node">Décider — ou creuser l'écart avant de décider</span>
+      </div>
+      <p class="mech">Le danger inverse de l'absence de tableau de bord est sa saturation : un tableau qui affiche quarante indicateurs n'en pilote aucun vraiment, parce que l'attention du dirigeant, elle, reste limitée. Le bon tableau de bord d'un atelier comme Manufacture Aubry ou le fabricant de pièces plastiques du 篇 II tiendrait sur une page : marge de sécurité par rapport au seuil (C2), taux de rotation des stocks et nombre de ruptures évitées (C4), écart de prévision du mois (C6), et un ou deux indicateurs non financiers comme le taux de commandes livrées à temps.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Gestion financière <i>— le tableau de bord de gestion se distingue du reporting financier, mais partage ses données de trésorerie et de BFR</i></span>
+        <span class="linkchip">Comptabilité générale <i>— les indicateurs financiers du tableau de bord dérivent des mêmes comptes, agrégés différemment</i></span>
+        <span class="linkchip">C2 et C4 <i>— le seuil de rentabilité et le taux de rotation des stocks sont, dans la plupart des ateliers, les deux indicateurs les plus surveillés</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Projeter une tendance sans tenir compte de la saisonnalité, ou l'inverse — appliquer un coefficient saisonnier à une base déjà saisonnière</li>
+          <li>Croire que le Balanced Scorecard de 1992 a inventé le tableau de bord de gestion, plutôt que de l'avoir structuré et popularisé</li>
+          <li>Construire un tableau de bord exhaustif plutôt que sélectif, en confondant « suivre beaucoup d'indicateurs » et « bien piloter »</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Continuer d'utiliser une prévision fondée sur un historique devenu obsolète après une rupture de marché, sans la réviser</li>
+          <li>Multiplier les indicateurs dans le tableau de bord jusqu'à ce que plus personne ne le lise réellement chaque mois</li>
+          <li>Fixer des cibles d'indicateurs sans seuil d'alerte clair, découvrant l'écart seulement en fin de trimestre, trop tard pour corriger</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Votre contrôleur de gestion propose un tableau de bord à quarante indicateurs, exhaustif, mis à jour chaque semaine. Le comité de direction s'en plaint : personne ne le lit vraiment. Que décidez-vous ?</p>
+        <p class="dctx">Le contrôleur argumente que réduire le nombre d'indicateurs revient à accepter de ne plus voir certains problèmes arriver.</p>
+        <div class="dopts">
+          <span>A. Garder les quarante indicateurs, en confiance dans l'exhaustivité</span>
+          <span>B. Réduire à cinq ou six indicateurs clés, choisis pour leur pouvoir d'alerte, quitte à perdre en couverture</span>
+          <span>C. Garder les quarante indicateurs en base de données, mais n'en afficher que cinq ou six en synthèse, avec accès au détail sur demande</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Le contrôleur de gestion n'a pas tort sur le fond : réduire brutalement la couverture (option B) peut effectivement faire perdre en visibilité sur des risques réels. Mais un tableau de bord qui n'est pas lu ne pilote rien, quelle que soit son exhaustivité — l'option A ignore ce problème d'attention limitée. L'option C est la plus souvent retenue en pratique : elle sépare la <b>collecte</b> exhaustive (utile pour l'analyse a posteriori et l'alerte automatisée) de la <b>synthèse</b> décisionnelle, volontairement limitée, que le comité de direction regarde vraiment chaque mois. C'est l'esprit même du Balanced Scorecard — peu d'indicateurs, mais choisis pour représenter chaque dimension essentielle, pas la totalité de ce qui est mesurable.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une prévision n'est jamais un chiffre unique fiable — c'est une estimation bornée, à réviser dès qu'un signal contredit la tendance historique</li>
+            <li>Un tableau de bord n'est pas un exercice de reporting exhaustif, c'est un filtre volontairement sélectif conçu pour attirer l'attention là où elle doit aller</li>
+            <li>Les meilleurs indicateurs de pilotage sont ceux qui, comme le seuil ou le taux de rotation des stocks, agrègent déjà plusieurs chapitres en un seul chiffre</li>
+            <li>Un tableau de bord que personne ne consulte chaque mois coûte plus cher à maintenir qu'il ne rapporte de valeur de pilotage</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Prévision de la demande recalculée en continu à partir des ventes réelles, avec détection automatique des ruptures de tendance invalidant l'historique</li>
+            <li>Optimisation dynamique des niveaux de stock (Q*, point de commande, sécurité) directement connectée à la prévision recalculée, sans intervention manuelle</li>
+            <li>Tableau de bord automatisé qui hiérarchise lui-même les indicateurs à afficher selon l'écart réel constaté, plutôt qu'une liste figée choisie une fois pour toutes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="06-gestion-financiere.html">← Gestion financière</a>
@@ -69,5 +814,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

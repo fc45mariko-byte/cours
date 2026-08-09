@@ -8,8 +8,220 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#4f8f6e;--dom-lt:#a8d3bd}</style>
+<style>
+/* Palette — gris perle / vert sauge / encre bleu-noir : la comptabilité ne
+   décore rien, elle vérifie. Palette neutre et précise, celle du grand
+   livre et de l'encre qui ne ment pas — aucun éclat superflu qui
+   distrairait du chiffre. Le gris perle est le papier et la mesure neutre,
+   le vert sauge le geste répété qui s'automatise (l'écriture qui « passe »),
+   l'encre bleu-noir la trace qui engage et qu'on ne peut pas effacer. */
+:root{
+  --p1:#6b7280; --p1-lt:#b7bec7;
+  --p2:#6b8f71; --p2-lt:#a8c4ab;
+  --p3:#2b3440; --p3-lt:#5a6577;
+  --ink:#2b3440; --ink-soft:#5a6577;
+  --paper:rgba(255,255,255,.7); --paper-hi:rgba(255,255,255,.9);
+  --line:rgba(107,114,128,.4);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #e6e9eb 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 20%, #cfe0d4 0%, transparent 52%),
+    radial-gradient(1000px 720px at 34% 108%, #dde1e3 0%, transparent 58%),
+    linear-gradient(158deg,#eef0ef 0%, #e4e8e5 42%, #d6dcde 72%, #ecefec 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p3);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p2);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(107,114,128,.3);
+  border-radius:26px;box-shadow:0 18px 48px rgba(43,52,64,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:210px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p2);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--p3);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p2)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p1)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p1-lt),var(--p3))}
+.cbar .au{background:linear-gradient(90deg,var(--p2-lt),var(--p2))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p3)} .crd b.a{color:var(--p2)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(120deg,var(--p3),var(--p2))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+.hero .note{text-align:center;margin-top:14px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:460px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p3);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.03em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.66rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p2);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.55rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(107,114,128,.3);border-radius:24px;box-shadow:0 16px 46px rgba(43,52,64,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p3),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--p3);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p2);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p2) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p2-lt) 0 12.5%, transparent 0 25%, var(--p2-lt) 0 37.5%, transparent 0 50%, var(--p2-lt) 0 62.5%, transparent 0 75%, var(--p2-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p2)}
+.problem b{color:var(--p2);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(43,52,64,.06);
+  border:1px solid rgba(43,52,64,.28);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p2);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p1);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(107,143,113,.09);border-left:3px solid var(--p2);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--p2);color:#3f6146;
+  padding:5px 12px;border-radius:14px;background:rgba(107,143,113,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(107,114,128,.1);border:1px solid rgba(107,114,128,.45)}
+.errors .ee{background:rgba(43,52,64,.07);border:1px solid rgba(43,52,64,.3)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--p1)} .errors .ee h5{color:var(--p3)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"§";position:absolute;left:0;font-size:.62rem;top:6px;color:var(--p2)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#26332b}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(107,114,128,.08)}
+
+details.dilemma{background:rgba(255,255,255,.75);border:1.5px dashed var(--p2);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p2);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--p3);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(107,114,128,.1);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p1)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(107,114,128,.12);border:1px solid var(--p1)}
+.helix{background:rgba(43,52,64,.07);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:var(--p3)} .helix h5{color:var(--p3)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p1);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3)}
+
+/* diagrammes dessinés (mécanisme partie double, comparatifs) */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--p2);color:#3f6146;
+  padding:5px 12px;border-radius:14px;background:rgba(107,143,113,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p2);font-style:normal}
+
+/* compréhension / automatisme */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split>div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(107,114,128,.1);border:1px solid rgba(107,114,128,.45)}
+.split .m{background:rgba(107,143,113,.1);border:1px solid rgba(107,143,113,.45)}
+.split h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p1)} .split .m h5{color:var(--p2)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.split li::before{content:"–";position:absolute;left:0;top:3px;color:var(--ink-soft)}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p2);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p2);border-color:var(--p2)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,54 +230,547 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d05">
-  <div class="tab">篇 V</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 05</p>
-    <h3>Comptabilité générale</h3>
-    <p class="dmeta">S5 · CM 15h + TD 15h · 3 ECTS · Isabelle Noël · PCG en vigueur</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 210" role="img" aria-label="Une balance à deux plateaux parfaitement équilibrés, actif et passif, posée au-dessus d'un grand livre ouvert">
+      <g stroke="#2b3440" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="340" cy="42" r="5" fill="#2b3440" stroke="none"/>
+        <line x1="190" y1="48" x2="490" y2="48"/>
+        <line x1="340" y1="47" x2="340" y2="168"/>
+        <path d="M308 168 L372 168 L388 184 L292 184 Z"/>
+      </g>
+      <g stroke="#6b7280" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="190" y1="49" x2="168" y2="108"/>
+        <line x1="190" y1="49" x2="212" y2="108"/>
+        <path d="M162 108 Q190 132 218 108"/>
+        <ellipse cx="190" cy="108" rx="28" ry="6"/>
+        <line x1="490" y1="49" x2="468" y2="108"/>
+        <line x1="490" y1="49" x2="512" y2="108"/>
+        <path d="M462 108 Q490 132 518 108"/>
+        <ellipse cx="490" cy="108" rx="28" ry="6"/>
+      </g>
+      <text x="190" y="28" text-anchor="middle" font-family="Josefin Sans" font-size="12" letter-spacing="2" fill="#6b8f71">ACTIF</text>
+      <text x="490" y="28" text-anchor="middle" font-family="Josefin Sans" font-size="12" letter-spacing="2" fill="#6b8f71">PASSIF</text>
+      <text x="340" y="68" text-anchor="middle" font-family="Josefin Sans" font-size="17" fill="#6b8f71">=</text>
+      <g stroke="#2b3440" stroke-width="1.5" fill="#fff" fill-opacity=".6" stroke-linejoin="round">
+        <path d="M340 184 L268 190 L268 207 L340 202 Z"/>
+        <path d="M340 184 L412 190 L412 207 L340 202 Z"/>
+        <line x1="276" y1="196" x2="330" y2="193"/>
+        <line x1="276" y1="201" x2="326" y2="198"/>
+        <line x1="350" y1="193" x2="404" y2="196"/>
+        <line x1="350" y1="198" x2="400" y2="201"/>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Comptabilité générale</h1>
+    <p class="gen-open">Comment représenter fidèlement, à un instant donné et pour un tiers qui n'était pas là, <b>tout ce qu'une entreprise possède, doit, gagne et dépense</b> — de façon vérifiable et non falsifiable ? Un banquier, un actionnaire ou l'administration fiscale ne peuvent pas se déplacer dans chaque entrepôt pour compter les stocks ni assister à chaque vente : ils doivent pouvoir faire confiance à une trace écrite, construite selon des règles si strictes que la falsifier laisse toujours une marque visible. Toute la discipline découle de cette contrainte unique — écrire pour un absent qui ne peut pas vérifier sur place.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:40%"></span><span class="au" style="width:60%"></span></span>
       <span class="crd">Système <b class="s">40%</b> · Automatisme <b class="a">60%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
     </div>
+    <p class="dmeta">S5 · CM 15h + TD 15h · 3 ECTS · Isabelle Noël · PCG en vigueur</p>
+    <p class="note">C'est la discipline la plus automatique des dix-neuf : ici, <b>la répétition compte plus que la compréhension</b> pour réussir l'épreuve — comprendre pourquoi une écriture se passe ainsi ne dispense pas de savoir la passer les yeux fermés.</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Comment représenter fidèlement, à un instant donné et pour un tiers qui n'était pas là, <b>tout ce qu'une entreprise possède, doit, gagne et dépense</b> — de façon vérifiable et non falsifiable ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Principes comptables &amp; normalisation (PCG)</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>La partie double</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> · <b>verrou absolu</b> — rien ne fonctionne sans</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Opérations courantes : achats, ventes, TVA, frais accessoires</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b></span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Charges de personnel</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2, C3</b></span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Opérations d'inventaire : amortissements, dépréciations, provisions</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b> + principe de prudence (C1)</span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Documents de synthèse : bilan et compte de résultat</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3, C4, C5</b> · <b>Ouvre :</b> toute la Gestion financière du S6</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Verrou</div><div class="tc"><span class="node f">C1 · Principes</span><span class="ar">→</span><span class="node f">C2 · Partie double</span></div></div>
-<div class="flow"><span class="fdot"></span>tout enregistrement obéit ensuite au même geste<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Flux</div><div class="tc"><span class="node a">C3 · Courant</span><span class="ar">·</span><span class="node a">C4 · Personnel</span><span class="ar">·</span><span class="node a">C5 · Inventaire</span></div></div>
-<div class="flow"><span class="fdot"></span>agrégation<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Sortie</div><div class="tc"><span class="node s">C6 · Bilan + compte de résultat</span><span class="ar">⇒</span><span class="node x">Gestion financière S6</span></div></div>
-</div>
-    <p class="note">C'est la discipline où la répétition compte le plus : la compréhension seule ne fait pas passer l'épreuve.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Origine et emploi de la ressource<i>C2·C3</i></span><span class="sp">Principe de prudence<i>C1·C5</i></span><span class="sp">Image fidèle<i>C1·C6</i></span></div>
-
-    <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p><div class="split"><div class="u"><h5>À comprendre</h5><ul><li>Pourquoi tout enregistrement a deux faces : origine et emploi de la ressource</li><li>Pourquoi l'amortissement n'est pas une sortie d'argent</li><li>Pourquoi la prudence dissymétrise pertes et gains</li></ul></div><div class="m"><h5>À automatiser</h5><ul><li>Les numéros de comptes des classes 1 à 7</li><li>Le réflexe débit/crédit sans réfléchir</li><li>Les schémas d'écriture types</li><li>Amortissements linéaire et dégressif</li></ul></div></div>
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="8" y="14" width="24" height="20" rx="1"/><line x1="8" y1="20" x2="32" y2="20"/><line x1="8" y1="26" x2="32" y2="26"/><rect x="17" y="26" width="6" height="8"/></svg><b>Entreprise</b><span>tient les comptes</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 16 L20 6 L34 16"/><rect x="6" y="16" width="28" height="4"/><line x1="10" y1="20" x2="10" y2="32"/><line x1="17" y1="20" x2="17" y2="32"/><line x1="23" y1="20" x2="23" y2="32"/><line x1="30" y1="20" x2="30" y2="32"/><line x1="6" y1="32" x2="34" y2="32"/></svg><b>Banquier</b><span>évalue le risque</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="13" cy="11" r="5"/><path d="M5 30 C5 21 21 21 21 30"/><line x1="26" y1="30" x2="26" y2="22"/><line x1="31" y1="30" x2="31" y2="16"/><line x1="36" y1="30" x2="36" y2="10"/></svg><b>Actionnaire</b><span>juge la rentabilité</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="10" y="6" width="20" height="28" rx="2"/><line x1="14" y1="13" x2="26" y2="13"/><line x1="14" y1="19" x2="26" y2="19"/><circle cx="26" cy="27" r="6"/><path d="M23 27 l2 2 l4 -5"/></svg><b>Administration fiscale</b><span>vérifie, taxe</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="8" width="20" height="26" rx="2"/><line x1="10" y1="15" x2="22" y2="15"/><line x1="10" y1="21" x2="22" y2="21"/><path d="M24 30 L34 20 L38 24 L28 34 L23 35 Z"/></svg><b>Expert-comptable</b><span>prépare, atteste</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="8" width="18" height="24" rx="2"/><line x1="10" y1="14" x2="20" y2="14"/><line x1="10" y1="19" x2="20" y2="19"/><circle cx="27" cy="24" r="7"/><line x1="32" y1="29" x2="37" y2="34"/></svg><b>Commissaire aux comptes</b><span>certifie, indépendant</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet">
+      <path d="M55 110 C 105 70, 130 55, 180 55 C 230 55, 290 120, 340 140 C 390 160, 450 70, 500 60 C 550 50, 610 120, 660 140 C 710 160, 780 90, 830 80" fill="none" stroke="#a8c4ab" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(55,110)"><circle r="17" fill="#2b3440" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="34" text-anchor="middle">Principes · PCG</text></g>
+        <g transform="translate(180,55)"><circle r="19" fill="#2b3440" stroke="#fff" stroke-width="2.4"/><circle r="24" fill="none" stroke="#2b3440" stroke-width="1" stroke-dasharray="2 4"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-30" text-anchor="middle">Partie double · verrou</text></g>
+        <g transform="translate(340,140)"><circle r="16" fill="#6b8f71" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="34" text-anchor="middle">Achats · ventes · TVA</text></g>
+        <g transform="translate(500,60)"><circle r="16" fill="#6b8f71" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Personnel</text></g>
+        <g transform="translate(660,140)"><circle r="16" fill="#6b7280" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">Inventaire</text></g>
+        <g transform="translate(830,80)"><circle r="17" fill="#2b3440" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Bilan · résultat</text></g>
+      </g>
+      <text x="875" y="84" font-family="Josefin Sans" font-size="9" fill="#5a6577">→ S6</text>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Les principes et le verrou de la partie double</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation absolue, aucun prérequis en amont</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une entreprise peut toujours affirmer qu'elle va bien. La question que résout ce chapitre n'est pas « comment le prouver en général », mais très précisément : <b>quelle règle empêche un dirigeant malhonnête ou négligent de raconter une histoire différente à sa banque, à ses actionnaires et au fisc</b>, sans que personne ne puisse s'en rendre compte avant qu'il ne soit trop tard ? Avant toute norme, il faut d'abord un langage commun (le PCG, C1) — sans lui, chaque entreprise choisirait ses propres conventions et aucune comparaison ne serait possible. Puis il faut un geste qui rende l'erreur ou le mensonge visible mécaniquement, et pas seulement moralement condamnable (la partie double, C2).</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><rect x="8" y="6" width="24" height="30" rx="2"/><line x1="13" y1="14" x2="27" y2="14"/><line x1="13" y1="20" x2="27" y2="20"/><line x1="13" y1="26" x2="22" y2="26"/></svg>
+        <div>
+          <h5>Origine de la règle — le PCG</h5>
+          <p>Le <b>Plan Comptable Général</b> français actuel est élaboré et mis à jour par l'<b>Autorité des Normes Comptables (ANC)</b>, créée en <span class="yr">2009</span> en succession du Conseil National de la Comptabilité (CNC). Le principe d'un plan comptable national unique est plus ancien : le premier plan comptable français officiel date de <span class="yr">1947</span>, sous l'influence du plan comptable allemand de l'entre-deux-guerres. Sans ce référentiel commun révisé par règlements successifs, deux entreprises françaises pourraient légalement appeler « chiffre d'affaires » deux réalités différentes — rendant impossible toute comparaison, tout contrôle fiscal standardisé, toute consolidation de groupe.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(107,143,113,.09);border-color:rgba(107,143,113,.5)">
+        <svg viewBox="0 0 40 40" stroke="#3f6146"><circle cx="20" cy="20" r="15"/><path d="M13 20 h14 M20 13 v14"/></svg>
+        <div>
+          <h5>Origine de la règle — la partie double</h5>
+          <p>La partie double (<i>partita doppia</i>) est décrite pour la première fois de façon systématique par le moine franciscain et mathématicien <b>Luca Pacioli</b>, dans son traité <i>Summa de arithmetica, geometria, proportioni et proportionalità</i>, imprimé à Venise en <span class="yr">1494</span> — le chapitre consacré à la tenue des comptes s'intitule <i>« De Computis et Scripturis »</i>. La pratique elle-même est antérieure : des registres de la commune de Gênes datant de <span class="yr">1340</span> montrent déjà une comptabilité en partie double chez les marchands italiens. Mais Pacioli est le premier à la formaliser et à la diffuser par l'imprimerie — sans cette publication, la méthode serait restée un savoir-faire local de marchands italiens plutôt qu'un standard diffusé dans toute l'Europe. C'est le <b>verrou absolu</b> de la discipline : aucun chapitre suivant ne fonctionne sans ce geste.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Le principe est presque brutalement simple, et c'est sa simplicité qui le rend increvable : <b>toute opération s'enregistre deux fois</b>, une fois comme origine de la ressource, une fois comme emploi de cette même ressource. Jamais l'une sans l'autre.</p>
+      <div class="chain">
+        <span class="node">Une opération survient</span><span class="arrow">→</span>
+        <span class="node">Elle a une origine (d'où vient la ressource)</span><span class="arrow">→</span>
+        <span class="node">Elle a un emploi (où va la ressource)</span><span class="arrow">→</span>
+        <span class="node">Débit d'un compte = Crédit d'un autre, à l'euro près</span>
+      </div>
+      <p class="mech">Ce n'est pas une convention arbitraire : c'est ce doublement qui rend l'erreur visible. Si un jour la somme des débits ne fait plus la somme des crédits, quelque chose s'est cassé quelque part — et on le sait <b>avant</b> même de savoir où. C'est une alarme intégrée à la méthode elle-même, pas une vérification qu'on ajouterait après coup.</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 640 230" width="100%" style="max-width:640px">
+          <g font-family="Josefin Sans" fill="#2b3440">
+            <text x="320" y="18" text-anchor="middle" font-size="10" letter-spacing="2" fill="#5a6577">UNE OPÉRATION, DEUX ÉCRITURES MIROIR, JAMAIS L'UNE SANS L'AUTRE</text>
+            <rect x="200" y="32" width="240" height="42" rx="10" fill="#fff" stroke="#2b3440" stroke-width="1.6"/>
+            <text x="320" y="49" text-anchor="middle" font-size="11" font-weight="600">Achat de fournitures à crédit</text>
+            <text x="320" y="65" text-anchor="middle" font-size="10" fill="#5a6577">montant : 800 €</text>
+            <line x1="320" y1="74" x2="320" y2="92" stroke="#6b7280" stroke-width="1.6"/>
+            <line x1="320" y1="92" x2="150" y2="112" stroke="#6b7280" stroke-width="1.6"/>
+            <line x1="320" y1="92" x2="490" y2="112" stroke="#6b7280" stroke-width="1.6"/>
+            <rect x="40" y="112" width="220" height="78" rx="10" fill="#fff" stroke="#6b8f71" stroke-width="1.8"/>
+            <text x="150" y="132" text-anchor="middle" font-size="10" letter-spacing="2" fill="#3f6146">DÉBIT</text>
+            <text x="150" y="152" text-anchor="middle" font-size="10">Compte 606</text>
+            <text x="150" y="167" text-anchor="middle" font-size="9" fill="#5a6577">Achats non stockés</text>
+            <text x="150" y="181" text-anchor="middle" font-size="11" font-weight="600">+ 800 €</text>
+            <rect x="380" y="112" width="220" height="78" rx="10" fill="#fff" stroke="#6b7280" stroke-width="1.8"/>
+            <text x="490" y="132" text-anchor="middle" font-size="10" letter-spacing="2" fill="#4a5058">CRÉDIT</text>
+            <text x="490" y="152" text-anchor="middle" font-size="10">Compte 401</text>
+            <text x="490" y="167" text-anchor="middle" font-size="9" fill="#5a6577">Fournisseurs</text>
+            <text x="490" y="181" text-anchor="middle" font-size="11" font-weight="600">+ 800 €</text>
+            <text x="320" y="212" text-anchor="middle" font-size="13" fill="#6b8f71">=</text>
+            <text x="320" y="226" text-anchor="middle" font-size="9" fill="#5a6577">Total débits = Total crédits, à chaque écriture, toujours</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une menuiserie de dix salariés</h5>
+        <p><b>Menuiserie Ferrand</b>, atelier de fabrication de mobilier à Cholet (10 salariés), achète 800 € de panneaux de bois chez son fournisseur habituel, à crédit. Le compte <b>606</b> (achats non stockés — charge) augmente de 800 € au débit : c'est l'<i>emploi</i> de la ressource, la matière qui entre dans l'atelier. Le compte <b>401</b> (fournisseurs — dette) augmente de 800 € au crédit : c'est l'<i>origine</i> de la ressource, la dette qui permet cet achat sans sortie de trésorerie immédiate. Un mois plus tard, quand Ferrand règle son fournisseur par virement, une nouvelle écriture miroir se joue : le compte 401 diminue au débit (la dette s'éteint), le compte 512 — banque — diminue au crédit (la trésorerie sort). À aucun moment une seule ligne ne suffit : chaque euro qui bouge doit toujours désigner à la fois d'où il vient et où il va.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C3 à C6 <i>— tout enregistrement ultérieur répète ce même geste, sans exception</i></span>
+        <span class="linkchip">Gestion financière S6 <i>— réutilise directement le bilan et le compte de résultat produits par C6</i></span>
+        <span class="linkchip">Droit des contrats <i>— une écriture comptable ne vaut que si l'opération sous-jacente est juridiquement valide</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Associer mécaniquement « débit » à « ça augmente » et « crédit » à « ça diminue » — faux dès qu'on change de classe de compte</li>
+          <li>Oublier qu'une charge (classe 6) se débite quand elle augmente, alors qu'une dette (classe 4 au passif) se crédite quand elle augmente</li>
+          <li>Confondre le PCG comme loi obligatoire et comme cadre de référence — il a force réglementaire en France pour les comptes annuels, mais son détail évolue par règlements de l'ANC, pas par une loi votée à chaque fois</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Utiliser un plan de comptes « maison » incompatible avec le PCG, compliquant tout contrôle fiscal ou audit externe</li>
+          <li>Corriger une erreur d'écriture en effaçant plutôt qu'en contre-passant — l'effacement casse la traçabilité que la méthode est censée garantir</li>
+          <li>Sous-estimer le coût d'un logiciel comptable mal paramétré sur les classes de comptes, qui génère des déséquilibres invisibles pendant des mois</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Les sept grandes classes de comptes du PCG — nature bilan ou résultat</caption>
+        <thead><tr><th>Classe</th><th>Contenu</th><th>Document de synthèse</th><th>Sens naturel du solde</th></tr></thead>
+        <tbody>
+          <tr><td>1 — Capitaux</td><td>Capital, réserves, emprunts, résultat</td><td>Bilan — Passif</td><td>Créditeur</td></tr>
+          <tr><td>2 — Immobilisations</td><td>Machines, locaux, brevets, logiciels</td><td>Bilan — Actif</td><td>Débiteur</td></tr>
+          <tr><td>3 — Stocks</td><td>Matières, en-cours, marchandises</td><td>Bilan — Actif</td><td>Débiteur</td></tr>
+          <tr><td>4 — Tiers</td><td>Clients, fournisseurs, État, personnel</td><td>Bilan — Actif ou Passif selon le sens</td><td>Variable</td></tr>
+          <tr><td>5 — Financiers</td><td>Banque, caisse, valeurs mobilières</td><td>Bilan — Actif</td><td>Débiteur</td></tr>
+          <tr><td>6 — Charges</td><td>Achats, salaires, dotations, impôts</td><td>Compte de résultat</td><td>Débiteur</td></tr>
+          <tr><td>7 — Produits</td><td>Ventes, production stockée, produits financiers</td><td>Compte de résultat</td><td>Créditeur</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Les classes 1 à 5 alimentent le <b>bilan</b> (une photo à un instant T) ; les classes 6 et 7 alimentent le <b>compte de résultat</b> (un flux sur une période). Ce contraste stock/flux revient au 篇 III et structure directement la Gestion financière du S6.</p>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez Menuiserie Ferrand. Votre comptable interne, en poste depuis vingt ans, tient les comptes sur un tableur maison « qui marche très bien » plutôt que sur un logiciel conforme au PCG. Faut-il migrer ?</p>
+        <p class="dctx">La migration coûte du temps et de l'argent, et le tableur n'a jamais causé d'erreur détectée jusqu'ici. Mais l'entreprise grandit et vise un premier emprunt bancaire important.</p>
+        <div class="dopts">
+          <span>A. Ne rien changer tant qu'aucune erreur n'est constatée</span>
+          <span>B. Migrer immédiatement vers un logiciel PCG-conforme, quel qu'en soit le coût</span>
+          <span>C. Migrer au moment de la demande de financement, pas avant</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>« Ça n'a jamais causé d'erreur détectée » n'est pas la même chose que « ça n'a jamais causé d'erreur » — un tableur maison qui ne force pas l'équilibre débit/crédit peut receler des déséquilibres invisibles précisément parce que rien ne les signale automatiquement. L'option A parie sur une chance qui a peu de rapport avec la fiabilité réelle du système. L'option C est un pari raisonnable à court terme — un banquier regardera d'abord les comptes annuels normalisés, pas l'outil sous-jacent — mais elle repousse le risque au moment où l'entreprise en a le moins besoin, juste avant une négociation de financement où toute anomalie découverte tardivement coûte de la crédibilité. Une dirigeante prudente traite la conformité comme une assurance, pas comme une dépense de confort.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un déséquilibre débit/crédit n'est jamais une broutille : c'est le signal le plus précoce et le moins cher qu'une erreur existe quelque part</li>
+            <li>Le PCG n'est pas de la paperasse imposée, c'est ce qui rend l'entreprise lisible pour un banquier ou un repreneur</li>
+            <li>Un plan de comptes mal tenu dès le premier exercice coûte plus cher à corriger cinq ans plus tard qu'à bien paramétrer dès le départ</li>
+            <li>La comptabilité protège autant le dirigeant honnête (preuve de bonne foi) que le tiers (protection contre la fraude)</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA comptable frappe ici</h5>
+          <ul>
+            <li>Détection en temps réel de tout déséquilibre débit/crédit avant la clôture, au lieu d'un contrôle mensuel a posteriori</li>
+            <li>Suggestion automatique du compte PCG le plus probable à partir de la nature de la pièce jointe (facture, relevé)</li>
+            <li>Audit continu de cohérence entre plan de comptes « maison » historique et nomenclature PCG officielle</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u"><h5>À comprendre</h5><ul>
+          <li>Pourquoi un langage comptable commun est nécessaire entre entreprises qui ne se connaissent pas</li>
+          <li>Pourquoi le doublement débit/crédit rend l'erreur visible mécaniquement, pas seulement moralement</li>
+          <li>Pourquoi le sens naturel du solde change selon la classe de compte</li>
+        </ul></div>
+        <div class="m"><h5>À automatiser</h5><ul>
+          <li>Les numéros de comptes des sept classes (1 à 7)</li>
+          <li>Le réflexe débit/crédit sans avoir à réfléchir à chaque fois</li>
+          <li>La distinction immédiate bilan (1-5) vs compte de résultat (6-7)</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Les opérations courantes : achats, ventes, TVA, personnel</h2>
+      <p class="dsub">Chapitres C3 · C4 — prérequis C2, puis C2+C3</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois le verrou de la partie double posé (篇 I), il faut l'appliquer des centaines de fois par mois à des opérations qui ne sont plus abstraites : une vente ne rapporte pas qu'un produit à l'entreprise, elle crée aussi, presque toujours, une dette immédiate envers l'État — la TVA collectée qui ne lui appartient pas. <b>Comment enregistrer en une seule opération une ressource qui appartient à trois acteurs différents à la fois</b> — l'entreprise, le client, et le Trésor public ? Et une fois qu'un salarié est payé, comment faire apparaître qu'un même euro de coût se scinde en un montant reçu par le salarié, plusieurs montants versés à des organismes sociaux, sans que rien ne se perde ni ne se double ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — la TVA</h5>
+          <p>La <b>taxe sur la valeur ajoutée</b> est conçue par <b>Maurice Lauré</b>, inspecteur des finances, et instaurée en France à compter du <span class="yr">10 avril 1954</span> — d'abord appliquée aux grandes entreprises, puis généralisée à l'ensemble des secteurs en <span class="yr">1966</span>. Son intérêt technique pour la comptabilité : elle ne taxe que la valeur ajoutée à chaque étape, via un mécanisme de TVA collectée moins TVA déductible, ce qui oblige chaque entreprise à devenir, sans le vouloir, collecteur d'impôt pour le compte de l'État sur toute la chaîne de production.</p>
+        </div>
+      </div>
+      <div class="callout" style="background:rgba(107,143,113,.09);border-color:rgba(107,143,113,.5)">
+        <svg viewBox="0 0 40 40" stroke="#3f6146"><circle cx="14" cy="10" r="5"/><path d="M6 30 C6 21 22 21 22 30"/><rect x="26" y="10" width="10" height="20" rx="1"/></svg>
+        <div>
+          <h5>Origine de la règle — les charges de personnel</h5>
+          <p>Le morcellement d'un salaire en de nombreuses lignes (cotisations salariales, cotisations patronales, multiples organismes) trouve sa source dans la création de la <b>Sécurité sociale</b> en France par les ordonnances des <span class="yr">4 et 19 octobre 1945</span>. Chaque charge sociale finance une branche distincte (maladie, retraite, chômage) — d'où la nécessité comptable de ventiler un même coût de travail entre autant de lignes qu'il existe d'organismes bénéficiaires, plutôt que de le traiter comme un bloc unique.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Pour une vente, trois montants distincts se répartissent en une seule facture :</p>
+      <div class="chain">
+        <span class="node">Prix HT — le vrai chiffre d'affaires de l'entreprise</span><span class="arrow">→</span>
+        <span class="node">TVA collectée — une dette immédiate envers l'État</span><span class="arrow">→</span>
+        <span class="node">Prix TTC — ce que le client règle réellement</span>
+      </div>
+      <p class="mech">L'entreprise ne « gagne » jamais la TVA collectée : elle la doit intégralement, sauf compensation avec la TVA déductible qu'elle a elle-même payée à ses fournisseurs. C'est cette compensation — <b>TVA collectée moins TVA déductible</b> — qui détermine si l'entreprise doit un chèque au Trésor public ou en attend un remboursement.</p>
+      <p class="mech">Pour la paie, le même principe de dissociation s'applique au coût du travail :</p>
+      <div class="chain">
+        <span class="node">Salaire brut</span><span class="arrow">→</span>
+        <span class="node">− cotisations salariales = Net à payer au salarié</span><span class="arrow">→</span>
+        <span class="node">+ cotisations patronales = Coût total employeur</span>
+      </div>
+      <p class="mech">Le montant que voit le salarié sur son compte n'est ni ce qu'il a « gagné » comptablement (le brut), ni ce qu'il coûte réellement à l'entreprise (le coût total) — un écart que beaucoup découvrent tard dans leur carrière.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une boulangerie qui vend et qui embauche</h5>
+        <p><b>Boulangerie Vasseur</b>, à Rennes, vend pour 100 € HT de pâtisseries à un traiteur professionnel, avec une TVA à 20 % — soit 120 € TTC facturés. Comptablement, seuls 100 € entrent en produit (compte 707, classe 7) ; les 20 € restants sont une dette envers l'État (compte 44571, TVA collectée), qui n'appartiennent jamais à Vasseur même s'ils transitent par sa banque. Le même mois, Vasseur embauche un apprenti pâtissier pour un salaire brut de 1 800 €. Après cotisations salariales (environ 22 % en ordre de grandeur, variable selon les régimes), le net à payer avoisine 1 400 € ; en ajoutant les cotisations patronales, le coût réel pour Vasseur dépasse souvent 2 400 € — un écart de plus de 1 000 € entre ce que l'apprenti perçoit et ce que la boulangerie décaisse au total, entièrement absorbé par des lignes comptables distinctes que la partie double oblige à détailler une à une.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C2 — partie double <i>— chaque ligne HT, TVA, brut, charges suit le même geste débit/crédit</i></span>
+        <span class="linkchip">Gestion financière S6 <i>— la TVA à décaisser et le coût salarial pèsent directement sur la trésorerie</i></span>
+        <span class="linkchip">Droit des contrats <i>— le contrat de travail fixe le brut, la loi fixe les taux de cotisation</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Enregistrer le prix TTC comme chiffre d'affaires au lieu du seul montant HT</li>
+          <li>Oublier que la TVA déductible sur un achat n'est récupérable que si la facture est conforme et l'achat lié à l'activité</li>
+          <li>Confondre salaire brut et coût total employeur dans un calcul de rentabilité</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Sous-provisionner la TVA à décaisser en fin de trimestre, créant une tension de trésorerie évitable</li>
+          <li>Appliquer un taux de TVA erroné (5,5 % au lieu de 20 %, par exemple) sur une prestation ambiguë, exposant l'entreprise à un redressement avec pénalités</li>
+          <li>Communiquer en interne sur le salaire brut sans jamais expliquer le coût réel du poste, faussant les arbitrages de recrutement</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Du salaire brut au coût total employeur — où va chaque euro</caption>
+        <thead><tr><th>Ligne</th><th>Qui la supporte</th><th>Ordre de grandeur</th><th>Où elle va</th></tr></thead>
+        <tbody>
+          <tr><td>Salaire brut</td><td>Base de calcul</td><td>Référence 100</td><td>Contrat de travail</td></tr>
+          <tr><td>Cotisations salariales</td><td>Retenues sur le salarié</td><td>≈ 20-23 % du brut</td><td>Organismes sociaux (via l'entreprise)</td></tr>
+          <tr><td>Net à payer</td><td>Reçu par le salarié</td><td>≈ 77-80 % du brut</td><td>Compte du salarié</td></tr>
+          <tr><td>Cotisations patronales</td><td>À la charge de l'entreprise, en plus du brut</td><td>≈ 25-42 % du brut selon statut</td><td>Organismes sociaux</td></tr>
+          <tr><td>Coût total employeur</td><td>Décaissé par l'entreprise</td><td>≈ 125-142 % du brut</td><td>Somme de toutes les lignes ci-dessus</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Les taux exacts varient selon le statut, la taille de l'entreprise et les allègements en vigueur — les ordres de grandeur ci-dessus servent à faire comprendre l'écart, pas à remplacer un bulletin de paie réel.</p>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Un expert-comptable junior suggère d'appliquer une TVA à 5,5 % sur une prestation dont le taux exact est ambigu, ce qui rend le devis plus attractif pour un client hésitant. Vous dirigez l'entreprise : acceptez-vous ?</p>
+        <p class="dctx">Le taux réduit n'est pas manifestement faux, mais il n'est pas non plus clairement justifié par un texte précis — un contrôle fiscal pourrait le requalifier à 20 %, avec rappel de TVA et pénalités rétroactives sur toutes les factures concernées.</p>
+        <div class="dopts">
+          <span>A. Appliquer le taux réduit, le devis est déjà envoyé et le client l'attend</span>
+          <span>B. Appliquer le taux normal par prudence, quitte à perdre en compétitivité</span>
+          <span>C. Demander un rescrit fiscal avant de trancher, et facturer au taux normal en attendant</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. L'option A économise l'euro immédiat mais transforme un doute fiscal en risque cumulatif : si l'ambiguïté se répète sur des centaines de factures avant d'être corrigée, le rappel de TVA et les pénalités s'accumulent avec les mêmes proportions. L'option C — le rescrit fiscal, une demande officielle de position à l'administration — est la plus rigoureuse mais ralentit l'activité commerciale en attendant une réponse qui peut prendre plusieurs mois. En pratique, beaucoup d'entreprises choisissent une version prudente de B en attendant C : appliquer le taux normal tant que le doute n'est pas levé, quitte à regagner la marge perdue une fois la position fiscale confirmée.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>La TVA collectée n'est jamais un revenu disponible — la confondre avec de la trésorerie libre est l'erreur de gestion la plus fréquente en TPE</li>
+            <li>Le coût total employeur, pas le salaire brut, est le seul chiffre pertinent pour arbitrer un recrutement</li>
+            <li>Une ambiguïté de taux de TVA non résolue est un passif caché qui grossit à chaque facture émise</li>
+            <li>Le service comptable qui documente ses choix de taux et de comptes se protège autant qu'il protège l'entreprise en cas de contrôle</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA comptable frappe ici</h5>
+          <ul>
+            <li>Rapprochement automatique TVA collectée / TVA déductible en continu, plutôt qu'au moment de la déclaration</li>
+            <li>Alerte sur les factures dont le taux de TVA s'écarte du taux dominant observé pour une même catégorie de prestation</li>
+            <li>Simulation instantanée du coût total employeur avant toute offre d'embauche, incluant les allègements applicables</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u"><h5>À comprendre</h5><ul>
+          <li>Pourquoi la TVA collectée n'appartient jamais à l'entreprise, même si elle transite par sa banque</li>
+          <li>Pourquoi le coût employeur dépasse toujours largement le salaire net perçu</li>
+          <li>Pourquoi chaque cotisation sociale finance une branche distincte, d'où le morcellement des lignes</li>
+        </ul></div>
+        <div class="m"><h5>À automatiser</h5><ul>
+          <li>Les schémas d'écriture types achat/vente HT-TVA-TTC</li>
+          <li>Les comptes de tiers 44566 (TVA déductible) et 44571 (TVA collectée)</li>
+          <li>La ventilation brut / net / charges patronales sur un bulletin de paie</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Inventaire et documents de synthèse</h2>
+      <p class="dsub">Chapitres C5 · C6 — prérequis C2 et principe de prudence (C1), puis C3+C4+C5</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une machine achetée 50 000 € s'use un peu chaque jour, sans qu'aucun chèque ne soit émis pour constater cette usure. Une créance client peut ne jamais être payée, sans que personne ne le sache encore avec certitude au moment de clôturer l'exercice. <b>Comment refléter une perte de valeur qui n'a généré aucun mouvement de trésorerie</b>, sans pour autant dramatiser un risque qui ne s'est pas encore matérialisé ? Puis, une fois l'année écoulée, comment condenser des centaines d'écritures en deux documents assez simples pour qu'un tiers extérieur — banquier, actionnaire, repreneur — comprenne en quelques minutes ce que l'entreprise possède et ce qu'elle a gagné ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><path d="M8 34 L20 8 L32 34 Z"/><line x1="14" y1="24" x2="26" y2="24"/></svg>
+        <div>
+          <h5>Origine de la règle — le principe de prudence</h5>
+          <p>Le <b>principe de prudence</b> — obligation de comptabiliser une perte probable mais jamais un gain probable — est aujourd'hui codifié à l'<b>article L123-21 du Code de commerce</b> français. Il crée une dissymétrie volontaire entre pertes et gains, précisément pour éviter qu'une entreprise ne présente une image plus favorable qu'elle ne l'est réellement à un tiers qui ne peut pas vérifier sur place. Sans cette règle, rien n'empêcherait une entreprise d'anticiper comptablement des gains encore incertains pour paraître plus solvable qu'elle ne l'est.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Perte de valeur constatée (usure, risque, litige)</span><span class="arrow">→</span>
+        <span class="node">Le principe de prudence impose son enregistrement</span><span class="arrow">→</span>
+        <span class="node">Une charge apparaît, même sans décaissement</span><span class="arrow">→</span>
+        <span class="node">Le résultat diminue avant que la perte ne soit définitive</span>
+      </div>
+      <p class="mech">Trois mécanismes traduisent ce principe différemment selon le type de perte : l'<b>amortissement</b> répartit systématiquement, sur plusieurs exercices, le coût d'un bien dont l'usure est certaine mais progressive (une machine) — ce n'est jamais une sortie de trésorerie, seulement une charge comptable qui répartit dans le temps une dépense déjà payée. La <b>dépréciation</b> constate une perte de valeur incertaine et potentiellement réversible (une créance client qui tarde à être réglée). La <b>provision</b> anticipe une charge ou une dette probable dont le montant ou l'échéance n'est pas encore fixé avec précision (un litige prud'homal en cours). Les trois obéissent à la même logique de prudence, mais ne se traitent jamais comme un bloc unique.</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 620 130" width="100%" style="max-width:620px">
+          <g font-family="Josefin Sans" font-size="10" fill="#2b3440">
+            <text x="310" y="16" text-anchor="middle" font-size="9" letter-spacing="2" fill="#5a6577">MÊME PRINCIPE, TROIS TRADUCTIONS SELON LA NATURE DE LA PERTE</text>
+            <rect x="20" y="30" width="180" height="80" rx="10" fill="#fff" stroke="#2b3440" stroke-width="1.6"/>
+            <text x="110" y="50" text-anchor="middle" font-weight="600">Amortissement</text>
+            <text x="110" y="68" text-anchor="middle" font-size="9" fill="#5a6577">usure certaine,</text>
+            <text x="110" y="80" text-anchor="middle" font-size="9" fill="#5a6577">progressive</text>
+            <text x="110" y="98" text-anchor="middle" font-size="9">ex. une machine</text>
+            <rect x="220" y="30" width="180" height="80" rx="10" fill="#fff" stroke="#6b8f71" stroke-width="1.6"/>
+            <text x="310" y="50" text-anchor="middle" font-weight="600">Dépréciation</text>
+            <text x="310" y="68" text-anchor="middle" font-size="9" fill="#5a6577">perte incertaine,</text>
+            <text x="310" y="80" text-anchor="middle" font-size="9" fill="#5a6577">réversible</text>
+            <text x="310" y="98" text-anchor="middle" font-size="9">ex. créance client</text>
+            <rect x="420" y="30" width="180" height="80" rx="10" fill="#fff" stroke="#6b7280" stroke-width="1.6"/>
+            <text x="510" y="50" text-anchor="middle" font-weight="600">Provision</text>
+            <text x="510" y="68" text-anchor="middle" font-size="9" fill="#5a6577">charge future</text>
+            <text x="510" y="80" text-anchor="middle" font-size="9" fill="#5a6577">probable</text>
+            <text x="510" y="98" text-anchor="middle" font-size="9">ex. litige en cours</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="mech">Puis, en fin d'exercice, tout se rassemble dans deux documents qui répondent à deux questions différentes : le <b>bilan</b> est une photographie à un instant T — ce que l'entreprise possède (actif) et comment elle l'a financé (passif) ; le <b>compte de résultat</b> est un film sur toute la période — les produits moins les charges de l'exercice. C'est précisément ce couple stock/flux, construit chapitre après chapitre depuis 篇 I, que la Gestion financière du S6 reprend telle quelle comme matière première de tous ses calculs de ratios et de rentabilité.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une menuiserie qui investit et une créance qui inquiète</h5>
+        <p>Menuiserie Ferrand (篇 I) achète une nouvelle machine à commande numérique pour 50 000 €, amortie sur 5 ans en linéaire : 10 000 € de charge d'amortissement apparaissent chaque année dans le compte de résultat, sans qu'aucun chèque supplémentaire ne soit émis après l'achat initial — un chiffre qui réduit pourtant le bénéfice affiché, et donc l'impôt dû. La même année, un client professionnel doit 12 000 € à Ferrand depuis huit mois et traverse des difficultés connues ; sans certitude sur le non-paiement, mais avec un doute sérieux, le principe de prudence impose de <b>déprécier</b> tout ou partie de cette créance plutôt que d'attendre une confirmation qui pourrait ne jamais venir avant la clôture.</p>
+      </div>
+
+      <table class="cmp">
+        <caption>Amortissement linéaire vs dégressif — ce qui change, et quand choisir lequel</caption>
+        <thead><tr><th>Critère</th><th>Linéaire</th><th>Dégressif</th></tr></thead>
+        <tbody>
+          <tr><td>Profil de charge dans le temps</td><td>Constante chaque année</td><td>Forte au début, décroissante ensuite</td></tr>
+          <tr><td>Calcul</td><td>Valeur / durée de vie</td><td>Taux linéaire × coefficient fiscal, appliqué à la valeur nette restante</td></tr>
+          <tr><td>Effet sur le résultat</td><td>Lissé, prévisible</td><td>Résultat comptable plus bas les premières années</td></tr>
+          <tr><td>Cas d'usage typique</td><td>Bien à usure régulière (mobilier, bâtiment)</td><td>Bien technologique à obsolescence rapide, biens éligibles listés par la loi fiscale</td></tr>
+          <tr><td>Effet de trésorerie</td><td>Aucun effet direct — écart purement comptable et fiscal</td><td>Aucun effet direct — écart purement comptable et fiscal</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C1 — principe de prudence <i>— fondement juridique de tout amortissement, dépréciation, provision</i></span>
+        <span class="linkchip">Gestion financière S6 <i>— bilan et compte de résultat sont sa matière première directe</i></span>
+        <span class="linkchip">C2 — partie double <i>— une dotation aux amortissements reste une écriture à deux faces comme toutes les autres</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire qu'amortir une machine fait sortir de l'argent l'année de la dotation, alors que la sortie a eu lieu à l'achat</li>
+          <li>Confondre dépréciation (réversible, réévaluable) et amortissement (systématique, irréversible dans son principe)</li>
+          <li>Oublier que le bilan est une photo à un instant T tandis que le compte de résultat couvre toute une période</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Sous-provisionner une créance douteuse pour ne pas dégrader artificiellement le résultat affiché à une banque</li>
+          <li>Choisir un mode d'amortissement uniquement pour l'effet fiscal immédiat, sans cohérence avec l'usure réelle du bien</li>
+          <li>Présenter un bilan optimisé juste avant une levée de fonds sans documenter les hypothèses de dépréciation retenues</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Une créance client de 40 000 € est impayée depuis huit mois. Le client traverse des difficultés mais négocie encore un plan d'apurement partiel. Vous clôturez l'exercice cette semaine : quel niveau de dépréciation retenez-vous ?</p>
+        <p class="dctx">Déprécier à 100 % dégrade fortement le résultat de l'année, ce qui peut inquiéter votre banque au moment même où vous négociez une ligne de trésorerie. Ne rien déprécier expose à un redressement si le contrôleur fiscal juge la perte prévisible dès la clôture.</p>
+        <div class="dopts">
+          <span>A. Ne rien déprécier — le client négocie encore, rien n'est perdu</span>
+          <span>B. Déprécier à 100 % par prudence maximale</span>
+          <span>C. Déprécier partiellement, au prorata du risque estimé sur la base des informations disponibles</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Le principe de prudence n'impose pas une réponse binaire mais une estimation honnête du risque à la date de clôture. L'option A ignore un doute sérieux déjà documenté (huit mois de retard, difficultés connues) — un commissaire aux comptes ou un contrôle fiscal pourrait la juger insuffisamment prudente. L'option B surestime probablement la perte si un plan d'apurement est réellement en cours de négociation. L'option C — une dépréciation partielle, proportionnée aux informations disponibles au jour de la clôture — est la pratique la plus défendable, à condition d'être documentée : le principe de prudence protège autant l'entreprise qui peut justifier son estimation que le tiers qui la lit.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un amortissement ne coûte jamais de trésorerie l'année où il apparaît — le confondre avec une dépense réelle fausse toute décision d'investissement</li>
+            <li>Une créance douteuse non dépréciée n'est pas un problème évité, c'est un problème simplement repoussé et souvent aggravé</li>
+            <li>Le bilan et le compte de résultat sont les deux seuls documents qu'un banquier ou un repreneur lira vraiment en premier — leur qualité vaut plus que n'importe quelle présentation commerciale</li>
+            <li>Choisir un mode d'amortissement est une décision de pilotage fiscal autant que comptable, à ne jamais déléguer sans regard du dirigeant</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA comptable frappe ici</h5>
+          <ul>
+            <li>Scoring automatique du risque client à partir de l'historique de paiement, pour proposer un taux de dépréciation objectivé plutôt qu'estimé à la main</li>
+            <li>Simulation comparée linéaire/dégressif avant tout investissement, avec impact sur le résultat et l'impôt affichés simultanément</li>
+            <li>Génération automatique du bilan et du compte de résultat en continu, plutôt qu'une reconstitution ponctuelle en fin d'exercice</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Partie double, le geste répété<i>C2 → tous</i></span>
+        <span class="sp">Principe de prudence<i>C1 · C5</i></span>
+        <span class="sp">Décorrélation charge / trésorerie<i>C5 · C6</i></span>
+        <span class="sp">Stock (bilan) vs flux (résultat)<i>C1 · C6</i></span>
+        <span class="sp">Preuve pour un tiers absent<i>tous</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u"><h5>À comprendre</h5><ul>
+          <li>Pourquoi un amortissement n'est pas une sortie d'argent</li>
+          <li>Pourquoi la prudence dissymétrise pertes probables et gains probables</li>
+          <li>Pourquoi le bilan et le compte de résultat répondent à deux questions différentes, jamais interchangeables</li>
+        </ul></div>
+        <div class="m"><h5>À automatiser</h5><ul>
+          <li>Le calcul de l'amortissement linéaire et du dégressif</li>
+          <li>Les schémas d'écriture de dotation aux amortissements, dépréciations, provisions</li>
+          <li>La structure figée du bilan (actif/passif) et du compte de résultat (charges/produits)</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
-    <a class="navbtn prev" href="04-droit-contrats-common-law.html">← Droit des contrats & Common …</a>
+    <a class="navbtn prev" href="04-droit-contrats-common-law.html">← Droit des contrats & Common Law</a>
     <a class="navbtn home" href="index.html">Index des matières</a>
     <a class="navbtn next" href="06-gestion-financiere.html">Gestion financière →</a>
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
