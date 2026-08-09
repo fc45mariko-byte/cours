@@ -159,7 +159,8 @@ h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3
 .split li{font-size:.83rem;padding:4px 0 4px 16px;position:relative;color:var(--ink)}
 .split li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--gr-lt)}
 
-table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+.twrap{overflow-x:auto;margin:14px 0}
+table.cmp{width:100%;min-width:560px;border-collapse:collapse;margin:0;font-size:.84rem;background:#fff;
   border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--ink-soft);text-align:left;padding:2px 14px 8px}
@@ -362,7 +363,7 @@ details.dilemma[open] summary::before{content:"◇"}
       </div>
       <p class="mech">Ce dernier maillon compte autant que les autres : une partie prenante oubliée au cadrage (le bailleur du local, la mairie pour un permis) réapparaît presque toujours plus tard, sous forme de blocage — jamais sous forme de bonne surprise.</p>
 
-      <table class="cmp">
+      <div class="twrap"><table class="cmp">
         <caption>SMART appliqué au projet d'ouverture — un même critère, mal ou bien formulé</caption>
         <thead><tr><th>Critère</th><th>Mal formulé</th><th>Bien formulé</th></tr></thead>
         <tbody>
@@ -372,7 +373,7 @@ details.dilemma[open] summary::before{content:"◇"}
           <tr><td>Réaliste</td><td>« Ouvrir cinq boutiques ce trimestre »</td><td>« Ouvrir cette boutique avec l'équipe et le budget déjà validés »</td></tr>
           <tr><td>Temporel</td><td>« Un jour, améliorer l'accueil »</td><td>« Atteindre la cible sous 30 jours après l'ouverture »</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
       <div class="linkrow">
@@ -604,7 +605,7 @@ details.dilemma[open] summary::before{content:"◇"}
         </div>
       </div>
 
-      <table class="cmp">
+      <div class="twrap"><table class="cmp">
         <caption>PERT et CPM — deux méthodes nées la même année, dans deux mondes différents</caption>
         <thead><tr><th>Critère</th><th>PERT</th><th>CPM</th></tr></thead>
         <tbody>
@@ -613,7 +614,7 @@ details.dilemma[open] summary::before{content:"◇"}
           <tr><td>Usage privilégié</td><td>R&amp;D, projets à forte incertitude technique</td><td>Travaux industriels, durées bien connues</td></tr>
           <tr><td>Résultat produit</td><td>Durée espérée du projet + variance</td><td>Chemin critique explicite, marge calculée par tâche</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
       <div class="linkrow">
@@ -701,7 +702,7 @@ details.dilemma[open] summary::before{content:"◇"}
       </div>
       <p class="mech">Le piège le plus classique : lire un budget consommé à 60% comme un signe que « tout va bien », alors que les travaux ne sont physiquement avancés qu'à 40%. L'écart entre avancement physique et consommation budgétaire, au même instant, est un indicateur d'alerte bien plus fiable que l'un ou l'autre pris seul — c'est exactement la logique de sélection resserrée d'indicateurs enseignée dans le tableau de bord de gestion (discipline 07, Outils de gestion) : peu d'indicateurs, mais choisis pour leur pouvoir d'alerte.</p>
 
-      <table class="cmp">
+      <div class="twrap"><table class="cmp">
         <caption>Registre des risques du point de vente — arbitrer, pas seulement lister</caption>
         <thead><tr><th>Risque identifié</th><th>Probabilité</th><th>Impact</th><th>Réponse retenue</th></tr></thead>
         <tbody>
@@ -710,7 +711,7 @@ details.dilemma[open] summary::before{content:"◇"}
           <tr><td>Départ d'un salarié recruté</td><td>Faible</td><td>Moyen (tâche à marge)</td><td>Accepter — la marge du recrutement absorbe un remplacement</td></tr>
           <tr><td>Dépassement du budget travaux</td><td>Moyenne</td><td>Fort (sommet coût du triangle)</td><td>Transférer — clause de pénalité de retard au contrat du prestataire</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <p class="blockt"><span class="bdot"></span>Exemple concret</p>
       <div class="example">
