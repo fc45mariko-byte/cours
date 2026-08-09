@@ -4,12 +4,214 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Civilisation américaine — publicité et marketing — Cours détaillé · Master Plans</title>
-<meta name="description" content="Fiche de cours détaillée — Civilisation américaine — publicité et marketing, discipline 18 de L'Architecture des Disciplines.">
+<meta name="description" content="Fiche de cours détaillée — Civilisation américaine, publicité et marketing : le balancier entre mesure scientifique et révolution créative, XXe-XXIe siècles. Discipline 18 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#b1483f;--dom-lt:#e3a099}</style>
+<style>
+/* Palette — rouge publicitaire / bleu écran / jaune enseigne : le rouge des
+   marques et du rouge à lèvres publicitaire, le bleu de l'écran de télévision
+   qui envahit les foyers américains dans les années 1950, le jaune des
+   enseignes lumineuses et des affiches commerciales — trois couleurs de la
+   société de consommation américaine en construction. Rouge = création,
+   pôle rhétorique/symbolique du balancier ; bleu = mesure, pôle scientifique
+   et « écran » de contrôle ; jaune = signalétique, utilisé ici comme accent
+   secondaire (or des affiches, chiffres, cadres pédagogiques). */
+:root{
+  --p1:#b82f3a; --p1-lt:#e0919c; --p1-dk:#7c1f28;
+  --p2:#2f4f7a; --p2-lt:#85a0c4; --p2-dk:#1a2f47;
+  --p3:#d9a83d; --p3-lt:#f0d08c; --p3-dk:#a97a1f;
+  --ink:#2c2620; --ink-soft:#7a6b5c;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(47,79,122,.28); --vert:#3f7a5a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #f3c9ce 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 20%, #b9c8e2 0%, transparent 52%),
+    radial-gradient(1000px 720px at 34% 108%, #f5e2b0 0%, transparent 58%),
+    linear-gradient(158deg,#f5dbdc 0%, #dde6f2 42%, #f2e4bd 72%, #f3d5cf 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p2-dk);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(184,47,58,.26);
+  border-radius:26px;box-shadow:0 18px 48px rgba(44,38,32,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:200px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--p1-dk);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p2-lt),var(--p2-dk))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p2-dk)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p2-dk)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:460px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p2-dk);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.55rem;fill:var(--ink)}
+.tl-dec{font-family:'Josefin Sans';font-size:.46rem;fill:var(--ink-soft)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(184,47,58,.22);border-radius:24px;box-shadow:0 16px 46px rgba(44,38,32,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p3));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--p1-dk);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(47,79,122,.08);
+  border:1px solid rgba(47,79,122,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p2-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p3);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(184,47,58,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#2e5a42;
+  padding:5px 12px;border-radius:14px;background:rgba(63,122,90,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(217,168,61,.12);border:1px solid rgba(217,168,61,.5)}
+.errors .ee{background:rgba(47,79,122,.1);border:1px solid rgba(47,79,122,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--p3-dk)} .errors .ee h5{color:var(--p2-dk)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p3-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#5c3d17}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(240,208,140,.16)}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--p1-dk);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(217,168,61,.12);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p3)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(217,168,61,.18);border:1px solid var(--p3)}
+.helix{background:rgba(47,79,122,.09);border:1px solid var(--p2)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:var(--p1-dk)} .helix h5{color:var(--p2-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p3);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p2-dk)}
+
+/* diagrammes (arbre / pendule) */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#2e5a42;
+  padding:5px 12px;border-radius:14px;background:rgba(63,122,90,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,47 +220,452 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d18">
-  <div class="tab">篇 XVIII</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 18</p>
-    <h3>Civilisation américaine — publicité et marketing</h3>
-    <p class="dmeta">S6 · 2 ECTS · Eric Tabuteau · XX<sup>e</sup>–XXI<sup>e</sup> siècles</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Un balancier stylisé oscillant entre un plateau gauche portant une loupe sur un graphique — la mesure — et un plateau droit portant une ampoule et un pinceau — la création">
+      <g stroke="#1a2f47" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="340" y1="178" x2="340" y2="46"/>
+        <path d="M320 178 h40 l-7 11 h-26 Z"/>
+      </g>
+      <circle cx="340" cy="46" r="4" fill="#b82f3a" stroke="none"/>
+      <line x1="200" y1="66" x2="480" y2="26" stroke="#1a2f47" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="200" y1="66" x2="200" y2="88" stroke="#7a6b5c" stroke-width="1.3" stroke-dasharray="1 4"/>
+      <line x1="480" y1="26" x2="480" y2="64" stroke="#7a6b5c" stroke-width="1.3" stroke-dasharray="1 4"/>
+      <path d="M200 118 Q340 168 480 96" fill="none" stroke="#d9a83d" stroke-width="1.6" stroke-dasharray="2 7" opacity=".8"/>
+      <g transform="translate(200,108)" stroke="#1a2f47" stroke-width="1.7" fill="none">
+        <circle r="24"/>
+        <circle cx="-4" cy="-4" r="8"/><line x1="2" y1="2" x2="9" y2="9"/>
+        <path d="M-12 9 h6 M-4 5 h7 M3 11 h7"/>
+      </g>
+      <g transform="translate(480,86)" stroke="#b82f3a" stroke-width="1.7" fill="none">
+        <circle r="24"/>
+        <path d="M-7 -12 C-12 -8 -12 -2 -7 1 C-7 4 -3 4 -3 1 C2 -2 2 -8 -3 -12 C-4 -13 -6 -13 -7 -12 Z"/>
+        <line x1="-5" y1="1" x2="-5" y2="6"/><path d="M-8 6 h6"/>
+        <line x1="4" y1="-10" x2="14" y2="3"/><path d="M9 -3 l5 4 M11 -6 l3 6"/>
+      </g>
+      <text x="200" y="150" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="1.5" fill="#1a2f47">MESURE</text>
+      <text x="480" y="122" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="1.5" fill="#b82f3a">CRÉATION</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Civilisation américaine — publicité et marketing</h1>
+    <p class="gen-open">La production de masse crée, au tournant du XX<sup>e</sup> siècle américain, un problème inédit : <b>fabriquer plus vite que les gens ne désirent</b>. Une usine peut désormais produire en un jour ce qu'une ville ne consommera qu'en un mois — il faut donc, en plus de l'usine, inventer un métier chargé de produire le désir lui-même. Toute la discipline répond à une seule question, reformulée à chaque décennie : comment une industrie entière s'est-elle constituée pour fabriquer de la demande, et comment mesure-t-on un effet sur des esprits qu'on ne voit jamais ?</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:80%"></span><span class="au" style="width:20%"></span></span>
       <span class="crd">Système <b class="s">80%</b> · Automatisme <b class="a">20%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S6 · 2 ECTS · Eric Tabuteau · XX<sup>e</sup>–XXI<sup>e</sup> siècles</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">La production de masse crée un problème inédit : <b>fabriquer plus vite que les gens ne désirent</b>. Comment une industrie entière s'est-elle constituée pour produire de la demande — et comment mesure-t-on un effet sur les esprits ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Le problème de la surproduction &amp; la naissance d'un métier</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>La professionnalisation (1900s–20s)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · Lasker, Hopkins, Bernays</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>La mesure : études de marché (1930s–40s)</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b> · Gallup, Nielsen · <b>Ouvre :</b> tout le reste — sans mesure, pas de stratégie</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Télévision &amp; consommation de masse (1950s)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3</b> · USP de Rosser Reeves</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>La creative revolution (1960s)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C4</b> · Bernbach, Ogilvy — réaction contre C4</span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Segmentation, numérique, données</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3, C5</b> · retour de la mesure à une échelle nouvelle</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Problème</div><div class="tc"><span class="node f">C1 · Produire le désir</span></div></div>
-<div class="flow"><span class="fdot"></span>le métier se professionnalise, puis cherche à se prouver<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Deux moteurs</div><div class="tc"><span class="node s">C2 · Métier</span><span class="ar">→</span><span class="node f">C3 · Mesure</span></div></div>
-<div class="flow"><span class="fdot"></span>oscillation entre science et création<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Balancier</div><div class="tc"><span class="node s">C4 · Science · USP</span><span class="ar">⇄</span><span class="node s">C5 · Création</span><span class="ar">→</span><span class="node s">C6 · Données</span></div></div>
-</div>
-    <p class="note">La discipline s'organise autour d'un <b>balancier</b> entre approche scientifique et approche créative. Chaque décennie est une position sur ce balancier — c'est le fil qui empêche la chronologie de devenir une liste de noms.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Science ⇄ création<i>C2·C4·C5·C6</i></span><span class="sp">Mesure de l'audience<i>C3·C6</i></span><span class="sp">Fabrication du consentement<i>C2·C4</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M8 16 L24 8 V32 L8 24 Z"/><rect x="4" y="17" width="4" height="6"/><path d="M26 16 q6 4 0 8"/></svg><b>Albert Lasker</b><span>Lord &amp; Thomas, 1898–1942</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M20 14 C15 10 9 11 6 13 V30 C9 28 15 27 20 31 C25 27 31 28 34 30 V13 C31 11 25 10 20 14 Z"/><line x1="20" y1="14" x2="20" y2="31"/></svg><b>Claude Hopkins</b><span>Scientific Advertising, 1923</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M20 6 C25 12 25 17 20 19 C15 17 15 12 20 6 Z"/><line x1="20" y1="19" x2="20" y2="33"/><path d="M12 33 h16 M15 26 h10"/></svg><b>Edward Bernays</b><span>Propaganda, 1928</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="7" y="17" width="26" height="17" rx="2"/><path d="M7 17 L20 8 L33 17"/><path d="M13 24 l5 5 l9 -11"/></svg><b>George Gallup</b><span>AIPO, 1935</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="18" cy="20" r="13"/><circle cx="18" cy="20" r="7"/><circle cx="18" cy="20" r="2"/><line x1="34" y1="6" x2="24" y2="15"/><path d="M34 6 l-7 1 M34 6 l-1 7"/></svg><b>Rosser Reeves</b><span>USP, Ted Bates</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 27 C6 16 14 9 20 9 C26 9 34 16 34 27"/><line x1="3" y1="27" x2="37" y2="27"/><circle cx="12" cy="29" r="3"/><circle cx="28" cy="29" r="3"/></svg><b>Bill Bernbach</b><span>DDB, 1949</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet">
+      <path d="M70 100 C 150 40, 260 40, 342 100 S 530 170, 614 100 S 730 20, 750 55" fill="none" stroke="#f0d08c" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(70,100)"><circle r="17" fill="#1a2f47" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="34" text-anchor="middle">Surproduction</text><text class="tl-dec" x="0" y="45" text-anchor="middle">v. 1900</text></g>
+        <g transform="translate(206,55)"><circle r="15" fill="#b82f3a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Professionnalisation</text><text class="tl-dec" x="0" y="-11" text-anchor="middle">1900s–20s</text></g>
+        <g transform="translate(342,100)"><circle r="17" fill="#1a2f47" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="34" text-anchor="middle">La mesure</text><text class="tl-dec" x="0" y="45" text-anchor="middle">1930s–40s · fondation</text></g>
+        <g transform="translate(478,148)"><circle r="15" fill="#2f4f7a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Télévision · USP</text><text class="tl-dec" x="0" y="-13" text-anchor="middle">1950s</text></g>
+        <g transform="translate(614,100)"><circle r="15" fill="#b82f3a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">Creative revolution</text><text class="tl-dec" x="0" y="45" text-anchor="middle">1960s</text></g>
+        <g transform="translate(750,55)"><circle r="15" fill="#a97a1f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Données</text><text class="tl-dec" x="0" y="-11" text-anchor="middle">échelle nouvelle</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Naissance et professionnalisation d'un métier</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Au tournant du XX<sup>e</sup> siècle, l'industrie américaine résout un problème qu'elle vient elle-même de créer. La chaîne de production, la standardisation des pièces, l'électrification des usines multiplient la quantité de savon, de céréales, de cigarettes ou d'automobiles qu'une seule usine peut fabriquer en une journée — bien au-delà de ce qu'une ville, ou même une région, absorbe naturellement. <b>Le goulot d'étranglement n'est plus la production, il devient le désir</b> : il ne suffit plus de fabriquer un bon produit, il faut désormais fabriquer, chez des millions d'inconnus, l'envie de l'acheter. Aucun métier n'existe encore pour cela — le vendeur connaît son client, l'annonce de journal informe, mais personne n'est chargé de produire un vouloir-acheter à l'échelle d'un pays entier.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — l'école « reason-why »</h5>
+          <p><b>Albert Lasker</b>, souvent qualifié de « père de la publicité moderne », entre en 1898 comme employé chez <b>Lord &amp; Thomas</b> (Chicago), en devient actionnaire majoritaire dans les années qui suivent, puis seul propriétaire en <span class="yr">1912</span>, et dirige l'agence jusqu'à sa retraite en <span class="yr">1942</span>. Il travaille en binôme étroit avec le rédacteur <b>Claude Hopkins</b>, dont le livre <i>Scientific Advertising</i> (<span class="yr">1923</span>) fonde l'école dite « <b>reason-why</b> » : chaque annonce doit justifier rationnellement, fait à l'appui, pourquoi ce produit précis mérite d'être acheté — jamais une simple affirmation, toujours une raison.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(184,47,58,.08);border-color:rgba(184,47,58,.45)">
+        <svg viewBox="0 0 40 40" stroke="#b82f3a"><path d="M20 6 C25 12 25 17 20 19 C15 17 15 12 20 6 Z"/><line x1="20" y1="19" x2="20" y2="33"/><path d="M12 33 h16"/></svg>
+        <div>
+          <h5>Origine de la règle — l'école psychologique</h5>
+          <p><b>Edward Bernays</b>, neveu de Sigmund Freud, fonde presque au même moment les relations publiques modernes : <i>Crystallizing Public Opinion</i> (<span class="yr">1923</span>) puis <i>Propaganda</i> (<span class="yr">1928</span>) théorisent l'usage de la psychologie des foules à des fins commerciales et politiques. Là où Hopkins persuade par l'argument, Bernays persuade par le <b>symbole</b> : associer un produit à un désir déjà présent — le statut, la liberté, l'appartenance — sans jamais avoir besoin de le justifier rationnellement.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Deux écoles naissent donc <b>en même temps</b>, en 1923, et ce n'est pas un hasard : elles répondent toutes deux au même problème de surproduction par deux voies complémentaires plutôt que rivales.</p>
+      <div class="chain">
+        <span class="node">Surproduction industrielle</span><span class="arrow">→</span>
+        <span class="node">Il faut vendre au-delà du besoin naturel</span><span class="arrow">→</span>
+        <span class="node">Hopkins : convaincre par la raison</span>
+        <span class="node">Bernays : convaincre par le symbole</span><span class="arrow">→</span>
+        <span class="node">Un métier structuré (agences, budgets, rédacteurs) naît de leur coexistence</span>
+      </div>
+      <p class="mech">Ce dédoublement précoce — rationnel d'un côté, psychologique de l'autre — est la <b>première apparition du balancier</b> qui structure toute la discipline. Il ne se refermera jamais : chaque chapitre suivant est une nouvelle position sur cette même oscillation entre preuve et symbole, entre mesure et création.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Les « Torches of Freedom », 1929</h5>
+        <p>La campagne la plus célèbre de Bernays illustre l'école symbolique à l'état pur. Engagé par American Tobacco pour vendre des cigarettes Lucky Strike à un public féminin — la cigarette restant socialement taboue pour les femmes —, Bernays organise en <span class="yr">1929</span> un défilé de Pâques à New York où de jeunes femmes allument ostensiblement des cigarettes en public, présentées à la presse comme des « <i>torches of freedom</i> » — des torches de liberté brandies contre l'inégalité des sexes. Aucun argument rationnel sur le produit lui-même : la cigarette est vendue comme un acte d'émancipation, pas comme un bien de consommation. C'est l'exact opposé de la démarche de Hopkins, qui aurait cherché un fait à démontrer plutôt qu'un tabou à faire tomber.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Management interculturel <i>— la « fabrication du consentement » comme phénomène culturel, pas seulement commercial</i></span>
+        <span class="linkchip">Outils de gestion <i>— l'agence comme organisation naissante, avant même l'idée de budget marketing</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Croire que Lasker a « inventé » la publicité — il en a professionnalisé et structuré l'exercice, il n'a pas créé l'annonce commerciale, bien plus ancienne</li>
+          <li>Confondre relations publiques (Bernays) et publicité (Lasker/Hopkins) comme si c'était le même métier sous deux noms</li>
+          <li>Voir dans la coïncidence des deux publications de 1923 un simple hasard de calendrier plutôt que le signe d'un même problème traité par deux voies</li>
+        </ul></div>
+        <div class="ee"><h5>Côté professionnels (aujourd'hui)</h5><ul>
+          <li>Présenter une campagne purement émotionnelle comme si elle se suffisait à elle-même, sans jamais revenir à un bénéfice vérifiable — l'erreur inverse de Hopkins</li>
+          <li>Ignorer que la manipulation symbolique, une fois nommée « Torches of Freedom » dans les livres d'histoire, reste un cas d'école sur les limites éthiques du procédé, pas seulement sur son efficacité</li>
+          <li>Oublier que le métier publicitaire s'est construit sur deux logiques distinctes — et continuer de les traiter comme un bloc unique appelé « communication »</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes rédacteur publicitaire en 1905. Votre client fabrique un savon chimiquement identique à celui de dix concurrents. Que faites-vous ?</p>
+        <p class="dctx">Aucun fait objectif ne distingue vraiment ce savon des autres. Le client veut une campagne qui vende, pas un cours de chimie.</p>
+        <div class="dopts">
+          <span>A. Chercher malgré tout un détail vrai et différenciant à mettre en avant (méthode Hopkins)</span>
+          <span>B. Associer le savon à un désir social — la propreté comme respectabilité, la pureté comme vertu (méthode Bernays, avant l'heure)</span>
+          <span>C. Inventer une caractéristique techniquement vraie mais commercialement insignifiante, présentée comme décisive</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Les trois voies coexistent réellement dans l'histoire de la publicité de parité — un marché où les produits sont objectivement interchangeables. L'option A est la plus proche de l'éthique professionnelle défendue par Hopkins lui-même : trouver un fait vrai, même mineur, et le présenter comme si lui seul comptait — ce qui a par exemple donné les campagnes vantant qu'une bière était « passée à la vapeur » sans préciser que toutes les bières l'étaient. L'option B ouvre la voie symbolique, plus tard systématisée par Bernays, avec le risque déontologique déjà présent en germe : vendre une émotion sans lien nécessaire avec le produit.</p>
+          <p>L'option C — un fait vrai mais insignifiant présenté comme décisif — est historiquement la plus fréquente, et la plus fragile : elle fonctionne tant que personne ne vérifie, et s'effondre au premier examen critique du produit. Il n'y a pas de réponse unique ; c'est précisément cette absence de réponse unique qui a poussé le métier à se doter, une génération plus tard, d'un outil de vérification externe — la mesure (chapitre suivant).</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un produit qui ne trouve pas son public seul n'est pas un produit fini — il lui manque un langage, pas nécessairement une qualité</li>
+            <li>Un argument rationnel et une association symbolique ne sont pas deux styles au choix, ce sont deux budgets et deux effets différents à ne pas confondre</li>
+            <li>Un métier qui prétend produire un effet sur les esprits ne se justifie durablement que s'il peut, un jour, prouver cet effet</li>
+            <li>La réputation collective d'un secteur entier — ici la publicité elle-même — se construit sur les mêmes ressorts qu'une marque, et peut s'effondrer de la même façon</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA marketing s'inscrit déjà ici</h5>
+          <ul>
+            <li>Les générateurs de texte publicitaire reproduisent, en quelques secondes, l'école « reason-why » de Hopkins : un argument rationnel décliné à la chaîne, sans jamais fatiguer</li>
+            <li>Les moteurs de recommandation appliquent une version algorithmique de l'intuition de Bernays — associer un produit à un désir déjà présent — sans jamais nommer le mécanisme qu'ils automatisent</li>
+            <li>Le risque historique se répète à l'identique : produire du contenu publicitaire plus vite que quiconque ne peut vérifier s'il fonctionne réellement — la surproduction du XX<sup>e</sup> siècle, version texte généré</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Le balancier : mesure scientifique et révolution créative</h2>
+      <p class="dsub">Chapitres C3 · C4 · C5 — le cœur de la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois le métier professionnalisé (篇 I), un problème nouveau apparaît : personne ne peut prouver qu'une annonce a vraiment changé le comportement de qui que ce soit. Un client peut toujours demander : « comment savez-vous que ça marche ? » — et jusque dans les années 1930, la seule réponse est l'intuition d'un rédacteur. <b>Comment mesurer un effet sur des millions d'esprits qu'on ne voit jamais, et que faire une fois qu'on sait mesurer ?</b> C'est cette question qui ouvre le reste de la discipline : sans instrument de mesure, aucune stratégie ne peut être ni prouvée, ni corrigée, ni — un quart de siècle plus tard — remise en cause avec assez d'autorité pour déclencher une révolution.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — Gallup et Nielsen</h5>
+          <p><b>George Gallup</b> fonde l'<b>American Institute of Public Opinion</b> en <span class="yr">1935</span>, pionnier du sondage à échantillon représentatif ; il développe en parallèle des méthodes de mesure de l'efficacité publicitaire et de l'audience des médias. <b>Arthur C. Nielsen</b> fonde sa société en <span class="yr">1923</span> et lance le <b>Nielsen Radio Index</b> en <span class="yr">1942</span>, avant d'étendre la mesure d'audience à la télévision à partir de <span class="yr">1950</span>. La mesure Nielsen devient la référence de toute l'industrie publicitaire américaine pour savoir combien de foyers regardent quel programme, à quelle heure — la donnée qui, pour la première fois, permet d'acheter de l'espace publicitaire sur un fait vérifiable plutôt que sur une réputation.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — pourquoi la mesure produit presque mécaniquement une réaction créative</p>
+      <p class="mech">C'est ici que le balancier devient visible dans son fonctionnement le plus complet. La disponibilité d'une mesure fiable (C3) transforme la manière de faire de la publicité dans les foyers américains des années 1950 (C4), et c'est cette transformation même qui appelle, dix ans plus tard, une réaction inverse (C5).</p>
+      <div class="chain">
+        <span class="node">Nielsen mesure précisément l'audience télé</span><span class="arrow">→</span>
+        <span class="node">Rosser Reeves (Ted Bates) théorise l'<b>Unique Selling Proposition</b></span><span class="arrow">→</span>
+        <span class="node">Marteler un seul bénéfice, mesurable en rappel publicitaire</span><span class="arrow">→</span>
+        <span class="node">Marché saturé de messages martelants et interchangeables</span><span class="arrow">→</span>
+        <span class="node">Bernbach &amp; Ogilvy : rompre par l'humour et l'intelligence</span>
+      </div>
+      <p class="mech">Rosser Reeves formalise le concept d'<b>USP</b> dans <i>Reality in Advertising</i>, publié en <span class="yr">1961</span> — bien que le principe circule déjà chez Ted Bates dans les années 1940-1950, avant cette mise en forme écrite. L'idée : une publicité efficace doit marteler un bénéfice <b>unique et différenciant</b> du produit, répété à l'identique dans chaque exécution, pour qu'il se grave dans une mémoire d'audience désormais mesurable semaine après semaine par Nielsen. Le problème n'est pas que cette méthode échoue — elle fonctionne, et c'est justement le problème : martelée par toute une industrie en même temps, sur un marché de produits de plus en plus comparables (savons, cigarettes, sodas), l'USP devient un style générique, prévisible, que l'audience apprend à ignorer. La <b>creative revolution</b> des années 1960 n'est donc pas un rejet de l'efficacité mesurée, mais une hypothèse concurrente sur ce qui produit réellement l'attention : l'humour, l'autodérision et le respect de l'intelligence du spectateur, plutôt que la répétition d'un argument unique.</p>
+
+      <div class="callout" style="background:rgba(217,168,61,.14);border-color:rgba(217,168,61,.55)">
+        <svg viewBox="0 0 40 40" stroke="#a97a1f"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="7"/><circle cx="20" cy="20" r="2"/></svg>
+        <div>
+          <h5>Point d'exactitude</h5>
+          <p>Deux campagnes emblématiques de David Ogilvy — l'homme à l'œil de verre pour <b>Hathaway</b> (<span class="yr">1951</span>) et « At 60 miles an hour, the loudest noise... » pour <b>Rolls-Royce</b> (<span class="yr">1958</span>) — précèdent de plusieurs années le début généralement admis de la « creative revolution », que l'on fait souvent démarrer avec la campagne Volkswagen « Think Small » de Bill Bernbach en <span class="yr">1959</span> ou le début des années 1960. Ogilvy, fondateur d'<b>Ogilvy &amp; Mather</b> en <span class="yr">1948</span>, est rattaché rétrospectivement au mouvement surtout par son livre <i>Confessions of an Advertising Man</i> (<span class="yr">1963</span>) et par une philosophie qui mêle en réalité les deux écoles : une image mémorable et spirituelle (proche de Bernbach) construite autour d'un fait vérifiable et intrigant (proche de Hopkins et Reeves). Ogilvy n'est donc pas un pur exemple de bascule vers la création — il est la preuve que le balancier peut aussi se stabiliser entre les deux pôles plutôt que de basculer entièrement.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>M&amp;M's contre Volkswagen — deux réponses au même problème de saturation</h5>
+        <p>La campagne M&amp;M's « <i>Melts in your mouth, not in your hand</i> » (à partir de <span class="yr">1954</span>), associée à Reeves, martèle une seule proposition — un bonbon au chocolat qui ne salit pas les doigts — déclinée quasi à l'identique pendant des années : c'est l'USP dans sa forme la plus pure, mesurable en rappel de marque semaine après semaine. Cinq ans plus tard, la campagne Volkswagen « <b>Think Small</b> » (<span class="yr">1959</span>) de Bernbach fait l'inverse presque terme à terme : au lieu de marteler un avantage, elle assume et retourne un défaut apparent — une voiture allemande petite et austère sur un marché américain obsédé par les carrosseries imposantes — avec un ton d'autodérision et un espace blanc généreux, à contre-courant du style visuel chargé de l'époque. Les deux campagnes vendent efficacement ; elles ne partagent presque aucune méthode.</p>
+      </div>
+
+      <table class="cmp">
+        <caption>USP (Reeves, Ted Bates) contre creative revolution (Bernbach, Ogilvy)</caption>
+        <thead><tr><th>Critère</th><th>USP — ère de la mesure</th><th>Creative revolution</th></tr></thead>
+        <tbody>
+          <tr><td>Message</td><td>Un seul bénéfice, répété à l'identique</td><td>Un ton, une intelligence, souvent sans argument martelé</td></tr>
+          <tr><td>Ton</td><td>Affirmatif, sérieux, répétitif</td><td>Humour, autodérision, sobriété visuelle</td></tr>
+          <tr><td>Validation</td><td>Rappel publicitaire mesuré (audience Nielsen)</td><td>Impact culturel, discussion, imitation par la profession</td></tr>
+          <tr><td>Exemple</td><td>M&amp;M's, « melts in your mouth… » (1954)</td><td>Volkswagen, « Think Small » (1959)</td></tr>
+          <tr><td>Limite</td><td>Épuisement par saturation ; interchangeabilité entre marques</td><td>Difficile à mesurer ; risque élevé sans garantie de résultat</td></tr>
+        </tbody>
+      </table>
+
+      <div class="tree">
+        <svg viewBox="0 0 760 380" width="100%" style="max-width:760px" role="img" aria-label="Un pendule dont le pivot fixe est en haut au centre ; les positions C2, C3 et C4 se trouvent sur un même arc côté mesure à gauche, C5 bascule sur le même arc côté création à droite, et C6 forme une boucle plus resserrée côté mesure, représentant un retour de la mesure à une échelle nouvelle">
+          <text x="380" y="12" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="2" fill="#7a6b5c">LE BALANCIER, CHAPITRE PAR CHAPITRE</text>
+          <g stroke="#1a2f47" stroke-width="2" fill="none" stroke-linecap="round">
+            <line x1="300" y1="24" x2="460" y2="24"/>
+            <path d="M362 24 L380 50 L398 24"/>
+          </g>
+          <circle cx="380" cy="50" r="4" fill="#1a2f47" stroke="none"/>
+          <path d="M185.3 128.7 A210 210 0 0 1 568.7 142.1" fill="none" stroke="#85a0c4" stroke-width="1.6" stroke-dasharray="2 7"/>
+          <path d="M305.4 156.5 A130 130 0 0 1 361.9 178.7" fill="none" stroke="#f0d08c" stroke-width="1.6" stroke-dasharray="2 6"/>
+          <g stroke-linecap="round">
+            <line x1="380" y1="50" x2="194.6" y2="148.6" stroke="#2f4f7a" stroke-width="1.4" opacity=".55"/>
+            <line x1="380" y1="50" x2="239.5" y2="206.1" stroke="#2f4f7a" stroke-width="1.6" opacity=".75"/>
+            <line x1="380" y1="50" x2="308.2" y2="247.3" stroke="#2f4f7a" stroke-width="1.4" opacity=".55"/>
+            <line x1="380" y1="50" x2="558.1" y2="161.3" stroke="#b82f3a" stroke-width="1.8"/>
+            <line x1="380" y1="50" x2="331.3" y2="170.5" stroke="#a97a1f" stroke-width="1.4" stroke-dasharray="2 4"/>
+          </g>
+          <g font-family="Josefin Sans" font-size="11" fill="#2c2620">
+            <circle cx="194.6" cy="148.6" r="13" fill="#2f4f7a" stroke="#fff" stroke-width="2"/>
+            <text x="194.6" y="152" text-anchor="middle" font-size="10" fill="#fff">4</text>
+            <text x="175.6" y="152.6" text-anchor="end" font-size="10.5">C4 · USP, télé — 1950s</text>
+
+            <circle cx="239.5" cy="206.1" r="17" fill="#1a2f47" stroke="#fff" stroke-width="2"/>
+            <text x="239.5" y="210" text-anchor="middle" font-size="10" fill="#fff">3</text>
+            <text x="216.5" y="210.6" text-anchor="end" font-size="10.5">C3 · La mesure — fondation</text>
+
+            <circle cx="308.2" cy="247.3" r="13" fill="#2f4f7a" stroke="#fff" stroke-width="2"/>
+            <text x="308.2" y="251" text-anchor="middle" font-size="10" fill="#fff">2</text>
+            <text x="289.2" y="251.3" text-anchor="end" font-size="10.5">C2 · Métier</text>
+
+            <circle cx="558.1" cy="161.3" r="14" fill="#b82f3a" stroke="#fff" stroke-width="2"/>
+            <text x="558.1" y="165" text-anchor="middle" font-size="10" fill="#fff">5</text>
+            <text x="578.1" y="165.3" text-anchor="start" font-size="10.5">C5 · Creative revolution</text>
+
+            <circle cx="331.3" cy="170.5" r="12" fill="#a97a1f" stroke="#fff" stroke-width="2"/>
+            <text x="331.3" y="174" text-anchor="middle" font-size="10" fill="#fff">6</text>
+            <text x="331.3" y="199" text-anchor="middle" font-size="10.5">C6 · Données, échelle nouvelle</text>
+          </g>
+          <g transform="translate(90,230)" stroke="#1a2f47" stroke-width="1.6" fill="none">
+            <circle r="24"/>
+            <circle cx="-5" cy="-5" r="9"/><line x1="1" y1="1" x2="10" y2="10"/>
+            <path d="M-13 9 h7 M-4 5 h8 M4 12 h8"/>
+          </g>
+          <text x="90" y="272" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="1.5" fill="#1a2f47">MESURE · SCIENCE</text>
+          <g transform="translate(650,230)" stroke="#b82f3a" stroke-width="1.6" fill="none">
+            <circle r="24"/>
+            <path d="M-7 -13 C-13 -9 -13 -2 -7 1 C-7 4 -3 4 -3 1 C3 -2 3 -9 -3 -13 C-4 -14 -6 -14 -7 -13 Z"/>
+            <line x1="-5" y1="1" x2="-5" y2="7"/><path d="M-8 7 h6"/>
+            <line x1="5" y1="-11" x2="15" y2="3"/><path d="M10 -3 l5 4 M12 -6 l3 6"/>
+          </g>
+          <text x="650" y="272" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="1.5" fill="#b82f3a">CRÉATION</text>
+        </svg>
+      </div>
+      <p class="note"><b>Comment lire ce diagramme :</b> le pivot est fixe en haut, comme un vrai pendule. C2, C3 et C4 se trouvent sur le même arc, du côté mesure — chacun un peu plus loin du centre que le précédent, jusqu'au maximum atteint par C4. C5 bascule brutalement de l'autre côté, sur le même arc, côté création. C6 ne revient pas au centre : il dessine une boucle plus resserrée, plus proche du pivot, du côté mesure — la donnée individuelle est une mesure, mais à une échelle différente de celle de Nielsen, jamais un simple retour en arrière.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Outils de gestion <i>— l'audience mesurée comme premier ancêtre du tableau de bord marketing</i></span>
+        <span class="linkchip">Management interculturel <i>— la publicité de conformité des années 1950 contre l'individualisme affiché par la creative revolution</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Confondre USP et simple slogan — l'USP est une méthode complète, mesurée, martelée, pas seulement une phrase accrocheuse</li>
+          <li>Croire que la creative revolution rejette toute mesure — elle conteste une méthode, pas l'idée même de vérifier ce qui fonctionne</li>
+          <li>Dater la formalisation de l'USP (1961) et sa pratique effective (années 1940-1950 chez Ted Bates) comme un seul et même moment</li>
+        </ul></div>
+        <div class="ee"><h5>Côté professionnels (aujourd'hui)</h5><ul>
+          <li>Sur-optimiser une campagne uniquement sur des indicateurs mesurés, jusqu'à produire un message aussi interchangeable que les USP saturées des années 1950 — la même erreur, à l'échelle des tableaux de bord</li>
+          <li>À l'inverse, défendre une idée créative « parce qu'elle est audacieuse », sans jamais la confronter à un objectif mesurable — l'erreur inverse, tout aussi coûteuse</li>
+          <li>Présenter Ogilvy comme un pur exemple de créativité sans mesure, en oubliant que ses campagnes reposaient souvent sur un fait vérifiable soigneusement recherché</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez le marketing d'une marque de lessive en 1962. Votre campagne USP fonctionne depuis huit ans, avec un rappel publicitaire mesuré et stable. Une jeune agence vous propose une campagne radicalement différente, drôle, sans argument martelé, inspirée du style Bernbach. Que faites-vous ?</p>
+        <p class="dctx">Vos concurrents commencent, eux aussi, à essouffler leurs propres USP. Le comité de direction exige un chiffre avant tout engagement, mais la nouvelle agence refuse de garantir un rappel publicitaire comparable à l'ancienne méthode — sa proposition ne se mesure pas de la même façon.</p>
+        <div class="dopts">
+          <span>A. Reconduire la campagne USP éprouvée, sans prendre de risque sur un instrument de mesure inconnu</span>
+          <span>B. Basculer entièrement vers la nouvelle proposition créative, en pariant sur l'air du temps</span>
+          <span>C. Tester la nouvelle approche sur un marché limité, en parallèle de la campagne existante, avant toute décision globale</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique, et l'histoire elle-même ne tranche pas dans un seul sens : certaines marques ayant maintenu leur USP au-delà de sa date de péremption ont continué à vendre, quoique en érosion lente ; d'autres, ayant basculé trop tôt vers un style purement créatif sans nouvel indicateur pour le suivre, ont perdu la capacité de savoir si la nouvelle campagne fonctionnait vraiment. L'option A protège le court terme au prix d'un essoufflement progressif et silencieux — le risque n'apparaît dans les chiffres qu'une fois qu'il est déjà installé. L'option B est le pari de la creative revolution elle-même : Bernbach n'a jamais promis un rappel publicitaire comparable à celui de Reeves, il a proposé un autre critère de succès, l'attention et la mémorabilité.</p>
+          <p>L'option C est la plus prudente et la plus proche de ce que feront réellement, une décennie plus tard, les agences confrontées à ce choix : elle ne résout pas le dilemme, elle le reporte à un instrument de mesure encore à inventer — ce qui, précisément, ouvre le chapitre suivant.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un budget purement mesuré, sans part créative, finit par produire des messages interchangeables — le marché sanctionne l'ennui avant même l'erreur</li>
+            <li>Un budget purement créatif, sans aucune mesure, ne sait jamais s'il a vraiment vendu quoi que ce soit — le risque est invisible tant qu'il n'a pas coûté cher</li>
+            <li>L'USP a fonctionné tant que les produits étaient réellement différenciables ; sur un marché de parité, elle s'épuise seule, quelle que soit la qualité d'exécution</li>
+            <li>Une campagne « risquée » n'est vraiment risquée que si elle n'a jamais été testée à petite échelle avant le grand lancement</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — le balancier se rejoue-t-il avec l'IA ?</h5>
+          <ul>
+            <li>L'IA générative agit aujourd'hui comme un nouvel outil créatif — elle peut produire, en quelques minutes, des dizaines de variantes dans un registre proche de celui de Bernbach</li>
+            <li>L'IA d'analyse de données agit comme une nouvelle Nielsen, capable de tester chaque variante en continu, à l'échelle de l'individu plutôt que du foyer</li>
+            <li>Le risque exact de 1950 peut se reproduire à vitesse algorithmique : si tous les outils optimisent sur les mêmes signaux, l'IA peut recréer une nouvelle saturation par ressemblance — l'USP générique, version automatisée</li>
+            <li>Rien ne garantit que la synthèse entre les deux IA (créative et analytique) soit automatique — elle reste, comme au XX<sup>e</sup> siècle, un choix humain d'organisation, pas un effet mécanique de la technologie</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Retour de la mesure à l'ère des données</h2>
+      <p class="dsub">Chapitre C6 — prérequis C3 et C5</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">La mesure Nielsen (篇 II) répond à une question précise : combien de foyers regardent quel programme. Elle ne répond jamais à une question plus fine : <b>quelle personne précise, avec quels désirs, a vu quoi, et qu'a-t-elle fait ensuite ?</b> Tant que la télévision reste le seul grand média de masse, cette limite n'est pas gênante — un message diffusé à une heure de grande écoute touche, par construction, à peu près tout le monde de la même façon. Mais à mesure que les médias se fragmentent — câble, puis internet, puis mobile —, l'hypothèse d'une audience unique et homogène s'effondre. Le problème fondateur de la discipline (produire un effet sur des esprits qu'on ne voit jamais, et le mesurer) revient donc sous une forme nouvelle : non plus mesurer un agrégat de foyers, mais mesurer — et cibler — des individus, un par un.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — une évolution continue, pas un événement daté unique</h5>
+          <p>Contrairement aux repères précis de Gallup (1935), Nielsen (1923, 1942, 1950) ou Reeves (1961), la bascule vers un marketing fondé sur la segmentation puis sur les données individuelles ne correspond pas à une date de fondation unique et vérifiable comme les précédentes : elle s'étend sur plusieurs décennies, du marketing direct par courrier et bases de données de la seconde moitié du XX<sup>e</sup> siècle jusqu'à l'essor du ciblage numérique (cookies, comptes utilisateurs, recommandation algorithmique) à partir des années 1990-2000. <b>Point de prudence :</b> faute de pouvoir certifier ici des dates de fondation aussi précises que celles des chapitres précédents, ce chapitre décrit un mécanisme et une tendance plutôt qu'une chronologie d'événements isolés — c'est délibéré plutôt qu'une lacune à combler par une date approximative.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Fragmentation des médias (câble, internet, mobile)</span><span class="arrow">→</span>
+        <span class="node">La mesure d'audience agrégée perd sa précision</span><span class="arrow">→</span>
+        <span class="node">Constitution de bases de données individuelles (comptes, cartes de fidélité, cookies)</span><span class="arrow">→</span>
+        <span class="node">Segmentation puis micro-ciblage automatisé</span><span class="arrow">→</span>
+        <span class="node">La mesure revient — à l'échelle de la personne, plus du foyer</span>
+      </div>
+      <p class="mech">C'est ce dernier maillon qui referme la boucle du balancier sans jamais l'annuler : le numérique ne choisit pas entre mesure et création, il les combine à une granularité que ni Gallup ni Nielsen n'auraient pu concevoir — un message peut désormais être ajusté, en temps réel, individu par individu, et son effet mesuré au clic près. La logique reste identique à celle de 1935 : produire un effet, puis le vérifier. Seule l'unité mesurée a changé — du foyer à la personne.</p>
+
+      <table class="cmp">
+        <caption>Deux régimes de mesure de l'audience, à un siècle d'écart</caption>
+        <thead><tr><th>Critère</th><th>Sondage et panel (Gallup, Nielsen radio-télé)</th><th>Données numériques individuelles</th></tr></thead>
+        <tbody>
+          <tr><td>Unité mesurée</td><td>Le foyer, l'échantillon représentatif</td><td>La personne, le comportement individuel</td></tr>
+          <tr><td>Méthode</td><td>Échantillonnage statistique, panels déclaratifs</td><td>Traçage comportemental, comptes utilisateurs</td></tr>
+          <tr><td>Qui détient la donnée</td><td>Un institut indépendant (Nielsen, Gallup)</td><td>Les plateformes elles-mêmes, en position d'arbitre et de vendeur</td></tr>
+          <tr><td>Limite / risque</td><td>Précision agrégée seulement, pas d'individualisation possible</td><td>Question du consentement, dépendance à un intermédiaire non neutre</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Le retour du consentement, sous un autre nom</h5>
+        <p>La bascule vers un marketing de données replace, sans le savoir, un problème que Bernays avait déjà nommé en 1928 : la « fabrication du consentement ». Un consommateur qui accepte un cookie publicitaire sur un site web consent, techniquement, au traçage de son comportement — mais rarement en toute connaissance de l'usage qui en sera fait, ni de la façon dont ce comportement alimentera un ciblage individuel. Le vocabulaire a changé — on ne parle plus de propagande mais de personnalisation —, le mécanisme de fond, lui, reste étonnamment proche : obtenir d'un individu une adhésion qu'il n'aurait pas nécessairement donnée s'il en avait mesuré toutes les conséquences.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Outils de gestion <i>— segmentation, tableaux de bord et KPI individuels comme héritiers directs de la logique Nielsen</i></span>
+        <span class="linkchip">Management interculturel <i>— le consentement aux données comme norme culturelle divergente (RGPD européen contre régime américain plus permissif)</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Croire que le ciblage numérique est une invention entièrement nouvelle, sans lien avec la lignée Gallup-Nielsen qui l'a précédé</li>
+          <li>Penser que plus de données remplace automatiquement le besoin de création — l'histoire de C4-C5 montre exactement l'inverse</li>
+          <li>Confondre segmentation (regrouper des profils proches) et personnalisation individuelle (s'adresser à une seule personne) comme un seul et même degré de précision</li>
+        </ul></div>
+        <div class="ee"><h5>Côté professionnels (aujourd'hui)</h5><ul>
+          <li>Faire confiance à l'optimisation algorithmique au point de ne plus proposer aucun territoire créatif distinctif — reproduire l'ennui de l'USP saturée, à l'échelle individuelle cette fois</li>
+          <li>À l'inverse, viser la viralité créative pure via l'IA générative sans jamais définir d'indicateur de succès — reproduire l'erreur inverse, celle d'une creative revolution sans aucune mesure</li>
+          <li>Traiter le consentement aux données comme une simple formalité juridique plutôt que comme un enjeu de confiance de marque, au sens où Bernays l'aurait immédiatement reconnu</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous disposez aujourd'hui d'un budget marketing fixe. Vous devez arbitrer entre une plateforme d'analyse de données avancée (mesure individuelle fine) et une campagne créative ambitieuse produite avec l'aide de l'IA générative. Comment répartissez-vous le budget ?</p>
+        <p class="dctx">La direction financière vous demande un chiffre défendable ; la direction créative vous prévient qu'un budget uniquement dirigé par la donnée finira, comme dans les années 1950, par produire des messages sans relief.</p>
+        <div class="dopts">
+          <span>A. Investir massivement dans la donnée : mieux cibler compense un message générique</span>
+          <span>B. Investir massivement dans la création : un message fort compense un ciblage imprécis</span>
+          <span>C. Traiter la donnée comme un outil de vérification d'un territoire créatif choisi d'abord, jamais l'inverse</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>L'histoire de la discipline entière tranche partiellement ce dilemme sans le résoudre totalement. L'option A répète, à l'identique, l'erreur de la fin de l'ère USP : une mesure de plus en plus fine appliquée à un message de moins en moins distinctif produit un rendement décroissant — cibler parfaitement un message que personne ne remarque ne change rien au résultat. L'option B répète le risque inverse identifié dès la creative revolution : sans aucun instrument pour vérifier ce qui fonctionne, l'ambition créative n'a aucun moyen de s'auto-corriger.</p>
+          <p>L'option C n'est pas une solution magique — elle a un coût d'organisation réel, puisqu'elle suppose de faire travailler ensemble deux cultures professionnelles historiquement séparées (le service études et le service création). Mais elle est la seule des trois qui reproduit fidèlement la logique du balancier telle que cette discipline la donne à voir depuis 1923 : la mesure et la création ne sont jamais des choix exclusifs, seulement des priorités temporaires, à réévaluer à chaque nouvelle échelle technologique.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Mesurer un individu n'est pas mesurer un foyer — le changement de granularité est aussi un changement de nature juridique et éthique de la donnée</li>
+            <li>Un ciblage fin ne remplace jamais un bénéfice différenciant ; il rend seulement un message médiocre invisible plus vite qu'avant</li>
+            <li>La confiance des consommateurs dans l'usage de leurs données est elle-même un actif de marque à protéger, pas une ligne de conformité réglementaire accessoire</li>
+            <li>La synthèse entre données et création reste un choix d'organisation à faire chaque année, jamais un effet automatique de la technologie</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — une question ouverte, à traiter avec prudence</h5>
+          <ul>
+            <li>L'IA d'analyse de données prolonge très directement la lignée Gallup-Nielsen, à une granularité individuelle qu'aucun institut du XX<sup>e</sup> siècle n'aurait pu atteindre</li>
+            <li>L'IA générative prolonge tout aussi directement l'atelier créatif de Bernbach ou d'Ogilvy, en produisant des variantes à une vitesse qu'aucune agence humaine ne peut égaler</li>
+            <li>Il serait trop simple d'affirmer que « toute la discipline se rejoue à l'identique » avec l'IA : la vitesse change la nature du balancier lui-même, en réduisant le temps disponible pour qu'une réaction créative s'organise contre une saturation par la mesure — la prochaine « creative revolution », si elle survient, devra peut-être se produire en mois plutôt qu'en décennie</li>
+            <li>Cette accélération est un fait observable ; ses conséquences sur l'équilibre du balancier restent, à ce stade, une hypothèse et non une conclusion établie</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Produire le désir<i>C1·C2·C4·C5·C6</i></span>
+        <span class="sp">Le balancier science ⇄ création<i>C2·C4·C5·C6</i></span>
+        <span class="sp">Mesurer l'audience<i>C3·C6</i></span>
+        <span class="sp">Fabrication du consentement<i>C2·C6</i></span>
+        <span class="sp">L'échelle de la mesure change, jamais son principe<i>C3·C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="17-civilisation-espagnole.html">← Civilisation espagnole — de …</a>
@@ -67,5 +674,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
