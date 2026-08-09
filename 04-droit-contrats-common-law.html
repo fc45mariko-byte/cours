@@ -3,13 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Droit des contrats & Common Law — Cours détaillé · Master Plans</title>
-<meta name="description" content="Fiche de cours détaillée — Droit des contrats & Common Law, discipline 04 de L'Architecture des Disciplines.">
+<title>Droit des Contrats &amp; Common Law — Cours détaillé · Master Plans</title>
+<meta name="description" content="Fiche de cours détaillée — Droit des contrats &amp; Common Law, discipline 04 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#8a3f52;--dom-lt:#cf93a3}</style>
+<style>
+/* Palette — vert anglais / acajou / laiton : la tradition judiciaire
+   britannique. Le vert reprend les bancs de cuir du Parlement de
+   Westminster ; l'acajou, les boiseries sombres des cours de justice
+   (Royal Courts of Justice, Inns of Court) ; le laiton, le cuivre patiné
+   des lampes, poignées et balances des salles d'audience anciennes.
+   Palette propre à la discipline 04, distincte de la série. */
+:root{
+  --p1:#2f5c42; --p1-lt:#7fa88f;      /* vert anglais */
+  --p2:#7a4a35; --p2-lt:#b98a6f;      /* acajou */
+  --p3:#b08d4f; --p3-lt:#ddc48f; --p3-dk:#8a6a34;  /* laiton */
+  --ink:#2e2620; --ink-soft:#6c5c48;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(122,74,53,.32); --or:#b08d4f; --vert:#3f6b52;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #dbe9de 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 20%, #ecd9b9 0%, transparent 52%),
+    radial-gradient(1000px 720px at 34% 108%, #ddc4ab 0%, transparent 58%),
+    linear-gradient(158deg,#eef1e8 0%, #e6dbc7 42%, #d5c39f 72%, #e6dbc9 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p2);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(122,74,53,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(46,38,32,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:200px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p2);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#3a4f39;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2-lt)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.cbar .au{background:linear-gradient(90deg,var(--p3-lt),var(--p3))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p1)} .crd b.a{color:var(--p3-dk)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(120deg,var(--p1),var(--p2))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:640px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p2);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.53rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(122,74,53,.26);border-radius:24px;box-shadow:0 16px 46px rgba(46,38,32,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.2)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#3a4f39;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;line-height:1.6}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p2);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p2) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p2-lt) 0 12.5%, transparent 0 25%, var(--p2-lt) 0 37.5%, transparent 0 50%, var(--p2-lt) 0 62.5%, transparent 0 75%, var(--p2-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p2)}
+.problem b{color:var(--p2);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(176,141,79,.1);
+  border:1px solid rgba(176,141,79,.42);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p2);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(122,74,53,.08);border-left:3px solid var(--p2);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:var(--vert);
+  padding:5px 12px;border-radius:14px;background:rgba(63,107,82,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(176,141,79,.11);border:1px solid rgba(176,141,79,.5)}
+.errors .ee{background:rgba(47,92,66,.09);border:1px solid rgba(47,92,66,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--p3-dk)} .errors .ee h5{color:var(--p1)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❧";position:absolute;left:0;font-size:.55rem;top:6px;color:var(--p2)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#3a2a1f}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(122,74,53,.06)}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p2);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p2);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"⚖";font-size:.7rem}
+details.dilemma[open] summary::before{content:"⚖"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#3a4f39;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(176,141,79,.13);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p3)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(122,74,53,.1);border:1px solid var(--p2-lt)}
+.helix{background:rgba(176,141,79,.12);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#3a4f39} .helix h5{color:var(--p3-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2-lt);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3-dk)}
+
+/* diagrammes */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:var(--vert);
+  padding:5px 12px;border-radius:14px;background:rgba(63,107,82,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+/* compréhension / automatisme */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+@media(max-width:600px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:14px;padding:14px 16px}
+.split .u{background:rgba(47,92,66,.09);border:1px solid rgba(47,92,66,.4)}
+.split .m{background:rgba(176,141,79,.12);border:1px solid rgba(176,141,79,.5)}
+.split h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p1)} .split .m h5{color:var(--p3-dk)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:3px 0 3px 16px;position:relative;color:var(--ink)}
+.split li::before{content:"❧";position:absolute;left:0;font-size:.55rem;top:6px;color:var(--p2)}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p2);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p2);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p2);border-color:var(--p2)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,46 +228,526 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d04">
-  <div class="tab">篇 IV</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 04</p>
-    <h3>Droit des contrats &amp; Common Law</h3>
-    <p class="dmeta">S6 · 2 ECTS · Isabelle Noël · Gleason, <em>International Commercial Law for Managers</em></p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 200" role="img" aria-label="Deux chemins partent d'un même point : l'un mène à un code de loi relié, l'autre à une pile de dossiers de jurisprudence">
+      <defs>
+        <linearGradient id="woodgrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ddc48f"/><stop offset="1" stop-color="#b08d4f"/>
+        </linearGradient>
+      </defs>
+      <!-- point d'origine : un litige commercial -->
+      <circle cx="70" cy="100" r="7" fill="#7a4a35" stroke="#fff" stroke-width="2"/>
+      <text x="70" y="128" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="1" fill="#6c5c48">un contrat à exécuter</text>
+      <!-- chemin vers le code écrit -->
+      <path d="M76 96 C 220 55, 360 45, 480 55" fill="none" stroke="#2f5c42" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <text x="260" y="48" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="1" fill="#2f5c42">la règle précède le cas</text>
+      <!-- chemin vers la pile de dossiers -->
+      <path d="M76 104 C 220 145, 360 155, 480 150" fill="none" stroke="#7a4a35" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <text x="260" y="172" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="1" fill="#7a4a35">le cas précède la règle</text>
+      <!-- livre de lois (civil law) -->
+      <g transform="translate(535,55)" stroke="#2f5c42" stroke-width="1.8" fill="#fff" fill-opacity=".55" stroke-linejoin="round">
+        <path d="M-27 -19 L-3 -23 L-3 21 L-27 25 Z"/>
+        <path d="M3 -23 L27 -19 L27 25 L3 21 Z"/>
+        <line x1="-3" y1="-23" x2="-3" y2="21"/>
+        <line x1="-19" y1="-11" x2="-7" y2="-13" stroke-width="1.3"/>
+        <line x1="-19" y1="-3" x2="-7" y2="-5" stroke-width="1.3"/>
+        <line x1="-19" y1="5" x2="-7" y2="3" stroke-width="1.3"/>
+      </g>
+      <text x="535" y="92" text-anchor="middle" font-family="Josefin Sans" font-size="10.5" letter-spacing="1.5" fill="#2f5c42">CODE ÉCRIT</text>
+      <!-- pile de dossiers (common law) -->
+      <g transform="translate(535,150)" stroke="#7a4a35" stroke-width="1.8" fill="#fff" fill-opacity=".55" stroke-linejoin="round">
+        <rect x="-25" y="7" width="50" height="11" rx="2"/>
+        <rect x="-21" y="-4" width="42" height="11" rx="2"/>
+        <rect x="-17" y="-15" width="34" height="11" rx="2"/>
+      </g>
+      <text x="535" y="35" text-anchor="middle" font-family="Josefin Sans" font-size="10.5" letter-spacing="1.5" fill="#7a4a35">DOSSIERS DE JURISPRUDENCE</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Droit des Contrats &amp; Common Law</h1>
+    <p class="gen-open">Le droit français part de <b>règles écrites</b> ensuite appliquées à des cas ; la common law part de <b>cas</b> dont elle extrait, jugement après jugement, des règles. Un même mot — « contrat » — désigne ainsi, de part et d'autre de la Manche ou de l'Atlantique, deux sens de circulation opposés entre le général et le particulier. Comment négocier, rédiger et faire exécuter un contrat avec un partenaire dont le raisonnement juridique fonctionne, structurellement, à l'envers du sien ? C'est ce renversement qu'il faut saisir avant tout vocabulaire — le reste de la discipline n'en est qu'une conséquence, chapitre après chapitre.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:75%"></span><span class="au" style="width:25%"></span></span>
       <span class="crd">Système <b class="s">75%</b> · Automatisme <b class="a">25%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
     </div>
+    <p class="dmeta">S6 · 2 ECTS · Isabelle Noël · Gleason, <em>International Commercial Law for Managers</em></p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Le droit français part de <b>règles écrites appliquées à des cas</b> ; la common law part de <b>cas dont on extrait des règles</b>. Comment contracter avec un partenaire dont le raisonnement juridique fonctionne à l'envers du sien ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Deux logiques : civil law vs common law</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · le renversement à saisir avant tout le reste</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Le précédent : stare decisis, ratio decidendi, obiter dictum</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> · vocabulaire à automatiser</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>L'Equity et ses remèdes</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1, C2</b> · née d'un défaut de la common law elle-même</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Formation du contrat : offer, acceptance, consideration, intention</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · <b>consideration</b> n'a aucun équivalent français</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>L'Uniform Commercial Code, Article 2</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C4</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Organisation judiciaire &amp; effets du Brexit</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1, C2</b></span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Renversement</div><div class="tc"><span class="node f">C1 · Le cas fait la règle</span></div></div>
-<div class="flow"><span class="fdot"></span>ce renversement engendre mécaniquement les trois piliers suivants<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Piliers</div><div class="tc"><span class="node f">C2 · Précédent</span><span class="ar">→</span><span class="node s">C3 · Equity · correctif</span><span class="ar">·</span><span class="node f">C4 · Contrat</span></div></div>
-<div class="tier"><div class="tl">Applications</div><div class="tc"><span class="node s">C5 · UCC art. 2</span><span class="ar">·</span><span class="node s">C6 · Juridictions &amp; Brexit</span></div></div>
-</div>
-    <p class="note">L'Equity ne s'ajoute pas à la common law : elle la corrige. Comprendre ce rapport de correction évite d'apprendre deux systèmes séparés.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Le cas comme source<i>C1·C2</i></span><span class="sp">Correction d'un système par un autre<i>C3</i></span><span class="sp">Échange réciproque (consideration)<i>C4·C5</i></span></div>
-
-    <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p><div class="split"><div class="u"><h5>À comprendre</h5><ul><li>Pourquoi l'Equity a dû naître : la common law était trop rigide</li><li>Pourquoi la <em>consideration</em> existe : un contrat suppose un échange, pas une promesse gratuite</li></ul></div><div class="m"><h5>À automatiser</h5><ul><li>Le lexique latin et anglais, restitué sans hésitation</li><li>Les quatre éléments de formation, dans l'ordre</li><li>Les remèdes d'Equity : injunction, specific performance, trust</li></ul></div></div>
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="9" y="8" width="15" height="9" rx="2" transform="rotate(-42 16.5 12.5)"/><line x1="17" y1="14" x2="30" y2="27"/><line x1="6" y1="34" x2="21" y2="34"/><line x1="13.5" y1="34" x2="13.5" y2="28"/></svg><b>Juge</b><span>tranche selon la règle ou le précédent</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="7"/><path d="M6 30 C6 22 12 20 20 20 C28 20 34 22 34 30"/><path d="M6 30 q2 -5 -1 -10 M34 30 q-2 -5 1 -10"/></svg><b>Lord Chancellor</b><span>Court of Chancery — Equity</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><rect x="15" y="26" width="10" height="7" rx="1"/></svg><b>Plaideur</b><span>demande justice ou réparation</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><line x1="20" y1="6" x2="20" y2="32"/><line x1="8" y1="14" x2="32" y2="14"/><path d="M8 14 L4 23 L12 23 Z"/><path d="M32 14 L28 23 L36 23 Z"/><line x1="4" y1="23" x2="12" y2="23"/><line x1="28" y1="23" x2="36" y2="23"/><line x1="10" y1="34" x2="30" y2="34"/><line x1="20" y1="32" x2="20" y2="34"/></svg><b>Cour de common law</b><span>rend justice, fixe le précédent</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="-45 0 945 190" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 100 C 120 50, 220 50, 320 100 S 470 155, 560 100 S 690 50, 780 55" fill="none" stroke="#ddc48f" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(20,100)"><circle r="17" fill="#2f5c42" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="36" text-anchor="middle">Deux logiques</text></g>
+        <!-- C2 -->
+        <g transform="translate(180,55)"><circle r="17" fill="#2f5c42" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="36" text-anchor="middle">Le précédent</text></g>
+        <!-- C3 -->
+        <g transform="translate(320,100)"><circle r="15" fill="#b08d4f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="34" text-anchor="middle">L'Equity</text></g>
+        <!-- C4 -->
+        <g transform="translate(470,150)"><circle r="17" fill="#2f5c42" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Formation du contrat</text></g>
+        <!-- C5 -->
+        <g transform="translate(560,100)"><circle r="15" fill="#b08d4f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">UCC art. 2</text></g>
+        <!-- C6 -->
+        <g transform="translate(780,55)"><circle r="16" fill="#b08d4f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="36" text-anchor="middle">Juridictions · Brexit</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Deux logiques, et la règle qui en naît</h2>
+      <p class="dsub">Chapitre C1 (fondation, système · prérequis : aucun) · Chapitre C2 (fondation, système + automatisme · prérequis : C1) — le renversement à saisir avant tout le reste</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Un juriste français ouvre le Code civil, trouve l'article qui correspond à la situation, et l'applique au cas : la règle existe <b>avant</b> le litige, écrite, votée, publiée. Un avocat anglais ou américain, face au même litige, n'a pas d'article à chercher : il cherche le <b>jugement le plus proche</b> par les faits, rendu dans une affaire antérieure, et en extrait la règle qui s'y trouve implicitement contenue. La règle naît <b>après</b> le litige, du litige. Ce n'est pas un détail de procédure : c'est une inversion complète du sens de circulation entre le général et le particulier. Une entreprise qui négocie un contrat avec un partenaire de common law sans le savoir risque de lire un silence contractuel comme un vide comblé par la loi (réflexe civiliste) là où son partenaire le lira comme un vide qu'aucun juge n'a jamais eu à combler — donc un risque, pas une garantie.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>La <b>common law</b> — au sens propre, le droit « commun » à tout le royaume — se construit en Angleterre à partir de la conquête normande de <span class="yr">1066</span>, puis se consolide sous le règne d'<b>Henri II (1154-1189)</b>, qui met en place des cours royales itinérantes : des juges du roi voyagent dans le pays et jugent selon des principes qu'ils s'efforcent de rendre cohérents d'un comté à l'autre, remplaçant peu à peu la mosaïque de droits locaux coutumiers antérieurs. C'est cette volonté d'uniformité, portée par des juges et non par un législateur, qui fait naître la règle du précédent. En miroir, le <b>Code civil des Français</b> (1804) incarne la démarche inverse : un texte unique, voté, cherchant à couvrir par avance l'ensemble des situations civiles. Sans la règle du précédent, chaque juge anglais rejugerait chaque affaire sans se soucier de ce qu'un autre juge a décidé la veille pour des faits identiques — l'issue d'un procès deviendrait imprévisible d'un tribunal à l'autre.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme — le vocabulaire du précédent (C2)</p>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Pourquoi seule la <em>ratio decidendi</em> lie les juges futurs : c'est la seule partie du jugement strictement nécessaire pour trancher l'affaire — le reste (obiter dictum) n'est qu'un commentaire, aussi savant soit-il</li>
+            <li>Pourquoi un juge peut « distinguer » (distinguishing) un précédent gênant plutôt que le suivre : il ne désobéit pas à la règle, il démontre que les faits diffèrent assez pour que la règle ne s'applique pas</li>
+            <li>Pourquoi la hiérarchie des cours conditionne la force du précédent — un précédent ne lie que les juridictions inférieures ou égales à celle qui l'a posé (approfondi au chapitre C6)</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li><b>Stare decisis</b> — s'en tenir à ce qui a été décidé</li>
+            <li><b>Ratio decidendi</b> — la règle de droit nécessaire à la décision, seule partie contraignante</li>
+            <li><b>Obiter dictum</b> — remarque incidente du juge, non contraignante mais parfois persuasive</li>
+            <li><b>Binding precedent</b> / <b>persuasive precedent</b> — précédent qui lie / qui peut seulement influencer</li>
+            <li><b>Distinguishing</b> / <b>overruling</b> — écarter un précédent par les faits / le renverser par une cour supérieure</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Le renversement de C1 produit mécaniquement le fonctionnement de C2 — verbalisons la chaîne plutôt que de la laisser implicite :</p>
+      <div class="chain">
+        <span class="node">Un litige survient, sans article codifié à appliquer</span><span class="arrow">→</span>
+        <span class="node">Le juge cherche le jugement antérieur aux faits les plus proches</span><span class="arrow">→</span>
+        <span class="node">Il isole la ratio decidendi de ce précédent</span><span class="arrow">→</span>
+        <span class="node">Cette ratio devient, par stare decisis, contraignante pour l'avenir</span>
+      </div>
+      <p class="mech">C'est cette chaîne, répétée sur des siècles, qui construit — sans jamais qu'un législateur n'ait rien voté — un corps de règles aussi dense qu'un code. La différence n'est donc pas dans la <b>densité</b> du droit final (les deux systèmes finissent par tout couvrir), mais dans le <b>sens de sa fabrication</b>.</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 720 260" width="100%" style="max-width:720px">
+          <g font-family="Josefin Sans" font-size="10.5" fill="#2e2620">
+            <text x="360" y="16" text-anchor="middle" font-size="10" letter-spacing="2" fill="#6c5c48">MÊME LITIGE, DEUX SENS DE CIRCULATION</text>
+            <circle cx="360" cy="36" r="6" fill="#7a4a35"/>
+            <text x="360" y="58" text-anchor="middle" font-size="9.5" fill="#6c5c48">un litige commercial survient</text>
+            <line x1="355" y1="40" x2="180" y2="70" stroke="#2f5c42" stroke-width="1.6"/>
+            <line x1="365" y1="40" x2="540" y2="70" stroke="#7a4a35" stroke-width="1.6"/>
+
+            <!-- colonne civil law -->
+            <rect x="80" y="70" width="200" height="38" rx="10" fill="#fff" stroke="#2f5c42"/>
+            <text x="180" y="93" text-anchor="middle" font-weight="600" fill="#2f5c42">Loi déjà écrite (le Code)</text>
+            <line x1="180" y1="108" x2="180" y2="126" stroke="#2f5c42" stroke-width="1.4"/>
+            <rect x="80" y="126" width="200" height="38" rx="10" fill="#fff" stroke="#2f5c42"/>
+            <text x="180" y="149" text-anchor="middle">Le juge cherche l'article</text>
+            <line x1="180" y1="164" x2="180" y2="182" stroke="#2f5c42" stroke-width="1.4"/>
+            <rect x="80" y="182" width="200" height="38" rx="10" fill="#fff" stroke="#2f5c42"/>
+            <text x="180" y="205" text-anchor="middle">Il applique la règle au cas</text>
+            <line x1="180" y1="220" x2="180" y2="238" stroke="#2f5c42" stroke-width="1.4"/>
+            <rect x="60" y="238" width="240" height="20" rx="10" fill="#2f5c42"/>
+            <text x="180" y="252" text-anchor="middle" fill="#fff" font-size="9">jugement = application d'une règle</text>
+
+            <!-- colonne common law -->
+            <rect x="440" y="70" width="200" height="38" rx="10" fill="#fff" stroke="#7a4a35"/>
+            <text x="540" y="93" text-anchor="middle" font-weight="600" fill="#7a4a35">Aucun article : que des cas</text>
+            <line x1="540" y1="108" x2="540" y2="126" stroke="#7a4a35" stroke-width="1.4"/>
+            <rect x="440" y="126" width="200" height="38" rx="10" fill="#fff" stroke="#7a4a35"/>
+            <text x="540" y="149" text-anchor="middle">Le juge cherche un précédent</text>
+            <line x1="540" y1="164" x2="540" y2="182" stroke="#7a4a35" stroke-width="1.4"/>
+            <rect x="440" y="182" width="200" height="38" rx="10" fill="#fff" stroke="#7a4a35"/>
+            <text x="540" y="205" text-anchor="middle">Il isole la ratio decidendi</text>
+            <line x1="540" y1="220" x2="540" y2="238" stroke="#7a4a35" stroke-width="1.4"/>
+            <rect x="420" y="238" width="240" height="20" rx="10" fill="#7a4a35"/>
+            <text x="540" y="252" text-anchor="middle" fill="#fff" font-size="9">jugement = source d'une règle</text>
+          </g>
+        </svg>
+      </div>
+
+      <table class="cmp">
+        <caption>Civil law vs common law — ce qui bascule, structurellement</caption>
+        <thead><tr><th>Critère</th><th>Civil law (France)</th><th>Common law (UK, USA...)</th></tr></thead>
+        <tbody>
+          <tr><td>Source première du droit</td><td>La loi codifiée, votée</td><td>Le jugement précédent</td></tr>
+          <tr><td>Rôle du juge</td><td>Applique et interprète une règle préexistante</td><td>Découvre / formule la règle en jugeant</td></tr>
+          <tr><td>Rôle de la loi écrite</td><td>Source principale et systématique</td><td>Existe (statutes) mais s'ajoute à un socle jurisprudentiel</td></tr>
+          <tr><td>Prévisibilité</td><td>Élevée si le cas est prévu par le texte</td><td>Élevée si un précédent proche existe, sinon incertaine</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une PME face à deux contrats</h5>
+        <p><b>Manufacture Vosgienne</b>, fabricant de meubles en bois massif (30 salariés), négocie deux distributions exclusives la même année : l'une avec un grossiste lyonnais, l'autre avec une chaîne de magasins californienne. Le contrat français tient sur six pages : il ne précise pas ce qui se passe en cas de force majeure, de retard de livraison mineur ou de hausse du coût du bois, parce que le Code civil comble ces silences par des règles par défaut. Le contrat américain, pour un partenariat pourtant comparable, tient sur trente-huit pages : chaque contingence doit être écrite noir sur blanc, car il n'existe pas de code auquel renvoyer implicitement — seulement une masse de jurisprudence sur des faits qui ne sont jamais exactement les mêmes. Un dirigeant qui juge le contrat américain « trop méfiant » ou « too long » n'a pas compris qu'il lit, en réalité, l'absence du filet de sécurité qu'offre par défaut le droit civil.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Droit des affaires internationales (disc. 03) <i>— le choix de la loi applicable dans la clause contractuelle</i></span>
+        <span class="linkchip">Techniques du commerce international (disc. 01) <i>— les Incoterms comme palliatif contractuel au silence légal</i></span>
+        <span class="linkchip">C4 · Formation du contrat <i>— la consideration, produit direct de cette logique casuistique</i></span>
+        <span class="linkchip">C6 · Organisation judiciaire <i>— quelle cour peut lier quelle autre</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que la common law n'a « pas de lois écrites » — elle en a (statutes), mais elles s'insèrent dans un socle jurisprudentiel plutôt que de le remplacer</li>
+          <li>Traiter <em>ratio decidendi</em> et <em>obiter dictum</em> comme équivalents alors que seule la première lie les juges futurs</li>
+          <li>Croire que « précédent » signifie « le jugement le plus récent » plutôt que « le jugement aux faits les plus proches, rendu par une cour de rang suffisant »</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Copier-coller un modèle de contrat français vers un partenaire de common law en pensant que les silences seront comblés de la même façon</li>
+          <li>Sous-estimer la longueur nécessaire d'un contrat anglo-saxon, la juger comme un signe de méfiance plutôt que de nécessité structurelle</li>
+          <li>Ne pas vérifier si le précédent cité par un avocat étranger émane d'une cour dont le rang lie effectivement le tribunal saisi</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez Manufacture Vosgienne. Votre partenaire californien vous envoie un projet de contrat de trente-huit pages. Votre juriste habituel, formé au droit français, le juge « excessif ». Que faites-vous ?</p>
+        <p class="dctx">Renégocier chaque clause coûte du temps et des honoraires ; signer sans les comprendre toutes expose l'entreprise à des engagements qu'elle n'a pas mesurés.</p>
+        <div class="dopts">
+          <span>A. Faire réviser le contrat par un juriste formé à la common law, quitte à payer plus cher ce conseil ponctuel</span>
+          <span>B. Demander une version raccourcie « à la française », en confiance envers le partenaire</span>
+          <span>C. Signer tel quel — le volume rassure sur le sérieux du partenaire</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique, mais un arbitrage clair. L'option B repose sur un malentendu : demander une version « courte » à un partenaire de common law ne réduit pas le risque juridique, cela retire simplement les clauses qui l'auraient couvert, puisqu'aucun code par défaut ne les remplacera. L'option C confond longueur et prudence : un contrat long peut aussi protéger unilatéralement son rédacteur. L'option A a un coût réel, mais c'est le seul choix qui traite le problème identifié en C1 : sans code à renvoyer implicitement, chaque ligne du contrat <em>est</em> la protection — l'omettre, c'est l'accepter tacitement comme non couverte.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un contrat court avec un partenaire de common law n'est pas un contrat simple, c'est un contrat qui délègue le risque à un futur procès</li>
+            <li>Le coût juridique réel d'une relation transatlantique se paie à la rédaction, pas au litige — le litige n'est que la facture différée d'un contrat mal écrit</li>
+            <li>Un juriste formé au seul droit civil peut, de bonne foi, sous-estimer un risque que son homologue common law verrait immédiatement</li>
+            <li>La prévisibilité n'est pas un acquis universel : elle se construit différemment selon le système, et se négocie donc différemment</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Détection automatique du système juridique implicite d'un contrat entrant (silences codifiés vs silences non couverts)</li>
+            <li>Alerte sur les clauses absentes qu'un code civil aurait comblées par défaut, avant signature</li>
+            <li>Cartographie du rang des précédents cités par un cabinet partenaire, pour vérifier leur force contraignante réelle</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>L'Equity — un système qui se corrige lui-même</h2>
+      <p class="dsub">Chapitre C3 (système · prérequis : C1, C2) — née d'un défaut de la common law elle-même</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Pendant des siècles, les cours de common law anglaises n'offrent, en cas de rupture de contrat, qu'un seul remède : des <b>dommages-intérêts</b> — de l'argent. Or que faire quand l'argent ne répare rien ? Un vendeur qui a promis une pièce de terre unique, un fournisseur qui a promis une machine sur-mesure qu'aucun tiers ne rachètera, un associé qui a promis de ne pas divulguer un secret : dans tous ces cas, un chèque n'annule pas le préjudice. Les plaideurs mécontents des cours de common law ont fini par contourner le problème en <b>pétitionnant directement le roi</b> — non pas pour changer la règle, mais pour obtenir, à côté d'elle, une justice que la règle ne savait pas rendre.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Les pétitions adressées au roi sont progressivement déléguées à son plus proche conseiller juridique, le <b>Lord Chancellor</b>, dont le tribunal — la <b>Court of Chancery</b> — développe un corps de remèdes plus souples que la common law : l'<b>injunction</b> (ordonner ou interdire un comportement), la <b>specific performance</b> (forcer l'exécution exacte de la promesse), le <b>trust</b> (séparer propriété légale et bénéfice réel d'un bien). Ces deux justices — common law et Equity — sont rendues, pendant des siècles, par des <b>tribunaux séparés</b>, avec leurs propres procédures. Les <b>Judicature Acts de 1873-1875</b> fusionnent leur <b>administration</b> : à partir de cette réforme, une même cour anglaise peut appliquer les deux corps de règles. Le fond des règles, lui, reste distinct — la fusion est procédurale, pas substantielle. Sans ce compromis, le vendeur d'un bien unique n'aurait toujours, aujourd'hui, qu'un chèque à offrir en réparation d'une promesse non tenue.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — une correction, pas une addition</p>
+      <p class="mech">Le point le plus souvent mal compris des étudiants : l'Equity ne s'ajoute pas à la common law comme un chapitre de plus dans un manuel — elle la <b>corrige</b>, précisément là où elle échoue. Le diagramme ci-dessous rend visible ce rapport de correction, plutôt que de le laisser implicite dans deux blocs juxtaposés :</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 700 260" width="100%" style="max-width:700px">
+          <g font-family="Josefin Sans" font-size="10.5" fill="#2e2620">
+            <text x="350" y="16" text-anchor="middle" font-size="10" letter-spacing="2" fill="#6c5c48">L'EQUITY CORRIGE LA COMMON LAW, ELLE NE S'Y AJOUTE PAS</text>
+
+            <!-- lane common law -->
+            <rect x="30" y="34" width="150" height="40" rx="10" fill="#fff" stroke="#7a4a35"/>
+            <text x="105" y="58" text-anchor="middle">Contrat rompu</text>
+            <line x1="180" y1="54" x2="212" y2="54" stroke="#7a4a35" stroke-width="1.6"/>
+            <polygon points="212,54 204,50 204,58" fill="#7a4a35"/>
+            <rect x="215" y="34" width="170" height="40" rx="10" fill="#fff" stroke="#7a4a35"/>
+            <text x="300" y="52" text-anchor="middle" font-size="9.5">Remède unique :</text>
+            <text x="300" y="65" text-anchor="middle" font-weight="600">dommages-intérêts</text>
+            <line x1="385" y1="54" x2="417" y2="54" stroke="#7a4a35" stroke-width="1.6"/>
+            <polygon points="417,54 409,50 409,58" fill="#7a4a35"/>
+            <rect x="420" y="30" width="200" height="48" rx="10" fill="rgba(122,74,53,.15)" stroke="#7a4a35" stroke-dasharray="4 3"/>
+            <text x="520" y="49" text-anchor="middle" font-size="9">Insuffisant : bien unique,</text>
+            <text x="520" y="61" text-anchor="middle" font-size="9">promesse non pécuniaire</text>
+
+            <!-- flèche de correction -->
+            <path d="M520 100 C 500 140, 470 155, 440 168" fill="none" stroke="#b08d4f" stroke-width="2.4" marker-end="url(#arrbrass)"/>
+            <text x="430" y="128" text-anchor="middle" font-size="9.5" letter-spacing="1.5" fill="#8a6a34" transform="rotate(-52 430 128)">CORRECTION</text>
+
+            <!-- lane equity -->
+            <rect x="200" y="168" width="240" height="46" rx="10" fill="#fff" stroke="#b08d4f"/>
+            <text x="320" y="187" text-anchor="middle" font-size="9.5">Lord Chancellor —</text>
+            <text x="320" y="200" text-anchor="middle" font-weight="600">Court of Chancery (Equity)</text>
+
+            <!-- résultat fusionné -->
+            <line x1="440" y1="191" x2="500" y2="191" stroke="#2f5c42" stroke-width="1.6"/>
+            <polygon points="500,191 492,187 492,195" fill="#2f5c42"/>
+            <rect x="503" y="150" width="180" height="80" rx="12" fill="rgba(47,92,66,.12)" stroke="#2f5c42"/>
+            <text x="593" y="172" text-anchor="middle" font-size="9" fill="#2f5c42">Depuis 1873-1875 :</text>
+            <text x="593" y="188" text-anchor="middle" font-size="9" fill="#2f5c42">une même cour applique</text>
+            <text x="593" y="204" text-anchor="middle" font-size="9" fill="#2f5c42">dommages + injunction,</text>
+            <text x="593" y="220" text-anchor="middle" font-size="9" fill="#2f5c42">specific performance, trust</text>
+
+            <defs>
+              <marker id="arrbrass" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                <path d="M0 0 L8 4 L0 8 Z" fill="#b08d4f"/>
+              </marker>
+            </defs>
+          </g>
+        </svg>
+      </div>
+
+      <table class="cmp">
+        <caption>Remède de common law vs remèdes d'Equity — l'arbitrage que révèle chaque litige</caption>
+        <thead><tr><th>Critère</th><th>Common law — dommages-intérêts</th><th>Equity — injunction, specific performance, trust</th></tr></thead>
+        <tbody>
+          <tr><td>Nature</td><td>Somme d'argent compensatoire</td><td>Ordre du juge (agir, s'abstenir, exécuter, séparer propriété/bénéfice)</td></tr>
+          <tr><td>Obtention</td><td>Droit quasi automatique si la faute est prouvée</td><td>Discrétionnaire — le juge peut refuser même une faute prouvée</td></tr>
+          <tr><td>Condition d'octroi</td><td>Aucune condition d'adéquation du remède</td><td>Accordé seulement si les dommages-intérêts sont « inadéquats »</td></tr>
+          <tr><td>Cas type</td><td>Retard de livraison d'un bien substituable</td><td>Bien unique, secret d'affaires, promesse de non-divulgation</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une presse hydraulique sur-mesure</h5>
+        <p>Un atelier de mécanique de précision près de Saint-Étienne conçoit, sur commande, une presse hydraulique unique pour un client britannique, avec un acompte versé. À mi-fabrication, le client se rétracte, la machine ne correspondant plus à sa stratégie industrielle. Des dommages-intérêts calculés sur la revente possible de la presse seraient dérisoires : aucun autre acheteur n'existe pour un outil aussi spécifique. Sous un raisonnement d'Equity, l'atelier pourrait chercher à obtenir une <b>specific performance</b> — forcer l'acheteur à honorer l'achat — précisément parce que le bien est unique et que l'argent seul ne répare pas la perte. À l'inverse, si ce même client avait simplement tardé à payer une commande de pièces standard, aisément revendables, aucun juge n'accorderait ce remède exceptionnel : les dommages-intérêts suffiraient.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C4 · Formation du contrat <i>— l'Equity intervient une fois le contrat valablement formé et rompu</i></span>
+        <span class="linkchip">C6 · Organisation judiciaire <i>— depuis 1873-1875, une seule hiérarchie de cours applique les deux corps de règles</i></span>
+        <span class="linkchip">Droit des affaires internationales (disc. 03) <i>— la clause de non-concurrence, terrain classique de l'injunction</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Présenter l'Equity comme un « deuxième système » séparé, plutôt que comme un correctif intégré aux mêmes cours depuis 1873-1875</li>
+          <li>Croire que la fusion des Judicature Acts a fusionné les <em>règles</em> — elle n'a fusionné que l'administration des tribunaux</li>
+          <li>Oublier le caractère discrétionnaire des remèdes d'Equity, à la différence du droit quasi automatique aux dommages-intérêts</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Réclamer systématiquement une specific performance sans démontrer l'inadéquation des dommages-intérêts, et voir la demande rejetée</li>
+          <li>Ignorer qu'un comportement déloyal de la partie demanderesse (« unclean hands ») peut, en Equity, faire échouer une demande par ailleurs fondée</li>
+          <li>Négliger l'injunction comme outil préventif alors qu'elle peut arrêter un dommage avant qu'il ne se produise, pas seulement le compenser après coup</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez l'atelier stéphanois. Le client britannique propose de vous indemniser à hauteur de 40% du prix pour solde de tout compte plutôt que d'honorer l'achat de la presse. Poursuivez-vous en specific performance ou acceptez-vous le compromis ?</p>
+        <p class="dctx">La procédure d'Equity est discrétionnaire et son issue incertaine ; l'acompte déjà versé couvre une partie de vos coûts ; la machine reste, en l'état, invendable ailleurs.</p>
+        <div class="dopts">
+          <span>A. Accepter les 40% immédiatement — un tiens vaut mieux que deux tu l'auras</span>
+          <span>B. Engager une action en specific performance pour obtenir l'exécution intégrale</span>
+          <span>C. Négocier un compromis supérieur en s'appuyant sur la menace crédible d'une action en Equity</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Aucune option n'est strictement dominante. La specific performance (B) est le remède théoriquement adapté à un bien unique, mais son octroi reste discrétionnaire — un juge peut estimer qu'imposer l'achat d'une machine dont l'acheteur n'a plus l'usage industriel est disproportionné, et lui préférer des dommages-intérêts recalculés plus généreusement. L'option C est souvent la plus réaliste en pratique commerciale : la menace crédible d'un remède exceptionnel a une valeur de négociation même si son obtention réelle est incertaine. L'option A protège la trésorerie immédiate au prix d'un renoncement total à un remède potentiellement bien supérieur.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un contrat portant sur un bien ou un service unique mérite une clause anticipant explicitly un remède en Equity, pas seulement une clause pénale chiffrée</li>
+            <li>La discrétion du juge en Equity est un risque à budgéter — un remède « logique » n'est jamais garanti</li>
+            <li>Une clause de non-concurrence ou de confidentialité vaut ce que vaut l'injunction qui peut la faire respecter, pas le chiffre de la pénalité prévue</li>
+            <li>« Unclean hands » : une entreprise qui a elle-même mal agi affaiblit sa position même quand son adversaire est objectivement en tort</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Repérage automatique, dans un contrat entrant, des clauses portant sur des biens ou informations non substituables — candidates naturelles à une clause de specific performance ou d'injunction explicite</li>
+            <li>Simulation du remède le plus probable (dommages vs Equity) selon la nature du bien concerné, avant même le litige</li>
+            <li>Alerte de cohérence si une clause pénale chiffrée porte sur un actif que seule une injunction protégerait réellement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Le contrat en common law : formation, UCC, juridictions</h2>
+      <p class="dsub">Chapitre C4 (fondation, système · prérequis : C1) · Chapitre C5 (système · prérequis : C4) · Chapitre C6 (système + automatisme · prérequis : C1, C2)</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Le droit français forme un contrat autour d'une idée unique : le <b>consentement</b>, encadré par la capacité et un contenu licite et certain. La common law, elle, exige que <b>quatre éléments distincts</b> soient chacun démontrés séparément — et l'un d'eux, la <b>consideration</b>, n'a <b>aucun équivalent</b> en droit français : une simple promesse gratuite, même sincère, même écrite, n'y est en principe pas exécutoire. Comment un partenaire français peut-il alors « donner sa parole » à un partenaire de common law sans savoir que sa parole, seule, ne suffit juridiquement à rien ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — la consideration</h5>
+          <p>La doctrine veut qu'un contrat de common law ne soit exécutoire que s'il repose sur un <b>échange de valeur réciproque</b> : chaque partie doit donner ou promettre quelque chose en contrepartie de ce qu'elle reçoit. Une promesse purement gratuite, sans contrepartie, n'engage juridiquement son auteur que si elle est passée <b>sous seal</b> — un acte formel, aujourd'hui rare en pratique commerciale courante. <b>Point d'exactitude :</b> à la différence du précédent (rattachable à Henri II, 1154-1189) ou de l'Equity (rattachable aux Judicature Acts, 1873-1875), la doctrine de la consideration ne possède pas, dans les sources mobilisées ici, une date de naissance unique et vérifiée : elle s'est cristallisée progressivement, affaire après affaire, sur plusieurs siècles de jurisprudence anglaise. Toute date précise avancée sans source vérifiée serait une approximation — elle n'est donc pas affirmée ici comme un fait établi.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — quatre briques, quatre vérifications séparées</p>
+      <div class="chain">
+        <span class="node">Offer — offre précise, communiquée</span><span class="arrow">→</span>
+        <span class="node">Acceptance — acceptation qui « reflète » l'offre à l'identique</span><span class="arrow">→</span>
+        <span class="node">Consideration — échange réciproque de valeur</span><span class="arrow">→</span>
+        <span class="node">Intention — volonté d'être juridiquement lié</span>
+      </div>
+      <p class="mech">Chaque maillon peut, seul, faire échouer tout le contrat. Une acceptation qui modifie même légèrement les termes de l'offre (par exemple en ajoutant une condition) n'est pas une acceptation : c'est une <b>contre-offre</b>, qui doit à son tour être acceptée — c'est la « mirror image rule ». La consideration n'a pas besoin d'être <b>adéquate</b> (son montant peut être dérisoire), seulement <b>suffisante</b> en droit — un simple « un euro symbolique » peut techniquement suffire. Enfin, l'intention de créer des relations juridiques est présumée exister en contexte commercial, mais présumée <b>absente</b> en contexte purement domestique ou amical — ce qui explique pourquoi un accord entre amis, même écrit, échoue souvent devant un juge de common law faute d'intention prouvée.</p>
+
+      <div class="callout" style="background:rgba(47,92,66,.09);border-color:rgba(47,92,66,.4)">
+        <svg viewBox="0 0 40 40" stroke="#2f5c42"><rect x="7" y="11" width="26" height="20" rx="2"/><line x1="7" y1="18" x2="33" y2="18"/><line x1="13" y1="24" x2="19" y2="24"/><line x1="23" y1="24" x2="29" y2="24"/></svg>
+        <div>
+          <h5>Origine de la règle — l'Uniform Commercial Code</h5>
+          <p>Aux États-Unis, la vente de biens meubles (sale of goods) relève de l'<b>Uniform Commercial Code (UCC), article 2</b> — un texte modèle élaboré conjointement par l'<b>American Law Institute</b> et la <b>National Conference of Commissioners on Uniform State Laws</b> (aujourd'hui Uniform Law Commission), dont la première version officielle date de <span class="yr">1952</span>. Adopté, avec des variantes, par la quasi-totalité des États américains — à l'exception notable de la Louisiane pour certaines parties, en raison de sa tradition de droit civil héritée du droit français — l'UCC est un cas fascinant d'<b>hybridation</b> : un texte codifié, à la manière civiliste, mais qui continue d'être interprété par les cours américaines selon la logique du précédent. La codification n'a donc pas remplacé le raisonnement casuistique de la common law ; elle lui a simplement donné un socle textuel commun à commenter, affaire après affaire, exactement comme le Code civil est commenté en France par la doctrine et la jurisprudence — sauf que côté américain, c'est la jurisprudence sur le texte, et non le texte, qui continue de trancher les cas limites.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme — juridictions et Brexit (C6)</p>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Pourquoi la hiérarchie des cours britanniques détermine quel jugement fait précédent contraignant plutôt que simplement persuasif</li>
+            <li>Pourquoi la sortie du droit de l'Union européenne change la <em>source</em> des règles de précédent applicables aux litiges commerciaux transfrontaliers avec le Royaume-Uni, sans effacer d'un coup la jurisprudence antérieure</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Référendum du <b>23 juin 2016</b> — sortie formelle de l'UE le <b>31 janvier 2020</b> — fin de la période de transition le <b>31 décembre 2020</b></li>
+            <li>Depuis cette date, les jugements de la <b>CJUE</b> ne lient plus les tribunaux britanniques pour les affaires postérieures (persuasifs seulement, à titre facultatif)</li>
+            <li>Hiérarchie à mémoriser : cours de première instance → High Court → Court of Appeal → Supreme Court</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="cmp">
+        <caption>Effet du Brexit sur la force du droit de l'UE devant les tribunaux britanniques</caption>
+        <thead><tr><th>Période</th><th>Statut des jugements de la CJUE</th><th>Repère</th></tr></thead>
+        <tbody>
+          <tr><td>Avant le 31 décembre 2020</td><td>Contraignants pour les tribunaux britanniques</td><td>Le Royaume-Uni applique le droit de l'UE sous période de transition</td></tr>
+          <tr><td>Depuis le 1ᵉʳ janvier 2021</td><td>Persuasifs seulement, jamais contraignants pour une affaire postérieure</td><td>Fin de la période de transition (31 décembre 2020)</td></tr>
+        </tbody>
+      </table>
+      <p class="note"><b>Point d'exactitude :</b> les régimes détaillés de droit applicable et de reconnaissance des jugements entre le Royaume-Uni et l'UE après le Brexit (par exemple les conventions relatives à la compétence judiciaire) impliquent des textes et évolutions supplémentaires non vérifiés dans le cadre de cette fiche — ils ne sont donc pas détaillés ici plutôt que d'être approximés.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un accord de principe qui n'engage personne</h5>
+        <p>Une coopérative agricole normande signe, lors d'un salon, un « accord de principe » avec un importateur texan, prévoyant un partenariat futur en échange d'une exclusivité de trois ans — sans qu'aucune des deux parties ne verse ni ne promette rien d'autre à ce stade. Côté français, la coopérative croit tenir un engagement moral fort. Devant un juge de common law, ce document risquerait fort d'être jugé sans <b>consideration</b> réciproque identifiable, donc sans valeur contraignante — une promesse d'exclusivité future sans aucune contrepartie immédiate n'est, dans cette logique, qu'une déclaration d'intention. Pour sécuriser l'accord, il aurait fallu qu'un engagement précis et réciproque (par exemple, un versement, même symbolique, contre l'exclusivité promise) accompagne la signature — ou passer l'accord sous seal, solution rare en pratique commerciale moderne.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C1 · Deux logiques <i>— la consideration est le produit direct du raisonnement casuistique</i></span>
+        <span class="linkchip">C3 · Equity <i>— une fois le contrat valablement formé, l'Equity intervient en cas de rupture</i></span>
+        <span class="linkchip">Droit des affaires internationales (disc. 03) <i>— clause de loi applicable et de juridiction compétente</i></span>
+        <span class="linkchip">Gestion financière (disc. 06) <i>— le coût d'un litige transfrontalier à budgéter en amont</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Confondre la consideration avec le prix d'un contrat de vente — elle est un principe général de formation, pas une clause tarifaire</li>
+          <li>Croire que l'UCC remplace la common law aux États-Unis — il ne fait que codifier un domaine (la vente de biens), sans toucher au reste du droit des contrats</li>
+          <li>Oublier que le Brexit ne rend pas caduque la jurisprudence britannique antérieure dérivée du droit de l'UE — elle reste en vigueur tant qu'une cour ne l'a pas expressément écartée</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Signer un « gentleman's agreement » avec un partenaire de common law en le croyant juridiquement contraignant sans consideration identifiable</li>
+          <li>Négliger l'exception louisianaise en présumant l'UCC uniformément applicable dans les cinquante États américains</li>
+          <li>Continuer, après 2021, à citer une jurisprudence de la CJUE devant un tribunal britannique comme si elle liait encore automatiquement la décision</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez la coopérative normande. L'importateur texan refuse toute contrepartie immédiate, arguant que « la parole donnée suffit » entre partenaires de confiance. Insistez-vous pour formaliser une consideration explicite ?</p>
+        <p class="dctx">Insister peut être perçu comme un manque de confiance ; ne pas insister laisse l'accord d'exclusivité juridiquement fragile si le partenaire change d'avis dans six mois.</p>
+        <div class="dopts">
+          <span>A. Insister pour une contrepartie même symbolique, quitte à froisser la relation naissante</span>
+          <span>B. Faire confiance à la relation et ne rien formaliser de plus</span>
+          <span>C. Proposer un acte sous seal, solution formelle mais rarement bien accueillie en pratique</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de choix sans coût. L'option A est la plus sûre juridiquement — même une contrepartie modeste (un premier versement, un engagement de volume minimal) suffit à rendre l'accord exécutoire — mais elle peut effectivement heurter une relation commerciale construite sur la confiance déclarée. L'option B expose la coopérative à voir l'exclusivité promise n'avoir aucune valeur si le partenaire se rétracte. L'option C est juridiquement robuste mais quasiment inusitée en pratique commerciale courante, ce qui peut, paradoxalement, alarmer un partenaire américain habitué à des échanges plus rapides. Le bon choix dépend moins du droit que de la valeur réelle de l'exclusivité promise : plus l'enjeu économique est élevé, plus l'option A se justifie malgré son coût relationnel.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une promesse verbale ou un accord de principe n'a, en common law, de valeur que si une contrepartie réciproque est identifiable — sinon ce n'est qu'une déclaration d'intention</li>
+            <li>Vendre aux États-Unis suppose de savoir si l'UCC s'applique (biens meubles) ou si l'on reste dans le droit commun des contrats — deux régimes, une même juridiction</li>
+            <li>Le Brexit n'a pas fait table rase du droit britannique dérivé de l'UE : il a seulement coupé le lien de contrainte pour l'avenir, créant une divergence qui s'élargira jugement après jugement</li>
+            <li>Un contrat international bien formé sécurise autant qu'un contrat bien exécuté — la moitié des litiges naissent d'un défaut de formation, pas d'un défaut d'exécution</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Vérification automatique de la présence d'une consideration identifiable dans tout accord entrant rédigé sous influence de common law</li>
+            <li>Détection du régime applicable (UCC article 2 vs droit commun des contrats) selon la nature du bien ou service vendu aux États-Unis</li>
+            <li>Veille sur la divergence croissante entre jurisprudence britannique et jurisprudence de la CJUE post-2021, pour signaler les clauses fondées sur une base devenue incertaine</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Le cas comme source du droit<i>C1 · C2</i></span>
+        <span class="sp">Correction d'un système par lui-même<i>C3</i></span>
+        <span class="sp">Échange réciproque — consideration<i>C4 · C5</i></span>
+        <span class="sp">Divergence progressive post-Brexit<i>C6</i></span>
+        <span class="sp">Qui lie qui, et depuis quand<i>tous</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="03-droit-affaires-internationales.html">← Droit des affaires internati…</a>
@@ -66,5 +756,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

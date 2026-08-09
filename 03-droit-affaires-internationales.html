@@ -3,13 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Droit des affaires internationales — Cours détaillé · Master Plans</title>
+<title>Droit des Affaires Internationales — Cours détaillé · Master Plans</title>
 <meta name="description" content="Fiche de cours détaillée — Droit des affaires internationales, discipline 03 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#3f5aa0;--dom-lt:#9db0e0}</style>
+<style>
+/* Palette — bordeaux / gris ardoise / or vieilli : la gravité du droit — sceaux,
+   robes, registres. Le bordeaux est l'encre et la robe, l'ardoise la pierre des
+   tribunaux et la froideur de l'analyse, l'or vieilli le sceau et le parchemin
+   des traités anciens. Un vide (l'absence de législateur mondial) que seule de
+   la matière grave et ancienne — jamais vive ni ludique — vient combler. */
+:root{
+  --p1:#7a2f42; --p1-lt:#c98a9a;
+  --p2:#52596b; --p2-lt:#a3aabd;
+  --p3:#ab8a4a; --p3-lt:#ddc38f;
+  --ink:#2f2530; --ink-soft:#6e5d5f;
+  --paper:rgba(255,252,246,.66); --paper-hi:rgba(255,252,246,.88);
+  --line:rgba(122,47,66,.22); --vert:#5c7a5e;
+  --h:#4a1f2c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -6%, #e6c7cf 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 18%, #c7cbdb 0%, transparent 52%),
+    radial-gradient(1000px 720px at 30% 110%, #eddbb0 0%, transparent 58%),
+    linear-gradient(158deg,#f2ebdd 0%, #e6d8d0 40%, #d0c9d4 72%, #ecdfc0 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p2);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(122,47,66,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(47,37,48,.16);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:200px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--h);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p3-lt),var(--p3))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p3)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p3)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:460px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.03em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.66rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(122,47,66,.26);border-radius:24px;box-shadow:0 16px 46px rgba(47,37,48,.15)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.2)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--h);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(171,138,74,.09);
+  border:1px solid rgba(171,138,74,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(122,47,66,.07);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#3f5c41;
+  padding:5px 12px;border-radius:14px;background:rgba(92,122,94,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(171,138,74,.1);border:1px solid rgba(171,138,74,.5)}
+.errors .ee{background:rgba(82,89,107,.1);border:1px solid rgba(82,89,107,.45)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--p3)} .errors .ee h5{color:var(--p2)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+.tblwrap{overflow-x:auto;margin:14px 0;border-radius:14px}
+table.cmp{width:100%;min-width:520px;border-collapse:collapse;margin:0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#2c2f3a}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(163,170,189,.14)}
+
+details.dilemma{background:rgba(255,252,246,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--h);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(82,89,107,.1);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p2)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(163,170,189,.2);border:1px solid var(--p2)}
+.helix{background:rgba(171,138,74,.1);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:var(--h)} .helix h5{color:var(--p3)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3)}
+
+/* diagramme arbre */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#3f5c41;
+  padding:5px 12px;border-radius:14px;background:rgba(92,122,94,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,47 +218,455 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d03">
-  <div class="tab">篇 III</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 03</p>
-    <h3>Droit des affaires internationales</h3>
-    <p class="dmeta">S5 · CM 10h + TD 10h · 3 ECTS · Isabelle Noël</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 200" role="img" aria-label="Une balance de justice suspendue au centre d'un vide en pointillés, entourée de deux chemins menant l'un vers une colonne représentant le hard law des États, l'autre vers un sceau représentant le soft law des marchands">
+      <circle cx="340" cy="100" r="58" fill="none" stroke="#a3aabd" stroke-width="1.4" stroke-dasharray="3 7" opacity=".85"/>
+      <g fill="#a3aabd" opacity=".55">
+        <circle cx="320" cy="70" r="1.4"/><circle cx="362" cy="60" r="1.1"/><circle cx="300" cy="120" r="1.2"/>
+        <circle cx="368" cy="128" r="1.3"/><circle cx="336" cy="140" r="1.1"/><circle cx="312" cy="95" r="1"/>
+      </g>
+      <g stroke="#ab8a4a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="340" cy="52" r="4" fill="#ab8a4a" stroke="none"/>
+        <line x1="340" y1="56" x2="340" y2="72"/>
+        <line x1="308" y1="72" x2="372" y2="72"/>
+        <line x1="308" y1="72" x2="296" y2="96"/>
+        <line x1="372" y1="72" x2="384" y2="96"/>
+        <path d="M286 96 a10 8 0 0 0 20 0"/>
+        <path d="M374 96 a10 8 0 0 0 20 0"/>
+      </g>
+      <path d="M282 108 C 220 118, 170 108, 122 100" fill="none" stroke="#7a2f42" stroke-width="1.6" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <g transform="translate(92,70)" stroke="#7a2f42" stroke-width="1.8" fill="none" stroke-linejoin="round">
+        <line x1="0" y1="0" x2="0" y2="50"/>
+        <line x1="-14" y1="0" x2="14" y2="0"/>
+        <line x1="-16" y1="50" x2="16" y2="50"/>
+        <line x1="-10" y1="50" x2="-10" y2="0"/><line x1="0" y1="50" x2="0" y2="0"/><line x1="10" y1="50" x2="10" y2="0"/>
+      </g>
+      <text x="92" y="142" text-anchor="middle" font-family="Josefin Sans" font-size="9" letter-spacing="1.5" fill="#7a2f42">HARD LAW · ÉTATS</text>
+      <path d="M398 108 C 460 118, 512 108, 558 100" fill="none" stroke="#52596b" stroke-width="1.6" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <g transform="translate(588,95)" stroke="#52596b" stroke-width="1.8" fill="none">
+        <circle r="20"/>
+        <path d="M-20 14 q20 14 40 0"/>
+        <line x1="-9" y1="-4" x2="9" y2="-4"/><line x1="-9" y1="4" x2="9" y2="4"/>
+      </g>
+      <text x="588" y="142" text-anchor="middle" font-family="Josefin Sans" font-size="9" letter-spacing="1.5" fill="#52596b">SOFT LAW · MARCHANDS</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Droit des Affaires Internationales</h1>
+    <p class="gen-open">Il n'existe ni législateur mondial, ni tribunal mondial du commerce, ni police mondiale pour faire exécuter un jugement au-delà d'une frontière — et pourtant, chaque jour, des milliers de contrats lient des entreprises et des États qui ne partagent ni droit, ni langue, ni juge. <b>Comment un contrat entre deux souverainetés peut-il malgré tout produire des règles prévisibles, et un litige être tranché ?</b> La discipline répond en deux temps : d'abord en posant le vide (C1), puis en montrant que deux réponses concurrentes le comblent — les États eux-mêmes, par traité (hard law, C2), et les marchands, par l'usage répété (soft law, C3) — avant que des instruments d'uniformisation (C4), des règles de conflit de lois (C5) et, en dernier recours, l'arbitrage (C6) ne transforment ce double édifice en un mécanisme réellement exécutable par-delà les frontières.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:85%"></span><span class="au" style="width:15%"></span></span>
       <span class="crd">Système <b class="s">85%</b> · Automatisme <b class="a">15%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S5 · CM 10h + TD 10h · 3 ECTS · Isabelle Noël</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Il n'existe <b>aucun législateur mondial ni tribunal mondial du commerce</b>. Comment un contrat entre deux États souverains peut-il malgré tout être régi par des règles prévisibles, et un litige tranché ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>L'absence d'ordre juridique mondial</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · pose le vide que tout le reste comble</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Hard law : traités, OMC, règlements européens</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b></span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Soft law : lex mercatoria, usages, codes de conduite</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · explique pourquoi Incoterms et RUU 600 s'appliquent sans être des lois</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Les instruments d'uniformisation</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C3</b></span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Loi applicable &amp; juridiction compétente</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>L'arbitrage commercial international</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3, C5</b> · l'aboutissement de la logique privée</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Le vide</div><div class="tc"><span class="node f">C1 · Pas de souverain mondial</span></div></div>
-<div class="flow"><span class="fdot"></span>deux réponses parallèles et concurrentes<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Réponses</div><div class="tc"><span class="node s">C2 · Hard law · les États</span><span class="ar">‖</span><span class="node f">C3 · Soft law · les marchands</span></div></div>
-<div class="tier"><div class="tl">Outils</div><div class="tc"><span class="node s">C4 · Uniformisation</span><span class="ar">·</span><span class="node s">C5 · Conflits de lois</span></div></div>
-<div class="tier"><div class="tl">Sortie</div><div class="tc"><span class="node s">C6 · Arbitrage</span></div></div>
-</div>
-    <p class="note">Lien majeur : <b>C3 est le chapitre qui explique les TCI</b>. Incoterms et RUU 600 sont de la soft law émise par la CCI — d'où leur application conditionnée à la citation dans le contrat.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Autonomie de la volonté<i>C3·C5·C6</i></span><span class="sp">Prévisibilité contractuelle<i>tous</i></span><span class="sp">Norme privée vs étatique<i>C2·C3</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><line x1="10" y1="6" x2="10" y2="34"/><path d="M10 8 L30 13 L10 20 Z"/><line x1="6" y1="34" x2="18" y2="34"/></svg><b>États</b><span>souveraineté, traités</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><ellipse cx="20" cy="20" rx="6" ry="14"/><line x1="6" y1="20" x2="34" y2="20"/><path d="M8 12 h24 M8 28 h24"/></svg><b>OMC</b><span>hard law, 1995</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="17" r="11"/><line x1="20" y1="9" x2="20" y2="25"/><line x1="13" y1="17" x2="27" y2="17"/><path d="M13 26 L9 36 L16 32 L20 38 L24 32 L31 36 L27 26"/></svg><b>CCI</b><span>soft law, 1936</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="24" width="17" height="7" rx="1.5" transform="rotate(-38 14.5 27.5)"/><line x1="17" y1="19" x2="30" y2="6"/><line x1="8" y1="34" x2="32" y2="34"/></svg><b>Arbitre</b><span>tranche, privé</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 16 L20 6 L34 16"/><line x1="8" y1="16" x2="32" y2="16"/><line x1="12" y1="16" x2="12" y2="30"/><line x1="18" y1="16" x2="18" y2="30"/><line x1="22" y1="16" x2="22" y2="30"/><line x1="28" y1="16" x2="28" y2="30"/><line x1="6" y1="30" x2="34" y2="30"/><line x1="4" y1="34" x2="36" y2="34"/></svg><b>Tribunal étatique</b><span>jugement, territorial</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M10 8 h20 a3 3 0 0 1 0 6 h-20 a3 3 0 0 1 0 -6 Z"/><path d="M10 32 h20 a3 3 0 0 0 0 -6 h-20 a3 3 0 0 0 0 6 Z"/><line x1="13" y1="14" x2="27" y2="14"/><line x1="13" y1="26" x2="27" y2="26"/><line x1="13" y1="20" x2="27" y2="20"/></svg><b>CNUDCI</b><span>uniformise, 1980</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+      <path d="M40 105 C 110 60, 150 55, 200 55 S 300 105, 360 105 S 460 155, 520 155 S 620 105, 680 105 S 780 60, 840 60" fill="none" stroke="#a3aabd" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(40,105)"><circle r="17" fill="#ab8a4a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="36" text-anchor="middle">Le vide</text></g>
+        <g transform="translate(200,55)"><circle r="17" fill="#52596b" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Hard law</text></g>
+        <g transform="translate(360,105)"><circle r="17" fill="#ab8a4a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="36" text-anchor="middle">Soft law</text></g>
+        <g transform="translate(520,155)"><circle r="17" fill="#52596b" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-28" text-anchor="middle">Uniformiser</text></g>
+        <g transform="translate(680,105)"><circle r="17" fill="#52596b" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="36" text-anchor="middle">Choisir</text></g>
+        <g transform="translate(840,60)"><circle r="19" fill="#7a2f42" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-28" text-anchor="middle">Arbitrer</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le vide juridique et ses deux réponses</h2>
+      <p class="dsub">Chapitres C1 · C2 · C3 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Deux entreprises — ou deux États eux-mêmes — signent un accord. Rien, structurellement, ne garantit qu'il sera respecté : il n'existe pas de parlement mondial pour légiférer sur le commerce, pas de cour suprême mondiale disposant d'une juridiction obligatoire sur les États, pas de police internationale pour saisir les biens d'un débiteur récalcitrant à l'étranger. À l'intérieur d'un pays, un contrat non respecté finit devant un juge dont l'autorité s'impose aux deux parties ; entre deux pays souverains, aucune autorité extérieure ne peut s'imposer à un État sans son consentement — c'est le principe même de souveraineté qui structure l'ordre international depuis la paix de Westphalie (1648). <b>Comment, dans ce vide, un engagement pris aujourd'hui à Lyon avec un partenaire à Osaka peut-il devenir une obligation prévisible plutôt qu'une simple promesse sur l'honneur ?</b> C'est le problème que toute la discipline résout — et il se résout, on va le voir, de deux manières concurrentes plutôt qu'une seule.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine du vide — C1</h5>
+          <p>La souveraineté des États — le principe selon lequel aucune autorité extérieure ne peut s'imposer à un État sans son consentement (<i>par in parem non habet imperium</i>, un égal n'a pas d'autorité sur un égal) — structure l'ordre juridique international depuis la paix de Westphalie, en <span class="yr">1648</span>. Ce n'est pas un oubli des juristes : c'est un choix politique fondateur. Si un législateur mondial existait réellement et pouvait imposer sa loi à un État sans son accord, cet État cesserait, par définition, d'être souverain — ce qu'aucune puissance n'a jamais accepté durablement. Sans ce vide, il n'y aurait tout simplement pas de discipline distincte du droit interne des contrats : le droit des affaires internationales existe précisément parce que ce dernier s'arrête à la frontière.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Le vide ne reste jamais vide longtemps : deux logiques concurrentes s'y engouffrent, chacune avec sa propre source de légitimité, et c'est leur coexistence — pas leur remplacement l'une par l'autre — qui structure tout le reste de la discipline.</p>
+      <div class="chain">
+        <span class="node">Le vide (C1)</span><span class="arrow">→</span>
+        <span class="node">Les États comblent par traité — hard law (C2)</span><span class="arrow">‖</span>
+        <span class="node">Les marchands comblent par l'usage — soft law (C3)</span><span class="arrow">→</span>
+        <span class="node">Les deux routes reconvergent dans les instruments d'uniformisation (C4)</span>
+      </div>
+
+      <div class="callout" style="background:rgba(82,89,107,.09);border-color:rgba(82,89,107,.4)">
+        <svg viewBox="0 0 40 40" stroke="#52596b"><path d="M8 34 L20 8 L32 34 Z"/><line x1="14" y1="24" x2="26" y2="24"/></svg>
+        <div>
+          <h5>Origine de la règle — le hard law (C2)</h5>
+          <p>Le <span class="yr">15 avril 1994</span>, à Marrakech, les négociateurs du Cycle d'Uruguay du GATT signent les accords qui créent l'Organisation Mondiale du Commerce, effective au <span class="yr">1ᵉʳ janvier 1995</span>. C'est l'exemple même de hard law : un traité entre États, ratifié, qui les engage juridiquement et prévoit un mécanisme de sanction — l'Organe de règlement des différends de l'OMC peut autoriser un État lésé à appliquer des mesures de rétorsion commerciale contre un État qui ne respecte pas ses engagements. Sans un tel traité, chaque État resterait libre de modifier unilatéralement ses droits de douane du jour au lendemain, rendant tout plan d'exportation à moyen terme illisible. Un règlement européen va plus loin encore : il s'applique directement dans chaque État membre sans transposition nationale, à la différence d'une directive, qui doit être transposée par chaque État avec ses propres délais et variantes — deux degrés de hard law, pas un seul.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(122,47,66,.07);border-color:rgba(122,47,66,.35)">
+        <svg viewBox="0 0 40 40" stroke="#7a2f42"><circle cx="20" cy="17" r="11"/><line x1="20" y1="9" x2="20" y2="25"/><line x1="13" y1="17" x2="27" y2="17"/><path d="M13 26 L9 36 L16 32 L20 38 L24 32 L31 36 L27 26"/></svg>
+        <div>
+          <h5>Origine de la règle — le soft law (C3)</h5>
+          <p>Le juriste français <b>Berthold Goldman</b> théorise la notion moderne de <i>lex mercatoria</i> dans un article fondateur, « Frontières du droit et lex mercatoria », publié en <span class="yr">1964</span>. Il ne s'agit pas du droit médiéval des foires marchandes portant le même nom, mais d'une thèse nouvelle : il existerait un corps de règles transnationales, nées directement de la pratique répétée des commerçants — usages, contrats-types, sentences arbitrales — indépendant de tout droit étatique particulier. Sans cette théorisation, chaque usage commercial international resterait un simple fait sans statut normatif propre, et il faudrait toujours ramener un litige commercial vers le droit d'un État en particulier, aussi étranger soit-il aux deux parties.</p>
+          <p style="margin-top:8px">C'est précisément ce que sont les <b>Incoterms</b> (CCI, premières règles en 1936) et les <b>Règles et usances uniformes relatives aux crédits documentaires</b> (RUU / UCP 600, CCI, 2007), déjà rencontrés en Techniques du Commerce International (discipline 01) : des règles rédigées par un organisme privé — la Chambre de Commerce Internationale, ni un État ni une organisation intergouvernementale — qui ne s'appliquent à un contrat que si ce contrat les cite explicitement. Ce n'est pas une faiblesse de rédaction, c'est la nature même de la soft law : un Incoterm n'a pas besoin d'être ratifié par un parlement pour exister, il a seulement besoin d'être choisi par les parties.</p>
+        </div>
+      </div>
+
+      <div class="tree">
+        <svg viewBox="0 0 720 350" width="100%" style="max-width:640px">
+          <g fill="none" stroke-linecap="round">
+            <path d="M360 63 L170 107" stroke="#7a2f42" stroke-width="2"/>
+            <path d="M360 63 L550 107" stroke="#52596b" stroke-width="2" stroke-dasharray="3 6"/>
+            <path d="M170 153 L360 197" stroke="#7a2f42" stroke-width="2"/>
+            <path d="M550 153 L360 197" stroke="#52596b" stroke-width="2" stroke-dasharray="3 6"/>
+            <path d="M170 153 L170 277" stroke="#7a2f42" stroke-width="2"/>
+            <path d="M550 153 L550 277" stroke="#52596b" stroke-width="2" stroke-dasharray="3 6"/>
+            <path d="M193 300 L480 300" stroke="#ab8a4a" stroke-width="2"/>
+          </g>
+          <g font-family="Josefin Sans">
+            <rect x="285" y="17" width="150" height="46" rx="12" fill="#fff" stroke="#ab8a4a" stroke-width="1.6"/>
+            <text x="360" y="36" text-anchor="middle" font-size="11" font-weight="600" fill="#2f2530">C1 — Le vide</text>
+            <text x="360" y="52" text-anchor="middle" font-size="9" fill="#6e5d5f">aucun législateur mondial</text>
+            <rect x="95" y="107" width="150" height="46" rx="12" fill="#fff" stroke="#7a2f42" stroke-width="1.6"/>
+            <text x="170" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#2f2530">C2 — Hard law</text>
+            <text x="170" y="142" text-anchor="middle" font-size="9" fill="#6e5d5f">traités, OMC, États</text>
+            <rect x="475" y="107" width="150" height="46" rx="12" fill="#fff" stroke="#52596b" stroke-width="1.6"/>
+            <text x="550" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#2f2530">C3 — Soft law</text>
+            <text x="550" y="142" text-anchor="middle" font-size="9" fill="#6e5d5f">usages, marchands, CCI</text>
+            <rect x="285" y="197" width="150" height="46" rx="12" fill="#fff" stroke="#ab8a4a" stroke-width="1.6"/>
+            <text x="360" y="216" text-anchor="middle" font-size="11" font-weight="600" fill="#2f2530">C4 — Uniformiser</text>
+            <text x="360" y="232" text-anchor="middle" font-size="9" fill="#6e5d5f">CVIM, UNIDROIT</text>
+            <rect x="95" y="277" width="150" height="46" rx="12" fill="#fff" stroke="#7a2f42" stroke-width="1.6"/>
+            <text x="170" y="296" text-anchor="middle" font-size="11" font-weight="600" fill="#2f2530">C5 — Choisir</text>
+            <text x="170" y="312" text-anchor="middle" font-size="9" fill="#6e5d5f">loi &amp; juridiction</text>
+            <rect x="475" y="277" width="150" height="46" rx="12" fill="#fff" stroke="#52596b" stroke-width="1.6"/>
+            <text x="550" y="296" text-anchor="middle" font-size="11" font-weight="600" fill="#2f2530">C6 — Arbitrer</text>
+            <text x="550" y="312" text-anchor="middle" font-size="9" fill="#6e5d5f">sentence exécutable</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note">Lecture du diagramme : trait plein bordeaux = filiation hard law (C2→C5, la loi et le juge restent affaires d'État) ; trait pointillé ardoise = filiation soft law (C3→C6, l'arbitrage reste un choix privé) ; C4 est le seul nœud nourri par les deux lignées à la fois.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un contrat mal cité, à Limoges comme à Osaka</h5>
+        <p>Un exportateur de porcelaine à Limoges vend un lot à un grossiste à Osaka. Le contrat, rédigé à la hâte, mentionne seulement « CIF Osaka » sans jamais écrire le mot « Incoterms » ni préciser d'édition. Le jour où un différend survient sur qui devait payer l'assurance jusqu'au port, l'exportateur découvre qu'un juge — ou un arbitre — n'est pas tenu d'appliquer la définition CCI du CIF : sans la citation explicite « Incoterms 2020, CCI », le terme redevient une abréviation dont le sens dépend de l'interprétation retenue par la juridiction saisie, exactement le problème que les Incoterms existaient pour résoudre depuis 1936. À l'inverse, si ce même contrat était resté silencieux sur un point que la loi française régit impérativement, ce silence aurait été comblé automatiquement par le hard law applicable — sans qu'aucune des deux parties n'ait eu besoin de le choisir. C'est la différence structurelle entre les deux réponses : le hard law s'impose, le soft law se choisit.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Techniques du commerce international, disc. 01 <i>— Incoterms et UCP 600 sont la soft law de la CCI en pratique</i></span>
+        <span class="linkchip">Introduction au commerce international, disc. 02 <i>— un règlement UE est du hard law directement applicable</i></span>
+        <span class="linkchip">Droit des contrats & Common Law, disc. 04 <i>— l'autonomie de la volonté qui permet de choisir le soft law</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que « soft » signifie « moins important » plutôt que « non contraignant par lui-même »</li>
+          <li>Penser que l'OMC est un tribunal mondial pouvant juger une entreprise directement — elle ne règle que des différends entre États</li>
+          <li>Imaginer la lex mercatoria comme un texte unique consultable, alors que c'est un corps diffus de pratiques, de contrats-types et de sentences arbitrales</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Citer « les Incoterms » dans un contrat sans préciser ni la CCI ni le millésime, laissant planer une ambiguïté sur l'édition applicable</li>
+          <li>Croire qu'un règlement et une directive européens engagent l'entreprise de la même façon et selon le même calendrier</li>
+          <li>Négliger de vérifier si le pays du partenaire a effectivement ratifié le traité invoqué, en particulier hors des grandes économies</li>
+        </ul></div>
+      </div>
+
+      <div class="tblwrap"><table class="cmp">
+        <caption>Hard law vs soft law — ce qui distingue les deux réponses au vide</caption>
+        <thead><tr><th>Critère</th><th>Hard law</th><th>Soft law</th></tr></thead>
+        <tbody>
+          <tr><td>Source</td><td>États, organisations intergouvernementales (OMC, UE)</td><td>Acteurs privés (CCI, chambres, praticiens du commerce)</td></tr>
+          <tr><td>Force contraignante</td><td>Juridiquement contraignante, opposable dès ratification</td><td>Non contraignante en soi — s'applique seulement si choisie</td></tr>
+          <tr><td>Exemple</td><td>OMC (traité, 1995), règlement européen</td><td>Incoterms (1936), lex mercatoria, UCP 600 (2007)</td></tr>
+          <tr><td>Sanction si non-respect</td><td>Rétorsion autorisée par l'OMC, recours devant une cour (CJUE pour l'UE)</td><td>Aucune sanction étatique directe — seulement contractuelle ou réputationnelle</td></tr>
+        </tbody>
+      </table></div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Cosméa, PME cosmétique de Grasse, signe un accord d'approvisionnement de long terme avec une entreprise publique d'un pays où les tribunaux locaux sont réputés peu prévisibles pour les investisseurs étrangers. Comment sécuriser l'accord ?</p>
+        <p class="dctx">Le montant engagé sur dix ans dépasse largement le chiffre d'affaires annuel de Cosméa ; une expropriation déguisée ou une rupture abusive du côté de l'entreprise publique serait potentiellement fatale.</p>
+        <div class="dopts">
+          <span>A. Structurer l'investissement via une filiale dans un pays tiers couvert par un traité bilatéral de protection des investissements avec le pays partenaire</span>
+          <span>B. Se contenter d'un contrat solide, clause d'arbitrage CCI et référence expresse aux Principes UNIDROIT comme droit applicable</span>
+          <span>C. Combiner les deux : structuration par traité et clause d'arbitrage privée</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. L'option A — le <i>treaty shopping</i>, structurer un investissement pour bénéficier d'un traité bilatéral de protection — est une pratique réelle des grands groupes, qui ouvre un recours de hard law direct (mécanismes de règlement des différends investisseur-État) en cas d'expropriation. Mais elle coûte cher à mettre en place, prend du temps, et peut être perçue comme une optimisation juridique agressive. L'option B est rapide et peu coûteuse, mais elle repose entièrement sur la bonne foi du partenaire et sur l'exécution effective d'une éventuelle sentence arbitrale — un problème que 篇 III (C6) creuse en détail.</p>
+          <p>Pour un engagement de cette ampleur et de cette durée, l'option C est souvent la plus rationnelle en pratique : la structuration hard law protège contre le risque politique (expropriation, rupture unilatérale par l'État lui-même), tandis que la clause d'arbitrage protège le litige commercial ordinaire. Pour un contrat plus modeste ou plus court, le coût de la structuration dépasserait largement le risque réel — une director doit calibrer, pas appliquer une règle absolue.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le hard law protège mais reste hors de portée directe de l'entreprise — seul son État peut agir devant l'OMC, jamais elle-même</li>
+            <li>Le soft law est rapide à activer, une simple ligne de contrat — mais une référence omise ne coûte rien jusqu'au premier litige</li>
+            <li>Choisir entre les deux n'est pas idéologique, c'est une question de levier réel : le poids politique de son État, ou la neutralité d'une norme privée internationalement reconnue</li>
+            <li>Structurer un investissement pour bénéficier d'un traité (treaty shopping) est une stratégie hard law réelle, quoique coûteuse et parfois controversée</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique et juridique frappe ici</h5>
+          <ul>
+            <li>Détection automatique des références Incoterms/UCP incomplètes dans un projet de contrat avant signature</li>
+            <li>Cartographie, pour un couple de pays donné, des traités bilatéraux et multilatéraux (investissement, double imposition) réellement applicables</li>
+            <li>Veille continue des procédures de règlement des différends OMC et des évolutions réglementaires UE pertinentes pour le secteur du client</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Uniformiser et choisir : instruments, loi applicable, juridiction</h2>
+      <p class="dsub">Chapitres C4 · C5</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Le vide comblé (C1), les deux réponses posées (C2, C3), reste un problème très concret dès qu'un contrat déborde du cadre volontaire : quelle loi, au juste, répond à une question que ni le contrat, ni les Incoterms, ni aucun usage cité n'ont explicitement tranchée — et quel tribunal, dans quel pays, a même le pouvoir d'entendre l'affaire si les parties ne s'entendent plus ? Ce sont <b>deux questions distinctes</b>, souvent confondues par les étudiants comme par les praticiens débutants, et qu'un contrat mal rédigé laisse toutes deux sans réponse — livrées, en cas de litige, aux règles de conflit de lois du premier juge saisi, rarement les mêmes d'un pays à l'autre. Une première tentative de solution consiste à supprimer le problème à la racine : uniformiser directement le contenu du droit plutôt que de choisir entre plusieurs droits nationaux différents.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — les instruments d'uniformisation (C4)</h5>
+          <p>La <b>Convention de Vienne sur les contrats de vente internationale de marchandises</b> (CVIM, ou CISG en anglais), élaborée sous l'égide de la CNUDCI, est adoptée le <span class="yr">11 avril 1980</span> et entre en vigueur le <span class="yr">1ᵉʳ janvier 1988</span>. Elle unifie directement le droit substantiel de la vente internationale entre États contractants, sauf exclusion expresse par les parties — un traité (donc du hard law) qui produit un effet d'uniformisation privée. Les <b>Principes UNIDROIT relatifs aux contrats du commerce international</b> suivent une logique inverse : première édition en <span class="yr">1994</span>, révisée en <span class="yr">2004</span>, <span class="yr">2010</span> et <span class="yr">2016</span>, ils sont non contraignants — donc du soft law — mais servent de droit « neutre » que les parties ou un arbitre peuvent choisir. C4 dépend ainsi à la fois de C2 et de C3 : c'est le seul chapitre nourri par les deux filiations.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Même lorsqu'un instrument comme la CVIM s'applique, il ne couvre jamais tout : la validité du contrat, la capacité des parties ou certains effets sur la propriété restent, par exemple, hors de son champ. Il faut alors répondre à une deuxième question, complètement distincte de la première.</p>
+      <div class="chain">
+        <span class="node">Contrat silencieux sur un point</span><span class="arrow">→</span>
+        <span class="node">Un juge national est saisi</span><span class="arrow">→</span>
+        <span class="node">Il applique ses propres règles de conflit de lois</span><span class="arrow">→</span>
+        <span class="node">Celles-ci désignent une loi applicable via un « facteur de rattachement »</span>
+      </div>
+      <p class="mech">Dans l'Union européenne, le règlement dit « Rome I » désigne, à défaut de choix des parties, la loi du pays où réside la partie qui doit fournir la <b>prestation caractéristique</b> du contrat — le vendeur, en général, pour une vente. Mais avant même de savoir quelle loi s'applique, il faut déterminer quel tribunal est compétent pour en juger : une question distincte, gouvernée par d'autres textes (le règlement européen « Bruxelles I bis » sur la compétence judiciaire, pour les litiges intra-UE). Un contrat qui ne fixe ni l'une ni l'autre expose les deux parties à une double incertitude qui se cumule, plutôt qu'à une seule.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un verrier de Clermont-Ferrand vend à Munich</h5>
+        <p>L'Atelier Verrier de Clermont, PME de verrerie décorative, vend un lot à un distributeur de Munich sans avoir rédigé de clause de choix de loi. La France et l'Allemagne étant toutes deux parties à la CVIM, celle-ci s'applique automatiquement à la formation du contrat et aux obligations des deux parties — sans qu'aucune n'ait eu besoin de la choisir, puisque c'est un traité, donc du hard law. Mais un désaccord surgit sur la validité d'une clause pénale prévue au contrat, un point que la CVIM ne régit pas explicitement : il faut alors se tourner vers le droit national désigné par les règles de conflit de lois — ici, très probablement le droit français, celui du vendeur qui fournit la prestation caractéristique. La CVIM et le droit interne cohabitent donc dans le même litige, chacun sur son propre terrain.</p>
+      </div>
+
+      <div class="tblwrap"><table class="cmp">
+        <caption>Deux instruments d'uniformisation, deux logiques</caption>
+        <thead><tr><th>Critère</th><th>CVIM (Vienne, 1980)</th><th>Principes UNIDROIT (1994–2016)</th></tr></thead>
+        <tbody>
+          <tr><td>Nature juridique</td><td>Traité international — hard law</td><td>Codification privée non contraignante — soft law</td></tr>
+          <tr><td>Comment il s'applique</td><td>Automatiquement entre États contractants, sauf exclusion expresse</td><td>Seulement si les parties ou un arbitre le choisissent</td></tr>
+          <tr><td>Portée</td><td>Vente internationale de marchandises uniquement</td><td>Tout contrat du commerce international, plus large</td></tr>
+          <tr><td>Usage typique</td><td>Loi de fond par défaut, faute de clause contraire</td><td>Droit « neutre » choisi pour éviter d'avantager une partie, ou complément de lacune</td></tr>
+        </tbody>
+      </table></div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Techniques du commerce international, disc. 01 <i>— la CVIM régit la formation du contrat, les Incoterms le transfert du risque : deux couches distinctes</i></span>
+        <span class="linkchip">Droit des contrats & Common Law, disc. 04 <i>— la CVIM a dû concilier deux traditions juridiques différentes pour exister</i></span>
+        <span class="linkchip">Introduction au commerce international, disc. 02 <i>— Rome I et Bruxelles I bis ne s'appliquent qu'aux litiges intra-européens</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que la CVIM s'applique à toute vente internationale, alors qu'elle ne vaut qu'entre États contractants et peut être exclue par les parties</li>
+          <li>Confondre « loi applicable » (le fond du droit) et « juridiction compétente » (quel tribunal juge) — deux questions entièrement séparées</li>
+          <li>Penser qu'une clause de choix de loi règle automatiquement aussi la question du tribunal compétent</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Oublier d'exclure explicitement la CVIM lorsqu'elles souhaitent réellement leur droit national dans son intégralité, la convention s'appliquant par défaut</li>
+          <li>Omettre à la fois la clause de loi applicable et la clause de juridiction, laissant les deux questions à un contentieux post-litige coûteux</li>
+          <li>Supposer que les règlements européens de compétence les protègent aussi face à un partenaire hors de l'Union</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous négociez un contrat de fourniture avec un acheteur situé dans un pays partie à la CVIM. Excluez-vous la convention au profit du droit français dans son intégralité ?</p>
+        <p class="dctx">Votre service juridique maîtrise parfaitement le droit français ; la CVIM lui est moins familière, mais elle a l'avantage d'être perçue comme neutre par l'acheteur étranger, qui redoute un droit « maison ».</p>
+        <div class="dopts">
+          <span>A. Exclure la CVIM et imposer le droit français, plus familier en interne</span>
+          <span>B. Laisser la CVIM s'appliquer telle quelle, sans y toucher</span>
+          <span>C. Garder la CVIM comme base, mais compléter par une clause précisant le droit national applicable aux points qu'elle ne couvre pas</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Aucune option n'est universellement supérieure. Exclure la CVIM (A) rassure un service juridique qui maîtrise déjà son droit national, mais peut se heurter à la résistance d'un acheteur qui verrait dans le droit français un droit « à domicile » du vendeur, moins neutre. Laisser la CVIM s'appliquer sans y toucher (B) est la solution la plus rapide, mais expose l'entreprise aux lacunes de la convention si le service juridique ne les a pas identifiées à l'avance — la validité d'une clause pénale, déjà vue plus haut, en est un exemple concret. L'option C, la plus rigoureuse, demande un travail de rédaction plus fin mais couvre les deux couches du problème sans laisser de zone grise. Le bon choix dépend surtout de la valeur du contrat et de la récurrence de la relation : pour une vente ponctuelle de faible montant, l'effort de l'option C est rarement rentable.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>« Loi applicable » et « juridiction compétente » sont deux batailles séparées — en gagner une sans l'autre laisse l'entreprise exposée</li>
+            <li>Une convention comme la CVIM est un droit neutre et gratuit déjà négocié par les États — la refuser par silence n'est pas la neutralité, c'est une décision par défaut</li>
+            <li>Le silence contractuel n'est jamais neutre : il transfère le choix au premier tribunal saisi, sous ses propres règles de conflit, souvent imprévisibles</li>
+            <li>Les instruments d'uniformisation existent pour réduire le coût de transaction — les ignorer, c'est payer deux fois pour un problème déjà résolu ailleurs</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique et juridique frappe ici</h5>
+          <ul>
+            <li>Signalement automatique des contrats silencieux sur la loi applicable ou la juridiction, avec clause type proposée selon le pays du partenaire</li>
+            <li>Simulation du régime de conflit de lois par défaut applicable en l'absence de clause, pays de contrepartie par pays de contrepartie</li>
+            <li>Base vivante des États parties à la CVIM et aux principales conventions d'uniformisation, pour éviter les hypothèses obsolètes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>L'arbitrage, aboutissement de la logique privée</h2>
+      <p class="dsub">Chapitre C6</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Même une fois la loi applicable et la juridiction compétente déterminées (篇 II), un problème pratique redoutable subsiste : un jugement rendu par un tribunal français contre un acheteur brésilien n'a, en lui-même, aucune force au Brésil. Il faut le faire reconnaître pays par pays, procédure par procédure — l'<i>exequatur</i> — sans qu'aucune convention universelle n'oblige les tribunaux étrangers à reconnaître automatiquement un jugement civil ou commercial rendu ailleurs. <b>Comment, alors, transformer une victoire judiciaire en argent réellement récupérable de l'autre côté d'une frontière ?</b> C'est ce problème d'exécution — pas de procédure — qui explique pourquoi tant de contrats internationaux préfèrent, en amont, écarter le tribunal étatique au profit de l'arbitrage.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — Loi type CNUDCI et Convention de New York</h5>
+          <p>La <b>loi type de la CNUDCI sur l'arbitrage commercial international</b>, adoptée en <span class="yr">1985</span> et révisée en <span class="yr">2006</span>, sert de modèle que de nombreux États ont incorporé dans leur droit interne, harmonisant la procédure d'un pays à l'autre. Mais le texte qui rend réellement l'arbitrage efficace, c'est la <b>Convention de New York de 1958</b> pour la reconnaissance et l'exécution des sentences arbitrales étrangères, ratifiée par plus de 170 États. Elle oblige les tribunaux des États signataires à reconnaître et exécuter une sentence arbitrale étrangère, avec seulement des motifs de refus strictement limités — un contraste net avec la reconnaissance des jugements de tribunaux étatiques étrangers, beaucoup plus incertaine et fragmentée faute d'équivalent aussi largement ratifié.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(82,89,107,.09);border-color:rgba(82,89,107,.4)">
+        <svg viewBox="0 0 40 40" stroke="#52596b"><rect x="6" y="24" width="17" height="7" rx="1.5" transform="rotate(-38 14.5 27.5)"/><line x1="17" y1="19" x2="30" y2="6"/><line x1="8" y1="34" x2="32" y2="34"/></svg>
+        <div>
+          <h5>Un même organisme, deux fonctions — la CCI</h5>
+          <p>La Chambre de Commerce Internationale, déjà rencontrée en C3 comme rédactrice des Incoterms et des UCP 600, administre aussi l'un des principaux centres mondiaux d'arbitrage commercial, sa Cour internationale d'arbitrage. Ce n'est pas un hasard : la même institution qui codifie les usages des marchands est aussi celle vers qui les marchands se tournent pour trancher leurs différends — la boucle entre C3 et C6 se referme au sein d'un seul et même acteur privé.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Clause d'arbitrage dans le contrat (choix privé, C3)</span><span class="arrow">→</span>
+        <span class="node">Litige : un ou plusieurs arbitres choisis par les parties tranchent</span><span class="arrow">→</span>
+        <span class="node">Sentence arbitrale rendue</span><span class="arrow">→</span>
+        <span class="node">Convention de New York : exécution quasi automatique dans 170+ États</span>
+      </div>
+      <p class="mech">Le point que beaucoup d'étudiants manquent : l'arbitrage n'est pas « en dehors » du droit étatique, il en dépend à deux endroits précis. D'abord, la loi du <b>siège</b> de l'arbitrage encadre la procédure — c'est du droit national, hérité de la loi type CNUDCI dans de nombreux pays. Ensuite, c'est un <b>traité entre États</b> — la Convention de New York, donc du hard law — qui rend la sentence exécutable au-delà des frontières. Autrement dit : le contenu du litige est tranché selon une logique privée (les parties ont choisi leur arbitre et parfois leur droit applicable, C3 et C5), mais ce qui donne à la sentence ses dents transfrontalières est un mécanisme purement étatique. L'arbitrage est le point où la logique privée de toute la discipline vient s'appuyer, pour finir, sur la seule chose que seuls les États peuvent garantir : l'exécution au-delà d'une frontière.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un chantier naval de Saint-Nazaire face à un armateur singapourien</h5>
+        <p>Un chantier naval de Saint-Nazaire livre un navire à un armateur basé à Singapour ; un désaccord survient sur le solde du prix. Le contrat contient une clause d'arbitrage CCI, siège à Paris. L'arbitre tranche en faveur du chantier naval. Singapour étant partie à la Convention de New York, la sentence peut être présentée directement aux tribunaux singapouriens pour exécution contre les actifs de l'armateur sur place, avec des motifs de refus très limités. Si le chantier avait au contraire obtenu un jugement d'un tribunal français, faire reconnaître ce jugement à Singapour dépendrait des règles propres du droit singapourien en matière de reconnaissance des jugements étrangers — un chemin nettement moins balisé qu'une sentence arbitrale sous Convention de New York.</p>
+      </div>
+
+      <div class="tblwrap"><table class="cmp">
+        <caption>Arbitrage commercial international vs tribunal étatique</caption>
+        <thead><tr><th>Critère</th><th>Arbitrage</th><th>Tribunal étatique</th></tr></thead>
+        <tbody>
+          <tr><td>Origine</td><td>Choix contractuel privé (clause d'arbitrage)</td><td>Compétence légale, souvent par défaut</td></tr>
+          <tr><td>Confidentialité</td><td>Généralement confidentielle</td><td>Audiences et jugements en principe publics</td></tr>
+          <tr><td>Choix du décideur</td><td>Les parties choisissent leur(s) arbitre(s)</td><td>Juge assigné par l'ordre judiciaire, sans choix des parties</td></tr>
+          <tr><td>Exécution transfrontalière</td><td>Quasi automatique dans 170+ États (Convention de New York, 1958)</td><td>Dépend du droit de chaque État, souvent lente et incertaine (exequatur)</td></tr>
+          <tr><td>Recours possible</td><td>Très limité — recours en annulation étroit, pas de réexamen du fond</td><td>Appel possible selon le système national, parfois sur plusieurs degrés</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note"><b>Point de prudence :</b> une Convention de La Haye de 2019 sur la reconnaissance des jugements civils et commerciaux étrangers existe désormais et progresse, mais son nombre d'États parties reste, à ce jour, très inférieur à celui de la Convention de New York — il est préférable de vérifier le décompte exact au moment de citer un chiffre plutôt que d'en avancer un ici.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Chapitre C3 <i>— la clause d'arbitrage est elle-même un choix de soft law fait par les parties</i></span>
+        <span class="linkchip">Chapitre C5 <i>— l'arbitre doit encore déterminer quel droit substantiel appliquer au fond du litige</i></span>
+        <span class="linkchip">Droit des contrats & Common Law, disc. 04 <i>— l'arbitrage international mélange des traditions procédurales civilistes et de common law</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que l'arbitrage se situe « hors » du droit étatique, alors qu'il dépend du droit du siège et d'un traité entre États pour son exécution</li>
+          <li>Confondre médiation/conciliation (non contraignante) et arbitrage (sentence contraignante)</li>
+          <li>Penser qu'une sentence arbitrale peut être librement rejugée sur le fond — le recours en annulation ne porte, en principe, que sur des motifs procéduraux étroits</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Rédiger une clause d'arbitrage sans préciser le siège, l'institution ou le nombre d'arbitres — une clause dite « pathologique » qui peut annuler tout l'avantage recherché</li>
+          <li>Choisir une institution d'arbitrage sans vérifier que le pays du partenaire est bien signataire de la Convention de New York</li>
+          <li>Sous-estimer le coût fixe de l'arbitrage institutionnel pour un litige de faible valeur, où un tribunal étatique resterait plus rationnel</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous négociez un contrat de fourniture annuel d'environ 400 000 € avec un partenaire situé dans un pays dont le système judiciaire est jugé peu prévisible. Quelle clause de règlement des différends retenez-vous ?</p>
+        <p class="dctx">Une clause d'arbitrage institutionnel CCI complète (siège, langue, trois arbitres) coûterait, en cas de litige, plusieurs dizaines de milliers d'euros de frais fixes — une part non négligeable de la valeur annuelle du contrat.</p>
+        <div class="dopts">
+          <span>A. Clause d'arbitrage CCI complète, malgré le coût</span>
+          <span>B. Clause attribuant compétence aux tribunaux français</span>
+          <span>C. Arbitrage ad hoc sous règlement CNUDCI, sans institution administrante, pour réduire les coûts fixes</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de règle absolue : tout dépend de l'endroit où se trouvent réellement les actifs du partenaire en cas de non-paiement. Si ses actifs sont localisés dans son propre pays au système judiciaire peu prévisible, un jugement français (option B) — même obtenu rapidement et à moindre coût — pourrait rester inexécutable sur place, faute de reconnaissance fiable des jugements étrangers. L'arbitrage (A ou C) devient alors la seule voie offrant une exécution quasi automatique via la Convention de New York, à condition que ce pays en soit signataire — un point à vérifier avant de rédiger la clause, pas après le litige. L'option C réduit le coût fixe mais laisse aux parties la charge d'organiser elles-mêmes la procédure, un risque supplémentaire si la relation se dégrade au point de ne plus coopérer sur ces détails logistiques. Pour un contrat de cette taille, beaucoup de directions juridiques choisiraient A malgré le coût, précisément parce que la valeur réelle de l'arbitrage n'est pas la procédure mais l'exécution finale.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>La vraie valeur de l'arbitrage n'est ni la confidentialité ni la rapidité, c'est l'imprimante à sentences que 170+ pays doivent reconnaître presque automatiquement</li>
+            <li>Ne jamais signer une clause d'arbitrage sans y préciser le siège, l'institution (ou le règlement ad hoc), le nombre d'arbitres et la langue — une clause incomplète peut annuler tout l'avantage recherché</li>
+            <li>Pour un litige de faible valeur, les coûts fixes de l'arbitrage institutionnel peuvent dépasser l'enjeu lui-même — ce n'est pas un réflexe à appliquer à tous les contrats</li>
+            <li>Un jugement obtenu dans son propre pays, aussi satisfaisant soit-il, ne vaut rien si les actifs du perdant sont ailleurs et que ce pays ne reconnaît pas fiablement les jugements étrangers</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique et juridique frappe ici</h5>
+          <ul>
+            <li>Relecture automatique des clauses d'arbitrage pour détecter les clauses « pathologiques » (siège manquant, institution ambiguë, langue non précisée) avant signature</li>
+            <li>Vérification en temps réel du statut du pays du partenaire au regard de la Convention de New York, réserves comprises</li>
+            <li>Simulateur coût/bénéfice comparant le coût attendu d'un arbitrage institutionnel à la valeur du contrat, pour signaler quand une clause de juridiction étatique serait plus rationnelle</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Autonomie de la volonté<i>C3 · C5 · C6</i></span>
+        <span class="sp">Norme privée vs norme étatique<i>C2 · C3</i></span>
+        <span class="sp">Prévisibilité contractuelle<i>tous</i></span>
+        <span class="sp">Exécution transfrontalière<i>C4 · C5 · C6</i></span>
+        <span class="sp">Un traité pour garantir un choix privé<i>C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="02-introduction-commerce-international.html">← Introduction au commerce int…</a>
@@ -67,5 +675,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

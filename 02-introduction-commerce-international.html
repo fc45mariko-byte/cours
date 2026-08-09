@@ -8,8 +8,206 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#d97b4f;--dom-lt:#f3bd97}</style>
+<style>
+/* Palette — bleu marine / vert bouteille / sable chaud : registre maritime et
+   commercial ancien (cartes de navigation, registres de négoce, comptoirs
+   d'armateurs). Cohérent avec le rôle de cette discipline : porte d'entrée
+   stratégique — on y choisit le cap et le port — AVANT l'exécution
+   opérationnelle des Techniques du Commerce International (discipline 01).
+   Le marine domine (décision, direction), le vert marque le terrain conquis
+   / le marché retenu, le sable rappelle le parchemin des anciens registres
+   et les zones à risque cartographiées à l'encre chaude. */
+:root{
+  --p1:#2f4270; --p1-lt:#7f92c4;
+  --p2:#2f6b52; --p2-lt:#7fb69a;
+  --p3:#c9a668; --p3-dk:#9c7a45;
+  --ink:#2b3346; --ink-soft:#5d6a86;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(47,66,112,.28); --or:#9c7a45; --vert:#2f6b52;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -6%, #e9dcbb 0%, transparent 58%),
+    radial-gradient(1000px 900px at 97% 14%, #b7c3e2 0%, transparent 52%),
+    radial-gradient(1000px 760px at 26% 108%, #b9dcc7 0%, transparent 58%),
+    linear-gradient(158deg,#eee2c4 0%, #dfe2ca 38%, #c7d6d0 68%, #d8cba0 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p1);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(47,66,112,.24);
+  border-radius:26px;box-shadow:0 18px 48px rgba(43,51,70,.16);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:190px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--p1);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.cbar .au{background:linear-gradient(90deg,var(--p3),var(--p3-dk))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p1)} .crd b.a{color:var(--p3-dk)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p1)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:460px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(47,66,112,.22);border-radius:24px;box-shadow:0 16px 46px rgba(43,51,70,.14)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--p1);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(201,166,104,.13);
+  border:1px solid rgba(201,166,104,.5);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(47,66,112,.07);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#24523d;
+  padding:5px 12px;border-radius:14px;background:rgba(47,107,82,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(156,122,69,.1);border:1px solid rgba(156,122,69,.5)}
+.errors .ee{background:rgba(127,146,196,.13);border:1px solid rgba(127,146,196,.5)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--or)} .errors .ee h5{color:var(--p1)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"⚓";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding:0 12px 8px 12px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#1c3a2c}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(127,182,154,.13)}
+
+details.dilemma{background:rgba(255,255,255,.72);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--p1);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(47,107,82,.1);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p2)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(127,182,154,.2);border:1px solid var(--p2)}
+.helix{background:rgba(201,166,104,.13);border:1px solid var(--p3-dk)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:var(--p2)} .helix h5{color:var(--p3-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3-dk)}
+
+/* diagrammes (arbre, entonnoir, jauge) */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#24523d;
+  padding:5px 12px;border-radius:14px;background:rgba(47,107,82,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,46 +216,499 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d02">
-  <div class="tab">篇 II</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 02</p>
-    <h3>Introduction au commerce international</h3>
-    <p class="dmeta">S5 · CM 20h · 3 ECTS · CT écrit 1h · Isabelle Noël</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Un dossier de diagnostic relié par des pointillés à une boussole, elle-même reliée à trois marchés cibles sur une carte du monde stylisée">
+      <defs>
+        <linearGradient id="parch" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f1e6c8"/><stop offset="1" stop-color="#e3d3a0"/>
+        </linearGradient>
+      </defs>
+      <!-- dossier de diagnostic -->
+      <g transform="translate(34,44)" stroke="#2f4270" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="0" y="6" width="78" height="96" rx="6" fill="url(#parch)" fill-opacity=".55"/>
+        <rect x="24" y="0" width="30" height="14" rx="4" fill="#fff" fill-opacity=".8"/>
+        <line x1="14" y1="30" x2="64" y2="30"/>
+        <line x1="14" y1="44" x2="64" y2="44"/>
+        <line x1="14" y1="58" x2="46" y2="58"/>
+        <path d="M14 74 l7 7 l15 -17" stroke="#2f6b52" stroke-width="2.6"/>
+      </g>
+      <!-- pointillé dossier -> boussole -->
+      <path d="M120 96 C 160 88, 190 88, 224 96" stroke="#9c7a45" stroke-width="1.6" stroke-dasharray="2 7" fill="none" stroke-linecap="round"/>
+      <!-- boussole -->
+      <g transform="translate(300,96)" stroke="#2f4270" stroke-width="2" fill="none" stroke-linejoin="round">
+        <circle r="46"/>
+        <circle r="33" opacity=".5"/>
+        <line x1="0" y1="-46" x2="0" y2="-38"/>
+        <line x1="0" y1="46" x2="0" y2="38"/>
+        <line x1="-46" y1="0" x2="-38" y2="0"/>
+        <line x1="46" y1="0" x2="38" y2="0"/>
+        <path d="M0 -30 L9 0 L0 30 L-9 0 Z" fill="#c9a668" stroke="#9c7a45"/>
+        <text x="0" y="-54" text-anchor="middle" font-family="Josefin Sans" font-size="11" stroke="none" fill="#2f4270">N</text>
+      </g>
+      <!-- carte du monde stylisée -->
+      <g transform="translate(430,26)" stroke="#2f6b52" stroke-width="1.8" fill="#7fb69a" fill-opacity=".25" stroke-linejoin="round">
+        <path d="M0 40 C20 20 50 18 70 32 C95 24 120 30 128 48 C118 62 90 66 68 58 C40 66 10 60 0 40 Z"/>
+        <path d="M36 92 C56 80 91 82 104 98 C96 114 64 118 44 108 C30 102 28 98 36 92 Z"/>
+      </g>
+      <!-- pointillés boussole -> marchés -->
+      <path d="M346 80 C 400 55, 440 48, 486 42" stroke="#9c7a45" stroke-width="1.6" stroke-dasharray="2 7" fill="none" stroke-linecap="round"/>
+      <path d="M346 96 C 420 96, 470 92, 520 88" stroke="#9c7a45" stroke-width="1.6" stroke-dasharray="2 7" fill="none" stroke-linecap="round"/>
+      <path d="M346 112 C 400 132, 450 138, 500 136" stroke="#9c7a45" stroke-width="1.6" stroke-dasharray="2 7" fill="none" stroke-linecap="round"/>
+      <!-- marchés cibles -->
+      <g stroke="#2f4270" stroke-width="2" fill="#fff">
+        <circle cx="490" cy="40" r="7"/><circle cx="524" cy="86" r="7"/><circle cx="504" cy="134" r="7"/>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Introduction au commerce international</h1>
+    <p class="gen-open">Une entreprise dispose d'une capacité de production, d'une trésorerie et d'une équipe limitées — et en face, près de 190 marchés nationaux, chacun avec sa réglementation, sa concurrence et sa culture d'affaires. Elle ne peut ni tous les étudier sérieusement, ni tous les servir. <b>Comment décider, avant d'avoir engagé le moindre euro, où aller, avec quelle offre, et sous quelle forme d'implantation</b> — sachant qu'un mauvais choix ici coûte infiniment plus cher à corriger qu'un mauvais choix d'Incoterm ? C'est la question que toute la discipline résout, chapitre après chapitre : d'abord se regarder soi-même avant de regarder le monde (diagnostic interne), puis filtrer le monde à la mesure de ses propres forces (diagnostic externe et sélection), puis hiérarchiser ce qu'on risque d'y perdre (risque pays), choisir la forme d'engagement qui protège sans étouffer l'ambition (modes de présence), enfin aller vérifier sur le terrain ce que les chiffres ne disent pas et adapter l'offre à ce qu'on y découvre (prospection et marketing mix).</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:90%"></span><span class="au" style="width:10%"></span></span>
       <span class="crd">Système <b class="s">90%</b> · Automatisme <b class="a">10%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S5 · CM 20h · 3 ECTS · CT écrit 1h · Isabelle Noël</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Une entreprise a des ressources limitées et un monde entier de marchés possibles. <b>Comment décider où aller, avec quelle offre et sous quelle forme de présence</b>, avant d'avoir engagé l'argent ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Le diagnostic export interne</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · établit la capacité réelle à exporter</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Le diagnostic externe &amp; la sélection des marchés</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · on ne sélectionne qu'au regard de ses propres forces</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Le risque pays et sa hiérarchisation</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b></span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Les modes de présence à l'international</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1, C3</b> · arbitrage contrôle / investissement / risque</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>La prospection</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C4</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Le marketing mix adapté à l'export</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b> · adaptation vs standardisation</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Amont</div><div class="tc"><span class="node f">C1 · Puis-je exporter ?</span><span class="ar">→</span><span class="node f">C2 · Où ?</span></div></div>
-<div class="flow"><span class="fdot"></span>la réponse « où » conditionne toutes les décisions suivantes<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Décision</div><div class="tc"><span class="node s">C3 · À quel risque ?</span><span class="ar">→</span><span class="node s">C4 · Sous quelle forme ?</span></div></div>
-<div class="tier"><div class="tl">Exécution</div><div class="tc"><span class="node s">C5 · Prospection</span><span class="ar">·</span><span class="node s">C6 · Mix export</span></div></div>
-</div>
-    <p class="note">Cette discipline se situe <em>avant</em> les TCI dans la chronologie réelle d'une entreprise : on décide d'exporter ici, puis on exécute avec les TCI.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Arbitrage contrôle ↔ engagement<i>C4·C5</i></span><span class="sp">Adaptation ↔ standardisation<i>C6</i></span><span class="sp">Diagnostic avant décision<i>C1·C2</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="16" width="18" height="18" rx="1"/><path d="M6 16 L15 7 L24 16"/><path d="M28 14 h8 v20 h-8 z"/><path d="M30 20 l2 2 l4 -5"/></svg><b>Entreprise exportatrice</b><span>se diagnostique d'abord</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="17" cy="20" r="12"/><ellipse cx="17" cy="20" rx="12" ry="5"/><line x1="5" y1="20" x2="29" y2="20"/><line x1="17" y1="8" x2="17" y2="32"/><path d="M30 10 c4 0 6 3 6 6 c0 4 -6 10 -6 10 s-6 -6 -6 -10 c0 -3 2 -6 6 -6 z"/><circle cx="30" cy="16" r="2"/></svg><b>Marché cible</b><span>choisi, pas subi</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M20 6 L33 11 V20 C33 29 27 34 20 36 C13 34 7 29 7 20 V11 Z"/><path d="M13 24 l5 -6 l4 4 l7 -9"/></svg><b>Agence de risque pays</b><span>hiérarchise l'exposition</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M4 20 L14 20 L20 14 L26 20 L36 20"/><path d="M14 20 L18 24 L22 20"/><circle cx="9" cy="14" r="4"/><circle cx="31" cy="14" r="4"/></svg><b>Partenaire local</b><span>agent, distributeur, franchisé</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><line x1="20" y1="6" x2="20" y2="30"/><line x1="8" y1="12" x2="32" y2="12"/><path d="M8 12 L4 22 a4 6 0 0 0 8 0 Z"/><path d="M32 12 L28 22 a4 6 0 0 0 8 0 Z"/><line x1="13" y1="34" x2="27" y2="34"/><line x1="20" y1="30" x2="20" y2="34"/></svg><b>Concurrent local</b><span>déjà en place sur le marché</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M8 34 C8 24 32 24 32 34"/></svg><b>Client final export</b><span>jamais rencontré avant la vente</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet">
+      <path d="M40 100 C 100 45, 145 45, 205 55 S 310 100, 370 100 S 470 148, 535 148 S 635 100, 700 100 S 800 45, 860 55" fill="none" stroke="#d9cba0" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(40,100)"><circle r="17" fill="#2f4270" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="36" text-anchor="middle">Diagnostic interne</text></g>
+        <!-- C2 -->
+        <g transform="translate(205,55)"><circle r="17" fill="#2f4270" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Diagnostic externe</text></g>
+        <!-- C3 -->
+        <g transform="translate(370,100)"><circle r="15" fill="#c9a668" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="34" text-anchor="middle">Risque pays</text></g>
+        <!-- C4 -->
+        <g transform="translate(535,148)"><circle r="17" fill="#c9a668" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-26" text-anchor="middle">Modes de présence</text></g>
+        <!-- C5 -->
+        <g transform="translate(700,100)"><circle r="15" fill="#2f6b52" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">Prospection</text></g>
+        <!-- C6 -->
+        <g transform="translate(860,55)"><circle r="17" fill="#2f6b52" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Mix export</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le diagnostic, interne et externe</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Avant même de se demander « quel pays viser », une entreprise doit répondre à une question moins flatteuse : <b>a-t-elle réellement la capacité d'exporter</b> — de la place en production, de la trésorerie pour financer un cycle de paiement plus long, des compétences linguistiques et douanières, une direction prête à s'y consacrer dans la durée ? La plupart des échecs qu'on attribue « au marché » sont en réalité des échecs de préparation interne découverts trop tard, une fois l'argent déjà engagé. C'est pourquoi le chapitre C2 (où exporter) a pour prérequis explicite le chapitre C1 (peut-on exporter) : on ne sélectionne un marché qu'au regard de ses propres forces, jamais dans l'abstrait — un marché « idéal » sur le papier peut être hors de portée d'une entreprise donnée, et un marché modeste peut au contraire être exactement celui qu'elle peut se permettre de rater sans y laisser sa trésorerie.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — un point d'honnêteté</h5>
+          <p>Contrairement aux Incoterms ou au crédit documentaire, le <b>diagnostic export</b> n'a pas d'origine datée unique attribuable à un texte ou un auteur : c'est une pratique de conseil consolidée progressivement par les organismes d'appui au commerce extérieur (chambres de commerce et d'industrie, Business France, Bpifrance et leurs équivalents étrangers), pas une règle juridique codifiée. Il n'existe donc pas de date de naissance à citer ici — le signaler explicitement vaut mieux qu'inventer un texte fondateur qui n'existe pas.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(47,66,112,.08);border-color:rgba(47,66,112,.35)">
+        <svg viewBox="0 0 40 40" stroke="#2f4270"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — la sélection des marchés</h5>
+          <p>Le modèle d'internationalisation d'<b>Uppsala</b> (Johanson &amp; Vahlne, <i>Journal of International Business Studies</i>, <span class="yr">1977</span>) explique pourquoi les entreprises ne s'implantent presque jamais d'un coup sur tous les marchés attractifs : elles avancent par étapes incrémentales, en réduisant à chaque fois la <b>distance psychique</b> — l'ensemble des différences de langue, de culture et de pratiques d'affaires qui rendent l'information sur un marché étranger coûteuse à obtenir et incertaine à interpréter. Sans ce cadre, une sélection de marché ressemblerait à un pari opportuniste (répondre à la première demande venue) plutôt qu'à une séquence délibérée où chaque marché conquis fournit l'expérience nécessaire pour aborder le suivant, un peu plus lointain.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Le diagnostic ne produit pas une réponse, il produit une <b>chaîne de filtres</b> qui rétrécit progressivement le monde jusqu'à une liste courte de marchés réellement atteignables :</p>
+      <div class="chain">
+        <span class="node">Capacités internes (C1)</span><span class="arrow">→</span>
+        <span class="node">Filtre macro-économique</span><span class="arrow">→</span>
+        <span class="node">Filtre distance psychique (Uppsala)</span><span class="arrow">→</span>
+        <span class="node">Filtre concurrence &amp; réglementation</span><span class="arrow">→</span>
+        <span class="node">Marchés cibles (C2)</span>
+      </div>
+      <p class="mech">Chaque filtre élimine des marchés pour une raison différente, et l'ordre compte : appliquer le filtre de distance psychique <i>avant</i> d'avoir honnêtement mesuré ses propres capacités revient à choisir un marché « facile culturellement » que l'entreprise n'a de toute façon pas les moyens de servir. C'est cette liste courte qui, ensuite, alimente directement le chapitre C3 (quel risque ce marché fait-il porter) et le chapitre C4 (sous quelle forme s'y implanter).</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 660 260" width="100%" style="max-width:660px">
+          <g font-family="Josefin Sans" fill="#2b3346">
+            <text x="330" y="16" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="#5d6a86">L'ENTONNOIR DE SÉLECTION — DU MONDE ENTIER À LA LISTE COURTE</text>
+            <!-- entonnoir, à gauche, purement visuel -->
+            <path d="M20 32 L320 32 L272 66 L68 66 Z" fill="#fff" stroke="#7f92c4" stroke-width="1.6"/>
+            <path d="M68 70 L272 70 L228 104 L112 104 Z" fill="#fff" stroke="#2f4270" stroke-width="1.6"/>
+            <path d="M112 108 L228 108 L192 142 L148 142 Z" fill="#fff" stroke="#c9a668" stroke-width="1.6"/>
+            <line x1="170" y1="146" x2="170" y2="164" stroke="#2f6b52" stroke-width="2"/>
+            <rect x="105" y="168" width="130" height="40" rx="9" fill="#2f6b52" fill-opacity=".14" stroke="#2f6b52" stroke-width="1.8"/>
+            <text x="170" y="192" text-anchor="middle" font-weight="600" font-size="10.5" fill="#1c3a2c">Marchés cibles</text>
+            <!-- libellés, à droite, avec toute la largeur nécessaire -->
+            <line x1="272" y1="49" x2="345" y2="49" stroke="#7f92c4" stroke-width="1.2" stroke-dasharray="1 4"/>
+            <text x="352" y="45" font-size="11" font-weight="600">≈190 marchés nationaux</text>
+            <text x="352" y="59" font-size="9.5" fill="#5d6a86">aucun filtre appliqué</text>
+
+            <line x1="228" y1="87" x2="345" y2="87" stroke="#2f4270" stroke-width="1.2" stroke-dasharray="1 4"/>
+            <text x="352" y="83" font-size="11" font-weight="600">Filtre 1 — Capacités internes (C1)</text>
+            <text x="352" y="97" font-size="9.5" fill="#5d6a86">élimine ce qui dépasse trésorerie, production, équipe</text>
+
+            <line x1="192" y1="128" x2="345" y2="128" stroke="#c9a668" stroke-width="1.2" stroke-dasharray="1 4"/>
+            <text x="352" y="118" font-size="11" font-weight="600">Filtre 2 — Distance psychique</text>
+            <text x="352" y="132" font-size="10.5" font-weight="600">&amp; taille de marché (Uppsala, 1977)</text>
+            <text x="352" y="146" font-size="9.5" fill="#5d6a86">classe par proximité culturelle réelle</text>
+
+            <line x1="235" y1="188" x2="345" y2="188" stroke="#9c7a45" stroke-width="1.2" stroke-dasharray="1 4"/>
+            <text x="352" y="178" font-size="11" font-weight="600">Filtre 3 — Concurrence &amp; réglementation</text>
+            <text x="352" y="192" font-size="9.5" fill="#5d6a86">élimine ce qui reste juridiquement ou concurrentiellement fermé</text>
+            <text x="352" y="206" font-size="9.5" fill="#24523d">→ la liste courte alimente C3 (risque) et C4 (mode)</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note"><b>Point de méthode :</b> le modèle d'Uppsala décrit une tendance observée, pas une loi obligatoire — certaines entreprises « born global », en particulier dans le numérique, s'internationalisent d'emblée sur plusieurs marchés distants. Le modèle reste toutefois la référence la plus citée pour expliquer le comportement <i>majoritaire</i> des PME industrielles et de services classiques, qui sont le public principal de ce cours.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une menuiserie industrielle face à son propre diagnostic</h5>
+        <p><b>Menuiserie Vasconi</b>, fabricant de portes et fenêtres bois-aluminium près de Bordeaux (45 salariés), reçoit une demande spontanée d'un promoteur immobilier basé à Dubaï. Le diagnostic interne (C1) révèle une réalité moins enthousiasmante que la demande : la production ne dispose que de 12 % de capacité disponible sur l'année, et personne dans l'équipe commerciale ne parle anglais des affaires ni ne connaît les normes de construction du Golfe. Plutôt que de se précipiter sur ce marché distant et exigeant, le diagnostic externe (C2), guidé par la logique d'Uppsala, oriente d'abord Vasconi vers la Belgique et le Luxembourg — marchés francophones, réglementation de construction proche de la norme française, délais de transport courts — où l'entreprise peut apprendre à exporter avant, éventuellement, d'envisager un marché aussi éloigné culturellement que le Golfe.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Gestion financière <i>— le BFR export, plus long qu'en national, doit être financé avant tout diagnostic externe</i></span>
+        <span class="linkchip">Droit des affaires internationales <i>— la forme juridique de présence dépend du marché finalement retenu</i></span>
+        <span class="linkchip">TCI (discipline 01) <i>— une fois le marché choisi, on y applique Incoterms et paiement documentaire</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Confondre « diagnostic export » et simple étude de marché — le diagnostic commence par l'entreprise, pas par le pays</li>
+          <li>Traiter C1 et C2 comme deux exercices indépendants, en oubliant que C2 est conditionné par C1</li>
+          <li>Croire qu'un grand marché nominal (population, PIB) est automatiquement le meilleur choix, sans tenir compte de la distance psychique ni de l'accessibilité réelle</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Se lancer sur un marché « opportuniste » suite à une commande spontanée, sans diagnostic préalable</li>
+          <li>Sous-estimer le besoin en fonds de roulement généré par des délais de paiement export plus longs</li>
+          <li>Confondre un marché « attractif en théorie » avec un marché accessible compte tenu des ressources réellement disponibles aujourd'hui</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez Vasconi. Le promoteur de Dubaï relance, prêt à payer un acompte confortable. Votre diagnostic interne dit clairement « pas prêt ». Que faites-vous ?</p>
+        <p class="dctx">Refuser peut sembler absurde face à un acompte immédiat ; accepter engage une capacité de production que vous n'avez pas et une équipe qui ne maîtrise ni la langue ni les normes locales.</p>
+        <div class="dopts">
+          <span>A. Accepter la commande telle quelle, quitte à sous-traiter dans l'urgence</span>
+          <span>B. Refuser complètement et rester sur la stratégie Belgique/Luxembourg</span>
+          <span>C. Accepter un lot pilote limité, sans engagement de volume, pour tester sans compromettre la capacité existante</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. Refuser entièrement (B) protège la trésorerie et la qualité, mais ferme une porte qui ne se rouvrira peut-être pas. Accepter en totalité (A) risque de dégrader la qualité sur le marché national existant pour honorer une commande mal maîtrisée — un choix qui peut coûter plus cher en réputation locale que ce qu'il rapporte à l'export. L'option C rejoint la logique incrémentale d'Uppsala sans la trahir : elle ne prétend pas que Dubaï devient un marché stratégique du jour au lendemain, elle traite la demande spontanée comme un test à faible engagement, dont l'échec ou la réussite informe une vraie décision plus tard — plutôt qu'un pari total sur un marché non diagnostiqué.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le diagnostic export n'est pas une formalité administrative, c'est une décision d'allocation de capital avant toute décision commerciale</li>
+            <li>« Le plus grand marché » est un indicateur de vanité — « le marché que je peux réellement servir » est le seul indicateur qui compte</li>
+            <li>La distance psychique coûte de l'argent en temps de diagnostic et en erreurs évitables, même quand elle a officiellement disparu (marché unique européen)</li>
+            <li>Le meilleur premier marché export est celui dont on peut se permettre de refaire l'apprentissage plusieurs fois sans y laisser l'entreprise</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA commerciale frappe ici</h5>
+          <ul>
+            <li>Score de capacité export généré automatiquement à partir des données ERP réelles (charge de production, trésorerie, compétences documentées de l'équipe)</li>
+            <li>Moteur de présélection de marchés combinant données macro-économiques et proxys de distance psychique (langue, famille juridique, accords commerciaux existants) plutôt que l'intuition</li>
+            <li>Alerte automatique quand une entreprise s'engage sur un marché que son propre diagnostic interne avait signalé comme prématuré</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Le risque pays et le mode de présence</h2>
+      <p class="dsub">Chapitres C3 · C4</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois la liste courte de marchés établie (篇 I), les ressources de l'entreprise restent trop limitées pour s'engager partout de la même manière et avec la même exposition. Deux décisions s'enchaînent : <b>combien de risque l'entreprise est-elle prête à absorber, marché par marché</b> (C3), puis, ce niveau de risque accepté et un budget de contrôle/investissement fixé, <b>sous quelle forme s'y implanter</b> (C4) ? On ne peut pas choisir un mode de présence dans l'abstrait — sans connaître sa propre tolérance au risque et le niveau de risque du pays visé, le choix entre exporter via un simple intermédiaire ou construire une filiale sur place n'est qu'un pari. C'est pourquoi C4 a pour prérequis explicite C1 (la capacité réelle d'engagement) <i>et</i> C3 (le risque à couvrir).</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — la hiérarchisation du risque pays</h5>
+          <p>Des agences comme la <b>Coface</b> (Compagnie française d'assurance pour le commerce extérieur, fondée en <span class="yr">1946</span> comme organisme public de soutien aux exportateurs français, aujourd'hui acteur privé de l'assurance-crédit) et d'autres agences de crédit export publient des classifications de risque pays combinant plusieurs composantes : le risque politique (instabilité, restrictions de transfert de devises, nationalisation), le risque commercial (solvabilité des acheteurs), et le risque de change. Les entreprises utilisent couramment ces classifications comme un des intrants pour décider où concentrer leur capacité limitée à prendre des risques — sans que cela dispense d'une analyse propre à chaque entreprise. <i>Point d'exactitude :</i> les niveaux de notation précis évoluent en continu et ne sont pas reproduits ici — seul le mécanisme (classification par composantes de risque, utilisée comme aide à la décision) est un fait stable et vérifiable.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Risque politique</span><span class="arrow">+</span>
+        <span class="node">Risque commercial/crédit</span><span class="arrow">+</span>
+        <span class="node">Risque de change &amp; transfert</span><span class="arrow">=</span>
+        <span class="node">Niveau de risque du marché (C3)</span>
+      </div>
+      <p class="mech">Ce niveau de risque, combiné au degré de contrôle recherché et au capital disponible, détermine ensuite le <b>mode de présence</b> (C4). C'est ici qu'intervient le cadre de <b>Franklin R. Root</b> (<i>Entry Strategies for International Markets</i>, 1987, réédité en 1994) : plus un mode d'entrée engage de ressources et donne de contrôle, plus il expose l'entreprise au risque du marché — et inversement. La relation n'est pas accessoire, elle est quasi mécanique : un mode à fort contrôle immobilise du capital sur place, capital qui devient l'otage direct du risque politique et de change identifié en amont.</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 800 220" width="100%" style="max-width:800px">
+          <g font-family="Josefin Sans" font-size="10.5" fill="#2b3346">
+            <text x="400" y="16" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="#5d6a86">LES 5 MODES — DU MOINS AU PLUS DE CONTRÔLE, D'INVESTISSEMENT ET DE RISQUE</text>
+            <line x1="60" y1="34" x2="740" y2="34" stroke="#c9b98a" stroke-width="2"/>
+            <!-- 1 export indirect -->
+            <g transform="translate(90,34)"><line x1="0" y1="0" x2="0" y2="36" stroke="#c9b98a"/><circle r="6" fill="#7f92c4"/><rect x="-58" y="42" width="116" height="68" rx="10" fill="#fff" stroke="#7f92c4"/><text x="0" y="62" text-anchor="middle" font-weight="600">Export indirect</text><text x="0" y="78" text-anchor="middle" font-size="9">via agent, trading</text><text x="0" y="93" text-anchor="middle" font-size="9">engagement minimal</text></g>
+            <!-- 2 export direct -->
+            <g transform="translate(250,34)"><line x1="0" y1="0" x2="0" y2="36" stroke="#c9b98a"/><circle r="6" fill="#2f4270"/><rect x="-58" y="42" width="116" height="68" rx="10" fill="#fff" stroke="#2f4270"/><text x="0" y="62" text-anchor="middle" font-weight="600">Export direct</text><text x="0" y="78" text-anchor="middle" font-size="9">vente sans structure</text><text x="0" y="93" text-anchor="middle" font-size="9">locale intermédiaire</text></g>
+            <!-- 3 licence/franchise -->
+            <g transform="translate(410,34)"><line x1="0" y1="0" x2="0" y2="36" stroke="#c9b98a"/><circle r="6" fill="#c9a668"/><rect x="-60" y="42" width="120" height="68" rx="10" fill="#fff" stroke="#c9a668"/><text x="0" y="58" text-anchor="middle" font-weight="600" font-size="10">Licence / Franchise</text><text x="0" y="74" text-anchor="middle" font-size="9">transfert de savoir-faire</text><text x="0" y="89" text-anchor="middle" font-size="9">capital local limité</text></g>
+            <!-- 4 JV -->
+            <g transform="translate(575,34)"><line x1="0" y1="0" x2="0" y2="36" stroke="#c9b98a"/><circle r="6" fill="#9c7a45"/><rect x="-56" y="42" width="112" height="68" rx="10" fill="#fff" stroke="#9c7a45"/><text x="0" y="62" text-anchor="middle" font-weight="600">Joint-venture</text><text x="0" y="78" text-anchor="middle" font-size="9">capital et risque</text><text x="0" y="93" text-anchor="middle" font-size="9">partagés localement</text></g>
+            <!-- 5 filiale -->
+            <g transform="translate(720,34)"><line x1="0" y1="0" x2="0" y2="36" stroke="#c9b98a"/><circle r="6" fill="#1f2d4a"/><rect x="-58" y="42" width="116" height="68" rx="10" fill="#fff" stroke="#1f2d4a"/><text x="0" y="58" text-anchor="middle" font-weight="600" font-size="10">Filiale à 100%</text><text x="0" y="74" text-anchor="middle" font-size="9">contrôle total</text><text x="0" y="89" text-anchor="middle" font-size="9">risque maximal</text></g>
+            <text x="400" y="200" text-anchor="middle" font-size="9.5" fill="#5d6a86">Root, 1987/1994 — l'axe est un arbitrage, pas un classement de qualité : le mode « le moins engagé » est parfois le bon choix.</text>
+          </g>
+        </svg>
+      </div>
+
+      <table class="cmp">
+        <caption>Comparaison des cinq modes — ce qui s'échange contre quoi</caption>
+        <thead><tr><th>Mode</th><th>Contrôle</th><th>Investissement</th><th>Risque porté</th><th>Vitesse de mise en place</th></tr></thead>
+        <tbody>
+          <tr><td>Export indirect</td><td>Très faible</td><td>Quasi nul</td><td>Faible (reporté sur l'intermédiaire)</td><td>Rapide</td></tr>
+          <tr><td>Export direct</td><td>Modéré</td><td>Faible à modéré</td><td>Modéré (crédit client, change)</td><td>Rapide à moyenne</td></tr>
+          <tr><td>Licence / Franchise</td><td>Faible sur l'exécution locale</td><td>Faible en capital, fort en formation</td><td>Risque de dilution du savoir-faire</td><td>Moyenne</td></tr>
+          <tr><td>Joint-venture</td><td>Partagé, négocié</td><td>Significatif, partagé</td><td>Partagé, mais dépendant du partenaire</td><td>Lente (négociation, droit local)</td></tr>
+          <tr><td>Filiale à 100%</td><td>Total</td><td>Élevé</td><td>Total, y compris risque politique</td><td>Lente</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une PME de cosmétique face à trois marchés, trois modes</h5>
+        <p>Une PME de cosmétique naturelle choisit, sur trois marchés de sa liste courte, trois modes différents et non un seul par habitude. Vers le Maroc, marché proche et déjà expérimenté par la profession, elle passe par un <b>agent commercial local</b> (export direct assisté) : engagement limité, apprentissage rapide. Vers les Émirats arabes unis, où la réglementation impose souvent un partenaire local pour la distribution et où le risque politique est jugé modéré par les agences de notation, elle négocie une <b>joint-venture</b> avec un distributeur régional : elle partage le risque et le capital, mais aussi une part de la marge et du contrôle qualité. Vers un pays jugé à risque politique élevé par plusieurs agences de crédit export, elle renonce pour l'instant à toute présence en capital et se limite à l'<b>export indirect</b> via un trading, refusant d'y immobiliser des ressources qu'elle ne pourrait pas rapatrier facilement en cas de restriction de change.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Droit des affaires internationales <i>— contrat de JV, statut de l'agent commercial, contrat de franchise</i></span>
+        <span class="linkchip">Gestion financière <i>— arbitrage capex (filiale) contre opex (licence) selon la structure de financement</i></span>
+        <span class="linkchip">TCI (discipline 01) <i>— pour les modes export, l'Incoterm et le crédit documentaire prennent le relais opérationnel</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Confondre risque pays (politique, macro) et risque commercial (solvabilité d'un client précis) — deux notions liées mais distinctes</li>
+          <li>Croire que « filiale à 100 % » est toujours le meilleur mode dès que l'entreprise a les moyens financiers de la financer</li>
+          <li>Oublier qu'un mode d'entrée n'est pas toujours réversible au même coût : un agent se remplace, une joint-venture se dénoue difficilement</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Copier le mode d'entrée d'un concurrent sans évaluer sa propre tolérance au risque et sa propre structure financière</li>
+          <li>Sous-capitaliser une joint-venture en supposant, à tort, que le partenaire local absorbera seul les à-coups de trésorerie</li>
+          <li>Ignorer le risque de transfert (restriction de rapatriement des devises) dans le choix du mode, alors qu'il conditionne la capacité à sortir les bénéfices du pays</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Un grand marché, classé à risque politique élevé par les agences que vous consultez, exige légalement un partenaire local majoritaire pour toute activité de distribution. Que décidez-vous ?</p>
+        <p class="dctx">Le marché est stratégiquement important pour votre croissance à cinq ans ; le risque est réel mais pas certain, et la loi locale ne vous laisse pas le choix du mode si vous voulez y vendre en direct.</p>
+        <div class="dopts">
+          <span>A. Accepter la joint-venture imposée malgré le risque, en misant sur l'importance stratégique du marché</span>
+          <span>B. Renoncer entièrement à ce marché et concentrer les ressources ailleurs</span>
+          <span>C. Entrer uniquement par export indirect, sans capital local, pour tester la demande sans s'exposer au risque politique</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Aucune des trois options n'est universellement correcte. Accepter la joint-venture (A) n'a de sens que si le contrat peut intégrer des protections concrètes (clause d'arbitrage international, droit de veto minoritaire, garantie de rapatriement) — sans cela, le partage de contrôle nominal ne réduit pas le risque politique réel. Renoncer (B) est parfois la décision la plus rationnelle, en particulier si ce marché représenterait une concentration excessive du risque total de l'entreprise, indépendamment de son attrait individuel. L'option C respecte la logique de C3→C4 sans forcer un engagement en capital que le risque ne justifie pas encore, mais elle prive l'entreprise du marché de distribution en direct exigé par la loi locale — un compromis, pas une solution complète.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une classification de risque pays est un intrant, pas un verdict — elle doit toujours être croisée avec la tolérance au risque propre de l'entreprise</li>
+            <li>Le choix du mode de présence est une décision de structure de capital déguisée en décision commerciale</li>
+            <li>Le mode « le plus sûr en apparence » (filiale à 100 %) peut être le plus risqué s'il immobilise du capital de façon irréversible sur un marché volatil</li>
+            <li>Renoncer à un marché mal noté est parfois la décision la plus stratégique, pas un aveu d'échec</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA commerciale frappe ici</h5>
+          <ul>
+            <li>Agrégation en temps réel de plusieurs sources de notation de risque pays en un tableau de bord d'exposition unique</li>
+            <li>Recommandeur de mode d'entrée croisant niveau de risque, contrôle recherché et contrainte de capital disponible</li>
+            <li>Alerte de concentration quand l'exposition cumulée de l'entreprise sur des marchés à risque élevé dépasse un seuil de diversification défini</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>La prospection et le marketing mix export</h2>
+      <p class="dsub">Chapitres C5 · C6</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Le diagnostic (篇 I) et le choix de mode de présence (篇 II) restent des exercices de bureau, fondés sur des données macro et des classifications génériques. <b>Comment vérifier, avant d'engager le budget commercial, ce que les chiffres de bureau ne peuvent pas dire</b> — qui sont réellement les distributeurs disponibles, comment les clients locaux comparent réellement les offres, quelles normes concrètes s'appliquent ? C'est le rôle de la prospection de terrain (C5), prérequis explicite : elle vient corriger et compléter, jamais remplacer, le diagnostic externe (C2) et le mode de présence choisi (C4), qui conditionne d'ailleurs les canaux par lesquels on peut prospecter. Une fois la demande réelle comprise sur le terrain, une deuxième question se pose : faut-il vendre partout <b>le même produit, au même prix, par les mêmes canaux, avec le même message</b>, ou adapter chaque élément marché par marché ? C'est l'objet du marketing mix export (C6), dont le prérequis est C2 : on n'adapte ou ne standardise qu'en connaissance du marché déjà sélectionné.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — les outils de prospection</h5>
+          <p>Le <b>Volontariat International en Entreprise</b> (VIE), dispositif qui permet à une entreprise française d'envoyer un jeune de moins de 28 ans représenter ses intérêts commerciaux à l'étranger pendant plusieurs mois, a été créé par la loi française du <span class="yr">14 mai 2000</span>, en remplacement du dispositif antérieur des coopérants du service national en entreprise (CSNE). À cela s'ajoutent des outils plus anciens et moins formalisés dans un texte unique : salons professionnels internationaux et missions commerciales collectives, organisés notamment par les chambres de commerce et les agences nationales de soutien à l'export. Sans ces dispositifs, la prospection resterait réservée aux grandes entreprises capables de financer seules une implantation d'observation sur place.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(47,66,112,.08);border-color:rgba(47,66,112,.35)">
+        <svg viewBox="0 0 40 40" stroke="#2f4270"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — standardisation contre adaptation</h5>
+          <p>Le débat est cristallisé par l'article de <b>Theodore Levitt</b>, « The Globalization of Markets », <i>Harvard Business Review</i>, <span class="yr">1983</span>, qui plaide pour une standardisation globale des produits au nom de l'homogénéisation supposée des goûts et des économies d'échelle. Sans cet article, l'adaptation locale serait probablement restée une habitude non questionnée plutôt qu'un choix explicitement justifié poste par poste. La position de Levitt a depuis été largement nuancée et contestée par la pratique : dans la plupart des secteurs, l'adaptation locale du mix reste dominante — mais l'article continue de structurer le débat en obligeant chaque entreprise à justifier le coût de chaque adaptation plutôt que de l'appliquer par réflexe.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">La prospection de terrain ne se fait pas au hasard : elle est elle-même un arbitrage entre coût, profondeur d'information et rapidité — un salon donne un aperçu large mais superficiel, un VIE donne une présence longue et approfondie mais coûteuse à mettre en place.</p>
+      <div class="tree">
+        <table class="cmp">
+          <caption>Outils de prospection — l'arbitrage coût / profondeur / durée</caption>
+          <thead><tr><th>Outil</th><th>Coût relatif</th><th>Durée d'engagement</th><th>Profondeur d'information</th><th>Contrôle du processus</th></tr></thead>
+          <tbody>
+            <tr><td>Salon professionnel</td><td>Faible</td><td>Quelques jours</td><td>Large mais superficielle</td><td>Faible</td></tr>
+            <tr><td>Mission commerciale collective</td><td>Modéré</td><td>Une à deux semaines</td><td>Moyenne, contacts qualifiés</td><td>Modéré</td></tr>
+            <tr><td>VIE (Volontariat International en Entreprise)</td><td>Élevé</td><td>6 à 24 mois</td><td>Approfondie, continue</td><td>Élevé</td></tr>
+            <tr><td>Agent commercial local</td><td>Modéré (commission)</td><td>Durable si contrat reconduit</td><td>Approfondie sur son portefeuille</td><td>Partagé avec l'agent</td></tr>
+            <tr><td>Bureau de représentation</td><td>Élevé</td><td>Durable</td><td>Très approfondie</td><td>Élevé</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mech">Une fois la demande réelle observée, chacun des quatre éléments du mix doit être positionné entre deux pôles — standardisation totale (thèse de Levitt) et adaptation totale — et cette position n'est pas la même pour les quatre :</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 640 210" width="100%" style="max-width:640px">
+          <g font-family="Josefin Sans" font-size="10" fill="#2b3346">
+            <text x="120" y="18" text-anchor="middle" font-size="9.5" fill="#5d6a86">STANDARDISATION</text>
+            <text x="520" y="18" text-anchor="middle" font-size="9.5" fill="#5d6a86">ADAPTATION</text>
+            <!-- Produit -->
+            <text x="30" y="52" font-weight="600">Produit</text>
+            <line x1="120" y1="48" x2="560" y2="48" stroke="#c9b98a" stroke-width="2"/>
+            <circle cx="410" cy="48" r="7" fill="#2f4270"/>
+            <text x="410" y="66" text-anchor="middle" font-size="9">formulation, normes</text>
+            <!-- Prix -->
+            <text x="30" y="94" font-weight="600">Prix</text>
+            <line x1="120" y1="90" x2="560" y2="90" stroke="#c9b98a" stroke-width="2"/>
+            <circle cx="360" cy="90" r="7" fill="#2f4270"/>
+            <text x="360" y="108" text-anchor="middle" font-size="9">pouvoir d'achat local</text>
+            <!-- Distribution -->
+            <text x="30" y="136" font-weight="600">Distribution</text>
+            <line x1="120" y1="132" x2="560" y2="132" stroke="#c9b98a" stroke-width="2"/>
+            <circle cx="470" cy="132" r="7" fill="#2f4270"/>
+            <text x="470" y="150" text-anchor="middle" font-size="9">contrainte par le mode (C4)</text>
+            <!-- Communication -->
+            <text x="30" y="178" font-weight="600">Communication</text>
+            <line x1="120" y1="174" x2="560" y2="174" stroke="#c9b98a" stroke-width="2"/>
+            <circle cx="300" cy="174" r="7" fill="#2f4270"/>
+            <text x="300" y="192" text-anchor="middle" font-size="9">identité stable, message adapté</text>
+            <circle cx="120" cy="48" r="4" fill="#9c7a45"/>
+            <text x="120" y="200" text-anchor="middle" font-size="8.5" fill="#9c7a45">◄ position défendue par Levitt, 1983</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note"><b>Point de méthode :</b> les positions des marqueurs ci-dessus illustrent une tendance générale enseignée en cours, pas une mesure chiffrée universelle — le bon positionnement dépend du secteur, du produit et du marché précis, et doit être justifié cas par cas plutôt que déduit automatiquement du schéma.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une confiturerie face à un distributeur allemand</h5>
+        <p>Une PME agroalimentaire lorraine envoie une VIE à Düsseldorf pour prospecter le marché allemand des confitures artisanales. Le terrain révèle deux informations que le diagnostic de bureau n'avait pas anticipées : les distributeurs allemands exigent un taux de sucre réduit par rapport à la recette française standard (contrainte réglementaire et culturelle réelle), mais l'identité visuelle de la marque, elle, plaît telle quelle et n'a besoin d'aucune adaptation. L'entreprise adapte donc le <b>produit</b> (recette reformulée, étiquetage bilingue conforme) tout en gardant une <b>communication</b> quasi standardisée (même univers visuel, mêmes codes de marque) — une décision de mix qui n'aurait pas pu être prise sans la prospection de terrain, et qui illustre pourquoi C6 ne peut pas se réduire à un choix binaire uniforme sur les quatre P à la fois.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Droit des affaires internationales <i>— statut de l'agent commercial, réglementation d'étiquetage et de conformité produit</i></span>
+        <span class="linkchip">TCI (discipline 01) <i>— une fois la commande obtenue sur le terrain, bascule vers Incoterms et paiement documentaire</i></span>
+        <span class="linkchip">Modes de présence (C4) <i>— le canal de distribution disponible pour le mix dépend directement du mode choisi</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Confondre le VIE avec un simple stage, en sous-estimant son rôle de prospection commerciale à part entière</li>
+          <li>Croire que l'adaptation systématique est toujours supérieure à la standardisation, en ignorant son coût de complexité</li>
+          <li>Présenter la thèse de Levitt comme validée empiriquement, sans mentionner qu'elle a depuis été largement nuancée</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Participer à un salon sans diagnostic préalable, donc sans savoir précisément quoi y chercher ni quoi y vérifier</li>
+          <li>Engager une adaptation coûteuse du produit sans avoir vérifié sur le terrain que la préférence locale la justifie réellement (sur-adaptation)</li>
+          <li>Fragmenter la communication d'un marché à l'autre au point de perdre la cohérence de marque à l'échelle du groupe</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Le distributeur allemand demande, en plus de la reformulation déjà actée, un packaging entièrement différent du reste de la gamme européenne. Acceptez-vous cette adaptation supplémentaire ?</p>
+        <p class="dctx">Le distributeur affirme que sans ce packaging spécifique, il ne référencera qu'une gamme réduite ; le surcoût de production d'un packaging unique pour un seul marché n'a pas encore été chiffré précisément.</p>
+        <div class="dopts">
+          <span>A. Accepter la demande pour sécuriser le référencement complet</span>
+          <span>B. Refuser et garder un packaging unique pour toute l'Europe, quitte à limiter la gamme référencée</span>
+          <span>C. Chiffrer d'abord le surcoût réel de l'adaptation et le comparer à la marge additionnelle attendue avant de trancher</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de règle universelle opposant standardisation et adaptation — la thèse de Levitt elle-même n'a jamais prétendu que l'adaptation était toujours mauvaise, seulement que son coût devait être justifié. Accepter sans calcul (A) répond à la pression commerciale immédiate mais peut créer un précédent coûteux si d'autres distributeurs demandent, eux aussi, leur propre packaging. Refuser par principe (B) protège la cohérence de marque et les coûts de production mais peut fermer un marché pour une raison qui n'a jamais été chiffrée. L'option C est la seule qui transforme un arbitrage de principe en décision de gestion : elle ne préjuge pas de la réponse, elle exige simplement que l'adaptation soit financièrement justifiée avant d'être acceptée ou refusée.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le budget de prospection doit corriger le diagnostic de bureau, jamais s'y substituer — le terrain n'annule pas C1-C4, il les affine</li>
+            <li>Standardiser est une stratégie de coûts, adapter est une stratégie de revenus — le bon mix est un choix de portefeuille, pas une doctrine à appliquer partout</li>
+            <li>Toute adaptation doit être intégrée au calcul de marge, sinon elle grignote silencieusement la rentabilité</li>
+            <li>En cas de conflit entre les chiffres de bureau et ce que rapporte le terrain, c'est le terrain qui doit l'emporter</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA commerciale frappe ici</h5>
+          <ul>
+            <li>Agrégation automatique des retours de salons, missions et agents en un tableau de bord de prospection croisé avec le diagnostic initial</li>
+            <li>Simulateur de coût d'adaptation estimant l'impact marge de chaque élément du mix modifié avant la décision</li>
+            <li>Recommandeur standardisation/adaptation fondé sur les écarts réglementaires réels du marché plutôt que sur une intuition de marque</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Diagnostic avant décision<i>C1·C2</i></span>
+        <span class="sp">Arbitrage contrôle ↔ risque ↔ investissement<i>C3·C4</i></span>
+        <span class="sp">Le terrain corrige le bureau<i>C2·C5</i></span>
+        <span class="sp">Adaptation ↔ standardisation<i>C6</i></span>
+        <span class="sp">Distance psychique<i>C2·C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="01-techniques-commerce-international.html">← Techniques du Commerce Inter…</a>
@@ -66,5 +717,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
