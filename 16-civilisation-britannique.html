@@ -8,8 +8,221 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#35508c;--dom-lt:#96abd6}</style>
+<style>
+/* Palette — bleu Whitehall / rouge brique / gris pierre de Portland :
+   trois couleurs de l'État britannique au travail. Le bleu profond de
+   l'administration (Whitehall, les costumes du service civil) porte le
+   fil institutionnel — Beveridge, le NHS, les nationalisations, Whitehall
+   qui négocie avec les syndicats. Le rouge brique — celui des logements
+   sociaux (council houses) et des cabines téléphoniques rouges — porte le
+   peuple, la rue, la grève, la vie quotidienne que ces politiques
+   affectent. Le gris de la pierre de Portland — celle des grands
+   bâtiments publics londoniens (Somerset House, la Banque d'Angleterre) —
+   porte la pierre, la durée, l'institution qui reste quand les
+   gouvernements passent. Palette volontairement distincte de la
+   discipline 04 (droit des contrats de Common Law), qui évoque plutôt le
+   prétoire et les boiseries (vert anglais / acajou / laiton) : ici on est
+   dans la rue et dans les ministères, pas dans la salle d'audience. */
+:root{
+  --p1:#1f3a66; --p1-lt:#7f96c2;
+  --p2:#a8402f; --p2-lt:#d99a8c;
+  --p3:#8a8f94; --p3-lt:#c5c9cc;
+  --ink:#2b2f36; --ink-soft:#5c6470;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(31,58,102,.24); --or:#b8863f; --vert:#3f6a4f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -4%, #c7d3ea 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 16%, #e3c6bd 0%, transparent 52%),
+    radial-gradient(1000px 720px at 30% 108%, #cfd6dd 0%, transparent 58%),
+    linear-gradient(158deg,#e6ebf3 0%, #d7d2c9 40%, #cdd6de 72%, #e9dcd6 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p1);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p2);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(31,58,102,.24);
+  border-radius:26px;box-shadow:0 18px 48px rgba(31,42,66,.16);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:210px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p2);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--p1);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p2)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p3)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.cbar .au{background:linear-gradient(90deg,var(--p2-lt),var(--p2))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p1)} .crd b.a{color:var(--p2)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p1)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:42px;height:42px;stroke:var(--p1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p2);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.52rem;fill:var(--ink)}
+.tl-yr{font-family:'Josefin Sans';font-size:.5rem;fill:var(--ink-soft)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(31,58,102,.22);border-radius:24px;box-shadow:0 16px 46px rgba(31,42,66,.14)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.2)}
+.tab.pivot{background:linear-gradient(120deg,var(--p2),var(--or))}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--p1);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p2);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p2) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p2-lt) 0 12.5%, transparent 0 25%, var(--p2-lt) 0 37.5%, transparent 0 50%, var(--p2-lt) 0 62.5%, transparent 0 75%, var(--p2-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p2)}
+.problem b{color:var(--p2);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(31,58,102,.07);
+  border:1px solid rgba(31,58,102,.32);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p1);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p2);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p3);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(168,64,47,.08);border-left:3px solid var(--p2);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:var(--vert);
+  padding:5px 12px;border-radius:14px;background:rgba(63,106,79,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(184,134,63,.1);border:1px solid rgba(184,134,63,.5)}
+.errors .ee{background:rgba(31,58,102,.08);border:1px solid rgba(31,58,102,.32)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--or)} .errors .ee h5{color:var(--p1)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p2)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p3-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:var(--p1)}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(197,201,204,.18)}
+
+details.dilemma{background:rgba(255,255,255,.72);border:1.5px dashed var(--p2);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p2);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--p1);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(138,143,148,.14);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p3)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(197,201,204,.28);border:1px solid var(--p3)}
+.helix{background:rgba(31,58,102,.08);border:1px solid var(--p1-lt)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:var(--ink)} .helix h5{color:var(--p1)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p3);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p1)}
+
+/* diagramme pivot */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:var(--vert);
+  padding:5px 12px;border-radius:14px;background:rgba(63,106,79,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p2);font-style:normal}
+
+.pivot-banner{background:linear-gradient(120deg,rgba(168,64,47,.14),rgba(184,134,63,.14));
+  border:1.5px solid var(--p2);border-radius:18px;padding:16px 20px;margin:18px 0;text-align:center}
+.pivot-banner p{font-family:'Cormorant Garamond';font-size:1.25rem;font-weight:600;color:var(--p2)}
+.pivot-banner span{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p2);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p2);border-color:var(--p2)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,57 +231,597 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d16">
-  <div class="tab">篇 XVI</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 16</p>
-    <h3>Civilisation britannique — The UK since 1945</h3>
-    <p class="dmeta">S5 · CM 12h + TD 12h · Karine Rivière de Franco</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 220" role="img" aria-label="Cinq colonnes portant les noms Want, Disease, Ignorance, Squalor, Idleness, surmontées d'un bâtiment institutionnel en construction représentant le Welfare State">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#c7d3ea"/><stop offset="1" stop-color="#e6ebf3"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="680" height="220" fill="url(#sky)" opacity=".35"/>
+      <line x1="30" y1="188" x2="650" y2="188" stroke="#8a8f94" stroke-width="2"/>
+      <!-- cinq colonnes = five giants -->
+      <g stroke="#a8402f" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="50" y="96" width="34" height="92" rx="3"/>
+        <rect x="146" y="82" width="34" height="106" rx="3"/>
+        <rect x="242" y="90" width="34" height="98" rx="3"/>
+        <rect x="338" y="76" width="34" height="112" rx="3"/>
+        <rect x="434" y="88" width="34" height="100" rx="3"/>
+      </g>
+      <g font-family="Josefin Sans" font-size="8.4" fill="#7a3327" text-anchor="middle" letter-spacing=".5">
+        <text x="67" y="112">WANT</text>
+        <text x="163" y="98">DISEASE</text>
+        <text x="259" y="106">IGNORANCE</text>
+        <text x="355" y="92">SQUALOR</text>
+        <text x="451" y="104">IDLENESS</text>
+      </g>
+      <!-- bâtiment institutionnel au-dessus, en construction -->
+      <g stroke="#1f3a66" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M40 76 L340 20 L640 76" />
+        <line x1="40" y1="76" x2="40" y2="96" stroke-dasharray="4 5"/>
+        <line x1="640" y1="76" x2="640" y2="96" stroke-dasharray="4 5"/>
+        <rect x="150" y="42" width="380" height="34" rx="2" opacity=".8"/>
+        <line x1="200" y1="42" x2="200" y2="76" opacity=".55"/>
+        <line x1="260" y1="42" x2="260" y2="76" opacity=".55"/>
+        <line x1="320" y1="42" x2="320" y2="76" opacity=".55"/>
+        <line x1="380" y1="42" x2="380" y2="76" opacity=".55"/>
+        <line x1="440" y1="42" x2="440" y2="76" opacity=".55"/>
+        <line x1="480" y1="42" x2="480" y2="76" opacity=".55"/>
+      </g>
+      <!-- grue -->
+      <g stroke="#5c6470" stroke-width="1.6" fill="none" stroke-linecap="round">
+        <line x1="580" y1="188" x2="580" y2="30"/>
+        <line x1="580" y1="34" x2="640" y2="34"/>
+        <line x1="620" y1="34" x2="620" y2="60" stroke-dasharray="2 4"/>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Civilisation britannique — The UK since 1945</h1>
+    <p class="gen-open">Comment un pays peut-il <b>protéger tous ses citoyens du berceau à la tombe</b> sans que son économie s'effondre — et que se passe-t-il quand la réponse trouvée en 1945 cesse de fonctionner ? Toute cette discipline répond à une seule question posée en pleine guerre par un économiste, testée pendant trente ans par deux partis qui finissent par converger, mise en échec dans les années 1970, puis renversée par une réponse radicalement différente qui, à son tour, sera corrigée sans être abolie. Comprendre le Royaume-Uni depuis 1945, c'est comprendre cette chaîne de réponses, pas mémoriser sept décennies séparées.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:85%"></span><span class="au" style="width:15%"></span></span>
       <span class="crd">Système <b class="s">85%</b> · Automatisme <b class="a">15%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S5 · CM 12h + TD 12h · Karine Rivière de Franco</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Comment un pays peut-il <b>protéger tous ses citoyens du berceau à la tombe sans que son économie s'effondre</b> — et que se passe-t-il quand la réponse trouvée en 1945 cesse de fonctionner ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Le diagnostic de 1942 : Beveridge et les <em>five giants</em></b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · pose le problème que quarante ans de politique vont tenter de résoudre</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>La construction du Welfare State (1945–51)</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · NHS 1948, nationalisations</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Le consensus d'après-guerre (1951–79)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b> · « Butskellism »</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>La crise du modèle &amp; le Winter of Discontent</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3</b> · <b>Ouvre :</b> C5 — sans la crise, le thatchérisme est incompréhensible</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Le thatchérisme (1979–90)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C4</b> · monétarisme, privatisations, syndicats, Big Bang, poll tax</span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Major puis New Labour (1990–2007)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C5</b> · Third Way, dévolution, Good Friday Agreement</span></div></li>
-<li><span class="cnum">C7</span><div class="cbody"><b>Lectures transversales : économie, société, éducation</b><span class="k sys">SYS</span><span class="dep">Prérequis : tous · relecture des mêmes décennies sous trois angles</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Problème</div><div class="tc"><span class="node f">C1 · Beveridge · 5 fléaux</span></div></div>
-<div class="flow"><span class="fdot"></span>réponse institutionnelle<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Réponse</div><div class="tc"><span class="node f">C2 · Welfare State</span><span class="ar">→</span><span class="node s">C3 · Consensus</span></div></div>
-<div class="flow"><span class="fdot"></span>épuisement de la réponse : inflation, syndicats, déficit<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Rupture</div><div class="tc"><span class="node f">C4 · Crise 1970s</span><span class="ar">→</span><span class="node s">C5 · Thatchérisme</span></div></div>
-<div class="flow"><span class="fdot"></span>synthèse des deux modèles<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Recomposition</div><div class="tc"><span class="node s">C6 · Third Way</span><span class="ar">→</span><span class="node s">C7 · Relectures thématiques</span></div></div>
-</div>
-    <p class="note">C4 est le <b>pivot</b> de toute la discipline : le thatchérisme n'est pas un programme surgi de nulle part, c'est la réponse à l'échec documenté du modèle précédent. Qui saute C4 ne peut que mémoriser C5.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Consensus ↔ rupture<i>C3·C4·C5·C6</i></span><span class="sp">Rôle de l'État<i>tous</i></span><span class="sp">Universalité vs ciblage<i>C2·C5·C6</i></span><span class="sp">Syndicats &amp; rapport de force<i>C3·C4·C5</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="13" r="7"/><path d="M9 34 C9 22 31 22 31 34"/><line x1="14" y1="14" x2="26" y2="14"/><rect x="16" y="6" width="8" height="4"/></svg><b>William Beveridge</b><span>diagnostique, 1942</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M9 34 C9 25 31 25 31 34"/><rect x="12" y="20" width="16" height="4" rx="1"/><line x1="14" y1="6" x2="26" y2="8"/></svg><b>Mineur syndiqué</b><span>NUM, grève 1984-85</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M8 34 C8 23 32 23 32 34"/><path d="M13 15 L27 15" /><path d="M16 4 L24 4 L22 8 L18 8 Z"/></svg><b>Margaret Thatcher</b><span>PM, 1979-1990</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="16" width="28" height="16" rx="2"/><circle cx="20" cy="24" r="4"/><line x1="6" y1="22" x2="34" y2="22"/></svg><b>Salarié BT privatisé</b><span>British Telecom, 1984</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des sept chapitres — 1942 → 2007</p>
+    <svg class="tl-svg" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 110 C 120 55, 220 55, 320 110 S 500 165, 600 110 S 780 55, 880 110" fill="none" stroke="#c5c9cc" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(20,110)"><circle r="17" fill="#8a8f94" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="38" text-anchor="middle">Beveridge</text><text class="tl-yr" x="0" y="49" text-anchor="middle">1942</text></g>
+        <!-- C2 -->
+        <g transform="translate(160,58)"><circle r="17" fill="#1f3a66" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Welfare State</text><text class="tl-yr" x="0" y="-13" text-anchor="middle">1945-51</text></g>
+        <!-- C3 -->
+        <g transform="translate(320,110)"><circle r="16" fill="#1f3a66" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="36" text-anchor="middle">Consensus</text><text class="tl-yr" x="0" y="47" text-anchor="middle">1951-79</text></g>
+        <!-- C4 pivot, plus gros, sur la crête basse -->
+        <g transform="translate(460,163)"><circle r="21" fill="#a8402f" stroke="#fff" stroke-width="3"/><text class="tl-num" x="0" y="5" text-anchor="middle" font-size=".72rem">4</text><text class="tl-med" x="0" y="-28" text-anchor="middle" font-weight="600">PIVOT · Crise</text><text class="tl-yr" x="0" y="38" text-anchor="middle">1978-79</text></g>
+        <!-- C5 -->
+        <g transform="translate(600,110)"><circle r="17" fill="#a8402f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="38" text-anchor="middle">Thatchérisme</text><text class="tl-yr" x="0" y="49" text-anchor="middle">1979-90</text></g>
+        <!-- C6 -->
+        <g transform="translate(740,58)"><circle r="16" fill="#b8863f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Major·New Labour</text><text class="tl-yr" x="0" y="-13" text-anchor="middle">1990-2007</text></g>
+        <!-- C7 -->
+        <g transform="translate(880,110)"><circle r="16" fill="#5c6470" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">7</text><text class="tl-med" x="-6" y="38" text-anchor="middle">Lectures</text><text class="tl-yr" x="-6" y="49" text-anchor="middle">transversales</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le diagnostic de guerre et la construction du Welfare State</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">En pleine Seconde Guerre mondiale, le gouvernement britannique commande à un économiste un rapport sur l'assurance sociale — un sujet en apparence technique, presque administratif. Mais la vraie question qui se pose derrière la commande est bien plus large : <b>une nation qui vient de mobiliser tous ses citoyens pour la guerre peut-elle, une fois la paix revenue, les abandonner à la maladie, au chômage et à la misère comme avant-guerre ?</b> Le rapport qui en sort ne va pas se contenter de décrire l'assurance sociale existante — il va la juger insuffisante et fixer un objectif politique pour les décennies suivantes.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — le rapport Beveridge</h5>
+          <p><b>William Beveridge</b>, économiste et haut fonctionnaire, publie en <span class="yr">décembre 1942</span> son rapport <i>Social Insurance and Allied Services</i>. Il y identifie <b>cinq « géants »</b> à abattre pour reconstruire la société britannique d'après-guerre : <b>Want</b> (le besoin matériel), <b>Disease</b> (la maladie), <b>Ignorance</b> (le manque d'instruction), <b>Squalor</b> (l'insalubrité du logement) et <b>Idleness</b> (le chômage). Ce n'est pas un programme de gouvernement — Beveridge n'est ministre de rien — mais un diagnostic si largement diffusé et si bien accueilli par une opinion publique lasse de la pauvreté d'avant-guerre qu'il devient, de fait, le cahier des charges que les gouvernements suivants vont tenter de remplir, chacun à sa manière, pendant les quarante années qui suivent.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Le rapport Beveridge ne dit pas seulement ce qui ne va pas — il propose un principe d'architecture qui va structurer tout ce qui suit : une couverture <b>universelle</b> (tous les citoyens, pas seulement les plus pauvres) financée par des cotisations et l'impôt, plutôt qu'un système d'assistance ciblée réservé aux indigents. C'est ce choix de principe — universalité contre ciblage — qui va, des décennies plus tard, redevenir un point de tension central (voir le tableau comparatif ci-dessous et le 篇 III).</p>
+      <div class="chain">
+        <span class="node">Cinq géants diagnostiqués (1942)</span><span class="arrow">→</span>
+        <span class="node">Élection travailliste de juillet 1945</span><span class="arrow">→</span>
+        <span class="node">Traduction en institutions concrètes (1945-51)</span>
+      </div>
+
+      <div class="callout" style="background:rgba(168,64,47,.08);border-color:rgba(168,64,47,.4)">
+        <svg viewBox="0 0 40 40" stroke="#a8402f"><path d="M10 30 h20 M14 30 v-14 h12 v14 M20 16 v-8 M14 16 l6 -8 l6 8"/></svg>
+        <div>
+          <h5>1945-1951 : le gouvernement Attlee bâtit l'édifice</h5>
+          <p>Le gouvernement travailliste de <b>Clement Attlee</b>, élu en juillet 1945, entreprend de traduire le diagnostic Beveridge en institutions. Le <b>National Health Service (NHS)</b> est lancé le <span class="yr">5 juillet 1948</span> sous l'impulsion du ministre de la Santé <b>Aneurin Bevan</b> : soins médicaux gratuits au point d'usage, financés par l'impôt — une réponse directe au géant <i>Disease</i>. En parallèle, une vague de nationalisations attaque le géant <i>Idleness</i> en plaçant sous contrôle public les secteurs jugés stratégiques pour l'emploi et la reconstruction : la Banque d'Angleterre (1946), le charbon via le <b>National Coal Board</b> (1947), les chemins de fer, l'électricité et le gaz (1947-1949), et une partie de la sidérurgie (1951, nationalisation plus tardive et plus contestée que les précédentes).</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Le charbon, cas d'école de la nationalisation</h5>
+        <p>Avant 1947, l'industrie houillère britannique est fragmentée entre des centaines de compagnies privées, sous-investies, aux conditions de travail dures et aux relations sociales exécrables depuis la grève générale de 1926. Le <b>National Coal Board</b>, créé en 1947, en prend le contrôle : un secteur entier, plus de 700 000 mineurs à l'époque, passe sous une gestion publique unifiée, censée garantir l'investissement, l'emploi et la paix sociale dans un secteur jugé vital pour l'énergie du pays. Ce même secteur, quarante ans plus tard, deviendra le théâtre du plus dur affrontement social du thatchérisme (篇 III) — la boucle causale de cette discipline commence littéralement dans la même mine.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Civilisation américaine (disc. 18) <i>— contraste : les États-Unis n'ont jamais construit d'équivalent universel au NHS</i></span>
+        <span class="linkchip">Management interculturel (disc. 08) <i>— Hofstede : une société qui choisit l'universalisme public est une société qui accepte un haut niveau de redistribution collective</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que Beveridge était ministre ou membre du gouvernement travailliste — il est un haut fonctionnaire, auteur d'un rapport commandé pendant la coalition de guerre</li>
+          <li>Confondre <b>Welfare State</b> (l'ensemble : NHS + sécurité sociale + logement social + éducation + nationalisations) et <b>NHS</b> (une seule de ses institutions, la santé)</li>
+          <li>Dater le NHS de 1945 (année électorale) au lieu de sa mise en œuvre réelle, le 5 juillet 1948</li>
+        </ul></div>
+        <div class="ee"><h5>Côté médias / commentateurs</h5><ul>
+          <li>Présenter le Welfare State comme une invention travailliste ex nihilo, sans mentionner le rapport Beveridge de 1942, rédigé avant même l'élection du Labour</li>
+          <li>Réduire les cinq géants à un slogan sans les nommer précisément, alors que chacun correspond à une politique publique distincte et identifiable</li>
+          <li>Oublier que le consensus qui suit (篇 II) montre que même les conservateurs n'ont pas démantelé cet édifice avant 1979</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Universalité vs ciblage — le choix de principe posé dès 1942</caption>
+        <thead><tr><th>Logique</th><th>Avantages</th><th>Inconvénients</th><th>Période dominante</th></tr></thead>
+        <tbody>
+          <tr><td>Universelle (Beveridge)</td><td>Simplicité administrative, adhésion politique large, pas de stigmate pour le bénéficiaire</td><td>Coût budgétaire élevé y compris pour ceux qui n'en ont pas besoin</td><td>1945 – fin des années 1970</td></tr>
+          <tr><td>Ciblée / sélective</td><td>Dépense publique concentrée sur les besoins réels, coût maîtrisé</td><td>Complexité de contrôle des ressources, stigmate, non-recours des ayants droit</td><td>Réintroduite par étapes depuis le thatchérisme (篇 III), débattue jusqu'à New Labour (篇 IV)</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes conseiller de Clement Attlee en 1946. Le Trésor s'inquiète du coût du futur NHS, financé par l'impôt pour tous, y compris les plus aisés. Recommandez-vous une couverture universelle ou ciblée sur les revenus modestes ?</p>
+        <p class="dctx">Le pays sort ruiné de la guerre, endetté envers les États-Unis ; chaque livre dépensée est comptée deux fois.</p>
+        <div class="dopts">
+          <span>A. Universelle : gratuité pour tous au point d'usage, financée par l'impôt général</span>
+          <span>B. Ciblée : gratuité réservée aux ménages sous un seuil de ressources, les autres cotisent à une assurance</span>
+          <span>C. Mixte : socle universel minimal, options payantes au-delà</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Le gouvernement Attlee choisit A, et ce choix n'est pas seulement budgétaire : un système ciblé impose de vérifier les ressources de chaque foyer (le <i>means test</i>), une procédure honnie par la classe ouvrière britannique depuis les années 1930, où elle servait à refuser l'aide aux chômeurs. L'universalité évite ce stigmate et construit une adhésion politique très large — y compris chez des conservateurs qui n'oseront pas la démanteler ensuite (篇 II). Le revers, documenté par tous les gouvernements suivants, est le coût : un système universel paie aussi pour ceux qui n'en ont pas structurellement besoin, une tension qui ne sera jamais totalement résolue et qui resurgit à chaque crise budgétaire ultérieure.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un secteur nationalisé en 1947 n'est jamais un aléa politique isolé — c'est une décision d'État qui redessine tout un marché, ses prix, sa main-d'œuvre et ses investisseurs pour des décennies</li>
+            <li>La couverture santé universelle allège la masse salariale des employeurs britanniques par rapport à des pays où la santé reste un avantage à négocier salarié par salarié</li>
+            <li>Un pays qui investit dans une adhésion politique large autour d'une institution (le NHS) offre une stabilité réglementaire de long terme — un actif pour qui investit sur plusieurs décennies</li>
+            <li>Le coût fiscal de l'universalisme se répercute in fine sur la fiscalité des entreprises et des hauts revenus — un paramètre à intégrer dans toute implantation</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de risque géopolitique aurait pu éclairer ce tournant</h5>
+          <ul>
+            <li>Modéliser dès 1942 la trajectoire de coût à trente ans d'un système universel comparé à un système ciblé, pour anticiper la tension budgétaire des années 1970</li>
+            <li>Cartographier les secteurs nationalisés en 1946-51 pour signaler, dès l'origine, ceux structurellement les plus exposés à un futur choc de compétitivité (charbon, sidérurgie)</li>
+            <li>Suivre en continu l'écart entre l'adhésion politique déclarée à l'universalisme et sa soutenabilité budgétaire réelle, pour alerter avant la rupture plutôt qu'après</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab tab pivot">篇 II</div>
+    <div class="dhead">
+      <h2>Le consensus d'après-guerre et sa crise — le pivot de la discipline</h2>
+      <p class="dsub">Chapitres C3 · C4 — C4 est le point de bascule de tout le récit</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois le Welfare State bâti (篇 I), une question politique se pose : <b>l'opposition conservatrice, revenue au pouvoir dès 1951, va-t-elle démanteler cet édifice ?</b> La réponse, pendant près de trente ans, est non — et c'est cette non-réponse, ce statu quo entre deux partis censés s'opposer, qui définit toute une époque. Mais un consensus construit sur un compromis économique fragile ne résiste pas indéfiniment à un choc — et c'est précisément ce qui arrive à la fin des années 1970.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine du terme — « Butskellism »</h5>
+          <p>Le magazine <i>The Economist</i> forge en <span class="yr">1954</span> le mot-valise <b>« Butskellism »</b>, contraction des noms du chancelier de l'Échiquier conservateur <b>R. A. Butler</b> et du chef travailliste <b>Hugh Gaitskell</b>, pour désigner la convergence de fait des deux grands partis autour du maintien de l'État-providence, d'une économie mixte (secteurs publics et privés coexistant) et d'une gestion keynésienne de la demande visant le plein emploi. Ce n'est pas un accord signé — c'est un constat journalistique d'une réalité politique : conservateurs et travaillistes gouvernent, entre 1951 et la fin des années 1970, sur des bases économiques étonnamment proches.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — comment le consensus s'effondre</p>
+      <p class="mech">C'est ici que se joue le point le plus important de toute la discipline. Le consensus d'après-guerre repose sur un équilibre implicite entre trois éléments : une économie gérée pour le plein emploi, des syndicats puissants associés aux décisions économiques, et une inflation jugée tolérable en échange de la paix sociale. Dans les années 1970, cet équilibre se rompt maillon par maillon :</p>
+      <div class="chain">
+        <span class="node">Chocs pétroliers &amp; inflation élevée (1970s)</span><span class="arrow">→</span>
+        <span class="node">Gouvernement tente de plafonner les salaires pour freiner l'inflation</span><span class="arrow">→</span>
+        <span class="node">Syndicats, en position de force, refusent le plafonnement</span><span class="arrow">→</span>
+        <span class="node">Vague de grèves : le « Winter of Discontent » (hiver 1978-79)</span>
+      </div>
+      <p class="mech">Le <b>Winter of Discontent</b> voit une vague de grèves — transporteurs routiers, éboueurs, et dans certaines villes des fossoyeurs — sous le gouvernement travailliste de <b>James Callaghan</b>, dans un climat d'inflation élevée et de politique de plafonnement salarial contestée par les syndicats. Des images de déchets non ramassés dans les rues de grandes villes britanniques marquent durablement l'opinion publique. Ce moment précis change le rapport politique à l'État-providence et aux syndicats : ce qui était perçu comme un compromis social protecteur devient, pour une part croissante de l'électorat, le symbole d'un pays ingouvernable. Ce basculement de perception, plus encore que les chiffres économiques eux-mêmes, est ce qui rend le thatchérisme (篇 III) compréhensible comme <b>réponse à une crise vécue</b>, et non comme un programme idéologique surgi de nulle part.</p>
+
+      <div class="pivot-banner">
+        <span>Le point de bascule</span>
+        <p>« Le Winter of Discontent ne clôt pas seulement un hiver — il clôt trente ans de consensus, et ouvre la question à laquelle Thatcher va apporter une réponse. »</p>
+      </div>
+
+      <div class="tree">
+        <svg viewBox="0 0 720 260" width="100%" style="max-width:720px">
+          <g font-family="Josefin Sans" font-size="10" fill="var(--ink)">
+            <text x="360" y="16" text-anchor="middle" font-size="9.5" letter-spacing="1.5" fill="var(--ink-soft)">TRENTE ANS DE CONSENSUS, UNE CASSURE NETTE, UNE AUTRE TRAJECTOIRE</text>
+          </g>
+          <!-- axes -->
+          <line x1="50" y1="220" x2="690" y2="220" stroke="#8a8f94" stroke-width="1.4"/>
+          <!-- montée du consensus 1951->1978 -->
+          <path d="M60 190 C 160 168, 260 150, 360 150" fill="none" stroke="#1f3a66" stroke-width="3" stroke-linecap="round"/>
+          <!-- cassure nette au point pivot -->
+          <path d="M360 150 L 400 214" fill="none" stroke="#a8402f" stroke-width="3.4" stroke-linecap="round"/>
+          <!-- rupture de direction : thatchérisme reprend une autre pente -->
+          <path d="M400 214 C 470 168, 560 92, 660 60" fill="none" stroke="#b8863f" stroke-width="3" stroke-linecap="round"/>
+          <!-- repères -->
+          <g>
+            <circle cx="60" cy="190" r="5" fill="#1f3a66"/><text x="60" y="238" text-anchor="middle" font-family="Josefin Sans" font-size="9" fill="var(--ink-soft)">1951</text>
+            <circle cx="360" cy="150" r="5" fill="#1f3a66"/><text x="360" y="238" text-anchor="middle" font-family="Josefin Sans" font-size="9" fill="var(--ink-soft)">1976-78</text>
+            <!-- point pivot marqué -->
+            <circle cx="400" cy="214" r="9" fill="#a8402f" stroke="#fff" stroke-width="2.4"/>
+            <text x="400" y="253" text-anchor="middle" font-family="Josefin Sans" font-weight="600" font-size="10.5" fill="#a8402f">PIVOT — Winter of Discontent, 1978-79</text>
+            <circle cx="660" cy="60" r="5" fill="#b8863f"/><text x="660" y="238" text-anchor="middle" font-family="Josefin Sans" font-size="9" fill="var(--ink-soft)">1990</text>
+          </g>
+          <g font-family="Josefin Sans" font-size="9.5" fill="var(--ink-soft)">
+            <text x="180" y="130">consensus, plein emploi géré</text>
+            <text x="500" y="100" fill="#b8863f">thatchérisme, autre logique</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note">Ce diagramme est la synthèse de tout le 篇 II : si l'on n'en retient qu'une image, elle doit suffire à reconstruire l'argument — le thatchérisme n'est pas une pente parmi d'autres, c'est une trajectoire qui part d'une cassure documentée, pas d'une préférence idéologique isolée.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une famille londonienne, hiver 1978-79</h5>
+        <p>Dans une famille ouvrière du sud de Londres, le père, chauffeur routier syndiqué, participe aux débrayages qui bloquent les livraisons de carburant et de denrées ; la mère peine à faire ses courses dans des rayons parfois vides. La presse relaie des scènes de déchets non collectés dans certaines villes. Cette famille, historiquement acquise au Labour par tradition syndicale, vit directement la contradiction du moment : le parti censé défendre les travailleurs organise, par son incapacité à négocier un compromis salarial soutenable, un hiver qui les pénalise eux-mêmes en tant que consommateurs et citoyens. C'est ce type d'expérience vécue, multipliée à l'échelle du pays, qui explique en partie le basculement électoral de mai 1979.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Civilisation américaine (disc. 18) <i>— contraste : les États-Unis n'ont jamais connu de consensus syndical-étatique comparable au Butskellism</i></span>
+        <span class="linkchip">Management interculturel (disc. 08) <i>— Hofstede : le rapport de force syndical des années 1970 traduit un collectivisme fort, qui recule ensuite sous le thatchérisme</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Traiter C3 (consensus) et C4 (crise) comme deux chapitres indépendants au lieu d'une seule trajectoire cause-effet</li>
+          <li>Croire que « Butskellism » désigne un accord officiel signé entre les deux partis, alors que c'est un terme journalistique décrivant une convergence de fait</li>
+          <li>Situer le Winter of Discontent en 1979 seul, sans le rattacher à l'hiver 1978-1979 qui commence dès décembre 1978</li>
+        </ul></div>
+        <div class="ee"><h5>Côté médias / commentateurs</h5><ul>
+          <li>Présenter le thatchérisme comme surgi sans cause, comme une simple préférence idéologique de Margaret Thatcher, en ignorant la crise du Winter of Discontent qui le précède et le rend électoralement possible</li>
+          <li>Réduire la crise des années 1970 aux seules grèves, sans mentionner l'inflation élevée et les chocs pétroliers qui la sous-tendent</li>
+          <li>Confondre la crise du modèle économique (C4) et la seule alternance politique de mai 1979, qui n'est qu'une conséquence électorale du phénomène, pas le phénomène lui-même</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Consensus d'après-guerre vs thatchérisme — ce qui bascule</caption>
+        <thead><tr><th>Dimension</th><th>Consensus (1951-1979)</th><th>Thatchérisme (1979-1990)</th></tr></thead>
+        <tbody>
+          <tr><td>Rôle de l'État dans l'économie</td><td>Économie mixte, secteurs stratégiques nationalisés</td><td>Retrait de l'État producteur, vagues de privatisations</td></tr>
+          <tr><td>Rapport aux syndicats</td><td>Association aux décisions économiques, négociation tripartite</td><td>Affrontement frontal, encadrement légal du droit de grève</td></tr>
+          <tr><td>Politique économique</td><td>Keynésianisme, gestion de la demande, plein emploi visé</td><td>Monétarisme, contrôle de la masse monétaire, priorité à l'inflation</td></tr>
+          <tr><td>Résultat documenté</td><td>Stabilité sociale relative jusqu'aux années 1970, inflation croissante en fin de période</td><td>Désinflation, chômage industriel élevé, fractures sociales et régionales durables</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes ministre du Travail dans le gouvernement Callaghan, décembre 1978. L'inflation dépasse largement le seuil jugé soutenable et vous devez proposer un plafond d'augmentation salariale que les syndicats refusent déjà publiquement. Que recommandez-vous ?</p>
+        <p class="dctx">Céder aux syndicats relance l'inflation et affaiblit la crédibilité économique du gouvernement ; tenir le plafond risque de provoquer les grèves que vous redoutez déjà.</p>
+        <div class="dopts">
+          <span>A. Maintenir fermement le plafond, quitte à affronter des grèves prolongées</span>
+          <span>B. Négocier secteur par secteur des dérogations ciblées pour éviter un embrasement général</span>
+          <span>C. Abandonner le plafond, accepter une inflation plus élevée pour préserver la paix sociale immédiate</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de sortie sans coût. Le gouvernement Callaghan choisit, dans les faits, une version proche de l'option A — tenir la ligne — et affronte le Winter of Discontent, qui contribue directement à sa défaite électorale de mai 1979. L'option C aurait pu éviter les grèves immédiates mais aggravé une inflation déjà jugée politiquement et économiquement intenable, sapant la crédibilité du gouvernement d'une autre manière. L'option B, séduisante sur le papier, ouvre la porte à des comparaisons entre secteurs qui alimentent elles-mêmes les revendications suivantes. Le point pédagogique central n'est pas de trouver la bonne réponse — il est de comprendre qu'aucune option de 1978 ne permettait d'éviter la crise de légitimité du modèle économique lui-même, ce qui est précisément ce qui rend le changement de cap de 1979 compréhensible plutôt qu'arbitraire.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un rapport de force syndical très favorable au travail, sans contrepartie de compétitivité, produit à terme une crise de confiance des investisseurs — pas seulement une crise politique</li>
+            <li>L'inflation non maîtrisée des années 1970 a détruit plus de valeur pour les entreprises britanniques que n'importe quelle mesure fiscale isolée</li>
+            <li>Une entreprise qui investit au Royaume-Uni entre 1976 et 1979 doit intégrer un risque de rupture d'approvisionnement lié aux grèves comme un risque opérationnel de premier ordre</li>
+            <li>Le Winter of Discontent marque, pour les investisseurs de l'époque, le moment où le pays devient perçu comme structurellement ingouvernable — un signal plus fort que n'importe quel indicateur macroéconomique isolé</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de risque géopolitique aurait pu éclairer ce tournant</h5>
+          <ul>
+            <li>Détecter, dès 1976-77, la divergence croissante entre l'inflation réelle et le discours officiel de plafonnement salarial, comme signal avancé de crise sociale</li>
+            <li>Modéliser le risque de rupture logistique sectorielle (carburant, déchets, transport) en fonction de la conflictualité syndicale déclarée</li>
+            <li>Distinguer, dans le traitement médiatique de l'hiver 1978-79, le signal économique réel (inflation, coûts) du bruit politique de court terme — un exercice que peu d'observateurs de l'époque ont su faire à chaud</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Le thatchérisme : la réponse radicale à la crise du consensus</h2>
+      <p class="dsub">Chapitre C5</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Après le Winter of Discontent (篇 II), la question posée aux électeurs britanniques de mai 1979 n'est plus « comment gérer le consensus » mais <b>« faut-il changer de modèle » ?</b> Margaret Thatcher, qui dirige le parti conservateur depuis 1975, répond par l'affirmative avec un programme qui rompt délibérément avec le Butskellism : moins d'État producteur, une monnaie stable plutôt qu'un plein emploi géré, et un pouvoir syndical réduit par la loi plutôt que négocié à la table tripartite.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Qui décide, quand</h5>
+          <p><b>Margaret Thatcher</b> est Premier ministre du <span class="yr">4 mai 1979</span> au <span class="yr">28 novembre 1990</span>, à la tête de trois gouvernements conservateurs consécutifs. Sa politique économique repose sur le <b>monétarisme</b> — contrôler l'inflation en maîtrisant la masse monétaire plutôt qu'en pilotant la demande à la keynésienne — une rupture doctrinale directe avec le consensus décrit au 篇 II.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — quatre leviers, une seule logique</p>
+      <p class="mech">Chaque levier thatchérien répond directement à un point de rupture identifié en C4 :</p>
+      <div class="chain">
+        <span class="node">Syndicats jugés trop puissants (Winter of Discontent)</span><span class="arrow">→</span>
+        <span class="node">Confrontation frontale : grève des mineurs 1984-85</span>
+      </div>
+      <div class="chain">
+        <span class="node">État producteur jugé inefficace (charbon, télécoms, gaz publics)</span><span class="arrow">→</span>
+        <span class="node">Vagues de privatisations : British Telecom (1984), British Gas (1986)</span>
+      </div>
+      <div class="chain">
+        <span class="node">Bourse de Londres jugée rigide face à la concurrence internationale</span><span class="arrow">→</span>
+        <span class="node">Dérégulation brutale : le « Big Bang », 27 octobre 1986</span>
+      </div>
+      <p class="mech">Un cinquième levier, plus tardif et plus contesté, illustre les limites de la méthode : la <b>poll tax</b> (Community Charge), un impôt local forfaitaire par tête — chaque adulte paie le même montant quel que soit son revenu ou la valeur de son logement — introduite en Écosse en 1989 puis en Angleterre et au Pays de Galles en 1990. Perçue comme profondément injuste par une large partie de la population, elle déclenche des manifestations massives et devient l'un des facteurs directs de la chute de Thatcher en novembre 1990 — une chute décidée non par le pays mais par son propre parti, inquiet de l'impopularité de la mesure.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>La grève des mineurs, 1984-1985</h5>
+        <p>Face à un plan de fermeture de puits jugés non rentables, le <b>National Union of Mineworkers (NUM)</b>, dirigé par <b>Arthur Scargill</b>, engage une grève nationale qui dure près d'un an sans jamais obtenir de référendum national préalable au sein du syndicat lui-même — une faiblesse procédurale que le gouvernement Thatcher exploite politiquement et juridiquement. Le gouvernement a anticipé le conflit en constituant des stocks de charbon et en renforçant le maintien de l'ordre. La défaite du NUM en mars 1985 marque un basculement du rapport de force syndical britannique qui dure des décennies : le même secteur nationalisé en 1947 pour protéger l'emploi (篇 I) devient, quarante ans plus tard, le symbole de la fin du pouvoir syndical tel que le consensus l'avait organisé.</p>
+      </div>
+
+      <div class="example" style="border-left-color:var(--p1);background:rgba(31,58,102,.07)">
+        <h5>British Telecom, de service public à entreprise cotée</h5>
+        <p>En 1984, British Telecom, jusque-là opérateur téléphonique public, est privatisée par introduction en Bourse — la plus grande privatisation britannique jusqu'alors, largement souscrite par de petits actionnaires individuels nouvellement entrés en Bourse, une stratégie délibérée de Thatcher pour élargir la base sociale de l'actionnariat (le « popular capitalism »). Pour un salarié de l'entreprise, le changement est concret : les objectifs deviennent commerciaux et concurrentiels plutôt qu'administratifs, et l'entreprise doit désormais dégager un profit pour ses actionnaires plutôt que remplir une mission de service universel financée par l'État.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Civilisation américaine (disc. 18) <i>— parallèle : le reaganisme contemporain applique une logique de dérégulation comparable outre-Atlantique</i></span>
+        <span class="linkchip">Management interculturel (disc. 08) <i>— Hofstede : le thatchérisme pousse la société britannique vers un individualisme économique plus marqué</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Dater le Big Bang de 1986 mais sans savoir dire ce qu'il dérégule concrètement (les commissions fixes, la séparation courtiers/teneurs de marché)</li>
+          <li>Confondre monétarisme (contrôle de la masse monétaire) et simple « politique d'austérité budgétaire », qui n'en est qu'une conséquence partielle</li>
+          <li>Croire que toutes les privatisations datent du même moment, alors qu'elles s'étalent sur toute la décennie (BT 1984, British Gas 1986, et d'autres après)</li>
+        </ul></div>
+        <div class="ee"><h5>Côté médias / commentateurs</h5><ul>
+          <li>Présenter la chute de Thatcher en 1990 comme une défaite électorale, alors qu'elle résulte d'une démission provoquée par son propre parti conservateur, avant toute élection générale</li>
+          <li>Réduire le thatchérisme à la seule figure de Margaret Thatcher, en oubliant qu'il s'appuie sur une doctrine économique cohérente (le monétarisme) partagée par une partie de son gouvernement</li>
+          <li>Présenter la grève des mineurs comme une simple crise sociale isolée, sans la relier à la nationalisation de 1947 qu'elle vient historiquement clore</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez une entreprise de fourniture d'équipements pour l'industrie du charbon en 1984. Le gouvernement annonce un vaste programme de fermeture de puits non rentables. Que faites-vous de votre outil industriel ?</p>
+        <p class="dctx">Votre carnet de commandes dépend à 60% du secteur minier national ; la grève qui s'annonce peut durer des mois, mais le gouvernement semble déterminé à ne pas céder.</p>
+        <div class="dopts">
+          <span>A. Attendre la fin du conflit avant toute décision, en réduisant temporairement l'activité</span>
+          <span>B. Diversifier immédiatement vers d'autres secteurs industriels moins dépendants de l'État</span>
+          <span>C. Faire pression collectivement, avec d'autres fournisseurs, pour un compromis politique limitant les fermetures</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Aucune option n'est sans risque. Attendre (A) expose l'entreprise à des mois sans trésorerie si le conflit dure — ce qui fut le cas, la grève ayant duré près d'un an. Diversifier (B) est la réponse la plus souvent retenue rétrospectivement comme la plus prudente, mais elle suppose des ressources et un délai que toutes les entreprises n'ont pas. Faire pression collectivement (C) sous-estime la détermination politique du gouvernement Thatcher, qui a précisément construit sa stratégie — stocks de charbon, préparation policière — pour résister à ce type de pression. Le cas illustre un point transversal à toute la discipline : le thatchérisme redistribue le risque économique vers les acteurs privés, y compris ceux qui n'ont pas choisi le conflit.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une privatisation n'est jamais un simple transfert d'actifs — c'est un changement complet de la fonction-objectif de l'entreprise, de mission publique à rentabilité actionnariale</li>
+            <li>Le Big Bang de 1986 transforme durablement Londres en place financière internationale de premier plan — un avantage compétitif que le pays conserve bien après le départ de Thatcher</li>
+            <li>Un affrontement frontal avec un syndicat, même gagné politiquement, laisse des cicatrices régionales durables qui pèsent sur l'implantation industrielle des décennies suivantes</li>
+            <li>La poll tax montre qu'une réforme économiquement cohérente peut être politiquement mortelle si elle heurte le sentiment de justice fiscale d'une majorité de citoyens</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de risque géopolitique aurait pu éclairer ce tournant</h5>
+          <ul>
+            <li>Modéliser en amont la réaction sociale attendue d'un impôt forfaitaire non progressif comme la poll tax, avant son introduction généralisée en 1990</li>
+            <li>Suivre en continu la préparation logistique (stocks, substituts d'approvisionnement) comme indicateur de la détermination réelle d'un gouvernement dans un conflit social annoncé</li>
+            <li>Comparer en temps réel les trajectoires de dérégulation financière (Big Bang britannique, réformes contemporaines ailleurs) pour anticiper les places financières gagnantes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE IV ============ -->
+  <section class="disc" id="p4">
+    <div class="tab">篇 IV</div>
+    <div class="dhead">
+      <h2>Major, New Labour et lectures transversales</h2>
+      <p class="dsub">Chapitres C6 · C7</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Après la chute de Thatcher, une nouvelle question se pose, symétrique à celle de 1979 : <b>faut-il défaire le thatchérisme comme lui-même avait défait le consensus, ou en garder l'ossature tout en corrigeant ses excès ?</b> La réponse britannique, sur près de vingt ans, est un compromis : ni retour pur au consensus d'après-guerre, ni prolongement pur du monétarisme des années 1980 — une troisième voie, revendiquée comme telle.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Qui décide, quand</h5>
+          <p><b>John Major</b> succède à Thatcher comme Premier ministre de 1990 à 1997, gérant l'héritage thatchérien sans le renverser. <b>Tony Blair</b>, Premier ministre de 1997 à 2007, porte le projet <b>New Labour</b> et la doctrine de la <b>Third Way</b> (troisième voie), associée notamment au sociologue <b>Anthony Giddens</b>, qui cherche explicitement à dépasser l'opposition entre marché libre et État-providence plutôt que de trancher entre les deux.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — deux réformes institutionnelles majeures</p>
+      <div class="chain">
+        <span class="node">Référendums de dévolution, 1997</span><span class="arrow">→</span>
+        <span class="node">Parlement écossais &amp; Assemblée galloise créés en 1999</span>
+      </div>
+      <div class="chain">
+        <span class="node">Décennies de conflit nord-irlandais (les Troubles)</span><span class="arrow">→</span>
+        <span class="node">Accord du Vendredi Saint, 10 avril 1998</span>
+      </div>
+      <p class="mech">La <b>dévolution</b> répond à une demande ancienne d'autonomie régionale, restée sans réponse institutionnelle pendant tout le consensus puis le thatchérisme — un accroc au discours thatchérien d'un État central fort, que New Labour choisit de résoudre par décentralisation plutôt que par recentralisation. L'<b>accord du Vendredi Saint (Good Friday Agreement / Belfast Agreement)</b>, signé le 10 avril 1998, met fin au conflit nord-irlandais par un compromis institutionnel complexe entre unionistes (favorables au maintien dans le Royaume-Uni) et nationalistes (favorables à une réunification avec l'Irlande) — une réussite diplomatique majeure du mandat Blair, qui ne clôt pas toutes les tensions mais met fin à la violence organisée de grande échelle.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>La Third Way à l'épreuve d'un cas concret : le salaire minimum national</h5>
+        <p>Le gouvernement Blair introduit un salaire minimum national — une protection sociale que Thatcher avait refusée par principe de dérégulation du marché du travail — tout en maintenant l'essentiel des privatisations et de la dérégulation financière héritées des années 1980. Ce choix illustre concrètement la Third Way : reprendre un instrument de protection sociale typique du Welfare State (篇 I) sans revenir à la nationalisation ou au contrôle syndical fort du consensus d'après-guerre (篇 II) — un compromis assumé plutôt qu'une indécision.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Lecture transversale — trois angles sur les mêmes décennies</p>
+      <p class="mech">Le chapitre C7 ne raconte pas une période nouvelle : il relit les six chapitres précédents sous trois angles simultanés, pour vérifier que l'étudiante peut mobiliser la chronologie de façon transversale et pas seulement linéaire.</p>
+      <div class="chain">
+        <span class="node">Économie : de l'économie mixte au marché dérégulé, puis à un compromis Third Way</span>
+      </div>
+      <div class="chain">
+        <span class="node">Société : du plein emploi géré aux fractures régionales post-industrielles, puis à une société plus individualisée</span>
+      </div>
+      <div class="chain">
+        <span class="node">Éducation : de l'expansion publique d'après-guerre aux réformes de marché scolaire des années 1980-90</span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Civilisation américaine (disc. 18) <i>— la Third Way britannique a un équivalent contemporain dans le « New Democrat » de l'administration Clinton</i></span>
+        <span class="linkchip">Management interculturel (disc. 08) <i>— Hofstede : la dévolution de 1999 traduit une distance au pouvoir qui se réduit, l'autorité centrale acceptant de se partager</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que la Third Way est un simple retour au travaillisme d'avant Thatcher — c'est au contraire une synthèse assumée qui garde l'essentiel du cadre économique thatchérien</li>
+          <li>Confondre le Parlement écossais (créé en 1999) avec une indépendance de l'Écosse, qui n'a jamais été votée dans ce cadre</li>
+          <li>Oublier que John Major, souvent traité comme une simple transition, gouverne sept ans, plus longtemps que ne le suggère son image d'intérimaire</li>
+        </ul></div>
+        <div class="ee"><h5>Côté médias / commentateurs</h5><ul>
+          <li>Présenter l'accord du Vendredi Saint comme la fin définitive de toute tension en Irlande du Nord, en glissant sur la persistance de clivages politiques et identitaires bien après 1998</li>
+          <li>Réduire New Labour au seul Tony Blair, en minimisant le rôle du chancelier Gordon Brown dans la gestion économique de la période</li>
+          <li>Présenter la Third Way comme un simple compromis de communication, alors qu'elle correspond à un corpus théorique explicite, notamment chez Anthony Giddens</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Trois lectures transversales — comment C7 relit C1 à C6</caption>
+        <thead><tr><th>Angle</th><th>1945-1979</th><th>1979-1990</th><th>1990-2007</th></tr></thead>
+        <tbody>
+          <tr><td>Économie</td><td>Économie mixte, plein emploi géré</td><td>Monétarisme, privatisations, dérégulation</td><td>Marché maintenu + filets sociaux ciblés (Third Way)</td></tr>
+          <tr><td>Société</td><td>Cohésion syndicale forte, mobilité sociale ascendante</td><td>Fractures régionales post-industrielles, actionnariat populaire</td><td>Individualisation croissante, dévolution régionale</td></tr>
+          <tr><td>Éducation</td><td>Expansion de l'enseignement public, gratuité universitaire</td><td>Premiers mécanismes de marché scolaire, financement conditionné</td><td>Poursuite de la logique de marché, introduction de frais d'inscription universitaires</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes conseiller de Tony Blair en 1997. Faut-il renationaliser les secteurs privatisés sous Thatcher pour honorer l'histoire du parti travailliste, ou accepter l'économie de marché héritée et concentrer l'action publique ailleurs ?</p>
+        <p class="dctx">Une partie de la base militante attend un retour aux fondamentaux ; l'électorat plus large qui a permis la victoire de 1997 inclut des électeurs venus du centre, séduits précisément par la modération économique du New Labour.</p>
+        <div class="dopts">
+          <span>A. Renationaliser les secteurs les plus emblématiques pour honorer l'héritage travailliste</span>
+          <span>B. Accepter le cadre économique légué par le thatchérisme et concentrer l'action publique sur l'éducation, la santé et la dévolution</span>
+          <span>C. Renationaliser partiellement, secteur par secteur, selon des critères de service public</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Le gouvernement Blair choisit dans les faits l'option B — c'est précisément ce que la Third Way théorise. Renationaliser (A) aurait rassuré l'aile gauche du parti mais risqué de fracturer la coalition électorale élargie de 1997, construite en partie sur la promesse de ne pas revenir sur les gains de compétitivité économique des années 1980. L'option C, plus modérée, reste marginale dans la pratique gouvernementale de la période. Le point pédagogique : la Third Way n'est pas un compromis mou par indécision, c'est un choix stratégique assumé de garder le cadre économique tout en réinvestissant ailleurs — dans l'éducation, la santé et les réformes institutionnelles comme la dévolution et l'accord de 1998.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>La stabilité du cadre économique entre 1990 et 2007 — ni renationalisations massives, ni nouvelle vague de dérégulation radicale — est elle-même un signal de confiance pour l'investissement de long terme</li>
+            <li>La dévolution de 1999 introduit une nouvelle couche de complexité réglementaire régionale à anticiper pour toute implantation au Royaume-Uni</li>
+            <li>L'accord du Vendredi Saint transforme l'Irlande du Nord d'un territoire à risque en une destination d'investissement redevenue envisageable</li>
+            <li>Un salaire minimum national introduit par un gouvernement pourtant favorable au marché montre qu'un cadre social minimal peut coexister durablement avec une économie ouverte</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de risque géopolitique pourrait éclairer aujourd'hui</h5>
+          <ul>
+            <li>Suivre en continu les indicateurs économiques régionaux post-dévolution (Écosse, Pays de Galles) pour anticiper des divergences de politique fiscale ou réglementaire</li>
+            <li>Modéliser l'impact d'un compromis politique de type Third Way sur la confiance des investisseurs de long terme, comparé à des trajectoires plus radicales dans d'autres pays</li>
+            <li>Analyser les signaux faibles de fragilité d'un accord de paix institutionnel comme celui de 1998, pour anticiper les points de tension résiduels plutôt que les découvrir après coup</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Réponse à l'échec du modèle précédent<i>C1·C2·C3·C4·C5·C6</i></span>
+        <span class="sp">Universalité vs ciblage<i>C1·C2·C6·C7</i></span>
+        <span class="sp">Rapport de force syndical<i>C2·C3·C4·C5</i></span>
+        <span class="sp">Rôle de l'État dans l'économie<i>C2·C3·C5·C6</i></span>
+        <span class="sp">Le pivot de 1978-79<i>C4, clé de tout le récit</i></span>
+      </div>
+      <p class="note"><b>Note d'exactitude :</b> les données chiffrées précises (taux de chômage exacts, nombre exact de mineurs en grève, pourcentage exact de participation au référendum de dévolution) ne sont pas certifiées dans cette fiche et doivent être vérifiées auprès d'une source primaire avant citation dans un devoir noté — seules les dates d'événements et de mandats indiquées ci-dessus sont établies avec un haut degré de confiance.</p>
+    </div>
+  </section>
 
   <div class="foot">
-    <a class="navbtn prev" href="15-theme-version-espagnols.html">← Thème & version espagnols</a>
+    <a class="navbtn prev" href="15-theme-version-espagnols.html">← Thème/version espagnols</a>
     <a class="navbtn home" href="index.html">Index des matières</a>
-    <a class="navbtn next" href="17-civilisation-espagnole.html">Civilisation espagnole — de … →</a>
+    <a class="navbtn next" href="17-civilisation-espagnole.html">Civilisation espagnole →</a>
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

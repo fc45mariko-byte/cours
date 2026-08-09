@@ -8,8 +8,233 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#a8455a;--dom-lt:#e29cab}</style>
+<style>
+/* Palette — grenade / safran / olive, avec un motif d'azulejos en clin d'œil
+   décoratif : grenade et safran évoquent les fruits et épices de la péninsule
+   ibérique (couleurs de l'Espagne elle-même) ; l'olive relie les deux rives
+   de l'Atlantique hispanophone — l'arbre méditerranéen introduit en Amérique
+   par la colonisation espagnole, présent aussi bien en Andalousie qu'au
+   Chili ou en Argentine. Le motif d'azulejos (carreaux de faïence géométriques
+   hispaniques) apparaît en bordure de section, jamais comme quatrième
+   variable de couleur — un ornement, pas une donnée. */
+:root{
+  --p1:#a8324a; --p1-lt:#d98a9c;
+  --p2:#d9932e; --p2-lt:#f0c98c;
+  --p3:#6b7a3f; --p3-lt:#a8b579; --p3-dk:#4f5c2a;
+  --ink:#3d2a24; --ink-soft:#8a6a5c;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.87);
+  --line:rgba(168,50,74,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -4%, #f6d8b8 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 18%, #e8b3bf 0%, transparent 52%),
+    radial-gradient(1000px 720px at 30% 108%, #c9d3a4 0%, transparent 56%),
+    linear-gradient(158deg,#f4e3c9 0%, #ecd0cd 42%, #d9c9ad 72%, #eeddc4 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* motif azulejos — bande décorative géométrique répétitive */
+.azulejos{height:14px;background-image:
+  linear-gradient(45deg, var(--p2-lt) 25%, transparent 25%, transparent 75%, var(--p2-lt) 75%),
+  linear-gradient(45deg, var(--p2-lt) 25%, transparent 25%, transparent 75%, var(--p2-lt) 75%),
+  linear-gradient(var(--p1-lt), var(--p1-lt));
+  background-size:14px 14px, 14px 14px, 100% 100%;
+  background-position:0 0, 7px 7px, 0 0;
+  border-radius:8px;opacity:.55;margin:26px 0}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p3-dk);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(168,50,74,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(90,50,50,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:220px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#7a2c3e;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p3-lt),var(--p3))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p3-dk)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(120deg,var(--p1),var(--p2))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* diagramme deux branches */
+.branches{margin:16px 0;overflow-x:auto}
+.branches svg{display:block;margin:0 auto}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(168,50,74,.24);border-radius:24px;box-shadow:0 16px 46px rgba(90,50,50,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#7a2c3e;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(107,122,63,.09);
+  border:1px solid rgba(107,122,63,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+.callout.warm{background:rgba(217,147,46,.1);border-color:rgba(217,147,46,.45)}
+.callout.warm h5{color:#a6691c}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(168,50,74,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+.example .esp{color:var(--p3-dk);font-style:italic}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--p3);color:var(--p3-dk);
+  padding:5px 12px;border-radius:14px;background:rgba(107,122,63,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(217,147,46,.1);border:1px solid rgba(217,147,46,.5)}
+.errors .ee{background:rgba(168,50,74,.09);border:1px solid rgba(168,50,74,.35)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:#a6691c} .errors .ee h5{color:var(--p1)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding:0 0 8px 3px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#5a3a1c}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(240,201,140,.14)}
+
+details.dilemma{background:rgba(255,255,255,.72);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#7a2c3e;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(217,147,46,.12);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p2)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(240,201,140,.24);border:1px solid var(--p2)}
+.helix{background:rgba(107,122,63,.1);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#a6691c} .helix h5{color:var(--p3-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3-dk)}
+
+/* séparation à comprendre / à automatiser */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(107,122,63,.09);border:1px solid rgba(107,122,63,.4)}
+.split .m{background:rgba(168,50,74,.08);border:1px solid rgba(168,50,74,.35)}
+.split h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p3-dk)} .split .m h5{color:var(--p1)}
+.split p, .split ul{font-size:.86rem}
+.split ul{list-style:none}
+.split li{padding:3px 0 3px 14px;position:relative}
+.split li::before{content:"·";position:absolute;left:0;font-weight:700}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--p3);color:var(--p3-dk);
+  padding:5px 12px;border-radius:14px;background:rgba(107,122,63,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,53 +243,524 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d14">
-  <div class="tab">篇 XIV</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 14</p>
-    <h3>Espagnol économique et commercial</h3>
-    <p class="dmeta">S5 + S6 · TD 18h · 2 ECTS · Claire Decobert · Segura, <em>Textos y Métodos activos</em></p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 700 220" role="img" aria-label="Carte stylisée reliant la péninsule ibérique à l'Amérique latine par deux flux de couleurs distincts, l'un grenade pour l'écrit, l'un olive pour la connaissance des marchés">
+      <defs>
+        <linearGradient id="seaEs" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e8b3bf"/><stop offset="1" stop-color="#d98a9c"/>
+        </linearGradient>
+      </defs>
+      <!-- péninsule ibérique, stylisée -->
+      <g transform="translate(90,50)" stroke="#a8324a" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M0 0 L46 -6 L64 18 L52 46 L18 52 L-8 30 Z"/>
+        <circle cx="24" cy="22" r="3" fill="#a8324a" stroke="none"/>
+        <text x="24" y="70" text-anchor="middle" font-family="Josefin Sans" font-size="10" fill="#7a2c3e" stroke="none" letter-spacing="1">ESPAÑA</text>
+      </g>
+      <!-- Amérique latine, stylisée : forme allongée -->
+      <g transform="translate(430,30)" stroke="#4f5c2a" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M40 0 L58 20 L52 60 L60 100 L44 150 L26 158 L18 120 L28 70 L14 30 Z"/>
+        <text x="36" y="182" text-anchor="middle" font-family="Josefin Sans" font-size="10" fill="#4f5c2a" stroke="none" letter-spacing="1">AMÉRICA LATINA</text>
+      </g>
+      <!-- flux "écrire" grenade : ligne pointillée directe Espagne -->
+      <path d="M120 90 C 200 60, 260 60, 320 90" fill="none" stroke="#a8324a" stroke-width="2.4" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <g transform="translate(230,58)" font-family="Josefin Sans" font-size="9" fill="#a8324a" letter-spacing="1"><text text-anchor="middle">ESCRIBIR</text></g>
+      <!-- flux "connaître" olive : deux branches, vers Espagne et vers Amérique -->
+      <path d="M130 110 C 220 150, 330 150, 430 110" fill="none" stroke="#6b7a3f" stroke-width="2.4" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <g transform="translate(280,152)" font-family="Josefin Sans" font-size="9" fill="#4f5c2a" letter-spacing="1"><text text-anchor="middle">CONOCER</text></g>
+      <!-- point de convergence -->
+      <g transform="translate(320,90)"><circle r="7" fill="#d9932e" stroke="#fff" stroke-width="2"/></g>
+      <text x="320" y="112" text-anchor="middle" font-family="Josefin Sans" font-size="8" fill="#a6691c" letter-spacing="1">INFORME (C7)</text>
+      <!-- deux petits documents flottants -->
+      <g transform="translate(200,20)" stroke="#d9932e" stroke-width="1.5" fill="#fff" fill-opacity=".65">
+        <rect x="0" y="0" width="24" height="30" rx="2"/>
+        <line x1="5" y1="8" x2="19" y2="8"/><line x1="5" y1="14" x2="19" y2="14"/><line x1="5" y1="20" x2="14" y2="20"/>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Espagnol économique et commercial</h1>
+    <p class="gen-open">Une seule langue ouvre <b>deux mondes économiques opposés</b> — d'un côté une économie européenne mature, intégrée depuis quatre décennies au marché commun ; de l'autre un continent aux logiques d'intégration contradictoires, tantôt fermées sur elles-mêmes, tantôt tournées vers le grand large. Comment écrire juste — et à qui exactement ? La discipline répond en deux temps presque indépendants : apprendre à <b>écrire</b> la lettre, le devis, la réclamation qui produisent un effet juridique et commercial ; apprendre à <b>connaître</b> le marché auquel on écrit, pour ne pas parler d'argent avec un Mexicain comme on en parlerait avec un Espagnol.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:40%"></span><span class="au" style="width:60%"></span></span>
       <span class="crd">Système <b class="s">40%</b> · Automatisme <b class="a">60%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
     </div>
+    <p class="dmeta">S5 + S6 · TD 18h · 2 ECTS · Claire Decobert · Segura, <em>Textos y Métodos activos</em></p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Une seule langue ouvre <b>deux mondes économiques opposés</b> — une économie européenne mature et un continent aux logiques d'intégration contradictoires. Comment écrire juste, et à qui exactement ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Architecture de la carta comercial</b><span class="k fondation">FONDATION</span><span class="k auto">AUT</span><span class="dep">Prérequis : aucun</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Grammaire de la correspondance</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> · usted, subjonctif imposé, conditionnel de courtoisie</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>La chaîne commerciale espagnole</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1, C2</b> · consulta → presupuesto → pedido → albarán → factura → reclamación</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Lexique de l'entreprise &amp; faux amis</b><span class="k auto">AUT</span><span class="dep">Acquisition continue</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>L'économie espagnole par secteurs</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C4</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Économies latino-américaines &amp; blocs régionaux</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C5</b> · Mercosur ‖ Alliance du Pacifique</span></div></li>
-<li><span class="cnum">C7</span><div class="cbody"><b>Écrits professionnels : CV, informe, resumen</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2, C4</b></span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Écrire</div><div class="tc"><span class="node f">C1 · Forme</span><span class="ar">→</span><span class="node f">C2 · Grammaire</span><span class="ar">→</span><span class="node a">C3 · Les lettres</span><span class="ar">→</span><span class="node a">C7 · Autres écrits</span></div></div>
-<div class="flow"><span class="fdot"></span>branche indépendante : savoir à qui l'on écrit<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Connaître</div><div class="tc"><span class="node a">C4 · Lexique</span><span class="ar">→</span><span class="node s">C5 · Espagne</span><span class="ar">→</span><span class="node s">C6 · Amérique latine</span></div></div>
-</div>
-    <p class="note">Deux branches quasi autonomes : une branche <b>production écrite</b> (automatisme) et une branche <b>connaissance des marchés</b> (système). Elles ne se rejoignent qu'au moment du <em>informe</em>.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Registre imposé par la forme<i>C1·C2</i></span><span class="sp">Cycle de la transaction<i>C3</i></span><span class="sp">Ouvrir ou protéger<i>C6</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="14" width="28" height="20" rx="2"/><path d="M6 14 L20 6 L34 14"/><line x1="20" y1="20" x2="20" y2="34"/></svg><b>Exportateur français</b><span>écrit, propose, réclame</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><path d="M14 20 h12"/></svg><b>Client espagnol</b><span>usted, marché mature UE</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M6 34 C6 22 34 22 34 34"/><path d="M20 18 v10"/></svg><b>Client latino-américain</b><span>marché en bloc régional</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="8" y="10" width="24" height="20" rx="2"/><path d="M8 14 h24"/><circle cx="15" cy="24" r="2"/><circle cx="25" cy="24" r="2"/></svg><b>Intermédiaire commercial</b><span>agente, distribuidor</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des sept chapitres — deux branches, une convergence finale</p>
+    <svg class="tl-svg" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+      <!-- branche écrire (haut) -->
+      <path d="M40 60 C 200 40, 320 40, 460 62 S 700 90, 840 105" fill="none" stroke="#d98a9c" stroke-width="3"/>
+      <!-- branche connaître (bas) -->
+      <path d="M40 160 C 200 175, 320 175, 460 150 S 700 115, 840 105" fill="none" stroke="#a8b579" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(40,60)"><circle r="17" fill="#a8324a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Carta</text></g>
+        <!-- C2 -->
+        <g transform="translate(230,42)"><circle r="17" fill="#a8324a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Grammaire</text></g>
+        <!-- C3 -->
+        <g transform="translate(460,62)"><circle r="17" fill="#a8324a" stroke="#fff" stroke-width="2"/><text class="tl-med" x="0" y="-24" text-anchor="middle">Chaîne</text><text class="tl-num" x="0" y="4" text-anchor="middle">3</text></g>
+        <!-- C4 -->
+        <g transform="translate(40,160)"><circle r="17" fill="#6b7a3f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="34" text-anchor="middle">Lexique</text></g>
+        <!-- C5 -->
+        <g transform="translate(230,178)"><circle r="17" fill="#6b7a3f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">Espagne</text></g>
+        <!-- C6 -->
+        <g transform="translate(460,150)"><circle r="17" fill="#6b7a3f" stroke="#fff" stroke-width="2"/><text class="tl-med" x="0" y="34" text-anchor="middle">Am. latine</text><text class="tl-num" x="0" y="4" text-anchor="middle">6</text></g>
+        <!-- C7 convergence -->
+        <g transform="translate(840,105)"><circle r="19" fill="#d9932e" stroke="#fff" stroke-width="2.5"/><text class="tl-num" x="0" y="4" text-anchor="middle">7</text><text class="tl-med" x="-4" y="34" text-anchor="middle">Informe</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <p class="tl-title" style="margin-top:26px">Les deux branches quasi autonomes, et leur convergence tardive</p>
+  <div class="branches">
+    <svg viewBox="0 0 780 245" width="100%" style="max-width:780px">
+      <g font-family="Josefin Sans" font-size="11" fill="#3d2a24">
+        <text x="390" y="16" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="#8a6a5c">ÉCRIRE ET CONNAÎTRE NE SE CROISENT QU'AU CHAPITRE 7</text>
+
+        <!-- branche écrire -->
+        <text x="90" y="42" font-size="9" fill="#a8324a" letter-spacing="1">ESCRIBIR (automatisme)</text>
+        <line x1="90" y1="70" x2="510" y2="70" stroke="#d98a9c" stroke-width="2.5"/>
+        <g transform="translate(90,70)"><circle r="15" fill="#a8324a"/><text x="0" y="4" text-anchor="middle" fill="#fff" font-weight="600">C1</text><text x="0" y="30" text-anchor="middle">Carta comercial</text></g>
+        <g transform="translate(300,70)"><circle r="15" fill="#a8324a"/><text x="0" y="4" text-anchor="middle" fill="#fff" font-weight="600">C2</text><text x="0" y="30" text-anchor="middle">Grammaire</text></g>
+        <g transform="translate(510,70)"><circle r="15" fill="#a8324a"/><text x="0" y="4" text-anchor="middle" fill="#fff" font-weight="600">C3</text><text x="0" y="30" text-anchor="middle">Chaîne commerciale</text></g>
+
+        <!-- branche connaître -->
+        <text x="90" y="152" font-size="9" fill="#4f5c2a" letter-spacing="1">CONOCER (système)</text>
+        <line x1="90" y1="180" x2="510" y2="180" stroke="#a8b579" stroke-width="2.5"/>
+        <g transform="translate(90,180)"><circle r="15" fill="#6b7a3f"/><text x="0" y="4" text-anchor="middle" fill="#fff" font-weight="600">C4</text><text x="0" y="30" text-anchor="middle">Lexique &amp; faux amis</text></g>
+        <g transform="translate(300,180)"><circle r="15" fill="#6b7a3f"/><text x="0" y="4" text-anchor="middle" fill="#fff" font-weight="600">C5</text><text x="0" y="30" text-anchor="middle">Espagne / secteurs</text></g>
+        <g transform="translate(510,180)"><circle r="15" fill="#6b7a3f"/><text x="0" y="4" text-anchor="middle" fill="#fff" font-weight="600">C6</text><text x="0" y="30" text-anchor="middle">Am. latine / blocs</text></g>
+
+        <!-- convergence -->
+        <path d="M510 70 C 600 70, 645 100, 685 125" fill="none" stroke="#d98a9c" stroke-width="2"/>
+        <path d="M510 180 C 600 180, 645 150, 685 125" fill="none" stroke="#a8b579" stroke-width="2"/>
+        <g transform="translate(685,125)"><circle r="18" fill="#d9932e"/><text x="0" y="4" text-anchor="middle" fill="#fff" font-weight="600" font-size="12">C7</text></g>
+        <text x="685" y="162" text-anchor="middle" font-size="9" fill="#a6691c" letter-spacing="1">EL INFORME</text>
+        <text x="685" y="174" text-anchor="middle" font-size="8" fill="#8a6a5c">(besoin de C2 + C4)</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="azulejos" role="presentation"></div>
+
+  <!-- ============ PARTIE I — ÉCRIRE ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Écrire : forme, grammaire, cycle commercial</h2>
+      <p class="dsub">Chapitres C1 · C2 · C3 — branche « escribir », à dominante automatisme</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une entreprise française veut vendre en Espagne ou en Amérique latine. Le produit est prêt, le prix est calculé — reste à écrire. Et <b>une lettre commerciale mal formée en espagnol ne se contente pas d'être maladroite : elle disqualifie</b>. Un devis (<i>presupuesto</i>) qui tutoie un client professionnel, qui omet la formule de politesse attendue, ou qui emploie l'indicatif là où la langue commerciale espagnole impose le subjonctif de politesse, signale une méconnaissance du code — et le code, en espagnol commercial, est plus contraignant qu'en français : la forme <i>usted</i>, le conditionnel de courtoisie et des tournures figées ne sont pas des options stylistiques, elles sont la condition d'entrée dans l'échange. Le problème n'est donc pas « que dire » mais « comment le dire pour être reçu comme un partenaire sérieux ».</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — honnêteté sur l'absence de date</h5>
+          <p>Contrairement aux Incoterms (1936) ou à l'UCP 600 (2007) en commerce international, l'architecture de la <b>carta comercial</b> espagnole et sa grammaire de politesse n'ont pas d'inventeur ni de date de codification identifiable. Ce sont des <b>conventions épistolaires sédimentées</b>, issues d'un usage commercial et administratif hispanophone qui s'est stabilisé progressivement — exactement comme la correspondance commerciale anglaise étudiée en discipline 11, où le registre formel (« Dear Sir », le conditionnel de politesse anglais) n'a pas non plus de texte fondateur unique. Les manuels contemporains, dont celui de Segura utilisé ici, décrivent un usage déjà stabilisé plutôt qu'ils ne créent une règle nouvelle. Signaler cette absence d'origine datée est plus honnête que d'en inventer une.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">La carta comercial espagnole suit une architecture fixe, et chaque bloc a une fonction précise qu'on ne peut pas déplacer sans casser la lisibilité professionnelle du document :</p>
+      <div class="chain">
+        <span class="node">Membrete + fecha</span><span class="arrow">→</span>
+        <span class="node">Dirección del destinatario</span><span class="arrow">→</span>
+        <span class="node">Saludo (usted)</span><span class="arrow">→</span>
+        <span class="node">Cuerpo (objet, développement)</span><span class="arrow">→</span>
+        <span class="node">Despedida + firma</span>
+      </div>
+      <p class="mech">Sur cette architecture se greffe une <b>grammaire imposée</b> (C2) : la forme de politesse <i>usted</i> (jamais <i>tú</i> en contexte commercial, sauf relation ancienne et explicitement établie), le <b>subjonctif</b> après les tournures d'espoir ou de demande (<i>«esperamos que reciba»</i>, pas <i>«recibirá»</i>), et le <b>conditionnel de courtoisie</b> pour adoucir toute demande directe (<i>«¿Sería posible…?»</i> plutôt que <i>«¿Es posible…?»</i>). Cette grammaire n'est pas décorative : une demande à l'indicatif direct, correcte grammaticalement, se lit en espagnol commercial comme une exigence plutôt qu'une requête — un ton que l'on n'emploie normalement qu'après une relation commerciale déjà établie, ou en position de force.</p>
+
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre — logique</h5>
+          <p>Pourquoi le subjonctif après <i>esperar que</i>, <i>rogar que</i> : ces verbes expriment un souhait, pas un fait constaté — la subordonnée décrit un événement non réalisé au moment de l'énonciation, donc soumis à l'incertitude que marque le subjonctif. Comprendre cette logique évite de mémoriser une liste de verbes sans la retrouver dans une phrase nouvelle.</p>
+        </div>
+        <div class="m">
+          <h5>À automatiser — réflexe</h5>
+          <ul>
+            <li>Toute lettre commence par <i>usted</i>, sans exception commerciale</li>
+            <li>«Esperamos que + subjonctif» comme formule fixe de clôture</li>
+            <li>«Sería tan amable de + infinitif» comme formule de demande</li>
+            <li>Jamais de tutoiement, même si le mail précédent du client tutoie</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret — le cycle de la transaction</p>
+      <p class="mech">Une fois la forme maîtrisée, C3 enseigne le <b>cycle commercial espagnol</b>, une chaîne de six documents dont l'ordre reproduit celui d'une transaction française, mais avec un vocabulaire et des usages propres :</p>
+      <div class="chain">
+        <span class="node">consulta</span><span class="arrow">→</span>
+        <span class="node">presupuesto</span><span class="arrow">→</span>
+        <span class="node">pedido</span><span class="arrow">→</span>
+        <span class="node">albarán</span><span class="arrow">→</span>
+        <span class="node">factura</span><span class="arrow">→</span>
+        <span class="node">reclamación</span>
+      </div>
+
+      <div class="example">
+        <h5>Un presupuesto réel</h5>
+        <p class="esp">«Estimado Sr. Molina: En respuesta a su consulta del 3 de marzo, nos complace adjuntarle el presupuesto solicitado para el suministro de 500 unidades de nuestro producto ref. GX-12. El precio unitario asciende a 14,50 € (IVA no incluido), con un plazo de entrega de tres semanas a partir de la confirmación del pedido. Quedamos a su entera disposición para cualquier aclaración adicional. Atentamente, —»</p>
+        <p style="margin-top:8px">Noter <i>«Estimado»</i> (formule d'ouverture standard, plus neutre que <i>«Querido»</i> réservé au registre personnel), <i>«nos complace»</i> (première personne du pluriel de politesse d'entreprise, jamais «yo»), et <i>«Quedamos a su entera disposición»</i>, formule figée de clôture quasi obligatoire dans un devis espagnol.</p>
+      </div>
+
+      <div class="example">
+        <h5>Une reclamación réelle</h5>
+        <p class="esp">«Estimados señores: Les escribimos para poner en su conocimiento que el pedido n.º 4021, recibido el 14 de octubre, presenta un defecto en 40 de las 200 unidades entregadas. Rogamos nos indiquen a la mayor brevedad posible el procedimiento a seguir para la devolución o sustitución de dichas unidades. Sin otro particular, les saludamos atentamente.»</p>
+        <p style="margin-top:8px">La réclamation espagnole évite le ton accusateur direct : «presenta un defecto» (le défaut est constaté comme un fait, pas imputé nommément) et «rogamos» (subjonctif de politesse) maintiennent la relation commerciale ouverte, contrairement à un ton plus sec qu'une lettre française équivalente pourrait se permettre.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Anglais économique et commercial (discipline 11) <i>— parallèle structurel : « Dear Sir/Madam » et le registre formel jouent le même rôle que « Estimado/a »</i></span>
+        <span class="linkchip">Civilisation espagnole (discipline 17) <i>— le formalisme de la carta comercial reflète une hiérarchie sociale encore marquée dans l'entreprise espagnole</i></span>
+        <span class="linkchip">Civilisation latino-américaine (discipline 19) <i>— les usages de politesse varient d'un pays à l'autre au sein même de l'espace hispanophone</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Employer l'indicatif après «esperar que», calque du français «j'espère qu'il recevra»</li>
+          <li>Tutoyer par réflexe dès qu'un mail espagnol reçu semble familier</li>
+          <li>Oublier la virgule après le saludo («Estimado Sr. Molina,») ou inversement en abuser</li>
+          <li>Confondre «atentamente» (formule neutre) et «cordialmente» (plus chaleureux, à réserver à une relation déjà installée)</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises exportant vers l'Espagne/l'Am. latine</h5><ul>
+          <li>Faire traduire la correspondance automatiquement sans relecture, laissant passer un subjonctif manquant qui déclasse le document</li>
+          <li>Envoyer le même gabarit de lettre en Espagne et au Mexique sans ajuster les usages locaux (le «usted» reste la norme partout, mais le degré de formalisme perçu varie)</li>
+          <li>Sous-estimer le poids de la formule de clôture, jugée accessoire en français, alors qu'elle signale le niveau de relation commerciale en espagnol</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Le cycle commercial espagnol face à son équivalent français</caption>
+        <thead><tr><th>Étape espagnole</th><th>Équivalent français</th><th>Fonction</th></tr></thead>
+        <tbody>
+          <tr><td>consulta</td><td>demande de renseignements</td><td>le client s'informe avant tout engagement</td></tr>
+          <tr><td>presupuesto</td><td>devis</td><td>l'offre de prix, non contractuelle tant qu'elle n'est pas acceptée</td></tr>
+          <tr><td>pedido</td><td>commande</td><td>l'acceptation qui engage juridiquement les deux parties</td></tr>
+          <tr><td>albarán</td><td>bon de livraison</td><td>preuve de remise matérielle de la marchandise</td></tr>
+          <tr><td>factura</td><td>facture</td><td>titre de créance, base de la comptabilité et de la TVA/IVA</td></tr>
+          <tr><td>reclamación</td><td>réclamation</td><td>signalement d'un écart entre commande et livraison</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez une PME agroalimentaire. Un client mexicain, après plusieurs échanges cordiaux, commence à vous tutoyer dans ses mails. Continuez-vous à le vouvoyer ?</p>
+        <p class="dctx">Le ton de vos échanges est devenu amical ; le client semble à l'aise. Mais vous négociez encore les termes d'un contrat de distribution important.</p>
+        <div class="dopts">
+          <span>A. Basculer au tuteo pour ne pas paraître distant</span>
+          <span>B. Rester au usted jusqu'à la signature du contrat, quel que soit le ton du client</span>
+          <span>C. Observer si le tuteo persiste après la signature avant de trancher</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de règle absolue, mais un principe de prudence largement partagé dans la correspondance commerciale hispanophone : le vouvoiement d'affaires (<i>usted</i>) protège la relation professionnelle tant qu'un enjeu contractuel reste ouvert, même si le ton personnel se réchauffe. Basculer trop tôt au tuteo (option A) peut être perçu, une fois la négociation redevenue tendue, comme une familiarité déplacée qui affaiblit la posture de négociation. L'option C est la plus prudente : laisser le client initier durablement le tuteo, et ne le suivre qu'une fois l'accord signé — ce qui n'exclut pas d'y répondre par un ton chaleureux tout en gardant le <i>usted</i> grammatical, une nuance que beaucoup d'étudiantes ne perçoivent pas.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une lettre commerciale mal formée en espagnol coûte plus cher qu'une lettre absente — elle signale une méconnaissance du marché avant même la première négociation</li>
+            <li>Le cycle consulta→factura est un contrat de confiance progressif : sauter une étape (envoyer un pedido sans presupuesto écrit) crée un flou juridique évitable</li>
+            <li>La forme de politesse n'est pas un coût de traduction, c'est un investissement dans la crédibilité commerciale</li>
+            <li>Un gabarit de lettre unique pour toute l'Amérique hispanophone est une économie de traduction qui se paie en malentendus locaux</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de correspondance attaquerait la friction</h5>
+          <ul>
+            <li>Vérification automatique du registre (usted/subjonctif/conditionnel de courtoisie) avant envoi d'une carta comercial</li>
+            <li>Détection d'un tuteo précoce ou d'une formule de clôture inadaptée au niveau de relation commerciale déclaré</li>
+            <li>Génération assistée d'un pedido conforme dès qu'un presupuesto a été accepté, pour fiabiliser le cycle documentaire</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="azulejos" role="presentation"></div>
+
+  <!-- ============ PARTIE II — CONNAÎTRE ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Connaître : lexique, l'Espagne, l'Amérique latine</h2>
+      <p class="dsub">Chapitres C4 · C5 · C6 — branche « conocer », à dominante système</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Savoir écrire une lettre juste (篇 I) ne dit rien du contenu à y mettre. <b>À qui exactement écrit-on ?</b> Un client à Madrid n'appartient pas au même système économique qu'un client à Buenos Aires ou à Bogotá, même s'ils lisent la même langue. L'Espagne est une économie européenne mature, intégrée au marché unique depuis 1986 ; l'Amérique latine est un ensemble de vingt pays scindés en blocs régionaux aux logiques d'intégration parfois opposées. Ignorer cette différence, c'est risquer de proposer à un partenaire argentin une stratégie pensée pour un marché espagnol, ou inversement — d'où la nécessité d'une branche de connaissance entièrement séparée de la branche d'écriture, qui commence par le socle lexical commun aux deux mondes : le vocabulaire de l'entreprise, et ses pièges.</p>
+
+      <div class="callout warm">
+        <svg viewBox="0 0 40 40" stroke="#a6691c"><rect x="6" y="18" width="14" height="10"/><rect x="20" y="14" width="14" height="14"/><rect x="6" y="10" width="14" height="6"/><line x1="20" y1="24" x2="34" y2="24"/></svg>
+        <div>
+          <h5>Le socle : lexique de l'entreprise et faux amis (C4)</h5>
+          <p>Le lexique économique espagnol partage avec le français un fond latin commun qui trompe autant qu'il aide. <i>«Actualmente»</i> ne signifie pas « actuellement » mais « à l'heure actuelle, présentement » (proche en sens, piège moindre) ; en revanche <i>«éxito»</i> signifie « succès », pas « sortie » (faux ami classique avec l'anglais « exit », source de confusion croisée) ; <i>«sensible»</i> signifie « sensible » mais aussi « perceptible, notable » dans un rapport économique, un sens absent du français courant ; <i>«embarazada»</i> — hors du champ économique mais emblématique du phénomène — ne veut jamais dire « embarrassé ». Ce chapitre n'a pas de fin fixée : c'est une <b>acquisition continue</b>, alimentée par la lecture de presse économique (El País Economía, Expansión) tout au long des deux semestres.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine — le tournant de l'économie espagnole (C5)</h5>
+          <p>L'économie espagnole moderne ne se comprend pas sans un jalon antérieur à la démocratie elle-même : le <b>Plan de Estabilización</b> de <span class="yr">1959</span>, adopté sous le régime franquiste par des ministres technocrates proches de l'Opus Dei, marque la bascule d'une économie relativement autarcique vers une économie de marché ouverte, amorçant ce qu'on appelle parfois le <i>«milagro español»</i> (miracle économique espagnol) des années 1960. Ce tournant précède de vingt-sept ans l'événement que les étudiantes citent le plus spontanément : l'adhésion de l'Espagne à la Communauté économique européenne, effective le <span class="yr">1ᵉʳ janvier 1986</span>, en même temps que le Portugal. Sans le socle industriel bâti dans les années 1960-1970, l'ouverture de 1986 n'aurait pas eu la même économie à intégrer.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — l'Espagne par secteurs</p>
+      <p class="mech">L'économie espagnole contemporaine se lit à travers quatre secteurs dont le poids relatif s'est inversé depuis le franquisme : un <b>secteur agricole</b> toujours puissant à l'export (huile d'olive, agrumes, vin), un <b>secteur industriel</b> concentré autour de l'automobile et de l'agroalimentaire, un <b>secteur touristique</b> qui représente une part disproportionnée du PIB par rapport à sa taille en emploi direct, et un <b>secteur financier</b> restructuré après la crise bancaire de 2008-2012. Comprendre cette structure permet de situer immédiatement un client espagnol dans son contexte sectoriel avant même de négocier un prix.</p>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — l'Amérique latine par blocs</p>
+      <p class="mech">Contrairement à l'Espagne, unifiée dans le marché unique européen, l'Amérique latine hispanophone se répartit en blocs régionaux aux philosophies opposées — et choisir un marché d'exportation, c'est d'abord choisir entre deux logiques :</p>
+      <div class="chain">
+        <span class="node">Mercosur — protection du marché interne</span><span class="arrow">≠</span>
+        <span class="node">Alliance du Pacifique — ouverture vers l'Asie-Pacifique</span>
+      </div>
+      <p class="mech">Le <b>Mercosur</b> (Mercado Común del Sur) naît du <b>Traité d'Asunción, signé le 26 mars 1991</b>, entre l'Argentine, le Brésil, le Paraguay et l'Uruguay — un bloc historiquement orienté vers une intégration industrielle interne et un certain protectionnisme tarifaire vis-à-vis de l'extérieur. Le Venezuela y adhère en 2012 puis en est suspendu en 2016-2017 ; la Bolivie signe son protocole d'adhésion en 2015. L'<b>Alianza del Pacífico</b>, fondée par la <b>Déclaration de Lima du 28 avril 2011</b> entre le Chili, la Colombie, le Mexique et le Pérou, poursuit une philosophie inverse : libre-échange assumé et ouverture délibérée vers les marchés d'Asie-Pacifique. Ce contraste — un bloc plus fermé et industrialiste face à un bloc plus ouvert et libre-échangiste — structure directement la décision d'une PME qui choisit où exporter en premier.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une PME face au choix Mercosur / Alliance du Pacifique</h5>
+        <p>Une entreprise française de cosmétiques biologiques veut ouvrir un premier marché latino-américain. Viser le <b>Brésil ou l'Argentine</b> (Mercosur) signifie affronter des droits de douane externes communs relativement élevés et des procédures d'homologation sanitaire locales strictes, mais accéder ensuite, une fois implantée, à un marché intérieur de plus de 260 millions de consommateurs sans nouvelle barrière tarifaire interne au bloc. Viser le <b>Chili ou la Colombie</b> (Alliance du Pacifique) signifie des droits d'entrée plus bas et des procédures généralement plus rapides, mais un marché intérieur par pays plus restreint, et une concurrence internationale plus vive puisque le bloc est justement conçu pour attirer les partenaires étrangers, notamment asiatiques. Il n'y a pas de choix « meilleur » dans l'absolu : le Mercosur récompense l'investissement de long terme dans un marché protégé une fois franchie la barrière d'entrée ; l'Alliance du Pacifique récompense l'agilité et l'exposition internationale rapide.</p>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre — logique</h5>
+          <p>Pourquoi ces deux blocs coexistent sans fusionner : ils répondent à deux traumatismes économiques différents de la fin du XXe siècle en Amérique latine — le Mercosur hérite d'une tradition d'industrialisation par substitution des importations, l'Alliance du Pacifique d'une génération de réformes plus favorables au libre marché. Comprendre cette origine évite de les traiter comme deux simples variantes administratives d'un même projet.</p>
+        </div>
+        <div class="m">
+          <h5>À automatiser — repères</h5>
+          <ul>
+            <li>Mercosur = Argentine, Brésil, Paraguay, Uruguay (1991)</li>
+            <li>Alliance du Pacifique = Chili, Colombie, Mexique, Pérou (2011)</li>
+            <li>Mercosur → protection interne / Alliance → ouverture externe</li>
+            <li>1986 = entrée de l'Espagne dans la CEE ; 1959 = Plan de Estabilización</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Anglais économique et commercial (discipline 11) <i>— parallèle structurel entre les deux langues commerciales de la spécialité</i></span>
+        <span class="linkchip">Civilisation espagnole (discipline 17) <i>— le Plan de Estabilización et 1986 comme jalons partagés avec l'histoire politique</i></span>
+        <span class="linkchip">Civilisation latino-américaine (discipline 19) <i>— Mercosur et Alliance du Pacifique comme cadre géopolitique du continent</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Traiter « Amérique latine » comme un marché unique, comme si le Mercosur et l'Alliance du Pacifique avaient la même logique commerciale</li>
+          <li>Confondre «actualmente» et «actuellement», ou «sensible» et son sens français plus restreint</li>
+          <li>Situer l'ouverture économique espagnole seulement en 1986, en ignorant le socle antérieur du Plan de Estabilización</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises exportant vers l'Espagne/l'Am. latine</h5><ul>
+          <li>Répliquer une stratégie commerciale pensée pour le Mexique (Alliance du Pacifique) au Brésil (Mercosur) sans ajuster à la barrière tarifaire externe</li>
+          <li>Négliger l'homologation sanitaire ou technique locale en misant uniquement sur la proximité linguistique</li>
+          <li>Sous-estimer le poids du secteur touristique dans la lecture du marché espagnol, faussant l'analyse de la demande réelle hors saison</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Mercosur face à l'Alliance du Pacifique — deux logiques d'intégration régionale</caption>
+        <thead><tr><th></th><th>Mercosur</th><th>Alliance du Pacifique</th></tr></thead>
+        <tbody>
+          <tr><td>Création</td><td>Traité d'Asunción, 26 mars 1991</td><td>Déclaration de Lima, 28 avril 2011</td></tr>
+          <tr><td>Membres fondateurs</td><td>Argentine, Brésil, Paraguay, Uruguay</td><td>Chili, Colombie, Mexique, Pérou</td></tr>
+          <tr><td>Philosophie économique</td><td>intégration industrielle interne, tarif extérieur commun relativement protecteur</td><td>libre-échange assumé, ouverture vers l'Asie-Pacifique</td></tr>
+          <tr><td>Cas notable</td><td>Venezuela adhère en 2012, suspendu 2016-2017 ; Bolivie signataire en 2015</td><td>bloc pensé dès l'origine pour attirer des partenaires extérieurs</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez une PME de cosmétiques bio. Vous devez choisir un unique marché latino-américain pour une première implantation : Mercosur ou Alliance du Pacifique ?</p>
+        <p class="dctx">Vous avez un budget limité pour une seule campagne d'homologation et de mise en marché, et deux ans pour prouver la viabilité du projet à vos investisseurs.</p>
+        <div class="dopts">
+          <span>A. Mercosur (ex. Brésil) — marché intérieur vaste une fois la barrière franchie</span>
+          <span>B. Alliance du Pacifique (ex. Colombie) — entrée plus rapide et moins coûteuse</span>
+          <span>C. Reporter le choix, faire d'abord une étude de marché comparative sur les deux</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique — c'est précisément l'objet du chapitre. Avec un budget limité et une fenêtre de deux ans, l'Alliance du Pacifique (option B) réduit le risque d'échec précoce : coûts d'entrée plus bas, procédures généralement plus rapides, ce qui laisse du temps pour ajuster l'offre avant d'épuiser le budget. Le Mercosur (option A) est un pari de plus long terme : la barrière d'entrée est plus coûteuse à franchir, mais le marché intérieur protégé récompense ensuite un acteur déjà implanté — un calcul qui suppose un horizon d'investissement que deux ans ne permettent pas toujours de valider. L'option C n'est pas fausse mais a un coût d'opportunité : le temps d'étude retarde d'autant la fenêtre de deux ans. Une directrice avisée arbitre selon la trésorerie disponible, pas seulement selon la taille théorique du marché visé.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>« Le marché hispanophone » n'existe pas comme entité unique — c'est au moins trois marchés aux logiques distinctes (Espagne, Mercosur, Alliance du Pacifique)</li>
+            <li>Le choix d'un bloc régional en Amérique latine engage un horizon d'investissement différent selon la logique protectionniste ou libre-échangiste du bloc visé</li>
+            <li>La connaissance sectorielle de l'économie espagnole (tourisme, agroalimentaire, automobile) situe un client avant même la première réunion commerciale</li>
+            <li>Le lexique et les faux amis ne sont pas un détail linguistique : une erreur de sens dans un rapport financier peut coûter la crédibilité de l'ensemble du dossier</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA d'analyse de marché attaquerait la friction</h5>
+          <ul>
+            <li>Détection automatique des faux amis dans un document économique traduit avant diffusion à un partenaire hispanophone</li>
+            <li>Comparateur de blocs régionaux (tarifs, homologation, taille de marché) pour arbitrer une première implantation</li>
+            <li>Veille sectorielle continue sur l'économie espagnole pour situer un client dans son contexte réel avant la négociation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="azulejos" role="presentation"></div>
+
+  <!-- ============ PARTIE III — CONVERGENCE ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Où les deux branches se rejoignent : les écrits professionnels</h2>
+      <p class="dsub">Chapitre C7 — la seule étape qui exige à la fois C2 et C4</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Jusqu'ici, les deux branches ont avancé côte à côte sans jamais se croiser : savoir écrire une lettre correcte (C1-C2-C3) n'exigeait pas de connaître la structure de l'économie espagnole ; savoir situer un marché (C4-C5-C6) n'exigeait pas de maîtriser le subjonctif de politesse. Mais un <b>informe</b> — un rapport professionnel destiné à un partenaire ou à une hiérarchie hispanophone — exige les deux à la fois : une forme grammaticalement irréprochable <b>et</b> un contenu économique juste, avec le bon vocabulaire sectoriel et sans faux ami. C'est la seule étape de toute la discipline où les deux compétences deviennent réellement interdépendantes plutôt que simplement cumulées.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Comme pour la carta comercial (C1), l'architecture de l'informe, du CV espagnol (<i>currículum vitae</i>, souvent avec photo et état civil détaillé — un usage qui diffère notablement des standards anglo-saxons) et du <i>resumen</i> (résumé exécutif) ne relève pas d'une codification datée mais d'un usage professionnel et académique hispanophone sédimenté, proche par sa fonction du rapport de synthèse anglo-saxon étudié en discipline 11. Aucune date fondatrice fiable n'existe pour ces formats — les manuels les décrivent, ils ne les créent pas.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — pourquoi la convergence est tardive et pas graduelle</p>
+      <p class="mech">La structure en deux chaînes parallèles n'est pas un simple choix pédagogique : elle reflète une réalité professionnelle. Un commercial peut très bien exceller en rédaction (C1-C2-C3) sans connaissance fine du marché, et inversement un analyste peut maîtriser l'économie latino-américaine (C4-C5-C6) sans jamais rédiger de courrier commercial. Ce n'est que dans une fonction hybride — direction export, poste de représentation, analyse de marché rédigée — que les deux compétences doivent fusionner. L'informe est donc le point de test réel : un rapport dont la grammaire est parfaite mais qui confond Mercosur et Alliance du Pacifique échoue autant qu'un rapport économiquement juste mais truffé de fautes de registre.</p>
+      <div class="chain">
+        <span class="node">Grammaire de correspondance (C2)</span><span class="arrow">+</span>
+        <span class="node">Lexique &amp; connaissance de marché (C4)</span><span class="arrow">=</span>
+        <span class="node">Informe professionnel crédible</span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Extrait d'un resumen de marché</h5>
+        <p class="esp">«El mercado colombiano presenta un notable potencial de crecimiento para nuestros productos, gracias a su pertenencia a la Alianza del Pacífico, que facilita el acceso a mercados asiáticos. Sin embargo, conviene señalar que la implantación en Brasil, miembro del Mercosur, exigiría una inversión inicial más elevada debido a las barreras arancelarias externas del bloque, compensada a medio plazo por el acceso a un mercado interno considerablemente más amplio.»</p>
+        <p style="margin-top:8px">Cet extrait n'est réussi que parce qu'il combine une syntaxe correcte (subordonnées bien construites, «conviene señalar que» comme tournure de nuance professionnelle) et un contenu économique exact (distinction Alliance du Pacifique / Mercosur, notion de barrière tarifaire externe) — la moindre faiblesse sur l'un des deux plans affaiblirait tout le document aux yeux d'un lecteur hispanophone averti.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Anglais économique et commercial (discipline 11) <i>— le rapport de synthèse anglo-saxon comme format parallèle</i></span>
+        <span class="linkchip">Civilisation espagnole (discipline 17) <i>— usages du CV espagnol (photo, état civil) ancrés dans une norme sociale locale</i></span>
+        <span class="linkchip">Civilisation latino-américaine (discipline 19) <i>— nuances de l'informe selon le pays destinataire</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Rédiger un informe grammaticalement soigné mais économiquement approximatif, en confondant les deux blocs régionaux ou leurs philosophies</li>
+          <li>Calquer le format du CV français (sans photo, état civil minimal) pour une candidature en Espagne, où l'usage reste souvent différent</li>
+          <li>Oublier que le resumen doit rester synthétique — la maîtrise de la grammaire pousse parfois à développer là où il faut condenser</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises exportant vers l'Espagne/l'Am. latine</h5><ul>
+          <li>Confier la rédaction d'un informe à un traducteur automatique sans relecture par quelqu'un connaissant à la fois la langue et le dossier économique</li>
+          <li>Envoyer un même CV-type à un poste espagnol et à un poste latino-américain sans ajuster les attentes documentaires locales</li>
+          <li>Présenter un rapport de marché sans distinguer clairement les deux logiques régionales, ce qui affaiblit la crédibilité de la recommandation stratégique</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous devez rédiger, seule, un informe stratégique en espagnol pour la direction : votre grammaire est solide (bonne note en C2) mais votre connaissance du Mercosur reste incertaine (C6 mal assimilé). Que faites-vous avant la deadline ?</p>
+        <p class="dctx">Le rapport doit trancher entre deux marchés d'implantation ; une erreur factuelle sur les blocs régionaux serait plus grave qu'une imperfection de style.</p>
+        <div class="dopts">
+          <span>A. Rédiger seule, en misant sur la qualité de la langue pour compenser</span>
+          <span>B. Vérifier chaque affirmation économique avant rédaction, quitte à réduire le temps consacré au style</span>
+          <span>C. Faire relire le contenu économique par un pair fort en C5-C6 avant de finaliser la forme</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>C'est exactement la situation que le chapitre anticipe : la convergence tardive des deux branches signifie qu'une compétence solide dans l'une ne compense jamais une faiblesse dans l'autre — un informe élégant mais faux économiquement induit la direction en erreur, ce qui est plus grave qu'un informe juste mais maladroit. L'option B est la plus sûre en solo ; l'option C, quand elle est possible, réduit le risque d'erreur factuelle sans sacrifier la forme, en s'appuyant sur la complémentarité même que la discipline a organisée en deux branches séparées. L'option A est la plus risquée : elle suppose, à tort, que la qualité de la langue rachète une erreur de fond — ce n'est jamais le cas dans un rapport destiné à éclairer une décision d'investissement.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un informe n'est utile à la décision que si forme et fond sont fiables à parts égales — l'un ne rachète jamais l'autre</li>
+            <li>Confier la rédaction de rapports export à des profils uniquement linguistiques, sans culture économique du marché visé, est un risque stratégique sous-estimé</li>
+            <li>Le CV espagnol suit des codes locaux (photo, état civil) qu'un recruteur français ignore souvent — un point de friction RH réel dans un groupe transfrontalier</li>
+            <li>La convergence tardive des deux branches, dans le cursus comme en entreprise, signale qu'un poste de représentation hispanophone est plus rare et plus stratégique qu'un simple poste de traduction</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de correspondance/analyse de marché attaquerait la friction</h5>
+          <ul>
+            <li>Double vérification automatisée d'un informe : contrôle grammatical (registre, subjonctif) et contrôle factuel (dates, blocs régionaux, chiffres sectoriels) séparément, pour ne pas laisser l'un masquer l'autre</li>
+            <li>Adaptation automatique du format de CV selon le pays de destination (Espagne, Mexique, Colombie…) à partir d'un contenu unique</li>
+            <li>Suggestion de relecture croisée entre profils « rédaction » et « analyse de marché » avant l'envoi d'un rapport stratégique</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Registre imposé par la forme<i>C1·C2</i></span>
+        <span class="sp">Cycle de la transaction<i>C3</i></span>
+        <span class="sp">Faux amis lexicaux<i>C4·C7</i></span>
+        <span class="sp">Ouvrir ou protéger le marché<i>C6</i></span>
+        <span class="sp">Fond et forme à parts égales<i>C7</i></span>
+      </div>
+      <p class="note">Comme rappelé en tête de fiche : ces deux branches sont <b>quasi autonomes</b> tout au long du cursus — une branche production écrite (automatisme, C1→C2→C3) et une branche connaissance des marchés (système, C4→C5→C6). Elles ne se rejoignent qu'au moment de l'informe (C7), qui a besoin à la fois de la grammaire de C2 et du lexique de C4.</p>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="13-comprehension-expression-anglaises.html">← Compréhension et expression …</a>
     <a class="navbtn home" href="index.html">Index des matières</a>
-    <a class="navbtn next" href="15-theme-version-espagnols.html">Thème & version espagnols →</a>
+    <a class="navbtn next" href="15-theme-version-espagnols.html">Thème &amp; version espagnols →</a>
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
