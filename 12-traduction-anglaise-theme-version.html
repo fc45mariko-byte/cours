@@ -3,13 +3,231 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Traduction anglaise · thème & version — Cours détaillé · Master Plans</title>
-<meta name="description" content="Fiche de cours détaillée — Traduction anglaise · thème & version, discipline 12 de L'Architecture des Disciplines.">
+<title>Traduction anglaise · thème &amp; version — Cours détaillé · Master Plans</title>
+<meta name="description" content="Fiche de cours détaillée — Traduction anglaise, thème et version, discipline 12 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#5a5aa8;--dom-lt:#b0aee0}</style>
+<style>
+/* Palette — prune / vert d'eau / gris lumière : le miroir entre deux langues
+   qui ne se recouvrent jamais tout à fait. Le prune (source, anglais) et le
+   vert d'eau (cible, français — ou l'inverse selon le sens de l'exercice)
+   restent deux teintes distinctes même juxtaposées : elles ne se mélangent
+   jamais, comme aucune traduction ne fait totalement coïncider deux langues.
+   Le gris lumière est l'espace neutre de la reformulation — le lieu où le
+   sens se déplace d'une langue à l'autre sans jamais s'y loger tout à fait. */
+:root{
+  --p1:#6a4a6e; --p1-lt:#ab8aae;   /* prune */
+  --p2:#4f9483; --p2-lt:#9dcabb;   /* vert d'eau */
+  --p3:#8890a0; --p3-lt:#c5cad4;   /* gris lumière */
+  --ink:#3d3542; --ink-soft:#7a7085;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(106,74,110,.26);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -6%, #ddc7de 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 16%, #bfe2d4 0%, transparent 52%),
+    radial-gradient(1000px 720px at 28% 108%, #d6d9e3 0%, transparent 58%),
+    linear-gradient(158deg,#e9dde9 0%, #d8e8e1 42%, #dcdfe7 72%, #e6dbe6 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p2);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(106,74,110,.24);
+  border-radius:26px;box-shadow:0 18px 48px rgba(61,53,66,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:190px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#4d3452;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.cbar .au{background:linear-gradient(90deg,var(--p2-lt),var(--p2))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p1)} .crd b.a{color:var(--p2)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p2)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:640px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(106,74,110,.22);border-radius:24px;box-shadow:0 16px 46px rgba(61,53,66,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#4d3452;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(136,144,160,.10);
+  border:1px solid rgba(136,144,160,.42);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#5c6272;margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(106,74,110,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem;margin:4px 0}
+.example .en{color:#4c5568}
+.example .fr{color:#5c3f60}
+.example .tag{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--p2);margin-right:6px}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--p2);color:#356456;
+  padding:5px 12px;border-radius:14px;background:rgba(79,148,131,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(136,144,160,.10);border:1px solid rgba(136,144,160,.5)}
+.errors .ee{background:rgba(79,148,131,.09);border:1px solid rgba(79,148,131,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:#5c6272} .errors .ee h5{color:#356456}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+/* comprendre / automatiser */
+.split{display:grid;grid-template-columns:1fr 1.35fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split .u,.split .m{border-radius:16px;padding:14px 18px}
+.split .u{background:rgba(106,74,110,.07);border:1px solid rgba(106,74,110,.32)}
+.split .m{background:rgba(79,148,131,.10);border:1px solid rgba(79,148,131,.45)}
+.split h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p1)} .split .m h5{color:#356456}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:4px 0 4px 15px;position:relative}
+.split .u li::before{content:"◆";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+.split .m li::before{content:"↻";position:absolute;left:0;font-size:.66rem;top:4px;color:var(--p2)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#2f4a41}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(157,202,187,.14)}
+table.cmp td.bad{color:#8a5a3a}
+table.cmp td.good{color:#356456}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#4d3452;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(136,144,160,.13);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p3)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#356456;margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(171,138,174,.20);border:1px solid var(--p1-lt)}
+.helix{background:rgba(136,144,160,.14);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#4d3452} .helix h5{color:#4c5568}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p1-lt);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:#4c5568}
+
+/* diagrammes SVG (spectre des procédés, tableau de dépendance) */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--p2);color:#356456;
+  padding:5px 12px;border-radius:14px;background:rgba(79,148,131,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,46 +236,594 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d12">
-  <div class="tab">篇 XII</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 12</p>
-    <h3>Traduction anglaise · thème &amp; version</h3>
-    <p class="dmeta">S5 · TD 24h · 3 ECTS · CT écrit 2h · Alice Michel</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Deux rubans qui se croisent en sens inverse, l'un portant du texte anglais vers le français, l'autre du texte français vers l'anglais, et au point de croisement deux cadres de miroir qui se font face">
+      <defs>
+        <linearGradient id="rvert" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#4f9483"/><stop offset="1" stop-color="#9dcabb"/>
+        </linearGradient>
+        <linearGradient id="rprune" x1="1" y1="0" x2="0" y2="0">
+          <stop offset="0" stop-color="#6a4a6e"/><stop offset="1" stop-color="#ab8aae"/>
+        </linearGradient>
+      </defs>
+      <!-- ruban version : EN -> FR, va de la droite vers la gauche -->
+      <path d="M636 46 C 480 46, 430 132, 300 96 S 120 40, 44 96" fill="none" stroke="url(#rvert)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M44 96 l14 -7 M44 96 l6 15" fill="none" stroke="#4f9483" stroke-width="3" stroke-linecap="round"/>
+      <!-- ruban thème : FR -> EN, va de la gauche vers la droite -->
+      <path d="M44 144 C 200 144, 250 60, 380 100 S 560 150, 636 100" fill="none" stroke="url(#rprune)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M636 100 l-15 -5 M636 100 l-4 -16" fill="none" stroke="#ab8aae" stroke-width="3" stroke-linecap="round"/>
+      <!-- jetons de mots portés par chaque ruban -->
+      <g fill="#fff" stroke="#4f9483" stroke-width="1.4">
+        <circle cx="560" cy="55" r="7"/><circle cx="430" cy="66" r="7"/><circle cx="160" cy="70" r="7"/>
+      </g>
+      <g fill="#fff" stroke="#6a4a6e" stroke-width="1.4">
+        <circle cx="130" cy="138" r="7"/><circle cx="300" cy="86" r="7"/><circle cx="520" cy="132" r="7"/>
+      </g>
+      <!-- deux cadres-miroirs qui se font face au centre -->
+      <g transform="translate(316,96)" stroke="#8890a0" stroke-width="1.6" fill="rgba(255,255,255,.55)">
+        <rect x="-34" y="-30" width="24" height="60" rx="4"/>
+        <rect x="10" y="-30" width="24" height="60" rx="4"/>
+        <path d="M-22 -14 Q -14 0 -22 14" fill="none"/>
+        <path d="M22 -14 Q 14 0 22 14" fill="none"/>
+      </g>
+      <text x="60" y="30" font-family="Josefin Sans" font-size="11" letter-spacing="2" fill="#356456">VERSION</text>
+      <text x="560" y="30" font-family="Josefin Sans" font-size="11" letter-spacing="2" fill="#4d3452" text-anchor="end">THÈME</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Traduction anglaise · thème &amp; version</h1>
+    <p class="gen-open">Deux langues ne découpent pas la réalité de la même façon — l'anglais et le français ne placent ni les mêmes frontières entre les mots, ni le même relief entre nom et verbe, ni la même pudeur dans l'ordre des idées. Traduire n'est donc pas <b>substituer des mots</b> à d'autres mots, mais reconstruire, avec des moyens différents, un même effet sur un lecteur différent. Où s'arrête la fidélité au texte source, où commence la trahison de l'effet réel qu'il devait produire ?</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:25%"></span><span class="au" style="width:75%"></span></span>
       <span class="crd">Système <b class="s">25%</b> · Automatisme <b class="a">75%</b></span>
-      <span class="verd aut">Automatisme</span>
+      <span class="verd">Automatisme</span>
+    </div>
+    <p class="dmeta">S5 · TD 24h · 3 ECTS · Contrôle terminal écrit 2h · Alice Michel</p>
+  </div>
+
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="14" cy="12" r="6"/><path d="M4 34 C4 24 22 24 22 34"/><path d="M24 20 l10 -8 l4 2 l-8 10 z"/><line x1="20" y1="30" x2="34" y2="30"/></svg><b>Auteur source</b><span>écrit pour son lecteur, pas pour le vôtre</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="10" width="12" height="20" rx="2"/><rect x="22" y="10" width="12" height="20" rx="2"/><path d="M18 20 h4"/><path d="M8 34 h8 M24 34 h8"/></svg><b>Traductrice</b><span>reconstruit l'effet, pas les mots</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 12 h13 v20 h-13 z"/><path d="M21 12 h13 v20 h-13 z"/><line x1="9" y1="17" x2="16" y2="17"/><line x1="9" y1="22" x2="16" y2="22"/><line x1="24" y1="17" x2="31" y2="17"/><line x1="24" y1="22" x2="31" y2="22"/></svg><b>Lecteur cible</b><span>ne lira jamais le texte source</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="16" cy="16" r="10"/><line x1="23" y1="23" x2="34" y2="34"/><path d="M12 16 l3 3 l6 -7"/></svg><b>Correcteur / jury</b><span>note l'écart au barème, pas l'intention</span></div>
+  </div>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 112 C 90 60, 130 55, 172 58 S 300 138, 336 140 S 460 58, 496 58 S 620 140, 656 140 S 800 96, 860 92" fill="none" stroke="#c5cad4" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(20,112)"><circle r="18" fill="#6a4a6e" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="6" y="42" text-anchor="middle">7 procédés</text></g>
+        <!-- C2 -->
+        <g transform="translate(172,58)"><circle r="18" fill="#6a4a6e" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-27" text-anchor="middle">Contrastes FR/EN</text></g>
+        <!-- C3 -->
+        <g transform="translate(336,140)"><circle r="15" fill="#4f9483" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="35" text-anchor="middle">Version EN→FR</text></g>
+        <!-- C4 -->
+        <g transform="translate(496,58)"><circle r="15" fill="#4f9483" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Thème FR→EN</text></g>
+        <!-- C5 -->
+        <g transform="translate(656,140)"><circle r="15" fill="#4f9483" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="35" text-anchor="middle">Pièges lexicaux</text></g>
+        <!-- C6 -->
+        <g transform="translate(860,92)"><circle r="18" fill="#8890a0" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="-14" y="-27" text-anchor="middle">Méthode d'épreuve</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="callout" style="margin:18px 0 6px">
+    <svg viewBox="0 0 40 40"><path d="M20 6 a14 14 0 1 1 -9.9 4.1"/><path d="M20 2 l0 8 l6 -3 z" fill="#8890a0" stroke="none"/><path d="M20 14 v7 l5 3"/></svg>
+    <div>
+      <h5>Le verdict qui gouverne toute la fiche</h5>
+      <p>Automatisme, coefficient 3 en contrôle terminal. La théorie (<b>C1</b>, <b>C2</b>) occupe moins de 20 % du temps utile — elle donne le vocabulaire pour nommer un choix, pas la note. C'est le volume de pratique (<b>C3</b> à <b>C6</b>) qui, seul, la construit : cette discipline s'acquiert par répétition, comme on muscle un réflexe, pas comme on retient un cours.</p>
     </div>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Deux langues ne découpent pas la réalité de la même façon. Traduire n'est donc pas <b>substituer des mots</b> mais reconstruire un même effet avec des moyens différents. Où s'arrête la fidélité, où commence la trahison ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Les 7 procédés de Vinay &amp; Darbelnet</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · seule partie théorique — donne le vocabulaire pour nommer ses choix</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Contrastes structurels FR/EN</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> · nominalisation FR vs verbalisation EN</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Version EN → FR</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1, C2</b> · Guardian, Economist, NYT</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Thème FR → EN</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1, C2</b> · Le Monde, Libération, Le Point</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Pièges lexicaux : faux amis &amp; chiffres</b><span class="k auto">AUT</span><span class="dep">Acquisition continue, parallèle à C3 et C4</span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Méthode d'épreuve</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C3, C4</b> · lecture → repérage → jet → relectures séparées</span></div></li></ol>
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le vocabulaire du traducteur : procédés et contrastes</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation, seule partie théorique de la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une étudiante traduit une phrase, hésite entre deux versions, en choisit une — et ne sait pas dire pourquoi. Devant un jury, « ça sonnait mieux comme ça » n'est pas une justification : c'est un aveu d'intuition, pas de méthode. <b>Comment nommer un choix de traduction pour pouvoir le défendre, le comparer à un autre, et le reproduire volontairement plutôt que par chance ?</b> C'est le premier problème que la discipline résout, avant même de traduire quoi que ce soit : se donner un vocabulaire commun pour décrire ce qu'on fait quand on traduit. Le second problème, immédiatement lié, est structurel : le français et l'anglais ne construisent pas la phrase de la même façon — l'un préfère souvent le nom, l'autre le verbe — et tant qu'on n'a pas nommé ce contraste, on continue de le heurter sans le voir.</p>
 
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Théorie</div><div class="tc"><span class="node f">C1 · Procédés</span><span class="ar">→</span><span class="node f">C2 · Contrastes</span></div></div>
-<div class="flow"><span class="fdot"></span>à partir d'ici, seule la répétition produit du progrès<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Pratique</div><div class="tc"><span class="node a">C3 · Version</span><span class="ar">‖</span><span class="node a">C4 · Thème</span><span class="ar">←</span><span class="node a">C5 · Lexique</span></div></div>
-<div class="tier"><div class="tl">Épreuve</div><div class="tc"><span class="node a">C6 · Méthode chronométrée</span></div></div>
-</div>
-    <p class="note">La théorie occupe moins de 20 % du temps utile. <b>Le volume de pratique détermine seul la note</b> — et la matière pèse coefficient 3 en contrôle terminal.</p>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — les 7 procédés</h5>
+          <p>Les linguistes canadiens-français <b>Jean-Paul Vinay</b> et <b>Jean Darbelnet</b> formalisent sept procédés de traduction dans leur ouvrage fondateur <i>Stylistique comparée du français et de l'anglais : méthode de traduction</i>, publié en <span class="yr">1958</span>. Avant cette nomenclature, un traducteur pouvait toujours traduire par intuition — mais ne pouvait ni nommer, ni justifier explicitement son choix face à un correcteur, ni comparer méthodiquement deux traductions concurrentes d'une même phrase. C'est cette nomenclature, toujours enseignée telle quelle près de sept décennies plus tard, qui sert de socle à cette fiche.</p>
+        </div>
+      </div>
 
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Effet équivalent, pas mot équivalent<i>C1·C3·C4</i></span><span class="sp">Contrastes structurels<i>C2</i></span><span class="sp">Gestion du temps d'épreuve<i>C6</i></span></div>
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — un spectre, pas une liste</p>
+      <p class="mech">Les sept procédés ne sont pas sept techniques indépendantes à choisir au hasard : ils forment un <b>spectre continu</b>, du plus proche du texte source au plus libéré de sa lettre. Les trois premiers (traduction dite « directe ») transposent la forme presque telle quelle ; les quatre derniers (traduction dite « oblique ») acceptent de changer la forme pour préserver le sens ou l'effet. Reconnaître où se situe une phrase sur ce spectre, c'est déjà savoir si on a le droit de rester littéral ou si on doit s'en éloigner.</p>
 
-    <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p><div class="split"><div class="u"><h5>À comprendre</h5><ul><li>Quand une traduction littérale devient un contresens</li><li>Pourquoi le titre de presse obéit à des règles propres</li></ul></div><div class="m"><h5>À automatiser</h5><ul><li>Titres : présent simple et ellipse en EN, nominalisation en FR</li><li>Le corpus de faux amis, testé à chaque épreuve</li><li>Conversion des chiffres et de la ponctuation</li><li>15 minutes de relecture systématiquement réservées</li></ul></div></div>
-  </div>
-</section>
+      <div class="tree">
+        <svg viewBox="0 0 760 190" width="100%" style="max-width:760px">
+          <defs>
+            <linearGradient id="spectre" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#6a4a6e"/><stop offset="0.5" stop-color="#8890a0"/><stop offset="1" stop-color="#4f9483"/>
+            </linearGradient>
+          </defs>
+          <g font-family="Josefin Sans" fill="#3d3542">
+            <text x="380" y="16" text-anchor="middle" font-size="10" letter-spacing="1.6" fill="#7a7085">DU PLUS LITTÉRAL (TRADUCTION DIRECTE) AU PLUS LIBRE (TRADUCTION OBLIQUE)</text>
+            <line x1="46" y1="40" x2="714" y2="40" stroke="url(#spectre)" stroke-width="4"/>
+            <!-- 7 nodes -->
+            <g transform="translate(70,40)"><line x1="0" y1="0" x2="0" y2="26" stroke="#6a4a6e"/><circle r="6" fill="#6a4a6e"/>
+              <rect x="-46" y="30" width="92" height="54" rx="10" fill="#fff" stroke="#6a4a6e"/>
+              <text x="0" y="48" text-anchor="middle" font-weight="600" font-size="10">Emprunt</text>
+              <text x="0" y="62" text-anchor="middle" font-size="8">mot repris tel quel</text>
+              <text x="0" y="74" text-anchor="middle" font-size="8" font-style="italic">« un parking »</text></g>
+            <g transform="translate(180,40)"><line x1="0" y1="0" x2="0" y2="26" stroke="#6a4a6e"/><circle r="6" fill="#6a4a6e"/>
+              <rect x="-46" y="30" width="92" height="54" rx="10" fill="#fff" stroke="#6a4a6e"/>
+              <text x="0" y="48" text-anchor="middle" font-weight="600" font-size="10">Calque</text>
+              <text x="0" y="62" text-anchor="middle" font-size="8">morphème à morphème</text>
+              <text x="0" y="74" text-anchor="middle" font-size="8" font-style="italic">gratte-ciel</text></g>
+            <g transform="translate(290,40)"><line x1="0" y1="0" x2="0" y2="26" stroke="#6a4a6e"/><circle r="6" fill="#6a4a6e"/>
+              <rect x="-50" y="30" width="100" height="54" rx="10" fill="#fff" stroke="#6a4a6e"/>
+              <text x="0" y="48" text-anchor="middle" font-weight="600" font-size="10">Trad. littérale</text>
+              <text x="0" y="62" text-anchor="middle" font-size="8">mot à mot correct</text>
+              <text x="0" y="74" text-anchor="middle" font-size="8" font-style="italic">Where are you?</text></g>
+            <g transform="translate(404,40)"><line x1="0" y1="0" x2="0" y2="26" stroke="#8890a0"/><circle r="6" fill="#8890a0"/>
+              <rect x="-50" y="30" width="100" height="54" rx="10" fill="#fff" stroke="#8890a0"/>
+              <text x="0" y="48" text-anchor="middle" font-weight="600" font-size="10">Transposition</text>
+              <text x="0" y="62" text-anchor="middle" font-size="8">change de catégorie</text>
+              <text x="0" y="74" text-anchor="middle" font-size="8" font-style="italic">nom ↔ verbe</text></g>
+            <g transform="translate(516,40)"><line x1="0" y1="0" x2="0" y2="26" stroke="#4f9483"/><circle r="6" fill="#4f9483"/>
+              <rect x="-50" y="30" width="100" height="54" rx="10" fill="#fff" stroke="#4f9483"/>
+              <text x="0" y="48" text-anchor="middle" font-weight="600" font-size="10">Modulation</text>
+              <text x="0" y="62" text-anchor="middle" font-size="8">change de point de vue</text>
+              <text x="0" y="74" text-anchor="middle" font-size="8" font-style="italic">not difficult → facile</text></g>
+            <g transform="translate(628,40)"><line x1="0" y1="0" x2="0" y2="26" stroke="#4f9483"/><circle r="6" fill="#4f9483"/>
+              <rect x="-46" y="30" width="92" height="54" rx="10" fill="#fff" stroke="#4f9483"/>
+              <text x="0" y="48" text-anchor="middle" font-weight="600" font-size="10">Équivalence</text>
+              <text x="0" y="62" text-anchor="middle" font-size="8">même effet, autre image</text>
+              <text x="0" y="74" text-anchor="middle" font-size="8" font-style="italic">idiome pour idiome</text></g>
+            <g transform="translate(714,40)"><line x1="0" y1="0" x2="0" y2="26" stroke="#4f9483"/><circle r="6" fill="#4f9483"/>
+              <rect x="-44" y="30" width="88" height="54" rx="10" fill="#fff" stroke="#4f9483"/>
+              <text x="0" y="48" text-anchor="middle" font-weight="600" font-size="10">Adaptation</text>
+              <text x="0" y="62" text-anchor="middle" font-size="8">référence remplacée</text>
+              <text x="0" y="74" text-anchor="middle" font-size="8" font-style="italic">culture pour culture</text></g>
+          </g>
+        </svg>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Deux procédés à l'œuvre sur de vraies phrases</h5>
+        <p><span class="tag">Modulation</span><span class="en">EN — « It is not difficult to show that… »</span></p>
+        <p class="fr">FR — « Il est facile de montrer que… »</p>
+        <p style="font-size:.86rem;margin-top:6px">On ne traduit pas la négation par une négation : « pas difficile » devient « facile », son contraire affirmé. C'est l'exemple d'école de la modulation — un changement de point de vue qui garde le même sens réel tout en évitant une lourdeur que le français littéral produirait.</p>
+        <p style="margin-top:12px"><span class="tag">Transposition</span><span class="en">EN — « After he left, the office fell silent. »</span></p>
+        <p class="fr">FR — « Après son départ, le bureau retomba dans le silence. »</p>
+        <p style="font-size:.86rem;margin-top:6px">« he left », un verbe conjugué, devient « son départ », un groupe nominal : la catégorie grammaticale change, pas le sens. Cette transposition précise — verbe anglais vers nom français — n'est pas un hasard de style : c'est la manifestation, phrase par phrase, du contraste structurel que C2 généralise.</p>
+      </div>
+
+      <table class="cmp">
+        <caption>Les 7 procédés de Vinay &amp; Darbelnet, une phrase pour chacun</caption>
+        <thead><tr><th>Procédé</th><th>Ce qu'il fait</th><th>Exemple</th></tr></thead>
+        <tbody>
+          <tr><td>1. Emprunt</td><td>garde le mot étranger tel quel</td><td>« parking », « week-end » empruntés tels quels au français</td></tr>
+          <tr><td>2. Calque</td><td>traduit chaque morphème du mot composé</td><td>EN <i>sky-scraper</i> → FR <i>gratte-ciel</i></td></tr>
+          <tr><td>3. Traduction littérale</td><td>mot à mot, grammaticalement correct</td><td>« Where are you? » → « Où êtes-vous ? »</td></tr>
+          <tr><td>4. Transposition</td><td>change la catégorie grammaticale</td><td>« after he left » → « après son départ » (verbe → nom)</td></tr>
+          <tr><td>5. Modulation</td><td>change le point de vue, garde le sens</td><td>« not difficult » → « facile » (négation du contraire)</td></tr>
+          <tr><td>6. Équivalence</td><td>remplace une expression figée par une autre</td><td>« like a bull in a china shop » → « comme un éléphant dans un magasin de porcelaine »</td></tr>
+          <tr><td>7. Adaptation</td><td>remplace une référence culturelle entière</td><td>une allusion sportive opaque pour le lecteur cible, remplacée par un sport qui lui est familier</td></tr>
+        </tbody>
+      </table>
+      <p class="note"><b>Point d'exactitude :</b> l'exemple d'adaptation « cricket → Tour de France », resté célèbre dans les manuels de traductologie pour illustrer ce dernier procédé chez Vinay &amp; Darbelnet, est ici paraphrasé plutôt que cité littéralement — faute de pouvoir vérifier ici le libellé exact de l'édition de 1958.</p>
+
+      <p class="blockt"><span class="bdot"></span>C2 — Contrastes structurels FR/EN</p>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Un constat documenté, pas une règle inventée</h5>
+          <p>Le contraste entre <b>nominalisation du français</b> (préférence pour le groupe nominal : « la mise en œuvre de la réforme ») et <b>verbalisation de l'anglais</b> (préférence pour la construction verbale : « as the reform is implemented ») n'a pas d'inventeur ni de date de dépôt : c'est une observation largement documentée en linguistique contrastive anglais-français depuis le milieu du XX<sup>e</sup> siècle, dont la <i>Stylistique comparée</i> de Vinay &amp; Darbelnet (1958) elle-même est une source majeure. Le lien avec C1 est direct : la transposition verbe → nom (ou nom → verbe) est le procédé qui, phrase après phrase, gère ce contraste structurel.</p>
+        </div>
+      </div>
+
+      <p class="mech">Cette préférence n'est pas absolue — les deux langues savent faire l'inverse — mais elle est <b>statistiquement dominante</b>, et elle inverse le sens de la difficulté selon le sens de l'exercice :</p>
+      <div class="chain">
+        <span class="node">Version EN→FR</span><span class="arrow">→</span>
+        <span class="node">verbe anglais à convertir en nom français</span>
+      </div>
+      <div class="chain">
+        <span class="node">Thème FR→EN</span><span class="arrow">→</span>
+        <span class="node">nom français à convertir en verbe anglais</span>
+      </div>
+
+      <div class="example">
+        <h5>La même bascule, dans les deux sens</h5>
+        <p><span class="tag">Version</span><span class="en">EN — « As the reform is implemented, criticism grows. »</span></p>
+        <p class="fr">FR — « La mise en œuvre de la réforme suscite des critiques croissantes. »</p>
+        <p style="margin-top:12px"><span class="tag">Thème</span><span class="fr">FR — « L'entreprise a annoncé une réduction d'effectifs. »</span></p>
+        <p class="en">EN — « The company announced it was cutting jobs. »</p>
+        <p style="font-size:.86rem;margin-top:6px">Dans le premier cas, la proposition verbale anglaise « as the reform is implemented » se referme en un seul groupe nominal français, « la mise en œuvre de la réforme ». Dans le second, le nom français « une réduction d'effectifs » se déplie en proposition verbale anglaise, « it was cutting jobs ». Traduire mot à mot dans un sens comme dans l'autre produit une phrase grammaticalement correcte mais stylistiquement étrangère à la langue cible — un anglais trop nominal sonne administratif, un français trop verbal sonne haché.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Pourquoi un même procédé (la transposition) explique à la fois C1 et C2</li>
+            <li>Que la nominalisation FR / verbalisation EN est une tendance dominante, pas une règle absolue sans exception</li>
+            <li>Que nommer un procédé n'est pas un exercice scolaire isolé : c'est l'outil qui permet de défendre un choix en version comme en thème</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Repérer un groupe nominal français en <i>-tion</i>, <i>-ment</i>, <i>-age</i> et se demander s'il cache une proposition verbale anglaise plus naturelle</li>
+            <li>Repérer une construction verbale anglaise en <i>-ing</i> ou une subordonnée <i>as/when/while</i> et anticiper sa condensation nominale en français</li>
+            <li>S'entraîner à nommer, pour chaque phrase traduite, le procédé de Vinay &amp; Darbelnet réellement utilisé — à l'oral comme à l'écrit</li>
+            <li>Constituer une liste personnelle de dix phrases-modèles, une par procédé, révisée chaque semaine</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Anglais économique et commercial (disc. 11) <i>— le lexique spécialisé partagé, à ne pas retraduire de zéro à chaque phrase</i></span>
+        <span class="linkchip">Rédaction universitaire (disc. 10) <i>— la méthode de relecture séparée, réutilisée telle quelle en C6</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Traduire littéralement une phrase entière parce qu'elle « marche » au niveau du mot, sans vérifier l'effet global</li>
+          <li>Confondre modulation et adaptation — changer de point de vue n'est pas changer de référence culturelle</li>
+          <li>Garder une construction nominale française lourde en thème, faute d'avoir cherché le verbe anglais qu'elle cache</li>
+        </ul></div>
+        <div class="ee"><h5>Côté traducteurs professionnels</h5><ul>
+          <li>Sur-utiliser la transposition par réflexe stylistique, jusqu'à s'éloigner d'une nuance de sens que le texte source portait précisément</li>
+          <li>Justifier après coup un choix de traduction par le mauvais procédé, faute d'avoir formalisé sa propre pratique</li>
+          <li>Sous-titrage et presse pressés : garder une syntaxe calquée sur l'anglais source, repérable et signalée en relecture</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous traduisez « The government's failure to act quickly cost lives. » Le mot à mot donne un français correct mais lourd : « L'échec du gouvernement à agir rapidement a coûté des vies. » Que faites-vous ?</p>
+        <p class="dctx">Une modulation plus idiomatique existe : « En n'agissant pas assez vite, le gouvernement a coûté des vies » — mais elle déplace légèrement l'accusation, du substantif abstrait « failure » vers une proposition qui implique plus directement le sujet « gouvernement ».</p>
+        <div class="dopts">
+          <span>A. Garder la traduction littérale, fidèle au mot « failure »</span>
+          <span>B. Choisir la modulation, plus naturelle en français</span>
+          <span>C. Chercher une troisième formulation qui garde à la fois le substantif et la fluidité</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. La traduction littérale (A) reste défendable si le texte source est un rapport officiel où « failure » porte un poids juridique précis qu'il ne faut pas atténuer. La modulation (B) sonne plus naturelle mais déplace légèrement l'accent de la faute constatée vers l'action du sujet — un glissement de sens minime, mais réel, qu'un jury attentif peut relever. La troisième voie (C), par exemple « Le gouvernement, faute d'avoir agi assez vite, a coûté des vies », tente de concilier les deux : c'est souvent la meilleure réponse en épreuve, mais elle demande plus de temps de rédaction — un arbitrage à faire consciemment, pas par défaut.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un responsable traduction voit ce chapitre</h5>
+          <ol>
+            <li>Un traducteur qui ne sait pas nommer son procédé ne peut pas être relu efficacement par un tiers — la relecture perd un temps précieux</li>
+            <li>La nominalisation excessive en anglais (calquée sur le français) est le signal numéro un d'une traduction non retravaillée</li>
+            <li>Le vocabulaire des 7 procédés sert aussi en interne, pour arbitrer entre deux traducteurs qui ne sont pas d'accord sur une phrase</li>
+            <li>Former une équipe à ce vocabulaire coûte une demi-journée et évite des mois de corrections répétées sur les mêmes erreurs</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de traduction bute ici</h5>
+          <ul>
+            <li>Une IA de traduction automatique choisit un procédé sans jamais le nommer ni le justifier — elle optimise une probabilité statistique, pas un effet voulu sur un lecteur précis</li>
+            <li>Elle traite mal la modulation et l'adaptation, qui exigent de comprendre l'intention au-delà du texte, pas seulement la forme</li>
+            <li>Elle reproduit souvent la structure syntaxique de la langue source (nominalisation ou verbalisation) au lieu de la convertir — un contresens stylistique invisible pour qui ne connaît pas C2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Version et thème en pratique</h2>
+      <p class="dsub">Chapitres C3 · C4 · C5 — le cœur automatisme de la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois le vocabulaire posé (篇 I), il ne reste plus de théorie à apprendre : il reste un geste à répéter jusqu'à ce qu'il devienne réflexe. La version (anglais → français) et le thème (français → anglais) sont les deux faces d'une même compétence, exercées en <b>sens inverse</b> — mais elles partagent la même boîte à outils, les 7 procédés et les contrastes structurels. À cela s'ajoute un troisième front, permanent et transversal : les pièges lexicaux, faux amis et chiffres, qui piègent aussi bien l'étudiante pressée que le traducteur professionnel sous délai serré. <b>Comment transformer une compétence de reconnaissance (je vois le piège quand on me le montre) en compétence de production automatique (je l'évite sans y penser, sous la pression d'un chronomètre) ?</b></p>
+
+      <div class="callout" style="background:rgba(136,144,160,.10);border-color:rgba(136,144,160,.42)">
+        <svg viewBox="0 0 40 40" stroke="#5c6272"><path d="M20 6 a14 14 0 1 1 -9.9 4.1"/><path d="M20 14 v7 l5 3"/></svg>
+        <div>
+          <h5>Un choix de méthode, pas une invention datée</h5>
+          <p>Contrairement à C1 (Vinay &amp; Darbelnet, 1958), les techniques pratiquées en C3, C4 et C5 n'ont pas d'inventeur ni de date identifiables : le choix d'un corpus de presse généraliste (Guardian, Economist, New York Times en version ; Le Monde, Libération, Le Point en thème) et la constitution progressive d'un corpus de faux amis sont des <b>choix pédagogiques pragmatiques</b> de la méthode d'enseignement de la traduction — reproduits, affinés, mais jamais attribués à un auteur unique. Aucune date précise n'est avancée ici pour ces choix, faute de source vérifiable.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme commun à C3 et C4</p>
+      <div class="chain">
+        <span class="node">Lecture complète du texte</span><span class="arrow">→</span>
+        <span class="node">Repérage des difficultés (procédé, piège lexical, contraste structurel)</span><span class="arrow">→</span>
+        <span class="node">Rédaction phrase par phrase</span><span class="arrow">→</span>
+        <span class="node">Relecture séparée sens / langue</span>
+      </div>
+      <p class="mech">Ce même enchaînement, décrit précisément en C6, s'exerce déjà dès C3 et C4 : ce n'est pas une méthode d'examen ajoutée à la fin, c'est la méthode de travail normale, seulement chronométrée en C6.</p>
+
+      <p class="blockt"><span class="bdot"></span>C3 — Version EN → FR</p>
+      <p class="mech">Le corpus de presse anglophone (Guardian, Economist, New York Times) impose des contraintes de style propres au genre journalistique, distinctes du reste de l'anglais courant — en particulier dans les titres, où l'anglais économise systématiquement les mots que le français doit souvent rétablir.</p>
+      <div class="example">
+        <h5>Un titre de type presse, traité comme un exercice</h5>
+        <p><span class="tag">Titre</span><span class="en">EN — « Minister quits over expenses row » (présent simple, article omis)</span></p>
+        <p class="fr">FR — « Le ministre démissionne à la suite d'un scandale de notes de frais »</p>
+        <p style="font-size:.86rem;margin-top:6px">Le présent simple des titres anglais (« quits ») ne signale pas une action en cours : c'est une convention typographique du genre, indépendante du temps réel de l'événement (souvent déjà passé). Le traduire par un présent français est correct — mais l'article défini omis dans le titre anglais (« Minister », pas « The minister ») doit être rétabli en français, où l'ellipse du titre n'existe pas de la même façon.</p>
+      </div>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Le présent des titres de presse anglais n'indique pas la chronologie réelle des faits</li>
+            <li>Une citation attribuée en fin de phrase anglaise (« ..., the minister said ») change souvent de position en français</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Rétablir systématiquement l'article omis des titres anglais en français</li>
+            <li>Convertir « said » en tête de citation française plutôt qu'en incise finale, quand le style l'exige</li>
+            <li>Reconnaître d'un coup d'œil les formules figées de l'Economist (sous-titres à double lecture, jeux de mots) sans s'y arrêter</li>
+            <li>Basculer un present perfect anglais de bilan (« has fallen by 12% ») vers un passé composé français sans hésitation</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>C4 — Thème FR → EN</p>
+      <p class="mech">Le corpus de presse francophone (Le Monde, Libération, Le Point) impose l'inverse : un style souvent plus nominal et impersonnel que ne le tolère l'anglais journalistique, qui préfère l'agent actif et la construction verbale.</p>
+      <div class="example">
+        <h5>Un paragraphe de presse française, traité comme un exercice</h5>
+        <p><span class="tag">Corps</span><span class="fr">FR — « Force est de constater que la mise en place de la réforme suscite des réserves. »</span></p>
+        <p class="en">EN — « It is hard to deny that implementing the reform has raised concerns. » — ou, plus idiomatique : « Critics have raised concerns about the reform's implementation. »</p>
+        <p style="font-size:.86rem;margin-top:6px">« Force est de constater » est une tournure impersonnelle typiquement française, sans équivalent nominal naturel en anglais : elle appelle une reformulation (modulation) plutôt qu'une traduction terme à terme. « La mise en place de la réforme » (groupe nominal) redevient « implementing the reform » ou une proposition complète à sujet actif — exactement le mouvement inverse de l'exemple C2.</p>
+      </div>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Pourquoi les tournures impersonnelles françaises (« il convient de », « force est de ») résistent à la traduction littérale</li>
+            <li>Que l'anglais journalistique préfère un sujet agissant identifiable là où le français tolère l'impersonnel</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Une liste de dix tournures impersonnelles françaises et leur reformulation anglaise active, révisée chaque semaine</li>
+            <li>Conversion systématique « selon X » → « according to X », « faire l'objet de » → tournure passive ou verbe direct</li>
+            <li>Repérer un enchaînement de groupes nominaux français (« la mise en œuvre de la réduction des effectifs ») et le déplier avant même de commencer à traduire</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>C5 — Pièges lexicaux : faux amis &amp; chiffres</p>
+      <p class="mech">Ce chapitre n'a pas de place fixe dans le programme : il s'acquiert en continu, en parallèle de C3 et de C4, à chaque phrase traduite. Deux familles de pièges reviennent sans cesse — les faux amis lexicaux, et les conventions de notation des nombres, qui diffèrent entre les deux langues sans que rien, dans la phrase elle-même, ne signale le piège.</p>
+
+      <table class="cmp">
+        <caption>Faux amis fréquents — le contresens, puis la traduction correcte</caption>
+        <thead><tr><th>Mot</th><th>Contresens fréquent</th><th>Traduction correcte</th></tr></thead>
+        <tbody>
+          <tr><td>actually</td><td class="bad">« actuellement »</td><td class="good">en fait, en réalité — <i>actuellement</i> se dit <i>currently</i></td></tr>
+          <tr><td>eventually</td><td class="bad">« éventuellement »</td><td class="good">finalement, à terme — <i>éventuellement</i> se dit <i>possibly</i></td></tr>
+          <tr><td>library</td><td class="bad">« librairie »</td><td class="good">bibliothèque — <i>librairie</i> se dit <i>bookshop</i></td></tr>
+          <tr><td>sensible</td><td class="bad">« sensible »</td><td class="good">raisonnable, sensé — <i>sensible</i> (émotif) se dit <i>sensitive</i></td></tr>
+          <tr><td>achieve</td><td class="bad">« achever »</td><td class="good">réaliser, atteindre — <i>achever</i> se dit <i>to finish, to complete</i></td></tr>
+          <tr><td>demand</td><td class="bad">« demander »</td><td class="good">exiger — <i>demander</i> se dit <i>to ask</i></td></tr>
+          <tr><td>attend</td><td class="bad">« attendre »</td><td class="good">assister à — <i>attendre</i> se dit <i>to wait</i></td></tr>
+          <tr><td>deception</td><td class="bad">« déception »</td><td class="good">tromperie — <i>déception</i> se dit <i>disappointment</i></td></tr>
+        </tbody>
+      </table>
+
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Un faux ami n'est piégeur que parce que la phrase reste grammaticalement correcte — rien ne signale l'erreur au relecteur pressé</li>
+            <li>La confusion d'échelle des grands nombres (« billion ») a une histoire réelle, pas seulement lexicale</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Un corpus personnel de faux amis, testé et complété à chaque épreuve blanche</li>
+            <li>Virgule décimale française (1 234,56) ↔ point décimal anglais (1,234.56) — conversion automatique, jamais recopiée telle quelle</li>
+            <li>Format de date : jour/mois/année en français, mois/jour/année en anglais américain — à vérifier systématiquement, jamais supposé</li>
+            <li>« billion » anglais = milliard français, pas mille milliards : depuis 1974, le Royaume-Uni aligne officiellement l'usage statistique sur l'échelle courte américaine (10⁹), rendant « a billion pounds » directement équivalent à « un milliard de livres »</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note"><b>Point d'exactitude :</b> l'alignement britannique de 1974 concerne l'usage gouvernemental et statistique du terme ; une ambiguïté résiduelle entre échelle courte et longue peut subsister dans des textes plus anciens ou dans d'autres usages anglophones — à vérifier au cas par cas si une source antérieure à cette date est traduite.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Anglais économique et commercial (disc. 11) <i>— le lexique financier partagé (billion, turnover, revenue) revient identique en C3/C4</i></span>
+        <span class="linkchip">Rédaction universitaire (disc. 10) <i>— la relecture séparée sens/langue, appliquée ici avant d'être formalisée en C6</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Traduire un titre de presse anglais mot à mot, en gardant l'ellipse d'article qui sonne mal en français</li>
+          <li>Convertir un chiffre sans changer la ponctuation (garder le point décimal anglais dans une copie française)</li>
+          <li>Confondre « eventually » et « éventuellement » sous la pression du temps, même après l'avoir révisé la veille</li>
+        </ul></div>
+        <div class="ee"><h5>Côté traducteurs professionnels</h5><ul>
+          <li>Sous délai serré, laisser passer un faux ami classique (« actually » / « actuellement ») malgré des années d'expérience — l'automatisme se fatigue autant que l'attention</li>
+          <li>Mal convertir une échelle de grand nombre (« billion ») dans un rapport financier traduit dans l'urgence, avec un impact chiffré réel</li>
+          <li>Sur-adapter un style journalistique français en anglais au point de perdre une nuance politique du texte source</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous traduisez un article de type Guardian titré « UK growth stalls as exports slide ». Le mot à mot donne un français correct mais sec : « La croissance britannique cale alors que les exportations glissent. » Une version plus journalistique existe : « Le Royaume-Uni voit sa croissance caler sous l'effet du recul des exportations. » Que choisissez-vous à l'épreuve ?</p>
+        <p class="dctx">La première solution est plus rapide à produire et reste défendable ; la seconde demande une restructuration complète de la phrase, plus longue à rédiger sous chronomètre.</p>
+        <div class="dopts">
+          <span>A. Rester sur la traduction rapide, correcte et défendable</span>
+          <span>B. Prendre le temps de restructurer pour un rendu plus journalistique</span>
+          <span>C. Trouver un compromis à mi-chemin, plus rapide que B mais plus fluide que A</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique — c'est un arbitrage de temps, pas de compétence. En épreuve chronométrée (C6), l'option A n'est pas un échec : une traduction correcte et rapide libère du temps pour la relecture, où se trouvent la majorité des points perdus (faux amis, accords, chiffres). L'option B ne se justifie que si le temps restant le permet réellement — reformuler une phrase entière pour un gain stylistique marginal, au prix d'une relecture bâclée sur le reste de la copie, est souvent un mauvais calcul. L'option C, une modulation légère sans restructuration complète, est en général le meilleur rapport temps/qualité sous contrainte chronométrée.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un responsable traduction voit ce chapitre</h5>
+          <ol>
+            <li>Un corpus de faux amis à jour vaut plus, en prévention d'erreurs coûteuses, qu'une relecture supplémentaire improvisée</li>
+            <li>Une erreur de conversion de chiffre dans un document financier traduit n'est jamais un détail — c'est un risque contractuel</li>
+            <li>Le style journalistique cible (Guardian, Economist, NYT ou Le Monde, Libération, Le Point) doit être choisi selon le lecteur final, pas par habitude</li>
+            <li>Un traducteur senior qui se relit lui-même comme un débutant, sans complaisance, coûte moins cher qu'un litige de traduction</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de traduction bute ici</h5>
+          <ul>
+            <li>Une IA traduit statistiquement bien les phrases fréquentes, mais rate les titres de presse à ellipse volontaire, où la forme porte un sens propre au genre</li>
+            <li>Elle confond régulièrement les faux amis les plus fréquents quand le contexte immédiat ne les désambiguïse pas assez fortement</li>
+            <li>Elle convertit mal les échelles de grands nombres entre systèmes anglo-saxon et français quand le texte source ne précise pas l'origine géographique du chiffre</li>
+            <li>Elle ne sait pas arbitrer un compromis de temps comme celui du dilemme ci-dessus — elle produit une seule sortie, sans jamais peser un rapport coût/bénéfice de reformulation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>La méthode d'épreuve chronométrée</h2>
+      <p class="dsub">Chapitre C6 — prérequis C3 + C4, où tout se joue le jour du contrôle</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Le jour du contrôle terminal, deux heures doivent couvrir une version et un thème, chacun noté sur ses propres critères, sans qu'aucune relecture ne puisse rattraper une lecture initiale bâclée. <b>Comment répartir un temps fixe et insuffisant entre lire, repérer, rédiger et se relire, sachant que sauter une seule de ces étapes coûte plus cher que d'aller un peu plus vite sur les autres ?</b> Ce n'est pas un problème de connaissance — C1 à C5 sont supposés acquis — c'est un problème de gestion, où le geste juste doit devenir automatique pour ne pas consommer de temps de réflexion qui manquera ailleurs. C'est pourquoi ce chapitre pèse autant : coefficient 3, sur une épreuve où la méthode compte autant que la maîtrise de la langue.</p>
+
+      <div class="callout" style="background:rgba(136,144,160,.10);border-color:rgba(136,144,160,.42)">
+        <svg viewBox="0 0 40 40" stroke="#5c6272"><path d="M20 6 a14 14 0 1 1 -9.9 4.1"/><path d="M20 14 v7 l5 3"/></svg>
+        <div>
+          <h5>Un choix de méthode, pas une invention datée</h5>
+          <p>La technique d'épreuve chronométrée décrite ici — lecture, repérage, jet, relectures séparées — n'a pas d'origine datée identifiable : c'est un enchaînement pragmatique, construit par la pratique répétée de l'exercice, pas la reprise d'une méthode publiée par un auteur unique à une date précise. Aucune source datée n'est avancée ici pour ce chapitre.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">1. Lecture complète du texte, sans traduire</span><span class="arrow">→</span>
+        <span class="node">2. Repérage des difficultés (faux amis, chiffres, contrastes structurels)</span><span class="arrow">→</span>
+        <span class="node">3. Jet — rédaction continue, sans s'arrêter sur un doute</span><span class="arrow">→</span>
+        <span class="node">4. Relecture séparée : sens, puis langue</span>
+      </div>
+      <p class="mech">Le point le plus souvent négligé : les deux relectures finales (étape 4) doivent rester <b>séparées</b>, pas fusionnées en une seule passe. Une relecture « sens » vérifie qu'aucun contresens ne s'est glissé (faux ami, chiffre mal converti, négation oubliée) ; une relecture « langue » vérifie l'orthographe, les accords, la ponctuation cible. Faites en même temps, l'attention se disperse et les deux types d'erreurs se relisent moins bien que séparément — c'est la même logique de relecture séparée qu'en rédaction universitaire (discipline 10), appliquée ici à un texte traduit plutôt qu'à un texte original.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret — un budget de temps pour 2 heures</p>
+      <table class="cmp">
+        <caption>Répartition indicative du temps sur une épreuve de 2h (version + thème)</caption>
+        <thead><tr><th>Étape</th><th>Version (≈ 55 min)</th><th>Thème (≈ 55 min)</th></tr></thead>
+        <tbody>
+          <tr><td>1. Lecture complète</td><td>5 min</td><td>5 min</td></tr>
+          <tr><td>2. Repérage des difficultés</td><td>5 min</td><td>5 min</td></tr>
+          <tr><td>3. Jet — rédaction</td><td>35 min</td><td>35 min</td></tr>
+          <tr><td>4. Relecture sens + langue</td><td>10 min</td><td>10 min</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Reste environ 10 minutes de marge sur l'ensemble des 2 heures — à ne jamais consommer par anticipation sur l'étape 3, précisément parce que c'est la marge qui absorbe un texte source plus difficile que prévu d'un côté ou de l'autre.</p>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Pourquoi une relecture fusionnée sens + langue rate statistiquement plus d'erreurs qu'une relecture en deux passes séparées</li>
+            <li>Pourquoi la lecture complète initiale, qui ne produit aucune ligne traduite, n'est pas du temps perdu mais du temps qui évite un jet à reprendre entièrement</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Une checklist de relecture « sens » fixe : faux amis connus, chiffres et unités, négations, accords sujet-verbe distants</li>
+            <li>Une checklist de relecture « langue » fixe : orthographe, ponctuation cible (« » vs " "), majuscules, accords</li>
+            <li>Un chronomètre visible pendant l'entraînement, pour internaliser les seuils de temps avant le jour de l'épreuve</li>
+            <li>Une règle non négociable : ne jamais commencer le thème avant d'avoir terminé la relecture de la version, pour ne pas contaminer les deux textes en mémoire de travail</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Rédaction universitaire (disc. 10) <i>— la relecture séparée sens/forme, méthode identique appliquée à un texte traduit</i></span>
+        <span class="linkchip">Anglais économique et commercial (disc. 11) <i>— le lexique automatisé qui doit être disponible sans effort de recherche sous chronomètre</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Sauter la lecture complète initiale pour « gagner du temps », et devoir reprendre une phrase à mi-parcours faute d'avoir anticipé le sens global</li>
+          <li>Ne réserver aucun temps de relecture, la copie s'arrêtant à la dernière minute sur le jet brut</li>
+          <li>Relire sens et langue en une seule passe, plus rapide en apparence mais moins efficace pour repérer les deux types d'erreurs</li>
+        </ul></div>
+        <div class="ee"><h5>Côté traducteurs professionnels</h5><ul>
+          <li>Sous deadline serrée, sauter la relecture séparée et livrer directement après le jet, avec un risque de faux ami non détecté</li>
+          <li>Sous-estimer le temps de repérage initial sur un texte technique inhabituel, et manquer de marge en fin de mission</li>
+          <li>Traiter la relecture comme une formalité rapide plutôt que comme une étape à part entière du processus, même après des années de pratique</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Il vous reste 8 minutes avant la fin de l'épreuve. Vous venez de repérer un faux ami mal traduit en début de version (« actually » rendu par « actuellement »), et vous n'avez pas encore relu le thème pour la langue (accords, orthographe). Que faites-vous ?</p>
+        <p class="dctx">Corriger le faux ami prend 30 secondes mais implique de retrouver la phrase et de vérifier qu'elle reste cohérente avec la suite ; la relecture langue du thème n'a pas commencé du tout.</p>
+        <div class="dopts">
+          <span>A. Corriger immédiatement le faux ami repéré, quitte à réduire le temps de relecture du thème</span>
+          <span>B. Ignorer ce faux ami isolé et consacrer les 8 minutes entières à la relecture langue du thème</span>
+          <span>C. Corriger le faux ami en 30 secondes, puis balayer rapidement le thème pour les erreurs les plus visibles seulement</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique, mais un principe utile : une erreur de sens déjà identifiée (le faux ami) coûte proportionnellement plus cher si elle reste non corrigée qu'une relecture langue non commencée, où toutes les erreurs ne sont pas encore identifiées — corriger un problème connu prime souvent sur la recherche de problèmes inconnus. L'option C, qui corrige d'abord puis balaie le reste du temps disponible sur les erreurs les plus visibles du thème (accords évidents, mots oubliés), maximise généralement le nombre de points repris compte tenu du temps réellement restant. L'option B sacrifie une erreur de sens certaine contre une hypothétique amélioration de forme — rarement le meilleur calcul en fin d'épreuve.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un responsable traduction voit ce chapitre</h5>
+          <ol>
+            <li>Un traducteur qui ne budgète pas son temps en amont improvise sous la pression — et improviser coûte en qualité, systématiquement</li>
+            <li>La relecture séparée sens/langue n'est pas une lenteur : c'est ce qui évite qu'une erreur de sens passe entièrement inaperçue jusqu'au client</li>
+            <li>Un processus reproductible (lecture, repérage, jet, relecture) protège la qualité même quand le traducteur est fatigué ou pressé</li>
+            <li>Le coefficient 3 de cette matière reflète une réalité professionnelle : en agence, la gestion du temps sous délai est aussi évaluée que la langue elle-même</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de traduction bute ici</h5>
+          <ul>
+            <li>Une IA de traduction ne budgète jamais son temps ni n'arbitre entre corriger une erreur connue et chercher des erreurs inconnues — elle produit un texte complet d'un coup, sans passes séparées</li>
+            <li>Elle peut assister utilement le repérage (détection de faux amis, vérification de format de nombres) mais ne remplace pas le jugement sur l'arbitrage temps/qualité du dilemme ci-dessus</li>
+            <li>Elle ne fatigue pas comme un traducteur humain sous chronomètre — mais elle ne sait pas non plus dire « je ne suis pas sûre, il faut relire cette phrase », ce que la méthode C6 impose justement de faire</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Effet équivalent, pas mot équivalent<i>C1·C3·C4</i></span>
+        <span class="sp">Nominalisation FR / verbalisation EN<i>C2·C3·C4</i></span>
+        <span class="sp">Le procédé nommé, pas senti<i>C1·C6</i></span>
+        <span class="sp">Relecture séparée sens / langue<i>C6</i></span>
+        <span class="sp">Le contresens sous pression de temps<i>C5·C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="11-anglais-economique-commercial.html">← Anglais économique et commer…</a>
@@ -66,5 +832,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

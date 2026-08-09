@@ -8,8 +8,230 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#4a7a9c;--dom-lt:#a0c8de}</style>
+<style>
+/* Palette — bleu ardoise / corail / sable : les couleurs de l'écoute comme
+   littoral sonore. Le bleu ardoise (#435a72, clair #93a8bd) est le flux
+   sonore continu et ininterrompu — on ne peut ni l'arrêter ni le rembobiner.
+   Le corail (#d97a5f, clair #f0b39c) est l'information ponctuelle qu'on
+   parvient à accrocher au vol dans ce flux — un qui, un quoi, un chiffre.
+   Le sable (#cdb896, clair #e8dcc5) est un terrain d'écoute changeant : la
+   variété des accents, comme une côte qui ne se ressemble jamais tout à
+   fait d'un endroit à l'autre. Discipline la plus « Automatisme » du
+   programme (15/85) : la palette reste sobre, répétée, jamais criarde —
+   elle doit pouvoir se regarder vingt minutes par jour sans fatiguer l'œil. */
+:root{
+  --p1:#d97a5f; --p1-lt:#f0b39c;
+  --p2:#cdb896; --p2-lt:#e8dcc5;
+  --p3:#93a8bd; --p3-dk:#435a72;
+  --ink:#31404d; --ink-soft:#647787;
+  --paper:rgba(255,255,255,.64); --paper-hi:rgba(255,255,255,.86);
+  --line:rgba(67,90,114,.28); --vert:#4f8f6e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #f3d9c6 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 20%, #b9c9d9 0%, transparent 52%),
+    radial-gradient(1000px 720px at 34% 108%, #eecfb7 0%, transparent 58%),
+    linear-gradient(158deg,#ece2d2 0%, #dccdb4 40%, #b8c6d6 74%, #e9d3bd 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p3-dk);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(217,122,95,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(49,64,77,.16);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:200px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--p3-dk);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p3),var(--p3-dk))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p3-dk)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p1)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+.exposure{max-width:640px;margin:16px auto 0;text-align:center;font-size:.86rem;font-style:italic;
+  color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:12px}
+.exposure b{color:var(--p1);font-style:normal}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:460px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p3-dk);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.03em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.66rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(67,90,114,.24);border-radius:24px;box-shadow:0 16px 46px rgba(49,64,77,.14)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p3-dk),var(--p1));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--p3-dk);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(67,90,114,.09);
+  border:1px solid rgba(67,90,114,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(217,122,95,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+.example .frag{font-family:'Josefin Sans';font-size:.78rem;background:#fff;border:1px solid var(--p1-lt);
+  border-radius:10px;padding:2px 8px;color:var(--p3-dk);white-space:nowrap;display:inline-block;margin:2px 3px}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#3f7a66;
+  padding:5px 12px;border-radius:14px;background:rgba(79,143,110,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(205,184,150,.16);border:1px solid rgba(205,184,150,.6)}
+.errors .ee{background:rgba(67,90,114,.1);border:1px solid rgba(67,90,114,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:#8a6f3f} .errors .ee h5{color:var(--p3-dk)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+/* à comprendre / à automatiser */
+.split{display:grid;grid-template-columns:1fr 1.35fr;gap:14px;margin:16px 0}
+@media(max-width:680px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(67,90,114,.08);border:1px solid rgba(67,90,114,.38)}
+.split .m{background:rgba(217,122,95,.08);border:1px solid rgba(217,122,95,.42)}
+.split h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p3-dk)} .split .m h5{color:var(--p1)}
+.split ul{list-style:none}
+.split li{font-size:.85rem;padding:4px 0 4px 20px;position:relative}
+.split .u li::before{content:"○";position:absolute;left:0;top:5px;font-size:.7rem;color:var(--p3-dk)}
+.split .m li::before{content:"●";position:absolute;left:0;top:5px;font-size:.6rem;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#5c4d34}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+table.cmp tr:nth-child(even) td{background:rgba(205,184,150,.14)}
+.wf-mini{width:44px;height:15px;vertical-align:middle;margin-right:7px}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--p3-dk);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(205,184,150,.16);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p2)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(205,184,150,.2);border:1px solid var(--p2)}
+.helix{background:rgba(67,90,114,.09);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#8a6f3f} .helix h5{color:var(--p3-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3-dk)}
+
+/* diagrammes dessinés (protocole, grille de notes) */
+.diagram{margin:16px 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#3f7a66;
+  padding:5px 12px;border-radius:14px;background:rgba(79,143,110,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,44 +240,557 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d13">
-  <div class="tab">篇 XIII</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 13</p>
-    <h3>Compréhension et expression anglaises</h3>
-    <p class="dmeta">S6 · 2 ECTS · Elodie Gallet · audio BBC authentiques</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 760 190" role="img" aria-label="Une onde sonore continue traverse l'image de bout en bout ; quatre pics sont accrochés par des étiquettes qui, quoi, où et chiffres ; une oreille à gauche écoute, une antenne diffuse à droite">
+      <path d="M0 100 H760" stroke="#93a8bd" stroke-width="1" stroke-dasharray="1 7" opacity=".5"/>
+      <!-- oreille / auditrice -->
+      <g transform="translate(30,100)" stroke="#435a72" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M-6 -20 C -18 -16 -18 4 -8 10 C -2 14 4 10 2 2 C 0 -4 -8 -4 -8 4"/>
+      </g>
+      <!-- onde sonore continue -->
+      <path d="M70,100 Q90,50 110,100 T150,100 T190,100 T230,100 T270,100 T310,100 T350,100 T390,100 T430,100 T470,100 T510,100 T550,100 T590,100 T630,100 T670,100 T710,100"
+        fill="none" stroke="#435a72" stroke-width="2.4" stroke-linecap="round"/>
+      <!-- antenne / flux diffusé -->
+      <g transform="translate(735,100)" stroke="#435a72" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 34 V6"/><path d="M-9 34 H9"/><path d="M0 6 L-6 -4"/><path d="M0 6 L6 -4"/>
+        <path d="M-8 0 Q0 -10 8 0" opacity=".7"/><path d="M-14 -6 Q0 -20 14 -6" opacity=".45"/>
+      </g>
+      <!-- quatre informations accrochées au vol -->
+      <g font-family="Josefin Sans" font-size="8.5" letter-spacing="1" fill="#fff">
+        <g transform="translate(170,50)">
+          <line x1="0" y1="4" x2="0" y2="26" stroke="#d97a5f" stroke-width="1.4" stroke-dasharray="2 3"/>
+          <circle r="4" fill="#d97a5f" stroke="#fff" stroke-width="1.3"/>
+          <rect x="-24" y="-24" width="48" height="16" rx="8" fill="#d97a5f"/>
+          <text x="0" y="-13" text-anchor="middle">QUI</text>
+        </g>
+        <g transform="translate(330,50)">
+          <line x1="0" y1="4" x2="0" y2="26" stroke="#d97a5f" stroke-width="1.4" stroke-dasharray="2 3"/>
+          <circle r="4" fill="#d97a5f" stroke="#fff" stroke-width="1.3"/>
+          <rect x="-26" y="-24" width="52" height="16" rx="8" fill="#d97a5f"/>
+          <text x="0" y="-13" text-anchor="middle">QUOI</text>
+        </g>
+        <g transform="translate(490,50)">
+          <line x1="0" y1="4" x2="0" y2="26" stroke="#d97a5f" stroke-width="1.4" stroke-dasharray="2 3"/>
+          <circle r="4" fill="#d97a5f" stroke="#fff" stroke-width="1.3"/>
+          <rect x="-20" y="-24" width="40" height="16" rx="8" fill="#d97a5f"/>
+          <text x="0" y="-13" text-anchor="middle">OÙ</text>
+        </g>
+        <g transform="translate(650,50)">
+          <line x1="0" y1="4" x2="0" y2="26" stroke="#d97a5f" stroke-width="1.4" stroke-dasharray="2 3"/>
+          <circle r="4" fill="#d97a5f" stroke="#fff" stroke-width="1.3"/>
+          <rect x="-32" y="-24" width="64" height="16" rx="8" fill="#d97a5f"/>
+          <text x="0" y="-13" text-anchor="middle">CHIFFRES</text>
+        </g>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Compréhension et expression anglaises</h1>
+    <p class="gen-open">À l'oral, <b>on ne peut ni revenir en arrière ni contrôler le débit</b> — la phrase mal comprise à la seconde douze est déjà remplacée par la suivante à la seconde treize. Comment extraire l'information d'un flux continu, prononcé par des locuteurs aux accents variés, en une ou deux écoutes seulement ? Toute la discipline tient dans cette contrainte physique : elle ne s'apprend pas en comprenant une règle une bonne fois, elle s'acquiert par répétition, comme une oreille se muscle.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:15%"></span><span class="au" style="width:85%"></span></span>
       <span class="crd">Système <b class="s">15%</b> · Automatisme <b class="a">85%</b></span>
-      <span class="verd aut">Automatisme</span>
+      <span class="verd">Automatisme</span>
     </div>
+    <p class="dmeta">S6 · 2 ECTS · Elodie Gallet · audio BBC authentiques</p>
+    <p class="exposure">Discipline à progression <b>strictement proportionnelle au temps d'exposition</b>, pas à l'intensité d'une révision. Vingt minutes par jour dès l'été rendent l'épreuve triviale en janvier ; le bachotage des trois dernières semaines n'y produit presque rien — l'oreille ne s'entraîne pas plus vite qu'elle ne s'habitue.</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">À l'oral, <b>on ne peut ni revenir en arrière ni contrôler le débit</b>. Comment extraire l'information d'un flux continu, prononcé par des locuteurs aux accents variés, en une ou deux écoutes ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Ce qui bloque : liaisons, réductions, débit</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · identifier l'obstacle avant de l'entraîner</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Méthode d'écoute en deux temps</b><span class="k fondation">FONDATION</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> · globale puis notes ciblées</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Prise de notes : qui, quoi, où, chiffres</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b></span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Variétés d'accents</b><span class="k auto">AUT</span><span class="dep">Exposition continue · RP, écossais, nord, non natifs</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Restitution : synthèse orale et écrite</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C3</b></span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Diagnostic</div><div class="tc"><span class="node f">C1 · Où ça bloque</span></div></div>
-<div class="tier"><div class="tl">Protocole</div><div class="tc"><span class="node f">C2 · Deux écoutes</span><span class="ar">→</span><span class="node a">C3 · Notes</span><span class="ar">→</span><span class="node a">C5 · Restitution</span></div></div>
-<div class="tier"><div class="tl">Exposition</div><div class="tc"><span class="node a">C4 · Accents — dose quotidienne</span></div></div>
-</div>
-    <p class="note">Progression <b>strictement proportionnelle au temps d'exposition</b>. Vingt minutes par jour dès l'été rendent le format trivial ; le bachotage tardif n'y produit presque rien.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Flux non contrôlable<i>C1·C2</i></span><span class="sp">Écouter pour l'information, pas pour les mots<i>C2·C3</i></span><span class="sp">Exposition cumulée<i>C4</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><rect x="27" y="4" width="3" height="7"/><path d="M30 6 q4 -1 4 5"/></svg><b>Received Pronunciation</b><span>norme enseignée</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><path d="M9 26 v-9 l6 3 l-6 3"/></svg><b>Écossais</b><span>accent rhotique</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><path d="M12 27 l4 -4 l4 4 M20 27 l4 -4 l4 4"/></svg><b>Nord de l'Angleterre</b><span>voyelles courtes</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><circle cx="20" cy="4" r="4"/><path d="M16 4 h8 M20 0 v8 M17.3 1.6 q2.7 2.4 5.4 0 M17.3 6.4 q2.7 -2.4 5.4 0"/></svg><b>Locuteur non natif</b><span>rythme régulier</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M20 34 V14 M12 34 h16 M20 14 l-6 -8 M20 14 l6 -8"/><path d="M13 20 q7 -7 14 0" opacity=".7"/><path d="M9 15 q11 -11 22 0" opacity=".45"/></svg><b>BBC · flux audio</b><span>débit non négociable</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="18" cy="14" r="6"/><path d="M6 34 C6 24 30 24 30 34"/><path d="M23 12 q4 0 4 4 q0 4 -4 3"/><line x1="30" y1="30" x2="36" y2="30"/><line x1="30" y1="34" x2="34" y2="34"/></svg><b>Auditrice</b><span>capte au vol</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des cinq chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet">
+      <path d="M40 100 C 160 40, 240 40, 320 90 S 480 190, 560 100 S 720 30, 800 90 S 850 100, 870 100" fill="none" stroke="#e8dcc5" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 fondation -->
+        <g transform="translate(40,100)"><circle r="17" fill="#cdb896" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="36" text-anchor="middle">Ce qui bloque</text></g>
+        <!-- C2 fondation, sommet -->
+        <g transform="translate(280,52)"><circle r="17" fill="#cdb896" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Écoute en deux temps</text></g>
+        <!-- C3, creux -->
+        <g transform="translate(520,138)"><circle r="15" fill="#435a72" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Prise de notes</text></g>
+        <!-- C4, sommet -->
+        <g transform="translate(720,45)"><circle r="15" fill="#cdb896" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Variétés d'accents</text></g>
+        <!-- C5, retour ligne -->
+        <g transform="translate(870,100)"><circle r="15" fill="#d97a5f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="-6" y="36" text-anchor="middle">Restitution</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Ce qui bloque, et la méthode en deux temps</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une étudiante qui lit couramment l'anglais peut, à l'oral, ne rien comprendre à un journal de la BBC lu au débit normal. Ce n'est pas un problème de vocabulaire : la plupart des mots qui lui échappent, elle les connaît parfaitement à l'écrit. <b>Le problème est que l'anglais parlé n'articule pas les mots comme le dictionnaire les prononce isolément</b> — il les enchaîne, les raccourcit, en avale des morceaux, à une vitesse qu'aucune pause n'interrompt. Avant d'entraîner l'oreille (C2), il faut d'abord savoir précisément à quoi elle doit s'habituer — sinon l'entraînement tape à côté de l'obstacle réel.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la norme — Received Pronunciation</h5>
+          <p>La <b>Received Pronunciation</b> (RP), l'accent de référence longtemps enseigné en France et associé historiquement aux grandes écoles anglaises et à la BBC, est nommée et décrite pour la première fois sous ce terme par le phonéticien britannique <b>Daniel Jones</b>, dans son <i>English Pronouncing Dictionary</i>, première édition publiée en <span class="yr">1917</span>. Point important : la RP n'est pas un accent régional « naturel » — c'est une norme construite et enseignée, parlée nativement par une minorité de Britanniques. C'est précisément pour cela qu'elle diffère nettement des accents régionaux réels (écossais, nord de l'Angleterre) que cette discipline demande aussi d'apprendre à comprendre.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(217,122,95,.08);border-color:rgba(217,122,95,.4)">
+        <svg viewBox="0 0 40 40" stroke="#d97a5f"><path d="M8 20 Q14 8 20 20 T32 20"/><circle cx="20" cy="20" r="15"/></svg>
+        <div>
+          <h5>Un fait structurel, pas une invention</h5>
+          <p>Les réductions à l'oral (<i>weak forms</i>, élision, liaison, assimilation) ne datent pas d'une invention à date précise : ce sont des faits linguistiques structurels de l'anglais parlé, documentés tout au long du XX<sup>e</sup> siècle par de nombreux phonéticiens descriptifs, Daniel Jones lui-même en tête. <b>Point d'exactitude :</b> il n'existe pas d'origine datée unique à citer pour ce phénomène — seule la nomenclature de la RP (1917) a une date d'attribution solide. Présenter les réductions comme une « erreur » du locuteur natif serait une erreur de perspective : c'est la façon normale, majoritaire, dont l'anglais courant se parle.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Trois phénomènes distincts déforment la forme « dictionnaire » d'un mot, et les confondre revient à mal cibler son entraînement :</p>
+      <div class="chain">
+        <span class="node">Débit — la vitesse pure du flux</span><span class="arrow">→</span>
+        <span class="node">Réductions — formes faibles, élisions</span><span class="arrow">→</span>
+        <span class="node">Liaisons / assimilations — les mots fusionnent entre eux</span>
+      </div>
+      <p class="mech">Une étudiante qui pense avoir un problème de « vocabulaire » alors que son obstacle réel est la liaison entre deux mots familiers va réviser des listes de mots qui ne résoudront rien. C'est pour cela que <b>C1 doit précéder C2</b> : diagnostiquer la nature exacte de l'obstacle avant de choisir une stratégie d'écoute. Un entraînement à la vitesse ne corrige pas une confusion sur les formes faibles ; un entraînement au vocabulaire ne corrige pas un problème de débit.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Ce qui disparaît réellement entre l'écrit et l'oral rapide</h5>
+        <p>Quatre réductions parmi les plus fréquentes, à automatiser par la reconnaissance auditive plutôt qu'à apprendre comme une règle :</p>
+        <p>
+          <span class="frag">going to → gonna</span>
+          <span class="frag">want to → wanna</span>
+          <span class="frag">did you → didjou</span>
+          <span class="frag">should have → shoulda</span>
+        </p>
+        <p>Le <b>h</b> initial des pronoms faibles (<i>he, him, her</i>) disparaît très souvent en discours enchaîné rapide — <i>« tell him »</i> s'entend couramment « tell'im ». L'<b>assimilation</b> fusionne deux sons adjacents : <i>« handbag »</i>, où le <b>n</b> se rapproche du point d'articulation du <b>b</b> suivant, s'entend fréquemment proche de « hambag ». Aucun de ces phénomènes n'est un accent « négligé » — ce sont des traits réguliers de l'anglais parlé rapide, aussi présents chez un présentateur BBC très articulé que chez un locuteur familier.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le protocole d'écoute en deux temps (C2)</p>
+      <p class="mech">Une fois l'obstacle diagnostiqué (C1), la méthode qui en découle est délibérément séquentielle — elle n'a pas d'origine datée unique attribuable, c'est une pratique pédagogique pragmatique, mais son enchaînement causal est net : l'écoute globale doit précéder les notes ciblées, parce qu'on ne peut pas savoir quel détail vaut la peine d'être noté avant de savoir de quoi parle l'extrait.</p>
+      <div class="diagram">
+        <svg viewBox="0 0 800 190" width="100%" style="max-width:800px">
+          <defs>
+            <marker id="ar13" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#435a72"/>
+            </marker>
+          </defs>
+          <g font-family="Josefin Sans" fill="#31404d">
+            <path d="M150,90 H270" stroke="#435a72" stroke-width="2" marker-end="url(#ar13)"/>
+            <path d="M370,90 H490" stroke="#435a72" stroke-width="2" marker-end="url(#ar13)"/>
+            <path d="M590,90 H710" stroke="#435a72" stroke-width="2" marker-end="url(#ar13)"/>
+
+            <!-- 1. écoute globale -->
+            <g transform="translate(85,90)" stroke="#435a72" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="-38" y="-24" width="76" height="48" rx="10"/>
+              <path d="M-24,0 q6,-16 12,0 t12,0 t12,0"/>
+            </g>
+            <text x="85" y="140" text-anchor="middle" font-size="11" font-weight="600">Écoute globale</text>
+            <text x="85" y="156" text-anchor="middle" font-size="9" fill="#647787">tout le flux, une fois</text>
+
+            <!-- 2. sujet repéré -->
+            <g transform="translate(330,90)" stroke="#d97a5f" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle r="20"/><circle r="12"/><circle r="4" fill="#d97a5f"/>
+            </g>
+            <text x="330" y="140" text-anchor="middle" font-size="11" font-weight="600">Sujet repéré</text>
+            <text x="330" y="156" text-anchor="middle" font-size="9" fill="#647787">de quoi ça parle, en gros</text>
+
+            <!-- 3. écoute ciblée -->
+            <g transform="translate(550,90)" stroke="#435a72" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M-22,-20 q6,-14 12,0 t12,0" transform="translate(-6,0)"/>
+              <circle cx="10" cy="4" r="13"/><line x1="19" y1="13" x2="30" y2="24"/>
+            </g>
+            <text x="550" y="140" text-anchor="middle" font-size="11" font-weight="600">Écoute ciblée</text>
+            <text x="550" y="156" text-anchor="middle" font-size="9" fill="#647787">un passage précis, à la loupe</text>
+
+            <!-- 4. notes qqoc -->
+            <g transform="translate(760,90)" stroke="#d97a5f" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="-24" y="-26" width="48" height="52" rx="4"/>
+              <line x1="-16" y1="-14" x2="6" y2="-14"/><line x1="-16" y1="-2" x2="12" y2="-2"/>
+              <line x1="-16" y1="10" x2="2" y2="10"/><line x1="-16" y1="18" x2="14" y2="18"/>
+            </g>
+            <text x="760" y="140" text-anchor="middle" font-size="11" font-weight="600">Notes</text>
+            <text x="760" y="156" text-anchor="middle" font-size="9" fill="#647787">qui · quoi · où · chiffres</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Traduction anglaise <i>— discipline 12, le passage à l'écrit de ce qui vient d'être entendu</i></span>
+        <span class="linkchip">Civilisation britannique <i>— discipline 16, le contexte social de la RP et des accents régionaux</i></span>
+        <span class="linkchip">Anglais économique et commercial <i>— discipline 11, le vocabulaire que le débit rend méconnaissable à l'oral</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté débutantes</h5><ul>
+          <li>Croient qu'il faut comprendre chaque mot pour saisir le sens global, et bloquent sur un mot manqué au lieu de continuer à écouter</li>
+          <li>Confondent accent fort et débit rapide — deux obstacles distincts qui appellent des réponses différentes</li>
+          <li>Traduisent mentalement chaque phrase en français en temps réel, ce qui fait perdre le flux qui continue pendant ce temps</li>
+        </ul></div>
+        <div class="ee"><h5>Côté candidats expérimentés</h5><ul>
+          <li>Sautent l'écoute globale par excès de confiance et foncent droit sur la prise de notes détaillée, ratant le fil directeur</li>
+          <li>Sur-investissent l'orthographe exacte d'un nom propre dès la première écoute, au lieu d'attendre la seconde</li>
+          <li>Se braquent sur un accent qu'ils identifient mal et perdent en concentration sur le reste du flux, qui lui n'attend pas</li>
+        </ul></div>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>○ À comprendre une fois</h5>
+          <ul>
+            <li>Débit, réduction et liaison sont trois obstacles distincts, pas un seul « accent difficile »</li>
+            <li>Les réductions (gonna, wanna, h muet, assimilation) sont la norme du parlé rapide, pas une déviance</li>
+            <li>L'écoute globale doit précéder les notes ciblées : on ne sait pas quoi noter avant de savoir de quoi ça parle</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>● À automatiser par répétition</h5>
+          <ul>
+            <li>Reconnaître à l'oreille les réductions les plus fréquentes sans passer par une traduction mentale consciente</li>
+            <li>Enchaîner réflexement écoute globale → écoute ciblée sans y penser, sous la pression du temps</li>
+            <li>Tolérer un mot manqué sans interrompre le fil de l'écoute qui suit — s'entraîner à « laisser filer »</li>
+          </ul>
+        </div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Nous sommes le 9 août. L'épreuve de compréhension orale a lieu en janvier. Comment organisez-vous votre préparation ?</p>
+        <p class="dctx">Vous avez d'autres matières à réviser en priorité l'été, et l'idée d'écouter de l'anglais tous les jours dès maintenant paraît disproportionnée pour une épreuve si lointaine.</p>
+        <div class="dopts">
+          <span>A. Commencer 15 à 20 minutes d'écoute par jour dès maintenant, même en vacances, sans pression de résultat</span>
+          <span>B. Attendre la rentrée de septembre pour intégrer l'écoute dans une routine scolaire installée</span>
+          <span>C. Se concentrer sur d'autres matières l'été et bachoter intensément les trois dernières semaines avant l'épreuve</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse à sens unique, mais le fait pédagogique central de cette discipline penche nettement : parce que la compréhension orale est un <b>Automation Subject</b> (85% d'automatisme), la progression suit le temps d'exposition cumulé, pas l'intensité d'une session. L'oreille reconnaît des patterns sonores par accoutumance progressive — un mécanisme qui ressemble à l'entraînement musculaire, pas à la mémorisation d'une liste. Un bachotage de trois semaines (option C) tombe presque toujours trop tard pour que ce mécanisme ait le temps de s'installer, même avec un effort intense.</p>
+          <p>L'option B n'est pas absurde — la rentrée offre un vrai cadre de régularité — mais elle sacrifie plusieurs mois d'exposition passive gratuite (trajets, temps mort) que l'été permet sans coûter de temps de révision « sérieuse ». L'option A n'exige pas une discipline parfaite : quelques jours manqués ne ruinent rien, ce que « le bachotage tardif produit presque rien » décrit, c'est spécifiquement une tentative de compresser une habituation cumulative dans une fenêtre trop courte — pas l'exigence d'une régularité absolue.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un recruteur anglophone voit ce chapitre</h5>
+          <ol>
+            <li>Un collègue natif ne ralentira pas durablement son débit par politesse — la compréhension doit venir de vous, pas d'un ajustement permanent de l'autre</li>
+            <li>Les réductions que vous étudiez comme un « obstacle académique » sont simplement la façon normale dont un natif parle en réunion informelle, pas un registre dégradé</li>
+            <li>Un collaborateur qui redemande sans cesse « could you repeat that? » en réunion est vite perçu comme peu opérationnel, même avec un excellent anglais écrit</li>
+            <li>Ce qu'un manager retient n'est pas votre accent à vous, c'est votre capacité à extraire l'essentiel d'un point qu'on ne répétera pas deux fois</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de transcription frappe ici</h5>
+          <ul>
+            <li>Une transcription automatique en direct peut désamorcer une partie de C1 — mais elle échoue encore régulièrement sur débit très rapide et voix qui se chevauchent</li>
+            <li>Les modèles de reconnaissance vocale restent en moyenne plus fiables sur RP et accent américain général, qui dominent leurs corpus d'entraînement</li>
+            <li>Un sous-titrage automatique en réunion peut servir de béquille temporaire, mais crée une dépendance qui n'entraîne pas l'oreille elle-même — un vrai risque si utilisé en excès pendant la préparation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Prise de notes et variété des accents</h2>
+      <p class="dsub">Chapitres C3 · C4</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois le sujet général repéré (C2), il reste à capturer des faits précis — un nom, un chiffre, un lieu — sans jamais interrompre le flux pour vérifier une note. Et ce flux ne se présente jamais deux fois sous la même forme acoustique : le même mot, dit par un locuteur écossais plutôt que RP, n'a presque plus le même profil sonore. <b>Comment noter vite ce qui compte, quand le signal sonore lui-même change de nature selon qui parle ?</b> C3 (noter) suppose C2 acquis : on ne sait pas encore quoi noter tant qu'on n'a pas le fil général. C4 (les accents), lui, n'est le prérequis de rien de précis — c'est une exposition continue, une dimension de variabilité à couvrir largement, pas une étape à franchir une fois.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine des méthodes — honnêteté requise</h5>
+          <p>Contrairement à la RP (Daniel Jones, 1917 — voir 篇 I), il n'existe <b>pas d'origine datée unique attribuable</b> à la grille de prise de notes « qui, quoi, où, chiffres » ni à la pratique d'exposition régulière aux accents régionaux : ce sont des méthodes pédagogiques pragmatiques, transmises et affinées en salle de classe, sans inventeur identifiable à une date précise. Les traits phonétiques eux-mêmes des accents régionaux (rhoticité écossaise, absence de la scission BATH-TRAP dans le nord de l'Angleterre) sont en revanche des faits de phonologie descriptive bien documentés, sans qu'on puisse leur attribuer une origine ponctuelle — ce sont des traits hérités de l'histoire longue de la langue, pas des règles fixées à une date.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — la grille à quatre axes</p>
+      <p class="mech">Noter en temps réel exige d'abréger radicalement : on n'écrit jamais des phrases, seulement des ancrages. La discipline retient quatre axes, choisis parce qu'ils sont les éléments les plus <b>factuels et vérifiables</b> d'un flux oral — donc les plus rentables à capturer, et les plus faciles à noter en un mot ou un chiffre sans reformuler :</p>
+      <div class="diagram">
+        <svg viewBox="0 0 520 260" width="100%" style="max-width:460px">
+          <g stroke="#435a72" stroke-width="1.6" fill="none">
+            <rect x="30" y="20" width="460" height="220" rx="14"/>
+            <line x1="30" y1="75" x2="490" y2="75"/>
+            <line x1="30" y1="130" x2="490" y2="130"/>
+            <line x1="30" y1="185" x2="490" y2="185"/>
+          </g>
+          <g font-family="Josefin Sans" font-size="11" letter-spacing="1" fill="#d97a5f">
+            <text x="46" y="45">QUI</text>
+            <text x="46" y="100">QUOI</text>
+            <text x="46" y="155">OÙ</text>
+            <text x="46" y="210">CHIFFRES</text>
+          </g>
+          <g stroke="#647787" stroke-width="2" stroke-linecap="round" fill="none">
+            <path d="M150 40 q20 -6 40 0 t35 -2"/>
+            <path d="M150 95 q30 4 55 -3 t60 2 t30 -4"/>
+            <path d="M150 150 q18 -5 34 1"/>
+            <path d="M150 205 q10 3 22 -2 M182 203 q14 4 26 -3"/>
+          </g>
+        </svg>
+      </div>
+      <p class="mech">La ligne « qui » se remplit vite (un nom propre ou une fonction), la ligne « quoi » reste volontairement la plus longue — c'est le cœur informatif — tandis que « où » et « chiffres » se limitent souvent à un seul mot ou nombre. Cette dissymétrie de longueur n'est pas un défaut, c'est la trace normale d'une prise de notes bien priorisée.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un extrait BBC, notes prises en écoute ciblée</h5>
+        <p>Un bulletin économique enchaîne, débit rapide, accent écossais : <i>« So the Chancellor's announced they're gonna cut about two billion from next year's budget, and councils in Scotland say it'll hit local services hardest. »</i> À l'oreille non entraînée, « gonna cut about two billion » peut se réduire à un magma sonore. La grille, remplie en une seule écoute ciblée après le repérage global :</p>
+        <p>
+          <span class="frag">QUI : the Chancellor</span>
+          <span class="frag">QUOI : coupe budgétaire, services locaux touchés</span>
+          <span class="frag">OÙ : Scotland</span>
+          <span class="frag">CHIFFRES : ~£2bn</span>
+        </p>
+        <p>Le tilde devant « £2bn » n'est pas une négligence : <i>« about two billion »</i> signale explicitement une approximation à l'oral, et la noter comme un chiffre exact serait une erreur de restitution (voir C5, 篇 III).</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Quatre accents, quatre signatures sonores</p>
+      <table class="cmp">
+        <caption>Comparaison des variétés d'accents rencontrées — traits, difficulté, piège</caption>
+        <thead><tr><th>Accent</th><th>Traits caractéristiques</th><th>Difficulté relative</th><th>Mot piégeux</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><svg class="wf-mini" viewBox="0 0 100 30"><path d="M2 15 Q15 6 28 15 T54 15 T80 15 T100 15" fill="none" stroke="#435a72" stroke-width="2"/></svg>RP</td>
+            <td>Articulation nette, régulière ; « r » final non prononcé (non rhotique) ; voyelles longues bien distinctes</td>
+            <td>Référence — la plus proche de ce qu'un apprentissage scolaire cible</td>
+            <td><i>schedule</i> — « shed-yul » en RP, contre « sked-yul » en anglais américain</td>
+          </tr>
+          <tr>
+            <td><svg class="wf-mini" viewBox="0 0 100 30"><path d="M2 20 L10 6 L18 22 L26 4 L34 20 L42 8 L50 20 L58 6 L66 22 L74 8 L82 20 L90 6 L100 18" fill="none" stroke="#435a72" stroke-width="2"/></svg>Écossais</td>
+            <td>Rhotique — le « r » se prononce toujours, y compris en fin de mot ; voyelles souvent raccourcies</td>
+            <td>Élevée pour une oreille formée uniquement sur la RP</td>
+            <td><i>loch</i> — fricative vélaire /x/ à l'arrière du palais, jamais « lock »</td>
+          </tr>
+          <tr>
+            <td><svg class="wf-mini" viewBox="0 0 100 30"><path d="M2 17 Q12 10 22 17 Q32 10 42 17 Q52 10 62 17 Q72 10 82 17 Q92 10 100 17" fill="none" stroke="#435a72" stroke-width="2"/></svg>Nord de l'Angleterre</td>
+            <td>Absence de la scission STRUT-FOOT (« put » et « putt » se rapprochent) ; « a » court dans <i>bath, class, dance</i></td>
+            <td>Moyenne — surprend sur les voyelles plutôt que sur la vitesse</td>
+            <td><i>bath</i> — voyelle courte /a/ au nord, longue /ɑː/ en RP méridionale</td>
+          </tr>
+          <tr>
+            <td><svg class="wf-mini" viewBox="0 0 100 30"><path d="M2 15 L20 15 L20 8 L36 8 L36 22 L52 22 L52 12 L68 12 L68 18 L84 18 L84 15 L100 15" fill="none" stroke="#435a72" stroke-width="2"/></svg>Locuteur non natif</td>
+            <td>Rythme plus syllabique et régulier que l'anglais natif ; consonnes parfois substituées selon la langue maternelle</td>
+            <td>Variable — souvent plus lent, donc paradoxalement plus facile à suivre malgré une prononciation atypique</td>
+            <td>« th » — /θ/ et /ð/ fréquemment remplacés par /s/, /z/, /t/ ou /d/ selon l'origine du locuteur</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Civilisation britannique <i>— discipline 16, le contexte régional réel derrière chaque accent</i></span>
+        <span class="linkchip">Civilisation américaine <i>— discipline 18, le contraste avec l'anglais général américain</i></span>
+        <span class="linkchip">Traduction anglaise <i>— discipline 12, mettre par écrit une note prise à l'oreille</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté débutantes</h5><ul>
+          <li>Notent des phrases entières au lieu d'abréviations, et prennent du retard sur un flux qui, lui, ne s'arrête pas</li>
+          <li>Réduisent tous les accents anglophones à « British » contre « American », ignorant la variété interne au Royaume-Uni</li>
+          <li>Paniquent dès les premières secondes d'un accent inconnu au lieu de laisser l'oreille se caler sur quelques phrases</li>
+        </ul></div>
+        <div class="ee"><h5>Côté candidats expérimentés</h5><ul>
+          <li>Confondent, sous stress, un chiffre approché (« about twenty ») avec un chiffre exact, et le notent sans la nuance</li>
+          <li>Sous-exposent volontairement les accents qu'ils jugent « peu probables à l'examen », un pari qui peut se retourner</li>
+          <li>Calibrent leur grille de notes sur un seul type d'accent, souvent la RP, et se déstabilisent dès qu'un rythme différent s'impose</li>
+        </ul></div>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>○ À comprendre une fois</h5>
+          <ul>
+            <li>La grille qui/quoi/où/chiffres capture ce qui est factuel et vérifiable, pas tout ce qui est dit</li>
+            <li>Un accent régional n'est pas une déformation de la RP, c'est une variété linguistique légitime à part entière</li>
+            <li>C4 n'a pas de prérequis parce que ce n'est pas une étape — c'est une exposition continue, en parallèle des autres chapitres</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>● À automatiser par répétition</h5>
+          <ul>
+            <li>Remplir la grille en abréviations sans jamais reformuler mentalement en phrases complètes</li>
+            <li>S'exposer chaque jour, en dose courte, à un accent différent de celui de la veille</li>
+            <li>Reconnaître à l'oreille qu'un chiffre est approximatif (« about », « roughly ») et le noter comme tel, réflexement</li>
+          </ul>
+        </div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Lors d'un galop d'essai, un locuteur écossais parle vite. Vous captez un mot sur trois environ lors de la première écoute. Que priorisez-vous pour la deuxième ?</p>
+        <p class="dctx">Le temps entre les deux écoutes est très court — juste de quoi décider une stratégie, pas de tout retenter.</p>
+        <div class="dopts">
+          <span>A. Essayer de reconstruire chaque phrase entendue, même fragmentaire, en la repassant mentalement</span>
+          <span>B. Abandonner l'idée de suivre les phrases et se concentrer uniquement sur les chiffres et noms propres captables</span>
+          <span>C. Faire confiance au sens global perçu en première écoute et broder une reconstruction plausible autour</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Les chiffres et noms propres (option B) sont les points les plus sûrs à capturer : ils sont non ambigus et gradables — soit on les a entendus, soit non, sans zone grise. Reconstruire des phrases entières (option A) consomme la fenêtre de préparation très courte sans garantie de fiabilité. L'option C est la plus dangereuse : broder une narration plausible sur un sujet où l'exactitude factuelle est notée revient à halluciner un contenu — une extrapolation légère sur un connecteur logique manquant (« and », « but », « because ») reste acceptable, inventer un fait ne l'est jamais.</p>
+          <p>En pratique, la meilleure stratégie ressemble à B, avec une toute petite dose de C limitée aux articulations logiques évidentes — jamais aux faits eux-mêmes.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un manager anglophone voit ce chapitre</h5>
+          <ol>
+            <li>Un accent écossais ou du nord de l'Angleterre en réunion n'est pas une anomalie à « traduire mentalement en RP » — c'est un anglais tout aussi légitime, que personne ne modifiera pour vous</li>
+            <li>Noter vite un chiffre ou un nom lâché une seule fois en réunion (montant, nom de client) est littéralement le travail de la prise de notes de réunion — une compétence directement monnayable</li>
+            <li>Un collaborateur qui dit « j'ai noté trois points clés » après un appel impressionne plus qu'une compréhension parfaite mais silencieuse</li>
+            <li>La variété d'accents rencontrée dans une carrière internationale dépasse largement RP contre américain — anticiper cette diversité dès la formation est un vrai avantage</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de transcription frappe ici</h5>
+          <ul>
+            <li>Les modèles de reconnaissance vocale adaptés à un accent précis progressent, mais restent inégaux sur les variétés les moins représentées dans les données d'entraînement</li>
+            <li>La diarisation (identifier qui parle) reste fragile en conférence à plusieurs accents superposés — un chiffre attribué au mauvais intervenant est une vraie source d'erreur en synthèse automatique</li>
+            <li>La détection automatique de chiffres et d'entités nommées dans un flux transcrit pourrait automatiser une partie de C3 — à condition que la transcription source soit fiable, ce qui n'est pas garanti sur accent fort et débit rapide combinés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Restituer ce qu'on a compris</h2>
+      <p class="dsub">Chapitre C5</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">La grille de notes (C3) donne des fragments, pas un texte. Une synthèse orale doit être fluide et rythmée ; une synthèse écrite doit être structurée et correctement enregistrée. <b>Comment transformer des ancrages disjoints en un propos cohérent, sans ni réciter les notes brutes, ni inventer ce qui manque pour combler les trous ?</b> C5 suppose C3 acquis : on ne peut synthétiser fidèlement qu'à partir de notes qui ont déjà isolé les faits vérifiables — restituer sans avoir d'abord noté, c'est restituer une impression, pas une information.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la méthode — encore une pratique, pas une invention datée</h5>
+          <p>Comme la grille de notes de C3, la technique de restitution en deux registres (oral rythmé / écrit structuré) n'a pas d'inventeur ni de date attribuable : c'est une pratique pédagogique d'examen, affinée par l'usage plutôt que codifiée à une date précise. Ce qui est en revanche vérifiable, c'est le principe qu'elle applique : la <b>fidélité factuelle prime sur la fluidité</b> — un principe d'évaluation qui traverse toute épreuve de compréhension orale, quel que soit l'établissement.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Notes triées (qui · quoi · où · chiffres)</span><span class="arrow">→</span>
+        <span class="node">Hiérarchisation — essentiel avant détail</span><span class="arrow">→</span>
+        <span class="node">Reformulation dans ses propres mots</span><span class="arrow">→</span>
+        <span class="node">Vérification — rien d'inventé</span>
+      </div>
+      <p class="mech">La dernière étape est la plus souvent sautée sous la pression du temps, et c'est pourtant elle qui distingue une bonne restitution d'une mauvaise : relire mentalement sa synthèse en se demandant, phrase par phrase, « ai-je vraiment entendu ça, ou est-ce que je l'ai déduit ? ». À l'oral, cette vérification doit se faire quasi instantanément ; à l'écrit, le temps disponible permet un vrai contrôle final.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Deux restitutions du même extrait, deux registres</h5>
+        <p>À partir des notes prises en 篇 II (Chancellor, coupe budgétaire ~£2bn, Scotland, services locaux) :</p>
+        <p><b>Restitution orale</b> — rythmée, tolère l'hésitation contrôlée : <i>« So, basically, the extract's about a budget cut — the Chancellor announced around two billion pounds in cuts, and it's Scottish local services that would be hit the hardest. »</i></p>
+        <p><b>Restitution écrite</b> — structurée, registre plus soutenu, aucune reprise orale : <i>« The extract reports a budget cut of approximately £2 billion announced by the Chancellor, which local councils in Scotland warn will primarily affect local services. »</i></p>
+        <p>Le contenu factuel est identique — c'est le seul invariant. Ce qui change est la construction de phrase, la densité syntaxique et la tolérance à l'hésitation, propres à chaque registre.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Traduction anglaise <i>— discipline 12, la restitution écrite en est une forme proche, sans le filtre de deux langues</i></span>
+        <span class="linkchip">Anglais économique et commercial <i>— discipline 11, le vocabulaire de registre professionnel réutilisé à l'écrit</i></span>
+        <span class="linkchip">Rédaction universitaire <i>— discipline 10, la structuration d'une synthèse hiérarchisée</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté débutantes</h5><ul>
+          <li>Récitent les notes brutes telles quelles à l'oral, sans les reformuler en phrases correctes, ce qui casse la fluidité</li>
+          <li>Comblent un blanc de mémoire en inventant un détail plausible plutôt que d'admettre l'incertitude</li>
+          <li>Donnent autant de poids à un détail secondaire qu'à l'information principale, faute de hiérarchisation</li>
+        </ul></div>
+        <div class="ee"><h5>Côté candidats expérimentés</h5><ul>
+          <li>Répondent avec un registre trop familier à l'écrit, ou au contraire trop soutenu à l'oral, en oubliant que les deux obéissent à des normes différentes</li>
+          <li>Sur-corrigent une note incertaine après coup en « l'améliorant » au lieu de la signaler explicitement comme approximative</li>
+          <li>Restituent dans l'ordre d'écoute plutôt que dans l'ordre logique attendu par la question posée</li>
+        </ul></div>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>○ À comprendre une fois</h5>
+          <ul>
+            <li>Une note et une phrase de synthèse ne sont pas la même chose — la restitution exige une vraie reformulation</li>
+            <li>L'oral et l'écrit obéissent à des normes de registre différentes, appliquées au même contenu factuel</li>
+            <li>La fidélité factuelle prime toujours sur la fluidité apparente dans l'évaluation d'une compréhension orale</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>● À automatiser par répétition</h5>
+          <ul>
+            <li>Hiérarchiser réflexement l'essentiel avant le détail en construisant sa synthèse</li>
+            <li>Signaler une incertitude à voix haute (« approximately », « if I understood correctly ») plutôt que de la dissimuler</li>
+            <li>Basculer sans effort conscient entre un registre oral rythmé et un registre écrit structuré</li>
+          </ul>
+        </div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous rédigez votre synthèse. Vous n'êtes pas certaine d'avoir bien entendu le chiffre exact annoncé. Que faites-vous ?</p>
+        <p class="dctx">Le reste de la synthèse est solide ; ce chiffre est le seul point flou, et vous n'avez pas de deuxième écoute possible.</p>
+        <div class="dopts">
+          <span>A. Arrondir à un chiffre plausible et l'énoncer avec assurance</span>
+          <span>B. Omettre complètement le chiffre pour éviter d'affirmer quelque chose de faux</span>
+          <span>C. Donner le chiffre avec une réserve explicite — « aux alentours de… », « d'après ce que j'ai compris… »</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de règle universelle — cela dépend du barème précis de l'examinatrice, qu'on ne connaît jamais entièrement à l'avance. L'omission (option B) perd des points pour information manquante, mais élimine tout risque d'invention pénalisée. Deviner avec assurance (option A) est souvent la pire option : si le chiffre est faux, il se lit comme une fabrication, généralement sanctionnée plus lourdement qu'un manque honnête. L'option C — restituer avec une réserve assumée — est en général le meilleur compromis à l'oral : elle montre que l'ordre de grandeur a bien été capté, sans prétendre à une précision qu'on n'a pas.</p>
+          <p>Une nuance à connaître : certains barèmes de synthèse écrite pénalisent aussi les formulations trop vagues si elles sont utilisées comme échappatoire systématique. Le vrai réflexe à automatiser n'est donc pas « toujours couvrir son incertitude », mais « savoir reconnaître, dans l'instant, ce qu'on sait vraiment et le dire pour ce que c'est ».</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un manager anglophone voit ce chapitre</h5>
+          <ol>
+            <li>Une synthèse orale hésitante mais fidèle aux faits vaut mieux qu'une synthèse fluide qui invente un chiffre — la crédibilité se joue sur l'exactitude, pas sur l'aisance apparente</li>
+            <li>Dans un compte-rendu écrit, un manager préfère une note incomplète mais honnête (« chiffre non capté, à confirmer ») à une note qui comble silencieusement le vide</li>
+            <li>Reformuler dans ses propres mots plutôt que réciter mot à mot est justement ce qu'on attend d'un compte-rendu utile — la paraphrase prouve la compréhension réelle</li>
+            <li>Savoir dire « je n'ai pas tout suivi, pouvez-vous confirmer le montant ? » après une réunion est une compétence professionnelle, pas un aveu de faiblesse</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de transcription frappe ici</h5>
+          <ul>
+            <li>Les outils de résumé automatique de réunion appliquent déjà une forme de C5 — mais héritent souvent, sans le signaler, des erreurs de transcription commises en amont</li>
+            <li>Une synthèse générée automatiquement tend à lisser les hésitations humaines en un résumé faussement confiant, là où une candidate entraînée à C5 sait au contraire signaler explicitement ce qu'elle n'a pas capté</li>
+            <li>Le couple transcription + traduction automatique peut accélérer la restitution écrite (discipline 12), mais ne dispense pas de vérifier qu'un chiffre mal transcrit en amont n'a pas silencieusement corrompu toute la synthèse</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Flux non contrôlable<i>C1·C2</i></span>
+        <span class="sp">Écouter pour l'information, pas pour les mots<i>C2·C3</i></span>
+        <span class="sp">Exposition cumulée<i>C4·toute la discipline</i></span>
+        <span class="sp">La note comme preuve, pas comme impression<i>C3·C5</i></span>
+        <span class="sp">Fidélité factuelle avant fluidité<i>C5</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="12-traduction-anglaise-theme-version.html">← Traduction anglaise · thème …</a>
@@ -64,5 +799,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
