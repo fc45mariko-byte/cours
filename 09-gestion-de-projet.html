@@ -3,13 +3,229 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestion de projet — Cours détaillé · Master Plans</title>
+<title>Gestion de Projet — Cours détaillé · Master Plans</title>
 <meta name="description" content="Fiche de cours détaillée — Gestion de projet, discipline 09 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#c0654a;--dom-lt:#f0af9c}</style>
+<style>
+/* Palette — graphite / orange chantier / vert menthe : les couleurs du
+   chantier de projet. Le graphite bleu-gris est celui de l'épure et du
+   plan (Gantt, diagrammes techniques, structure) ; l'orange est celui du
+   jalon et de l'alerte (retard, chemin critique, tâche sans aucune marge) ;
+   le vert menthe est celui de la validation (jalon atteint, projet clos,
+   savoir capitalisé et transmis aux autres disciplines). Discipline 09 :
+   hybride Système/Automatisme (60/40) — la seule vraiment linéaire du
+   programme, sans branches parallèles entre chapitres. */
+:root{
+  --gr:#454b57; --gr-lt:#9198a6;
+  --or:#e0822e; --or-lt:#f3bd8c;
+  --vt:#3fae82; --vt-lt:#94d9bb;
+  --ink:#33363f; --ink-soft:#6c7280;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(69,75,87,.32);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #dfe3e9 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 18%, #bfeed8 0%, transparent 52%),
+    radial-gradient(1000px 720px at 32% 108%, #f6d3ac 0%, transparent 58%),
+    linear-gradient(158deg,#eef0f3 0%, #e3e6ea 42%, #d8ddc5 72%, #ece3d3 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--gr);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--or);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(69,75,87,.24);
+  border-radius:26px;box-shadow:0 18px 48px rgba(51,54,63,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:210px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--or);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#383d47;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--or)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--gr-lt),var(--gr))}
+.cbar .au{background:linear-gradient(90deg,var(--or-lt),var(--or))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--gr)} .crd b.a{color:var(--or)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(120deg,var(--gr),var(--or))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+@media(max-width:680px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 10px 12px;
+  text-align:center}
+.actor svg{width:40px;height:40px;stroke:var(--or);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.64rem;letter-spacing:.03em;margin-top:7px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.7rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine — chaîne strictement linéaire */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--or);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.55rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(69,75,87,.22);border-radius:24px;box-shadow:0 16px 46px rgba(51,54,63,.14)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--gr),var(--or));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#383d47;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--or) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--or-lt) 0 12.5%, transparent 0 25%, var(--or-lt) 0 37.5%, transparent 0 50%, var(--or-lt) 0 62.5%, transparent 0 75%, var(--or-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--or)}
+.problem b{color:var(--or);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(69,75,87,.08);
+  border:1px solid rgba(69,75,87,.32);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--gr);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gr);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--or);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--gr-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(224,130,46,.08);border-left:3px solid var(--or);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vt);color:#25795a;
+  padding:5px 12px;border-radius:14px;background:rgba(63,174,130,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(224,130,46,.09);border:1px solid rgba(224,130,46,.45)}
+.errors .ee{background:rgba(69,75,87,.09);border:1px solid rgba(69,75,87,.35)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--or)} .errors .ee h5{color:var(--gr)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--or)}
+
+/* comprendre / automatiser */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(63,174,130,.09);border:1px solid rgba(63,174,130,.4)}
+.split .m{background:rgba(224,130,46,.09);border:1px solid rgba(224,130,46,.42)}
+.split h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:#25795a} .split .m h5{color:var(--or)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:4px 0 4px 16px;position:relative;color:var(--ink)}
+.split li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--gr-lt)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding:2px 14px 8px}
+table.cmp th{background:var(--gr-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#fff}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(145,152,166,.12)}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--or);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--or);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#383d47;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(145,152,166,.15);border-radius:10px;padding:7px 12px;border-left:3px solid var(--gr-lt)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gr);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(145,152,166,.2);border:1px solid var(--gr-lt)}
+.helix{background:rgba(63,174,130,.09);border:1px solid var(--vt)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#383d47} .helix h5{color:#25795a}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--gr-lt);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:#25795a}
+
+/* diagrammes SVG (WBS, Gantt) */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+.gantt-wrap{margin:16px 0;background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:16px;
+  padding:14px 12px;overflow-x:auto}
+.gantt-wrap svg{display:block;margin:0 auto;min-width:600px}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vt);color:#25795a;
+  padding:5px 12px;border-radius:14px;background:rgba(63,174,130,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--or);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--or);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--or);border-color:var(--or)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,52 +234,613 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d09">
-  <div class="tab">篇 IX</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 09</p>
-    <h3>Gestion de projet</h3>
-    <p class="dmeta">S5 · CM 6h + TD 18h · 2 ECTS · Sonia Tesson</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 200" role="img" aria-label="Un triangle qualité-coût-délai avec ses trois sommets reliés au centre par des pointillés, chaque sommet portant une petite icône : un diamant pour la qualité, une pile de pièces pour le coût, une horloge pour le délai">
+      <defs>
+        <linearGradient id="tri" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f3bd8c" stop-opacity=".28"/><stop offset="1" stop-color="#f3bd8c" stop-opacity=".06"/>
+        </linearGradient>
+      </defs>
+      <path d="M340,34 L146,172 L534,172 Z" fill="url(#tri)" stroke="#454b57" stroke-width="2" stroke-linejoin="round"/>
+      <g stroke="#9198a6" stroke-width="1.4" stroke-dasharray="2 6">
+        <line x1="340" y1="126" x2="340" y2="34"/>
+        <line x1="340" y1="126" x2="146" y2="172"/>
+        <line x1="340" y1="126" x2="534" y2="172"/>
+      </g>
+      <circle cx="340" cy="126" r="3" fill="#454b57" stroke="none"/>
+      <text x="340" y="112" text-anchor="middle" font-family="Josefin Sans" font-size="9" font-style="italic" fill="#6c7280">on n'en choisit</text>
+      <text x="340" y="144" text-anchor="middle" font-family="Josefin Sans" font-size="9" font-style="italic" fill="#6c7280">que deux sur trois</text>
+      <!-- Qualité -->
+      <g transform="translate(340,20)" stroke="#3fae82" stroke-width="1.6" fill="none">
+        <path d="M-8,0 L-4,-8 H4 L8,0 L0,9 Z"/><path d="M-4,-8 L0,0 L4,-8 M-8,0 H8"/>
+      </g>
+      <text x="340" y="8" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="2" fill="#25795a">QUALITÉ</text>
+      <!-- Coût -->
+      <g transform="translate(112,184)" stroke="#e0822e" stroke-width="1.6" fill="none">
+        <ellipse cx="0" cy="4" rx="10" ry="4"/><ellipse cx="0" cy="-3" rx="10" ry="4"/><line x1="-10" y1="-3" x2="-10" y2="4"/><line x1="10" y1="-3" x2="10" y2="4"/>
+      </g>
+      <text x="112" y="198" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="2" fill="#c56a1e">COÛT</text>
+      <!-- Délai -->
+      <g transform="translate(568,184)" stroke="#454b57" stroke-width="1.6" fill="none">
+        <circle r="10"/><path d="M0,-10 V0 L6,4"/>
+      </g>
+      <text x="568" y="198" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="2" fill="#454b57">DÉLAI</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Gestion de Projet</h1>
+    <p class="gen-open">Un projet est <b>unique, daté et contraint</b> — personne n'a jamais mené exactement celui-ci, il a un début et une fin, et il doit tenir dans un budget et un délai souvent fixés avant même qu'on sache tout le travail à faire. Il n'existe donc pas de routine pour le réussir. Comment obtenir malgré tout un résultat non répétitif, obtenu à plusieurs personnes qui ne se connaissent pas forcément, sans dépasser ni le budget ni le délai ? C'est le problème que les six chapitres résolvent l'un après l'autre, strictement dans l'ordre — aucun ne peut être abordé avant celui qui le précède.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:60%"></span><span class="au" style="width:40%"></span></span>
       <span class="crd">Système <b class="s">60%</b> · Automatisme <b class="a">40%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
     </div>
+    <p class="dmeta">S5 · CM 6h + TD 18h · 2 ECTS · Sonia Tesson</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Un projet est <b>unique, daté et contraint</b> : il n'existe pas de routine pour le faire. Comment obtenir un résultat non répétitif, à plusieurs, sans dépasser ni le budget ni le délai ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Ce qu'est un projet, et le triangle QCD</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · qualité–coût–délai, et l'impossibilité d'optimiser les trois</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Cadrage : charte, objectifs SMART, parties prenantes</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b></span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Découpage : le WBS</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b> · <b>Ouvre :</b> C4 — on ne planifie que ce qu'on a découpé</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Planification : Gantt, PERT, chemin critique</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C3</b></span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Risques &amp; pilotage par indicateurs</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C4</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Clôture &amp; retour d'expérience</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C5</b></span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Contrainte</div><div class="tc"><span class="node f">C1 · Triangle QCD</span><span class="ar">→</span><span class="node f">C2 · Cadrage</span></div></div>
-<div class="flow"><span class="fdot"></span>enchaînement strictement séquentiel<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Séquence</div><div class="tc"><span class="node s">C3 · WBS</span><span class="ar">→</span><span class="node a">C4 · Gantt / PERT</span><span class="ar">→</span><span class="node s">C5 · Pilotage</span><span class="ar">→</span><span class="node s">C6 · Clôture</span></div></div>
-</div>
-    <p class="note">Discipline la plus <b>linéaire</b> du programme : chaque chapitre est strictement le prérequis du suivant, sans branches parallèles.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Arbitrage QCD<i>tous</i></span><span class="sp">Découper avant de planifier<i>C3·C4</i></span><span class="sp">Capitaliser l'expérience<i>C6</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="16" cy="10" r="5"/><path d="M6 34c0-10 7-16 10-16s10 6 10 16"/><line x1="30" y1="8" x2="30" y2="30"/><path d="M30 8 L38 12 L30 16 Z"/></svg><b>Chef de projet</b><span>arbitre le QCD, plante les jalons</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="14" cy="9" r="5"/><path d="M4 30c0-9 7-14 10-14s10 5 10 14"/><rect x="22" y="20" width="14" height="11" rx="2"/><path d="M26 20v-3a3 3 0 0 1 6 0v3"/></svg><b>Sponsor</b><span>finance, valide, tranche</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="4"/><circle cx="8" cy="10" r="3"/><circle cx="32" cy="10" r="3"/><circle cx="20" cy="34" r="3"/><line x1="20" y1="20" x2="8" y2="10"/><line x1="20" y1="20" x2="32" y2="10"/><line x1="20" y1="20" x2="20" y2="34"/></svg><b>Partie prenante</b><span>influence sans décider seule</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="13" cy="11" r="5"/><path d="M4 32c0-9 6-14 9-14s9 5 9 14"/><circle cx="27" cy="11" r="5"/><path d="M18 32c0-9 6-14 9-14s9 5 9 14"/></svg><b>Équipe projet</b><span>exécute les lots de travail</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Les six chapitres — une chaîne, pas un arbre</p>
+    <svg class="tl-svg" viewBox="0 0 900 170" preserveAspectRatio="xMidYMid meet">
+      <path d="M60,95 C120,60 160,55 214,55 S 320,120 368,120 S 460,55 522,55 S 620,120 676,120 S 790,90 830,90" fill="none" stroke="#9198a6" stroke-width="3" stroke-linecap="round"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(137,75) rotate(20)"><polygon points="-5,-6 7,0 -5,6" fill="#454b57"/></g>
+        <g transform="translate(291,87) rotate(-8)"><polygon points="-5,-6 7,0 -5,6" fill="#454b57"/></g>
+        <g transform="translate(445,87) rotate(8)"><polygon points="-5,-6 7,0 -5,6" fill="#454b57"/></g>
+        <g transform="translate(599,87) rotate(-8)"><polygon points="-5,-6 7,0 -5,6" fill="#454b57"/></g>
+        <g transform="translate(753,105) rotate(12)"><polygon points="-5,-6 7,0 -5,6" fill="#454b57"/></g>
+        <!-- C1 -->
+        <g transform="translate(60,95)"><circle r="18" fill="#454b57" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="36" text-anchor="middle">Triangle QCD</text></g>
+        <!-- C2 -->
+        <g transform="translate(214,55)"><circle r="18" fill="#454b57" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-25" text-anchor="middle">Cadrage · SMART</text></g>
+        <!-- C3 -->
+        <g transform="translate(368,120)">
+          <path d="M0,-18 A18,18 0 0 0 0,18 Z" fill="#454b57"/><path d="M0,-18 A18,18 0 0 1 0,18 Z" fill="#e0822e"/>
+          <circle r="18" fill="none" stroke="#fff" stroke-width="2"/>
+          <text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="36" text-anchor="middle">WBS (hybride)</text>
+        </g>
+        <!-- C4 -->
+        <g transform="translate(522,55)"><circle r="18" fill="#e0822e" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-25" text-anchor="middle">Gantt · PERT · CPM</text></g>
+        <!-- C5 -->
+        <g transform="translate(676,120)"><circle r="18" fill="#454b57" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="36" text-anchor="middle">Risques · pilotage</text></g>
+        <!-- C6 -->
+        <g transform="translate(830,90)"><circle r="18" fill="#3fae82" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="36" text-anchor="middle">Clôture</text></g>
+      </g>
+    </svg>
+    <p class="note">Discipline la plus <b>linéaire</b> du programme : chaque chapitre est strictement le prérequis du suivant, sans branche parallèle — contrairement à la plupart des autres disciplines, qui se ramifient. On ne peut pas planifier (C4) avant d'avoir découpé (C3), ni découper avant d'avoir cadré (C2), ni cadrer avant d'avoir posé le triangle qui définit ce qu'on arbitre (C1).</p>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le triangle QCD et le cadrage du projet</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une usine qui fabrique chaque jour la même pièce peut standardiser sa procédure, la mesurer, l'améliorer mois après mois : c'est une <b>routine</b>, et une routine se pilote par répétition. Un projet n'a pas ce luxe. Il est unique, daté, contraint — et la première question qu'il pose n'est pas « comment fait-on d'habitude ? » mais <b>« sur quoi peut-on encore jouer, une fois que le résultat, le budget et la date sont à peu près fixés ? »</b> Sans réponse à cette question, chaque décision de pilotage devient un débat sans grammaire commune, où chacun tire la couverture vers ce qui l'arrange.</p>
+
+      <p class="mech">Le levier le plus ancien pour raisonner sur cette contrainte est le triangle <b>qualité–coût–délai</b> (QCD), parfois appelé « triple contrainte » : pour un périmètre de travail donné, on ne peut optimiser les trois sommets à la fois. Plus de qualité coûte plus cher ou prend plus de temps ; aller plus vite coûte plus cher ou dégrade la qualité ; dépenser moins réduit la qualité ou la vitesse. Ce n'est pas un slogan de motivation d'équipe, c'est une contrainte quasi arithmétique : toute décision de pilotage de projet est, in fine, un arbitrage entre ces trois sommets — jamais une addition gratuite qui améliorerait les trois en même temps.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — une attribution à nuancer</h5>
+          <p>Le triangle qualité-coût-délai est fréquemment attribué à l'ingénieur britannique <b>Martin Barnes</b>, qui l'aurait formalisé vers <span class="yr">1969</span> dans ses travaux de formation en gestion de projet. Cette attribution revient très souvent dans la littérature professionnelle — mais, à la différence des dates de Gantt, PERT, CPM et SMART présentées plus loin dans cette fiche, elle n'a pas pu être vérifiée ici avec la même rigueur documentaire. L'idée d'un compromis entre portée, coût et délai circulait sans doute déjà de façon informelle chez les ingénieurs de projet avant toute publication qui la formaliserait sous ce nom précis. À retenir comme une <b>origine probable, non certifiée</b> — pas comme un fait aussi solide que les autres repères de ce chapitre.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un point de vente à ouvrir avant le Black Friday</h5>
+        <p>Une enseigne de prêt-à-porter veut ouvrir sa nouvelle boutique avant le Black Friday : la date est verrouillée, non négociable commercialement. Le budget des travaux, lui, est fixé par la direction régionale et ne bougera pas non plus. Il ne reste donc qu'un seul sommet réellement ajustable : la <b>qualité</b>. Si le mobilier commandé accuse trois semaines de retard, ce sommet-là cédera en silence — on ouvrira quand même, avec des rayonnages provisoires, plutôt que de repousser la date ou de payer un transport express hors budget. Le triangle QCD ne dit pas quoi choisir ; il dit seulement, à l'avance, <b>lequel des trois sommets absorbera le choc</b> quand un aléa survient.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Cadrage : de l'intention au contrat</p>
+      <p class="problem">Le triangle donne une grammaire pour arbitrer, mais ne dit encore rien du <b>contenu</b> du projet. Avant même de découper le travail (篇 II), il faut répondre à des questions plus élémentaires : qui a le droit de dire ce que doit être le résultat ? Qui paie, et jusqu'à quel montant ? Comment saura-t-on, à la fin, si le projet a réussi — sans attendre la date de clôture pour le découvrir ? Sans cadrage écrit, le triangle QCD n'a même pas de sommets définis : on ne peut arbitrer une qualité qu'on n'a jamais formulée noir sur blanc.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — repère vérifié</h5>
+          <p>L'acronyme <b>SMART</b> pour la formulation des objectifs est généralement attribué à <b>George T. Doran</b>, qui publie l'article « There's a S.M.A.R.T. way to write management's goals and objectives » dans la revue <i>Management Review</i> en <span class="yr">novembre 1981</span>. Sans cette grille — Spécifique, Mesurable, Atteignable, Réaliste (ou pertinent), Temporellement défini — un objectif de projet reste une intention (« améliorer l'accueil client ») qu'aucune clôture (C6) ne pourra jamais valider objectivement : on ne peut clore un projet sur un objectif qu'on ne sait pas mesurer.</p>
+        </div>
+      </div>
+
+      <div class="chain">
+        <span class="node">Intention floue du sponsor</span><span class="arrow">→</span>
+        <span class="node">Charte de projet (périmètre, budget, sponsor nommé)</span><span class="arrow">→</span>
+        <span class="node">Objectifs reformulés en SMART</span><span class="arrow">→</span>
+        <span class="node">Parties prenantes identifiées et hiérarchisées</span>
+      </div>
+      <p class="mech">Ce dernier maillon compte autant que les autres : une partie prenante oubliée au cadrage (le bailleur du local, la mairie pour un permis) réapparaît presque toujours plus tard, sous forme de blocage — jamais sous forme de bonne surprise.</p>
+
+      <table class="cmp">
+        <caption>SMART appliqué au projet d'ouverture — un même critère, mal ou bien formulé</caption>
+        <thead><tr><th>Critère</th><th>Mal formulé</th><th>Bien formulé</th></tr></thead>
+        <tbody>
+          <tr><td>Spécifique</td><td>« Améliorer l'accueil en boutique »</td><td>« Réduire le temps d'attente moyen en caisse à l'ouverture »</td></tr>
+          <tr><td>Mesurable</td><td>« Un accueil de qualité »</td><td>« Temps d'attente moyen ≤ 3 minutes, mesuré sur les 30 premiers jours »</td></tr>
+          <tr><td>Atteignable</td><td>« Zéro attente dès le premier jour »</td><td>« ≤ 3 minutes après une semaine de rodage de l'équipe »</td></tr>
+          <tr><td>Réaliste</td><td>« Ouvrir cinq boutiques ce trimestre »</td><td>« Ouvrir cette boutique avec l'équipe et le budget déjà validés »</td></tr>
+          <tr><td>Temporel</td><td>« Un jour, améliorer l'accueil »</td><td>« Atteindre la cible sous 30 jours après l'ouverture »</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Outils de gestion (07) <i>— le tableau de bord de C5 reprend les indicateurs définis dès le cadrage</i></span>
+        <span class="linkchip">Droit des affaires internationales <i>— le bail commercial et le permis engagent des parties prenantes du projet</i></span>
+        <span class="linkchip">Management interculturel (08) <i>— une équipe multi-site redéfinit qui compte vraiment comme partie prenante</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Traiter le triangle QCD comme trois objectifs à maximiser ensemble, plutôt que comme deux à choisir sur trois</li>
+          <li>Écrire des objectifs SMART qui ne sont mesurables qu'en apparence (« satisfaction client » sans indicateur chiffré)</li>
+          <li>Confondre partie prenante et simple destinataire de l'information — une partie prenante peut bloquer le projet, un destinataire non</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Lancer les travaux avant que la charte ne soit signée par un sponsor clairement identifié, faute d'arbitre en cas de conflit</li>
+          <li>Oublier une partie prenante à faible pouvoir apparent (la mairie, un syndic) qui redevient décisive au moment du permis</li>
+          <li>Refuser d'admettre, même en interne, quel sommet du triangle cédera en cas d'aléa — et le découvrir en pleine crise</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Trois semaines avant l'ouverture, le prestataire d'agencement annonce dix jours de retard sur la livraison des rayonnages. Vous dirigez le projet. Que faites-vous ?</p>
+        <p class="dctx">Un transport express coûte 4 000 € de plus ; reporter l'ouverture de dix jours fait rater le pic de Black Friday ; ouvrir à la date prévue avec des rayonnages provisoires dégrade l'image des dix premiers jours.</p>
+        <div class="dopts">
+          <span>A. Payer le transport express pour tenir la date et la qualité prévues</span>
+          <span>B. Reporter l'ouverture de dix jours, quitte à perdre le pic commercial</span>
+          <span>C. Ouvrir à la date prévue avec un aménagement provisoire, corrigé sous quinze jours</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique — c'est précisément ce que dit le triangle QCD. L'option A protège la qualité et le délai, mais dégrade le coût de façon non budgétée : à répéter ce type d'arbitrage sur chaque aléa, la marge du projet s'érode invisiblement. L'option B protège le coût et la qualité, mais un délai raté avant le Black Friday n'est pas un simple retard : c'est une perte de chiffre d'affaires potentiellement supérieure aux 4 000 € du transport express — ce que l'option A évite justement.</p>
+          <p>L'option C est souvent la plus réaliste en petite structure : elle assume ouvertement que la qualité cède un peu, temporairement, plutôt que le coût ou le délai — à condition de le dire clairement en interne (et parfois aux premiers clients) plutôt que de le subir en silence. Une dirigeante avisée choisit moins « la bonne case » qu'elle ne décide, <b>à l'avance</b>, quel sommet elle accepte de sacrifier quand l'aléa survient — ce qui est exactement le rôle du triangle QCD posé dès le cadrage.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un objectif de projet qu'on ne sait pas mesurer est une promesse qu'on ne pourra jamais tenir prouver — ni démentir</li>
+            <li>Le triangle QCD n'est pas un outil de communication, c'est une décision d'arbitrage à prendre avant la crise, pas pendant</li>
+            <li>Une charte de projet sans sponsor nommé et joignable est une charte qui n'engage personne au moment décisif</li>
+            <li>La partie prenante qu'on choisit d'ignorer au cadrage revient toujours — jamais sous une forme agréable</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de gestion de projet frappe ici</h5>
+          <ul>
+            <li>Détection automatique des objectifs formulés dans la charte qui ne sont pas réellement mesurables, avant validation du sponsor</li>
+            <li>Cartographie des parties prenantes croisant pouvoir et intérêt à partir des échanges déjà écrits (mails, comptes-rendus)</li>
+            <li>Simulation instantanée de l'arbitrage QCD : « si ce poste dérape de X, quel sommet cède, et de combien ? »</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Découper puis planifier : WBS, Gantt, PERT, chemin critique</h2>
+      <p class="dsub">Chapitres C3 · C4 — hybride : comprendre la logique, puis automatiser le calcul</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C3</p>
+      <p class="problem">Un projet cadré (篇 I) reste, à ce stade, une intention et une liste de contraintes — pas encore un travail exécutable. Comment transformer « ouvrir une boutique avant le Black Friday » en une liste de tâches que des personnes précises peuvent réellement accomplir, dans un ordre précis, sans qu'aucune ne soit oubliée et sans qu'aucune ne soit comptée deux fois ? C'est le problème que résout le <b>WBS</b> (Work Breakdown Structure, structure de découpage du projet) : une décomposition hiérarchique du résultat final en lots de travail de plus en plus petits, jusqu'à obtenir des tâches qu'une seule personne peut estimer et exécuter.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Le découpage hiérarchique du travail est formalisé dans le cadre du programme <b>PERT/COST</b> du département de la Défense américain au début des années 1960, puis standardisé sous le nom de <i>Work Breakdown Structure</i> par la norme militaire américaine <b>MIL-STD-881</b>, publiée en <span class="yr">1968</span> pour les programmes d'armement. Cette généalogie, moins documentée dans le détail que celle du PERT lui-même (voir plus bas), est présentée ici comme un repère communément admis dans la littérature professionnelle — pas comme une date aussi solidement vérifiée que celles de Gantt, PERT, CPM ou SMART.</p>
+        </div>
+      </div>
+
+      <div class="chain">
+        <span class="node">Livrable final</span><span class="arrow">→</span>
+        <span class="node">Sous-livrables (lots)</span><span class="arrow">→</span>
+        <span class="node">Lots de travail assignables</span><span class="arrow">→</span>
+        <span class="node">Tâches estimables en durée</span>
+      </div>
+      <p class="mech">Le principe qui verrouille tout le reste : <b>on ne planifie que ce qu'on a découpé</b>. Une tâche absente du WBS n'apparaîtra jamais sur le Gantt (C4), et un lot de travail dupliqué sous deux libellés fera compter deux fois la même charge. C'est pourquoi le WBS doit couvrir la totalité du périmètre sans recouvrement — ce qu'on appelle parfois le « principe des 100% » : ni oubli, ni doublon.</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 640 220" width="100%" style="max-width:640px" role="img" aria-label="WBS du projet d'ouverture de point de vente, en trois branches">
+          <g font-family="Josefin Sans" font-size="10" fill="#33363f">
+            <line x1="320" y1="46" x2="140" y2="70" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="320" y1="46" x2="320" y2="70" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="320" y1="46" x2="500" y2="70" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="140" y1="110" x2="90" y2="138" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="140" y1="110" x2="190" y2="138" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="320" y1="110" x2="270" y2="138" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="320" y1="110" x2="370" y2="138" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="500" y1="110" x2="450" y2="138" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="500" y1="110" x2="550" y2="138" stroke="#9198a6" stroke-width="1.5"/>
+            <rect x="210" y="6" width="220" height="40" rx="10" fill="#454b57"/>
+            <text x="320" y="22" text-anchor="middle" fill="#fff" font-weight="600">Ouverture du</text>
+            <text x="320" y="36" text-anchor="middle" fill="#fff" font-weight="600">point de vente</text>
+            <rect x="70" y="70" width="140" height="40" rx="10" fill="#fff" stroke="#454b57" stroke-width="1.5"/>
+            <text x="140" y="94" text-anchor="middle">Local &amp; travaux</text>
+            <rect x="250" y="70" width="140" height="40" rx="10" fill="#fff" stroke="#454b57" stroke-width="1.5"/>
+            <text x="320" y="94" text-anchor="middle">Stock &amp; marchandise</text>
+            <rect x="430" y="70" width="140" height="40" rx="10" fill="#fff" stroke="#454b57" stroke-width="1.5"/>
+            <text x="500" y="94" text-anchor="middle">Équipe &amp; ouverture</text>
+            <rect x="42" y="138" width="96" height="42" rx="8" fill="#fff" stroke="#e0822e" stroke-width="1.3"/>
+            <text x="90" y="156" text-anchor="middle" font-size="9">Bail &amp;</text><text x="90" y="168" text-anchor="middle" font-size="9">permis</text>
+            <rect x="142" y="138" width="96" height="42" rx="8" fill="#fff" stroke="#e0822e" stroke-width="1.3"/>
+            <text x="190" y="156" text-anchor="middle" font-size="9">Aménage-</text><text x="190" y="168" text-anchor="middle" font-size="9">ment</text>
+            <rect x="222" y="138" width="96" height="42" rx="8" fill="#fff" stroke="#e0822e" stroke-width="1.3"/>
+            <text x="270" y="156" text-anchor="middle" font-size="9">Commande</text><text x="270" y="168" text-anchor="middle" font-size="9">fournisseurs</text>
+            <rect x="322" y="138" width="96" height="42" rx="8" fill="#fff" stroke="#e0822e" stroke-width="1.3"/>
+            <text x="370" y="156" text-anchor="middle" font-size="9">Réception</text><text x="370" y="168" text-anchor="middle" font-size="9">&amp; mise en rayon</text>
+            <rect x="402" y="138" width="96" height="42" rx="8" fill="#fff" stroke="#e0822e" stroke-width="1.3"/>
+            <text x="450" y="156" text-anchor="middle" font-size="9">Recrute-</text><text x="450" y="168" text-anchor="middle" font-size="9">ment</text>
+            <rect x="502" y="138" width="96" height="42" rx="8" fill="#fff" stroke="#e0822e" stroke-width="1.3"/>
+            <text x="550" y="156" text-anchor="middle" font-size="9">Formation</text><text x="550" y="168" text-anchor="middle" font-size="9">&amp; lancement</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>C3 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi le découpage doit couvrir 100% du périmètre sans recouvrement — un WBS n'est ni un buffet où l'on picore, ni une liste où une même tâche apparaît sous deux libellés</li>
+            <li>Pourquoi le niveau de détail s'arrête au « lot de travail » assignable à un seul responsable, jamais plus bas ni plus haut</li>
+            <li>Pourquoi le WBS conditionne tout le reste : rien de ce qui n'y figure pas ne sera jamais planifié ni budgété</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C3 — à automatiser</h5>
+          <ul>
+            <li>Décomposer chaque livrable en sous-livrables jusqu'à des tâches d'une durée estimable (souvent 1 à 10 jours)</li>
+            <li>Numéroter chaque tâche (1.1, 1.2, 1.2.1…) pour tracer son rattachement dans l'arborescence</li>
+            <li>Assigner un unique responsable par lot de travail avant de passer à la planification</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C4</p>
+      <p class="problem">Le WBS donne des tâches ; il ne dit encore rien de <b>quand</b> les faire ni dans quel ordre. Certaines doivent attendre la fin d'une autre — on ne forme pas une équipe dans un magasin dont les travaux ne sont pas finis. D'autres peuvent se dérouler en parallèle sans se gêner — recruter pendant que les travaux avancent. Comment représenter, lire et surtout <b>piloter</b> cet enchaînement — et savoir laquelle des tâches, si elle prend un jour de retard, fait automatiquement glisser la date d'ouverture, et laquelle a une marge sans danger ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — un vrai cas d'école d'attribution</h5>
+          <p>Le diagramme à barres horizontales qu'on appelle aujourd'hui « diagramme de Gantt » est développé par l'ingénieur et consultant américain <b>Henry L. Gantt</b> vers <span class="yr">1910-1915</span>, et se diffuse largement lorsqu'il sert à planifier la production industrielle américaine pendant la <b>Première Guerre mondiale</b>. Mais un outil très proche — le <b>harmonogramme</b> — avait déjà été conçu quinze ans plus tôt par l'ingénieur polonais <b>Karol Adamiecki</b>, dès <span class="yr">1896</span>. Adamiecki ne publie cependant qu'en polonais, puis en russe : sa diffusion internationale est bloquée par la barrière linguistique, tandis que la publication de Gantt en anglais, portée par l'effort de guerre américain, lui vaut la postérité du nom.</p>
+          <p>C'est un cas d'école <b>rigoureusement comparable</b> à celui de la formule dite « de Wilson » ailleurs dans ce programme (discipline 07, Outils de gestion, où la paternité réelle revient à Ford W. Harris, 1913) : le nom qui reste attaché à un outil n'est presque jamais garanti d'être celui de son tout premier inventeur — il est souvent celui de sa première publication dans une langue qui circule internationalement.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — PERT et CPM, jumeaux nés séparément</h5>
+          <p>Le <b>PERT</b> (Program Evaluation and Review Technique) est développé en <span class="yr">1957-1958</span> par la marine américaine, avec le cabinet <b>Booz Allen Hamilton</b> et l'industriel <b>Lockheed</b>, pour planifier le missile balistique embarqué <b>Polaris</b> — un projet si incertain qu'aucune durée unique par tâche n'aurait été crédible ; PERT estime chaque durée par trois valeurs (optimiste, pessimiste, probable). La même année, indépendamment, <b>Morgan R. Walker</b> (DuPont) et <b>James E. Kelley Jr.</b> (Remington Rand) développent la méthode du <b>chemin critique</b> (CPM) pour des projets industriels aux durées, elles, bien connues et fixes. PERT est né militaire et probabiliste, le CPM industriel et déterministe — la pratique moderne du diagramme de Gantt annoté d'un chemin critique emprunte aux deux traditions.</p>
+        </div>
+      </div>
+
+      <div class="chain">
+        <span class="node">Chaque tâche a une durée et des prédécesseurs</span><span class="arrow">→</span>
+        <span class="node">On calcule la date de fin au plus tôt de chaque tâche</span><span class="arrow">→</span>
+        <span class="node">La suite de tâches sans aucune marge du début à la fin = chemin critique</span><span class="arrow">→</span>
+        <span class="node">Tout retard sur ce chemin retarde le projet, jour pour jour</span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret — le Gantt du point de vente</p>
+      <div class="gantt-wrap">
+        <svg viewBox="0 0 760 310" role="img" aria-label="Diagramme de Gantt du projet d'ouverture de point de vente sur six semaines, avec le chemin critique en orange">
+          <g font-family="Josefin Sans" font-size="10" fill="#33363f">
+            <line x1="170" y1="48" x2="650" y2="48" stroke="#454b57" stroke-width="1.5"/>
+            <g stroke="#d4d7dc" stroke-width="1">
+              <line x1="170" y1="48" x2="170" y2="262"/><line x1="250" y1="48" x2="250" y2="262"/>
+              <line x1="330" y1="48" x2="330" y2="262"/><line x1="410" y1="48" x2="410" y2="262"/>
+              <line x1="490" y1="48" x2="490" y2="262"/><line x1="570" y1="48" x2="570" y2="262"/>
+              <line x1="650" y1="48" x2="650" y2="262"/>
+            </g>
+            <text x="210" y="40" text-anchor="middle">S1</text><text x="290" y="40" text-anchor="middle">S2</text>
+            <text x="370" y="40" text-anchor="middle">S3</text><text x="450" y="40" text-anchor="middle">S4</text>
+            <text x="530" y="40" text-anchor="middle">S5</text><text x="610" y="40" text-anchor="middle">S6</text>
+
+            <text x="160" y="68" text-anchor="end">Recherche du local</text>
+            <rect x="170" y="50" width="160" height="28" rx="6" fill="#f3bd8c" stroke="#e0822e" stroke-width="2.5"/>
+            <text x="160" y="104" text-anchor="end">Travaux d'aménagement</text>
+            <rect x="330" y="86" width="240" height="28" rx="6" fill="#f3bd8c" stroke="#e0822e" stroke-width="2.5"/>
+            <text x="160" y="140" text-anchor="end">Recrutement équipe</text>
+            <rect x="170" y="122" width="240" height="28" rx="6" fill="#fff" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="410" y1="136" x2="570" y2="136" stroke="#9198a6" stroke-width="1.5" stroke-dasharray="2 5"/>
+            <text x="160" y="176" text-anchor="end">Commande du stock</text>
+            <rect x="330" y="158" width="160" height="28" rx="6" fill="#fff" stroke="#9198a6" stroke-width="1.5"/>
+            <line x1="490" y1="172" x2="570" y2="172" stroke="#9198a6" stroke-width="1.5" stroke-dasharray="2 5"/>
+            <text x="160" y="212" text-anchor="end">Formation équipe</text>
+            <rect x="570" y="194" width="80" height="28" rx="6" fill="#f3bd8c" stroke="#e0822e" stroke-width="2.5"/>
+            <text x="160" y="248" text-anchor="end">Ouverture</text>
+            <polygon points="650,234 662,244 650,254 638,244" fill="#3fae82" stroke="#fff" stroke-width="2"/>
+
+            <line x1="170" y1="272" x2="650" y2="272" stroke="#e0822e" stroke-width="2.5"/>
+            <circle cx="170" cy="272" r="4" fill="#e0822e"/><circle cx="330" cy="272" r="4" fill="#e0822e"/>
+            <circle cx="570" cy="272" r="4" fill="#e0822e"/><circle cx="650" cy="272" r="4" fill="#e0822e"/>
+            <text x="410" y="286" text-anchor="middle" font-style="italic" fill="#c56a1e">chemin critique — 6 semaines, aucune marge</text>
+
+            <rect x="170" y="296" width="14" height="10" fill="#f3bd8c" stroke="#e0822e" stroke-width="1.5"/><text x="190" y="305">tâche critique</text>
+            <rect x="290" y="296" width="14" height="10" fill="#fff" stroke="#9198a6" stroke-width="1.5"/><text x="310" y="305">tâche avec marge</text>
+            <polygon points="440,306 447,296 454,306 447,301" fill="#3fae82"/><text x="462" y="305">jalon</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note">Recrutement et commande de stock ont chacun une <b>marge</b> (float, en pointillés) : quelques jours de retard n'y changent rien à la date d'ouverture. Recherche du local, travaux et formation forment, elles, une chaîne continue sans aucune marge — c'est le <b>chemin critique</b> : un seul jour de retard sur l'une de ces trois tâches décale l'ouverture d'un jour, jour pour jour.</p>
+
+      <div class="split">
+        <div class="u">
+          <h5>C4 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi une tâche peut avoir des jours de marge sans mettre le projet en danger, alors qu'une autre, de durée identique, n'en tolère aucun</li>
+            <li>Pourquoi le chemin critique peut changer en cours de route si une tâche qui avait de la marge la consomme entièrement — il n'est pas figé au lancement</li>
+            <li>Pourquoi PERT (durées probabilistes) et Gantt (vue calendaire) ne sont pas concurrents mais complémentaires : le premier calcule, le second communique</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C4 — à automatiser</h5>
+          <ul>
+            <li>Durée moyenne PERT = (optimiste + 4 × probable + pessimiste) ÷ 6</li>
+            <li>Sommer les durées le long de chaque chemin du réseau de tâches pour identifier le plus long = chemin critique</li>
+            <li>Reporter chaque tâche sur l'axe du temps une fois l'ordre et les durées calculés, pour obtenir le Gantt</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="cmp">
+        <caption>PERT et CPM — deux méthodes nées la même année, dans deux mondes différents</caption>
+        <thead><tr><th>Critère</th><th>PERT</th><th>CPM</th></tr></thead>
+        <tbody>
+          <tr><td>Origine</td><td>US Navy, Booz Allen Hamilton, Lockheed — 1957-58, programme Polaris</td><td>DuPont (M. Walker), Remington Rand (J. Kelley) — 1957, indépendamment</td></tr>
+          <tr><td>Logique</td><td>Probabiliste : trois durées (optimiste, pessimiste, probable)</td><td>Déterministe : une durée fixe par tâche</td></tr>
+          <tr><td>Usage privilégié</td><td>R&amp;D, projets à forte incertitude technique</td><td>Travaux industriels, durées bien connues</td></tr>
+          <tr><td>Résultat produit</td><td>Durée espérée du projet + variance</td><td>Chemin critique explicite, marge calculée par tâche</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Outils de gestion (07) <i>— le taux d'avancement du Gantt alimente le tableau de bord de pilotage (C5)</i></span>
+        <span class="linkchip">Gestion financière (06) <i>— chaque lot du WBS porte une ligne budgétaire à suivre</i></span>
+        <span class="linkchip">Comptabilité générale (05) <i>— l'engagement de dépense suit le calendrier du Gantt, pas l'inverse</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que le chemin critique est la liste des tâches « les plus importantes » plutôt que celle sans aucune marge</li>
+          <li>Confondre WBS et organigramme d'équipe — le WBS découpe le <em>travail</em>, pas les personnes</li>
+          <li>Oublier de recalculer le chemin critique après un retard, comme s'il était figé une fois pour toutes au lancement</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Construire le Gantt directement, sans WBS préalable, en oubliant des lots entiers découverts seulement en cours de chantier</li>
+          <li>Traiter toutes les tâches en retard avec la même urgence, sans distinguer celles qui ont de la marge de celles qui n'en ont pas</li>
+          <li>Ne jamais recalculer les marges après un aléa, si bien que le vrai chemin critique dérive sans que personne ne le remarque</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Les travaux (tâche critique) prennent trois jours de retard. Le recrutement (tâche avec marge) est terminé en avance. Redéployez-vous les personnes déjà recrutées sur les travaux pour rattraper le retard ?</p>
+        <p class="dctx">Les recrues n'ont aucune compétence en agencement ; les laisser inactives ne coûte rien dans l'immédiat, mais le chantier accumule du retard sur le chemin critique.</p>
+        <div class="dopts">
+          <span>A. Les redéployer quand même sur des tâches simples du chantier (nettoyage, portage)</span>
+          <span>B. Les laisser inactives et chercher une ressource qualifiée supplémentaire pour le chantier</span>
+          <span>C. Avancer la formation initialement prévue plus tard, pour absorber utilement leur temps disponible</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Redéployer des recrues non qualifiées sur une tâche critique technique (option A) peut sembler logique — « tout le monde aide » — mais un chantier d'agencement n'accélère pas linéairement avec le nombre de bras non qualifiés : au-delà d'un certain point, cela ralentit même le travail des professionnels (encadrement, sécurité). L'option B respecte la logique du chemin critique — ajouter une ressource compétente là où le retard se produit réellement — mais coûte cher et prend du temps à mobiliser.</p>
+          <p>L'option C est souvent la plus économiquement rationnelle : le recrutement a de la marge (C4 le montre explicitement), donc utiliser cette marge pour avancer une autre tâche du WBS (C3) qui, elle, se rapprochera du chemin critique plus tard, est une vraie optimisation — à condition de vérifier que cela ne crée pas un nouveau goulot ailleurs. Le point à retenir : la marge d'une tâche n'est pas du temps perdu, c'est du temps qu'on peut réallouer <b>ailleurs sur le WBS</b>, jamais sur une tâche à laquelle l'équipe n'apporte pas de compétence réelle.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un Gantt sans WBS solide en amont est une jolie image dont la moitié des tâches manque encore à découvrir</li>
+            <li>Le chemin critique dit où regarder chaque semaine — les tâches hors chemin critique méritent un suivi plus léger, pas nul</li>
+            <li>Gantt gagne le nom, mais Adamiecki avait l'idée quinze ans plus tôt : ne jamais confondre l'inventeur et celui qui publie le premier dans la bonne langue</li>
+            <li>PERT et CPM, nés la même année dans deux mondes différents, rappellent qu'une même contrainte (planifier sous incertitude) peut recevoir deux réponses solides et complémentaires</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de gestion de projet frappe ici</h5>
+          <ul>
+            <li>Recalcul automatique du chemin critique à chaque mise à jour d'avancement, sans attendre la réunion hebdomadaire</li>
+            <li>Alerte ciblée uniquement sur les tâches sans marge en retard, pour éviter l'épuisement d'attention sur tout le Gantt</li>
+            <li>Suggestion de réallocation des ressources en marge vers d'autres lots du WBS, plutôt que vers une tâche critique hors compétence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Piloter dans l'incertitude, puis clôturer</h2>
+      <p class="dsub">Chapitres C5 · C6</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C5</p>
+      <p class="problem">Le Gantt donne un plan théorique daté au jour près (篇 II) — mais un projet ne se déroule jamais exactement comme prévu : un permis tarde, un fournisseur fait faillite, une résistance interne freine l'adoption. Comment continuer à piloter un projet une fois qu'il a quitté le papier et qu'il vit, avec ses aléas, <b>sans attendre la date de clôture pour découvrir qu'il a dérapé</b> ? Deux réponses complémentaires : anticiper les risques avant qu'ils ne surviennent, et suivre un petit nombre d'indicateurs choisis pendant l'exécution — pas tous les chiffres disponibles, seulement ceux qui alertent tôt.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — à traiter avec prudence</h5>
+          <p>Le pilotage par écart budgétaire trouve une de ses formalisations dans les critères américains de contrôle coût/délai (<b>C/SCSC</b>), publiés en <span class="yr">1967</span> pour les programmes de défense — ancêtres de ce qu'on appelle aujourd'hui la gestion de la valeur acquise (Earned Value Management). Comme pour le WBS plus haut, cette généalogie est un repère communément admis dans la littérature professionnelle, pas une date aussi solidement établie que celles de Gantt, PERT, CPM ou SMART présentées dans cette fiche — elle est donc signalée ici avec la même prudence.</p>
+        </div>
+      </div>
+
+      <div class="chain">
+        <span class="node">Identifier un risque (probabilité × impact)</span><span class="arrow">→</span>
+        <span class="node">Décider : éviter, réduire, transférer ou accepter</span><span class="arrow">→</span>
+        <span class="node">Suivre l'avancement réel, pas seulement le temps écoulé</span><span class="arrow">→</span>
+        <span class="node">Comparer avancement réel et prévu au même jour</span>
+      </div>
+      <p class="mech">Le piège le plus classique : lire un budget consommé à 60% comme un signe que « tout va bien », alors que les travaux ne sont physiquement avancés qu'à 40%. L'écart entre avancement physique et consommation budgétaire, au même instant, est un indicateur d'alerte bien plus fiable que l'un ou l'autre pris seul — c'est exactement la logique de sélection resserrée d'indicateurs enseignée dans le tableau de bord de gestion (discipline 07, Outils de gestion) : peu d'indicateurs, mais choisis pour leur pouvoir d'alerte.</p>
+
+      <table class="cmp">
+        <caption>Registre des risques du point de vente — arbitrer, pas seulement lister</caption>
+        <thead><tr><th>Risque identifié</th><th>Probabilité</th><th>Impact</th><th>Réponse retenue</th></tr></thead>
+        <tbody>
+          <tr><td>Retard de livraison du mobilier</td><td>Élevée</td><td>Fort (chemin critique)</td><td>Réduire — commande anticipée + fournisseur de secours</td></tr>
+          <tr><td>Refus ou retard du permis mairie</td><td>Moyenne</td><td>Fort (bloque les travaux)</td><td>Éviter — dépôt du dossier dès le cadrage, avant même le WBS</td></tr>
+          <tr><td>Départ d'un salarié recruté</td><td>Faible</td><td>Moyen (tâche à marge)</td><td>Accepter — la marge du recrutement absorbe un remplacement</td></tr>
+          <tr><td>Dépassement du budget travaux</td><td>Moyenne</td><td>Fort (sommet coût du triangle)</td><td>Transférer — clause de pénalité de retard au contrat du prestataire</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un indicateur qui rassure à tort</h5>
+        <p>À mi-parcours du projet d'ouverture, le tableau de bord affiche : budget travaux consommé à 60%. Un lecteur pressé y verrait un projet globalement sous contrôle. Mais l'indicateur d'avancement physique, lui, montre que les travaux ne sont réellement finis qu'à 40% — le prestataire a facturé l'acompte et les matériaux avant même de les poser. L'écart de vingt points entre les deux courbes est le signal d'alerte réel : au rythme actuel, le chantier ne sera pas terminé à la date prévue, alors que le seul indicateur budgétaire aurait laissé croire le contraire jusqu'à la dernière semaine.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C6</p>
+      <p class="problem">Un projet a une fin — mais « livré » n'est pas la même chose que « clos ». Sans étape de clôture formelle, l'équipe se disperse dès la livraison, personne ne solde les engagements financiers ouverts, et surtout, aucune leçon n'est capitalisée pour le prochain projet : la même erreur (le même retard fournisseur, le même conflit de rôles mal cadré) se répète, projet après projet, sans que personne ne s'en souvienne vraiment.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M13 20l5 6 9-12"/></svg>
+        <div>
+          <h5>Origine de la règle — repère généralement admis</h5>
+          <p>La clôture formelle comme étape de gestion de projet à part entière est standardisée par le <b>Project Management Institute</b> (PMI) dans son <i>Project Management Body of Knowledge</i> (PMBOK), dont la première édition paraît en <span class="yr">1996</span> — codifiant une pratique qui existait déjà de façon informelle dans l'industrie et la défense américaines depuis les années PERT/CPM. Comme les autres repères non centraux de cette fiche, cette date est présentée avec un niveau de certitude moindre que celles vérifiées pour Gantt, PERT, CPM et SMART.</p>
+        </div>
+      </div>
+
+      <div class="chain">
+        <span class="node">Livraison technique</span><span class="arrow">→</span>
+        <span class="node">Recette formelle avec le sponsor</span><span class="arrow">→</span>
+        <span class="node">Solde des engagements (budget, contrats, ressources libérées)</span><span class="arrow">→</span>
+        <span class="node">Retour d'expérience écrit et archivé</span>
+      </div>
+
+      <div class="example">
+        <h5>Clore le projet d'ouverture</h5>
+        <p>La boutique ouvre avec deux semaines de retard mais dans le budget global. La recette formelle avec la direction régionale acte l'écart entre budget prévisionnel et budget réel, poste par poste. La note de retour d'expérience, elle, relève que le lot travaux a été sous-estimé de 15% sur les trois dernières ouvertures de l'enseigne — une régularité invisible tant qu'aucun projet ne l'écrit noir sur blanc. Pour la prochaine ouverture, ce poste sera majoré d'emblée dans le cadrage (篇 I), avant même que le WBS ne soit redessiné.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Outils de gestion (07) <i>— les indicateurs de clôture rejoignent le tableau de bord permanent de l'entreprise</i></span>
+        <span class="linkchip">Comptabilité générale (05) <i>— la clôture solde les engagements comptables ouverts pendant le chantier</i></span>
+        <span class="linkchip">Gestion financière (06) <i>— l'écart budget prévisionnel / réel alimente la prochaine décision d'investissement</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Réduire la gestion des risques à une liste de dangers, sans jamais choisir de réponse (éviter/réduire/transférer/accepter)</li>
+          <li>Croire qu'un budget peu consommé signifie automatiquement un projet en avance</li>
+          <li>Traiter la clôture comme une formalité administrative plutôt que comme une étape productrice de savoir</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Multiplier les indicateurs de suivi jusqu'à ce que plus personne ne les lise chaque semaine — la même dérive qu'un tableau de bord surchargé</li>
+          <li>Dissoudre l'équipe projet dès la livraison, avant que les engagements financiers ne soient soldés</li>
+          <li>Ne jamais relire les retours d'expérience des projets précédents avant de lancer le suivant, redécouvrant les mêmes erreurs</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Le projet est livré avec deux semaines de retard, mais dans le budget. Le sponsor veut passer directement au projet suivant, jugeant le retour d'expérience formel une perte de temps. Que faites-vous ?</p>
+        <p class="dctx">L'équipe est déjà sollicitée sur la prochaine ouverture ; organiser un vrai retour d'expérience prend une demi-journée que personne n'a budgétée.</p>
+        <div class="dopts">
+          <span>A. Suivre le sponsor et enchaîner directement, le projet ayant globalement réussi</span>
+          <span>B. Imposer une demi-journée de retour d'expérience malgré la réticence du sponsor</span>
+          <span>C. Rédiger seul(e) une note courte de deux pages à partir des indicateurs déjà suivis, sans réunion d'équipe</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>L'option A est compréhensible sous pression commerciale, mais elle garantit que la cause du retard — probablement la même sous-estimation chronique du lot travaux — ne sera documentée nulle part et se reproduira. L'option B est la plus complète méthodologiquement, mais un sponsor déjà convaincu de l'inutilité de l'exercice risque de la vivre comme une perte de temps imposée, ce qui nuit à la qualité réelle des échanges pendant la réunion.</p>
+          <p>L'option C est un compromis souvent efficace en petite structure : elle capitalise l'essentiel (l'écart budgétaire, la cause probable, la recommandation pour la prochaine fois) sans réclamer un temps d'équipe que le sponsor refuse d'accorder. Elle a une limite reconnue : elle perd le bénéfice d'un débat collectif où d'autres membres de l'équipe auraient pu signaler une cause différente. Il n'y a pas de retour d'expérience « parfait » — il y a seulement celui qu'on fait réellement, contre celui qu'on ne fait jamais.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un indicateur unique ment presque toujours ; c'est l'écart entre deux indicateurs complémentaires qui révèle un vrai problème</li>
+            <li>Un risque « accepté » doit l'être consciemment, pas par oubli — la différence ne se voit qu'après coup, quand le risque survient</li>
+            <li>Une clôture sans retour d'expérience écrit transforme chaque nouveau projet en redécouverte des mêmes erreurs</li>
+            <li>Le vrai coût d'un projet n'est jamais visible à sa livraison — il se révèle dans l'écart avec le suivant, s'il répète l'erreur</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de gestion de projet frappe ici</h5>
+          <ul>
+            <li>Calcul automatique de l'écart entre avancement physique déclaré et budget consommé, alerte dès qu'il dépasse un seuil</li>
+            <li>Génération d'un premier jet de retour d'expérience à partir des indicateurs et des échanges déjà tracés, à faire valider en réunion</li>
+            <li>Recherche automatique, au lancement d'un nouveau projet, des retours d'expérience de projets comparables déjà archivés</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Arbitrage QCD<i>tous les chapitres</i></span>
+        <span class="sp">On ne planifie que ce qu'on a découpé<i>C3·C4</i></span>
+        <span class="sp">Chemin critique = où le retard se voit tout de suite<i>C4·C5</i></span>
+        <span class="sp">Peu d'indicateurs, choisis pour alerter<i>C5, lien discipline 07</i></span>
+        <span class="sp">Capitaliser plutôt que répéter<i>C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="08-management-interculturel.html">← Management interculturel</a>
     <a class="navbtn home" href="index.html">Index des matières</a>
-    <a class="navbtn next" href="10-redaction-universitaire-recherche.html">Rédaction universitaire & in… →</a>
+    <a class="navbtn next" href="10-redaction-universitaire-recherche.html">Rédaction universitaire &amp; recherche →</a>
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

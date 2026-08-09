@@ -3,13 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Management interculturel — Cours détaillé · Master Plans</title>
+<title>Management Interculturel — Cours détaillé · Master Plans</title>
 <meta name="description" content="Fiche de cours détaillée — Management interculturel, discipline 08 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#7d5aa6;--dom-lt:#c3aee0}</style>
+<style>
+/* Palette — indigo / terre de Sienne / ocre doré : trois pigments qui
+   traversent toutes les cultures plutôt que d'en représenter une seule.
+   L'indigo est une teinture universelle, de l'Inde au Mali en passant par
+   le Japon ; la terre de Sienne et l'ocre doré comptent parmi les plus
+   anciens pigments utilisés par l'humanité, sur tous les continents.
+   Identité propre à la discipline 08 — distincte des autres fiches. */
+:root{
+  --p1:#b8683a; --p1-lt:#e0b191;
+  --p2:#c9973d; --p2-lt:#edcf94;
+  --p3:#3d4f8c; --p3-lt:#94a3d9; --p3-dk:#2d3a68;
+  --ink:#3a3428; --ink-soft:#7d715a;
+  --paper:rgba(255,255,255,.64); --paper-hi:rgba(255,255,255,.86);
+  --line:rgba(184,104,58,.4); --vert:#4f8f6e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -4%, #f1dcc0 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 18%, #b7c1e6 0%, transparent 52%),
+    radial-gradient(1000px 720px at 30% 108%, #e7c3a8 0%, transparent 58%),
+    linear-gradient(158deg,#f0e2cd 0%, #e6cdb4 40%, #c8cfe8 74%, #ecdcc2 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p3-dk);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(184,104,58,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(58,52,40,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:190px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#5a3f28;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p3-lt),var(--p3-dk))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p3-dk)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p3-dk)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+@media(max-width:640px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:44px;height:44px;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(184,104,58,.26);border-radius:24px;box-shadow:0 16px 46px rgba(58,52,40,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#5a3f28;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(61,79,140,.09);
+  border:1px solid rgba(61,79,140,.38);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(184,104,58,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#3f7a66;
+  padding:5px 12px;border-radius:14px;background:rgba(79,143,110,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(201,151,61,.12);border:1px solid rgba(201,151,61,.5)}
+.errors .ee{background:rgba(61,79,140,.1);border:1px solid rgba(61,79,140,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:#a67728} .errors .ee h5{color:var(--p3-dk)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#4a3a1f}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+table.cmp tr:nth-child(even) td{background:rgba(237,207,148,.14)}
+.tblwrap{overflow-x:auto}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#5a3f28;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(201,151,61,.12);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p2)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(237,207,148,.24);border:1px solid var(--p2)}
+.helix{background:rgba(61,79,140,.09);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#5a3f28} .helix h5{color:var(--p3-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3-dk)}
+
+/* diagramme des trois grilles concurrentes */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#3f7a66;
+  padding:5px 12px;border-radius:14px;background:rgba(79,143,110,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,47 +217,498 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d08">
-  <div class="tab">篇 VIII</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 08</p>
-    <h3>Management interculturel</h3>
-    <p class="dmeta">S6 · Isabelle Noël · Hofstede, Hall, Trompenaars</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Deux silhouettes assises face à face de part et d'autre d'un globe stylisé, dont l'hémisphère gauche porte un motif de hachures et l'hémisphère droit un motif de points ; une ligne de dialogue en pointillés s'interrompt de chaque côté du globe">
+      <defs>
+        <pattern id="hatchL" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="8" stroke="#b8683a" stroke-width="2"/>
+        </pattern>
+        <pattern id="dotsR" width="11" height="11" patternUnits="userSpaceOnUse">
+          <circle cx="5.5" cy="5.5" r="1.5" fill="#3d4f8c"/>
+        </pattern>
+        <clipPath id="globeClip"><circle cx="340" cy="92" r="46"/></clipPath>
+      </defs>
+      <!-- sol -->
+      <path d="M0 176 Q170 166 340 176 T680 176" fill="none" stroke="#e0b191" stroke-width="2" opacity=".5"/>
+      <!-- bureau gauche -->
+      <path d="M42 174 H150" stroke="#3d4f8c" stroke-width="2" stroke-linecap="round"/>
+      <!-- figure gauche -->
+      <g stroke="#3d4f8c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="82" cy="86" r="15"/>
+        <path d="M60 150 C60 116 104 116 104 150 L110 174 L54 174 Z"/>
+      </g>
+      <!-- bureau droit -->
+      <path d="M530 174 H638" stroke="#b8683a" stroke-width="2" stroke-linecap="round"/>
+      <!-- figure droite -->
+      <g stroke="#b8683a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="598" cy="86" r="15"/>
+        <path d="M576 150 C576 116 620 116 620 150 L626 174 L570 174 Z"/>
+      </g>
+      <!-- lignes de dialogue interrompues -->
+      <path d="M112 118 Q210 70 288 88" fill="none" stroke="#7d715a" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <path d="M392 88 Q470 70 568 118" fill="none" stroke="#7d715a" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <!-- globe : deux textures culturelles opposées -->
+      <g clip-path="url(#globeClip)">
+        <rect x="294" y="46" width="46" height="92" fill="url(#hatchL)" opacity=".55"/>
+        <rect x="340" y="46" width="46" height="92" fill="url(#dotsR)" opacity=".6"/>
+      </g>
+      <circle cx="340" cy="92" r="46" fill="none" stroke="#5a3f28" stroke-width="1.6"/>
+      <ellipse cx="340" cy="92" rx="17" ry="46" fill="none" stroke="#5a3f28" stroke-width="1" opacity=".5"/>
+      <path d="M294 92 H386" stroke="#5a3f28" stroke-width="1" opacity=".5"/>
+      <!-- la faille des présupposés invisibles -->
+      <path d="M340 46 L335 62 L344 76 L333 92 L344 108 L335 124 L340 138" fill="none" stroke="#c9973d" stroke-width="2.2" stroke-dasharray="1 6" stroke-linecap="round"/>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Management Interculturel</h1>
+    <p class="gen-open">Deux managers compétents, de bonne foi, bien préparés sur le fond du dossier — et pourtant l'accord échoue, le projet dérape, l'équipe se braque. <b>Comment rendre lisible un malentendu qui ne vient ni de la langue, ni des faits, mais de présupposés invisibles sur ce qui va de soi</b> ? La discipline avance couche par couche : d'abord poser ce qu'une grille culturelle peut dire sans jamais devenir un verdict sur un individu (C1), puis choisir, parmi trois grilles concurrentes et non successives, celle qui éclaire le mieux la situation observée — Hofstede, Hall ou Trompenaars (C2·C3·C4) — enfin appliquer ce choix à deux terrains concrets : la table de négociation et l'équipe dispersée sur plusieurs fuseaux horaires (C5·C6).</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:80%"></span><span class="au" style="width:20%"></span></span>
       <span class="crd">Système <b class="s">80%</b> · Automatisme <b class="a">20%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S6 · Isabelle Noël · Hofstede, Hall, Trompenaars — auteurs de référence</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Deux managers compétents et de bonne foi produisent un échec commun. <b>Comment rendre lisibles des malentendus qui ne viennent ni de la langue ni des faits</b>, mais de présupposés invisibles sur ce qui va de soi ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Culture, stéréotype, et les limites de la mesure</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · pose ce qu'une grille peut et ne peut pas dire</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Hofstede : les six dimensions</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b> · la grille la plus opératoire</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Hall : contexte, temps, espace</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · grille concurrente, centrée sur la communication</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Trompenaars : les dilemmes de valeurs</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1, C2</b></span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>La négociation internationale</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C3</b> · application des grilles</span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Équipes multiculturelles &amp; management à distance</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C3, C4</b></span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Cadre</div><div class="tc"><span class="node f">C1 · Ce qu'une grille vaut</span></div></div>
-<div class="flow"><span class="fdot"></span>trois grilles concurrentes, non exclusives<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Grilles</div><div class="tc"><span class="node f">C2 · Hofstede</span><span class="ar">‖</span><span class="node s">C3 · Hall</span><span class="ar">‖</span><span class="node s">C4 · Trompenaars</span></div></div>
-<div class="flow"><span class="fdot"></span>mises à l'épreuve d'une situation<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Application</div><div class="tc"><span class="node s">C5 · Négociation</span><span class="ar">·</span><span class="node s">C6 · Équipes</span></div></div>
-</div>
-    <p class="note">Attention structurelle : C2, C3 et C4 ne se succèdent pas, elles <em>rivalisent</em>. L'exercice consiste à choisir la grille qui éclaire le mieux un cas, pas à les empiler.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">L'implicite culturel<i>tous</i></span><span class="sp">Rapport au temps<i>C2·C3·C5</i></span><span class="sp">Distance hiérarchique<i>C2·C4·C6</i></span><span class="sp">Grille ≠ vérité sur un individu<i>C1</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40" stroke="#3d4f8c"><circle cx="20" cy="11" r="6"/><path d="M9 27 C9 19 31 19 31 27"/><rect x="8" y="30" width="24" height="7" rx="1"/><path d="M10 36 L14 30 M16 36 L20 30 M22 36 L26 30 M28 36 L30 32"/></svg><b>Manager français</b><span>contexte modéré, cadre écrit</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40" stroke="#b8683a"><circle cx="20" cy="11" r="6"/><path d="M9 27 C9 19 31 19 31 27"/><rect x="8" y="30" width="24" height="7" rx="1"/><circle cx="20" cy="33.5" r="1" fill="#b8683a"/><circle cx="20" cy="33.5" r="2.4"/><circle cx="20" cy="33.5" r="3.6"/></svg><b>Manager japonais</b><span>contexte fort, consensus</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40" stroke="#c9973d"><circle cx="20" cy="11" r="6"/><path d="M9 27 C9 19 31 19 31 27"/><rect x="8" y="30" width="24" height="7" rx="1"/><path d="M12 30 V37 M16 30 V37 M20 30 V37 M24 30 V37 M28 30 V37 M8 33.5 H32"/></svg><b>Manager américain</b><span>règle explicite, décision rapide</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40" stroke="#2d3a68"><circle cx="20" cy="11" r="6"/><path d="M9 27 C9 19 31 19 31 27"/><rect x="8" y="30" width="24" height="7" rx="1"/><path d="M9 31.3 H31 M9 33.5 H31 M9 35.7 H31"/></svg><b>Manager allemand</b><span>planification, faible ambiguïté tolérée</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 170" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 100 C 90 40, 140 40, 190 50 S 310 140, 360 140 S 480 40, 530 50 S 650 140, 700 140 S 820 100, 880 100" fill="none" stroke="#edcf94" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 fondation -->
+        <g transform="translate(20,100)"><circle r="17" fill="#c9973d" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="-8" y="36" text-anchor="start">Culture, mesure</text></g>
+        <!-- C2 grille -->
+        <g transform="translate(190,50)"><circle r="16" fill="#3d4f8c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Hofstede</text></g>
+        <!-- C3 grille -->
+        <g transform="translate(360,140)"><circle r="16" fill="#3d4f8c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Hall</text></g>
+        <!-- C4 grille -->
+        <g transform="translate(530,50)"><circle r="16" fill="#3d4f8c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Trompenaars</text></g>
+        <!-- C5 application -->
+        <g transform="translate(700,140)"><circle r="16" fill="#b8683a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Négociation</text></g>
+        <!-- C6 application -->
+        <g transform="translate(880,100)"><circle r="17" fill="#b8683a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="8" y="-22" text-anchor="end">Équipes à distance</text></g>
+      </g>
+    </svg>
+    <p class="note" style="text-align:center;margin-top:2px"><b>Lecture :</b> C2, C3 et C4 partagent la même couleur — non pas un hasard, mais le rappel que ces trois chapitres ne se succèdent pas dans un raisonnement, ils rivalisent (voir le diagramme du 篇 II).</p>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Ce qu'une grille culturelle peut dire — et ne peut pas</h2>
+      <p class="dsub">Chapitre C1 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Un enseignant, un manuel ou un consultant peut toujours produire une fiche « comment se comporter avec les Chinois » ou « ce qu'il faut savoir sur les Allemands ». Le problème n'est pas de produire ce genre de fiche — c'est trivial — mais de savoir si elle dit quelque chose de <b>vérifiable</b> plutôt que d'<b>inventé</b>, et surtout si elle décrit une <b>tendance mesurée sur un grand nombre de personnes</b> ou si elle prétend, à tort, prédire le comportement d'une personne précise que vous allez rencontrer demain. Comment construire un outil de comparaison culturelle qui reste honnête sur ses propres limites, avant même d'en apprendre le contenu ?</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Ce que « mesurer une culture » veut dire</h5>
+          <p>Les trois grandes grilles étudiées dans cette discipline (Hofstede, Hall, Trompenaars — 篇 II) ont chacune été construites à partir d'un travail empirique daté et situé : des dizaines de milliers de questionnaires pour l'une, des observations de terrain pour une autre, des dilemmes soumis à des cadres en formation pour la troisième. Sans ce travail de collecte, aucune n'aurait de légitimité — une intuition personnelle sur « comment sont les Japonais » n'est pas une grille, c'est une anecdote généralisée. La discipline commence donc par exiger la question que l'on pose à toute affirmation culturelle : <b>sur quelles données repose-t-elle, et que peuvent-elles légitimement dire ?</b></p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Une grille culturelle sérieuse suit toujours le même enchaînement — et c'est l'endroit précis où elle bascule si on la manie mal :</p>
+      <div class="chain">
+        <span class="node">Observer des comportements dans plusieurs pays</span><span class="arrow">→</span>
+        <span class="node">Mesurer une régularité statistique moyenne</span><span class="arrow">→</span>
+        <span class="node">Construire une échelle comparative entre groupes</span><span class="arrow">→</span>
+        <span class="node">S'arrêter là : l'échelle décrit une moyenne nationale, pas une personne</span>
+      </div>
+      <p class="mech">La raison technique de ce dernier point est simple à visualiser : même quand deux pays affichent des moyennes nettement différentes sur un trait donné, les distributions individuelles de ces deux pays se recouvrent largement — une bonne partie des habitants du pays « A » se comportent en réalité comme la moyenne du pays « B », et inversement. Une moyenne nationale peut donc être réelle et utile <b>pour préparer une négociation en amont</b>, tout en étant sans valeur <b>pour deviner comment réagira la personne précise assise en face de vous</b>. Confondre les deux est l'erreur la plus fréquente de toute la discipline, et elle revient à chaque chapitre suivant.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>La fiche mal lue</h5>
+        <p>Une jeune diplômée, chargée d'affaires dans une PME lyonnaise de mécanique de précision, prépare sa première mission à Séoul en lisant que la Corée du Sud est « souvent décrite comme une culture à forte distance hiérarchique » — elle en déduit que son interlocuteur, plus jeune qu'elle, n'osera jamais la contredire, et prépare sa présentation en conséquence, sans prévoir aucun espace pour un désaccord. En réunion, cet interlocuteur — formé aux États-Unis, habitué à des équipes internationales — la contredit directement et avec aisance sur un point technique. La tendance nationale mesurée n'était pas fausse ; c'est sa transformation en certitude individuelle qui l'était, et qui a désarçonné la chargée d'affaires plus que le désaccord lui-même.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C2 · C3 · C4 <i>— les trois grilles qui s'appuient sur cette prudence méthodologique</i></span>
+        <span class="linkchip">C5 négociation internationale <i>— une hypothèse culturelle se vérifie, elle ne se décrète pas</i></span>
+        <span class="linkchip">Techniques du commerce international (discipline 01) <i>— la même rigueur documentaire qui exige un Incoterm daté s'applique à une affirmation culturelle sourcée</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Réciter un score ou une tendance nationale comme s'il décrivait la personne rencontrée, et non une moyenne statistique</li>
+          <li>Traiter les grilles comme un vocabulaire à mémoriser plutôt que comme un outil qu'on applique à un cas</li>
+          <li>Oublier qu'une grille mesure une tendance nationale moyenne, pas une culture d'entreprise, de génération ou de région à l'intérieur d'un même pays</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Former les cadres expatriés avec des fiches culturelles figées, jamais mises à jour, qui essentialisent une nationalité entière</li>
+          <li>Invoquer un score culturel comme argument dans une évaluation RH individuelle — méthodologiquement infondé et juridiquement risqué</li>
+          <li>Ignorer les variations infra-nationales majeures (régions, générations, secteurs) au profit d'une fiche pays unique</li>
+        </ul></div>
+      </div>
+
+      <div class="tblwrap">
+      <table class="cmp">
+        <caption>Ce qu'une grille culturelle peut légitimement dire — et ce qu'elle ne peut pas</caption>
+        <thead><tr><th>Elle peut dire</th><th>Elle ne peut pas dire</th></tr></thead>
+        <tbody>
+          <tr><td>Une tendance moyenne mesurée sur un grand échantillon national</td><td>Le comportement certain d'une personne précise que vous allez rencontrer</td></tr>
+          <tr><td>Un point de vigilance à vérifier avant une négociation ou une prise de poste</td><td>Un motif pour ne plus vérifier au cas par cas une fois « la case cochée »</td></tr>
+          <tr><td>Un repère de départ pour composer une équipe multiculturelle</td><td>Une grille de notation RH individuelle ou un critère de recrutement</td></tr>
+          <tr><td>Un langage commun pour nommer un malentendu déjà observé</td><td>Une explication automatique valable pour tout désaccord international</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez une PME qui envoie trois collaborateurs en mission longue à Riyad. Un collègue propose de distribuer une fiche « comment se comporter avec les Saoudiens », trouvée en ligne, sans source ni méthode indiquées. Que faites-vous ?</p>
+        <p class="dctx">La mission part dans dix jours. Ne rien distribuer laisse l'équipe sans aucun repère ; distribuer la fiche telle quelle risque de transformer des généralités en certitudes.</p>
+        <div class="dopts">
+          <span>A. Distribuer la fiche telle quelle — mieux vaut un repère imparfait qu'aucun repère</span>
+          <span>B. Ne rien distribuer, pour ne prendre aucun risque de stéréotype</span>
+          <span>C. Remplacer la fiche par une préparation courte adossée à des grilles sourcées, complétée par des questions ouvertes à poser sur place</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique, et c'est précisément le point de ce chapitre. L'option B est confortable mais irresponsable : elle laisse l'équipe sans aucune préparation face à des différences réelles (rythme des réunions, place de la religion dans l'agenda, codes de politesse) qui existent indépendamment de toute grille. L'option A est la plus dangereuse malgré son apparence pratique : une fiche non sourcée mélange souvent observation réelle et pur folklore, sans qu'aucun lecteur ne puisse faire le tri.</p>
+          <p>L'option C est la plus défendable, sans être parfaite : elle donne un cadre (issu de grilles dont on connaît la méthode et les limites) tout en rappelant explicitement que ce cadre décrit des tendances à vérifier, pas des règles à appliquer mécaniquement — la vérification se fait ensuite sur place, par l'écoute, pas par la fiche seule.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une grille culturelle est un outil de préparation, jamais un alibi pour ne pas écouter la personne en face</li>
+            <li>Le coût d'une fiche culturelle non sourcée n'est pas nul — elle peut faire prendre une décision fausse avec une confiance injustifiée</li>
+            <li>Un score national dit quelque chose sur un grand groupe, rien de certain sur l'individu qui négocie le contrat</li>
+            <li>Former les équipes à la prudence méthodologique évite plus d'incidents qu'une liste de « choses à faire et à ne pas faire »</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique/commerciale frappe ici</h5>
+          <ul>
+            <li>Détection automatique, dans un rapport interne, d'une affirmation culturelle non sourcée ou traitée comme une certitude individuelle</li>
+            <li>Rapprochement systématique de toute « fiche pays » maison avec les grilles reconnues, pour signaler les écarts non justifiés</li>
+            <li>Suggestion d'une question ouverte à poser plutôt qu'une hypothèse culturelle imposée, avant une réunion planifiée</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Trois grilles concurrentes : Hofstede, Hall, Trompenaars</h2>
+      <p class="dsub">Chapitres C2 · C3 · C4 — trois lectures rivales, pas un enchaînement</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois admis qu'une grille dit une tendance et non une vérité (C1), reste un problème très concret : <b>laquelle utiliser</b> face à un malentendu précis ? Trois équipes de recherche, travaillant à des époques et avec des méthodes différentes, ont chacune choisi un angle distinct pour capturer la culture — les valeurs moyennes d'un pays, le style de communication, ou les dilemmes de valeurs auxquels un individu doit trancher. Aucune des trois n'a été conçue pour compléter les deux autres dans une chaîne logique : ce sont trois photographies du même objet, prises sous trois angles différents, et le travail du manager consiste à choisir l'angle le plus éclairant pour la situation observée — pas à les empiler comme si l'une confirmait automatiquement l'autre.</p>
+
+      <div class="callout" style="background:rgba(201,151,61,.12);border-color:rgba(201,151,61,.5)">
+        <svg viewBox="0 0 40 40" stroke="#a67728"><circle cx="20" cy="20" r="15"/><path d="M12 20 H28 M20 12 V28" stroke-width="1.6"/></svg>
+        <div>
+          <h5>Point structurel — à ne jamais oublier</h5>
+          <p>Hofstede, Hall et Trompenaars <b>ne se succèdent pas</b> comme les chapitres d'une autre discipline où chaque notion prépare la suivante. Ce sont trois branches parallèles issues du même socle méthodologique posé en C1 (voir le diagramme ci-dessous). Traiter Trompenaars comme un « approfondissement » de Hofstede, ou Hall comme une « étape avant » Trompenaars, est une erreur de logique — et l'erreur la plus commune de cette partie du cours.</p>
+        </div>
+      </div>
+
+      <div class="tree">
+        <svg viewBox="0 0 720 250" width="100%" style="max-width:720px">
+          <g font-family="Josefin Sans" fill="#3a3428">
+            <text x="360" y="16" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="#7d715a">TROIS BRANCHES PARALLÈLES ISSUES DE C1 — PAS UNE CHAÎNE</text>
+            <circle cx="360" cy="40" r="9" fill="#c9973d" stroke="#fff" stroke-width="2"/>
+            <text x="360" y="63" text-anchor="middle" font-size="10">C1 — une grille dit une tendance</text>
+            <path d="M360 49 C 360 66, 150 66, 150 96" fill="none" stroke="#94a3d9" stroke-width="2"/>
+            <path d="M360 49 L360 96" fill="none" stroke="#94a3d9" stroke-width="2"/>
+            <path d="M360 49 C 360 66, 570 66, 570 96" fill="none" stroke="#94a3d9" stroke-width="2"/>
+            <!-- Hofstede -->
+            <g transform="translate(150,100)">
+              <rect x="-92" y="0" width="184" height="86" rx="14" fill="#fff" stroke="#3d4f8c" stroke-width="1.6"/>
+              <text x="0" y="24" text-anchor="middle" font-weight="600" font-size="13" font-family="Cormorant Garamond">Hofstede</text>
+              <text x="0" y="42" text-anchor="middle" font-size="9">six dimensions</text>
+              <text x="0" y="57" text-anchor="middle" font-size="9">valeurs nationales</text>
+              <text x="0" y="72" text-anchor="middle" font-size="9">moyennes, chiffrées</text>
+            </g>
+            <!-- Hall -->
+            <g transform="translate(360,100)">
+              <rect x="-92" y="0" width="184" height="86" rx="14" fill="#fff" stroke="#3d4f8c" stroke-width="1.6"/>
+              <text x="0" y="24" text-anchor="middle" font-weight="600" font-size="13" font-family="Cormorant Garamond">Hall</text>
+              <text x="0" y="42" text-anchor="middle" font-size="9">contexte, temps, espace</text>
+              <text x="0" y="57" text-anchor="middle" font-size="9">style de</text>
+              <text x="0" y="72" text-anchor="middle" font-size="9">communication</text>
+            </g>
+            <!-- Trompenaars -->
+            <g transform="translate(570,100)">
+              <rect x="-92" y="0" width="184" height="86" rx="14" fill="#fff" stroke="#3d4f8c" stroke-width="1.6"/>
+              <text x="0" y="24" text-anchor="middle" font-weight="600" font-size="13" font-family="Cormorant Garamond">Trompenaars</text>
+              <text x="0" y="42" text-anchor="middle" font-size="9">sept dilemmes</text>
+              <text x="0" y="57" text-anchor="middle" font-size="9">de valeurs, choix</text>
+              <text x="0" y="72" text-anchor="middle" font-size="9">concrets</text>
+            </g>
+            <!-- ligne de parité -->
+            <path d="M58 198 H662" stroke="#c9973d" stroke-width="1.6" stroke-dasharray="2 6"/>
+            <text x="150" y="216" text-anchor="middle" font-size="9" fill="#a67728">concurrente</text>
+            <text x="360" y="216" text-anchor="middle" font-size="9" fill="#a67728">≠ successive</text>
+            <text x="570" y="216" text-anchor="middle" font-size="9" fill="#a67728">concurrente</text>
+            <text x="360" y="236" text-anchor="middle" font-size="10" fill="#3a3428">On choisit la grille la plus éclairante pour le cas — on ne les empile pas</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Hofstede — les six dimensions</p>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p><b>Geert Hofstede</b>, psychologue social néerlandais, construit son modèle à partir d'une enquête menée auprès des employés d'IBM dans une quarantaine de pays entre <span class="yr">1967 et 1973</span>. Il publie un cadre à quatre dimensions dans <i>Culture's Consequences</i> en <span class="yr">1980</span>. Une cinquième dimension (orientation long terme / court terme) est ajoutée en <span class="yr">1991</span> avec Michael Bond, à partir du <i>Chinese Value Survey</i> ; une sixième (indulgence/restriction) en <span class="yr">2010</span> avec Michael Minkov. Sans cette base empirique — des dizaines de milliers de questionnaires dans une seule multinationale, ce qui neutralise l'effet « culture d'entreprise » pour isoler l'effet « culture nationale » — le modèle n'aurait aucune légitimité statistique : c'est ce choix méthodologique, plus que le nombre de dimensions, qui explique sa place centrale dans la discipline.</p>
+        </div>
+      </div>
+      <p class="mech">Le mécanisme est celui d'une comparaison relative : chaque pays reçoit une position sur chaque axe, non une valeur absolue — un pays n'est jamais « individualiste » en soi, il l'est <b>comparé aux autres pays du même échantillon</b>. C'est ce qui rend la grille opératoire pour comparer deux partenaires précis, et dangereuse si on en cite un score isolé, hors comparaison.</p>
+      <div class="tblwrap">
+      <table class="cmp">
+        <caption>Les six dimensions — ce qu'elles mesurent, un contraste souvent cité dans la littérature</caption>
+        <thead><tr><th>Dimension</th><th>Ce qu'elle mesure</th><th>Contraste souvent cité</th></tr></thead>
+        <tbody>
+          <tr><td>Distance hiérarchique</td><td>Degré d'acceptation d'une répartition inégale du pouvoir</td><td>Pays scandinaves, souvent cités comme à faible distance hiérarchique / plusieurs pays d'Asie du Sud-Est et d'Amérique latine, souvent cités comme à distance hiérarchique élevée</td></tr>
+          <tr><td>Individualisme / Collectivisme</td><td>Priorité donnée au « je » ou au groupe comme unité de référence</td><td>Pays anglo-saxons, souvent cités comme fortement individualistes / plusieurs pays d'Asie ou d'Amérique latine, souvent cités comme davantage collectivistes</td></tr>
+          <tr><td>Masculinité / Féminité</td><td>Valorisation de la performance et de la compétition, ou de la coopération et de la qualité de vie</td><td>Japon, souvent cité en tête sur cet axe / Pays-Bas et pays nordiques, souvent cités à l'opposé</td></tr>
+          <tr><td>Contrôle de l'incertitude</td><td>Tolérance à l'ambiguïté, besoin de règles formelles</td><td>Pays d'Europe du Sud, souvent cités comme peu tolérants à l'ambiguïté / pays anglo-saxons et nordiques, souvent cités plus tolérants</td></tr>
+          <tr><td>Orientation long terme / court terme</td><td>Priorité à la persévérance et l'adaptation future, ou au respect du présent et des traditions</td><td>Plusieurs pays d'Asie de l'Est, souvent cités en orientation long terme, issue du <i>Chinese Value Survey</i></td></tr>
+          <tr><td>Indulgence / Restriction</td><td>Liberté accordée à la satisfaction des désirs et plaisirs personnels face aux normes sociales</td><td>Dimension la plus récente (2010) — contrastes moins stabilisés dans la littérature de formation</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note"><b>Point d'exactitude :</b> les valeurs numériques précises des indices Hofstede par pays varient selon l'édition et le jeu de données cité ; cette fiche les présente donc par direction (« souvent cité comme élevé/faible ») plutôt que par score chiffré, pour éviter toute fausse précision. Une bibliographie qui cite un score nation par nation doit être vérifiée contre la source primaire.</p>
+
+      <div class="example">
+        <h5>Exemple concret — une commande retardée</h5>
+        <p>Une PME de mécanique de précision près de Grenoble travaille avec un sous-traitant à Guangzhou. Le directeur français attend une remontée immédiate si un délai de production dérape ; son homologue chinois, lui, attend d'avoir une solution à proposer avant de signaler le problème — une différence souvent lue à travers l'axe distance hiérarchique / rapport à la remontée d'information ascendante plutôt qu'un manque de transparence. Le retard n'est révélé que trois semaines avant l'échéance contractuelle, provoquant une crise évitable si les deux parties avaient explicité, dès le départ, leurs attentes respectives sur le rythme des mauvaises nouvelles.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Hall — contexte, temps, espace</p>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p><b>Edward T. Hall</b>, anthropologue américain, introduit la distinction entre cultures à contexte fort et cultures à contexte faible ainsi que les notions de temps monochronique et polychronique dans <i>The Silent Language</i> (<span class="yr">1959</span>). Il approfondit la notion de proxémie — la gestion culturelle de l'espace personnel — dans <i>The Hidden Dimension</i> (<span class="yr">1966</span>), puis développe le concept de contexte haut/bas de façon plus systématique dans <i>Beyond Culture</i> (<span class="yr">1976</span>). Sans cette grille, un malentendu de communication (un silence, un retard, une distance physique jugée trop proche ou trop lointaine) resterait un fait isolé et irritant, jamais reconnu comme un schéma récurrent et nommable.</p>
+        </div>
+      </div>
+      <p class="mech">Le mécanisme central : dans une culture à <b>contexte fort</b>, une grande partie du sens circule par la relation, le non-dit et la situation partagée — le contrat écrit n'est qu'une partie de l'accord réel. Dans une culture à <b>contexte faible</b>, le sens doit être porté par les mots eux-mêmes, écrits si possible, car on ne peut pas présumer d'un arrière-plan commun. Le temps <b>monochronique</b> traite les tâches en séquence, une à la fois, avec des horaires fermes ; le temps <b>polychronique</b> gère plusieurs relations et tâches en parallèle, l'horaire restant flexible tant que la relation progresse.</p>
+
+      <div class="example">
+        <h5>Exemple concret — le rendez-vous qui commence en retard</h5>
+        <p>Un fabricant d'emballages allemand (culture souvent décrite comme à contexte plutôt faible et temps monochronique) négocie avec un distributeur libanais (contexte souvent décrit comme plus fort, temps plus polychronique). Le rendez-vous prévu à 10h commence à 10h40, après plusieurs interruptions et un accueil prolongé autour d'un café ; le représentant allemand y lit un manque de sérieux, alors que son interlocuteur considère cet accueil comme la condition même d'une négociation de confiance — le contrat, pour lui, ne peut être solide que si la relation l'est d'abord. Aucun des deux ne ment ni ne fait preuve de mauvaise foi : ils appliquent deux définitions différentes de ce qu'est « être prêt à négocier ».</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Trompenaars — les dilemmes de valeurs</p>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p><b>Fons Trompenaars</b>, avec <b>Charles Hampden-Turner</b>, publie <i>Riding the Waves of Culture</i> en <span class="yr">1993</span>, présentant sept dimensions organisées non comme des scores moyens mais comme des <b>dilemmes de valeurs</b> : universalisme contre particularisme, individualisme contre communautarisme, neutre contre affectif, spécifique contre diffus, statut acquis contre statut attribué, orientation temporelle, et rapport à l'environnement. La différence de méthode avec Hofstede est le cœur de l'apport : au lieu de mesurer une moyenne, on soumet aux répondants un scénario concret où deux valeurs légitimes s'opposent, et on observe lequel des deux ils privilégient.</p>
+        </div>
+      </div>
+      <p class="mech">Le dilemme le plus souvent cité pour introduire cette grille : universalisme contre particularisme. Face à une règle claire enfreinte par un ami ou un partenaire de longue date, faut-il appliquer la règle sans exception (universalisme), ou faire une entorse au nom de la relation (particularisme) ? Aucune des deux réponses n'est « la bonne » dans l'absolu — c'est justement ce que la grille rend visible : deux logiques de valeur cohérentes, mais incompatibles au moment de trancher.</p>
+
+      <div class="example">
+        <h5>Exemple concret — la clause contractuelle assouplie</h5>
+        <p>Un acheteur américain découvre que son fournisseur, basé à Shanghai et partenaire de longue date d'un confrère, a accepté pour ce confrère un délai de paiement plus souple que celui prévu au contrat-cadre commun. L'acheteur américain, plus proche d'une logique universaliste, y voit une rupture d'équité contractuelle ; le fournisseur, dans une logique plus particulariste, considère avoir simplement honoré une relation de confiance construite sur plusieurs années — sans se sentir en contradiction avec l'esprit du contrat signé avec l'acheteur américain lui-même.</p>
+      </div>
+
+      <div class="tblwrap">
+      <table class="cmp">
+        <caption>Trois grilles, trois angles — pas trois étapes d'un même raisonnement</caption>
+        <thead><tr><th>Grille</th><th>Angle d'analyse</th><th>Méthode</th><th>Force</th><th>Limite</th></tr></thead>
+        <tbody>
+          <tr><td>Hofstede</td><td>Valeurs nationales moyennes, sur des axes comparatifs</td><td>Enquête à grande échelle (IBM, ~40 pays, 1967-1973), extensions ultérieures</td><td>Comparaison reproductible, base empirique très large</td><td>Un seul point de collecte historique ; assimile nation et culture ; scores nationaux, jamais individuels</td></tr>
+          <tr><td>Hall</td><td>Style de communication, rapport au temps et à l'espace</td><td>Observation anthropologique de terrain, non chiffrée</td><td>Explique des malentendus concrets (silence, retard, distance) invisibles à une enquête</td><td>Peu quantifiable, catégories parfois binaires (contexte haut/bas)</td></tr>
+          <tr><td>Trompenaars</td><td>Dilemmes de valeurs (règle vs relation, statut, temps, environnement)</td><td>Scénarios à choix forcé soumis à des cadres en formation, avec C. Hampden-Turner</td><td>Formule un tiraillement vécu comme un choix concret, pas une moyenne abstraite</td><td>Échantillon composé surtout de cadres en formation managériale ; dimensions parfois recoupant Hofstede ou Hall</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C1 <i>— fondation méthodologique commune aux trois grilles</i></span>
+        <span class="linkchip">C5 négociation internationale <i>— choisir la grille la plus pertinente pour la friction observée</i></span>
+        <span class="linkchip">Techniques du commerce international (discipline 01) <i>— une mauvaise lecture culturelle du rythme de décision peut mener à choisir le mauvais Incoterm ou à mal calibrer la confiance nécessaire à un crédit documentaire non confirmé</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Réciter les six dimensions d'Hofstede sans jamais les appliquer à un cas concret</li>
+          <li>Traiter les trois grilles comme un mille-feuille cumulatif, l'une confirmant l'autre, plutôt que trois lectures concurrentes à choisir</li>
+          <li>Confondre « contexte fort/faible » (Hall) et « individualisme/collectivisme » (Hofstede) — deux axes voisins mais non identiques</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Imposer la seule grille Hofstede en formation interculturelle par habitude, sans jamais tester Hall ou Trompenaars sur un cas où ils seraient plus pertinents</li>
+          <li>Utiliser le vocabulaire d'une grille pour justifier après coup une décision managériale déjà prise pour d'autres raisons</li>
+          <li>Chercher « la bonne réponse » dans les résultats de Trompenaars, alors que sa méthode vise justement des dilemmes sans solution unique</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Une réunion de lancement de projet entre votre équipe française et un partenaire indien tourne mal : votre partenaire a validé verbalement un calendrier que vous jugez désormais irréaliste, et personne, côté indien, n'a soulevé d'objection en réunion. Par quelle grille commencez-vous à analyser la situation ?</p>
+        <p class="dctx">Vous devez choisir un angle d'entrée pour préparer la réunion de recadrage, sans disposer d'aucune autre information sur vos interlocuteurs.</p>
+        <div class="dopts">
+          <span>A. Hofstede — lire l'absence d'objection comme un effet de distance hiérarchique ou de collectivisme de groupe</span>
+          <span>B. Hall — lire le calendrier verbal non contesté comme un effet de contexte fort, où l'accord réel se négocie dans la relation plus que dans les mots échangés en réunion</span>
+          <span>C. Trompenaars — lire la situation comme un dilemme spécifique/diffus, où la relation de confiance globale prime sur l'engagement ponctuel précis</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Aucune des trois grilles n'est fausse ici, et c'est le point du chapitre : chacune éclaire une facette différente de la même scène. Hofstede alerte sur un possible évitement du désaccord public ; Hall alerte sur le risque d'avoir surestimé la valeur d'un engagement verbal en réunion plutôt que dans un échange informel ultérieur ; Trompenaars alerte sur une confusion possible entre l'accord global de principe (diffus) et l'engagement technique précis (spécifique).</p>
+          <p>Une dirigeante avisée ne choisit pas une grille « définitive » — elle utilise cette pluralité comme un répertoire d'hypothèses à tester par une question ouverte directe (« qu'est-ce qui, dans ce calendrier, vous semble difficile ? ») plutôt que de trancher sur la seule base d'une grille appliquée à distance.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Trois grilles disponibles valent mieux qu'une seule appliquée par réflexe — le bon réflexe est de choisir, pas d'empiler</li>
+            <li>Hofstede sert à préparer une politique RH ou une implantation ; Hall sert à décoder une réunion en temps réel ; Trompenaars sert à anticiper un point de friction contractuel</li>
+            <li>Former les équipes aux trois grilles coûte une journée ; ne pas les former coûte un malentendu par trimestre</li>
+            <li>Aucune grille ne remplace une question posée directement à l'interlocuteur — elle ne fait qu'améliorer la question posée</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique/commerciale frappe ici</h5>
+          <ul>
+            <li>Suggestion, selon la nature de la friction détectée dans un compte rendu (délai, silence, désaccord contractuel), de la grille la plus pertinente à mobiliser</li>
+            <li>Alerte quand un rapport interne mélange les trois grilles sans distinguer leur angle, brouillant le diagnostic</li>
+            <li>Historisation des frictions culturelles par partenaire, pour objectiver un schéma récurrent plutôt qu'une impression isolée</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Appliquer : négocier et manager à distance</h2>
+      <p class="dsub">Chapitres C5 · C6 — appliquer les grilles, pas les empiler</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Connaître trois grilles concurrentes ne sert à rien si elles restent de la théorie de salle de classe. Deux situations professionnelles obligent à s'en servir en temps réel : <b>la table de négociation</b>, où un signal mal lu peut coûter un contrat en quelques minutes, et <b>l'équipe dispersée sur plusieurs fuseaux horaires</b>, où les malentendus s'accumulent silencieusement pendant des mois sans qu'aucune scène ne permette de les corriger sur le vif. Comment transformer une grille abstraite en une décision prise dans l'instant, à la table ou à l'écran ?</p>
+
+      <p class="blockt"><span class="bdot"></span>La négociation internationale — C5</p>
+      <div class="mech">
+        <div class="chain">
+          <span class="node">Identifier la friction observée</span><span class="arrow">→</span>
+          <span class="node">Choisir la grille la plus pertinente pour cette friction précise</span><span class="arrow">→</span>
+          <span class="node">Formuler une hypothèse culturelle, jamais une certitude</span><span class="arrow">→</span>
+          <span class="node">Vérifier par une question ouverte avant d'agir</span>
+        </div>
+      </div>
+      <p class="mech">C'est ici que C2, C3 et C4 cessent d'être des connaissances séparées pour devenir un réflexe unique : face à un silence, on pense d'abord Hall (contexte, temps) ; face à un refus de trancher en réunion, on pense d'abord Hofstede (distance hiérarchique, collectivisme) ; face à une clause contractuelle contournée pour un proche, on pense d'abord Trompenaars (universalisme/particularisme). Le prérequis explicite de ce chapitre — C2 et C3 — n'est donc pas un hasard de programme : sans ce répertoire d'hypothèses, la négociatrice improvise sans grille du tout.</p>
+
+      <div class="example">
+        <h5>Exemple concret — le silence après la proposition</h5>
+        <p>Une PME française de cosmétique bio propose un prix à un distributeur sud-coréen ; après l'annonce, un silence de plusieurs secondes s'installe. La négociatrice française, formée à un style de communication plus direct, l'interprète comme un refus tacite et baisse spontanément son prix pour relancer l'échange. Une lecture par la grille de Hall aurait suggéré une autre hypothèse : dans une culture à contexte plus fort, un temps de silence peut signaler une réflexion respectueuse, pas un rejet — baisser le prix sans vérifier revient alors à céder une marge pour un signal mal identifié. Ce point rejoint directement la discipline 01 : une mauvaise lecture de ce type de signal ne coûte pas qu'une marge, elle peut aussi conduire à mal calibrer la confiance accordée au partenaire au moment de choisir l'Incoterm ou de décider si un crédit documentaire doit être confirmé.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Équipes multiculturelles et management à distance — C6</p>
+      <div class="mech">
+        <div class="chain">
+          <span class="node">Contexte réduit par l'écran et l'écrit</span><span class="arrow">→</span>
+          <span class="node">Malentendus qui s'accumulent sans être signalés</span><span class="arrow">→</span>
+          <span class="node">Besoin de rituels explicites de clarification</span><span class="arrow">→</span>
+          <span class="node">Sans eux, l'échec est attribué à la personne, pas au présupposé</span>
+        </div>
+      </div>
+      <p class="mech">Le management à distance retire précisément le canal sur lequel repose le plus la grille de Hall — le non-verbal, le rythme partagé d'une pièce, la proxémie. Un mail bref n'est jamais lu de façon neutre : il peut être perçu comme sec par un collaborateur habitué à un contexte plus riche, ou au contraire comme parfaitement clair par un collaborateur habitué à l'explicite. Sans rituel de clarification régulier, l'écart s'accumule en silence — personne ne signale un malaise diffus — jusqu'à ce qu'un retard ou un conflit rende visible ce qui aurait dû être nommé bien plus tôt. C'est pourquoi ce chapitre prend pour prérequis C2, C3 <b>et</b> C4 : les trois lectures sont nécessaires simultanément pour composer une équipe où aucun présupposé commun ne peut être tenu pour acquis.</p>
+
+      <div class="example">
+        <h5>Exemple concret — le livrable « presque fini »</h5>
+        <p>Une équipe projet répartie entre Nantes, Munich et Shenzhen travaille par visioconférence et messagerie. L'ingénieur allemand annonce le livrable « fini » lorsque chaque spécification écrite est cochée ; la responsable chinoise considère un livrable « fini » lorsque la relation avec le client final confirme sa satisfaction, même si des détails mineurs restent informellement à ajuster. Le chef de projet français, recevant deux versions différentes du mot « fini », en conclut à tort que l'un des deux membres de l'équipe n'est pas fiable — alors que les deux appliquent, de bonne foi, deux définitions différentes et cohérentes de l'achèvement d'une tâche, proches du dilemme spécifique/diffus de Trompenaars.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">C2 · C3 · C4 <i>— répertoire d'hypothèses mobilisé en temps réel</i></span>
+        <span class="linkchip">Techniques du commerce international (discipline 01) <i>— une négociation mal lue en amont retombe sur le choix de l'Incoterm ou du mode de paiement</i></span>
+        <span class="linkchip">Gestion de projet (discipline 09) <i>— les rituels de clarification d'une équipe à distance recoupent directement le suivi de projet</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Analyser un cas de négociation avec une seule grille alors que la friction en combine plusieurs</li>
+          <li>Oublier de vérifier une hypothèse culturelle par une question ouverte, et la traiter comme acquise</li>
+          <li>Réduire le management à distance à un problème d'outils numériques, en ignorant la perte de contexte qu'ils provoquent</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Attribuer un malentendu interculturel récurrent à la personnalité d'un collaborateur plutôt qu'à un présupposé non partagé</li>
+          <li>Ne prévoir aucun rituel explicite de clarification dans une équipe distribuée, en misant sur le seul bon sens individuel</li>
+          <li>Négocier à distance des points sensibles (prix, délai) par écrit seul, alors qu'un appel aurait permis de lire un silence ou une hésitation</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez une équipe projet répartie sur trois pays. Un même partenaire livre en retard pour la troisième fois consécutive. Que faites-vous ?</p>
+        <p class="dctx">Le contrat prévoit des pénalités de retard que vous pourriez actionner immédiatement. L'équipe interne commence à parler d'un partenaire « peu fiable ».</p>
+        <div class="dopts">
+          <span>A. Actionner les pénalités contractuelles sans délai, pour marquer le sérieux de l'engagement</span>
+          <span>B. Ouvrir une conversation directe pour vérifier si le retard traduit un problème de capacité, un malentendu sur la définition du livrable, ou un vrai désengagement</span>
+          <span>C. Réduire silencieusement la charge confiée à ce partenaire, sans en discuter, pour limiter le risque</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique — le contexte réel (montant en jeu, ancienneté de la relation, alternative disponible) doit peser sur le choix. Ce qui est certain, en revanche, c'est que trois retards consécutifs ne prouvent ni la mauvaise foi ni la bonne foi du partenaire : ils prouvent seulement qu'un désaccord existe sur ce que signifie « tenir un délai », sans qu'on sache encore lequel des présupposés (calendrier, définition du livrable, priorité relative accordée à ce projet) est en cause.</p>
+          <p>L'option C est la plus risquée malgré son apparence prudente : elle évite le conflit à court terme mais laisse le malentendu s'installer durablement. L'option B ne remplace pas nécessairement les pénalités contractuelles si le désengagement se confirme, mais elle est la seule à distinguer un vrai problème de compétence d'un simple écart de présupposé — distinction que ni A ni C ne permettent d'établir avant d'agir.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un malentendu interculturel non nommé se traduit toujours, in fine, en coût financier — retard, marge cédée, ou rupture de partenariat</li>
+            <li>La question ouverte coûte cinq minutes ; l'hypothèse culturelle non vérifiée peut coûter un contrat</li>
+            <li>Une équipe à distance sans rituel de clarification explicite fonctionne sur la chance, pas sur un système</li>
+            <li>Le vrai talent managérial ici n'est pas de connaître les trois grilles par cœur, mais de savoir laquelle mobiliser au bon moment</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique/commerciale frappe ici</h5>
+          <ul>
+            <li>Détection de schémas de friction récurrents entre deux partenaires (silences avant refus, retards après accord verbal) à partir de l'historique des échanges</li>
+            <li>Recommandation d'une question de clarification adaptée avant qu'une décision commerciale ou contractuelle irréversible ne soit prise</li>
+            <li>Alerte quand une équipe distribuée n'a plus eu d'échange synchrone (visio ou appel) depuis un délai jugé risqué pour la clarté du projet</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Tendance statistique ≠ prédiction individuelle<i>C1·C2·C3·C4</i></span>
+        <span class="sp">Présupposé invisible<i>tous</i></span>
+        <span class="sp">Grille = hypothèse à vérifier, pas un verdict<i>C5·C6</i></span>
+        <span class="sp">Trois lectures concurrentes, pas un enchaînement<i>C2·C3·C4</i></span>
+        <span class="sp">Contexte perdu à distance<i>C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="07-outils-de-gestion.html">← Outils de gestion</a>
@@ -67,5 +717,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>

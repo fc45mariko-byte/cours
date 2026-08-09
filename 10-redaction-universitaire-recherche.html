@@ -3,13 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rédaction universitaire & initiation à la recherche — Cours détaillé · Master Plans</title>
-<meta name="description" content="Fiche de cours détaillée — Rédaction universitaire & initiation à la recherche, discipline 10 de L'Architecture des Disciplines.">
+<title>Rédaction universitaire &amp; initiation à la recherche — Cours détaillé · Master Plans</title>
+<meta name="description" content="Fiche de cours détaillée — Rédaction universitaire &amp; initiation à la recherche, discipline 10 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#7d6a94;--dom-lt:#c4b7d8}</style>
+<style>
+/* Palette — encre sépia / bleu cobalt / gris papier : les couleurs du
+   manuscrit annoté à la main. Le sépia est l'encre de la première main —
+   celle de l'autrice, du brouillon, de l'affirmation posée sur la page ;
+   le cobalt est l'encre de la correction et de la vérification — celle du
+   professeur qui trace jusqu'à la source, du chercheur qui relit par les
+   pairs, de la rigueur méthodologique qui contrôle ce que le sépia a écrit ;
+   le gris est le papier ancien lui-même — le support neutre, la référence
+   bibliographique, la trace physique qui permet à quiconque de retrouver
+   l'original. Discipline transversale : elle ne produit rien par elle-même,
+   elle rend vérifiable tout ce que les autres matières couchent sur le
+   papier — rapport de stage, comptes rendus de civilisation, informes. */
+:root{
+  --enc:#6b4a2f; --enc-lt:#b8927a;
+  --cob:#2f4a8c; --cob-lt:#8ea0d9;
+  --pap:#8a8478; --pap-lt:#c7c2b8;
+  --ink:#3a2e22; --ink-soft:#7d6d59;
+  --paper:rgba(255,253,247,.66); --paper-hi:rgba(255,253,247,.88);
+  --line:rgba(138,132,120,.4);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #f2e4cd 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 18%, #b9c6ea 0%, transparent 52%),
+    radial-gradient(1000px 720px at 32% 108%, #ddc9a8 0%, transparent 58%),
+    linear-gradient(158deg,#f2e8d8 0%, #e9dbc4 42%, #ccd2e6 72%, #ece0c8 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--enc);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--enc);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(107,74,47,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(58,46,34,.16);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:200px;display:block;margin:0 auto 14px}
+.hero-lbl{font-family:'Josefin Sans';font-size:9px;letter-spacing:.03em;fill:var(--ink-soft)}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--enc);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#4a3323;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--enc)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--cob-lt),var(--cob))}
+.cbar .au{background:linear-gradient(90deg,var(--enc-lt),var(--enc))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--cob)} .crd b.a{color:var(--enc)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(120deg,var(--enc),var(--cob))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+@media(max-width:680px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 10px 12px;
+  text-align:center}
+.actor svg{width:40px;height:40px;stroke:var(--enc);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.64rem;letter-spacing:.03em;margin-top:7px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.7rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--enc);text-align:center;margin-bottom:14px}
+.tl-sub{font-family:'Spectral';font-style:italic;font-size:.78rem;color:var(--ink-soft);text-align:center;margin:-8px 0 14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* diagramme double chaîne */
+.branch{margin:16px 0;overflow-x:auto}
+.branch svg{display:block;margin:0 auto}
+.br-lbl{font-family:'Josefin Sans';font-size:10.5px;letter-spacing:.12em;fill:var(--ink-soft);text-transform:uppercase}
+.br-node{font-family:'Josefin Sans';font-size:11px;fill:var(--ink)}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(107,74,47,.26);border-radius:24px;box-shadow:0 16px 46px rgba(58,46,34,.14)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--enc),var(--cob));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#4a3323;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--enc);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--enc) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--enc-lt) 0 12.5%, transparent 0 25%, var(--enc-lt) 0 37.5%, transparent 0 50%, var(--enc-lt) 0 62.5%, transparent 0 75%, var(--enc-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--enc)}
+.problem b{color:var(--enc);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(107,74,47,.09);
+  border:1px solid rgba(107,74,47,.38);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--enc);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--enc);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--cob);font-weight:600}
+.callout.hon{background:rgba(138,132,120,.14);border-color:rgba(138,132,120,.5)}
+.callout.hon svg{stroke:var(--pap)}
+.callout.hon h5{color:#5c5648}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--enc-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(107,74,47,.08);border-left:3px solid var(--enc);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--enc);margin-bottom:6px}
+.example p{font-size:.92rem;margin:6px 0}
+.example .bad{color:#8a3b3b}
+.example .good{color:#3f7a52}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--cob);color:#233b6e;
+  padding:5px 12px;border-radius:14px;background:rgba(47,74,140,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(107,74,47,.1);border:1px solid rgba(107,74,47,.5)}
+.errors .ee{background:rgba(47,74,140,.1);border:1px solid rgba(47,74,140,.42)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--enc)} .errors .ee h5{color:var(--cob)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--enc)}
+
+/* compréhension / automatisme */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(47,74,140,.09);border:1px solid rgba(47,74,140,.4)}
+.split .m{background:rgba(107,74,47,.09);border:1px solid rgba(107,74,47,.4)}
+.split h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--cob)} .split .m h5{color:var(--enc)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:4px 0 4px 16px;position:relative;color:var(--ink)}
+.split li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--pap)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding:0 14px 8px}
+table.cmp th{background:var(--cob-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#1f2f5c}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+table.cmp tr:nth-child(even) td{background:rgba(199,194,184,.18)}
+
+details.dilemma{background:rgba(255,253,247,.72);border:1.5px dashed var(--enc);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--enc);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#4a3323;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(138,132,120,.14);border-radius:10px;padding:7px 12px;border-left:3px solid var(--pap)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cob);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(138,132,120,.2);border:1px solid var(--pap)}
+.helix{background:rgba(47,74,140,.09);border:1px solid var(--cob)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#5c5648} .helix h5{color:var(--cob)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--pap);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--cob)}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--cob);color:#233b6e;
+  padding:5px 12px;border-radius:14px;background:rgba(47,74,140,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--enc);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--enc);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--enc);border-color:var(--enc)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,52 +242,581 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d10">
-  <div class="tab">篇 X</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 10</p>
-    <h3>Rédaction universitaire &amp; initiation à la recherche</h3>
-    <p class="dmeta">S5 · CM 18h + TD 12h · 2 ECTS · Sonia Tesson</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Une pyramide de quatre niveaux de sources, du primaire au tertiaire, reliée par des fils en pointillés à un paragraphe en cours de rédaction, tenu par une plume">
+      <g font-family="Josefin Sans">
+        <!-- pyramide des sources -->
+        <polygon points="40,168 320,168 292,142 68,142" fill="rgba(107,74,47,.16)" stroke="#6b4a2f" stroke-width="1.6" stroke-linejoin="round"/>
+        <polygon points="70,140 290,140 264,114 96,114" fill="rgba(47,74,140,.14)" stroke="#2f4a8c" stroke-width="1.6" stroke-linejoin="round"/>
+        <polygon points="98,112 262,112 238,88 122,88" fill="rgba(138,132,120,.16)" stroke="#8a8478" stroke-width="1.6" stroke-linejoin="round"/>
+        <polygon points="124,86 236,86 214,64 146,64" fill="rgba(199,194,184,.22)" stroke="#c7c2b8" stroke-width="1.6" stroke-linejoin="round"/>
+        <text class="hero-lbl" x="180" y="159" text-anchor="middle">primaires</text>
+        <text class="hero-lbl" x="180" y="131" text-anchor="middle">scientifiques</text>
+        <text class="hero-lbl" x="180" y="104" text-anchor="middle">presse</text>
+        <text class="hero-lbl" x="180" y="79" text-anchor="middle">tertiaires</text>
+        <!-- fils en pointillés vers le paragraphe -->
+        <g fill="none" stroke-width="1.2" stroke-dasharray="1.5 5" stroke-linecap="round">
+          <path d="M292 154 C 380 168, 430 150, 478 132" stroke="#6b4a2f"/>
+          <path d="M264 127 C 360 138, 420 122, 478 110" stroke="#2f4a8c"/>
+          <path d="M238 100 C 340 108, 410 96, 478 88" stroke="#8a8478"/>
+          <path d="M214 75 C 320 78, 400 68, 478 66" stroke="#c7c2b8"/>
+        </g>
+        <!-- document en cours de rédaction -->
+        <g transform="translate(480,50)">
+          <rect x="0" y="0" width="120" height="102" rx="5" fill="#fffdf7" fill-opacity=".8" stroke="#6b4a2f" stroke-width="1.6"/>
+          <line x1="12" y1="18" x2="98" y2="18" stroke="#3a2e22" stroke-width="1.3"/>
+          <line x1="12" y1="30" x2="108" y2="30" stroke="#3a2e22" stroke-width="1.3"/>
+          <line x1="12" y1="42" x2="90" y2="42" stroke="#3a2e22" stroke-width="1.3"/>
+          <line x1="12" y1="60" x2="106" y2="60" stroke="#3a2e22" stroke-width="1.1" opacity=".55"/>
+          <line x1="12" y1="72" x2="96" y2="72" stroke="#3a2e22" stroke-width="1.1" opacity=".55"/>
+          <line x1="12" y1="84" x2="80" y2="84" stroke="#3a2e22" stroke-width="1.1" opacity=".55"/>
+        </g>
+        <!-- plume -->
+        <g transform="translate(560,8)" fill="none" stroke="#6b4a2f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M0 60 L34 24 Q44 10 58 4 Q50 18 40 30 L8 66 Z" fill="#fffdf7" fill-opacity=".7"/>
+          <path d="M6 54 L34 24"/>
+          <path d="M0 60 L-6 74"/>
+        </g>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Rédaction universitaire &amp; initiation à la recherche</h1>
+    <p class="gen-open">Un lecteur ne peut pas vérifier ce qu'il lit s'il ignore <b>d'où vient chaque affirmation</b>. Comment produire un écrit dont chaque énoncé soit traçable jusqu'à sa source, et distinguer sa propre pensée de celle d'autrui ? C'est le problème que cette discipline résout, seule parmi les dix-neuf : elle ne produit aucun contenu de commerce international elle-même, mais elle conditionne la note de <b>tous les écrits</b> du programme — rapport de stage, comptes rendus de civilisation britannique, espagnole ou américaine, informes en espagnol. Un devoir parfaitement informé mais dont on ne peut retracer les sources n'est, du point de vue universitaire, pas différent d'une opinion.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:45%"></span><span class="au" style="width:55%"></span></span>
       <span class="crd">Système <b class="s">45%</b> · Automatisme <b class="a">55%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
     </div>
+    <p class="dmeta">S5 · CM 18h + TD 12h · 2 ECTS · Sonia Tesson</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Un lecteur ne peut pas vérifier ce qu'il lit s'il ignore <b>d'où vient chaque affirmation</b>. Comment produire un écrit dont chaque énoncé soit traçable, et distinguer sa propre pensée de celle d'autrui ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Hiérarchie des sources &amp; fiabilité</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · primaires → scientifiques → presse → tertiaires</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Problématique &amp; construction du plan</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b></span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Le paragraphe argumentatif</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b> · affirmation → explication → exemple → transition</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Citation, paraphrase, plagiat</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b></span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Référencement &amp; bibliographie normée</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C4</b></span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Exigence</div><div class="tc"><span class="node f">C1 · Traçabilité</span></div></div>
-<div class="flow"><span class="fdot"></span>elle se décline sur deux plans : la structure et l'attribution<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Structure</div><div class="tc"><span class="node f">C2 · Problématique</span><span class="ar">→</span><span class="node s">C3 · Paragraphe</span></div></div>
-<div class="tier"><div class="tl">Attribution</div><div class="tc"><span class="node a">C4 · Citer</span><span class="ar">→</span><span class="node a">C5 · Référencer</span></div></div>
-</div>
-    <p class="note">Discipline <b>transversale</b> : elle conditionne la note de tous les écrits du programme — rapport de stage, comptes rendus de civilisation, <em>informes</em> en espagnol.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Traçabilité de l'énoncé<i>tous</i></span><span class="sp">Distinguer sa voix de celle d'autrui<i>C3·C4</i></span><span class="sp">Une idée = un paragraphe<i>C3</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="16" cy="10" r="6"/><path d="M6 34 C6 24 26 24 26 34"/><path d="M22 20 L34 8 Q37 5 40 5 Q40 8 37 11 L25 23 Z"/></svg><b>Étudiante-autrice</b><span>affirme, doit prouver</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="17" cy="17" r="10"/><line x1="25" y1="25" x2="35" y2="35"/><path d="M12 17 l4 4 l8 -9"/></svg><b>Lecteur / correcteur</b><span>vérifie, ne fait pas confiance</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 6 H30 V26 Q22 30 14 26 Q9 29 6 26 Z"/><line x1="12" y1="14" x2="24" y2="14"/><line x1="12" y1="20" x2="24" y2="20"/></svg><b>Source primaire</b><span>le fait brut, non retravaillé</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="8" y="20" width="24" height="12" rx="1.5"/><rect x="10" y="12" width="24" height="12" rx="1.5"/><rect x="6" y="4" width="24" height="12" rx="1.5"/></svg><b>Source tertiaire</b><span>synthèse de synthèses</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des cinq chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 170" preserveAspectRatio="xMidYMid meet">
+      <path d="M60 100 C 140 55, 200 45, 270 55 S 420 135, 480 120 S 620 45, 690 55 S 800 115, 840 100" fill="none" stroke="var(--pap-lt)" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(60,100)"><circle r="18" fill="#6b4a2f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="38" text-anchor="middle">Hiérarchie sources</text></g>
+        <g transform="translate(270,55)"><circle r="17" fill="#6b4a2f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Problématique · plan</text></g>
+        <g transform="translate(480,120)"><circle r="16" fill="#2f4a8c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="36" text-anchor="middle">Paragraphe argumentatif</text></g>
+        <g transform="translate(690,55)"><circle r="15" fill="#8a8478" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Citer · paraphraser</text></g>
+        <g transform="translate(840,100)"><circle r="15" fill="#8a8478" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="-4" y="34" text-anchor="middle">Référencer</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="tl-wrap">
+    <p class="tl-title">La double chaîne de traçabilité</p>
+    <p class="tl-sub">Un même chapitre fondateur, deux plans qui ne se croisent qu'à la fin</p>
+    <div class="branch">
+      <svg viewBox="0 0 700 320" width="100%" style="max-width:700px">
+        <g font-family="Josefin Sans">
+          <!-- C1 -->
+          <circle cx="350" cy="45" r="20" fill="#6b4a2f" stroke="#fff" stroke-width="2"/>
+          <text x="350" y="50" text-anchor="middle" class="tl-num" font-size="12">C1</text>
+          <text x="350" y="81" text-anchor="middle" class="br-node" font-weight="600">C1 · Hiérarchie des sources</text>
+          <text x="350" y="95" text-anchor="middle" class="br-lbl" font-size="9">FONDATION — exigence de traçabilité</text>
+          <!-- branches depuis C1 -->
+          <path d="M338 62 C 280 90, 220 108, 172 132" fill="none" stroke="#b8927a" stroke-width="2"/>
+          <path d="M362 62 C 420 90, 480 108, 528 132" fill="none" stroke="#c7c2b8" stroke-width="2"/>
+          <!-- colonne gauche : structure -->
+          <text x="170" y="118" text-anchor="middle" class="br-lbl">structure</text>
+          <circle cx="170" cy="150" r="17" fill="#6b4a2f" stroke="#fff" stroke-width="2"/>
+          <text x="170" y="155" text-anchor="middle" class="tl-num" font-size="11">C2</text>
+          <text x="170" y="181" text-anchor="middle" class="br-node" font-weight="600">C2 · Problématique &amp; plan</text>
+          <line x1="170" y1="167" x2="170" y2="215" stroke="#6b4a2f" stroke-width="2"/>
+          <circle cx="170" cy="232" r="16" fill="#2f4a8c" stroke="#fff" stroke-width="2"/>
+          <text x="170" y="237" text-anchor="middle" class="tl-num" font-size="11">C3</text>
+          <text x="170" y="262" text-anchor="middle" class="br-node" font-weight="600">C3 · Paragraphe</text>
+          <text x="170" y="275" text-anchor="middle" class="br-node">argumentatif</text>
+          <!-- colonne droite : attribution -->
+          <text x="530" y="118" text-anchor="middle" class="br-lbl">attribution</text>
+          <circle cx="530" cy="150" r="16" fill="#8a8478" stroke="#fff" stroke-width="2"/>
+          <text x="530" y="155" text-anchor="middle" class="tl-num" font-size="11">C4</text>
+          <text x="530" y="181" text-anchor="middle" class="br-node" font-weight="600">C4 · Citer, paraphraser,</text>
+          <text x="530" y="194" text-anchor="middle" class="br-node" font-weight="600">plagier</text>
+          <line x1="530" y1="166" x2="530" y2="216" stroke="#8a8478" stroke-width="2"/>
+          <circle cx="530" cy="232" r="16" fill="#8a8478" stroke="#fff" stroke-width="2"/>
+          <text x="530" y="237" text-anchor="middle" class="tl-num" font-size="11">C5</text>
+          <text x="530" y="262" text-anchor="middle" class="br-node" font-weight="600">C5 · Référencement</text>
+          <text x="530" y="275" text-anchor="middle" class="br-node">&amp; bibliographie</text>
+          <!-- convergence -->
+          <path d="M175 248 C 210 272, 250 285, 285 290" fill="none" stroke="#c7c2b8" stroke-width="1.8" stroke-dasharray="2 5"/>
+          <path d="M525 248 C 490 272, 450 285, 415 290" fill="none" stroke="#c7c2b8" stroke-width="1.8" stroke-dasharray="2 5"/>
+          <rect x="255" y="273" width="190" height="34" rx="10" fill="#fffdf7" stroke="#8a8478" stroke-width="1.6"/>
+          <text x="350" y="292" text-anchor="middle" class="br-node" font-size="10.5" font-weight="600">Écrit vérifiable —</text>
+          <text x="350" y="303" text-anchor="middle" class="br-node" font-size="10.5">chaque énoncé traçable</text>
+        </g>
+      </svg>
+    </div>
+    <p class="note">Les deux chaînes partagent une seule racine (C1) mais ne s'entrecroisent jamais avant l'écrit final : on peut avoir un plan impeccable et des sources mal attribuées, ou l'inverse — un texte parfaitement référencé mais sans argumentation.</p>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>La traçabilité : hiérarchie des sources</h2>
+      <p class="dsub">Chapitre C1 · FONDATION · SYS · prérequis : aucun — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une étudiante prépare un exposé sur les euroscepticismes en Europe. Une recherche rapide donne des centaines de résultats : un article de blog, une page Wikipédia, un rapport d'eurobaromètre, un éditorial de presse, un article de revue scientifique. Elle n'a ni le temps ni la formation pour tout vérifier au même niveau d'exigence. <b>Comment décider, en quelques secondes et avant même de lire le contenu, quelle source mérite quelle confiance ?</b> Sans hiérarchie explicite, chaque source se vaut — et un devoir bâti sur une source faible s'effondre dès qu'un correcteur remonte jusqu'à elle.</p>
+
+      <div class="callout hon">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Une convention sans inventeur unique — et c'est un vrai point de méthode</h5>
+          <p>Contrairement à un Incoterm publié une année précise par une chambre de commerce, ou une loi votée un jour donné, la hiérarchie des sources telle qu'elle est enseignée aujourd'hui <b>n'a pas d'auteur ni de date de naissance identifiables</b> : elle s'est sédimentée avec l'essor de l'édition scientifique moderne et l'expansion des revues à comité de lecture, surtout après 1945. Un repère fiable existe néanmoins pour situer l'origine du principe de vérification par les pairs : les <i>Philosophical Transactions</i>, fondées à Londres par la Royal Society en <span class="yr">1665</span>, sont considérées comme le premier périodique scientifique continu — mais le processus de relecture par les pairs tel qu'il est institutionnalisé aujourd'hui (avec rapporteurs anonymes, comités, révisions obligatoires) ne s'est généralisé que progressivement au cours du XX<sup>e</sup> siècle. Il faut savoir distinguer une règle instituée à une date précise d'une convention qui s'est simplement stabilisée par l'usage : toutes les règles n'ont pas d'inventeur.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Chaque niveau de la hiérarchie correspond à une <b>distance interprétative</b> croissante par rapport à l'événement ou à la donnée d'origine — et c'est cette distance, pas la longueur ou le sérieux apparent du texte, qui détermine sa fiabilité :</p>
+      <div class="chain">
+        <span class="node">Primaire — le fait brut</span><span class="arrow">→</span>
+        <span class="node">Scientifique — relu par les pairs</span><span class="arrow">→</span>
+        <span class="node">Presse — synthétisé pour un large public</span><span class="arrow">→</span>
+        <span class="node">Tertiaire — synthèse de synthèses</span>
+      </div>
+      <p class="mech">À chaque flèche, une main supplémentaire retravaille l'information : elle gagne en accessibilité et perd en granularité de preuve. La source <b>primaire</b> (un discours, des données brutes, un témoignage, un texte de loi) n'a pas encore été interprétée par un tiers — c'est la matière première de toute recherche. La source <b>scientifique</b> l'a fait passer par un filtre de vérification par des pairs compétents, avant publication. La <b>presse</b> de qualité vérifie ses faits sur un plan éditorial mais travaille sous contrainte de délai, sans le même filtre méthodologique. La source <b>tertiaire</b> (encyclopédie, manuel, Wikipédia) ne fait que compiler les trois niveaux précédents pour orienter rapidement un lecteur — elle est un point de départ, jamais une preuve finale.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une affirmation reprise, puis retracée</h5>
+        <p class="bad"><b>Version fautive :</b> « Le scepticisme envers l'Union européenne a beaucoup augmenté ces dernières années, d'après Wikipédia. »</p>
+        <p>Cette phrase ne dit rien de vérifiable : « beaucoup » n'a pas de valeur, « ces dernières années » n'a pas de bornes, et Wikipédia n'est ici cité que comme relais — elle ne mène le lecteur nulle part.</p>
+        <p class="good"><b>Version corrigée :</b> « Selon les enquêtes Eurobaromètre standard de la Commission européenne, la proportion de citoyens se déclarant plutôt méfiants envers l'UE a varié sensiblement entre les vagues 2016 et 2023, sans tendance linéaire simple. »</p>
+        <p>La seconde version remonte à une source primaire identifiable (les enquêtes elles-mêmes, publiées par vague) et reste prudente sur ce qu'elle peut affirmer sans avoir le chiffre exact sous les yeux — c'est aussi cela, la rigueur : ne pas inventer une précision que l'on n'a pas vérifiée.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Rapport de stage <i>— une affirmation sur l'entreprise doit remonter au rapport annuel ou à un entretien, pas à un article promotionnel</i></span>
+        <span class="linkchip">Civilisation britannique / espagnole / américaine <i>— un compte rendu s'appuie sur des sources académiques, pas sur des blogs de tourisme</i></span>
+        <span class="linkchip">Informes en espagnol <i>— même exigence de traçabilité transposée dans une autre langue de travail</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Citer Wikipédia comme source finale, alors qu'elle n'est utile que pour s'orienter vers ses propres sources primaires en bas de page</li>
+          <li>Traiter un article de presse généraliste comme une preuve scientifique équivalente à une étude relue par les pairs</li>
+          <li>Confondre « source récente » et « source fiable » — la date ne dit rien de la méthode de vérification</li>
+        </ul></div>
+        <div class="ee"><h5>Côté chercheurs / professionnels publiant</h5><ul>
+          <li>Citer un communiqué de presse d'entreprise comme s'il s'agissait d'une donnée primaire indépendante</li>
+          <li>Publier dans une revue dite « prédatrice » (sans comité de lecture réel) en la présentant comme une revue scientifique classique</li>
+          <li>Continuer à citer une étude après sa rétractation officielle, faute d'avoir vérifié son statut au moment de la publication du propre travail</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Comparaison des quatre niveaux — ce qui change, et ce que chacun autorise</caption>
+        <thead><tr><th>Niveau</th><th>Fiabilité</th><th>Usage autorisé en devoir universitaire</th><th>Exemple</th></tr></thead>
+        <tbody>
+          <tr><td>Primaire</td><td>Maximale sur le fait lui-même, aucune interprétation encore ajoutée</td><td>Citable directement comme preuve</td><td>Texte de loi, discours intégral, données d'enquête brutes</td></tr>
+          <tr><td>Scientifique</td><td>Haute — passée par relecture par les pairs</td><td>Citable comme preuve, y compris pour interpréter le primaire</td><td>Article dans une revue à comité de lecture</td></tr>
+          <tr><td>Presse</td><td>Variable — dépend du titre et de son sérieux éditorial</td><td>Utilisable avec prudence, jamais seule sur un point contesté</td><td>Article d'un quotidien de référence, dossier d'investigation</td></tr>
+          <tr><td>Tertiaire</td><td>Faible en tant que preuve — c'est une synthèse, pas une observation</td><td>Point de départ uniquement, jamais cité comme preuve finale</td><td>Encyclopédie, manuel, Wikipédia</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous trouvez un long article d'investigation, très documenté, publié par un grand quotidien de référence — mais ce n'est pas une source académique. L'utilisez-vous dans votre dossier de recherche ?</p>
+        <p class="dctx">L'article cite lui-même des documents internes et des témoignages de première main que vous ne trouvez nulle part ailleurs, y compris dans la littérature scientifique existante sur le sujet.</p>
+        <div class="dopts">
+          <span>A. L'écarter systématiquement — ce n'est pas une source académique</span>
+          <span>B. L'utiliser comme s'il s'agissait d'une source scientifique, sans le signaler</span>
+          <span>C. L'utiliser en le nommant explicitement comme source de presse, pour ce qu'il apporte que la littérature académique n'a pas encore couvert</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de règle absolue « presse interdite ». Un article d'investigation sérieux peut être la seule source disponible sur un fait récent que la recherche académique, plus lente à publier, n'a pas encore traité — l'écarter par principe (option A) prive parfois le travail d'une information réelle. Mais l'utiliser sans le signaler comme presse (option B) est trompeur : le lecteur croira à tort qu'il lit une source relue par des pairs, avec le niveau de vérification que cela suppose.</p>
+          <p>L'option C est la plus honnête : nommer la nature de la source dans le texte même (« selon une enquête du journal X, non encore corroborée par une étude académique ») permet au lecteur d'ajuster lui-même son niveau de confiance — c'est exactement ce que la hiérarchie des sources doit permettre de faire, plutôt que d'imposer un interdit binaire.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un recruteur ou un responsable de stage voit ce chapitre</h5>
+          <ol>
+            <li>Un rapport de stage qui cite une source non vérifiable en note de bas de page signale un manque de rigueur avant même que le contenu ne soit lu</li>
+            <li>Savoir distinguer une donnée brute d'une synthèse déjà interprétée est une compétence transférable à toute analyse de marché ou veille concurrentielle en entreprise</li>
+            <li>Un stagiaire qui sait remonter à la source primaire d'un chiffre (plutôt que le recopier d'un article) inspire une confiance immédiate et durable</li>
+            <li>La rapidité à juger la fiabilité d'une information est aussi précieuse en entreprise qu'à l'université — le temps de vérification y est souvent plus court encore</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de recherche frappe ici</h5>
+          <ul>
+            <li>Les moteurs de recherche génératifs mélangent souvent les niveaux : ils citent un résumé encyclopédique avec la même autorité apparente qu'une étude relue par les pairs</li>
+            <li>Un assistant de recherche peut halluciner une référence plausible mais inexistante — vérifier l'existence réelle de chaque source reste un geste humain non délégable</li>
+            <li>Une IA de fact-checking peut signaler automatiquement le niveau probable d'une source (primaire / scientifique / presse / tertiaire) avant même sa lecture, à condition d'être elle-même vérifiée</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Construire l'argumentation : problématique, plan, paragraphe</h2>
+      <p class="dsub">Chapitres C2 · C3 — la chaîne « structure »</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C2</p>
+      <p class="problem">Un sujet de devoir arrive souvent sous une forme vague : « Le Brexit et le commerce britannique ». Écrire dessus sans autre cadrage produit un texte qui informe sans jamais convaincre de rien — une accumulation de faits justes mais sans direction. <b>Comment transformer un sujet en une question précise qui, à elle seule, dicte tout le plan du devoir ?</b> Sans problématique, chaque partie du devoir risque de répéter la précédente sous un angle légèrement différent, sans qu'aucune ne réponde vraiment à quoi que ce soit.</p>
+
+      <div class="callout hon">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Encore une convention sans date de naissance précise</h5>
+          <p>La problématisation d'un sujet et le plan dialectique (thèse / antithèse / synthèse) ou thématique proviennent de la tradition pédagogique française de la dissertation, consolidée dans l'enseignement secondaire et supérieur au fil du XIX<sup>e</sup> et du XX<sup>e</sup> siècle. Aucun texte fondateur unique, aucun auteur ni aucune date ne peuvent lui être attribués de façon fiable — c'est un usage qui s'est imposé par la répétition et l'évaluation, pas par un règlement publié un jour donné.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C2</p>
+      <div class="chain">
+        <span class="node">Sujet donné, souvent vague</span><span class="arrow">→</span>
+        <span class="node">Tension ou contradiction identifiée</span><span class="arrow">→</span>
+        <span class="node">Problématique — une question précise</span><span class="arrow">→</span>
+        <span class="node">Plan — la question découpée en parties qui y répondent</span>
+      </div>
+      <p class="mech">Le point que la plupart des étudiantes sous-estiment : une bonne problématique n'est pas une reformulation du sujet, c'est une <b>tension</b> — deux affirmations qui semblent également vraies mais difficilement compatibles. « Le Brexit et le commerce britannique » n'est pas une problématique ; « Le Brexit a-t-il renforcé la souveraineté commerciale du Royaume-Uni au prix d'un coût administratif qui pèse d'abord sur ses propres exportateurs ? » en est une, parce qu'elle contient une tension explicite entre deux effets du même événement.</p>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C3</p>
+      <p class="problem">Une fois le plan fixé, chaque partie doit convaincre, pas seulement informer. <b>Comment un paragraphe, à lui seul, prouve-t-il quelque chose plutôt que de simplement lister des faits ?</b> Un paragraphe qui enchaîne des informations vraies mais sans lien de démonstration entre elles ne fait progresser ni l'argumentation ni la note.</p>
+
+      <div class="callout hon">
+        <svg viewBox="0 0 40 40" stroke="#8a8478"><path d="M20 6 C10 10 8 14 8 20 C8 28 14 32 20 34 C26 32 32 28 32 20 C32 14 30 10 20 6 Z"/><path d="M20 14 v10 M15 19 h10"/></svg>
+        <div>
+          <h5>Aucun inventeur identifiable — la structure AEET est une convention pédagogique</h5>
+          <p>La structure en quatre temps — affirmation, explication, exemple, transition — n'a pas non plus d'auteur ni de date fondatrice. Elle s'est diffusée par l'enseignement de la dissertation et de l'essai académique comme un patron efficace pour organiser une preuve, sans qu'aucun texte de référence unique ne l'ait « inventée » à un moment identifiable. C'est le même type de norme que celle de C2 : une convention sédimentée par l'usage, pas une règle instituée un jour précis — à la différence, par exemple, des Incoterms de la discipline 01, publiés par une organisation identifiée à une date connue.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C3</p>
+      <div class="chain">
+        <span class="node">Affirmation — une idée, une seule</span><span class="arrow">→</span>
+        <span class="node">Explication — pourquoi c'est vrai</span><span class="arrow">→</span>
+        <span class="node">Exemple — un cas concret qui l'illustre</span><span class="arrow">→</span>
+        <span class="node">Transition — vers le paragraphe suivant</span>
+      </div>
+      <p class="mech">Sans l'explication, l'affirmation reste une opinion non démontrée. Sans l'exemple, l'explication reste abstraite et invérifiable. Sans la transition, chaque paragraphe reste une île, sans lien avec la progression d'ensemble du devoir — c'est souvent ce dernier maillon manquant qui donne l'impression d'un devoir « qui ne va nulle part » alors que chaque paragraphe pris isolément est correct.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un paragraphe reconstruit</h5>
+        <p class="bad"><b>Version fautive (empilement d'informations) :</b> « Le Brexit a eu lieu en 2016. Le Royaume-Uni a voté à 51,9 % pour quitter l'Union européenne. Beaucoup d'entreprises ont été affectées. Le commerce avec l'UE a changé. C'est un sujet important en économie internationale. »</p>
+        <p>Cinq phrases vraies, aucune ne prouve rien : rien n'explique pourquoi le commerce « a changé », rien n'illustre concrètement ce changement, et la dernière phrase ne mène nulle part.</p>
+        <p class="good"><b>Version corrigée (affirmation → explication → exemple → transition) :</b> « Le Brexit a complexifié les formalités douanières pour les exportateurs britanniques vers l'Union européenne. En sortant de l'union douanière au 1<sup>er</sup> janvier 2021, le Royaume-Uni a réintroduit des déclarations en douane et des contrôles sanitaires que vingt-sept ans d'appartenance au marché unique avaient supprimés. Une PME agroalimentaire écossaise exportant du saumon vers la France doit désormais produire un certificat sanitaire par envoi, un coût et un délai qui n'existaient pas avant 2021. Cette charge administrative nouvelle explique en partie pourquoi certaines entreprises ont choisi d'ouvrir un entrepôt en zone UE plutôt que de continuer à exporter directement — une stratégie que la partie suivante examine plus en détail. »</p>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>C3 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi une affirmation sans explication reste une opinion — l'explication est ce qui la transforme en argument</li>
+            <li>Pourquoi l'exemple doit être concret et vérifiable, jamais un cas hypothétique ou une généralité déguisée en exemple</li>
+            <li>Pourquoi la transition n'est pas un ornement de style mais ce qui prouve que le devoir progresse vers sa problématique</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C3 — à automatiser</h5>
+          <ul>
+            <li>Une idée par paragraphe, jamais deux affirmations différentes mélangées</li>
+            <li>Toujours vérifier, en relecture, que chacun des quatre temps (A-E-E-T) est bien présent et dans cet ordre</li>
+            <li>Terminer chaque paragraphe par une phrase qui annonce ce que traite le paragraphe suivant</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Rapport de stage <i>— la partie « analyse » doit argumenter, pas seulement décrire les missions effectuées</i></span>
+        <span class="linkchip">Comptes rendus de civilisation <i>— chaque partie doit répondre explicitement à la problématique annoncée en introduction</i></span>
+        <span class="linkchip">Informes en espagnol <i>— même exigence de plan et de paragraphe argumenté dans une langue étrangère</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Reformuler le sujet en guise de problématique, sans y introduire de tension réelle</li>
+          <li>Écrire des paragraphes qui contiennent plusieurs idées mélangées, rendant la démonstration illisible</li>
+          <li>Oublier la transition, laissant le correcteur reconstruire lui-même la logique d'enchaînement</li>
+        </ul></div>
+        <div class="ee"><h5>Côté chercheurs / professionnels publiant</h5><ul>
+          <li>Annoncer une problématique en introduction puis en traiter en réalité une autre, plus commode, dans le corps du texte</li>
+          <li>Multiplier les exemples anecdotiques sans jamais les relier explicitement à l'affirmation qu'ils sont censés prouver</li>
+          <li>Ignorer, dans la conclusion, un résultat de leur propre étude qui nuance la thèse annoncée en introduction</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous avez construit un plan dialectique solide, mais en recherchant vos exemples vous tombez sur un cas réel qui contredit clairement la thèse que vous comptiez défendre en première partie. Que faites-vous ?</p>
+        <p class="dctx">Le devoir est à rendre dans deux jours ; refaire tout le plan prendrait un temps que vous n'avez plus.</p>
+        <div class="dopts">
+          <span>A. Ignorer ce cas et garder les exemples qui confirment votre plan initial</span>
+          <span>B. Refaire entièrement le plan pour partir de ce nouveau cas</span>
+          <span>C. Intégrer ce cas comme nuance ou limite, sans réécrire tout le plan</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Ignorer un cas contraire connu (option A) est le choix le plus risqué : un correcteur qui connaît ce cas y verra soit une lacune de recherche, soit une malhonnêteté argumentative — les deux coûtent cher en note. Refaire tout le plan (option B) est rarement nécessaire et rarement réaliste dans les délais impartis.</p>
+          <p>L'option C est la plus solide sur le plan intellectuel : une bonne argumentation n'est pas celle qui ignore ce qui la contredit, mais celle qui l'intègre — en nuance, en limite assumée, ou en ouverture pour la conclusion. Un correcteur valorise presque toujours davantage une thèse nuancée qu'une thèse à la démonstration trop lisse pour être honnête.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un recruteur ou un responsable de stage voit ce chapitre</h5>
+          <ol>
+            <li>Un écrit professionnel mal structuré (note de synthèse, compte rendu de réunion) prend deux fois plus de temps à lire pour la moitié de l'information utile</li>
+            <li>Savoir poser une problématique claire avant d'écrire est directement transférable à la rédaction d'un cahier des charges ou d'une note de recommandation</li>
+            <li>Un paragraphe qui n'affirme, n'explique et n'illustre rien signale une pensée elle-même mal construite, pas seulement une mauvaise rédaction</li>
+            <li>La capacité à intégrer un fait contraire sans casser sa démonstration est exactement ce qu'on attend d'un rapport d'analyse en entreprise</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de rédaction frappe ici</h5>
+          <ul>
+            <li>Un assistant de rédaction peut produire un paragraphe grammaticalement parfait et pourtant vide de toute tension argumentative réelle</li>
+            <li>Une IA générative peut masquer l'absence de problématique par un style fluide qui donne une illusion de structure</li>
+            <li>Un outil de relecture automatisé peut vérifier mécaniquement la présence des quatre temps A-E-E-T, mais pas la pertinence réelle de l'exemple choisi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Attribuer : citer, paraphraser, référencer</h2>
+      <p class="dsub">Chapitres C4 · C5 — la chaîne « attribution »</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C4</p>
+      <p class="problem">Une étudiante lit un livre, en retient une idée forte, et l'utilise dans son devoir. <b>À quel moment cette idée cesse-t-elle d'être celle de l'auteur du livre pour devenir, à tort, présentée comme la sienne propre ?</b> La frontière entre citer, paraphraser et plagier n'est pas toujours nette pour qui débute — et c'est précisément cette frontière que ce chapitre trace.</p>
+
+      <div class="callout hon">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Le plagiat : un interdit ancien, sans date de naissance</h5>
+          <p>Le plagiat comme faute n'a pas d'origine datée identifiable — c'est un interdit ancien, dont les formes concrètes ont varié selon les époques et les cultures académiques, sans qu'aucune institution n'ait « créé » la notion à un moment précis. En revanche, les <b>systèmes de référencement</b> qui permettent aujourd'hui de citer sans ambiguïté ont, eux, des jalons datés et vérifiables (voir C5 ci-dessous) : c'est la technique de traçabilité qui a une histoire écrite, pas l'interdit moral lui-même.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C4</p>
+      <p class="mech">Trois traitements possibles du même passage, et une seule limite claire entre eux : <b>l'attribution explicite</b>, pas la quantité de mots changés.</p>
+      <div class="chain">
+        <span class="node">Citation directe — mots identiques, référencés</span><span class="arrow">→</span>
+        <span class="node">Paraphrase — reformulée entièrement, référencée</span><span class="arrow">→</span>
+        <span class="node">Plagiat — mots ou idée sans attribution</span>
+      </div>
+      <p class="mech">Le piège le plus fréquent n'est pas la copie totale, évidente et rare, mais le <b>patchwriting</b> : changer quelques mots d'une phrase en gardant sa structure d'origine, sans guillemets ni référence. Ce n'est ni une citation (les mots ne sont pas identiques) ni une vraie paraphrase (la structure de pensée n'a pas été retravaillée) — c'est un plagiat déguisé, et c'est la forme la plus fréquente chez les étudiants qui pensent, de bonne foi, avoir suffisamment reformulé.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une même phrase source, trois traitements</h5>
+        <p><i>Source : Martin, S. (2019). <em>Négocier à l'international</em>. Dunod, p. 42 : « La confiance entre partenaires commerciaux ne se décrète pas ; elle se construit par la répétition d'engagements tenus. »</i></p>
+        <p class="good"><b>Citation directe (correcte) :</b> Martin affirme que « la confiance entre partenaires commerciaux ne se décrète pas ; elle se construit par la répétition d'engagements tenus » (Martin, 2019, p. 42).</p>
+        <p class="good"><b>Paraphrase (correcte) :</b> Selon Martin (2019), la confiance commerciale internationale s'installe progressivement, à mesure que les engagements pris sont effectivement respectés, plutôt que par une simple déclaration d'intention (p. 42).</p>
+        <p class="bad"><b>Plagiat (fautif) :</b> La confiance entre partenaires commerciaux ne se décrète pas, elle se construit par la répétition d'engagements tenus. <i>— aucun guillemet, aucune référence : présenté comme la pensée propre de l'étudiante.</i></p>
+      </div>
+
+      <table class="cmp">
+        <caption>Où se situe précisément la limite entre les trois traitements</caption>
+        <thead><tr><th>Traitement</th><th>Mots</th><th>Attribution</th><th>Statut</th></tr></thead>
+        <tbody>
+          <tr><td>Citation directe</td><td>Identiques à la source, entre guillemets</td><td>Obligatoire, avec page précise</td><td>Correct</td></tr>
+          <tr><td>Paraphrase</td><td>Entièrement reformulés, structure de pensée retravaillée</td><td>Obligatoire, sans guillemets</td><td>Correct</td></tr>
+          <tr><td>Patchwriting</td><td>Quelques mots changés, structure d'origine conservée</td><td>Absente ou insuffisante</td><td>Plagiat, même sans intention</td></tr>
+          <tr><td>Copie intégrale non attribuée</td><td>Identiques, sans guillemets</td><td>Absente</td><td>Plagiat</td></tr>
+        </tbody>
+      </table>
+
+      <div class="split">
+        <div class="u">
+          <h5>C4 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi le patchwriting est un plagiat même sans intention de tromper — la loi de l'attribution est objective, pas une question de bonne foi</li>
+            <li>Pourquoi une idée non citée peut être un plagiat même sans aucun mot identique à la source</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C4 — à automatiser</h5>
+          <ul>
+            <li>Toute idée qui n'est pas la sienne propre reçoit une référence, sans exception, y compris pour une paraphrase</li>
+            <li>Toute suite de mots identique à une source, même courte, entre guillemets et avec numéro de page</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C5</p>
+      <p class="problem">Une citation dans le texte (« Martin, 2019 ») ne suffit pas seule : le lecteur doit pouvoir retrouver exactement l'ouvrage cité, dans une bibliothèque, des années plus tard. <b>Comment garantir qu'un renvoi minimal dans le texte permette toujours de reconstituer la référence complète, quel que soit le lecteur ou l'époque ?</b> Sans norme partagée, chaque bibliographie inventerait son propre format, rendant la vérification laborieuse.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Deux jalons datés et vérifiables</h5>
+          <p>Le style de l'<b>American Psychological Association (APA)</b> — l'un des systèmes de référencement les plus utilisés en sciences sociales — trouve son origine dans des lignes directrices publiées pour la première fois par un groupe de psychologues, biologistes et administrateurs dans la revue <i>Psychological Bulletin</i> en <span class="yr">1929</span>, formalisées ensuite dans le premier <i>Publication Manual of the APA</i> en <span class="yr">1952</span>. La <b>Modern Language Association (MLA)</b>, association académique centrée sur les études littéraires et linguistiques, est fondée en <span class="yr">1883</span> ; son propre système de référencement, le <i>MLA Style Sheet</i>, paraît pour la première fois en <span class="yr">1951</span>, devenu depuis le <i>MLA Handbook</i>.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — C5</p>
+      <div class="chain">
+        <span class="node">Renvoi court dans le texte (auteur, année)</span><span class="arrow">→</span>
+        <span class="node">Entrée bibliographique complète en fin de document</span><span class="arrow">→</span>
+        <span class="node">Norme partagée (APA, MLA…) qui fixe l'ordre et la ponctuation exacts</span>
+      </div>
+      <p class="mech">La norme ne sert pas l'esthétique : elle rend la référence <b>reproductible mécaniquement</b> — n'importe quel lecteur formé au même style retrouve, dans le même ordre, les mêmes informations, sans avoir à deviner où chercher l'année ou l'éditeur.</p>
+
+      <div class="example">
+        <h5>Une référence, complète puis incomplète</h5>
+        <p class="good"><b>Correcte (style APA) :</b> Martin, S. (2019). <em>Négocier à l'international</em>. Dunod.</p>
+        <p class="bad"><b>Incomplète :</b> Martin, <em>Négocier à l'international</em> (livre sur le commerce). <i>— année absente, initiale du prénom absente, éditeur absent : le lecteur ne peut pas retrouver l'ouvrage avec certitude.</i></p>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>C5 — à comprendre</h5>
+          <ul>
+            <li>Pourquoi l'ordre et la ponctuation d'une référence ne sont pas arbitraires — ils garantissent qu'elle reste lisible mécaniquement par tout lecteur formé au même style</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>C5 — à automatiser</h5>
+          <ul>
+            <li>Une seule norme par document, appliquée sans exception à toutes les références, du début à la fin</li>
+            <li>Vérifier systématiquement : auteur, année, titre, éditeur — les quatre éléments toujours présents</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="cmp">
+        <caption>APA et MLA — deux normes, deux usages, pas une hiérarchie</caption>
+        <thead><tr><th></th><th>APA</th><th>MLA</th></tr></thead>
+        <tbody>
+          <tr><td>Terrain d'origine</td><td>Sciences sociales et sciences</td><td>Études littéraires et linguistiques</td></tr>
+          <tr><td>Citation dans le texte</td><td>(Auteur, année)</td><td>(Auteur page)</td></tr>
+          <tr><td>Repère daté</td><td>1929 (Psychological Bulletin) · 1952 (1<sup>er</sup> manuel)</td><td>1883 (fondation MLA) · 1951 (1<sup>er</sup> Style Sheet)</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Rapport de stage <i>— citer une source interne à l'entreprise (rapport annuel, intranet) suit la même exigence d'attribution</i></span>
+        <span class="linkchip">Comptes rendus de civilisation <i>— une bibliographie normée est exigée quel que soit l'aire culturelle traitée</i></span>
+        <span class="linkchip">Informes en espagnol <i>— la citation et la paraphrase obéissent aux mêmes règles, changent seulement de langue</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Mélanger deux styles de référencement dans le même document, rendant la bibliographie incohérente</li>
+          <li>Citer une idée sans référence en pensant, à tort, que « c'est connu de tout le monde »</li>
+          <li>Oublier le numéro de page pour une citation directe, rendant la vérification impossible</li>
+        </ul></div>
+        <div class="ee"><h5>Côté chercheurs / professionnels publiant</h5><ul>
+          <li>Réutiliser un passage de son propre article précédent sans le signaler — l'auto-plagiat, souvent négligé alors qu'il enfreint les mêmes règles d'attribution</li>
+          <li>Citer une traduction sans préciser qu'il s'agit d'une traduction, masquant une possible dérive de sens par rapport au texte original</li>
+          <li>Laisser une bibliographie incomplète dans une publication finale faute de relecture croisée avec les citations du corps de texte</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">En relisant votre dossier, vous trouvez un paragraphe où vous avez changé quelques mots d'une phrase de votre source, sans guillemets ni référence — sans intention de tricher, simplement par habitude de prise de notes. Que faites-vous avant de rendre le devoir ?</p>
+        <p class="dctx">Le devoir est à rendre dans une heure ; réécrire le paragraphe en vraie paraphrase référencée demande du temps que vous n'avez presque plus.</p>
+        <div class="dopts">
+          <span>A. Laisser tel quel — l'intention n'était pas de tricher, cela devrait suffire</span>
+          <span>B. Supprimer purement et simplement le paragraphe pour ne prendre aucun risque</span>
+          <span>C. Ajouter la référence et retravailler rapidement la formulation pour qu'elle soit vraiment personnelle</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Le règlement d'un jury ne juge pas l'intention mais le résultat : un patchwriting non corrigé reste, techniquement, un plagiat détectable — l'option A expose donc à une sanction disproportionnée par rapport à une négligence de méthode. Supprimer le paragraphe (option B) est une solution sûre mais appauvrit inutilement le devoir si l'idée elle-même était pertinente.</p>
+          <p>L'option C est la seule qui corrige la cause réelle du problème en un minimum de temps : ajouter la référence règle l'attribution immédiatement, et retravailler la formulation — même sommairement — transforme le patchwriting en vraie paraphrase. C'est aussi la meilleure habitude à prendre en amont : référencer au moment de la prise de notes, pas en relecture finale sous pression.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un recruteur ou un responsable de stage voit ce chapitre</h5>
+          <ol>
+            <li>Un plagiat détecté, même mineur, est souvent le signal d'alerte le plus grave qu'un recruteur puisse lire dans un dossier — plus grave qu'une faiblesse de contenu</li>
+            <li>Savoir attribuer précisément une source protège aussi l'entreprise : un rapport interne mal sourcé peut engager sa responsabilité juridique</li>
+            <li>La rigueur de référencement acquise à l'université se transfère directement à la veille concurrentielle et à la rédaction de notes internes</li>
+            <li>Une bibliographie propre et cohérente est perçue comme un indicateur fiable de sérieux professionnel, bien au-delà du cadre académique</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de détection de plagiat frappe ici</h5>
+          <ul>
+            <li>Les détecteurs de plagiat par correspondance de texte repèrent la copie intégrale mais manquent souvent le patchwriting, la forme la plus fréquente</li>
+            <li>Un outil génératif peut produire une paraphrase parfaite d'une source sans jamais générer de référence — l'attribution reste un geste que l'outil n'a aucune raison d'ajouter de lui-même</li>
+            <li>Les faux positifs sur des expressions courantes ou des formulations techniques standard restent un point de friction réel, qui exige une relecture humaine du signalement</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Traçabilité<i>C1 · C4 · C5</i></span>
+        <span class="sp">Distance interprétative<i>C1 · C2</i></span>
+        <span class="sp">Structure vs attribution<i>C2 · C3 · C4 · C5</i></span>
+        <span class="sp">Convention sédimentée vs règle instituée<i>C1 · C3 · C4</i></span>
+        <span class="sp">Vérifiabilité<i>tous</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="09-gestion-de-projet.html">← Gestion de projet</a>
     <a class="navbtn home" href="index.html">Index des matières</a>
-    <a class="navbtn next" href="11-anglais-economique-commercial.html">Anglais économique et commer… →</a>
+    <a class="navbtn next" href="11-anglais-economique-commercial.html">Anglais économique &amp; commercial →</a>
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
