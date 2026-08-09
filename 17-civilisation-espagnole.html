@@ -8,8 +8,216 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#c2743f;--dom-lt:#eebd91}</style>
+<style>
+/* Palette — vermillon / encre noire / or vieux : trois couleurs pour une
+   histoire politique, volontairement distinctes de la discipline 14 (grenade /
+   safran / olive), qui traite l'Espagne comme marché et non comme trajectoire
+   politique. L'encre noire est celle de la dictature : elle s'efface
+   progressivement au fil des chapitres mais ne disparaît jamais tout à fait —
+   elle reste la couleur du texte, des institutions, de ce qui continue en
+   silence. Le vermillon est le risque et la tension : le sang resté virtuel
+   du 23-F, la fracture catalane de 2017, la défiance née du 11-M. L'or vieux
+   est le compromis constitutionnel de 1978 qui tient l'ensemble — c'est lui
+   qui relie visuellement, dans cette fiche, le chapitre C2 (l'accord) au
+   chapitre C6 (sa conséquence différée). */
+:root{
+  --verm:#b8342f; --verm-lt:#e0938c;
+  --ink:#2b2926; --ink-lt:#706c66;
+  --or:#b8862f; --or-lt:#e0c48c;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(112,108,102,.38);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -6%, #ece0d2 0%, transparent 58%),
+    radial-gradient(1000px 900px at 98% 18%, #e7cfae 0%, transparent 52%),
+    radial-gradient(1000px 720px at 30% 110%, #e7b7ac 0%, transparent 56%),
+    linear-gradient(158deg,#efe4d6 0%, #e6d7c4 40%, #ddc9ab 70%, #e3c2b3 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--or);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--verm);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);backdrop-filter:blur(3px);border:1px solid rgba(184,52,47,.25);
+  border-radius:26px;box-shadow:0 18px 48px rgba(43,41,38,.18);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:190px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--verm);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--ink);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--verm)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-lt)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--ink-lt),var(--ink))}
+.cbar .au{background:linear-gradient(90deg,var(--verm-lt),var(--verm))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--ink)} .crd b.a{color:var(--verm)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--ink)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-lt);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:460px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--or);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-lt);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--verm);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.53rem;fill:var(--ink)}
+.tl-yr{font-family:'Josefin Sans';font-size:.5rem;fill:var(--ink-lt)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+.tl-link{font-family:'Josefin Sans';font-size:.56rem;fill:var(--verm);letter-spacing:.06em}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(184,52,47,.22);border-radius:24px;box-shadow:0 16px 46px rgba(43,41,38,.16)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--verm),var(--or));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.22)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--ink);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-lt);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--verm);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--verm) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--verm-lt) 0 12.5%, transparent 0 25%, var(--verm-lt) 0 37.5%, transparent 0 50%, var(--verm-lt) 0 62.5%, transparent 0 75%, var(--verm-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--verm)}
+.problem b{color:var(--verm);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(184,134,47,.1);
+  border:1px solid rgba(184,134,47,.42);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--or);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--verm);font-weight:600}
+.callout.tension{background:rgba(184,52,47,.08);border-color:rgba(184,52,47,.42)}
+.callout.tension svg{stroke:var(--verm)}
+.callout.tension h5{color:var(--verm)}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--ink-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-lt);font-size:1.1rem}
+
+.example{background:rgba(184,52,47,.07);border-left:3px solid var(--verm);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verm);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--or);color:#8a6220;
+  padding:5px 12px;border-radius:14px;background:rgba(184,134,47,.09)}
+.linkchip i{color:var(--ink-lt);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(184,134,47,.1);border:1px solid rgba(184,134,47,.5)}
+.errors .ee{background:rgba(184,52,47,.09);border:1px solid rgba(184,52,47,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--or)} .errors .ee h5{color:var(--verm)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--verm)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-lt);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--or-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#5c3f10}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(184,134,47,.08)}
+
+details.dilemma{background:rgba(255,255,255,.72);border:1.5px dashed var(--verm);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--verm);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--ink);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(112,108,102,.1);border-radius:10px;padding:7px 12px;border-left:3px solid var(--ink-lt)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(184,134,47,.13);border:1px solid var(--or)}
+.helix{background:rgba(43,41,38,.06);border:1px solid var(--ink-lt)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#8a6220} .helix h5{color:var(--ink)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--or);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--ink)}
+
+/* diagrammes SVG */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--or);color:#8a6220;
+  padding:5px 12px;border-radius:14px;background:rgba(184,134,47,.09)}
+.sp i{color:var(--ink-lt);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-lt);font-style:italic;margin-top:10px}
+.note b{color:var(--verm);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--verm);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--verm);border-color:var(--verm)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,46 +226,454 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d17">
-  <div class="tab">篇 XVII</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 17</p>
-    <h3>Civilisation espagnole — de la Transición à nos jours</h3>
-    <p class="dmeta">S5 · CM 12h + TD 12h · 1 ECTS · Claire Decobert</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Un pont de pierre relie une falaise sombre à gauche, portant les institutions de la dictature, à une falaise colorée à droite ; la clef de voûte du pont, au centre, porte la date 1978">
+      <defs>
+        <linearGradient id="cliffR" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#e0938c"/><stop offset="1" stop-color="#c2853a"/>
+        </linearGradient>
+      </defs>
+      <!-- sol -->
+      <path d="M0 178 H680" stroke="#706c66" stroke-width="1" opacity=".3"/>
+      <!-- falaise gauche : dictature, ombre -->
+      <path d="M0 190 V96 L46 82 L70 100 L112 74 L150 96 L150 190 Z" fill="#2b2926" opacity=".88"/>
+      <g stroke="#706c66" stroke-width="1.3" fill="none">
+        <rect x="30" y="112" width="14" height="18"/>
+        <rect x="60" y="118" width="14" height="18"/>
+        <rect x="90" y="112" width="14" height="18"/>
+      </g>
+      <!-- vide / faille -->
+      <path d="M150 190 L172 120 L164 190 Z" fill="#2b2926" opacity=".18"/>
+      <path d="M530 190 L512 118 L522 190 Z" fill="url(#cliffR)" opacity=".18"/>
+      <!-- falaise droite : démocratie, couleur -->
+      <path d="M530 190 V100 L562 78 L592 98 L624 70 L654 92 L680 78 V190 Z" fill="url(#cliffR)"/>
+      <g stroke="#fff" stroke-width="1.1" opacity=".55" fill="none">
+        <path d="M600 20 L600 44 M588 32 L612 32"/>
+      </g>
+      <!-- pont -->
+      <path d="M150 96 C 240 30, 440 30, 530 100" fill="none" stroke="#2b2926" stroke-width="4"/>
+      <path d="M150 96 C 240 30, 440 30, 530 100" fill="none" stroke="#b8342f" stroke-width="1.4" stroke-dasharray="1 7" opacity=".7"/>
+      <g stroke="#706c66" stroke-width="1.6" fill="none" opacity=".8">
+        <line x1="200" y1="62" x2="200" y2="96"/>
+        <line x1="260" y1="42" x2="260" y2="100"/>
+        <line x1="420" y1="42" x2="420" y2="100"/>
+        <line x1="480" y1="62" x2="480" y2="98"/>
+      </g>
+      <!-- clef de voûte : 1978 -->
+      <g transform="translate(340,34)">
+        <rect x="-24" y="-14" width="48" height="26" rx="4" fill="#b8862f" stroke="#fff" stroke-width="1.6"/>
+        <text x="0" y="4" text-anchor="middle" font-family="Josefin Sans" font-size="12" font-weight="600" fill="#fff" stroke="none">1978</text>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Civilisation espagnole — de la Transición à nos jours</h1>
+    <p class="gen-open">Comment passer d'une dictature de quarante ans à une démocratie sans guerre civile, alors que <b>les institutions, l'armée et les élites du régime précédent sont toujours en place</b> le lendemain de la mort du dictateur ? C'est le problème que toute la discipline résout, période par période : d'abord identifier ce qu'il faut démonter sans le faire exploser (C1) ; puis négocier un compromis constitutionnel volontairement inachevé, pour ne fâcher personne tout à fait (C2) ; puis vérifier sur le terrain que ce compromis tient face à une menace réelle (C3) ; puis normaliser le pays par l'Europe (C4-C5) ; et enfin comprendre pourquoi, quarante ans plus tard, la part la plus ambiguë de l'accord de 1978 revient exiger une réponse (C6).</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:85%"></span><span class="au" style="width:15%"></span></span>
       <span class="crd">Système <b class="s">85%</b> · Automatisme <b class="a">15%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S5 · CM 12h + TD 12h · 1 ECTS · Claire Decobert</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Comment <b>passer d'une dictature de quarante ans à une démocratie sans guerre civile</b>, alors que les institutions, l'armée et les élites du régime précédent sont toujours en place ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>L'héritage franquiste : ce qu'il faut démonter</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>La Transición 1975–78</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · Suárez, Pactos de la Moncloa, Constitution de 1978</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>La consolidation : le 23-F (1981)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b> · le test de solidité du nouveau régime</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Modernisation et intégration européenne (1982–96)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3</b> · González, CEE 1986, 1992</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Aznar, l'euro et le 11-M (1996–2004)</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C4</b></span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>L'État des autonomies &amp; la question catalane</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b> · conséquence directe du compromis de 1978</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Contrainte</div><div class="tc"><span class="node f">C1 · Héritage à démonter</span></div></div>
-<div class="flow"><span class="fdot"></span>le compromis de 1978 est la clé de tout ce qui suit<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Compromis</div><div class="tc"><span class="node f">C2 · Transición</span><span class="ar">→</span><span class="node s">C3 · 23-F</span></div></div>
-<div class="tier"><div class="tl">Effets</div><div class="tc"><span class="node s">C4 · Modernisation</span><span class="ar">→</span><span class="node s">C5 · Aznar</span><span class="ar">·</span><span class="node f">C6 · Autonomies</span></div></div>
-</div>
-    <p class="note">C6 n'est pas un chapitre d'actualité isolé : la question catalane est la <b>conséquence différée</b> du compromis territorial de 1978. C'est la relation C2 → C6 qui structure une bonne copie.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Consensus négocié<i>C2·C4·C6</i></span><span class="sp">Question territoriale<i>C2·C6</i></span><span class="sp">Ancrage européen comme modernisation<i>C4·C5</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M8 26 L10 14 L16 20 L20 10 L24 20 L30 14 L32 26 Z"/><line x1="8" y1="26" x2="32" y2="26"/><circle cx="20" cy="10" r="2"/></svg><b>Juan Carlos Ier</b><span>arbitre, garant</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="10" y="8" width="16" height="22" rx="2"/><line x1="14" y1="14" x2="22" y2="14"/><line x1="14" y1="19" x2="22" y2="19"/><line x1="14" y1="24" x2="19" y2="24"/><path d="M26 26 L34 18 L36 20 L28 28 Z"/></svg><b>Adolfo Suárez</b><span>négocie, démantèle</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 24 C6 14 14 10 20 10 C26 10 34 14 34 24 C28 20 12 20 6 24 Z"/><path d="M14 24 C14 20 26 20 26 24"/></svg><b>Antonio Tejero</b><span>teste, le 23-F</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 30 L14 22 L20 26 L32 12"/><path d="M26 12 h6 v6"/><circle cx="20" cy="8" r="2"/><circle cx="24" cy="6" r="1.4"/><circle cx="16" cy="6" r="1.4"/></svg><b>Felipe González</b><span>modernise, ancre en Europe</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M15 14 C11 17 11 23 15 26 M12 17 h9 M12 22 h8"/></svg><b>José María Aznar</b><span>euro, alternance, 11-M</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres — 1939 à 2017</p>
+    <svg class="tl-svg" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+      <!-- arc de prémonition C2 -> C6 -->
+      <path d="M190 55 Q 525 24 860 55" fill="none" stroke="#b8342f" stroke-width="1.6" stroke-dasharray="1 6" opacity=".65"/>
+      <text class="tl-link" x="525" y="18" text-anchor="middle">conséquence différée — voir 篇 III</text>
+      <!-- ligne serpentine principale -->
+      <path d="M20 110 C 80 60, 140 60, 190 55 S 300 150, 360 150 S 470 70, 530 70 S 650 140, 700 140 S 810 55, 860 55" fill="none" stroke="#706c66" stroke-width="2.5" opacity=".55"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(20,110)"><circle r="16" fill="#2b2926" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="34" text-anchor="middle">Héritage</text><text class="tl-yr" x="0" y="46" text-anchor="middle">1939–1975</text></g>
+        <!-- C2 -->
+        <g transform="translate(190,55)"><circle r="18" fill="#b8862f" stroke="#b8342f" stroke-width="2.6"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-30" text-anchor="middle">Transición</text><text class="tl-yr" x="0" y="-19" text-anchor="middle">1975–78</text></g>
+        <!-- C3 -->
+        <g transform="translate(360,150)"><circle r="14" fill="#b8342f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="34" text-anchor="middle">23-F</text><text class="tl-yr" x="0" y="46" text-anchor="middle">1981</text></g>
+        <!-- C4 -->
+        <g transform="translate(530,70)"><circle r="14" fill="#e0c48c" stroke="#b8862f" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle" fill="#5c3f10">4</text><text class="tl-med" x="0" y="-28" text-anchor="middle">Modernisation</text><text class="tl-yr" x="0" y="-17" text-anchor="middle">1982–96</text></g>
+        <!-- C5 -->
+        <g transform="translate(700,140)"><circle r="14" fill="#e0938c" stroke="#b8342f" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle" fill="#6b1e1a">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">Aznar · euro</text><text class="tl-yr" x="0" y="46" text-anchor="middle">1996–2004</text></g>
+        <!-- C6 -->
+        <g transform="translate(860,55)"><circle r="18" fill="#b8342f" stroke="#b8862f" stroke-width="2.6"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="-4" y="-30" text-anchor="middle">Autonomies</text><text class="tl-yr" x="-4" y="-19" text-anchor="middle">1978→2017</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>L'héritage franquiste et la Transición</h2>
+      <p class="dsub">Chapitres C1 · C2 — la fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Francisco Franco meurt le <b>20 novembre 1975</b>, après près de quarante ans à la tête de l'État. Rien, matériellement, n'a changé le lendemain : les mêmes Cortes siègent, la même armée existe, les mêmes gouverneurs civils, juges et hauts fonctionnaires occupent les mêmes bureaux. <b>Comment fait-on disparaître un régime dont on ne peut ni arrêter ni remplacer d'un coup toutes les institutions</b>, sous peine de vide de pouvoir, de guerre civile, ou d'un coup d'arrêt militaire immédiat ? La difficulté n'est pas de vouloir la démocratie — elle est de la faire advenir en utilisant les propres outils juridiques du régime qu'on veut quitter, puisqu'aucun autre outil légitime n'existe encore.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Franco avait cru verrouiller sa succession : en désignant en 1969 le prince <b>Juan Carlos de Borbón</b> comme son successeur à titre de roi, il pensait assurer la continuité du régime — la formule attribuée à son entourage était que tout resterait « <i>atado y bien atado</i> » (« attaché, et bien attaché »). En <span class="yr">juillet 1976</span>, le roi nomme pourtant <b>Adolfo Suárez</b>, un homme jusque-là issu de l'appareil franquiste lui-même, à la présidence du gouvernement — avec pour mission implicite de démanteler légalement, de l'intérieur, les institutions qui l'ont porté au pouvoir.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Suárez ne peut pas abolir les Cortes franquistes par décret : cela ressemblerait à un coup de force et braquerait l'armée. Il choisit une voie plus lente et plus sûre, résumée par la formule restée célèbre <b>« de la ley a la ley »</b> (« de la loi à la loi ») : faire voter par les institutions franquistes elles-mêmes la loi qui organise leur propre dissolution.</p>
+      <div class="chain">
+        <span class="node">Ley para la Reforma Política, référendum déc. 1976</span><span class="arrow">→</span>
+        <span class="node">Élections libres, juin 1977</span><span class="arrow">→</span>
+        <span class="node">Pactos de la Moncloa, oct. 1977</span><span class="arrow">→</span>
+        <span class="node">Constitution, référendum 6 déc. 1978</span>
+      </div>
+      <p class="mech">La Constitution de 1978 pose les bases d'une monarchie parlementaire — mais son <b>article 2</b> contient un compromis volontairement ambigu : il proclame « l'unité indissoluble de la nation espagnole » <b>et</b>, dans la même phrase, reconnaît le droit à l'autonomie des « nationalités et régions » qui la composent. Ce n'est pas une négligence de rédaction : c'est le prix à payer pour obtenir, en 1978, l'accord simultané des secteurs centralistes de l'armée et des partis nationalistes catalans et basques. Cette phrase, non tranchée, est la graine du chapitre C6 — voir 篇 III.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Le même bureau, deux régimes</h5>
+        <p>Un gouverneur civil de province, nommé sous Franco, peut très concrètement se retrouver encore en poste au moment du référendum constitutionnel de décembre 1978 : rien dans la Ley para la Reforma Política n'imposait une purge de l'administration. C'est précisément ce que la Transición gère différemment d'une révolution — la rupture est politique et juridique, pas un remplacement brutal des personnes qui font tourner l'État au quotidien. Un investisseur étranger de l'époque, cherchant un interlocuteur administratif fiable dès 1977, trouve donc une administration qui fonctionne — un actif que la discipline sous-estime souvent.</p>
+      </div>
+      <p class="note">Point d'exactitude : la légalisation du Parti communiste espagnol (PCE) par Suárez est généralement datée du <b>9 avril 1977</b> (Samedi saint) — une date largement documentée mais qui ne figure pas dans les repères fournis pour cette fiche ; à confirmer si le cours en donne une version différente.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Espagnol économique — discipline 14 <i>— le Plan de Estabilización de 1959 comme socle d'ouverture antérieur à la Transición</i></span>
+        <span class="linkchip">Management interculturel — discipline 08 <i>— l'identité régionale espagnole déjà présente sous Franco, non créée en 1978</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que la mort de Franco (20 nov. 1975) produit la démocratie automatiquement, sans les trois années de négociation qui suivent</li>
+          <li>Confondre la Ley para la Reforma Política (1976), qui organise une dissolution, et la Constitution (1978), qui fonde un régime nouveau</li>
+          <li>Oublier que ce sont les Cortes franquistes elles-mêmes qui votent leur propre suppression — pas une assemblée extérieure</li>
+        </ul></div>
+        <div class="ee"><h5>Côté commentateurs / médias</h5><ul>
+          <li>Présenter la Transición comme un long fleuve tranquille et consensuel, en occultant la tension militaire qui débouche sur le 23-F</li>
+          <li>Réduire la Transición à la seule figure du roi, en minorant le rôle de Suárez et des partis dans la négociation</li>
+          <li>Traiter l'ambiguïté de l'article 2 comme un détail juridique, alors qu'elle est le compromis fondateur de tout l'État des autonomies</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Ce qui bascule entre les Cortes franquistes et les premières Cortes démocratiques</caption>
+        <thead><tr><th>Aspect</th><th>Cortes franquistes (avant 1977)</th><th>Cortes démocratiques (après juin 1977)</th></tr></thead>
+        <tbody>
+          <tr><td>Origine des membres</td><td>Désignation, représentation corporatiste</td><td>Élection au suffrage universel</td></tr>
+          <tr><td>Rôle réel</td><td>Chambre d'enregistrement du pouvoir exécutif</td><td>Pouvoir législatif effectif, contrôle du gouvernement</td></tr>
+          <tr><td>Usage paradoxal</td><td>Vote la Ley para la Reforma Política (1976), qui organise sa propre fin</td><td>Adopte la Constitution (1978), qui la remplace définitivement</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes Adolfo Suárez, début 1977. Légaliser le Parti communiste espagnol avant les premières élections libres, ou attendre ?</p>
+        <p class="dctx">L'armée considère le PCE comme l'ennemi historique du soulèvement de 1936 ; l'exclure des élections priverait pourtant le scrutin de juin 1977 d'une part réelle de légitimité démocratique, une des principales forces de l'opposition antifranquiste restant hors-jeu.</p>
+        <div class="dopts">
+          <span>A. Légaliser sans condition avant les élections, malgré le risque d'un coup de force militaire immédiat</span>
+          <span>B. Repousser la légalisation après les élections, pour ne pas braquer l'armée en pleine négociation</span>
+          <span>C. Légaliser, mais en échange d'une reconnaissance explicite de la monarchie et du drapeau par le PCE</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Suárez choisit historiquement une voie proche de C : il légalise le PCE au printemps 1977, en échange d'un geste symbolique du parti envers la monarchie et les institutions. Cela ne désamorce pas totalement la colère des secteurs militaires les plus durs — une colère que l'on retrouve, quatre ans plus tard, parmi les motifs invoqués par les putschistes du 23-F. Il n'y a pas de choix sans coût : B aurait entaché la légitimité démocratique des élections de juin 1977, tandis que A pur aurait maximisé le risque d'un coup de force immédiat, avant même que le nouveau régime n'ait eu le temps de s'installer.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un régime qui organise sa propre dissolution par voie légale est un signal de risque politique bien plus rassurant qu'une rupture violente — la continuité juridique protège aussi les contrats en cours</li>
+            <li>La légalisation encadrée du PCE montre un pouvoir qui cherche le consensus le plus large possible plutôt que l'exclusion — un facteur de stabilité de long terme</li>
+            <li>Le maintien en poste de l'administration franquiste garantit des interlocuteurs stables dès le premier jour — un actif invisible pour tout investisseur</li>
+            <li>Les Pactos de la Moncloa (oct. 1977) sont un signal direct : la paix sociale est activement négociée avec les syndicats, pas seulement décrétée</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de risque géopolitique aurait pu éclairer ici</h5>
+          <ul>
+            <li>Quantifier, dès 1976, la proportion de hauts fonctionnaires franquistes reconduits dans les nouvelles institutions comme indicateur de continuité administrative</li>
+            <li>Analyser le ton des déclarations militaires publiques entre 1976 et 1981 pour détecter la montée de tension qui débouchera sur le 23-F</li>
+            <li>Structurer les clauses des Pactos de la Moncloa en un premier score de risque social exploitable par un investisseur étranger</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Consolidation, modernisation, ancrage européen</h2>
+      <p class="dsub">Chapitres C3 · C4 · C5</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Un compromis constitutionnel écrit ne prouve rien tant qu'il n'a pas été testé. Une jeune démocratie de deux mois se demande encore, en 1981 : <b>que se passe-t-il si quelqu'un tente de reprendre le pouvoir par la force ?</b> Une fois cette question tranchée, deux autres se posent en cascade : comment un pays isolé sous quarante ans de dictature rattrape-t-il son retard économique et diplomatique ? Et comment une démocratie encore jeune gère-t-elle sa première alternance politique complète, puis sa première crise de confiance née d'un attentat en pleine campagne électorale ?</p>
+
+      <div class="callout tension">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Le test de solidité : le 23-F</h5>
+          <p>Le <span class="yr">23 février 1981</span>, en pleine séance d'investiture d'un nouveau président du gouvernement au Congrès des députés, le lieutenant-colonel <b>Antonio Tejero</b> fait irruption armé avec un groupe de gardes civils. Dans la nuit, le roi <b>Juan Carlos Ier</b> intervient publiquement à la télévision pour ordonner à l'armée de rester loyale à la Constitution — une intervention largement créditée d'avoir fait échouer le coup. Ce moment est considéré comme le vrai test de solidité du nouveau régime : la Constitution de 1978 n'était plus seulement un texte, elle venait de survivre à une épreuve réelle.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>La modernisation par l'Europe : González</h5>
+          <p><b>Felipe González</b> (PSOE) est président du gouvernement de <span class="yr">1982 à 1996</span>. L'Espagne adhère à la Communauté économique européenne le <span class="yr">1ᵉʳ janvier 1986</span>, en même temps que le Portugal. L'année <span class="yr">1992</span> devient un jalon symbolique multiple : Jeux olympiques de Barcelone, Exposition universelle de Séville, Madrid capitale européenne de la culture, et mise en service de la ligne à grande vitesse AVE Madrid-Séville — quatre vitrines simultanées d'un pays qui affiche sa normalisation internationale.</p>
+        </div>
+      </div>
+
+      <div class="callout tension">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>L'alternance et sa crise : Aznar</h5>
+          <p><b>José María Aznar</b> (PP) est président du gouvernement de <span class="yr">1996 à 2004</span>. L'euro devient monnaie de compte le <span class="yr">1ᵉʳ janvier 1999</span>, puis monnaie fiduciaire (pièces et billets) le <span class="yr">1ᵉʳ janvier 2002</span>. Le <span class="yr">11 mars 2004</span> (11-M), des attentats islamistes frappent des trains de banlieue à Madrid, quatre jours avant les élections législatives : la gestion initiale de la communication gouvernementale — attribution rapide à l'ETA, remise en cause ensuite par l'enquête — est considérée comme un facteur de la défaite électorale du PP quelques jours plus tard.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">1981 — le régime survit à une menace réelle</span><span class="arrow">→</span>
+        <span class="node">légitimité acquise sur le terrain</span><span class="arrow">→</span>
+        <span class="node">1986 — ancrage européen irréversible</span><span class="arrow">→</span>
+        <span class="node">1999-2002 — intégration monétaire</span><span class="arrow">→</span>
+        <span class="node">2004 — sanction électorale du 11-M</span>
+      </div>
+      <p class="mech">Ces trois chapitres ne sont pas trois anecdotes séparées : chacun teste une dimension différente du même régime né en 1978 — sa capacité à résister à la force (C3), sa capacité à se moderniser en s'arrimant à un cadre extérieur contraignant (C4), sa capacité à sanctionner un gouvernement par les urnes plutôt que par la rue (C5). Un régime qui échoue à l'un de ces trois tests aurait une trajectoire radicalement différente de celle de l'Espagne réelle.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une entreprise textile catalane après 1986</h5>
+        <p>Une entreprise textile installée près de Barcelone, qui exportait jusque-là surtout vers l'Amérique latine derrière des barrières douanières protectrices, voit son marché naturel basculer après le 1ᵉʳ janvier 1986 : l'accès sans droits de douane au marché ouest-européen devient soudain plus attractif que des marchés lointains à devise instable. Ce type de réallocation, multiplié à l'échelle du pays, explique une partie de la croissance espagnole des années González — l'adhésion CEE n'est pas qu'un geste diplomatique, c'est un changement de calcul économique concret pour des milliers d'entreprises.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Espagnol économique — discipline 14 <i>— l'adhésion CEE de 1986 et le passage à l'euro comme jalons économiques déjà vus</i></span>
+        <span class="linkchip">Management interculturel — discipline 08 <i>— la légitimité d'un chef d'État symbolique dans une crise, au-delà du seul pouvoir formel</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Traiter le 23-F comme un non-événement puisqu'il a échoué — c'est justement son échec qui en fait la preuve de la solidité du régime</li>
+          <li>Confondre l'entrée dans la CEE (1986) et l'entrée dans l'euro (1999/2002), deux étapes séparées de plus de treize ans</li>
+          <li>Réduire 1992 à un seul événement, alors qu'il s'agit de quatre jalons simultanés (JO, Expo, capitale culturelle, AVE)</li>
+        </ul></div>
+        <div class="ee"><h5>Côté commentateurs / médias</h5><ul>
+          <li>Avoir attribué trop vite les attentats du 11-M à l'ETA avant que l'enquête ne s'oriente vers une autre piste, à quatre jours d'un scrutin</li>
+          <li>Présenter la défaite du PP en mars 2004 comme uniquement due à la gestion du 11-M, sans mentionner d'autres facteurs de campagne</li>
+          <li>Décrire le passage à l'euro comme une simple opération technique, sans son sens politique d'ancrage irréversible à l'Europe</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>González et Aznar — deux présidences, une même trajectoire européenne</caption>
+        <thead><tr><th></th><th>Felipe González (PSOE)</th><th>José María Aznar (PP)</th></tr></thead>
+        <tbody>
+          <tr><td>Période</td><td>1982–1996</td><td>1996–2004</td></tr>
+          <tr><td>Rapport à l'Europe</td><td>Adhésion CEE (1986) et vitrine internationale de 1992</td><td>Discipline budgétaire pour qualifier à l'euro, puis euro fiduciaire (2002)</td></tr>
+          <tr><td>Fin de mandat</td><td>Usure après treize ans au pouvoir, alternance en 1996</td><td>Défaite électorale en mars 2004, dans le contexte tendu de la gestion du 11-M</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez une PME exportatrice française. L'Espagne vient d'adhérer à la CEE le 1ᵉʳ janvier 1986. Investissez-vous dès maintenant ?</p>
+        <p class="dctx">Le marché s'ouvre progressivement, mais le pays sort à peine d'une tentative de coup d'État (1981) et connaît encore une inflation et un chômage élevés.</p>
+        <div class="dopts">
+          <span>A. Investir immédiatement, pour prendre position avant la concurrence européenne</span>
+          <span>B. Attendre que le marché se stabilise plus nettement avant tout engagement</span>
+          <span>C. S'implanter progressivement : une présence commerciale légère avant tout investissement industriel lourd</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique, mais un élément change la lecture du risque : en 1986, le 23-F a déjà cinq ans, et il s'est soldé par un échec qui a renforcé, plutôt qu'affaibli, la légitimité du régime. L'adhésion CEE elle-même agit comme un verrou institutionnel supplémentaire, rendant un retour en arrière autoritaire nettement moins probable aux yeux des partenaires européens. L'option C — implantation progressive — est souvent la plus documentée dans les cas réels d'entreprises étrangères de cette période, car elle permet d'apprendre le marché sans s'exposer à l'inflation encore élevée du milieu des années 1980.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>L'échec du 23-F, documenté et rendu public heure par heure, vaut mieux comme signal de stabilité que dix ans de discours officiels</li>
+            <li>L'entrée dans la CEE en 1986 verrouille l'Espagne dans un cadre réglementaire européen, réduisant le risque d'une dérive protectionniste future</li>
+            <li>Le passage à l'euro supprime le risque de change avec le principal partenaire commercial d'un exportateur européen — un gain de prévisibilité longtemps sous-évalué</li>
+            <li>Le 11-M rappelle qu'un gouvernement peut perdre une élection sur sa communication de crise, pas seulement sur son bilan — un risque réputationnel à surveiller chez tout partenaire institutionnel</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de risque géopolitique aurait pu éclairer ici</h5>
+          <ul>
+            <li>Modéliser un score de consolidation démocratique en continu à partir d'événements-test comme le 23-F, plutôt qu'une notation statique</li>
+            <li>Suivre automatiquement les jalons d'intégration européenne (calendriers de convergence, adoption de l'euro) comme signaux d'investissement</li>
+            <li>Détecter en temps réel un écart entre communication de crise officielle et faits établis sur le terrain, avant que l'opinion publique ne tranche dans les urnes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>L'État des autonomies et la question catalane — la conséquence différée de 1978</h2>
+      <p class="dsub">Chapitre C6 — relié directement au chapitre C2, pas un sujet d'actualité isolé</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le fil causal central de la discipline</p>
+      <div class="tree">
+        <svg viewBox="0 0 760 260" width="100%" style="max-width:760px" role="img" aria-label="Un diagramme relie explicitement l'article 2 de la Constitution de 1978 à la crise catalane de 2017, en passant par le premier statut d'autonomie de 1979, le nouveau statut de 2006 et sa censure partielle de 2010">
+          <g font-family="Josefin Sans" fill="#2b2926">
+            <text x="380" y="22" text-anchor="middle" font-size="10" letter-spacing="2" fill="#706c66">DE L'ARTICLE 2 (1978) À LA CRISE CATALANE (2017) — UNE SEULE LIGNE CAUSALE</text>
+            <line x1="60" y1="150" x2="700" y2="150" stroke="#706c66" stroke-width="2" opacity=".5"/>
+            <!-- arc de conséquence -->
+            <path d="M100 128 Q 380 40 660 128" fill="none" stroke="#b8342f" stroke-width="3"/>
+            <path d="M652 121 L664 128 L651 135" fill="none" stroke="#b8342f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+            <text x="380" y="66" text-anchor="middle" font-size="11" fill="#b8342f" letter-spacing="1">conséquence différée · 39 ans</text>
+            <!-- noeud 1978 -->
+            <circle cx="100" cy="150" r="22" fill="#b8862f" stroke="#fff" stroke-width="2.4"/>
+            <text x="100" y="155" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">1978</text>
+            <text x="100" y="192" text-anchor="middle" font-size="10">Art. 2 — unité</text>
+            <text x="100" y="204" text-anchor="middle" font-size="10">ET autonomie</text>
+            <!-- jalons intermédiaires -->
+            <circle cx="260" cy="150" r="6" fill="#706c66"/>
+            <text x="260" y="192" text-anchor="middle" font-size="9">1979</text>
+            <text x="260" y="203" text-anchor="middle" font-size="9">1ᵉʳ statut catalan</text>
+            <circle cx="440" cy="150" r="6" fill="#706c66"/>
+            <text x="440" y="192" text-anchor="middle" font-size="9">2006</text>
+            <text x="440" y="203" text-anchor="middle" font-size="9">nouveau statut</text>
+            <circle cx="530" cy="150" r="6" fill="#706c66"/>
+            <text x="530" y="192" text-anchor="middle" font-size="9">2010</text>
+            <text x="530" y="203" text-anchor="middle" font-size="9">censure partielle</text>
+            <!-- noeud 2017 -->
+            <circle cx="660" cy="150" r="22" fill="#b8342f" stroke="#fff" stroke-width="2.4"/>
+            <text x="660" y="155" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">2017</text>
+            <text x="660" y="192" text-anchor="middle" font-size="10">référendum illégal</text>
+            <text x="660" y="204" text-anchor="middle" font-size="10">→ DUI → art. 155</text>
+            <text x="380" y="234" text-anchor="middle" font-size="10" fill="#706c66" font-style="italic">Ce n'est pas une rupture soudaine : c'est la partie non tranchée du compromis de 1978 qui refait surface.</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">La Constitution de 1978 ne pouvait pas trancher la question territoriale sans faire échouer l'ensemble de la Transición : la trancher du côté centraliste aurait perdu les partis nationalistes catalans et basques, la trancher du côté autonomiste aurait perdu l'armée et les secteurs centralistes. Elle a donc fait les deux à la fois, dans le même article 2 : <b>proclamer l'unité indissoluble de la nation ET reconnaître le droit à l'autonomie des « nationalités et régions » qui la composent</b>. Le problème que ce chapitre pose n'est donc pas « pourquoi la Catalogne réclame-t-elle l'indépendance en 2017 ? » mais <b>« comment un compromis délibérément non tranché en 1978 peut-il rester stable pendant près de quarante ans avant de se rouvrir ? »</b></p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Le <b>Titre VIII</b> de la Constitution de 1978 institue l'État des autonomies, permettant la formation de « Comunidades Autónomas » dotées chacune d'un statut d'autonomie propre. La Catalogne obtient son <b>premier statut d'autonomie dès 1979</b> — un an seulement après la Constitution, preuve que le compromis territorial a été appliqué très tôt, non découvert soudainement en 2017. Le nouveau statut catalan de <span class="yr">2006</span>, qui élargit sensiblement les compétences et le langage identitaire de la région, est partiellement censuré par le Tribunal constitutionnel en <span class="yr">2010</span> — un jalon souvent cité comme ravivant les tensions indépendantistes.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">L'ambiguïté de l'article 2 fonctionne comme une bombe à retardement institutionnelle : tant que personne ne teste ses deux lectures l'une contre l'autre, le compromis tient. C'est ce qui se passe pendant près de trente ans. Le déclencheur du cycle qui mène à 2017 est la censure partielle du statut de 2006 par le Tribunal constitutionnel en 2010 : une partie du mouvement indépendantiste catalan y lit la preuve que la voie de l'élargissement négocié des compétences, dans le cadre constitutionnel de 1978, est désormais bloquée.</p>
+      <div class="chain">
+        <span class="node">Référendum d'autodétermination, 1ᵉʳ octobre 2017 (déclaré illégal)</span><span class="arrow">→</span>
+        <span class="node">Déclaration unilatérale d'indépendance, 27 octobre 2017</span><span class="arrow">→</span>
+        <span class="node">Article 155 — mise sous tutelle directe de la Catalogne par Madrid</span>
+      </div>
+      <p class="mech">Ce dernier mécanisme, l'article 155, est lui-même une disposition de la Constitution de 1978 — la crise de 2017 se résout donc à l'intérieur du même cadre juridique qui l'a rendue possible quarante ans plus tôt. C'est le point à retenir avant tout autre détail : la question catalane n'est pas un accident récent qui aurait « échappé » à la Constitution, elle est l'une des deux lectures que la Constitution elle-même contient depuis le premier jour.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un fonctionnaire catalan en octobre 2017</h5>
+        <p>Un employé de la Generalitat de Catalogne chargé d'organiser matériellement le scrutin du 1ᵉʳ octobre 2017 se trouve pris entre deux légalités qui se réclament toutes deux, en un sens, de 1978 : l'ordre du gouvernement central, qui invoque l'unité indissoluble de la nation espagnole (première moitié de l'article 2), et l'ordre du gouvernement catalan, qui invoque le droit à l'autonomie des nationalités (seconde moitié du même article). Ce cas concret montre que le conflit ne se joue pas entre la Constitution et ses adversaires, mais entre deux lectures internes à un même texte.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Management interculturel — discipline 08 <i>— la coexistence d'une identité régionale et d'une identité nationale, ni exclusive ni automatiquement conflictuelle</i></span>
+        <span class="linkchip">Espagnol économique — discipline 14 <i>— le poids économique disproportionné de la Catalogne dans le PIB espagnol, variable directe du risque politique</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Traiter la crise catalane comme née en 2017, sans la relier au compromis territorial de 1978</li>
+          <li>Confondre le référendum du 1ᵉʳ octobre 2017 (déclaré illégal) et la déclaration d'indépendance du 27 octobre 2017 — deux actes distincts, séparés de vingt-six jours</li>
+          <li>Croire que l'article 2 a « changé » de sens avec le temps, alors qu'il contient les deux lectures depuis l'origine</li>
+        </ul></div>
+        <div class="ee"><h5>Côté commentateurs / médias</h5><ul>
+          <li>Présenter chaque poussée indépendantiste (1979, 2006, 2010, 2017) comme une rupture inédite plutôt que comme la resurgence périodique d'une ambiguïté jamais tranchée</li>
+          <li>Réduire l'article 155 à une « suspension de la démocratie », sans mentionner qu'il est lui-même une disposition constitutionnelle de 1978</li>
+          <li>Oublier que la Catalogne dispose d'un statut d'autonomie dès 1979 — un fait qui contredit l'idée d'une revendication apparue soudainement</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>L'article 2 de la Constitution de 1978 — un même texte, deux lectures possibles</caption>
+        <thead><tr><th>Lecture</th><th>Ce qu'elle retient dans l'article 2</th><th>Ce qu'elle justifie en 2017</th></tr></thead>
+        <tbody>
+          <tr><td>Lecture unitaire</td><td>« L'unité indissoluble de la nation espagnole »</td><td>Illégalité du référendum, activation de l'article 155</td></tr>
+          <tr><td>Lecture autonomiste</td><td>Le droit à l'autonomie des « nationalités et régions »</td><td>Légitimité d'une expression politique de l'autodétermination catalane</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes responsable au gouvernement central espagnol, fin octobre 2017. Le Parlement catalan menace une déclaration unilatérale d'indépendance. Que faites-vous ?</p>
+        <p class="dctx">Le référendum du 1ᵉʳ octobre a eu lieu malgré son interdiction, des scènes de tension avec les forces de l'ordre ont été largement diffusées, et toute négociation politique risque d'être lue comme une reconnaissance de la légitimité d'un scrutin jugé illégal.</p>
+        <div class="dopts">
+          <span>A. Négocier immédiatement un compromis (davantage d'autonomie fiscale, reconnaissance symbolique) pour désamorcer la crise</span>
+          <span>B. Laisser la voie judiciaire et constitutionnelle suivre son cours, y compris l'article 155, sans négociation politique parallèle</span>
+          <span>C. Proposer un nouveau référendum, légal cette fois, sur un calendrier négocié avec le gouvernement catalan</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Le gouvernement espagnol choisit historiquement une voie proche de B : la voie judiciaire, puis l'article 155, activé après la déclaration unilatérale d'indépendance du 27 octobre 2017. Cette réponse s'appuie strictement sur la première moitié de l'article 2 — mais elle ne referme pas la seconde moitié du même article, celle de l'autonomie reconnue, qui reste sans réponse politique nouvelle. Aucune des trois options n'est sans coût : A risque de légitimer une méthode jugée illégale, B risque de renforcer le sentiment de rupture chez une partie de l'opinion catalane, C aurait supposé un accord constitutionnel qu'aucune majorité ne réunissait à l'époque. C'est précisément parce que l'article 2 n'a jamais tranché entre ses deux lectures que la sortie de crise, elle non plus, ne peut pas être unique.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un compromis constitutionnel volontairement ambigu n'est pas un défaut de rédaction : c'est un choix qui a acheté quarante ans de stabilité, au prix d'un risque différé, réactivé en 2017</li>
+            <li>La Catalogne pèse un poids économique disproportionné dans le PIB espagnol — la question catalane a un impact direct sur la prévisibilité fiscale et réglementaire, pas seulement politique</li>
+            <li>L'article 155 démontre que le cadre de 1978 contient ses propres mécanismes de résolution de crise — un signal que le système reste auto-régulé, plutôt qu'en rupture constitutionnelle</li>
+            <li>Le risque catalan n'est pas binaire (indépendance oui/non) : la variable pertinente pour un investisseur est la fréquence et l'intensité des cycles de tension, pas leur simple occurrence</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de risque géopolitique pourrait éclairer aujourd'hui</h5>
+          <ul>
+            <li>Cartographier automatiquement les lectures divergentes de l'article 2 dans le discours politique catalan et central, pour objectiver l'écart plutôt que le subir comme un flou</li>
+            <li>Construire un modèle de résurgence indépendantiste fondé sur les jalons historiques (1979, 2006, 2010, 2017) traités comme un cycle, pas comme des événements isolés</li>
+            <li>Simuler l'impact réglementaire d'un scénario d'application de l'article 155 pour les entreprises implantées en Catalogne</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Compromis volontairement ambigu<i>C2 · C6</i></span>
+        <span class="sp">Continuité du personnel malgré rupture politique<i>C1 · C2</i></span>
+        <span class="sp">Légitimité testée par l'épreuve réelle<i>C3 · C5</i></span>
+        <span class="sp">Ancrage européen comme modernisation<i>C4 · C5</i></span>
+        <span class="sp">Conséquence différée, pas rupture soudaine<i>C2 · C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="16-civilisation-britannique.html">← Civilisation britannique — T…</a>
@@ -66,5 +682,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
