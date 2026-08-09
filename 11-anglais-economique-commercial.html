@@ -8,8 +8,224 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#3f6bb0;--dom-lt:#a3c0ea}</style>
+<style>
+/* Palette — encre de Prusse / cuivre / ivoire : les couleurs du papier à
+   en-tête et de la correspondance commerciale soignée. L'encre profonde
+   (#1f3a5c) est celle du texte professionnel et du système (le registre,
+   seul chapitre vraiment « système » de la discipline) ; le cuivre
+   (#b5651d) est celui de la négociation ferme mais courtoise — la couleur
+   dominante, puisque 65% de la discipline est automatisme ; l'ivoire
+   (#e8dfc8) est celui du papier de correspondance, fond neutre sur lequel
+   l'encre et le cuivre se détachent. */
+:root{
+  --ink:#1f3a5c; --ink-lt:#6f8fb0;
+  --cop:#b5651d; --cop-lt:#dba06c;
+  --ivo:#e8dfc8; --ivo-lt:#f5f0e0;
+  --text:#2c3a30; --text-soft:#5a6b62;
+  --paper:rgba(255,253,247,.66); --paper-hi:rgba(255,253,247,.88);
+  --line:rgba(31,58,92,.25); --or:#c9972e; --vert:#4f7a5c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -6%, #f3e6c9 0%, transparent 58%),
+    radial-gradient(1000px 900px at 98% 14%, #c9dcef 0%, transparent 54%),
+    radial-gradient(1000px 720px at 30% 110%, #e9d3b0 0%, transparent 58%),
+    linear-gradient(158deg,#f5eed9 0%, #e8dfc8 40%, #d9e3ee 74%, #f0e6cc 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--ink-lt);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--cop);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(181,101,29,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(31,58,92,.16);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:210px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--cop);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:var(--ink);margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--text)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--cop)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-lt)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,#9fb8d6,var(--ink))}
+.cbar .au{background:linear-gradient(90deg,var(--cop-lt),var(--cop))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--text);white-space:nowrap}
+.crd b.s{color:var(--ink)} .crd b.a{color:var(--cop)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:linear-gradient(90deg,var(--ink),var(--cop))}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--text-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+@media(max-width:640px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--text-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cop);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(181,101,29,.24);border-radius:24px;box-shadow:0 16px 46px rgba(31,58,92,.14)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--cop),var(--ink));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:var(--ink);line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--text-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--cop);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--cop) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--cop-lt) 0 12.5%, transparent 0 25%, var(--cop-lt) 0 37.5%, transparent 0 50%, var(--cop-lt) 0 62.5%, transparent 0 75%, var(--cop-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--text)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--cop)}
+.problem b{color:var(--cop);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(31,58,92,.08);
+  border:1px solid rgba(31,58,92,.35);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--ink);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--cop);font-weight:600}
+.callout.gold{background:rgba(201,151,46,.12);border-color:rgba(201,151,46,.55)}
+.callout.gold svg{stroke:var(--or)}
+.callout.gold h5{color:#96701e}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--cop-lt);
+  border-radius:14px;padding:7px 13px;color:var(--text)}
+.chain .arrow{color:var(--text-soft);font-size:1.1rem}
+
+.example{background:rgba(181,101,29,.08);border-left:3px solid var(--cop);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cop);margin-bottom:6px}
+.example p{font-size:.92rem;margin:6px 0}
+.example .en{font-style:italic;color:var(--ink)}
+.example .lab{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft)}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#3a5f47;
+  padding:5px 12px;border-radius:14px;background:rgba(79,122,92,.08)}
+.linkchip i{color:var(--text-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(201,151,46,.1);border:1px solid rgba(201,151,46,.5)}
+.errors .ee{background:rgba(31,58,92,.08);border:1px solid rgba(31,58,92,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:#96701e} .errors .ee h5{color:var(--ink)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"✎";position:absolute;left:0;font-size:.55rem;top:6px;color:var(--cop)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.83rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--ivo);font-family:'Josefin Sans';font-weight:600;font-size:.64rem;
+  letter-spacing:.05em;text-transform:uppercase;text-align:left;padding:9px 12px;color:var(--ink)}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(232,223,200,.35)}
+
+details.dilemma{background:rgba(255,253,247,.75);border:1.5px dashed var(--cop);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--cop);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"✒";font-size:.7rem}
+details.dilemma[open] summary::before{content:"✎"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:var(--ink);margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(31,58,92,.07);border-radius:10px;padding:7px 12px;border-left:3px solid var(--ink-lt)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(232,223,200,.4);border:1px solid var(--cop-lt)}
+.helix{background:rgba(31,58,92,.08);border:1px solid var(--ink-lt)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:var(--cop)} .helix h5{color:var(--ink)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--cop-lt);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--ink)}
+
+/* diagrammes */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+/* à comprendre / à automatiser */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split>div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(31,58,92,.07);border:1px solid rgba(31,58,92,.35)}
+.split .m{background:rgba(181,101,29,.09);border:1px solid rgba(181,101,29,.42)}
+.split h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--ink)} .split .m h5{color:var(--cop)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.split li::before{content:"❧";position:absolute;left:0;font-size:.55rem;top:6px;color:var(--cop)}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#3a5f47;
+  padding:5px 12px;border-radius:14px;background:rgba(79,122,92,.08)}
+.sp i{color:var(--text-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--text-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--cop);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--cop);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--cop);border-color:var(--cop)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--text);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,52 +234,547 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d11">
-  <div class="tab">篇 XI</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 11</p>
-    <h3>Anglais économique et commercial</h3>
-    <p class="dmeta">S5 + S6 · TD 18h · 3 ECTS · Alice Michel · supports CELENE</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 200" role="img" aria-label="Une enveloppe entrouverte laisse dépasser une lettre couverte de lignes de texte ; en dessous, une barre en dégradé va du vert cordial au rouge cuivré ferme, avec un curseur marquant le registre choisi">
+      <defs>
+        <linearGradient id="tonegrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#5c9e79"/>
+          <stop offset="45%" stop-color="#c9972e"/>
+          <stop offset="100%" stop-color="#a33d1d"/>
+        </linearGradient>
+      </defs>
+      <!-- enveloppe -->
+      <g stroke="#1f3a5c" stroke-width="2" fill="#fff" fill-opacity=".55" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="70" y="70" width="220" height="150" rx="4"/>
+        <path d="M70 70 L180 155 L290 70"/>
+      </g>
+      <!-- lettre qui dépasse -->
+      <g transform="translate(140,18)" stroke="#b5651d" stroke-width="1.6" fill="#fffdf7">
+        <rect x="0" y="0" width="120" height="96" rx="3"/>
+        <line x1="14" y1="20" x2="106" y2="20" stroke-opacity=".7"/>
+        <line x1="14" y1="32" x2="106" y2="32" stroke-opacity=".7"/>
+        <line x1="14" y1="44" x2="80" y2="44" stroke-opacity=".7"/>
+        <line x1="14" y1="64" x2="106" y2="64" stroke-opacity=".45"/>
+        <line x1="14" y1="76" x2="60" y2="76" stroke-opacity=".45"/>
+      </g>
+      <!-- plume -->
+      <g transform="translate(330,110) rotate(-18)" stroke="#1f3a5c" stroke-width="1.6" fill="none" stroke-linecap="round">
+        <path d="M0 0 L46 -10 L40 4 Z" fill="#fdf3e2"/>
+        <path d="M0 0 L-30 26"/>
+      </g>
+      <!-- barre de registre -->
+      <g transform="translate(390,60)">
+        <rect x="0" y="0" width="260" height="20" rx="10" fill="url(#tonegrad)" stroke="#1f3a5c" stroke-opacity=".3"/>
+        <text x="0" y="-10" font-family="Josefin Sans" font-size="10" fill="#4f7a5c">cordial</text>
+        <text x="260" y="-10" text-anchor="end" font-family="Josefin Sans" font-size="10" fill="#a33d1d">ferme</text>
+        <g transform="translate(178,10)">
+          <circle r="9" fill="#fff" stroke="#1f3a5c" stroke-width="2"/>
+          <line x1="0" y1="-14" x2="0" y2="-4" stroke="#1f3a5c" stroke-width="2"/>
+        </g>
+        <text x="178" y="42" text-anchor="middle" font-family="Josefin Sans" font-size="9" fill="#1f3a5c">registre choisi</text>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Anglais économique et commercial</h1>
+    <p class="gen-open">Une lettre commerciale n'est pas un simple message : c'est une <b>pièce opposable</b> — elle peut être relue par un juge, un banquier, un successeur — et en même temps un <b>acte de négociation</b> qui engage plus ou moins selon les mots choisis. Comment obtenir ce qu'on veut d'un interlocuteur étranger — un remboursement, un délai, une commande — <b>sans s'engager plus qu'on ne le souhaite, ni rompre une relation qu'on veut garder</b> ? Toute la discipline répond à cette question par deux verrous qui se combinent : une forme fixe qui donne à l'écrit sa valeur de preuve (C1), et un registre gradué qui donne à l'écrit sa force de négociation (C2). Leur combinaison engendre chacun des sept types de lettres de la chaîne commerciale (C3), sur un socle de vocabulaire et de vigilance chiffrée qui s'acquiert par répétition continue (C4, C5).</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:35%"></span><span class="au" style="width:65%"></span></span>
       <span class="crd">Système <b class="s">35%</b> · Automatisme <b class="a">65%</b></span>
-      <span class="verd hyb">Hybride</span>
+      <span class="verd">Hybride</span>
     </div>
+    <p class="dmeta">S5 + S6 · TD 18h · 3 ECTS · Alice Michel · supports CELENE</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Une lettre commerciale est une <b>pièce opposable</b> et un acte de négociation. Comment obtenir ce qu'on veut d'un interlocuteur étranger sans s'engager plus qu'on ne le souhaite, ni rompre la relation ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Architecture de la business letter</b><span class="k fondation">FONDATION</span><span class="k auto">AUT</span><span class="dep">Prérequis : aucun · forme fixe car valeur probante</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Le registre : gradation de la fermeté</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · <b>Ouvre :</b> le choix du ton dans tous les types de lettres</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>La chaîne commerciale : les 7 types de lettres</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1, C2</b></span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Lexique socio-économique &amp; faux amis</b><span class="k auto">AUT</span><span class="dep">Acquisition parallèle et continue</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Presse économique &amp; synthèse écrite</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C4</b> · dominante du S6</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Forme</div><div class="tc"><span class="node f">C1 · Structure fixe</span><span class="ar">+</span><span class="node f">C2 · Registre</span></div></div>
-<div class="flow"><span class="fdot"></span>la combinaison forme + ton engendre chaque type de lettre<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Production</div><div class="tc"><span class="node a">C3 · Les 7 lettres</span></div></div>
-<div class="tier"><div class="tl">Continu</div><div class="tc"><span class="node a">C4 · Lexique</span><span class="ar">→</span><span class="node a">C5 · Presse &amp; synthèse</span></div></div>
-</div>
-    <p class="note">Le registre (C2) est le seul chapitre véritablement « système » : tout le reste se joue à la répétition.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Le document engage<i>C1·C3</i></span><span class="sp">Gradation du ton<i>C2·C3</i></span><span class="sp">Faux amis<i>C4·C5</i></span></div>
-
-    <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p><div class="split"><div class="u"><h5>À comprendre</h5><ul><li>Pourquoi la forme est fixe : valeur de preuve</li><li>Comment passif, conditionnel et modérateurs atténuent</li><li>Quelle stratégie dans une réclamation : concéder le vrai, refuser le reste</li></ul></div><div class="m"><h5>À automatiser</h5><ul><li>Le couple imposé <em>Dear Sir → Yours faithfully</em> / nom → <em>sincerely</em></li><li>Les formules d'ouverture et de clôture par type</li><li>La liste des faux amis — piège d'examen systématique</li><li><em>billion</em> = milliard ; inversion de la ponctuation décimale</li></ul></div></div>
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="8" y="10" width="24" height="26" rx="2"/><path d="M12 16 h16 M12 22 h16 M12 28 h10"/><path d="M30 6 l4 4 -12 12 -6 2 2-6 z"/></svg><b>Expéditeur</b><span>rédige, engage</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="13" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><rect x="12" y="30" width="16" height="7" rx="1.5"/></svg><b>Destinataire nommé</b><span>nom connu → Sincerely</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="13" r="6"/><path d="M8 34 C8 24 32 24 32 34"/><text x="20" y="14" text-anchor="middle" font-size="9" stroke="none" fill="#1f3a5c">?</text></svg><b>Destinataire non nommé</b><span>Dear Sir → faithfully</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="16" width="28" height="18" rx="2"/><path d="M6 16 L20 6 L34 16"/><rect x="16" y="22" width="8" height="12"/></svg><b>Service commercial</b><span>traite chaque étape</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des cinq chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 170" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 100 C 90 55, 170 55, 240 55 S 390 140, 460 140 S 610 55, 680 55 S 830 100, 880 100" fill="none" stroke="#dba06c" stroke-width="3" opacity=".7"/>
+      <g font-family="Josefin Sans">
+        <g transform="translate(20,100)"><circle r="17" fill="#b5651d" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="36" text-anchor="middle">Architecture</text></g>
+        <g transform="translate(240,55)"><circle r="17" fill="#1f3a5c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Registre</text></g>
+        <g transform="translate(460,140)"><circle r="15" fill="#b5651d" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="-24" text-anchor="middle">7 lettres</text></g>
+        <g transform="translate(680,55)"><circle r="15" fill="#b5651d" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="36" text-anchor="middle">Lexique</text></g>
+        <g transform="translate(880,100)"><circle r="16" fill="#1f3a5c" stroke="#b5651d" stroke-width="3"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="-22" y="34" text-anchor="middle">Presse · S6</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Forme et registre : les deux verrous</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Deux entreprises de pays différents n'ont, au départ, aucune obligation de se faire confiance. Ce qui les relie n'est souvent qu'un échange de courriers. <b>Comment un simple écrit peut-il à la fois valoir preuve devant un tiers et servir d'instrument de négociation</b> — sans que ces deux fonctions se contredisent ? La réponse tient en deux verrous distincts et complémentaires : la <b>forme</b> de la lettre doit rester fixe et reconnaissable, pour qu'un juge, un banquier ou un successeur professionnel puisse s'y référer sans ambiguïté ; le <b>registre</b>, lui, doit au contraire pouvoir varier avec précision, du plus cordial au plus comminatoire, pour que la même structure serve aussi bien une première prise de contact qu'une mise en demeure.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — une honnêteté à assumer</h5>
+          <p>Il n'existe pas d'inventeur ni de date fondatrice à citer pour l'architecture de la business letter ou pour le couple <b>Dear Sir → Yours faithfully</b> : ce sont des <b>conventions épistolaires britanniques sédimentées</b> par plus d'un siècle de pratique commerciale et diplomatique, transmises par les manuels de correspondance commerciale et les chambres de commerce, jamais fixées par un texte unique daté comme le sont les Incoterms (discipline 01) ou les Règles et usances relatives aux crédits documentaires. Prétendre le contraire serait inventer une paternité qui n'existe pas. Ce que l'on peut affirmer avec certitude, en revanche, c'est que la forme s'est <i>standardisée</i> précisément parce qu'un document à valeur probante gagne à être reconnaissable au premier coup d'œil, quel que soit son auteur.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">La forme fixe (C1) et le registre gradué (C2) ne sont pas deux chapitres indépendants : c'est leur <b>combinaison</b> qui engendre, au 篇 II, chacun des sept types de lettres de la chaîne commerciale.</p>
+      <div class="chain">
+        <span class="node">Structure fixe (C1)</span><span class="arrow">+</span>
+        <span class="node">Registre calibré (C2)</span><span class="arrow">=</span>
+        <span class="node">Le type de lettre approprié à la situation (C3)</span>
+      </div>
+      <p class="mech">Concrètement : la structure reste identique qu'on écrive une simple demande de renseignements ou une lettre de rupture commerciale — mêmes zones, même ordre. Ce qui change d'une lettre à l'autre, c'est uniquement le curseur du registre : le choix du passif plutôt que de l'actif, du conditionnel plutôt que de l'indicatif, d'un modérateur (<i>we would appreciate</i>) plutôt que d'un impératif (<i>you must</i>). Comprendre cela évite l'erreur la plus fréquente : chercher une structure différente pour chaque type de lettre, alors qu'il n'y a qu'une seule architecture et un seul curseur à déplacer.</p>
+
+      <p class="blockt"><span class="bdot"></span>L'architecture de la business letter (C1)</p>
+      <div class="tree">
+        <svg viewBox="0 0 620 340" width="100%" style="max-width:520px">
+          <g font-family="Josefin Sans" font-size="11" fill="#1f3a5c">
+            <rect x="40" y="10" width="300" height="320" rx="6" fill="#fffdf7" stroke="#1f3a5c" stroke-width="1.4"/>
+            <g stroke="#dba06c" stroke-dasharray="2 4">
+              <line x1="40" y1="50" x2="340" y2="50"/>
+              <line x1="40" y1="95" x2="340" y2="95"/>
+              <line x1="40" y1="140" x2="340" y2="140"/>
+              <line x1="40" y1="170" x2="340" y2="170"/>
+              <line x1="40" y1="255" x2="340" y2="255"/>
+              <line x1="40" y1="285" x2="340" y2="285"/>
+            </g>
+            <text x="190" y="34" text-anchor="middle" font-weight="600">Letterhead — en-tête</text>
+            <text x="190" y="76" text-anchor="middle" font-size="10">Référence &amp; date</text>
+            <text x="190" y="120" text-anchor="middle" font-size="10">Inside address</text>
+            <text x="190" y="158" text-anchor="middle" font-weight="600">Salutation</text>
+            <text x="190" y="185" text-anchor="middle" font-size="10">Subject line — objet</text>
+            <text x="190" y="215" text-anchor="middle" font-size="10">Corps — ouverture</text>
+            <text x="190" y="232" text-anchor="middle" font-size="10">Corps — développement</text>
+            <text x="190" y="249" text-anchor="middle" font-size="10">Corps — clôture</text>
+            <text x="190" y="273" text-anchor="middle" font-weight="600">Complimentary close</text>
+            <text x="190" y="312" text-anchor="middle" font-size="10">Signature block · P.J.</text>
+          </g>
+          <g font-family="Josefin Sans" font-size="9" fill="#b5651d">
+            <text x="355" y="55">↳ identité, valeur probante</text>
+            <text x="355" y="122">↳ verrouille salutation/clôture</text>
+            <text x="355" y="230">↳ seul le registre y varie</text>
+            <text x="355" y="290">↳ couplée à la salutation</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note">La forme reste identique quel que soit le registre : seuls la salutation, la clôture et le ton du corps varient selon C2. C'est cette invariance qui donne au document sa valeur probante — un juge ou un banquier reconnaît la structure avant même d'en lire le contenu.</p>
+
+      <p class="blockt"><span class="bdot"></span>Le couple imposé — salutation et clôture</p>
+      <table class="cmp">
+        <caption>Une règle à zéro tolérance : la salutation impose la clôture</caption>
+        <thead><tr><th>Destinataire</th><th>Salutation</th><th>Clôture obligatoire</th><th>Registre implicite</th></tr></thead>
+        <tbody>
+          <tr><td>Nom inconnu / service générique</td><td>Dear Sir <i>or</i> Dear Sir or Madam</td><td>Yours faithfully</td><td>Le plus formel, relation non engagée</td></tr>
+          <tr><td>Nom connu, contact identifié</td><td>Dear Mr Hughes / Dear Ms Patel</td><td>Yours sincerely</td><td>Relation déjà engagée, plus personnalisée</td></tr>
+          <tr><td>Convention américaine (variante)</td><td>Dear Mr Hughes: <i>(deux-points)</i></td><td>Sincerely / Sincerely yours</td><td>Ne jamais mélanger avec la ponctuation britannique</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Le spectre du registre (C2)</p>
+      <div class="tree">
+        <svg viewBox="0 0 760 250" width="100%" style="max-width:720px">
+          <defs>
+            <linearGradient id="spec" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#5c9e79"/>
+              <stop offset="30%" stop-color="#9db877"/>
+              <stop offset="60%" stop-color="#c9972e"/>
+              <stop offset="100%" stop-color="#a33d1d"/>
+            </linearGradient>
+          </defs>
+          <text x="380" y="20" text-anchor="middle" font-family="Josefin Sans" font-size="10" letter-spacing="2" fill="#5a6b62">DU PLUS CORDIAL AU PLUS FERME — LE MÊME MESSAGE, CINQ INTENSITÉS</text>
+          <rect x="40" y="40" width="680" height="26" rx="13" fill="url(#spec)" stroke="#1f3a5c" stroke-opacity=".25"/>
+          <g font-family="Josefin Sans" font-size="10" fill="#1f3a5c">
+            <g transform="translate(40,0)"><line x1="0" y1="66" x2="0" y2="80" stroke="#1f3a5c" stroke-opacity=".4"/><text y="95" font-weight="600">Cordial</text><text y="112" font-size="9" fill="#5a6b62">We would be delighted to…</text><text y="126" font-size="9" fill="#5a6b62">We look forward to…</text></g>
+            <g transform="translate(210,0)"><line x1="0" y1="66" x2="0" y2="80" stroke="#1f3a5c" stroke-opacity=".4"/><text y="95" font-weight="600">Courtois-neutre</text><text y="112" font-size="9" fill="#5a6b62">We would be grateful if…</text><text y="126" font-size="9" fill="#5a6b62">We should appreciate…</text></g>
+            <g transform="translate(380,0)"><line x1="0" y1="66" x2="0" y2="80" stroke="#1f3a5c" stroke-opacity=".4"/><text y="95" font-weight="600">Ferme</text><text y="112" font-size="9" fill="#5a6b62">We must insist that…</text><text y="126" font-size="9" fill="#5a6b62">We regret to inform you…</text></g>
+            <g transform="translate(540,0)"><line x1="0" y1="66" x2="0" y2="80" stroke="#1f3a5c" stroke-opacity=".4"/><text y="95" font-weight="600">Comminatoire</text><text y="112" font-size="9" fill="#5a6b62">Unless… we shall have</text><text y="126" font-size="9" fill="#5a6b62">no alternative but to…</text></g>
+            <g transform="translate(680,0)"><line x1="0" y1="66" x2="0" y2="80" stroke="#1f3a5c" stroke-opacity=".4"/><text y="95" font-weight="600">Contentieux</text><text y="112" font-size="9" fill="#5a6b62">…refer the matter to</text><text y="126" font-size="9" fill="#5a6b62">our legal department.</text></g>
+          </g>
+          <g font-family="Josefin Sans" font-size="9" fill="#5a6b62">
+            <text x="40" y="160">Outils grammaticaux qui déplacent le curseur :</text>
+            <text x="40" y="178">passif (« goods were damaged » plutôt que « you damaged the goods ») · conditionnel (would/could/should) ·</text>
+            <text x="40" y="194">modérateurs (kindly, we regret, we trust) · nominalisation d'un reproche en simple constat de fait.</text>
+            <text x="40" y="220" fill="#b5651d" font-weight="600">Le même fait peut s'écrire aux cinq intensités : c'est le choix du registre, pas le fait, qui négocie.</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un même reproche, trois intensités</h5>
+        <p class="lab">Cordial</p><p class="en">"We were a little surprised to note that the last shipment arrived later than agreed, and would be grateful for your comments."</p>
+        <p class="lab">Ferme</p><p class="en">"We must draw your urgent attention to the fact that three consecutive deliveries have failed to meet the agreed schedule."</p>
+        <p class="lab">Comminatoire</p><p class="en">"Unless deliveries return to the agreed schedule with immediate effect, we shall have no alternative but to review our supply arrangements."</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Droit des affaires internationales <i>— la valeur probante d'un écrit, discipline 03</i></span>
+        <span class="linkchip">Techniques du commerce international <i>— Incoterms et acteurs cités dans le corps de la lettre, discipline 01</i></span>
+        <span class="linkchip">CVIM &amp; Principes UNIDROIT <i>— encadrent le fond du contrat, jamais la forme de la correspondance elle-même</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Écrire « Dear Sir » puis clore par « Yours sincerely » — le couple imposé n'est jamais respecté par accident</li>
+          <li>Traduire littéralement une formule de politesse française (« Je vous prie d'agréer… ») au lieu d'utiliser l'équivalent anglais figé</li>
+          <li>Utiliser des contractions (don't, can't) dans une lettre formelle, marqueur immédiat de registre oral</li>
+        </ul></div>
+        <div class="ee"><h5>Côté professionnels non-natifs</h5><ul>
+          <li>Mélanger convention britannique (Dear Sir / faithfully) et américaine (deux-points / Sincerely) dans la même lettre</li>
+          <li>Monter directement au registre ferme dès le premier courrier, sans graduation, abîmant une relation qui aurait pu se régler à l'amiable</li>
+          <li>Omettre la ligne d'objet (subject line), obligeant le destinataire à deviner le sujet en lisant tout le corps</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Un fournisseur important, avec qui vous travaillez depuis six ans, vous livre pour la troisième fois des pièces non conformes. Vous ne voulez pas le perdre, mais vous ne pouvez plus laisser passer. Quel registre choisissez-vous pour la lettre de réclamation ?</p>
+        <p class="dctx">Une lettre trop cordiale risque de ne rien changer ; une lettre trop ferme risque de braquer un partenaire dont vous dépendez aussi pour vos propres délais de livraison.</p>
+        <div class="dopts">
+          <span>A. Registre courtois-neutre, comme pour un premier incident</span>
+          <span>B. Registre ferme, en rappelant explicitement les deux incidents précédents</span>
+          <span>C. Registre comminatoire, avec mention d'une révision du contrat</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique, mais un principe directeur : le registre doit refléter <b>l'historique réel</b>, pas l'incident isolé. Un registre courtois-neutre (A) pour une troisième non-conformité signale au fournisseur que le problème n'est pas pris au sérieux — il n'a aucune raison de changer. Un registre ferme (B), qui <b>concède ce qui est vrai</b> (la qualité de la relation sur six ans) tout en <b>refusant ce qui ne l'est pas</b> (la répétition de l'incident), est en général le choix le plus efficace : il nomme les faits sans braquer, et laisse la porte ouverte à une réponse corrective. Le registre comminatoire (C) se réserve pour un quatrième incident, ou si le fournisseur ne répond pas à la lettre ferme — l'utiliser trop tôt prive l'entreprise de marge de manœuvre pour la prochaine fois.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une lettre mal structurée perd sa valeur de preuve — la forme n'est pas de la décoration, c'est un filet de sécurité juridique</li>
+            <li>Le registre est un levier de négociation, pas une politesse gratuite — mal calibré, il coûte soit une relation, soit un rapport de force</li>
+            <li>Le couple salutation/clôture est une règle à zéro tolérance : une erreur y signale en un coup d'œil un manque de rigueur à un partenaire étranger</li>
+            <li>Adoucir une phrase (passif, conditionnel) n'est pas une faiblesse : c'est une réduction contrôlée de l'engagement qui garde la négociation ouverte</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de correspondance frappe ici</h5>
+          <ul>
+            <li>Détection automatique d'un mauvais accord salutation/clôture avant l'envoi</li>
+            <li>Assistant de calibrage du registre, notant la fermeté d'un brouillon sur une échelle et suggérant l'ajustement selon l'intention réelle</li>
+            <li>Alerte sur toute phrase polie qui engage involontairement plus que prévu (promesse cachée dans une formule de courtoisie)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>La chaîne commerciale : les sept types de lettres</h2>
+      <p class="dsub">Chapitre C3 — automatisme dominant, prérequis C1 + C2</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une relation commerciale internationale ne se joue jamais en une seule lettre : elle se déroule comme une <b>séquence</b>, où chaque courrier répond au précédent et prépare le suivant. Le problème n'est donc plus théorique mais pratique — <b>quelle formule employer, dans quel ordre, pour que chaque étape de la relation produise le bon effet ?</b> Ce chapitre est le plus automatique de la discipline : il n'ajoute aucune règle nouvelle, il applique la combinaison forme (C1) + registre (C2) à sept situations récurrentes, dans l'ordre où elles se présentent réellement dans une négociation commerciale.</p>
+
+      <div class="chain">
+        <span class="node">Enquiry</span><span class="arrow">→</span>
+        <span class="node">Offer / Quotation</span><span class="arrow">→</span>
+        <span class="node">Order</span><span class="arrow">→</span>
+        <span class="node">Acknowledgement</span><span class="arrow">→</span>
+        <span class="node">Complaint</span><span class="arrow">→</span>
+        <span class="node">Payment reminder</span><span class="arrow">→</span>
+        <span class="node">Termination</span>
+      </div>
+      <p class="mech">Le registre monte presque toujours de gauche à droite dans cette chaîne : une demande de renseignements s'ouvre au registre le plus cordial du spectre, une lettre de résiliation ferme la relation au registre contentieux. Entre les deux, la réclamation et la relance de paiement sont les deux points de la chaîne où le registre doit être choisi le plus finement — c'est précisément là que le dilemme de 篇 I trouve son application la plus fréquente.</p>
+
+      <table class="cmp">
+        <caption>Les sept types de lettres — objectif, registre attendu, ouverture type</caption>
+        <thead><tr><th>Type</th><th>Objectif</th><th>Registre attendu</th><th>Formule d'ouverture type</th></tr></thead>
+        <tbody>
+          <tr><td>1. Enquiry</td><td>Demander des informations, un catalogue, un devis</td><td>Cordial</td><td>"We are interested in… and would be grateful for details of…"</td></tr>
+          <tr><td>2. Offer / Quotation</td><td>Répondre par un prix, des conditions, une validité</td><td>Cordial à courtois-neutre</td><td>"Thank you for your enquiry of… We are pleased to quote as follows."</td></tr>
+          <tr><td>3. Order</td><td>Passer commande sur la base d'une offre acceptée</td><td>Courtois-neutre, précis</td><td>"We thank you for your quotation and confirm our order for…"</td></tr>
+          <tr><td>4. Acknowledgement</td><td>Confirmer la réception et les conditions d'une commande</td><td>Courtois-neutre</td><td>"We acknowledge receipt of your order No… and confirm delivery by…"</td></tr>
+          <tr><td>5. Complaint</td><td>Signaler un défaut, obtenir réparation sans rompre</td><td>Ferme, jamais agressif d'emblée</td><td>"We are writing to draw your attention to a problem with…"</td></tr>
+          <tr><td>6. Payment reminder</td><td>Relancer un impayé, en escalade graduée</td><td>Cordial → ferme → comminatoire selon le rang</td><td>"We should be grateful if you would kindly arrange settlement of…"</td></tr>
+          <tr><td>7. Termination</td><td>Mettre fin à une relation commerciale</td><td>Contentieux, dernier recours</td><td>"We regret to inform you that we are unable to continue…"</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u"><h5>À comprendre</h5><ul>
+          <li>Pourquoi l'ordre des sept lettres suit la relation commerciale réelle, pas un classement arbitraire</li>
+          <li>Pourquoi on ne saute jamais directement à la réclamation ferme ou à la résiliation sans étapes intermédiaires</li>
+          <li>La stratégie d'une bonne réclamation : concéder ce qui est vrai, refuser fermement ce qui ne l'est pas</li>
+          <li>Pourquoi une lettre d'offre mal rédigée peut engager juridiquement son auteur sans qu'il le veuille</li>
+        </ul></div>
+        <div class="m"><h5>À automatiser</h5><ul>
+          <li>La formule d'ouverture et de clôture propre à chacun des sept types</li>
+          <li>La structure figée du corps en trois temps : contexte → fait ou demande → action attendue</li>
+          <li>Le vocabulaire de transition : we would be grateful if / we regret to inform you / please be advised that</li>
+          <li>L'échelle des trois relances de paiement, à réciter dans l'ordre sans jamais l'inverser</li>
+        </ul></div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret — trois lettres en situation</p>
+      <div class="example">
+        <h5>Réclamation (Complaint)</h5>
+        <p class="lab">Ouverture</p><p class="en">"We are writing to draw your attention to a problem with our recent order (Ref. XY-2298)."</p>
+        <p class="lab">Corps</p><p class="en">"On unpacking the delivery on 14 July, we found that fifteen units were damaged in transit, despite the reinforced packaging agreed in our contract."</p>
+        <p class="lab">Clôture — ferme mais courtoise</p><p class="en">"We trust you will treat this matter with urgency and look forward to your proposal for replacement or credit within seven working days."</p>
+      </div>
+      <div class="example">
+        <h5>Relance de paiement (Payment reminder) — l'échelle des trois rappels</h5>
+        <p class="lab">1er rappel — cordial (on suppose un oubli)</p><p class="en">"We should be grateful if you would kindly arrange settlement of the above invoice, which appears to have been overlooked."</p>
+        <p class="lab">2e rappel — courtois-neutre, plus factuel</p><p class="en">"We note that payment of invoice No. 4471, due on 30 June, has still not reached us. We should appreciate your immediate attention to this matter."</p>
+        <p class="lab">3e rappel — ferme, avant contentieux</p><p class="en">"Despite our previous reminders, this account remains unpaid. Unless payment is received within seven days, we shall have no alternative but to refer the matter to our legal department."</p>
+      </div>
+      <div class="example">
+        <h5>Offre commerciale (Offer / Quotation)</h5>
+        <p class="lab">Ouverture</p><p class="en">"Thank you for your enquiry of 3 March. We are pleased to enclose our current price list and to quote as follows."</p>
+        <p class="lab">Corps</p><p class="en">"We can offer the goods specified at the prices shown, delivery within four weeks of receipt of order, CIF Le Havre."</p>
+        <p class="lab">Clôture — la clause qui protège l'auteur</p><p class="en">"This offer is subject to confirmation and remains valid for thirty days from the date of this letter."</p>
+      </div>
+      <p class="note">Sans la mention <b>"subject to confirmation"</b>, une offre chiffrée et datée peut, dans certains systèmes juridiques, être interprétée comme un engagement unilatéral déjà contraignant — un point qui rejoint directement le droit des contrats vu en discipline 03 et 04.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Techniques du commerce international <i>— l'Incoterm cité dans l'offre (CIF Le Havre), discipline 01</i></span>
+        <span class="linkchip">Droit des contrats common law <i>— une offer sans réserve peut lier son auteur, discipline 04</i></span>
+        <span class="linkchip">Lexique socio-économique <i>— chaque type de lettre puise dans le vocabulaire accumulé en C4</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Écrire une réclamation agressive dès la première phrase, sans aucune concession préalable</li>
+          <li>Oublier la référence de commande ou de facture, empêchant le destinataire de retrouver le dossier</li>
+          <li>Écrire "please find enclosed" sans réellement joindre de pièce, ou l'inverse</li>
+          <li>Confondre le registre d'une lettre de commande (neutre, précise) avec celui d'une demande de renseignements (ouvertement cordiale)</li>
+        </ul></div>
+        <div class="ee"><h5>Côté professionnels non-natifs</h5><ul>
+          <li>Envoyer d'emblée un ton de dernier avis pour un tout premier retard de paiement, brûlant une relation qui valait plus que la facture</li>
+          <li>Omettre "subject to confirmation" dans une offre, créant sans le vouloir un engagement unilatéral exécutoire</li>
+          <li>Réutiliser le même modèle de lettre pour tous les clients, sans tenir compte de l'historique réel de la relation</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Un client fidèle depuis dix ans, toujours ponctuel, a quinze jours de retard sur une facture pour la première fois. Quel rappel envoyez-vous ?</p>
+        <p class="dctx">Le service comptable vous rappelle que la procédure interne prévoit un rappel "standard" dès sept jours de retard, quel que soit le client.</p>
+        <div class="dopts">
+          <span>A. Suivre la procédure standard à la lettre : rappel courtois-neutre, comme pour tout client</span>
+          <span>B. Envoyer un rappel plus cordial que la procédure standard, en évoquant un possible oubli administratif</span>
+          <span>C. Appeler le client directement plutôt que d'écrire, pour ne rien mettre par écrit</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>La procédure standard (A) existe pour une bonne raison — la cohérence et la traçabilité — mais elle ignore l'historique. Un client ponctuel depuis dix ans mérite un registre plus doux que le rappel générique (B), sans pour autant renoncer à l'écrit : le courrier reste la pièce qui, en cas de litige ultérieur, prouve que la relance a bien eu lieu à la date indiquée. Téléphoner sans rien écrire (C) prive l'entreprise de cette preuve. La bonne pratique consiste souvent à personnaliser le premier rappel dans son ton tout en conservant sa fonction probante — l'échelle des trois relances n'interdit pas d'ajuster l'intensité du premier palier selon la relation.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Les sept lettres sont les nœuds d'une seule conversation commerciale : une erreur sur l'une se propage sur les suivantes</li>
+            <li>L'échelle des relances de paiement doit être respectée dans l'ordre — sauter une étape brûle une relation qui vaut souvent plus que la créance</li>
+            <li>Une réclamation qui concède ce qui est vrai et refuse ce qui ne l'est pas préserve à la fois la créance et la relation</li>
+            <li>La lettre d'offre est le seul document unilatéral de la chaîne qui peut devenir contraignant s'il n'est pas correctement réservé</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de correspondance frappe ici</h5>
+          <ul>
+            <li>Génération de brouillons par type de lettre avec registre auto-calibré selon l'historique réel du client</li>
+            <li>Détection d'un langage accidentellement contraignant dans une lettre d'offre (clause de réserve manquante)</li>
+            <li>Vérification de cohérence sur l'ensemble d'un fil de correspondance (enquiry → offer → order → acknowledgement)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Lexique, presse économique et synthèse</h2>
+      <p class="dsub">Chapitres C4 · C5 — acquisition continue, dominante du second semestre</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Lire la presse économique anglophone (Financial Times, The Economist) et en produire une synthèse fiable pose un problème que la grammaire seule ne résout pas : le vocabulaire socio-économique est truffé de <b>faux amis</b>, et les chiffres eux-mêmes obéissent à des conventions différentes d'une langue à l'autre. <b>Une erreur de vocabulaire ou d'échelle numérique dans une synthèse n'est pas une maladresse de style — c'est une erreur factuelle</b>, exactement comme confondre un million et un milliard dans un rapport financier. C'est pourquoi ce couple de chapitres s'acquiert par répétition constante plutôt que par une théorie à comprendre une seule fois.</p>
+
+      <div class="callout gold">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Point d'exactitude central — le piège du mot « billion »</h5>
+          <p>La France utilise l'<b>échelle longue</b> : un milliard vaut 10⁹, un billion vaut 10¹². Les États-Unis ont toujours utilisé l'<b>échelle courte</b> : leur billion vaut 10⁹, soit un milliard français. Le Royaume-Uni utilisait historiquement l'échelle longue, comme la France — jusqu'à ce que le Premier ministre <b>Harold Wilson</b> annonce à la Chambre des Communes, en <span class="yr">décembre 1974</span>, que l'administration britannique adopterait officiellement l'échelle courte en usage américain : « billion » désignerait désormais mille millions (10⁹). Depuis cette bascule, la presse économique anglophone (Financial Times, The Economist) utilise systématiquement l'échelle courte. Conséquence directe pour une lectrice française habituée à l'échelle longue : <b>« 2 billion dollars » dans un article économique contemporain signifie 2 milliards, pas 2 000 milliards</b>. C'est le jalon daté le plus fiable de toute cette fiche, et le piège numérique le plus fréquent en synthèse d'article.</p>
+        </div>
+      </div>
+
+      <table class="cmp">
+        <caption>Échelle longue (France, ancien Royaume-Uni) vs échelle courte (États-Unis, Royaume-Uni depuis 1974)</caption>
+        <thead><tr><th>Terme anglais</th><th>Échelle longue (FR, UK avant 1974)</th><th>Échelle courte (US, UK depuis déc. 1974)</th><th>Équivalent français correct aujourd'hui</th></tr></thead>
+        <tbody>
+          <tr><td>million</td><td>10⁶</td><td>10⁶</td><td>million (10⁶) — pas de piège ici</td></tr>
+          <tr><td>billion</td><td>10¹²</td><td>10⁹</td><td>milliard (10⁹)</td></tr>
+          <tr><td>trillion</td><td>10¹⁸</td><td>10¹²</td><td>billion français (10¹²)</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p>
+      <div class="split">
+        <div class="u"><h5>À comprendre</h5><ul>
+          <li>Pourquoi l'échelle courte s'est imposée dans la presse anglophone depuis la bascule britannique de 1974</li>
+          <li>Pourquoi une synthèse hiérarchise l'information (qui, quoi, combien, tendance) au lieu de traduire phrase à phrase</li>
+          <li>Pourquoi la CVIM et les Principes UNIDROIT (discipline 03) n'encadrent que le fond du contrat, jamais un vocabulaire de presse</li>
+        </ul></div>
+        <div class="m"><h5>À automatiser</h5><ul>
+          <li>La conversion immédiate de « billion » en milliard, réflexe à déclencher sur chaque lecture de chiffre</li>
+          <li>Le corpus de faux amis socio-économiques, révisé à chaque nouvelle lecture de presse</li>
+          <li>L'inversion du séparateur décimal : 1,000.50 en anglais = 1 000,50 en français</li>
+          <li>La méthode de synthèse en quatre étapes chronométrées : repérage des chiffres → repérage de la tendance → repérage de la cause → rédaction</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Corpus de faux amis socio-économiques — le piège récurrent d'examen</caption>
+        <thead><tr><th>Mot anglais</th><th>Sens réel en anglais</th><th>Faux ami en français</th><th>Traduction française correcte</th></tr></thead>
+        <tbody>
+          <tr><td>actually</td><td>en fait, en réalité</td><td>≠ actuellement</td><td>actuellement = currently / at present</td></tr>
+          <tr><td>eventually</td><td>finalement, à terme</td><td>≠ éventuellement</td><td>éventuellement = possibly / potentially</td></tr>
+          <tr><td>achieve</td><td>réaliser, atteindre (un objectif)</td><td>≠ achever</td><td>achever = to complete / to finish</td></tr>
+          <tr><td>sensible</td><td>raisonnable, sensé</td><td>≠ sensible</td><td>sensible (FR) = sensitive</td></tr>
+          <tr><td>large</td><td>grand, important (en taille)</td><td>≠ large</td><td>large (FR) = wide / broad</td></tr>
+          <tr><td>assist</td><td>aider, soutenir</td><td>≠ assister à</td><td>assister à = to attend</td></tr>
+          <tr><td>deception</td><td>tromperie, duperie</td><td>≠ déception</td><td>déception = disappointment</td></tr>
+          <tr><td>figure</td><td>chiffre, donnée économique</td><td>≠ silhouette uniquement</td><td>figure = aussi « chiffre » en contexte économique</td></tr>
+          <tr><td>demand</td><td>demande (économie) ou exigence selon contexte</td><td>attention au double sens</td><td>vérifier le contexte avant de traduire</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret — méthode de synthèse en situation</p>
+      <div class="example">
+        <h5>Extrait adapté d'un article de presse économique</h5>
+        <p class="en">"The group posted losses of $2.3 billion in the third quarter, a threefold increase on the previous year, as demand for its core product continued to slide."</p>
+        <p class="lab">Rendu fautif fréquent</p><p>« Le groupe a annoncé des pertes de 2,3 billions de dollars… » — erreur d'un facteur 1000 par calque du mot anglais.</p>
+        <p class="lab">Rendu correct</p><p>« Le groupe a annoncé des pertes de 2,3 milliards de dollars au troisième trimestre, un triplement par rapport à l'année précédente, la demande pour son produit phare continuant de reculer. » — chiffre, tendance et cause extraits dans l'ordre de la méthode.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Gestion financière <i>— lecture de chiffres réels de résultat en presse, discipline 06</i></span>
+        <span class="linkchip">Droit des affaires internationales <i>— l'exactitude d'un chiffre reporté dans un mémo de due diligence, discipline 03</i></span>
+        <span class="linkchip">Civilisation britannique &amp; américaine <i>— comprendre les institutions citées (the Chancellor, the Fed), disciplines 16 et 18</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Traduire « billion » par « billion » en français par calque, provoquant une erreur d'un facteur mille</li>
+          <li>Confondre economic (relatif à l'économie) et economical (économe, qui fait des économies)</li>
+          <li>Allonger la synthèse d'un commentaire de style au lieu de se concentrer sur chiffre, tendance et cause</li>
+          <li>Oublier l'inversion virgule/point dans la transcription d'un nombre décimal</li>
+        </ul></div>
+        <div class="ee"><h5>Côté professionnels non-natifs</h5><ul>
+          <li>Reporter un chiffre en « billion » depuis une source anglophone dans un mémo interne français sans convertir, propageant une erreur x1000 dans un document réel</li>
+          <li>Mélanger orthographe britannique et américaine dans le même rapport (organisation / organization)</li>
+          <li>Confondre turnover (chiffre d'affaires) et profit (résultat net) dans un compte rendu de synthèse</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous rédigez la synthèse d'un article du Financial Times pour votre service : « Losses reached $4 billion. » Vous hésitez sur la traduction du chiffre et le délai presse. Que faites-vous ?</p>
+        <p class="dctx">Le document sera relu par votre hiérarchie et peut circuler en interne comme référence chiffrée sur ce dossier.</p>
+        <div class="dopts">
+          <span>A. Écrire directement « 4 milliards de dollars », en appliquant le réflexe de conversion</span>
+          <span>B. Recopier « 4 billion » tel quel en anglais, pour éviter toute erreur de conversion</span>
+          <span>C. Écrire « 4 milliards » et ajouter une note précisant la source anglophone et l'échelle utilisée</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>L'option A est correcte sur le fond — la presse anglophone contemporaine utilise l'échelle courte depuis 1974, donc « billion » se convertit bien en « milliard ». Mais dans un document appelé à circuler et à être réutilisé sans le contexte d'origine, l'option C est la plus sûre : elle donne le résultat correct tout en traçant explicitement la source et la convention d'échelle appliquée, ce qui protège contre une relecture ultérieure par quelqu'un qui, à tort, appliquerait l'échelle longue française au chiffre déjà converti. L'option B expose le lecteur suivant au même piège que celui que la synthèse est censée résoudre.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un faux ami en anglais économique n'est pas une coquetterie de classe de langue — dans un mémo à des investisseurs, c'est une erreur factuelle</li>
+            <li>Le piège de l'échelle numérique (« billion ») est le poste de vocabulaire à plus haut risque de toute la discipline : une seule erreur déforme un chiffre d'un facteur mille</li>
+            <li>La synthèse de presse entraîne exactement la compétence utilisée en poste : extraire le signal d'un article FT ou Economist sous contrainte de temps, pas traduire au mot près</li>
+            <li>Un carnet de vocabulaire tenu en continu (C4) est ce qui rend la synthèse (C5) possible — elle échoue d'abord sur le lexique, rarement sur les idées</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA de traduction frappe ici</h5>
+          <ul>
+            <li>Détection automatique des écarts d'échelle numérique lors d'une traduction FR ↔ EN d'un texte économique</li>
+            <li>Détecteur de faux amis entraîné spécifiquement sur corpus socio-économique, pas sur la langue générale</li>
+            <li>Vérification croisée d'une synthèse par rapport à l'article source, pour confirmer que chiffres et unités correspondent bien</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">La forme donne la preuve<i>C1</i></span>
+        <span class="sp">Le registre donne la force de négociation<i>C2·C3</i></span>
+        <span class="sp">Concéder le vrai, refuser le reste<i>C3</i></span>
+        <span class="sp">Faux amis socio-économiques<i>C4·C5</i></span>
+        <span class="sp">billion = milliard depuis 1974<i>C4·C5</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
-    <a class="navbtn prev" href="10-redaction-universitaire-recherche.html">← Rédaction universitaire & in…</a>
+    <a class="navbtn prev" href="10-redaction-universitaire-recherche.html">← Rédaction universitaire &amp; recherche</a>
     <a class="navbtn home" href="index.html">Index des matières</a>
-    <a class="navbtn next" href="12-traduction-anglaise-theme-version.html">Traduction anglaise · thème … →</a>
+    <a class="navbtn next" href="12-traduction-anglaise-theme-version.html">Traduction anglaise · thème &amp; version →</a>
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
