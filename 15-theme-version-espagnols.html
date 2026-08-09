@@ -3,13 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thème & version espagnols — Cours détaillé · Master Plans</title>
-<meta name="description" content="Fiche de cours détaillée — Thème & version espagnols, discipline 15 de L'Architecture des Disciplines.">
+<title>Thème &amp; version espagnols — Cours détaillé · Master Plans</title>
+<meta name="description" content="Fiche de cours détaillée — Thème et version espagnols, discipline 15 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#b6497e;--dom-lt:#e6a3c4}</style>
+<style>
+/* Palette — corail brûlé / bleu Castille / vert amande : deux langues sœurs,
+   si proches que leurs couleurs pourraient presque se confondre. Le corail
+   brûlé (espagnol, dominant — 80% automatisme) et le bleu Castille (français
+   qui affleure partout en dessous, 20% système) restent pourtant nettement
+   distincts l'un de l'autre, jamais mélangés dans un dégradé continu : un
+   rappel visuel que ressemblance n'est pas identité, exactement le problème
+   que toute la discipline enseigne à déjouer. Le vert amande est la marge de
+   vigilance entre les deux — la zone où l'on vérifie avant de se fier. */
+:root{
+  --p1:#c2603f; --p1-lt:#e8a68c;   /* corail brûlé — espagnol, automatisme dominant */
+  --p2:#3d5a8c; --p2-lt:#92abd6;   /* bleu Castille — français, système */
+  --p3:#7a9463; --p3-lt:#b8caa4;   /* vert amande — vigilance, liens, journal */
+  --ink:#3a2e28; --ink-soft:#7d6a5e;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(194,96,63,.26);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #f3d3c2 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 20%, #bfd0ea 0%, transparent 52%),
+    radial-gradient(1000px 720px at 34% 108%, #d7e3cb 0%, transparent 58%),
+    linear-gradient(158deg,#f1ddd0 0%, #e2e8da 42%, #ccd9ec 72%, #eee0d3 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p2);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(194,96,63,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(58,46,40,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:190px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#7c3e26;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p2-lt),var(--p2))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p2)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p1)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:640px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* verdict callout */
+.verdict{margin:18px 0 6px}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(194,96,63,.24);border-radius:24px;box-shadow:0 16px 46px rgba(58,46,40,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#7c3e26;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(61,90,140,.09);
+  border:1px solid rgba(61,90,140,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p2);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+.callout.amande{background:rgba(122,148,99,.10);border-color:rgba(122,148,99,.45)}
+.callout.amande svg{stroke:var(--p3)}
+.callout.amande h5{color:#4f6b3f}
+
+.mech{font-size:.95rem;margin:8px 0}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain span.node.danger{border-color:var(--p1);color:#7c3e26}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(194,96,63,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem;margin:4px 0}
+.example .fr{color:#3d5a8c}
+.example .es{color:#7c3e26}
+.example .tag{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--p3);margin-right:6px}
+.example .nb{font-size:.82rem;color:var(--ink-soft);margin-top:6px}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--p3);color:#4f6b3f;
+  padding:5px 12px;border-radius:14px;background:rgba(122,148,99,.09)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(61,90,140,.09);border:1px solid rgba(61,90,140,.42)}
+.errors .ee{background:rgba(122,148,99,.10);border:1px solid rgba(122,148,99,.42)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--p2)} .errors .ee h5{color:#4f6b3f}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+/* comprendre / automatiser */
+.split{display:grid;grid-template-columns:1fr 1.35fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split .u,.split .m{border-radius:16px;padding:14px 18px}
+.split .u{background:rgba(61,90,140,.07);border:1px solid rgba(61,90,140,.32)}
+.split .m{background:rgba(194,96,63,.09);border:1px solid rgba(194,96,63,.4)}
+.split h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p2)} .split .m h5{color:var(--p1)}
+.split ul{list-style:none}
+.split li{font-size:.83rem;padding:4px 0 4px 15px;position:relative}
+.split .u li::before{content:"◆";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p2)}
+.split .m li::before{content:"↻";position:absolute;left:0;font-size:.66rem;top:4px;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding:12px 16px 8px 16px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#233a5c}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(146,171,214,.13)}
+table.cmp td.bad{color:#a34a2e}
+table.cmp td.good{color:#3f6b2e}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#7c3e26;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(122,148,99,.12);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p3)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(146,171,214,.20);border:1px solid var(--p2-lt)}
+.helix{background:rgba(122,148,99,.14);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#233a5c} .helix h5{color:#4f6b3f}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2-lt);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:#4f6b3f}
+
+/* diagrammes SVG */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--p3);color:#4f6b3f;
+  padding:5px 12px;border-radius:14px;background:rgba(122,148,99,.09)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,43 +244,556 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d15">
-  <div class="tab">篇 XV</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 15</p>
-    <h3>Thème &amp; version espagnols</h3>
-    <p class="dmeta">S5 + S6 · TD 12h + 12h · Annie Baccon (thème) · Sylvie Fournié-Chaboche (version)</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Deux rubans presque parallèles, l'un bleu l'autre corail, qui suivent un tracé quasi confondu puis divergent nettement à un point marqué d'un éclat">
+      <defs>
+        <linearGradient id="rfr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#3d5a8c"/><stop offset="1" stop-color="#92abd6"/>
+        </linearGradient>
+        <linearGradient id="res" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#c2603f"/><stop offset="1" stop-color="#e8a68c"/>
+        </linearGradient>
+      </defs>
+      <!-- tronc commun : les deux langues, presque confondues -->
+      <path d="M20 92 C120 82,220 82,340 90" fill="none" stroke="#3d5a8c" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M20 97 C120 87,220 87,340 96" fill="none" stroke="#c2603f" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 6"/>
+      <!-- divergence : chacune part son chemin -->
+      <path d="M340 90 C420 58,520 38,648 28" fill="none" stroke="url(#rfr)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M648 28 l-15 -3 M648 28 l-6 14" fill="none" stroke="#3d5a8c" stroke-width="3" stroke-linecap="round"/>
+      <path d="M340 96 C420 132,520 156,648 170" fill="none" stroke="url(#res)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M648 170 l-16 1 M648 170 l-9 13" fill="none" stroke="#c2603f" stroke-width="3" stroke-linecap="round"/>
+      <!-- éclat au point de divergence -->
+      <g transform="translate(340,93)" stroke="#c2603f" stroke-width="1.6">
+        <circle r="6" fill="#fff"/>
+        <line x1="0" y1="-11" x2="0" y2="-16"/><line x1="0" y1="11" x2="0" y2="16"/>
+        <line x1="-11" y1="0" x2="-16" y2="0"/><line x1="11" y1="0" x2="16" y2="0"/>
+        <line x1="-8" y1="-8" x2="-11" y2="-11"/><line x1="8" y1="8" x2="11" y2="11"/>
+        <line x1="-8" y1="8" x2="-11" y2="11"/><line x1="8" y1="-8" x2="11" y2="-11"/>
+      </g>
+      <text x="150" y="72" font-family="Josefin Sans" font-size="8" letter-spacing="1.5" fill="#7d6a5e" text-anchor="middle">RESSEMBLANCE</text>
+      <text x="340" y="58" font-family="Josefin Sans" font-size="8" letter-spacing="1" fill="#7c3e26" text-anchor="middle">point de divergence</text>
+      <text x="655" y="24" font-family="Josefin Sans" font-size="12" letter-spacing="2" fill="#3d5a8c" text-anchor="end">FR</text>
+      <text x="655" y="184" font-family="Josefin Sans" font-size="12" letter-spacing="2" fill="#c2603f" text-anchor="end">ES</text>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Thème &amp; version espagnols</h1>
+    <p class="gen-open">Le français et l'espagnol descendent tous deux du latin — une parenté si étroite qu'une phrase française semble parfois se traduire toute seule. C'est précisément ce qui rend l'erreur invisible : le <b>calque</b>, ce mot-à-mot qui reproduit la structure française en espagnol, fonctionne presque toujours en surface — il forme une phrase grammaticalement recevable — mais trahit le sens, le registre ou l'usage réel de la langue cible. Comment traduire entre deux langues sœurs sans se laisser porter par leur ressemblance ?</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:20%"></span><span class="au" style="width:80%"></span></span>
       <span class="crd">Système <b class="s">20%</b> · Automatisme <b class="a">80%</b></span>
-      <span class="verd aut">Automatisme</span>
+      <span class="verd">Automatisme</span>
+    </div>
+    <p class="dmeta">S5 + S6 · TD 12h + 12h · Annie Baccon (thème) · Sylvie Fournié-Chaboche (version)</p>
+  </div>
+
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="14" cy="12" r="6"/><path d="M4 34 C4 24 22 24 22 34"/><path d="M24 20 l10 -8 l4 2 l-8 10 z"/><line x1="20" y1="30" x2="34" y2="30"/></svg><b>Auteur source</b><span>écrit en français, pour un lecteur français</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="10" width="12" height="20" rx="2"/><rect x="22" y="10" width="12" height="20" rx="2"/><path d="M18 20 h4"/><path d="M8 34 h8 M24 34 h8"/></svg><b>Traductrice</b><span>reconstruit le sens, pas la ressemblance</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="16" cy="16" r="10"/><line x1="23" y1="23" x2="34" y2="34"/><path d="M12 16 l3 3 l6 -7"/></svg><b>Correcteur</b><span>traque le calque invisible, pas le mot juste</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M6 12 h13 v20 h-13 z"/><path d="M21 12 h13 v20 h-13 z"/><line x1="9" y1="17" x2="16" y2="17"/><line x1="9" y1="22" x2="16" y2="22"/><line x1="24" y1="17" x2="31" y2="17"/><line x1="24" y1="22" x2="31" y2="22"/></svg><b>Lecteur cible</b><span>hispanophone, ne lira jamais le texte français</span></div>
+  </div>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des cinq chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet">
+      <path d="M30 112 C 110 60, 150 52, 220 55 S 360 148, 430 150 S 570 55, 640 55 S 790 112, 860 112" fill="none" stroke="#e8a68c" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(30,112)"><circle r="18" fill="#3d5a8c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="4" y="42" text-anchor="middle">Le calque</text></g>
+        <!-- C2 -->
+        <g transform="translate(220,55)"><circle r="18" fill="#3d5a8c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-27" text-anchor="middle">Contrastes FR/ES</text></g>
+        <!-- C3 -->
+        <g transform="translate(430,150)"><circle r="15" fill="#c2603f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="35" text-anchor="middle">Thème FR→ES</text></g>
+        <!-- C4 -->
+        <g transform="translate(640,55)"><circle r="15" fill="#c2603f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Version ES→FR</text></g>
+        <!-- C5 -->
+        <g transform="translate(860,112)"><circle r="18" fill="#7a9463" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="-16" y="-27" text-anchor="middle">Faux amis · journal</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="callout verdict">
+    <svg viewBox="0 0 40 40"><path d="M20 6 a14 14 0 1 1 -9.9 4.1"/><path d="M20 2 l0 8 l6 -3 z" fill="#3d5a8c" stroke="none"/><path d="M20 14 v7 l5 3"/></svg>
+    <div>
+      <h5>Le verdict qui gouverne toute la fiche</h5>
+      <p>Automatisme, 80% du temps utile. La théorie (<b>C1</b>, <b>C2</b>) est courte mais fondatrice : elle nomme le piège — le calque — et cartographie où le français et l'espagnol divergent malgré leur air de famille. Elle ne s'apprend qu'une fois. C'est ensuite la pratique répétée (<b>C3</b> à <b>C5</b>), phrase après phrase, texte après texte, qui construit le réflexe de vigilance — et un outil concret la porte plus que toute relecture isolée : le <b>journal d'erreurs</b>, où l'on consigne ce qu'on rate pour ne plus le rater.</p>
     </div>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">La proximité du français et de l'espagnol est un <b>piège autant qu'un avantage</b> : elle rend le calque naturel et l'erreur invisible. Comment traduire sans se laisser porter par la ressemblance ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Le calque : l'ennemi structurel</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Contrastes FR/ES : ser-estar, por-para, subjonctif, prépositions</b><span class="k fondation">FONDATION</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C1</b></span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Thème FR → ES</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b></span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Version ES → FR</b><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b> · courant et spécialisé</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Faux amis &amp; registres</b><span class="k auto">AUT</span><span class="dep">Acquisition continue</span></div></li></ol>
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le calque et les contrastes structurels FR/ES</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation, socle analytique de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une étudiante traduit une phrase française en espagnol. Elle reconnaît presque chaque mot, l'ordre lui semble naturel, elle écrit vite — et produit une phrase espagnole grammaticalement correcte qui, pourtant, ne veut pas dire ce qu'elle croit. <b>Comment traduire entre deux langues si proches sans se laisser porter par leur ressemblance ?</b> C'est le problème fondateur de la discipline, et il n'a rien d'anecdotique : entre le français et l'anglais, un calque syntaxique se voit presque toujours — la phrase sonne immédiatement étrangère, elle grince. Entre le français et l'espagnol, le calque passe souvent inaperçu, précisément parce qu'il produit une phrase recevable. L'erreur ne se signale plus par une gêne de lecture : elle se cache derrière une fluidité trompeuse.</p>
 
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Vigilance</div><div class="tc"><span class="node f">C1 · Le calque</span><span class="ar">→</span><span class="node f">C2 · Points de divergence</span></div></div>
-<div class="tier"><div class="tl">Pratique</div><div class="tc"><span class="node a">C3 · Thème</span><span class="ar">‖</span><span class="node a">C4 · Version</span><span class="ar">←</span><span class="node a">C5 · Faux amis</span></div></div>
-</div>
-    <p class="note">Outil central de la discipline : le <b>journal d'erreurs</b>. Les mêmes fautes reviennent — les répertorier vaut mieux que traduire davantage.</p>
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Le calque, entre neutralité et péril — un lien vers la discipline 12</h5>
+          <p>Le calque figure comme l'un des sept procédés de traduction nommés par les linguistes <b>Jean-Paul Vinay</b> et <b>Jean Darbelnet</b> dans leur <i>Stylistique comparée du français et de l'anglais</i>, publiée en <span class="yr">1958</span> — déjà rencontrée en discipline 12, pour le couple français-anglais. Cette nomenclature n'a pas été pensée pour l'espagnol, mais elle s'y applique sans difficulté : le calque y reste la reproduction morphème à morphème d'une structure source. Ce qui change du tout au tout, c'est son <b>statut</b>. Chez Vinay &amp; Darbelnet, le calque est un procédé neutre parmi sept, parfois heureux (« gratte-ciel » pour <i>sky-scraper</i>), parfois fautif — un outil à choisir consciemment, comme les six autres. Ici, entre deux langues filles du même latin, il devient l'<b>ennemi par défaut</b> : parce que le français et l'espagnol partagent une bonne part de leur lexique, de leur morphologie et de leur ordre des mots, le calque y est presque toujours <i>praticable</i> — il produit une phrase grammaticalement recevable — ce qui le rend d'autant plus fautif qu'il passe inaperçu du traducteur comme du relecteur pressé. Entre français et anglais, le calque échoue vite et se voit ; entre français et espagnol, il réussit trop souvent et se cache.</p>
+        </div>
+      </div>
 
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Le calque comme erreur par défaut<i>C1·C3</i></span><span class="sp">Points de divergence FR/ES<i>C2</i></span><span class="sp">Registre<i>C5</i></span></div>
+      <div class="callout amande">
+        <svg viewBox="0 0 40 40"><path d="M20 6 C10 10 8 14 8 20 C8 28 14 32 20 34 C26 32 32 28 32 20 C32 14 30 10 20 6 Z"/><path d="M20 14 v10 M15 19 h10"/></svg>
+        <div>
+          <h5>Pourquoi cette proximité, au juste ? — une filiation sans date</h5>
+          <p>Le français et l'espagnol descendent tous deux du latin — une filiation qui ne date d'aucun événement précis, mais d'une évolution linguistique étalée sur plus d'un millénaire, à partir du latin vulgaire diffusé par l'Empire romain puis divergé région par région après sa fragmentation politique. Contrairement aux Incoterms (1936, discipline 01) ou au connaissement anglais (arrêt <i>Lickbarrow v. Mason</i>, 1794), il n'y a ici ni inventeur ni date de « découverte » à citer pour expliquer pourquoi <i>hablar</i> et « parler » se ressemblent tout en restant différents : c'est le résultat d'une histoire longue, pas d'une décision datable. Cette absence d'origine attribuable n'est pas une lacune de cette fiche — c'est un fait linguistique honnête, et c'est précisément cette parenté structurelle, non événementielle, qui rend le calque si tentant entre les deux langues.</p>
+        </div>
+      </div>
 
-    
-  </div>
-</section>
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — pourquoi le calque trompe</p>
+      <div class="chain">
+        <span class="node">Phrase source en français</span><span class="arrow">→</span>
+        <span class="node">Repérage du mot ou de la structure la plus proche en espagnol</span><span class="arrow">→</span>
+        <span class="node">Le calque produit une phrase grammaticalement recevable</span><span class="arrow">→</span>
+        <span class="node danger">Mais le sens, le registre ou l'usage réel divergent</span>
+      </div>
+      <p class="mech">Le dernier maillon est celui qui compte : une phrase espagnole peut être <b>syntaxiquement correcte</b> et <b>sémantiquement fautive</b> en même temps — deux jugements que le français et l'anglais confondent souvent, parce qu'un calque anglais mal formé échoue en général aux deux niveaux à la fois. Entre le français et l'espagnol, ces deux niveaux se dissocient : c'est ce qui rend le contrôle indispensable, phrase par phrase, même quand tout « sonne juste ».</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 760 260" width="100%" style="max-width:760px">
+          <g font-family="Josefin Sans">
+            <rect x="100" y="10" width="560" height="46" rx="14" fill="#fff" stroke="#3d5a8c" stroke-width="1.6"/>
+            <text x="380" y="38" text-anchor="middle" font-size="12" fill="#3d5a8c">FR — « Je suis en train de finir mon rapport. »</text>
+
+            <path d="M380 56 C300 90,220 105,190 150" fill="none" stroke="#c2603f" stroke-width="2"/>
+            <path d="M380 56 C460 90,540 105,570 150" fill="none" stroke="#7a9463" stroke-width="2"/>
+
+            <g transform="translate(380,72)" stroke="#c2603f" stroke-width="1.5">
+              <circle r="6" fill="#fff"/>
+              <line x1="0" y1="-10" x2="0" y2="-15"/><line x1="0" y1="10" x2="0" y2="15"/>
+              <line x1="-10" y1="0" x2="-15" y2="0"/><line x1="10" y1="0" x2="15" y2="0"/>
+            </g>
+
+            <rect x="30" y="150" width="320" height="88" rx="14" fill="#f6e2d9" stroke="#c2603f" stroke-width="1.6"/>
+            <text x="190" y="172" text-anchor="middle" font-size="10.5" font-weight="600" fill="#7c3e26">ES — calque (fautif)</text>
+            <text x="190" y="192" text-anchor="middle" font-size="10" font-style="italic" fill="#3a2e28">« Estoy en tren de terminar mi informe. »</text>
+            <text x="190" y="212" text-anchor="middle" font-size="8.5" fill="#7d6a5e">tren = le train (véhicule), pas la progression</text>
+
+            <rect x="410" y="150" width="320" height="88" rx="14" fill="#e3ead9" stroke="#7a9463" stroke-width="1.6"/>
+            <text x="570" y="172" text-anchor="middle" font-size="10.5" font-weight="600" fill="#4f6b3f">ES — traduction (correcte)</text>
+            <text x="570" y="192" text-anchor="middle" font-size="10" font-style="italic" fill="#3a2e28">« Estoy terminando mi informe. »</text>
+            <text x="570" y="212" text-anchor="middle" font-size="8.5" fill="#7d6a5e">estar + gérondif (-ando/-iendo) = action en cours</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note">Le <b>point de divergence</b> est la préposition « en train de », calquée en <i>en tren de</i> — un groupe qui existe en espagnol, mais qui désigne un train, pas une progression. La phrase reste grammaticalement correcte ; le sens bascule entièrement. C'est un exemple classique, répété dans nombre de manuels de traduction franco-espagnole, sans qu'on puisse en attribuer la paternité à un auteur précis.</p>
+
+      <p class="blockt"><span class="bdot"></span>Quatre pièges, quatre phrases réelles</p>
+      <div class="example">
+        <h5>Piège ser / estar</h5>
+        <p><span class="tag">Calque</span><span class="fr">FR — « Ma sœur est fatiguée aujourd'hui. »</span></p>
+        <p class="es" style="text-decoration:line-through;opacity:.7">ES fautif — « Mi hermana es cansada hoy. »</p>
+        <p class="es">ES correct — « Mi hermana está cansada hoy. »</p>
+        <p class="nb"><i>ser cansada</i> décrit un trait permanent — une personne fatigante, pénible à fréquenter — pas un état passager. Le français n'a qu'un seul « être » ; l'espagnol force à choisir entre l'identité (ser) et l'état (estar), et ce choix change le sens, pas seulement le style.</p>
+      </div>
+      <div class="example">
+        <h5>Piège por / para</h5>
+        <p><span class="tag">Calque</span><span class="fr">FR — « Merci pour ton aide. »</span></p>
+        <p class="es" style="text-decoration:line-through;opacity:.7">ES fautif — « Gracias para tu ayuda. »</p>
+        <p class="es">ES correct — « Gracias por tu ayuda. »</p>
+        <p class="nb">Le français ne connaît qu'un « pour » pour le but (para) et pour la cause déjà accomplie (por). Remercier, c'est réagir à une aide déjà donnée — une cause, donc por. <i>Para</i> tournerait la phrase vers un but futur, contresens léger mais réel.</p>
+      </div>
+      <div class="example">
+        <h5>Faux ami classique</h5>
+        <p><span class="tag">Calque</span><span class="fr">FR — « Elle est embarrassée par sa question. »</span></p>
+        <p class="es" style="text-decoration:line-through;opacity:.7">ES fautif — « Está embarazada por su pregunta. »</p>
+        <p class="es">ES correct — « Está avergonzada por su pregunta. »</p>
+        <p class="nb"><i>Embarazada</i> signifie enceinte, pas embarrassée — le faux ami le plus connu du couple FR/ES, et l'un des plus risqués à confondre en contexte professionnel ou médical.</p>
+      </div>
+      <div class="example">
+        <h5>Piège de subjonctif</h5>
+        <p><span class="tag">Calque</span><span class="fr">FR — « Quand j'arriverai, je t'appellerai. »</span></p>
+        <p class="es" style="text-decoration:line-through;opacity:.7">ES fautif — « Cuando llegaré, te llamaré. »</p>
+        <p class="es">ES correct — « Cuando llegue, te llamaré. »</p>
+        <p class="nb">Le français emploie l'indicatif futur après « quand » pour une action future ; l'espagnol impose le subjonctif présent après <i>cuando</i> dès que l'action se situe dans un futur non réalisé. Calquer l'indicatif français produit une phrase agrammaticale, pas seulement maladroite — l'un des rares cas où le calque échoue aussi vite qu'en anglais.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>C2 — Les quatre points de divergence, en tableaux</p>
+      <div class="callout amande">
+        <svg viewBox="0 0 40 40"><path d="M20 6 C10 10 8 14 8 20 C8 28 14 32 20 34 C26 32 32 28 32 20 C32 14 30 10 20 6 Z"/><path d="M20 14 v10 M15 19 h10"/></svg>
+        <div>
+          <h5>Un constat documenté, pas une règle inventée</h5>
+          <p>Les contrastes <b>ser/estar</b>, <b>por/para</b>, le régime plus large du subjonctif espagnol et les prépositions attachées à des verbes différents de leurs équivalents français n'ont ni inventeur ni date de formalisation unique : ce sont des faits de grammaire comparée, documentés de longue date en linguistique romane, sans qu'aucune source ne permette d'en dater « l'origine » — le contraste existe depuis que les deux langues ont divergé du latin commun, pas depuis qu'un linguiste l'a remarqué et nommé. Aucune date précise n'est avancée ici pour ces contrastes, faute de source vérifiable.</p>
+        </div>
+      </div>
+
+      <table class="cmp">
+        <caption>Ser et estar — deux verbes espagnols pour un seul « être » français</caption>
+        <thead><tr><th>Usage</th><th>Exemple espagnol</th><th>Piège pour un francophone</th></tr></thead>
+        <tbody>
+          <tr><td>Ser — identité, origine, matière, profession</td><td>« Soy profesora. » / « La mesa es de madera. »</td><td>Généraliser « soy/es » à tout « être », y compris les états passagers</td></tr>
+          <tr><td>Estar — lieu, situation géographique</td><td>« El museo está cerca del centro. »</td><td>Croire que ser convient pour un lieu jugé « permanent » — l'espagnol utilise toujours estar pour la localisation</td></tr>
+          <tr><td>Ser + adjectif — qualité perçue comme intrinsèque</td><td>« Es guapa. »</td><td>Employer estar ici déplace le sens vers « elle est jolie en ce moment » — nuance absente du français</td></tr>
+          <tr><td>Estar + adjectif — état temporaire ou résultat d'un changement</td><td>« Está cansada. »</td><td>Calque du français « elle est fatiguée » vers « es cansada », qui signifie « elle est fatigante » (personne pénible), pas « elle est fatiguée »</td></tr>
+        </tbody>
+      </table>
+
+      <table class="cmp">
+        <caption>Por et para — deux prépositions espagnoles pour un seul « pour » français</caption>
+        <thead><tr><th>Usage</th><th>Exemple espagnol</th><th>Piège pour un francophone</th></tr></thead>
+        <tbody>
+          <tr><td>Para — but, destination, échéance, destinataire</td><td>« Trabaja para ganarse la vida. » / « Esto es para ti. »</td><td>Employer para par réflexe pour tout « pour » français, y compris la cause déjà accomplie</td></tr>
+          <tr><td>Por — cause, moyen, échange</td><td>« Fue castigado por su retraso. »</td><td>Calque « gracias para tu ayuda » — faux, exprime un but futur au lieu d'une cause passée</td></tr>
+          <tr><td>Por — trajet, lieu traversé</td><td>« Paseamos por el parque. »</td><td>Confondre avec para lorsqu'il s'agit d'un trajet plutôt que d'une destination précise</td></tr>
+          <tr><td>Para — opinion, point de vue</td><td>« Para mí, es un error. »</td><td>Calquer « selon moi » en <i>según mí</i>, tournure quasi inexistante en espagnol standard là où para mí s'impose</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Compréhension / automatisme — C2</p>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Pourquoi ser/estar et por/para n'ont pas d'équivalent français à un seul terme — le français fusionne ce que l'espagnol distingue</li>
+            <li>Que le subjonctif espagnol s'étend à des contextes (temps futur, souhait, doute) où le français reste souvent à l'indicatif</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Un réflexe de contrôle systématique dès que « être » ou « pour » apparaît en source — jamais de traduction automatique du premier mot venu</li>
+            <li>La règle pratique : ser pour ce qui définit, estar pour ce qui se constate à un instant donné</li>
+            <li>Repérer les conjonctions temporelles espagnoles (cuando, en cuanto, hasta que) qui exigent le subjonctif dès que l'action visée est future</li>
+            <li>Dix phrases-modèles personnelles, une par piège structurel, révisées chaque semaine jusqu'à ne plus y penser</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Traduction anglaise, thème &amp; version (disc. 12) <i>— même cadre Vinay &amp; Darbelnet (1958), statut inverse du calque selon la distance typologique</i></span>
+        <span class="linkchip">Espagnol économique et commercial (disc. 14) <i>— le lexique spécialisé partagé, retrouvé identique en C3/C4</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Traduire une phrase entière mot à mot parce qu'elle « marche » au niveau du mot, sans vérifier le sens global obtenu</li>
+          <li>Employer systématiquement ser par réflexe, faute d'avoir mémorisé le couple estar + adjectif d'état</li>
+          <li>Oublier le subjonctif après une conjonction temporelle espagnole tournée vers le futur, par calque de l'indicatif français</li>
+        </ul></div>
+        <div class="ee"><h5>Côté traducteurs professionnels expérimentés</h5><ul>
+          <li>Sous délai serré, laisser passer un calque de préposition (por/para) malgré des années de pratique — la proximité fatigue la vigilance autant qu'elle la facilite</li>
+          <li>Sur-corriger par réflexe un ser/estar en réalité correct dans un registre régional ou dialectal particulier</li>
+          <li>Relâcher le contrôle sur des phrases jugées « faciles » précisément parce qu'elles ressemblent le plus au français source</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Une phrase française semble se traduire toute seule tant elle ressemble à l'espagnol attendu. La traduisez-vous directement, ou vérifiez-vous systématiquement chaque mot malgré la perte de temps ?</p>
+        <p class="dctx">Vérifier chaque phrase « évidente » ralentit considérablement le travail ; ne pas vérifier expose précisément au piège que toute la discipline enseigne à éviter — et c'est souvent sur les phrases les plus ressemblantes que le calque se glisse, pas sur les plus difficiles.</p>
+        <div class="dopts">
+          <span>A. Traduire directement les phrases qui semblent évidentes, se concentrer sur les phrases visiblement difficiles</span>
+          <span>B. Vérifier systématiquement chaque phrase, y compris les plus ressemblantes, quitte à perdre du temps</span>
+          <span>C. Vérifier seulement les catégories de pièges connues (ser/estar, por/para, subjonctif, faux amis), pas la phrase entière</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. L'option A est risquée précisément parce que le calque est le plus dangereux là où il est le moins visible — une phrase qui « semble évidente » est souvent celle où le piège ser/estar ou por/para se cache, non celle qui en est exempte. L'option B est la plus sûre mais rarement soutenable sur un texte long sous contrainte de temps réelle. L'option C — un contrôle ciblé sur les catégories de pièges répertoriées, plutôt qu'une relecture intégrale — est en pratique le meilleur compromis : elle suppose d'avoir déjà cartographié ses propres pièges récurrents, ce qui ramène directement au rôle du journal d'erreurs développé en 篇 III.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un traducteur français-espagnol qui traduit vite n'est pas forcément fiable — la vitesse et la proximité des langues sont exactement ce qui laisse passer un calque</li>
+            <li>La vraie compétence à évaluer n'est pas « connaît-il l'espagnol », mais « sait-il repérer où il est en train d'être trompé par la ressemblance »</li>
+            <li>Un traducteur qui nomme ses pièges récurrents (ser/estar, por/para) est plus prévisible, donc plus fiable, qu'un traducteur intuitif sans méthode</li>
+            <li>Faire relire un texte sensible par un locuteur natif reste la seule protection contre un calque qui a échappé à un francophone même expérimenté</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — l'IA de traduction et le piège des langues proches</h5>
+          <ul>
+            <li>Une IA de traduction automatique, entraînée sur d'immenses corpus, gère plutôt bien les pièges fréquents (por/para, ser/estar courants) — la proximité des langues aide aussi son apprentissage statistique</li>
+            <li>Mais elle reste vulnérable au même mécanisme structurel : dans un registre rare, une tournure peu représentée dans ses données peut la faire reproduire une structure française calquée en surface plausible</li>
+            <li>Nuance nécessaire : l'affirmation que « les IA calquent aussi entre langues proches » n'est ni entièrement vraie ni entièrement fausse — elle dépend de la fréquence de la tournure dans les données d'entraînement, pas d'une règle générale</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Thème et version en pratique</h2>
+      <p class="dsub">Chapitres C3 · C4 — le cœur automatisme, sur du texte réel</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois la vigilance posée (篇 I), il ne reste plus de théorie à apprendre : il reste un geste à répéter jusqu'à ce qu'il devienne réflexe, dans les deux sens de traduction. Le thème (français → espagnol) et la version (espagnol → français, courant et spécialisé) mobilisent la même boîte à outils — les points de divergence de C2 — mais chacun dans un sens différent, avec ses propres pièges de production. <b>Comment transformer une compétence de reconnaissance (je vois le piège quand on me le montre) en compétence de production automatique (je l'évite sans y penser, sur un texte neuf) ?</b> Par le volume, la répétition, et un contrôle qui redevient conscient chaque fois qu'une phrase ressemble trop au français.</p>
+
+      <div class="callout amande">
+        <svg viewBox="0 0 40 40" stroke="#4f6b3f"><path d="M20 6 a14 14 0 1 1 -9.9 4.1"/><path d="M20 14 v7 l5 3"/></svg>
+        <div>
+          <h5>Un choix pédagogique, pas une origine datée</h5>
+          <p>Le choix d'un corpus de presse et de textes courants pour le thème et la version, ainsi que la progression du courant vers le spécialisé en C4, sont des <b>choix pragmatiques</b> de la méthode d'enseignement de la traduction — construits, affinés, reproduits, mais jamais attribués à un auteur unique ni à une date précise. Aucune date n'est avancée ici pour ces choix pédagogiques, faute de source vérifiable.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>C3 — Thème FR → ES</p>
+      <p class="mech">Deux pièges de production reviennent sans cesse en thème, au-delà des quatre déjà vus en C2 : l'<b>a personal</b> — une préposition <i>a</i> que l'espagnol impose devant un complément d'objet direct désignant une personne, sans équivalent français — et la construction des verbes de type <i>gustar</i>, qui inverse sujet et objet par rapport au français.</p>
+      <div class="example">
+        <h5>La a personal, absente du français</h5>
+        <p><span class="tag">Calque</span><span class="fr">FR — « Je vois Marie tous les jours. »</span></p>
+        <p class="es" style="text-decoration:line-through;opacity:.7">ES fautif — « Veo María todos los días. »</p>
+        <p class="es">ES correct — « Veo a María todos los días. »</p>
+        <p class="nb">Le français ne marque jamais la personne complément d'objet direct par une préposition ; l'espagnol l'exige presque toujours. Une phrase sans <i>a personal</i> reste compréhensible mais signale immédiatement un texte traduit, jamais rédigé nativement.</p>
+      </div>
+      <div class="example">
+        <h5>Les verbes de type gustar, sujet et objet inversés</h5>
+        <p><span class="tag">Calque</span><span class="fr">FR — « J'aime le chocolat. »</span></p>
+        <p class="es" style="text-decoration:line-through;opacity:.7">ES trop littéral — « Amo el chocolate. » (correct, mais déplace vers un amour fort, presque exclusif)</p>
+        <p class="es">ES idiomatique — « Me gusta el chocolate. »</p>
+        <p class="nb"><i>Gustar</i> se construit comme « plaire » : le chocolat est le sujet grammatical, « me » le complément. Traduire « j'aime » par <i>amo</i> n'est pas grammaticalement faux, mais transpose un registre d'intensité que le français neutre ne portait pas — un déplacement de sens discret, du même ordre que celui étudié en discipline 12 pour la transposition nom/verbe.</p>
+      </div>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Pourquoi l'a personal n'a pas d'équivalent français à chercher — c'est une catégorie grammaticale absente du système source, pas un mot à traduire</li>
+            <li>Que gustar n'est pas un synonyme d'aimer mais un verbe à construction inversée, comme « plaire »</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Réflexe : tout complément d'objet direct désignant une personne précise reçoit systématiquement la préposition a</li>
+            <li>Basculer automatiquement « j'aime + nom » vers « me gusta + nom » (accord au singulier/pluriel du nom, pas de la personne)</li>
+            <li>Une liste personnelle des verbes espagnols à construction inversée (gustar, encantar, doler, faltar), révisée jusqu'à automatisme complet</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>C4 — Version ES → FR, courant et spécialisé</p>
+      <p class="mech">En sens inverse, le danger change de nature : ce n'est plus la production qui piège, mais la reconnaissance d'un faux ami en lecture rapide, ou d'une convention chiffrée qui diffère silencieusement entre les deux langues — particulièrement sensible sur un texte économique, en lien direct avec le lexique de la discipline 14.</p>
+      <div class="example">
+        <h5>Registre courant — un faux ami dangereux</h5>
+        <p><span class="tag">Calque</span><span class="es">ES — « Estoy constipado, no puedo ir a la reunión. »</span></p>
+        <p class="fr" style="text-decoration:line-through;opacity:.7">FR fautif — « Je suis constipé, je ne peux pas venir à la réunion. »</p>
+        <p class="fr">FR correct — « Je suis enrhumé, je ne peux pas venir à la réunion. »</p>
+        <p class="nb"><i>Constipado</i> désigne un rhume en espagnol ; « constipé » en français relève du registre digestif. Le mot existe dans les deux langues, la ressemblance est totale — le sens a pourtant complètement dérivé.</p>
+      </div>
+      <div class="example">
+        <h5>Registre spécialisé — un chiffre, deux échelles à vérifier</h5>
+        <p><span class="tag">Version</span><span class="es">ES — « La empresa registró un incremento de mil millones de euros en su facturación. »</span></p>
+        <p class="fr">FR — « L'entreprise a enregistré une hausse d'un milliard d'euros de son chiffre d'affaires. »</p>
+        <p class="nb"><b>Point d'exactitude :</b> contrairement au piège identifié en discipline 12 pour l'anglais, où <i>billion</i> vaut 10⁹ (échelle courte), le français et l'espagnol partagent tous deux, dans l'usage traditionnel, l'échelle longue : <i>billón</i> espagnol et « billion » français désignent l'un et l'autre 10¹² ; <i>mil millones</i> et « milliard » désignent 10⁹. Cette convergence protège ici d'un piège bien réel en anglais — mais des usages courants, notamment dans la presse économique de certains pays d'Amérique latine sous influence de l'anglais américain, peuvent s'en écarter ; à vérifier au cas par cas selon la source, jamais supposé par réflexe.</p>
+      </div>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Qu'un faux ami reste piégeur précisément parce que la phrase demeure grammaticalement correcte — rien ne signale l'erreur à la lecture</li>
+            <li>Que la convergence FR/ES sur l'échelle des grands nombres n'est pas garantie partout dans le monde hispanophone</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Un corpus personnel de faux amis ES→FR, testé et enrichi à chaque épreuve blanche, distinct de la liste FR→ES de C3</li>
+            <li>Vérification systématique de l'origine géographique d'un texte économique avant de convertir un grand nombre, sans supposer l'échelle par défaut</li>
+            <li>Virgule décimale espagnole et française (1.234,56) — identiques entre les deux langues, à l'inverse du point décimal anglais : un repère de convergence à ne pas re-questionner inutilement</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Espagnol économique et commercial (disc. 14) <i>— le lexique financier partagé, retrouvé sans retraduction en C4 spécialisé</i></span>
+        <span class="linkchip">Traduction anglaise (disc. 12) <i>— même piège de la conversion des grands nombres, résolu ici par convergence plutôt que par vigilance</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Oublier l'a personal en thème sur un complément désignant clairement une personne</li>
+          <li>Traduire gustar par « aimer + sujet je » sans inverser la construction, produisant un espagnol calqué reconnaissable</li>
+          <li>Confondre constipado et « constipé » malgré une révision récente, sous la pression d'un exercice chronométré</li>
+        </ul></div>
+        <div class="ee"><h5>Côté traducteurs professionnels expérimentés</h5><ul>
+          <li>Sous délai serré, laisser passer un faux ami classique (constipado, embarazada) malgré des années de pratique — l'automatisme se fatigue autant que l'attention</li>
+          <li>Supposer par réflexe l'échelle longue pour un chiffre issu d'une source latino-américaine sans vérifier l'origine réelle du document</li>
+          <li>Sur-adapter un registre commercial espagnol en français au point d'atténuer une nuance de fermeté du texte source</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">En version chronométrée, vous butez sur une phrase où « constipado » apparaît dans un contexte ambigu — cela pourrait être le sens courant (rhume) ou, plus rarement, un emploi figuré. Vous doutez, et le temps presse. Que faites-vous ?</p>
+        <p class="dctx">S'arrêter pour trancher avec certitude prend du temps sur une copie chronométrée ; choisir vite au jugé expose à un contresens si le contexte figuré était en réalité voulu.</p>
+        <div class="dopts">
+          <span>A. Choisir rapidement le sens le plus fréquent (rhume) et continuer, quitte à se tromper dans de rares cas</span>
+          <span>B. S'arrêter pour relire tout le paragraphe et lever le doute avant de continuer</span>
+          <span>C. Traduire les deux hypothèses en marge, choisir au moment de la relecture finale</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. L'option A est raisonnable statistiquement — le sens courant domine très largement — mais elle mécanise une décision qui mérite parfois d'être pesée. L'option B protège la justesse mais coûte un temps rarement compressible ailleurs sur la copie. L'option C, garder une trace du doute pour la relecture plutôt que de le trancher sous pression immédiate, rejoint directement le principe du journal d'erreurs développé en 篇 III : noter l'incertitude plutôt que la deviner à la hâte est souvent le geste qui distingue une bonne copie d'une copie seulement rapide.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un thème correct mais non idiomatique (a personal oubliée, gustar mal construit) se repère immédiatement par un lecteur natif — c'est le signal numéro un d'un texte non retravaillé</li>
+            <li>Sur un document financier traduit de l'espagnol, une erreur d'échelle numérique n'est jamais un détail : c'est un risque contractuel direct</li>
+            <li>Le registre courant et le registre spécialisé demandent des réflexes différents — un bon traducteur généraliste n'est pas automatiquement fiable sur un rapport financier</li>
+            <li>Faire vérifier l'origine géographique d'une source avant toute conversion de grand nombre coûte une minute et évite une erreur coûteuse</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — l'IA de traduction et le piège des langues proches</h5>
+          <ul>
+            <li>Une IA de traduction automatique traite en général correctement l'a personal et les verbes de type gustar, ces constructions étant très fréquentes dans les corpus d'entraînement</li>
+            <li>Elle confond encore régulièrement les faux amis à faible fréquence (constipado, pretender) quand le contexte immédiat ne les désambiguïse pas fortement</li>
+            <li>Elle ne vérifie jamais l'origine géographique d'un texte avant de convertir un grand nombre — un arbitrage contextuel qu'elle ne pose simplement pas comme question</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Faux amis, registres et le journal d'erreurs</h2>
+      <p class="dsub">Chapitre C5 — acquisition continue, en parallèle de C3 et C4</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une copie corrigée revient avec les mêmes fautes qu'il y a trois semaines — un ser/estar mal choisi, le même faux ami, la même formule de politesse calquée. <b>Traduire davantage suffit-il à progresser, ou faut-il d'abord comprendre ce qui revient et pourquoi ?</b> C5 n'a pas de créneau fixe dans l'emploi du temps : il s'acquiert en continu, à chaque phrase de C3 et de C4. Deux fronts s'y ajoutent en particulier — le lexique des faux amis, qui ne s'épuise jamais complètement, et le registre, où le calque ne porte plus sur un mot mais sur une convention sociale entière. Un outil concret répond aux deux : le <b>journal d'erreurs</b>.</p>
+
+      <table class="cmp">
+        <caption>Faux amis FR/ES fréquents — le sens qu'on croit, puis le sens réel</caption>
+        <thead><tr><th>Mot espagnol</th><th>Sens qu'un francophone lui prête à tort</th><th>Sens réel</th></tr></thead>
+        <tbody>
+          <tr><td>embarazada</td><td class="bad">« embarrassée »</td><td class="good">enceinte — « embarrassée » se dit avergonzada / violenta</td></tr>
+          <tr><td>constipado</td><td class="bad">« constipé »</td><td class="good">enrhumé — « constipé » se dit estreñido</td></tr>
+          <tr><td>contestar</td><td class="bad">« contester »</td><td class="good">répondre — « contester » se dit discutir / cuestionar</td></tr>
+          <tr><td>pretender</td><td class="bad">« prétendre » (affirmer sans preuve)</td><td class="good">avoir l'intention de, chercher à — « prétendre » se dit afirmar / alegar</td></tr>
+          <tr><td>largo</td><td class="bad">« large »</td><td class="good">long — « large » se dit ancho</td></tr>
+          <tr><td>éxito</td><td class="bad">confondu avec « exit » (sortie)</td><td class="good">succès, réussite — « sortie » se dit salida</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Le registre : au-delà du mot juste</p>
+      <p class="mech">Un faux ami piège un mot ; un mauvais registre piège une phrase entière, parfois un texte entier, sans qu'aucun mot pris isolément ne soit fautif. Une formule de politesse en est l'exemple le plus net.</p>
+      <div class="example">
+        <h5>Une formule de politesse commerciale, impossible à calquer</h5>
+        <p><span class="tag">Calque</span><span class="fr">FR — « Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées. »</span></p>
+        <p class="es" style="text-decoration:line-through;opacity:.7">ES calqué — une formule mot à mot, artificiellement lourde et sans équivalent d'usage réel</p>
+        <p class="es">ES correct — « Reciba un cordial saludo » / « Le saluda atentamente. »</p>
+        <p class="nb">Aucun mot-à-mot ne fonctionne ici : la convention sociale française de la formule de politesse commerciale n'a pas de contrepartie littérale en espagnol, où les formules restent plus courtes. C'est un cas pur d'<b>équivalence</b> — le sixième des sept procédés de Vinay &amp; Darbelnet, déjà rencontré en discipline 12 : remplacer une expression figée entière par une autre, au même effet, sans chercher la correspondance mot à mot.</p>
+      </div>
+
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre</h5>
+          <ul>
+            <li>Qu'un registre ne se traduit jamais mot à mot — c'est une convention sociale entière à remplacer par son équivalent d'usage</li>
+            <li>Que le tutoiement (tú) et le vouvoiement (usted) ne se répartissent pas comme en français — l'usted reste plus rare dans une bonne partie du monde hispanophone commercial qu'un « vous » français par défaut</li>
+          </ul>
+        </div>
+        <div class="m">
+          <h5>À automatiser</h5>
+          <ul>
+            <li>Un répertoire personnel de formules de registre (ouverture, clôture, relance) en équivalence, jamais en traduction littérale</li>
+            <li>Vérification systématique du registre attendu (courrier commercial, presse, oral courant) avant de commencer, pas en cours de traduction</li>
+            <li>Un corpus de faux amis enrichi à chaque copie corrigée, classé par fréquence d'erreur personnelle plutôt que par ordre alphabétique</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme du journal d'erreurs</p>
+      <div class="chain">
+        <span class="node">Erreur commise sur une copie</span><span class="arrow">→</span>
+        <span class="node">Notée : date, type de piège, correction</span><span class="arrow">→</span>
+        <span class="node">Classée par catégorie (ser/estar, por/para, faux ami, subjonctif, registre)</span><span class="arrow">→</span>
+        <span class="node">Relue avant chaque nouvel exercice</span><span class="arrow">→</span>
+        <span class="node">Récurrence mesurable en baisse</span>
+      </div>
+      <p class="mech">Le point souvent négligé : un journal d'erreurs n'a de valeur que <b>classé</b>, pas seulement tenu. Une liste chronologique de fautes ne montre rien ; un classement par catégorie révèle en revanche, au bout de quelques semaines, où se concentre réellement l'effort à fournir — souvent deux ou trois catégories, pas la totalité du programme. C'est cette concentration qui rend le journal plus rentable, à temps égal, qu'un volume supplémentaire de texte neuf traduit sans retour sur les erreurs passées.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Traduction anglaise, thème &amp; version (disc. 12) <i>— l'équivalence comme septième procédé, ici seule issue possible pour le registre</i></span>
+        <span class="linkchip">Rédaction universitaire et recherche (disc. 10) <i>— la relecture méthodique, réutilisée ici comme classement plutôt que simple correction</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Tenir un journal d'erreurs chronologique sans le classer par catégorie, le rendant inutile pour cibler l'effort</li>
+          <li>Traduire une formule de politesse mot à mot, produisant une lourdeur immédiatement repérable par un lecteur natif</li>
+          <li>Négliger le registre oral/écrit d'un texte source avant de choisir tú ou usted, par réflexe plutôt que par lecture du contexte</li>
+        </ul></div>
+        <div class="ee"><h5>Côté traducteurs professionnels expérimentés</h5><ul>
+          <li>Considérer, à tort, qu'un journal d'erreurs n'est utile qu'en formation, et cesser de le tenir une fois en poste — alors que les erreurs récurrentes ne disparaissent pas avec l'expérience seule</li>
+          <li>Sur-adapter un registre au point de perdre une nuance de fermeté ou de déférence volontairement présente dans le texte source</li>
+          <li>Sous pression de volume, reproduire un faux ami déjà identifié par le passé, faute d'un outil de rappel actif</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme central — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous disposez d'une heure libre avant un examen blanc. Vaut-il mieux traduire un texte neuf supplémentaire, ou relire et classer votre journal d'erreurs des trois dernières copies corrigées ?</p>
+        <p class="dctx">Traduire un texte neuf expose à du vocabulaire et des tournures inédites, utiles en soi ; relire le journal ne produit aucune ligne nouvelle mais cible directement des erreurs déjà commises, donc mesurables.</p>
+        <div class="dopts">
+          <span>A. Traduire un texte neuf — plus de volume, plus d'exposition à la langue</span>
+          <span>B. Relire et classer le journal d'erreurs — cibler ce qui revient, sans produire de texte neuf</span>
+          <span>C. Partager l'heure en deux — trente minutes de chaque</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique — la réponse dépend de l'état réel des erreurs de l'étudiante, pas d'un principe général. Si les mêmes deux ou trois catégories reviennent copie après copie (par exemple ser/estar et un jeu de faux amis précis), l'option B a un rendement marginal plus élevé : corriger une erreur identifiée et récurrente vaut souvent plus, point par point, que produire un volume supplémentaire qui laissera la même erreur intacte. Si au contraire les erreurs se dispersent sans motif clair — signe que le socle est déjà correct et que le manque vient plutôt du vocabulaire ou de la vitesse — l'option A devient plus rentable. L'option C, un partage systématique, est une solution par défaut raisonnable en l'absence de diagnostic clair, mais elle n'est optimale dans aucun des deux cas extrêmes : elle est un compromis d'ignorance, pas une stratégie choisie. Le vrai enseignement du dilemme n'est donc pas « lequel choisir », mais que ce choix ne devrait jamais se faire sans avoir d'abord regardé ce que le journal, justement, contient.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Face à un traducteur français-espagnol à évaluer, demander à voir son propre journal d'erreurs en dit plus sur sa fiabilité qu'un volume de pages déjà traduites</li>
+            <li>Un professionnel qui connaît ses trois pièges récurrents personnels est plus prévisible — donc plus employable sur un texte sensible — qu'un professionnel qui traduit vite sans se relire par catégorie</li>
+            <li>Le registre mal calibré (formule de politesse, niveau de tú/usted) coûte une relation commerciale plus sûrement qu'une simple faute de grammaire isolée</li>
+            <li>Un service traduction qui mutualise les journaux d'erreurs de son équipe transforme une compétence individuelle en mémoire collective de l'entreprise</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — l'IA de traduction et le piège des langues proches</h5>
+          <ul>
+            <li>Une IA de traduction ne tient pas de journal d'erreurs personnel — chaque session repart du même modèle, sans mémoire ciblée de ses propres pièges récurrents entre deux traductions</li>
+            <li>Sur le registre, elle produit souvent une formule plausible mais générique, sans arbitrer le degré de déférence ou de fermeté réellement voulu par l'auteur du texte source</li>
+            <li>Nuance à garder : une IA récente, correctement invitée à vérifier son propre résultat, peut détecter certains de ses calques a posteriori — mais elle ne le fait pas spontanément comme le fait un traducteur qui a appris, par une erreur passée, à se méfier d'un point précis</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Le calque : praticable donc dangereux entre langues sœurs<i>C1·C3·C4</i></span>
+        <span class="sp">Ser/estar, por/para : choisir, jamais transposer<i>C2·C3·C4</i></span>
+        <span class="sp">Le sens avant le mot<i>C1·C4·C5</i></span>
+        <span class="sp">Le journal d'erreurs, mémoire du progrès<i>C5</i></span>
+        <span class="sp">L'équivalence plutôt que le calque, pour le registre<i>C5</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="14-espagnol-economique-commercial.html">← Espagnol économique et comme…</a>
@@ -63,5 +802,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
