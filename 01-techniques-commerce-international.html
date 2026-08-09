@@ -8,8 +8,205 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#c14a72;--dom-lt:#eb9ab8}</style>
+<style>
+/* Palette — rose / lavande / pervenche : les couleurs du commerce comme
+   circulation — le rose et la lavande évoquent la marchandise (chaleur,
+   matière), le pervenche l'argent et le droit qui la suivent à distance
+   sans jamais s'y mêler. Identité fondatrice de la série (discipline 01). */
+:root{
+  --p1:#d9689a; --p1-lt:#f0b9d2;
+  --p2:#b79bd6; --p2-lt:#d8c6ec;
+  --p3:#7f9bd8; --p3-dk:#4f6db6;
+  --ink:#3d2e4a; --ink-soft:#7d5f8e;
+  --paper:rgba(255,255,255,.64); --paper-hi:rgba(255,255,255,.86);
+  --line:rgba(183,155,214,.45); --or:#e0a34e; --vert:#4f8f6e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 12% -4%, #f9d9e8 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 20%, #aec0ea 0%, transparent 52%),
+    radial-gradient(1000px 720px at 34% 108%, #f3cfe2 0%, transparent 58%),
+    linear-gradient(158deg,#f3dbea 0%, #ddccec 42%, #c3cdec 72%, #ecd2e4 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p3-dk);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(217,104,154,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(95,66,112,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:190px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#5f4270;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p2)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,#9db4e4,var(--p3-dk))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p3-dk)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p3-dk)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:460px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p3-dk);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(217,104,154,.26);border-radius:24px;box-shadow:0 16px 46px rgba(95,66,112,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#5f4270;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(127,155,216,.09);
+  border:1px solid rgba(127,155,216,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p3-dk);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p2);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(217,104,154,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#3f7a66;
+  padding:5px 12px;border-radius:14px;background:rgba(79,143,110,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(224,163,78,.1);border:1px solid rgba(224,163,78,.5)}
+.errors .ee{background:rgba(127,155,216,.1);border:1px solid rgba(127,155,216,.45)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--or)} .errors .ee h5{color:var(--p3-dk)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#4a3a5c}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(216,198,236,.14)}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#5f4270;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(183,155,214,.12);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p2)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p3-dk);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(216,198,236,.22);border:1px solid var(--p2)}
+.helix{background:rgba(63,90,160,.09);border:1px solid var(--p3)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#5f4270} .helix h5{color:var(--p3-dk)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p2);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p3-dk)}
+
+/* diagramme arbre Incoterms */
+.tree{margin:16px 0;overflow-x:auto}
+.tree svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#3f7a66;
+  padding:5px 12px;border-radius:14px;background:rgba(79,143,110,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,50 +215,501 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d01">
-  <div class="tab">篇 I</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 01</p>
-    <h3>Techniques du Commerce International</h3>
-    <p class="dmeta">S5 + S6 · Isabelle Noël · TCI 1 (24h · 3 ECTS) + TCI 2 (2 ECTS)</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 190" role="img" aria-label="Un navire porte-conteneurs relié par une route en pointillés à un port, avec un document et une pièce flottant séparément au-dessus de la route">
+      <defs>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#b7c8ef"/><stop offset="1" stop-color="#93a9e6"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 150 Q170 130 340 150 T680 150" fill="none" stroke="#9db4e4" stroke-width="2" opacity=".6"/>
+      <path d="M0 165 Q170 150 340 165 T680 165 V190 H0 Z" fill="url(#sea)" opacity=".5"/>
+      <!-- navire -->
+      <g stroke="#4f6db6" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M60 148 L86 148 L94 128 L200 128 L206 148 L232 148 L220 162 L74 162 Z"/>
+        <rect x="104" y="98" width="20" height="30" rx="2"/>
+        <rect x="128" y="90" width="20" height="38" rx="2"/>
+        <rect x="152" y="98" width="20" height="30" rx="2"/>
+        <line x1="176" y1="128" x2="176" y2="80"/>
+      </g>
+      <!-- route pointillée -->
+      <path d="M232 140 C 320 90, 420 200, 520 120" fill="none" stroke="#d9689a" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
+      <!-- document flottant -->
+      <g transform="translate(330,68)" stroke="#b79bd6" stroke-width="1.6" fill="#fff" fill-opacity=".6">
+        <rect x="0" y="0" width="30" height="38" rx="3"/>
+        <line x1="6" y1="10" x2="24" y2="10"/><line x1="6" y1="17" x2="24" y2="17"/><line x1="6" y1="24" x2="18" y2="24"/>
+      </g>
+      <!-- pièce flottante -->
+      <g transform="translate(410,150)" stroke="#e0a34e" stroke-width="1.6" fill="#fdf3e2">
+        <circle r="16"/><text x="0" y="5" text-anchor="middle" font-family="Josefin Sans" font-size="14" fill="#c98a3a" stroke="none">$</text>
+      </g>
+      <!-- port d'arrivée -->
+      <g stroke="#4f6db6" stroke-width="2" fill="none" stroke-linejoin="round">
+        <rect x="560" y="90" width="70" height="58" rx="2"/>
+        <path d="M560 90 L595 62 L630 90"/>
+        <line x1="595" y1="62" x2="595" y2="42"/>
+        <path d="M595 42 L610 48 L595 54 Z" fill="#d9689a" stroke="none"/>
+      </g>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Techniques du Commerce International</h1>
+    <p class="gen-open">Comment faire circuler une marchandise et un paiement entre deux parties qui <b>ne partagent ni droit, ni monnaie, ni tribunal, ni confiance</b> — sachant que la marchandise et l'argent ne voyagent jamais ensemble ? C'est le problème que toute la discipline résout, couche par couche : d'abord qui répond de quoi et jusqu'où (Incoterms), puis comment le prouver sans être présent (transport et connaissement), puis comment payer sans se voir (crédit documentaire), enfin comment un État taxe ce qu'il ne peut pas inspecter en entier (douane) et comment on répare ce qui casse en chemin (assurance).</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:85%"></span><span class="au" style="width:15%"></span></span>
       <span class="crd">Système <b class="s">85%</b> · Automatisme <b class="a">15%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S5 + S6 · Isabelle Noël · TCI 1 (24h · 3 ECTS) + TCI 2 (2 ECTS)</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Comment faire circuler une marchandise et un paiement entre deux parties qui <b>ne partagent ni droit, ni monnaie, ni tribunal, ni confiance</b> — sachant que la marchandise et l'argent ne voyagent jamais ensemble ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>Le système d'échange et ses acteurs</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · <b>Ouvre :</b> tous les chapitres suivants</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>Les Incoterms 2020</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · <b>Ouvre :</b> C3, C4, C5, C6, C7</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>Le transport international &amp; la conteneurisation</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1, C2</b></span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Le connaissement et les documents de transport</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3</b> · <b>Ouvre :</b> C6 (garantie bancaire), C5 (déclaration)</span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>La douane : espèce, origine, valeur, régimes</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C2</b> — la valeur CIF est l'assiette</span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Moyens de paiement &amp; crédit documentaire</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C4</b> · dépendance forte au connaissement</span></div></li>
-<li><span class="cnum">C7</span><div class="cbody"><b>L'assurance transport &amp; la gestion du risque</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C3, C4</b> — comble les plafonds de responsabilité</span></div></li>
-<li><span class="cnum">C8</span><div class="cbody"><b>Échanges intracommunautaires &amp; régimes UE</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C5</b> — se définit par contraste avec le régime pays tiers</span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Socle</div><div class="tc"><span class="node f">C1 · Acteurs &amp; flux</span><span class="ar">→</span><span class="node f">C2 · Incoterms</span></div></div>
-<div class="flow"><span class="fdot"></span>l'Incoterm détermine à la fois le document, la valeur taxable et le risque assuré<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Noyau</div><div class="tc"><span class="node s">C3 · Transport</span><span class="ar">→</span><span class="node f">C4 · Connaissement</span><span class="ar">→</span><span class="node s">C6 · Crédit documentaire</span></div></div>
-<div class="tier"><div class="tl">Parallèle</div><div class="tc"><span class="node s">C5 · Douane</span><span class="ar">·</span><span class="node s">C7 · Assurance</span><span class="ar">·</span><span class="node s">C8 · Intra-UE</span></div></div>
-<div class="flow"><span class="fdot"></span>tout converge vers une seule opération complète<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Synthèse</div><div class="tc"><span class="node x">Monter une opération export de bout en bout</span></div></div>
-</div>
-    <p class="note">C2 et C4 sont les deux verrous : sans eux, C5, C6 et C7 restent des listes à mémoriser. Avec eux, ils se déduisent.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Transfert du risque<i>C2·C3·C4·C6·C7</i></span><span class="sp">Valeur CIF<i>C2·C5·C6</i></span><span class="sp">Document = preuve = valeur<i>C4·C5·C6</i></span><span class="sp">Désynchronisation des flux<i>C1·C6</i></span><span class="sp">Qui paie quand ça tourne mal<i>tous</i></span></div>
-
-    <p class="blockt"><span class="bdot"></span>Compréhension / automatisme</p><div class="split"><div class="u"><h5>À comprendre</h5><ul><li>Pourquoi le risque et le coût se séparent dans la famille C</li><li>Pourquoi seul le connaissement maritime est un titre</li><li>Pourquoi les banques ne regardent que des documents</li></ul></div><div class="m"><h5>À automatiser</h5><ul><li>Les 11 sigles ↔ point de transfert du risque</li><li>Mode de transport ↔ document correspondant</li><li>Calcul valeur en douane → droits → TVA</li><li>Conventions et leurs dates</li></ul></div></div>
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="14" width="28" height="20" rx="2"/><path d="M6 14 L20 6 L34 14"/><line x1="20" y1="20" x2="20" y2="34"/></svg><b>Exportateur</b><span>vend, expédie</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="6"/><path d="M8 34 C8 24 32 24 32 34"/></svg><b>Importateur</b><span>achète, réceptionne</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="4" y="18" width="22" height="12" rx="1"/><path d="M26 22 h6 l4 6 v2 h-10 z"/><circle cx="12" cy="32" r="2.6"/><circle cx="28" cy="32" r="2.6"/></svg><b>Transporteur</b><span>déplace le bien</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="22" rx="2"/><path d="M6 16 h28"/><path d="M14 22 h4 M22 22 h4"/></svg><b>Banque</b><span>déplace l'argent</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M8 34 L20 8 L32 34 Z"/><line x1="14" y1="24" x2="26" y2="24"/></svg><b>Douane</b><span>taxe et contrôle</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M20 6 C10 10 8 14 8 20 C8 28 14 32 20 34 C26 32 32 28 32 20 C32 14 30 10 20 6 Z"/><path d="M20 14 v10 M15 19 h10"/></svg><b>Assureur</b><span>couvre le risque</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des huit chapitres</p>
+    <svg class="tl-svg" viewBox="0 0 900 170" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 100 C 120 50, 220 50, 320 100 S 520 150, 620 100 S 820 50, 880 100" fill="none" stroke="#d8c6ec" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(20,100)"><circle r="17" fill="#e0a34e" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="36" text-anchor="middle">Acteurs</text></g>
+        <!-- C2 -->
+        <g transform="translate(160,55)"><circle r="17" fill="#e0a34e" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Incoterms</text></g>
+        <!-- C3 -->
+        <g transform="translate(320,100)"><circle r="15" fill="#7f9bd8" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="34" text-anchor="middle">Transport</text></g>
+        <!-- C4 -->
+        <g transform="translate(460,148)"><circle r="17" fill="#e0a34e" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Connaissement</text></g>
+        <!-- C5 -->
+        <g transform="translate(620,100)"><circle r="15" fill="#7f9bd8" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="34" text-anchor="middle">Douane</text></g>
+        <!-- C6 -->
+        <g transform="translate(760,55)"><circle r="15" fill="#7f9bd8" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-22" text-anchor="middle">Crédit doc.</text></g>
+        <!-- C7/C8 clustered near end -->
+        <g transform="translate(880,100)"><circle r="15" fill="#d9689a" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">7·8</text><text class="tl-med" x="-10" y="34" text-anchor="middle">Assur. · UE</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le système d'échange et les Incoterms</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Deux entreprises signent un contrat de vente internationale. La marchandise part d'une usine, traverse plusieurs pays, plusieurs transporteurs, parfois plusieurs semaines de mer — et pendant tout ce trajet, quelqu'un doit répondre de la question suivante : <b>si la caisse tombe à l'eau au large de Gibraltar, qui perd de l'argent, et qui doit payer le transport jusque-là ?</b> Sans réponse écrite et standardisée, chaque contrat rouvrirait un débat juridique différent, dans une langue différente, sous un droit différent. La discipline commence donc par résoudre non pas « comment transporter » mais « comment répartir la responsabilité avant même que le camion ne parte ».</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>La Chambre de Commerce Internationale (ICC), fondée à Paris en 1919, publie les premiers <b>Incoterms en 1936</b> pour mettre fin à des décennies de litiges où chaque place portuaire interprétait différemment des termes comme « FOB » ou « CIF ». Révisés en <span class="yr">1953, 1967, 1976, 1980, 1990, 2000, 2010</span> et <span class="yr">2020</span>, ils n'ont pas force de loi : ils s'appliquent seulement si le contrat les cite explicitement. Sans eux, chaque vente internationale redeviendrait un contrat sur-mesure, plus lent et plus coûteux à négocier — ce qui explique pourquoi la quasi-totalité des contrats internationaux les utilisent malgré leur nature purement contractuelle.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Chaque Incoterm répond en réalité à <b>trois questions à la fois</b>, et c'est leur enchaînement qui produit tout le reste de la discipline :</p>
+      <div class="chain">
+        <span class="node">Qui organise le transport ?</span><span class="arrow">→</span>
+        <span class="node">Qui paie jusqu'où ?</span><span class="arrow">→</span>
+        <span class="node">À quel point précis le risque bascule-t-il ?</span>
+      </div>
+      <p class="mech">Ce dernier point — le <b>point de transfert du risque</b> — est la clé de voûte : c'est lui qui détermine ensuite quel document prouve la remise (C4), quelle valeur sert de base à la douane (C5), quel montant la banque doit garantir (C6) et jusqu'où l'assurance doit courir (C7). Un seul choix d'Incoterm, fait en une ligne de contrat, verrouille ainsi cinq chapitres en aval.</p>
+
+      <div class="tree">
+        <svg viewBox="0 0 720 210" width="100%" style="max-width:720px">
+          <g font-family="Josefin Sans" font-size="11" fill="#3d2e4a">
+            <text x="360" y="16" text-anchor="middle" font-size="10" letter-spacing="2" fill="#7d5f8e">LES 4 FAMILLES — DU MOINS AU PLUS D'OBLIGATIONS POUR LE VENDEUR</text>
+            <line x1="60" y1="34" x2="660" y2="34" stroke="#b79bd6" stroke-width="2"/>
+            <!-- E -->
+            <g transform="translate(90,34)"><line x1="0" y1="0" x2="0" y2="40" stroke="#b79bd6"/><circle r="6" fill="#f0b9d2"/><rect x="-46" y="46" width="92" height="60" rx="10" fill="#fff" stroke="#d9689a"/><text x="0" y="64" text-anchor="middle" font-weight="600">EXW</text><text x="0" y="80" text-anchor="middle" font-size="9">Départ usine</text><text x="0" y="94" text-anchor="middle" font-size="9">risque : à l'usine</text></g>
+            <!-- F -->
+            <g transform="translate(280,34)"><line x1="0" y1="0" x2="0" y2="40" stroke="#b79bd6"/><circle r="6" fill="#f0b9d2"/><rect x="-52" y="46" width="104" height="60" rx="10" fill="#fff" stroke="#d9689a"/><text x="0" y="64" text-anchor="middle" font-weight="600">FCA·FAS·FOB</text><text x="0" y="80" text-anchor="middle" font-size="9">Transport principal</text><text x="0" y="94" text-anchor="middle" font-size="9">non payé par vendeur</text></g>
+            <!-- C -->
+            <g transform="translate(470,34)"><line x1="0" y1="0" x2="0" y2="40" stroke="#7f9bd8"/><circle r="6" fill="#9db4e4"/><rect x="-52" y="46" width="104" height="60" rx="10" fill="#fff" stroke="#4f6db6"/><text x="0" y="60" text-anchor="middle" font-weight="600">CPT·CIP</text><text x="0" y="73" text-anchor="middle" font-weight="600">CFR·CIF</text><text x="0" y="90" text-anchor="middle" font-size="9">port payé, risque tôt</text></g>
+            <!-- D -->
+            <g transform="translate(650,34)"><line x1="0" y1="0" x2="0" y2="40" stroke="#4f6db6"/><circle r="6" fill="#4f6db6"/><rect x="-56" y="46" width="112" height="60" rx="10" fill="#fff" stroke="#4f6db6"/><text x="0" y="60" text-anchor="middle" font-weight="600" font-size="10">DAP·DPU·DDP</text><text x="0" y="76" text-anchor="middle" font-size="9">Rendu à destination</text><text x="0" y="90" text-anchor="middle" font-size="9">risque : chez l'acheteur</text></g>
+          </g>
+        </svg>
+      </div>
+      <p class="note"><b>Point d'exactitude :</b> depuis l'édition 2020, le terme <b>DAT</b> (« Delivered at Terminal ») a disparu au profit de <b>DPU</b> (« Delivered at Place Unloaded »), qui permet la livraison déchargée en tout lieu et non plus seulement dans un terminal. Une bibliographie citant encore les « Incoterms 2010 » ou « DAT » travaille sur une édition dépassée.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une PME face au choix</h5>
+        <p><b>Manufacture Grandville</b>, fabricant de meubles en bois massif dans les Vosges (30 salariés), reçoit une commande d'un négociant à Tunis. En <b>EXW</b>, Grandville se contente d'ouvrir les portes de son atelier — mais le négociant tunisien doit alors organiser lui-même le camion, le dédouanement export français (que Grandville, sur place, ferait bien mieux) et l'assurance dès la sortie d'usine : un cauchemar logistique pour un acheteur situé à 1 500 km. En <b>FCA</b>, Grandville livre le camion chez le transporteur désigné et gère l'export — un compromis courant. En <b>CIF</b>, Grandville paie le fret maritime et une assurance minimale jusqu'au port de Tunis, mais le risque bascule dès la mise à bord au Havre : si le conteneur tombe à l'eau après cet instant, c'est le négociant tunisien qui doit actionner l'assurance, pas Grandville — un point que beaucoup d'entreprises découvrent trop tard.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Droit des contrats <i>— le contrat de vente qui cite l'Incoterm</i></span>
+        <span class="linkchip">Comptabilité générale <i>— la valeur CIF sert de base à l'écriture d'achat</i></span>
+        <span class="linkchip">Gestion financière <i>— le décalage de trésorerie entre paiement fournisseur et encaissement client</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Confondre transfert du <b>risque</b> et transfert de <b>propriété</b> — deux notions juridiquement distinctes, la seconde relevant du droit des contrats, pas des Incoterms</li>
+          <li>Croire que l'Incoterm dit qui est propriétaire de la marchandise</li>
+          <li>Oublier que CIF/CFR n'imposent le paiement du fret que jusqu'au port, jamais la garde du risque jusque-là</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Utiliser un Incoterm maritime (FOB, CIF) pour un envoi par conteneur groupé, où FCA/CIP conviennent mieux</li>
+          <li>Citer « Incoterms » sans millésime dans le contrat, ouvrant un flou sur l'édition applicable</li>
+          <li>Sous-assurer une expédition CIP en pensant que la couverture minimale (Clause C) suffit encore — elle ne suffit plus depuis 2020 pour ce terme précis</li>
+        </ul></div>
+      </div>
+
+      <table class="cmp">
+        <caption>Comparaison des quatre familles — ce qui bascule, et quand</caption>
+        <thead><tr><th>Famille</th><th>Transport organisé par</th><th>Risque transféré</th><th>Cas type</th></tr></thead>
+        <tbody>
+          <tr><td>E — EXW</td><td>Acheteur, en totalité</td><td>À la sortie d'usine</td><td>Acheteur expérimenté, logistique intégrée</td></tr>
+          <tr><td>F — FCA, FAS, FOB</td><td>Acheteur, principal</td><td>À la remise au transporteur / bord du navire</td><td>Vendeur gère l'export, pas le fret international</td></tr>
+          <tr><td>C — CPT, CIP, CFR, CIF</td><td>Vendeur, mais risque part tôt</td><td>Comme la famille F — le vendeur paie plus qu'il ne risque</td><td>Vendeur veut offrir un prix « rendu » sans porter le risque long</td></tr>
+          <tr><td>D — DAP, DPU, DDP</td><td>Vendeur, en totalité</td><td>À l'arrivée chez l'acheteur</td><td>Vendeur maîtrise toute la chaîne, marché où le service est un argument</td></tr>
+        </tbody>
+      </table>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous dirigez Grandville. Le négociant tunisien insiste pour un prix « tout compris, à sa porte ». Que choisissez-vous ?</p>
+        <p class="dctx">Vous n'avez jamais livré en Tunisie, vous ne connaissez pas de transitaire local fiable, mais le client menace de commander ailleurs si vous refusez le DDP.</p>
+        <div class="dopts">
+          <span>A. Accepter le DDP pour ne pas perdre la commande</span>
+          <span>B. Refuser et rester en FCA, quitte à perdre la vente</span>
+          <span>C. Proposer un CIF, compromis intermédiaire</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. Le <b>DDP</b> engage Grandville à dédouaner à l'import en Tunisie — un régime douanier qu'elle ne maîtrise pas, avec un risque de blocage en douane qui retomberait entièrement sur elle. Le <b>CIF</b> est souvent présenté comme le compromis « sûr », mais il ne l'est qu'à moitié : il rassure le client sur le prix affiché, tout en laissant le risque basculer dès la mise à bord — ce qui peut créer un malentendu commercial si le client croit, à tort, être couvert jusqu'à sa porte.</p>
+          <p>Une director avisée regarde d'abord si Grandville dispose d'un partenaire douanier tunisien fiable avant tout DDP ; à défaut, un <b>FCA</b> assorti d'un devis de transport clé-en-main sous-traité à un transitaire (le négociant paie ce service, mais Grandville garde la main sur le choix du prestataire) peut satisfaire le client sans exposer l'entreprise à un régime qu'elle ne connaît pas.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Un Incoterm n'est pas une clause administrative, c'est une décision de trésorerie et de risque prise en une ligne</li>
+            <li>Chaque niveau d'engagement supplémentaire (E→F→C→D) doit se refacturer dans le prix, sinon c'est une marge cachée qui disparaît</li>
+            <li>Le vrai coût du DDP n'est pas le transport, c'est l'exposition à un régime douanier étranger mal maîtrisé</li>
+            <li>Un contrat qui ne cite pas le millésime des Incoterms est un contrat qui n'a pas été relu par un juriste</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Recommandation automatique de l'Incoterm optimal selon la maturité logistique réelle de l'acheteur, pas seulement sa demande</li>
+            <li>Simulation instantanée de la re-facturation de marge selon le niveau d'engagement choisi</li>
+            <li>Alerte contractuelle quand un Incoterm est cité sans millésime ou avec une édition obsolète</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>Transport, conteneurisation et connaissement</h2>
+      <p class="dsub">Chapitres C3 · C4</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois le risque situé (篇 I), reste un problème matériel : la marchandise part sur un navire pour trois à cinq semaines, pendant lesquelles l'exportateur, l'importateur et leurs deux banques ne la voient jamais. <b>Comment prouver, à distance et sans se déplacer, qu'une marchandise précise a bien été chargée, en bon état, et qui a le droit de la récupérer à l'arrivée ?</b> Un simple bon de livraison ne suffit pas : il ne vaut que comme preuve, pas comme titre transférable. Il fallait un document qui soit à la fois une preuve, un contrat, et une clé — cessible à un tiers sans jamais toucher la marchandise elle-même.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Le <b>connaissement</b> (bill of lading) existe sous une forme rudimentaire dans le commerce méditerranéen médiéval, mais sa reconnaissance comme <b>titre négociable</b> — transférable par simple endossement, comme un chèque — vient du droit anglais, consacrée par l'arrêt <b>Lickbarrow v. Mason (1794)</b>. Le cadre international moderne date des <b>Règles de La Haye (1924)</b>, révisées par le <b>Protocole de Visby (1968)</b> ; les Règles de Hambourg (1978) et les Règles de Rotterdam (signées en 2008, non encore entrées en vigueur faute de ratifications suffisantes) proposent des régimes alternatifs, coexistant sans avoir remplacé Hague-Visby. Sans ce statut de titre négociable, il faudrait que l'acheteur soit physiquement présent au port pour réceptionner sa propre marchandise.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background:rgba(224,163,78,.09);border-color:rgba(224,163,78,.5)">
+        <svg viewBox="0 0 40 40" stroke="#c98a3a"><rect x="6" y="18" width="14" height="10"/><rect x="20" y="14" width="14" height="14"/><rect x="6" y="10" width="14" height="6"/><line x1="20" y1="24" x2="34" y2="24"/></svg>
+        <div>
+          <h5>Un basculement technique : la conteneurisation</h5>
+          <p><b>Malcolm McLean</b> affrète le premier porte-conteneurs, l'<i>Ideal-X</i>, pour un trajet Newark–Houston le <span class="yr">26 avril 1956</span>. En standardisant la boîte plutôt que la manutention pièce par pièce, il divise le coût de chargement d'un navire par un facteur d'environ vingt. C'est cette standardisation — pas le connaissement — qui rend le commerce de masse à bas coût possible ; le connaissement, lui, ne fait que documenter juridiquement ce que le conteneur a rendu physiquement possible.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Marchandise chargée à bord</span><span class="arrow">→</span>
+        <span class="node">Capitaine signe le connaissement</span><span class="arrow">→</span>
+        <span class="node">Document envoyé (souvent via la banque)</span><span class="arrow">→</span>
+        <span class="node">Seul le porteur du document original récupère le fret</span>
+      </div>
+      <p class="mech">C'est ce dernier maillon qui verrouille tout : la compagnie maritime ne livre <b>qu'à celui qui présente l'original</b>. Si l'acheteur n'a pas payé et que la banque retient le document, la marchandise reste bloquée au port — c'est ce mécanisme, et non un tribunal, qui protège le vendeur impayé. C'est aussi pour cela que le connaissement conditionne directement le crédit documentaire (篇 III) : la banque n'accepte de payer que contre la remise de ce document précis.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un conteneur de pièces mécaniques</h5>
+        <p>Un fabricant de pièces automobiles au Havre expédie un conteneur complet vers Santos (Brésil). Le connaissement émis liste précisément le nombre de caisses, leur poids, et porte la mention « clean on board » — sans réserve du capitaine sur l'état apparent des marchandises. Si le capitaine avait noté « emballage endommagé » sur le document (un connaissement « clausé »), la banque brésilienne aurait pu refuser de payer au titre du crédit documentaire, l'écart entre marchandise annoncée et marchandise reçue n'étant plus garanti.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Crédit documentaire <i>— la banque ne paie que contre le connaissement conforme</i></span>
+        <span class="linkchip">Assurance transport <i>— la mention « clean on board » conditionne l'indemnisation</i></span>
+        <span class="linkchip">Droit des contrats <i>— le connaissement matérialise l'exécution du contrat de vente</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que le connaissement est un simple accusé de réception, pas un titre de propriété négociable</li>
+          <li>Ignorer la différence entre connaissement « net » et « clausé »</li>
+          <li>Confondre transporteur maritime (relève du connaissement) et transitaire (organise, ne transporte pas toujours lui-même)</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Accepter un connaissement clausé sans en avertir la banque, bloquant ensuite le paiement du crédit documentaire</li>
+          <li>Perdre l'original du connaissement, immobilisant la marchandise au port faute de duplicata rapide</li>
+          <li>Sous-estimer le délai d'acheminement du document papier par rapport au navire, qui peut arriver avant lui</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Le capitaine propose de « clauser » légèrement le connaissement pour deux palettes légèrement cabossées, non structurellement affectées. Acceptez-vous ?</p>
+        <p class="dctx">Refuser peut retarder le départ du navire ; accepter peut bloquer le paiement à réception par la banque de l'acheteur, qui exige des documents « nets ».</p>
+        <div class="dopts">
+          <span>A. Accepter la clause, régler le litige qualité en direct avec le client plus tard</span>
+          <span>B. Refuser et exiger un nouvel emballage avant chargement</span>
+          <span>C. Négocier une clause limitée + lettre de garantie bancaire (letter of indemnity) au transporteur</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Un connaissement clausé, même pour un dommage mineur, peut suffire à faire tomber un crédit documentaire qui exige des documents « clean » — la banque n'apprécie pas la gravité du dommage, elle vérifie une conformité littérale. La <b>lettre de garantie</b> (option C) est une pratique réelle et courante : l'exportateur indemnise le transporteur en échange d'un connaissement net, en assumant lui-même le risque du litige qualité. C'est un arbitrage économique, pas une solution parfaite — certains tribunaux la jugent limite si elle sert à dissimuler un dommage réel à l'acheteur final.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le connaissement est l'actif le plus liquide de l'opération pendant le transit — sa perte immobilise autant qu'une perte de marchandise</li>
+            <li>Une mention négative sur ce document coûte plus cher que le dommage physique qu'elle décrit</li>
+            <li>La conteneurisation a rendu le coût de transport marginal — le vrai coût aujourd'hui est documentaire et bancaire, pas logistique</li>
+            <li>Digitaliser le connaissement (e-B/L) reste freiné par le droit, pas par la technique — un point de friction stratégique</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Lecture automatique des connaissements pour détecter toute clause avant qu'elle ne bloque un paiement</li>
+            <li>Suivi prédictif de l'arrivée du document papier par rapport au navire, pour anticiper les ruptures de flux</li>
+            <li>Passerelle vers les registres de connaissement électronique (e-B/L) pour réduire le risque de perte du titre original</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Le paiement à distance : le crédit documentaire</h2>
+      <p class="dsub">Chapitre C6</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Un exportateur refuse d'expédier sans garantie de paiement ; un importateur refuse de payer sans garantie de réception. Chacun a de bonnes raisons de ne pas faire confiance à l'autre — ils ne se connaissent souvent pas, ne partagent ni droit ni tribunal. <b>Comment payer quelque chose qu'on n'a pas encore reçu, à quelqu'un en qui on n'a pas confiance ?</b> La réponse historique : remplacer la confiance entre les deux entreprises par la confiance dans leurs banques respectives, qui elles se font mutuellement confiance.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle</h5>
+          <p>Les mécanismes de paiement à distance garantis par un tiers remontent aux banquiers marchands d'Italie du Nord (Florence, Lucques) dès le <b>XIIIe siècle</b>, avec la lettre de change. La forme moderne du crédit documentaire est codifiée par la Chambre de Commerce Internationale dans les <b>Règles et usances uniformes (RUU / UCP)</b>, publiées une première fois en <span class="yr">1933</span>, révisées plusieurs fois jusqu'à l'édition en vigueur, l'<b>UCP 600 (2007)</b>. Sans ce cadre commun, chaque banque interpréterait différemment ce qui constitue un document « conforme », et le mécanisme perdrait toute fiabilité internationale.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <div class="chain">
+        <span class="node">Banque de l'acheteur émet le crédit</span><span class="arrow">→</span>
+        <span class="node">Banque du vendeur le notifie / confirme</span><span class="arrow">→</span>
+        <span class="node">Vendeur expédie, présente les documents exigés</span><span class="arrow">→</span>
+        <span class="node">Banque vérifie la conformité littérale, puis paie</span>
+      </div>
+      <p class="mech">Le point que la plupart des étudiants sous-estiment : <b>les banques ne regardent jamais la marchandise</b>, seulement les documents. C'est le principe d'autonomie du crédit documentaire — un document conforme doit être payé même si la marchandise réelle est défectueuse, et un document non conforme peut être refusé même si la marchandise est parfaite. Ce principe explique pourquoi le connaissement « net » (篇 II) est si déterminant : c'est souvent la pièce sur laquelle tout l'édifice repose.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une PME textile face à un client nouveau</h5>
+        <p>Une entreprise textile lyonnaise reçoit sa première commande d'un acheteur basé au Bangladesh, qu'elle ne connaît pas. Plutôt que d'exiger un paiement d'avance — que le client refuserait, n'ayant aucune garantie de réception — elle exige un crédit documentaire irrévocable et confirmé par une banque française. Elle est alors payée dès la présentation de documents conformes à sa propre banque, sans attendre que la marchandise arrive à destination ni dépendre de la solvabilité d'une banque étrangère qu'elle ne connaît pas — c'est la <b>confirmation</b> qui transfère ce risque-pays vers la banque française.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Connaissement <i>— document pivot exigé dans la quasi-totalité des crédits documentaires</i></span>
+        <span class="linkchip">Gestion financière <i>— coût de la commission bancaire à intégrer dans le prix</i></span>
+        <span class="linkchip">Douane <i>— la valeur facturée sert souvent aussi de valeur en douane</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que la banque vérifie la qualité réelle de la marchandise</li>
+          <li>Confondre crédit <b>révocable</b> (rarissime en pratique) et <b>irrévocable</b> (la norme)</li>
+          <li>Oublier la différence entre crédit « notifié » et crédit « confirmé »</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Présenter des documents avec une différence même mineure (date, orthographe) par rapport au libellé du crédit — cause numéro un de refus de paiement</li>
+          <li>Négliger le coût de confirmation dans le calcul de marge sur un marché à risque-pays élevé</li>
+          <li>Laisser expirer la date de validité du crédit avant la présentation des documents</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Votre banque signale une différence mineure entre le nom de votre société sur la facture et sur le connaissement (un tiret oublié). Le client refuse de lever la réserve. Que faites-vous ?</p>
+        <p class="dctx">La marchandise est déjà en mer. Corriger les documents prend une semaine ; le crédit expire dans quatre jours.</p>
+        <div class="dopts">
+          <span>A. Négocier directement avec le client pour qu'il instruise sa banque de payer malgré la réserve</span>
+          <span>B. Laisser le crédit expirer et réclamer le paiement par voie contentieuse</span>
+          <span>C. Demander à la banque de payer « sous réserve », en engageant sa propre responsabilité</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>En pratique, l'option A est la plus fréquente et la plus rapide : la conformité documentaire est un principe technique, mais le client garde le pouvoir de lever une réserve mineure de bonne foi. L'option C existe (paiement « sous réserve » ou par accord spécial) mais expose la banque émettrice, qui ne l'accepte pas toujours. Aucune de ces solutions n'est garantie — c'est précisément parce que le système est fondé sur une conformité littérale stricte qu'un tiret oublié peut, en théorie, bloquer un paiement de plusieurs centaines de milliers d'euros.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le crédit documentaire protège les deux parties — mais son coût de confirmation doit être budgété avant de fixer le prix</li>
+            <li>La conformité documentaire stricte est un risque opérationnel à part entière, pas un détail administratif</li>
+            <li>Choisir une banque confirmante solide vaut souvent plus qu'un point de négociation sur le prix</li>
+            <li>Un service « documentation export » interne bien formé évite plus de pertes qu'une clause juridique supplémentaire</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Vérification automatique de la cohérence entre facture, connaissement et libellé du crédit avant présentation à la banque</li>
+            <li>Alerte sur les délais de validité du crédit avant qu'ils ne deviennent critiques</li>
+            <li>Score de risque-pays dynamique pour arbitrer confirmation ou non du crédit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE IV ============ -->
+  <section class="disc" id="p4">
+    <div class="tab">篇 IV</div>
+    <div class="dhead">
+      <h2>Douane, assurance et régimes particuliers</h2>
+      <p class="dsub">Chapitres C5 · C7 · C8</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Deux frictions restent à résoudre une fois la marchandise en route. D'abord, un État doit taxer des flux de marchandises qu'il ne peut matériellement pas tous inspecter — <b>comment fixer une base de taxation fiable sans ouvrir chaque conteneur ?</b> Ensuite, la marchandise peut être endommagée, volée ou perdue en chemin — <b>qui répare, alors que le risque a déjà été réparti entre plusieurs parties par l'Incoterm ?</b> Les deux problèmes se répondent : c'est le même point de transfert de risque (篇 I) qui indique qui doit assurer, et c'est souvent la même valeur contractuelle qui sert de base tant à la douane qu'à l'assurance.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine de la règle — douane</h5>
+          <p>La méthode de la <b>valeur transactionnelle</b> (le prix réellement payé ou à payer, ajusté du fret et de l'assurance selon le point de livraison) est fixée par l'<b>Accord sur la mise en œuvre de l'article VII du GATT</b>, conclu lors du Cycle d'Uruguay et entré en vigueur avec la création de l'OMC le <span class="yr">1ᵉʳ janvier 1995</span>. Avant cet accord, les administrations douanières pouvaient retenir des valeurs forfaitaires arbitraires, ce qui faussait la concurrence entre exportateurs de pays différents.</p>
+        </div>
+      </div>
+      <div class="callout" style="background:rgba(79,143,110,.09);border-color:rgba(79,143,110,.4)">
+        <svg viewBox="0 0 40 40" stroke="#3f7a66"><path d="M20 6 C10 10 8 14 8 20 C8 28 14 32 20 34 C26 32 32 28 32 20 C32 14 30 10 20 6 Z"/><path d="M20 14 v10 M15 19 h10"/></svg>
+        <div>
+          <h5>Origine de la règle — assurance</h5>
+          <p>Les <b>Institute Cargo Clauses</b> (A, B, C), rédigées à Londres et régulièrement mises à jour (dernière édition majeure : <span class="yr">2009</span>), définissent trois niveaux de couverture standardisés dans le transport maritime. <b>Point d'exactitude central pour cette discipline :</b> depuis les Incoterms 2020, le terme <b>CIP</b> impose désormais au vendeur une couverture minimale en <b>Clause A</b> (tous risques), alors que le terme <b>CIF</b> reste à la couverture minimale, moins protectrice, de la <b>Clause C</b> — une divergence introduite précisément par l'édition 2020, qui n'existait pas dans les Incoterms 2010.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">La douane calcule les droits sur une <b>valeur en douane</b> qui, dans le régime européen, correspond typiquement à une valeur de type CIF (prix + fret + assurance jusqu'à la frontière) — c'est pourquoi le choix d'Incoterm fait au 篇 I réapparaît ici comme base fiscale. L'assurance, elle, doit couvrir a minima ce même trajet à risque : en dessous du niveau exigé par l'Incoterm choisi, l'acheteur se retrouve sous-couvert sans le savoir.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Un lot de machines-outils vers le Maroc</h5>
+        <p>Un fabricant de machines-outils vend un lot en CIF Casablanca. La douane marocaine calcule les droits sur la valeur CIF facturée (prix + fret + assurance) — pas sur le seul prix départ usine, ce qui surprend souvent un exportateur débutant qui budgète ses droits de douane sur une base trop basse. Si une machine est endommagée en mer, seule la Clause C minimale s'applique par défaut au titre du CIF : elle couvre les risques majeurs (naufrage, incendie) mais pas la casse partielle en manutention — l'acheteur marocain, qui porte le risque depuis la mise à bord, doit négocier une sur-assurance s'il veut une couverture plus large.</p>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Incoterms <i>— déterminent à la fois la base douanière et le niveau d'assurance minimal</i></span>
+        <span class="linkchip">Comptabilité générale <i>— la valeur en douane influence le coût d'entrée en stock</i></span>
+        <span class="linkchip">Droit des affaires internationales <i>— régimes douaniers particuliers (admission temporaire, entrepôt)</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiants</h5><ul>
+          <li>Croire que la valeur en douane est toujours simplement le prix facturé, sans ajustement fret/assurance</li>
+          <li>Ne pas relier le régime intracommunautaire (C8) au régime pays tiers (C5) comme un contraste, pas deux sujets séparés</li>
+          <li>Confondre Clause A, B et C comme de simples « niveaux » sans comprendre ce que chacune exclut précisément</li>
+        </ul></div>
+        <div class="ee"><h5>Côté entreprises</h5><ul>
+          <li>Sous-estimer les droits de douane à l'import en oubliant d'y intégrer le fret et l'assurance</li>
+          <li>Conserver une couverture Clause C par défaut sur des marchandises fragiles à haute valeur, largement insuffisante</li>
+          <li>Négliger la différence de régime déclaratif entre échanges intra-UE (déclaration d'échange de biens) et pays tiers (déclaration en douane complète)</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous vendez en CIF. La Clause C minimale coûte moins cher et satisfait techniquement vos obligations contractuelles. La proposez-vous telle quelle à votre client marocain ?</p>
+        <p class="dctx">Le client n'a pas l'expertise pour évaluer lui-même le niveau de couverture ; il vous fait confiance sur ce point technique.</p>
+        <div class="dopts">
+          <span>A. Oui — le contrat n'exige rien de plus, et le prix reste compétitif</span>
+          <span>B. Non — proposer d'emblée une Clause A moyennant un léger surcoût</span>
+          <span>C. Informer clairement le client des limites de la Clause C et le laisser décider</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Juridiquement, l'option A suffit — le CIF n'exige que la Clause C. Mais un client qui découvre après un sinistre partiel qu'il n'était pas couvert associera cette découverte à un manque de transparence du vendeur, même si le vendeur n'a rien caché de contractuellement obligatoire. L'option C — informer sans imposer — protège la relation commerciale sans forcer un surcoût sur un client qui n'en veut pas forcément. Il n'y a pas de bonne réponse absolue : cela dépend de la valeur des machines, de la fréquence de la relation commerciale, et de la tolérance au risque réputationnel de l'entreprise.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le coût réel d'une opération export n'est jamais le prix départ usine — il inclut fret, assurance ET droits calculés sur cette base élargie</li>
+            <li>La différence entre Clause A et Clause C n'est pas un détail d'assurance, c'est une politique de gestion du risque à assumer explicitement</li>
+            <li>Les régimes intracommunautaires simplifiés sont un avantage compétitif réel pour qui vend en priorité vers l'UE</li>
+            <li>La transparence sur les limites contractuelles d'une couverture coûte moins cher qu'un litige de confiance après sinistre</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA logistique frappe ici</h5>
+          <ul>
+            <li>Calcul automatique de la valeur en douane et simulation des droits selon la destination et l'Incoterm choisi</li>
+            <li>Recommandation de niveau de couverture (A/B/C) selon la nature réelle de la marchandise, pas seulement le minimum contractuel</li>
+            <li>Détection automatique du régime applicable (intra-UE vs pays tiers) à partir de l'adresse de livraison</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Transfert du risque<i>C2·C3·C4·C6·C7</i></span>
+        <span class="sp">Valeur CIF<i>C2·C5·C6</i></span>
+        <span class="sp">Document = preuve = valeur<i>C4·C5·C6</i></span>
+        <span class="sp">Désynchronisation des flux<i>C1·C6</i></span>
+        <span class="sp">Qui paie quand ça tourne mal<i>tous</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
     <a class="navbtn prev" href="index.html">← Index</a>
@@ -70,5 +718,31 @@
   </div>
   <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
