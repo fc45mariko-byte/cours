@@ -4,12 +4,230 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Civilisation latino-américaine — la ville contemporaine — Cours détaillé · Master Plans</title>
-<meta name="description" content="Fiche de cours détaillée — Civilisation latino-américaine — la ville contemporaine, discipline 19 de L'Architecture des Disciplines.">
+<meta name="description" content="Fiche de cours détaillée — Civilisation latino-américaine, la ville contemporaine, discipline 19 de L'Architecture des Disciplines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Josefin+Sans:wght@300;400;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{--dom:#4f8f5a;--dom-lt:#a8d3ae}</style>
+<style>
+/* Palette — brique / vert tropical / gris béton : la ville latino-américaine
+   comme tension permanente entre trois matières qui ne cessent de se disputer
+   la colline. La brique et la tôle (#b8562f, clair #e0a184) sont celles des
+   constructions informelles qui montent, mur après mur, sans permis, sur les
+   pentes que personne d'autre ne voulait. Le vert tropical (#3f8f5c, clair
+   #8fc7a3) est la végétation qui encercle la ville, la pénètre par les
+   ravines, et que l'informalité grignote autant qu'elle la contient. Le gris
+   béton (#6b6f73, clair #a8acb0) est celui des tours du centre, des
+   autoroutes urbaines et des infrastructures d'État — rare, plus lent,
+   souvent absent des collines. Palette volontairement distincte du corail de
+   la discipline 15 (espagnol) : ici la brique est plus sombre, plus terreuse,
+   pensée comme matériau de construction plutôt que comme couleur chaude. */
+:root{
+  --p1:#b8562f; --p1-lt:#e0a184;
+  --p2:#3f8f5c; --p2-lt:#8fc7a3;
+  --p3:#6b6f73; --p3-dk:#4a4d50; --p3-lt:#a8acb0;
+  --ink:#3a2e26; --ink-soft:#7a6a5c;
+  --paper:rgba(255,255,255,.66); --paper-hi:rgba(255,255,255,.88);
+  --line:rgba(107,111,115,.32); --or:#c98a3a; --vert:#3f8f5c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Spectral',Georgia,serif;color:var(--ink);line-height:1.7;
+  background:
+    radial-gradient(1100px 760px at 10% -4%, #f3d8c4 0%, transparent 58%),
+    radial-gradient(1000px 900px at 96% 18%, #bcd9c4 0%, transparent 52%),
+    radial-gradient(1000px 720px at 30% 108%, #dfd6c8 0%, transparent 58%),
+    linear-gradient(158deg,#ecdccb 0%, #d9e3d3 42%, #c9d2cd 72%, #e6d9c9 100%);
+  background-attachment:fixed;overflow-x:hidden;
+}
+.sheet{max-width:1080px;margin:0 auto;padding:26px 18px 90px}
+a{color:inherit}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:22px}
+.top .cn{font-family:'Josefin Sans';font-weight:300;letter-spacing:.28em;color:var(--p3-dk);
+  font-size:.64rem;text-transform:uppercase}
+.backlink{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--p1);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;background:var(--paper);transition:background .15s}
+.backlink:hover{background:var(--paper-hi)}
+
+/* hero */
+.hero{position:relative;background:var(--paper);border:1px solid rgba(184,86,47,.28);
+  border-radius:26px;box-shadow:0 18px 48px rgba(58,46,38,.14);padding:30px 30px 24px;overflow:hidden}
+.hero-illus{width:100%;height:auto;max-height:210px;display:block;margin:0 auto 14px}
+.eyebrow{font-family:'Josefin Sans';letter-spacing:.4em;text-transform:uppercase;font-size:.66rem;
+  color:var(--p1);text-align:center;display:block}
+h1{font-family:'Cormorant Garamond';font-weight:700;font-size:clamp(2rem,5.4vw,3.1rem);
+  line-height:1.06;color:#7a3d1f;margin:6px 0 14px;text-align:center}
+.gen-open{font-size:1.04rem;color:var(--ink)}
+.gen-open::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.4rem;
+  float:left;line-height:.82;padding:5px 8px 0 0;color:var(--p1)}
+.cls{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.clab{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p3)}
+.cbar{flex:0 1 240px;height:14px;display:flex;border-radius:8px;overflow:hidden;min-width:170px;
+  border:1px solid var(--line);background:#fff}
+.cbar .sy{background:linear-gradient(90deg,var(--p2-lt),var(--p2))}
+.cbar .au{background:linear-gradient(90deg,var(--p1-lt),var(--p1))}
+.crd{font-family:'Josefin Sans';font-size:.68rem;color:var(--ink);white-space:nowrap}
+.crd b.s{color:var(--p2)} .crd b.a{color:var(--p1)}
+.verd{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;padding:4px 11px;border-radius:12px;background:var(--p2)}
+.dmeta{text-align:center;font-family:'Josefin Sans';font-size:.72rem;color:var(--ink-soft);margin-top:8px}
+
+/* acteurs */
+.actors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:760px){.actors{grid-template-columns:repeat(2,1fr)}}
+.actor{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 8px 10px;
+  text-align:center}
+.actor svg{width:38px;height:38px;stroke:var(--p3-dk);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.actor b{display:block;font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.04em;margin-top:6px;color:var(--ink)}
+.actor span{display:block;font-family:'Spectral';font-size:.68rem;color:var(--ink-soft);margin-top:2px;font-style:italic}
+
+/* timeline serpentine */
+.tl-wrap{position:relative;margin:30px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 20px 18px}
+.tl-title{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--p1);text-align:center;margin-bottom:14px}
+.tl-svg{width:100%;height:auto;display:block}
+.tl-med{font-family:'Josefin Sans';font-size:.56rem;fill:var(--ink)}
+.tl-num{font-family:'Josefin Sans';font-size:.62rem;fill:#fff;font-weight:600}
+
+/* panneaux 篇 */
+.disc{position:relative;margin-top:46px;background:var(--paper);backdrop-filter:blur(3px);
+  border:1px solid rgba(184,86,47,.26);border-radius:24px;box-shadow:0 16px 46px rgba(58,46,38,.13)}
+.tab{position:absolute;top:-16px;left:28px;background:linear-gradient(120deg,var(--p1),var(--p2));
+  color:#fff;border-radius:16px;padding:7px 20px;font-family:'Cormorant Garamond';font-weight:600;
+  font-size:1rem;letter-spacing:.06em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.dhead{padding:30px 30px 6px}
+.dhead h2{font-family:'Cormorant Garamond';font-weight:700;font-size:1.9rem;color:#7a3d1f;line-height:1.14}
+.dsub{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;color:var(--ink-soft);margin-top:4px;text-transform:uppercase}
+.dbody{padding:16px 30px 32px}
+.blockt{display:flex;align-items:center;gap:9px;font-family:'Josefin Sans';font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--p1);margin:28px 0 12px}
+.blockt:first-child{margin-top:6px}
+.bdot{width:14px;height:14px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%, #fff 0 22%, var(--p1) 23% 40%, transparent 41%),
+  conic-gradient(from 0deg, var(--p1-lt) 0 12.5%, transparent 0 25%, var(--p1-lt) 0 37.5%, transparent 0 50%, var(--p1-lt) 0 62.5%, transparent 0 75%, var(--p1-lt) 0 87.5%, transparent 0)}
+
+.problem{font-size:1rem;color:var(--ink)}
+.problem::first-letter{font-family:'Cormorant Garamond';font-weight:700;font-size:3.1rem;
+  float:left;line-height:.82;padding:4px 8px 0 0;color:var(--p1)}
+.problem b{color:var(--p1);font-weight:600}
+
+.callout{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:rgba(63,143,92,.09);
+  border:1px solid rgba(63,143,92,.4);border-radius:16px;padding:16px 18px;margin:14px 0}
+.callout svg{width:40px;height:40px;stroke:var(--p2);fill:none;stroke-width:1.4}
+.callout h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:5px}
+.callout p{font-size:.9rem}
+.callout .yr{color:var(--p1);font-weight:600}
+
+.mech{font-size:.95rem;margin:8px 0}
+.mech .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.chain span.node{font-family:'Josefin Sans';font-size:.76rem;background:#fff;border:1.5px solid var(--p3-lt);
+  border-radius:14px;padding:7px 13px;color:var(--ink)}
+.chain .arrow{color:var(--ink-soft);font-size:1.1rem}
+
+.example{background:rgba(184,86,47,.08);border-left:3px solid var(--p1);border-radius:0 16px 16px 0;
+  padding:16px 20px;margin:14px 0}
+.example h5{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);margin-bottom:6px}
+.example p{font-size:.92rem}
+
+.linkrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.linkchip{font-family:'Josefin Sans';font-size:.72rem;border:1px solid var(--vert);color:#2f6b46;
+  padding:5px 12px;border-radius:14px;background:rgba(63,143,92,.08)}
+.linkchip i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.errors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.errors{grid-template-columns:1fr}}
+.errors > div{border-radius:16px;padding:16px 18px}
+.errors .et{background:rgba(201,138,58,.1);border:1px solid rgba(201,138,58,.5)}
+.errors .ee{background:rgba(107,111,115,.12);border:1px solid rgba(107,111,115,.4)}
+.errors h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.errors .et h5{color:var(--or)} .errors .ee h5{color:var(--p3-dk)}
+.errors ul{list-style:none}
+.errors li{font-size:.83rem;padding:4px 0 4px 16px;position:relative}
+.errors li::before{content:"❀";position:absolute;left:0;font-size:.5rem;top:7px;color:var(--p1)}
+
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem;background:#fff;
+  border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+table.cmp caption{font-family:'Josefin Sans';font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding-bottom:8px}
+table.cmp th{background:var(--p2-lt);font-family:'Josefin Sans';font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:9px 12px;color:#254a34}
+table.cmp td{padding:9px 12px;border-top:1px solid var(--line)}
+table.cmp tr:nth-child(even) td{background:rgba(168,172,176,.14)}
+table.cmp td.foot-note, table.cmp caption + thead{}
+
+details.dilemma{background:rgba(255,255,255,.7);border:1.5px dashed var(--p1);border-radius:18px;
+  padding:18px 20px;margin:20px 0}
+details.dilemma summary{cursor:pointer;list-style:none;font-family:'Josefin Sans';font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--p1);display:flex;align-items:center;gap:8px}
+details.dilemma summary::-webkit-details-marker{display:none}
+details.dilemma summary::before{content:"◆";font-size:.6rem}
+details.dilemma[open] summary::before{content:"◇"}
+.dq{font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;color:#7a3d1f;margin:10px 0 8px}
+.dctx{font-size:.9rem;margin-bottom:10px}
+.dopts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.dopts span{font-size:.86rem;background:rgba(107,111,115,.1);border-radius:10px;padding:7px 12px;border-left:3px solid var(--p3)}
+.dreveal{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.dreveal h6{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:6px}
+.dreveal p{font-size:.88rem;margin-bottom:8px}
+
+.boxrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 6px}
+@media(max-width:680px){.boxrow{grid-template-columns:1fr}}
+.ceo,.helix{border-radius:18px;padding:18px 20px}
+.ceo{background:rgba(168,172,176,.22);border:1px solid var(--p3)}
+.helix{background:rgba(63,143,92,.09);border:1px solid var(--p2)}
+.ceo h5,.helix h5{font-family:'Josefin Sans';font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.ceo h5{color:#4a4d50} .helix h5{color:var(--p2)}
+.ceo ol,.helix ul{list-style:none}
+.ceo li{counter-increment:c;font-size:.86rem;padding:5px 0 5px 26px;position:relative}
+.ceo{counter-reset:c}
+.ceo li::before{content:counter(c);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
+  background:var(--p3);color:#fff;font-family:'Josefin Sans';font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.helix li{font-size:.86rem;padding:5px 0 5px 18px;position:relative}
+.helix li::before{content:"→";position:absolute;left:0;top:5px;color:var(--p2)}
+
+/* séparation à comprendre / à automatiser (C6) */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:640px){.split{grid-template-columns:1fr}}
+.split > div{border-radius:16px;padding:16px 18px}
+.split .u{background:rgba(63,143,92,.09);border:1px solid rgba(63,143,92,.4)}
+.split .m{background:rgba(184,86,47,.08);border:1px solid rgba(184,86,47,.35)}
+.split h5{font-family:'Josefin Sans';font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.split .u h5{color:var(--p2)} .split .m h5{color:var(--p1)}
+.split p, .split ul{font-size:.86rem}
+.split ul{list-style:none}
+.split li{padding:3px 0 3px 14px;position:relative}
+.split li::before{content:"·";position:absolute;left:0;font-weight:700}
+
+/* diagramme cascade causale — le point structurel central de la fiche */
+.cascade{margin:16px 0;overflow-x:auto}
+.cascade svg{display:block;margin:0 auto}
+
+.spine{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sp{font-family:'Josefin Sans';font-size:.74rem;border:1px solid var(--vert);color:#2f6b46;
+  padding:5px 12px;border-radius:14px;background:rgba(63,143,92,.08)}
+.sp i{color:var(--ink-soft);font-size:.62rem;font-style:normal;margin-left:6px}
+
+.note{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+.note b{color:var(--p1);font-style:normal}
+
+.foot{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navbtn{font-family:'Josefin Sans';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:20px;
+  padding:9px 18px;background:var(--paper);transition:background .15s, color .15s}
+.navbtn:hover{background:var(--p1);color:#fff;border-color:transparent}
+.navbtn.home{color:var(--p1);border-color:var(--p1)}
+.foot .mark{margin:0 auto;text-align:center;color:var(--ink);
+  font-family:'Cormorant Garamond';font-style:italic;font-size:.95rem;width:100%;margin-top:12px}
+
+.reveal-init{opacity:0;transform:translateY(10px)}
+.no-js .reveal-init, .anime-failed .reveal-init{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <div class="sheet">
@@ -18,56 +236,551 @@
     <a class="backlink" href="index.html">↩ Index des matières</a>
   </div>
 
-<section class="disc" id="d19">
-  <div class="tab">篇 XIX</div>
-  <div class="dhead">
-    <p class="dnum">Discipline 19</p>
-    <h3>Civilisation latino-américaine — la ville contemporaine</h3>
-    <p class="dmeta">S6 · 2 ECTS · Marcos Eymar · photographies, films, textes</p>
+  <div class="hero">
+    <svg class="hero-illus" viewBox="0 0 680 220" role="img" aria-label="Une colline couverte de constructions informelles denses, brique et tôle, reliée par un téléphérique de type Metrocable à la ville de tours en contrebas">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#dfe8dc"/><stop offset="1" stop-color="#f0e2cf"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="680" height="220" fill="url(#sky)" opacity=".4"/>
+      <!-- colline -->
+      <path d="M0 190 Q120 90 260 150 Q320 60 420 130 Q500 100 560 150 L680 150 V220 H0 Z" fill="#8fc7a3" opacity=".35"/>
+      <!-- constructions informelles sur la pente, empilées -->
+      <g stroke="#b8562f" stroke-width="1.6" fill="#f3d8c4" fill-opacity=".55" stroke-linejoin="round">
+        <rect x="70" y="150" width="22" height="26" rx="1"/>
+        <rect x="88" y="132" width="20" height="30" rx="1"/>
+        <rect x="104" y="146" width="24" height="24" rx="1"/>
+        <rect x="126" y="120" width="18" height="30" rx="1"/>
+        <rect x="140" y="140" width="22" height="26" rx="1"/>
+        <rect x="160" y="112" width="20" height="34" rx="1"/>
+        <rect x="178" y="130" width="24" height="26" rx="1"/>
+        <rect x="200" y="104" width="18" height="32" rx="1"/>
+        <rect x="216" y="122" width="22" height="28" rx="1"/>
+        <rect x="236" y="98" width="20" height="34" rx="1"/>
+      </g>
+      <!-- toits en tôle, traits obliques -->
+      <g stroke="#c98a3a" stroke-width="1.2">
+        <line x1="70" y1="150" x2="92" y2="150"/><line x1="88" y1="132" x2="108" y2="132"/>
+        <line x1="126" y1="120" x2="144" y2="120"/><line x1="160" y1="112" x2="180" y2="112"/>
+        <line x1="200" y1="104" x2="218" y2="104"/><line x1="236" y1="98" x2="256" y2="98"/>
+      </g>
+      <!-- pylône et câble du metrocable -->
+      <g stroke="#4a4d50" stroke-width="2" fill="none" stroke-linecap="round">
+        <line x1="248" y1="98" x2="248" y2="40"/>
+        <line x1="238" y1="46" x2="258" y2="46"/>
+        <path d="M248 44 C 380 10, 500 26, 560 66" stroke-dasharray="1 7"/>
+        <line x1="560" y1="66" x2="560" y2="34"/>
+        <line x1="548" y1="40" x2="572" y2="40"/>
+      </g>
+      <!-- cabine du telephérique -->
+      <g transform="translate(410,32)" stroke="#4a4d50" stroke-width="1.6" fill="#fff" fill-opacity=".7">
+        <rect x="-11" y="0" width="22" height="16" rx="3"/>
+        <line x1="0" y1="0" x2="0" y2="-8"/>
+      </g>
+      <!-- ville de tours en contrebas -->
+      <g stroke="#6b6f73" stroke-width="2" fill="#e8e6e0" fill-opacity=".6" stroke-linejoin="round">
+        <rect x="470" y="120" width="26" height="60" rx="1"/>
+        <rect x="500" y="98" width="22" height="82" rx="1"/>
+        <rect x="526" y="112" width="24" height="68" rx="1"/>
+        <rect x="554" y="132" width="20" height="48" rx="1"/>
+        <rect x="598" y="106" width="24" height="74" rx="1"/>
+        <rect x="626" y="126" width="22" height="54" rx="1"/>
+      </g>
+      <line x1="0" y1="180" x2="680" y2="180" stroke="#6b6f73" stroke-width="1" opacity=".4"/>
+    </svg>
+    <span class="eyebrow">Master Plans · L'Architecture des Disciplines</span>
+    <h1>Civilisation latino-américaine — la ville contemporaine</h1>
+    <p class="gen-open">Un continent s'urbanise en deux générations au lieu de deux siècles — que devient une ville qui reçoit des millions d'habitants qu'elle n'a <b>ni logés, ni employés, ni raccordés</b>, et comment se représente-t-elle elle-même ? Cette discipline reconstruit une <b>cascade causale</b> : un choc démographique produit une réponse spontanée à l'absence de logement (l'informalité), qui produit une ségrégation de l'espace, qui produit une violence documentée, que le cinéma représente — et une seule ville du corpus, Medellín, tente de remonter cette chaîne par une politique volontariste plutôt que de la subir.</p>
     <div class="cls">
       <span class="clab">Classification</span>
       <span class="cbar"><span class="sy" style="width:85%"></span><span class="au" style="width:15%"></span></span>
       <span class="crd">Système <b class="s">85%</b> · Automatisme <b class="a">15%</b></span>
-      <span class="verd sys">Système</span>
+      <span class="verd">Système</span>
     </div>
+    <p class="dmeta">S6 · Marcos Eymar · 2 ECTS · photographies, films, textes</p>
   </div>
-  <div class="dbody">
-    <p class="blockt"><span class="bdot"></span>Problème générateur</p>
-    <p class="gen">Un continent s'urbanise en <b>deux générations au lieu de deux siècles</b>. Que devient une ville qui reçoit des millions d'habitants qu'elle n'a ni logés, ni employés, ni raccordés — et comment se représente-t-elle elle-même ?</p>
 
-    <p class="blockt"><span class="bdot"></span>Chapitres &amp; ordre logique</p>
-    <ol class="ch"><li><span class="cnum">C1</span><div class="cbody"><b>L'urbanisation accélérée : causes et rythme</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : aucun · ~80 % d'urbains, mégapoles</span></div></li>
-<li><span class="cnum">C2</span><div class="cbody"><b>L'informalité comme réponse spontanée</b><span class="k fondation">FONDATION</span><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C1</b> · favelas, villas miseria, barriadas · <b>Ouvre :</b> C3, C4, C5</span></div></li>
-<li><span class="cnum">C3</span><div class="cbody"><b>La ségrégation spatiale</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2</b> · barrios cerrados, périphéries, gentrification</span></div></li>
-<li><span class="cnum">C4</span><div class="cbody"><b>Violence urbaine &amp; ses représentations</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C2, C3</b></span></div></li>
-<li><span class="cnum">C5</span><div class="cbody"><b>Politiques urbaines : le cas de Medellín</b><span class="k sys">SYS</span><span class="dep">Prérequis : <b>C3, C4</b> · metrocable, bibliothèques-parcs</span></div></li>
-<li><span class="cnum">C6</span><div class="cbody"><b>Le corpus filmique &amp; l'analyse d'image</b><span class="k sys">SYS</span><span class="k auto">AUT</span><span class="dep">Prérequis : <b>C4</b> · <em>Cidade de Deus</em>, <em>Amores perros</em>, <em>La Zona</em>, <em>Elefante blanco</em></span></div></li></ol>
-
-    <p class="blockt"><span class="bdot"></span>Structure de dépendance</p>
-    <div class="strata">
-<div class="tier"><div class="tl">Choc</div><div class="tc"><span class="node f">C1 · Urbanisation accélérée</span></div></div>
-<div class="flow"><span class="fdot"></span>l'État ne suit pas : la ville se construit sans lui<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Effet primaire</div><div class="tc"><span class="node f">C2 · Informalité</span></div></div>
-<div class="flow"><span class="fdot"></span>effets secondaires en cascade<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Conséquences</div><div class="tc"><span class="node s">C3 · Ségrégation</span><span class="ar">→</span><span class="node s">C4 · Violence</span><span class="ar">→</span><span class="node s">C6 · Représentations</span></div></div>
-<div class="flow"><span class="fdot"></span>tentative de réponse publique<span class="fdot"></span></div>
-<div class="tier"><div class="tl">Réponse</div><div class="tc"><span class="node s">C5 · Urbanisme social · Medellín</span></div></div>
-</div>
-    <p class="note">Architecture <b>en cascade causale</b> : un choc démographique produit l'informalité, qui produit la ségrégation, qui produit la violence, que les films représentent. Medellín est le seul chapitre qui remonte la chaîne.</p>
-
-    <p class="blockt"><span class="bdot"></span>Concepts-colonnes</p>
-    <div class="spine"><span class="sp">Informalité<i>C2·C3·C4</i></span><span class="sp">Absence / retour de l'État<i>C2·C5</i></span><span class="sp">Frontière intérieure à la ville<i>C3·C4·C6</i></span></div>
-
-    
+  <div class="actors">
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="8" y="20" width="24" height="14" rx="1"/><path d="M8 20 L20 10 L32 20"/><line x1="20" y1="14" x2="20" y2="34" stroke-dasharray="1.5 3"/><path d="M12 34 v-8 M28 34 v-8" stroke-dasharray="1.5 3"/></svg><b>Le nouvel arrivant</b><span>construit sans titre de propriété</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="6" y="16" width="28" height="18" rx="2"/><path d="M6 16 h28" stroke-width="2.4"/><circle cx="14" cy="10" r="2"/><circle cx="26" cy="10" r="2"/><line x1="14" y1="12" x2="14" y2="16"/><line x1="26" y1="12" x2="26" y2="16"/></svg><b>L'habitant du barrio cerrado</b><span>achète la clôture et la garde</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><path d="M8 34 L14 14 L26 14 L32 34 Z"/><circle cx="20" cy="20" r="2.4" fill="none"/><line x1="14" y1="26" x2="26" y2="26"/></svg><b>Le maire réformateur</b><span>arbitre un budget contraint</span></div>
+    <div class="actor"><svg viewBox="0 0 40 40"><rect x="7" y="12" width="26" height="18" rx="2"/><circle cx="20" cy="21" r="5"/><line x1="13" y1="8" x2="13" y2="12"/><line x1="27" y1="8" x2="27" y2="12"/></svg><b>Le cinéaste</b><span>cadre la cascade pour le monde</span></div>
   </div>
-</section>
+
+  <div class="tl-wrap">
+    <p class="tl-title">Parcours des six chapitres</p>
+    <svg class="tl-svg" viewBox="-20 0 940 190" preserveAspectRatio="xMidYMid meet">
+      <path d="M20 110 C 130 55, 230 55, 320 110 S 500 165, 590 110 S 780 55, 880 110" fill="none" stroke="#8fc7a3" stroke-width="3"/>
+      <g font-family="Josefin Sans">
+        <!-- C1 -->
+        <g transform="translate(20,110)"><circle r="18" fill="#b8562f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">1</text><text class="tl-med" x="0" y="32" text-anchor="middle">Choc</text><text class="tl-med" x="0" y="44" text-anchor="middle">démographique</text></g>
+        <!-- C2 -->
+        <g transform="translate(180,58)"><circle r="18" fill="#b8562f" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">2</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Informalité</text></g>
+        <!-- C3 -->
+        <g transform="translate(320,110)"><circle r="16" fill="#6b6f73" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">3</text><text class="tl-med" x="0" y="36" text-anchor="middle">Ségrégation</text></g>
+        <!-- C4 -->
+        <g transform="translate(460,160)"><circle r="18" fill="#6b6f73" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">4</text><text class="tl-med" x="0" y="-26" text-anchor="middle">Violence &amp; représentations</text></g>
+        <!-- C5 -->
+        <g transform="translate(590,110)"><circle r="17" fill="#3f8f5c" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">5</text><text class="tl-med" x="0" y="36" text-anchor="middle">Medellín</text></g>
+        <!-- C6 -->
+        <g transform="translate(730,58)"><circle r="16" fill="#6b6f73" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle">6</text><text class="tl-med" x="0" y="-24" text-anchor="middle">Corpus filmique</text></g>
+        <!-- fin de parcours, boucle -->
+        <g transform="translate(880,110)"><circle r="14" fill="#4a4d50" stroke="#fff" stroke-width="2"/><text class="tl-num" x="0" y="4" text-anchor="middle" font-size="9">fin</text><text class="tl-med" x="-6" y="36" text-anchor="middle">→ index</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ PARTIE I ============ -->
+  <section class="disc" id="p1">
+    <div class="tab">篇 I</div>
+    <div class="dhead">
+      <h2>Le choc démographique et l'informalité</h2>
+      <p class="dsub">Chapitres C1 · C2 — fondation de toute la discipline</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Au milieu du XXe siècle, la majorité des Latino-Américains vivent encore à la campagne. En quelques décennies, ce rapport s'inverse presque complètement : la région atteint aujourd'hui un taux d'urbanisation généralement estimé <b>autour de 80%</b> par les grandes agences internationales (Banque mondiale, ONU-Habitat), l'un des plus élevés du monde en développement — un basculement que l'Europe a étalé sur deux siècles d'industrialisation progressive, et que l'Amérique latine a vécu en <b>deux générations</b>. Le problème n'est donc pas seulement démographique, il est logistique et institutionnel : <b>comment un État loge, emploie et raccorde aux réseaux (eau, électricité, égouts, voirie) des millions de personnes qui arrivent plus vite qu'il ne peut construire ?</b> La réponse honnête est qu'il n'y arrive pas — et c'est cet écart, entre la vitesse de l'arrivée et la lenteur de l'équipement public, qui ouvre tout le reste de la discipline.</p>
+
+      <div class="callout">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10 v10 l7 4"/></svg>
+        <div>
+          <h5>Origine du choc — exode rural et croissance des mégapoles</h5>
+          <p>La bascule vers la ville a plusieurs moteurs qui se cumulent selon les pays : mécanisation agricole qui réduit le besoin de main-d'œuvre rurale, concentration de la propriété terrienne qui pousse les petits paysans à partir, guerres civiles et violences rurales qui provoquent des déplacements forcés, et attraction de l'industrie et des services concentrés dans quelques très grandes villes. Le résultat est une poignée de <b>mégapoles</b> — São Paulo, Mexico, Buenos Aires, Lima, Bogotá — qui concentrent une part disproportionnée de la population et de l'activité économique nationale, plutôt qu'une urbanisation répartie sur un réseau de villes moyennes.</p>
+        </div>
+      </div>
+
+      <p class="note"><b>Point d'exactitude :</b> le chiffre « ~80% » d'urbanisation est un ordre de grandeur largement repris par les organisations internationales, pas une statistique unique et figée — il varie légèrement selon la source, l'année de mesure et la définition administrative du seuil « urbain » retenue par chaque pays. Ne cite jamais ce chiffre comme une valeur précise à la décimale près sans vérifier l'année et la source exactes.</p>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme</p>
+      <p class="mech">Le choc démographique ne produit pas directement la ville informelle — il produit d'abord un <b>vide</b>, que l'informalité vient ensuite combler. C'est la première cascade de la discipline, et elle mérite d'être décomposée lentement :</p>
+      <div class="chain">
+        <span class="node">Arrivée massive et rapide en ville</span><span class="arrow">→</span>
+        <span class="node">L'État ne peut ni loger ni raccorder à ce rythme</span><span class="arrow">→</span>
+        <span class="node">Le marché formel du logement est hors de prix ou hors d'accès</span><span class="arrow">→</span>
+        <span class="node">Les arrivants occupent et construisent eux-mêmes, sans titre</span>
+      </div>
+      <p class="mech">Ce dernier maillon — l'auto-construction sans titre de propriété — est <b>C2, l'informalité</b>. Il faut être précis sur sa nature : contrairement à une politique publique, l'informalité <b>n'est décidée par personne en particulier</b>. Aucun ministre, aucun conseil municipal ne signe un jour un décret créant une favela. C'est une réponse spontanée, distribuée, prise indépendamment par des milliers de familles confrontées au même vide institutionnel au même moment — une différence de nature essentielle avec Medellín (C5), qui elle EST une politique publique décidée, datée et attribuable à des responsables identifiables.</p>
+
+      <div class="callout" style="background:rgba(184,86,47,.09);border-color:rgba(184,86,47,.4)">
+        <svg viewBox="0 0 40 40" stroke="#b8562f"><rect x="8" y="20" width="24" height="14" rx="1"/><path d="M8 20 L20 10 L32 20"/></svg>
+        <div>
+          <h5>Le mot « favela » — une étymologie traditionnelle, pas un fait établi</h5>
+          <p>L'explication la plus couramment citée fait remonter le terme à la colline de <b>Providência</b>, à Rio de Janeiro. Des soldats démobilisés après la guerre de Canudos (1896-1897) s'y installent en <span class="yr">1897</span> et surnomment leur campement « <i>Morro da Favela</i> », du nom d'une plante épineuse (la « favela », <i>Cnidoscolus quercifolius</i>) qui poussait sur les collines de Canudos où ils avaient combattu. Cette histoire est très largement reprise dans la littérature sur le sujet — mais elle reste une <b>explication traditionnelle</b>, transmise et popularisée plutôt qu'un fait établi par une source primaire irréfutable. À citer avec cette réserve, jamais comme une certitude absolue.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Une famille qui arrive en périphérie</h5>
+        <p>Imaginons une famille qui quitte une zone rurale du Nordeste brésilien pour São Paulo, attirée par la promesse d'un emploi qui, une fois sur place, se révèle informel et précaire (vente ambulante, chantier au jour le jour). Sans revenu régulier justifiable, elle ne peut ni louer sur le marché formel ni obtenir de crédit immobilier. Elle s'installe alors sur un terrain non constructible — souvent une pente raide, un terrain inondable ou une zone sans titre clair — et bâtit elle-même, brique après brique, au fil des économies disponibles : une maison qui grandit littéralement avec les revenus de la famille, sans permis de construire, sans certitude sur la propriété du sol, mais avec un toit dès la première nuit. C'est cette logique répétée des milliers de fois, indépendamment, qui produit à l'échelle d'une ville des ensembles entiers de plusieurs centaines de milliers d'habitants.</p>
+      </div>
+
+      <table class="cmp">
+        <caption>Trois mots pour une même réalité — usage, connotation, origine</caption>
+        <thead><tr><th>Terme</th><th>Pays d'usage principal</th><th>Connotation</th><th>Origine du terme</th></tr></thead>
+        <tbody>
+          <tr><td>Favela</td><td>Brésil</td><td>Terme désormais neutre dans l'usage courant et institutionnel, mais longtemps stigmatisant</td><td>Traditionnellement rattachée à la colline de Providência (Rio, 1897) — voir réserve ci-dessus</td></tr>
+          <tr><td>Villa miseria</td><td>Argentine</td><td>Connotation négative marquée, littéralement « ville de la misère »</td><td>Popularisé notamment après un roman des années 1950 décrivant ces quartiers ; usage administratif plus neutre « villa de emergencia »</td></tr>
+          <tr><td>Barriada / pueblo joven</td><td>Pérou</td><td>« Pueblo joven » (« jeune village ») est un terme officiel plus valorisant, adopté pour remplacer « barriada »</td><td>« Barriada » dérive simplement de « barrio » (quartier) ; le remplacement institutionnel illustre un effort volontaire de déstigmatisation</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Espagnol économique (discipline 14) <i>— contraste Mercosur / Alliance du Pacifique et trajectoires économiques déjà vues</i></span>
+        <span class="linkchip">Management interculturel (discipline 08) <i>— distance hiérarchique et inégalités sociales comme variable culturelle</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Traiter l'urbanisation latino-américaine comme un phénomène récent, alors qu'elle s'étale sur plusieurs décennies du XXe siècle</li>
+          <li>Confondre exode rural et migration internationale — ce chapitre porte sur des déplacements internes au pays</li>
+          <li>Citer le taux « ~80% » comme un chiffre unique et définitif sans mentionner la variation selon la source</li>
+        </ul></div>
+        <div class="ee"><h5>Côté médias / discours occidentaux</h5><ul>
+          <li>Réduire la ville latino-américaine à ses bidonvilles, en ignorant l'échelle et la vitesse du choc démographique qui les explique</li>
+          <li>Présenter l'informalité comme un choix culturel ou un échec de « développement », plutôt que comme une réponse rationnelle à un vide institutionnel documenté</li>
+          <li>Ignorer que les mégapoles latino-américaines comptent aussi des centres-villes et des quartiers d'affaires pleinement intégrés à l'économie mondiale</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes conseillère municipale nouvellement élue dans une grande métropole latino-américaine. Un terrain public en pente, inconstructible selon le plan d'urbanisme, est occupé depuis six mois par 300 familles qui y ont déjà bâti. Que proposez-vous ?</p>
+        <p class="dctx">Expulser coûte politiquement cher et ne résout rien : ces familles n'ont nulle part ailleurs où aller et reconstruiront ailleurs. Régulariser reconnaît une occupation illégale et peut encourager d'autres occupations. Le budget municipal ne permet pas de reloger 300 familles dans le formel à court terme.</p>
+        <div class="dopts">
+          <span>A. Ordonner l'expulsion et la démolition, au nom du droit de propriété et de la sécurité (risque d'éboulement)</span>
+          <span>B. Régulariser immédiatement les titres fonciers sur place, sans conditions</span>
+          <span>C. Engager une régularisation progressive conditionnée à des travaux de sécurisation du terrain (murs de soutènement, évacuation des eaux)</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Il n'y a pas de réponse unique. L'option A résout un problème juridique et sécuritaire immédiat mais déplace le problème sans le traiter — les familles expulsées occuperont un autre terrain à risque ailleurs, souvent pire. L'option B reconnaît la réalité sociale mais peut engager la responsabilité municipale en cas d'éboulement sur un terrain non sécurisé, et crée un signal d'appel pour d'autres occupations spontanées de terrains dangereux.</p>
+          <p>L'option C est la plus proche de ce que des politiques réelles d'urbanisme social ont tenté ailleurs sur le continent (voir C5, Medellín) : elle ne nie ni le risque géotechnique ni la réalité de l'occupation, mais elle suppose un budget et un délai que peu de municipalités peuvent réunir rapidement — ce qui explique pourquoi tant de villes se contentent, faute de moyens, de laisser la situation en l'état pendant des années.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Le taux d'urbanisation dit le marché potentiel, pas sa solvabilité — 80% d'urbains ne signifie pas 80% de consommateurs formels</li>
+            <li>Une mégapole concentrée est un marché à forte densité logistique, mais souvent divisé entre un centre bancarisé et des périphéries informelles</li>
+            <li>La vitesse du choc démographique explique aussi la vitesse de la demande en logement, transport et services urbains — un secteur en tension structurelle</li>
+            <li>Ignorer l'informalité dans une étude de marché revient à ignorer une part significative de la population réelle de la ville</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA urbaine s'inscrit ici</h5>
+          <ul>
+            <li>Cartographie prédictive de la croissance informelle à partir d'images satellite, pour anticiper où le vide institutionnel va se combler spontanément</li>
+            <li>Modélisation des flux migratoires internes pour ajuster la planification des réseaux d'eau et d'électricité en amont de l'arrivée</li>
+            <li>Alerte géotechnique automatisée sur les zones à risque déjà occupées, avant l'éboulement plutôt qu'après</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE II ============ -->
+  <section class="disc" id="p2">
+    <div class="tab">篇 II</div>
+    <div class="dhead">
+      <h2>La cascade : ségrégation et violence</h2>
+      <p class="dsub">Chapitres C3 · C4</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Une fois l'informalité installée (C2), un deuxième problème se pose, cette fois spatial : la ville qui absorbe cette croissance ne le fait pas de façon homogène. <b>Comment l'espace urbain se réorganise-t-il quand une partie de la population vit dans l'informalité et l'autre dans le marché formel — et que produit, à terme, cette séparation physique entre deux mondes qui se côtoient sans se mélanger ?</b> Ce chapitre montre que la ségrégation spatiale n'est pas un simple constat sociologique : c'est elle-même une cause, celle qui, combinée à l'informalité, alimente la violence urbaine documentée dans les statistiques et représentée par le cinéma (C6).</p>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — la ségrégation</p>
+      <div class="chain">
+        <span class="node">Informalité concentrée en périphérie ou sur les collines</span><span class="arrow">→</span>
+        <span class="node">Classes aisées se replient dans des enclaves fermées</span><span class="arrow">→</span>
+        <span class="node">Deux circuits urbains parallèles, peu connectés</span><span class="arrow">→</span>
+        <span class="node">Accès inégal à l'emploi, à la sécurité, aux services</span>
+      </div>
+      <p class="mech">Le symétrique architectural de la favela est le <b>barrio cerrado</b> (ou « condominio fechado » au Brésil) : un quartier résidentiel fermé, mur d'enceinte, garde privée, accès filtré. Les deux logiques sont liées par un même réflexe — se protéger d'un espace urbain qu'on ne contrôle plus collectivement, chacune à son extrémité du spectre économique. Le résultat n'est pas une ville, mais deux circuits qui s'ignorent : le trajet quotidien d'un habitant de barrio cerrado peut ne jamais croiser celui d'un habitant de la colline informelle voisine, même si les deux quartiers sont physiquement proches.</p>
+
+      <div class="callout" style="background:rgba(107,111,115,.1);border-color:rgba(107,111,115,.4)">
+        <svg viewBox="0 0 40 40" stroke="#4a4d50"><rect x="6" y="16" width="28" height="18" rx="2"/><line x1="6" y1="16" x2="34" y2="16" stroke-width="2.4"/><circle cx="14" cy="10" r="2"/><circle cx="26" cy="10" r="2"/></svg>
+        <div>
+          <h5>Un phénomène connexe — la gentrification</h5>
+          <p>À l'inverse du repli des classes aisées derrière des murs, certains quartiers populaires ou centraux, souvent historiques ou bien situés, connaissent le mouvement inverse : la <b>gentrification</b>, l'arrivée progressive d'habitants plus aisés qui rénovent, font monter les prix et déplacent, à terme, les habitants d'origine vers une périphérie plus lointaine. Ségrégation par enclave fermée et gentrification par renchérissement progressif sont deux mécanismes distincts, mais tous deux réorganisent l'espace urbain le long de la même ligne de fracture économique.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — de la ségrégation à la violence</p>
+      <p class="mech">La ségrégation spatiale, combinée à l'informalité (absence de titres, faible présence de l'État, économie précaire), crée les conditions d'une <b>violence urbaine</b> documentée : homicides, économies criminelles territorialisées (trafic, extorsion), affrontements entre groupes armés pour le contrôle de zones informelles où l'État est peu présent. Il faut être précis sur le sens de la cascade : la violence n'est pas une caractéristique culturelle de ces quartiers, elle est la conséquence mesurable d'un vide de gouvernance territoriale conjugué à une exclusion économique durable — c'est cette explication causale, et non un jugement moral sur les habitants, que la discipline retient.</p>
+
+      <div class="chain">
+        <span class="node">Informalité (C2)</span><span class="arrow">→</span>
+        <span class="node">Ségrégation (C3)</span><span class="arrow">→</span>
+        <span class="node">Faible présence de l'État sur le territoire</span><span class="arrow">→</span>
+        <span class="node">Économies criminelles territorialisées</span><span class="arrow">→</span>
+        <span class="node">Violence urbaine (C4)</span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>L'habitant du barrio cerrado</h5>
+        <p>Un cadre d'entreprise vivant dans un barrio cerrado de la périphérie de Buenos Aires ou São Paulo organise sa vie entière — travail, école des enfants, loisirs, achats — à l'intérieur d'un périmètre de quartiers fermés et de centres commerciaux sécurisés, reliés par une voiture privée plutôt que par les transports en commun. Il peut ainsi traverser la ville chaque jour sans jamais mettre le pied dans les quartiers informels qui l'entourent, ni y avoir de contact direct avec leurs habitants — une distance sociale que la seule proximité géographique ne suffit pas à réduire, et qui illustre concrètement ce que « deux circuits parallèles » signifie au quotidien.</p>
+      </div>
+
+      <div class="cascade">
+        <svg viewBox="0 0 760 400" width="100%" style="max-width:760px">
+          <g font-family="Josefin Sans" font-size="11" fill="#3a2e26">
+            <text x="380" y="20" text-anchor="middle" font-size="10" letter-spacing="2" fill="#7a6a5c">LA CASCADE CAUSALE — ET SON INVERSION PARTIELLE PAR MEDELLÍN</text>
+            <!-- Escalier descendant C1->C2->C3->C4 -->
+            <g stroke="#b8562f" stroke-width="2" fill="none">
+              <path d="M60 60 H220" marker-end="url(#arrM)"/>
+              <path d="M220 60 V110" marker-end="url(#arrM)"/>
+              <path d="M220 110 H360" marker-end="url(#arrM)"/>
+              <path d="M360 110 V160" marker-end="url(#arrM)"/>
+              <path d="M360 160 H500" marker-end="url(#arrM)"/>
+              <path d="M500 160 V210" marker-end="url(#arrM)"/>
+            </g>
+            <defs>
+              <marker id="arrM" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0 0 L8 4 L0 8 Z" fill="#b8562f"/>
+              </marker>
+              <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0 0 L8 4 L0 8 Z" fill="#3f8f5c"/>
+              </marker>
+            </defs>
+            <!-- C1 -->
+            <g transform="translate(60,60)"><rect x="-56" y="-24" width="112" height="48" rx="10" fill="#fff" stroke="#b8562f" stroke-width="1.6"/><text x="0" y="-4" text-anchor="middle" font-weight="600">C1 · Choc</text><text x="0" y="12" text-anchor="middle" font-size="9.5">démographique</text></g>
+            <!-- C2 -->
+            <g transform="translate(220,110)"><rect x="-58" y="-24" width="116" height="48" rx="10" fill="#fff" stroke="#b8562f" stroke-width="1.6"/><text x="0" y="-4" text-anchor="middle" font-weight="600">C2 · Informalité</text><text x="0" y="12" text-anchor="middle" font-size="9.5">réponse spontanée</text></g>
+            <!-- C3 -->
+            <g transform="translate(360,160)"><rect x="-56" y="-24" width="112" height="48" rx="10" fill="#fff" stroke="#6b6f73" stroke-width="1.6"/><text x="0" y="-4" text-anchor="middle" font-weight="600">C3 · Ségrégation</text><text x="0" y="12" text-anchor="middle" font-size="9.5">deux circuits parallèles</text></g>
+            <!-- C4 -->
+            <g transform="translate(500,210)"><rect x="-56" y="-24" width="112" height="48" rx="10" fill="#fff" stroke="#6b6f73" stroke-width="1.6"/><text x="0" y="-4" text-anchor="middle" font-weight="600">C4 · Violence</text><text x="0" y="12" text-anchor="middle" font-size="9.5">urbaine documentée</text></g>
+            <!-- C6 en aval, représentation -->
+            <g stroke="#6b6f73" stroke-width="2" fill="none"><path d="M556 234 C 610 260, 630 290, 630 320" marker-end="url(#arrM)" stroke-dasharray="2 5"/></g>
+            <g transform="translate(630,350)"><rect x="-60" y="-24" width="120" height="48" rx="10" fill="#fff" stroke="#6b6f73" stroke-width="1.6" stroke-dasharray="3 3"/><text x="0" y="-4" text-anchor="middle" font-weight="600">C6 · Le cinéma</text><text x="0" y="12" text-anchor="middle" font-size="9.5">représente la cascade</text></g>
+            <!-- Fleche C5 Medellin remontant depuis C4 -->
+            <path d="M470 195 C 320 260, 190 220, 120 140 C 100 116, 94 96, 92 86" fill="none" stroke="#3f8f5c" stroke-width="3" marker-end="url(#arrG)"/>
+            <g transform="translate(210,255)"><rect x="-84" y="-26" width="168" height="52" rx="12" fill="#eaf5ee" stroke="#3f8f5c" stroke-width="2"/><text x="0" y="-6" text-anchor="middle" font-weight="700" fill="#2f6b46">C5 · Medellín</text><text x="0" y="10" text-anchor="middle" font-size="9.5" fill="#2f6b46">remonte la cascade</text></g>
+            <text x="210" y="292" text-anchor="middle" font-size="9" fill="#2f6b46" font-style="italic">metrocable + bibliothèques-parcs — politique décidée, datée, attribuable</text>
+          </g>
+        </svg>
+      </div>
+      <p class="note">Ce diagramme est le point pédagogique central de la fiche : la brique brune décrit une chute quasi mécanique (C1→C2→C3→C4), la flèche verte décrit l'unique mouvement inverse du corpus — une décision publique qui ne défait pas la cascade entière, mais qui en <b>remonte partiellement</b> le dernier maillon en reconnectant physiquement les quartiers exclus.</p>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Management interculturel (discipline 08) <i>— distance hiérarchique et fracture spatiale comme deux formes d'inégalité</i></span>
+        <span class="linkchip">Espagnol économique (discipline 14) <i>— les investissements étrangers se concentrent sur les circuits formels, jamais sur les deux</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Décrire la ségrégation comme un simple contraste riche/pauvre, sans la relier à l'informalité qui la précède causalement</li>
+          <li>Confondre ségrégation spatiale et gentrification — deux mécanismes de réorganisation de l'espace, mais aux directions inverses</li>
+          <li>Traiter la violence urbaine comme un chapitre isolé, sans la relier à C2 et C3 comme sa cause en cascade</li>
+        </ul></div>
+        <div class="ee"><h5>Côté médias / discours occidentaux</h5><ul>
+          <li>Montrer la violence des favelas ou des comunas sans jamais montrer la cascade causale — informalité, absence de l'État — qui y mène</li>
+          <li>Présenter le barrio cerrado uniquement comme un choix de confort, sans le lire comme une réponse à la même insécurité perçue que la violence documentée</li>
+          <li>Généraliser une image de violence à l'ensemble d'une ville ou d'un pays, alors que le phénomène est fortement territorialisé à l'échelle du quartier</li>
+        </ul></div>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes maire nouvellement élue d'une grande métropole. Votre budget annuel d'investissement est limité et ne peut financer, cette année, qu'un seul grand chantier : logement d'urgence, sécurité (effectifs de police supplémentaires), ou transport public vers les quartiers périphériques. Que choisissez-vous ?</p>
+        <p class="dctx">Le logement d'urgence répond au problème le plus en amont (C1→C2) mais prend des années à produire un effet visible. La sécurité répond au symptôme le plus visible (C4) mais sans s'attaquer à sa cause. Le transport (proche de la logique C5) reconnecte sans reloger ni réprimer.</p>
+        <div class="dopts">
+          <span>A. Logement d'urgence — traiter la cause la plus en amont de la cascade</span>
+          <span>B. Sécurité renforcée — répondre à l'urgence la plus visible pour les électeurs</span>
+          <span>C. Transport public vers les périphéries — reconnecter sans reloger ni réprimer</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>Aucune des trois options ne « résout » la cascade à elle seule — c'est précisément ce que le cas Medellín (C5) enseigne : il combine plusieurs leviers sur la durée, pas un seul chantier isolé. Le logement d'urgence (A) traite la cause la plus en amont mais mobilise l'essentiel du budget sur un temps politique long, souvent plus long qu'un mandat électoral. La sécurité (B) rassure vite mais sans levier structurel, elle traite le symptôme le plus visible plutôt que la cause, avec un risque réel de simple déplacement de la violence vers un autre territoire.</p>
+          <p>L'option C, la moins spectaculaire des trois, est celle qui se rapproche le plus de la logique effectivement observée à Medellín : un investissement en transport (comparativement moins coûteux qu'un programme de logement massif) peut reconnecter un quartier exclu au reste de la ville sans attendre la résolution complète du problème foncier. Elle ne remplace ni le logement ni la sécurité à long terme, mais elle agit sur le maillon ségrégation→violence de la cascade avec un effet plus rapide qu'un programme de logement.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Choisir où s'implanter dans une métropole latino-américaine, c'est choisir un circuit — le formel connecté ou une zone périphérique où la présence de l'État est plus faible</li>
+            <li>La ségrégation spatiale réelle rend la logistique du dernier kilomètre plus coûteuse et plus lente vers les périphéries mal connectées</li>
+            <li>Recruter uniquement dans le circuit formel réduit le bassin de main-d'œuvre disponible dans une ville où l'économie informelle emploie une part significative de la population active</li>
+            <li>Un plan de sécurité d'entreprise mal calibré sur des statistiques de violence non territorialisées surestime souvent le risque réel d'un site précis</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA urbaine s'inscrit ici</h5>
+          <ul>
+            <li>Optimisation de réseaux de transport de type metrocable — modéliser quel tracé reconnecte le plus de population exclue au moindre coût</li>
+            <li>Cartographie fine, à l'échelle du quartier, du risque sécuritaire réel, pour éviter la généralisation abusive d'une statistique de ville entière</li>
+            <li>Détection précoce des signaux de gentrification (variation des loyers, du bâti) pour anticiper les déplacements de population avant qu'ils ne soient consommés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTIE III ============ -->
+  <section class="disc" id="p3">
+    <div class="tab">篇 III</div>
+    <div class="dhead">
+      <h2>Remonter la cascade : Medellín et ses représentations</h2>
+      <p class="dsub">Chapitres C5 · C6</p>
+    </div>
+    <div class="dbody">
+      <p class="blockt"><span class="bdot"></span>Le problème réel</p>
+      <p class="problem">Si la cascade C1→C2→C3→C4 décrit un enchaînement quasi mécanique, une question reste ouverte : <b>une ville peut-elle inverser, au moins partiellement, cette chaîne — et si oui, par quel mécanisme précis ?</b> Medellín est le seul cas du corpus qui répond par l'affirmative, et c'est cette différence de nature qu'il faut retenir avant tout détail : là où l'informalité (C2) n'est décidée par personne, la politique menée à Medellín EST une décision publique, prise par des responsables identifiables, à une date précise, avec un mécanisme délibéré.</p>
+
+      <div class="callout" style="background:rgba(184,86,47,.09);border-color:rgba(184,86,47,.4)">
+        <svg viewBox="0 0 40 40" stroke="#b8562f"><path d="M8 34 L20 8 L32 34 Z"/><line x1="14" y1="24" x2="26" y2="24"/></svg>
+        <div>
+          <h5>Le point de départ — une ville parmi les plus violentes au monde</h5>
+          <p>Au début des années 1990, Medellín est considérée comme l'une des villes les plus violentes du monde, dans le contexte du conflit lié au cartel de Medellín dirigé par <b>Pablo Escobar</b> — le taux d'homicides y atteint un pic autour de <span class="yr">1991</span>. C'est ce point de départ extrême qui rend la transformation ultérieure d'autant plus étudiée en civilisation latino-américaine : elle part d'un des cas les plus sévères de la cascade C1→C4 du continent.</p>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — qui a décidé quoi, quand</p>
+      <p class="mech">À partir du milieu des années 2000, la municipalité de Medellín met en œuvre une stratégie souvent désignée sous le nom d'<b>« urbanisme social »</b>, associant transformation urbaine et inclusion des quartiers pauvres périphériques. Deux réalisations concrètes et datées la matérialisent :</p>
+      <div class="chain">
+        <span class="node">Metrocable — 1ʳᵉ ligne inaugurée en <b>2004</b></span><span class="arrow">→</span>
+        <span class="node">Bibliothèques-parcs — Biblioteca España inaugurée en <b>2007</b></span><span class="arrow">→</span>
+        <span class="node">Politique associée au mandat du maire Sergio Fajardo (2004-2007)</span>
+      </div>
+      <p class="mech">Le mécanisme précis de cette inversion partielle cible le maillon exact où la cascade se referme : le <b>Metrocable</b>, un téléphérique urbain, relie physiquement les quartiers de collines mal desservis (les mêmes types de quartiers informels décrits en C2-C3) au réseau de métro de la vallée — un trajet qui prenait auparavant des heures de bus en devient quelques minutes. Les <b>bibliothèques-parcs</b>, elles, ne sont pas de simples équipements culturels : implantées aux stations du Metrocable, souvent avec une architecture délibérément monumentale, elles affirment symboliquement que l'État investit dans ces quartiers au même niveau que dans le centre-ville — une réponse directe au sentiment d'abandon institutionnel qui nourrit, en C3-C4, le vide de gouvernance territoriale exploité par les économies criminelles.</p>
+
+      <p class="note"><b>Point d'exactitude :</b> les chiffres précis de baisse du taux d'homicides à Medellín à la suite de cette politique ne sont pas fournis avec certitude dans les repères de ce cours et ne doivent jamais être inventés ou approximés en examen — retenir le mécanisme (transport + équipements culturels ciblés sur les quartiers exclus) et les dates vérifiées (Metrocable 2004, Biblioteca España 2007, mandat Fajardo 2004-2007) plutôt qu'une statistique non sourcée. Retenir aussi que la transformation se poursuit au-delà du seul mandat de Sergio Fajardo — lui attribuer la totalité du processus serait une simplification.</p>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Le maire réformateur</h5>
+        <p>Sergio Fajardo, mathématicien devenu maire de Medellín en 2004, incarne dans ce cours la figure du décideur identifiable — à l'opposé de l'absence de décideur unique qui caractérise C2. Sa politique ne prétend pas supprimer l'informalité ni reloger l'ensemble des habitants des comunas : elle choisit un point de levier précis, la connexion physique et symbolique, en pariant qu'un accès facilité à l'emploi et à l'éducation du centre-ville, combiné à une présence architecturale forte de l'État dans les quartiers exclus, peut desserrer l'étau ségrégation-violence sans attendre la résolution complète du problème foncier.</p>
+      </div>
+
+      <details class="dilemma">
+        <summary>Dilemme — Révéler l'analyse après avoir répondu</summary>
+        <p class="dq">Vous êtes maire nouvellement élue d'une autre grande métropole latino-américaine, inspirée par le cas de Medellín. Reproduisez-vous la même stratégie (metrocable + bibliothèques-parcs) telle quelle dans votre ville ?</p>
+        <p class="dctx">Votre ville a une géographie différente (pas de collines aussi prononcées), une économie criminelle organisée différemment, et un budget plus contraint que celui dont a disposé Medellín sur plusieurs mandats successifs.</p>
+        <div class="dopts">
+          <span>A. Oui, reproduire le modèle à l'identique — il a fait ses preuves</span>
+          <span>B. Non, abandonner l'idée — chaque ville est un cas particulier non transférable</span>
+          <span>C. Adapter le principe (connexion physique + symbolique ciblée) sans copier l'outil (le téléphérique n'a de sens que sur un relief de collines)</span>
+        </div>
+        <div class="dreveal">
+          <h6>Analyse</h6>
+          <p>L'option A relève d'une erreur fréquente dans le discours occidental sur Medellín : présenter la ville comme un « miracle » universel et l'outil (le téléphérique) comme la solution en soi, indépendamment du contexte géographique et institutionnel qui l'a rendu pertinent. L'option B, à l'inverse, renonce à tirer toute leçon transférable d'un cas pourtant documenté.</p>
+          <p>L'option C est la plus défendable : ce qui est transférable, c'est le <b>principe</b> — cibler délibérément, par une infrastructure et un symbole visibles, le maillon ségrégation-violence de la cascade — pas l'outil précis. Une ville sans relief marqué chercherait un équivalent fonctionnel (bus à haut niveau de service, tramway) plutôt qu'un téléphérique ; une ville où l'économie criminelle est moins territorialisée qu'à Medellín au début des années 1990 devrait aussi réévaluer si le même levier produirait le même effet relatif.</p>
+        </div>
+      </details>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>Une ville qui a mené une politique de reconnexion des périphéries (type Medellín) réduit, pour une entreprise, le risque logistique et sécuritaire perçu sur ces zones</li>
+            <li>La présence de bibliothèques-parcs ou d'équipements publics forts dans un quartier périphérique est un indicateur observable d'investissement institutionnel local, utile à une étude d'implantation</li>
+            <li>Ne pas confondre l'image internationale « Medellín transformée » avec une garantie de sécurité totale et permanente — l'inversion de la cascade est partielle, pas complète</li>
+            <li>Un investissement dans le transport reliant un site industriel ou logistique aux quartiers périphériques peut élargir le bassin de recrutement, comme le fait le Metrocable pour l'emploi</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA urbaine s'inscrit ici</h5>
+          <ul>
+            <li>Simulation de tracés de transport alternatifs (câble, bus à haut niveau de service) selon le relief et la densité de population exclue à connecter</li>
+            <li>Suivi longitudinal d'indicateurs de connexion (temps de trajet réel vers le centre-ville) comme proxy mesurable de l'inversion partielle de la cascade</li>
+            <li>Modèle d'aide à la décision budgétaire pour arbitrer, comme dans le dilemme ci-dessus, entre logement, sécurité et transport selon le contexte local</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Le problème réel — C6, le corpus filmique</p>
+      <p class="problem">Reste une dernière question, qui referme la discipline sur elle-même : comment la cascade C1→C4 est-elle <b>montrée</b> au reste du monde, et avec quels effets sur la perception qu'on s'en fait ? Le cinéma latino-américain contemporain a produit plusieurs films majeurs qui cadrent explicitement cette cascade — mais la cadrer n'est pas neutre : un même événement peut être filmé comme fatalité culturelle ou comme conséquence documentée d'un système, et ce choix de mise en scène est lui-même un objet d'analyse.</p>
+
+      <p class="blockt"><span class="bdot"></span>Le mécanisme — méthode d'analyse d'image filmique</p>
+      <p class="mech">Analyser une scène de ce corpus suppose de distinguer ce qui relève d'une <b>compréhension</b> à construire à chaque nouveau film, et ce qui relève d'un <b>réflexe méthodologique</b> à appliquer systématiquement, quel que soit le film :</p>
+      <div class="split">
+        <div class="u">
+          <h5>À comprendre — logique</h5>
+          <p>Pourquoi le choix du plan importe : un plan large et fixe sur une favela filme un territoire et invite à en lire la géographie (proximité, densité, absence de voirie) ; un montage rapide et une caméra portée au contraire immergent le spectateur dans l'urgence d'une scène de violence sans lui laisser le temps d'en observer les causes spatiales. Le même événement raconté par ces deux grammaires visuelles produit deux lectures politiques différentes de la même cascade causale.</p>
+        </div>
+        <div class="m">
+          <h5>À automatiser — réflexe d'analyse</h5>
+          <ul>
+            <li>Identifier systématiquement quel maillon de la cascade (C1 à C4) une scène illustre avant toute analyse esthétique</li>
+            <li>Noter le point de vue caméra : celui d'un habitant du quartier ou celui d'un observateur extérieur</li>
+            <li>Repérer si la violence est montrée comme cause ou comme conséquence dans l'ordre du montage</li>
+            <li>Situer chaque film : pays, année, ville représentée, avant toute interprétation</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Exemple concret</p>
+      <div class="example">
+        <h5>Le cinéaste face à la cascade</h5>
+        <p>Dans <i>Cidade de Deus</i> (Fernando Meirelles, 2002), la narration suit plusieurs décennies dans une favela de Rio, montrant explicitement comment l'absence de perspectives économiques transforme des enfants en petits délinquants puis en chefs de gang adultes — une mise en scène qui rend visible, sur la durée d'un récit, l'enchaînement même que ce cours décrit en C2-C3-C4, plutôt que de présenter la violence comme un fait brut sans généalogie.</p>
+      </div>
+
+      <table class="cmp">
+        <caption>Le corpus filmique — quatre films, quatre villes, quatre maillons de la cascade</caption>
+        <thead><tr><th>Film</th><th>Réalisateur · pays · année</th><th>Ville représentée</th><th>Maillon de la cascade illustré</th></tr></thead>
+        <tbody>
+          <tr><td>Cidade de Deus</td><td>Fernando Meirelles · Brésil · 2002 (d'après le roman de Paulo Lins)</td><td>Rio de Janeiro</td><td>C2→C4 — de l'informalité à la violence de gang, sur plusieurs décennies</td></tr>
+          <tr><td>Amores perros</td><td>Alejandro González Iñárritu · Mexique · 2000</td><td>Mexico</td><td>C3 — trois récits croisés qui traversent des mondes sociaux séparés par la ségrégation</td></tr>
+          <tr><td>La Zona</td><td>Rodrigo Plá · Mexique · 2007</td><td>Mexico (fiction)</td><td>C3 — le barrio cerrado filmé de l'intérieur, sa loi privée face à la ville extérieure</td></tr>
+          <tr><td>Elefante blanco</td><td>Pablo Trapero · Argentine · 2012</td><td>Buenos Aires</td><td>C2→C4 — l'action sociale et religieuse dans une villa miseria confrontée à la violence territoriale</td></tr>
+        </tbody>
+      </table>
+
+      <p class="blockt"><span class="bdot"></span>Liens transversaux</p>
+      <div class="linkrow">
+        <span class="linkchip">Espagnol économique (discipline 14) <i>— le vocabulaire économique des inégalités déjà rencontré, appliqué ici à l'image</i></span>
+        <span class="linkchip">Management interculturel (discipline 08) <i>— le point de vue caméra comme analogue du point de vue managérial situé</i></span>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Erreurs classiques</p>
+      <div class="errors">
+        <div class="et"><h5>Côté étudiantes</h5><ul>
+          <li>Analyser un film du corpus comme un simple documentaire sur « la violence latino-américaine », sans questionner les choix de mise en scène</li>
+          <li>Confondre les quatre films entre eux — pays, année, ville — faute d'avoir mémorisé le tableau de comparaison avant l'analyse fine</li>
+          <li>Oublier de relier une scène à un chapitre précis de la cascade (C1 à C4) avant de commenter l'esthétique</li>
+        </ul></div>
+        <div class="ee"><h5>Côté médias / discours occidentaux</h5><ul>
+          <li>Réduire ces films à un exotisme de la violence, sans lire leur ambition de rendre visible une cascade causale précise</li>
+          <li>Présenter Medellín, à la faveur de sa notoriété touristique récente, comme un « miracle » sans méthode transférable, en occultant le mécanisme précis (transport + équipements ciblés) qui l'explique</li>
+          <li>Traiter les quatre films comme interchangeables alors qu'ils représentent quatre villes, quatre pays et quatre maillons différents de la même cascade</li>
+        </ul></div>
+      </div>
+
+      <div class="boxrow">
+        <div class="ceo">
+          <h5>◆ Comment un CEO voit ce chapitre</h5>
+          <ol>
+            <li>L'image internationale d'une ville (forgée en partie par ce type de film) influence la perception du risque par des investisseurs qui n'y sont jamais allés</li>
+            <li>Un corpus filmique reconnu peut aussi devenir un atout touristique et culturel — cas de Medellín, dont l'image s'est partiellement retournée</li>
+            <li>Séparer la représentation médiatique du diagnostic réel (la cascade causale documentée) évite de sur- ou sous-estimer un risque d'implantation</li>
+            <li>La diversité des quatre villes du corpus rappelle qu'aucune généralisation continentale unique n'est fiable pour une décision d'implantation</li>
+          </ol>
+        </div>
+        <div class="helix">
+          <h5>◆ HelixOps — où l'IA urbaine s'inscrit ici</h5>
+          <ul>
+            <li>Analyse automatisée de contenu (cadrage, montage) à grande échelle pour distinguer représentation sensationnaliste et représentation documentée de la cascade</li>
+            <li>Corrélation entre couverture médiatique d'une ville et statistiques réelles territorialisées, pour objectiver l'écart perception/réalité</li>
+            <li>Indexation du corpus filmique latino-américain par maillon causal représenté, comme outil pédagogique de recherche pour la discipline elle-même</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="blockt"><span class="bdot"></span>Concepts-colonnes de la discipline</p>
+      <div class="spine">
+        <span class="sp">Choc démographique<i>C1·C2</i></span>
+        <span class="sp">Vide institutionnel<i>C1·C2·C3</i></span>
+        <span class="sp">Cascade causale<i>C1→C2→C3→C4</i></span>
+        <span class="sp">Inversion partielle par décision publique<i>C5</i></span>
+        <span class="sp">Représentation vs diagnostic<i>C6</i></span>
+      </div>
+    </div>
+  </section>
 
   <div class="foot">
-    <a class="navbtn prev" href="18-civilisation-americaine.html">← Civilisation américaine — pu…</a>
+    <a class="navbtn prev" href="18-civilisation-americaine.html">← Civilisation américaine — publicité et marketing</a>
     <a class="navbtn home" href="index.html">Index des matières</a>
-    <a class="navbtn next" href="index.html">Index →</a>
+    <a class="navbtn next" href="index.html">Retour à l'index →</a>
   </div>
-  <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé</p>
+  <p class="foot mark">Master Plans — L'Architecture des Disciplines · Étape 2, cours détaillé · dernière fiche de la série</p>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script>
+/* Le contenu est entièrement visible sans JS (aucune règle CSS ne le masque).
+   Si anime.js a chargé, on rejoue une simple entrée en fondu/translation sur
+   les panneaux — purement décoratif, jamais porteur d'information. */
+(function(){
+  try{
+    if (typeof anime === 'undefined') return;
+    var sections = document.querySelectorAll('.disc, .hero, .tl-wrap, .actor');
+    sections.forEach(function(el){ el.style.opacity = '0'; el.style.transform = 'translateY(14px)'; });
+    anime({
+      targets: '.hero, .tl-wrap, .actor, .disc',
+      opacity: [0,1],
+      translateY: [14,0],
+      easing: 'easeOutQuad',
+      duration: 700,
+      delay: anime.stagger(80)
+    });
+  }catch(e){
+    document.querySelectorAll('.disc, .hero, .tl-wrap, .actor').forEach(function(el){
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+})();
+</script>
 </body>
 </html>
