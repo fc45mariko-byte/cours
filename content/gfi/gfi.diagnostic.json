@@ -1,0 +1,85 @@
+{
+  "chapitre": "gfi.diagnostic",
+  "notions": [
+    {
+      "id": "gfi.diagnostic.methode",
+      "titre": "Méthode du diagnostic financier rédigé",
+      "niveau": "A",
+      "prerequis": ["gfi.equilibre.situations", "gfi.performance.caf", "gfi.ratios.rentabilite", "gfi.ratios.rotation"],
+      "connexes": ["gfi.ratios.structure", "gfi.equilibre.effet-ciseaux"],
+      "question": "Comment transformer une série de calculs en un diagnostic argumenté et utile à la décision ?",
+      "definition": "Le diagnostic financier rédigé synthétise l'analyse de l'activité, de la rentabilité, de l'équilibre financier et de la structure de financement, sur plusieurs exercices et par comparaison avec le secteur. Il ne se contente pas de citer des chiffres : il les interprète, les relie entre eux (causes et conséquences), identifie forces et faiblesses, et débouche sur des recommandations.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Présenter le contexte : secteur, taille, objectif du diagnostic (banquier, investisseur, dirigeant)",
+          "Activité et performance : évolution du CA, de la VA, de l'EBE, des taux de marge, du résultat",
+          "Rentabilité : économique et financière, effet de levier",
+          "Équilibre : FRNG, BFR (en jours de CA), trésorerie ; ratios de rotation",
+          "Structure et solvabilité : autonomie financière, endettement, capacité de remboursement",
+          "Synthèse : forces, faiblesses, risques ; recommandations concrètes et chiffrées si possible"
+        ] },
+        { "type": "liste", "items": [
+          "Toujours comparer : dans le temps (N, N−1, N−2) et dans l'espace (secteur, concurrents)",
+          "Expliquer chaque évolution par ses causes (prix, volumes, coûts, délais)",
+          "Rédiger : phrases complètes, connecteurs logiques, chiffres arrondis et commentés",
+          "Rester prudent : les ratios sont des indices, pas des preuves"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Diagnostic financier", "en": "financial analysis / financial diagnosis", "es": "diagnóstico financiero", "definition": "Analyse argumentée de la santé financière d'une entreprise." },
+        { "fr": "Forces et faiblesses", "en": "strengths and weaknesses", "es": "fortalezas y debilidades", "definition": "Points favorables et défavorables mis en évidence par l'analyse." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Entre N−1 et N, le CA de Mobilier Ligérien progresse de 18 %, mais l'EBE ne gagne que 5 % : les charges de personnel ont augmenté plus vite que l'activité. Le BFRE passe de 38 à 45 jours de CA, sous l'effet d'un allongement des délais clients (de 52 à 61 jours). Malgré un FRNG positif, la trésorerie devient négative (− 12 k€). Nous recommandons de renforcer le recouvrement (relances, affacturage) et de consolider les ressources stables avant tout nouvel investissement. »" },
+      "contreExemple": "« Le ratio d'autonomie financière est de 0,35. Le délai clients est de 61 jours. Le FRNG est de 110 000 €. » : une liste de chiffres sans interprétation ni lien n'est pas un diagnostic.",
+      "confusions": [
+        { "a": "Décrire (« le BFR augmente »)", "b": "Expliquer (« le BFR augmente parce que les délais clients s'allongent »)", "explication": "Le diagnostic exige des causes et des conséquences." }
+      ],
+      "verification": ["Quelles sont les quatre grandes parties d'un diagnostic financier ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.gfi.diagnostic.001", "notion": "gfi.diagnostic.methode", "format": "unique", "niveau": 2, "competence": "interpreter",
+      "enonce": "Le CA progresse de 20 %, le délai clients passe de 40 à 65 jours et la trésorerie nette devient négative. Quelle phrase de diagnostic est la plus pertinente ?",
+      "choix": [
+        { "id": "a", "texte": "La croissance s'accompagne d'une dégradation du recouvrement qui gonfle le BFR et absorbe la trésorerie : il faut agir sur les délais clients ou financer le BFR.", "correct": true, "explication": "Elle relie les trois constats par des liens de cause à effet et ouvre sur une action." },
+        { "id": "b", "texte": "Le CA augmente de 20 %, le délai clients est de 65 jours et la trésorerie est négative.", "correct": false, "explication": "Simple énumération, sans interprétation." },
+        { "id": "c", "texte": "L'entreprise est en faillite.", "correct": false, "explication": "Conclusion excessive : une trésorerie négative n'est pas une cessation des paiements." },
+        { "id": "d", "texte": "La croissance améliore forcément la trésorerie.", "correct": false, "explication": "C'est l'inverse ici : effet de ciseaux." }
+      ]
+    },
+    {
+      "id": "q.gfi.diagnostic.002", "notion": "gfi.diagnostic.methode", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles pratiques améliorent la qualité d'un diagnostic financier ?",
+      "choix": [
+        { "id": "a", "texte": "Comparer plusieurs exercices", "correct": true, "explication": "La tendance compte autant que le niveau." },
+        { "id": "b", "texte": "Comparer avec les entreprises du secteur", "correct": true, "explication": "Les normes varient beaucoup selon les activités." },
+        { "id": "c", "texte": "Présenter le maximum de ratios possibles", "correct": false, "explication": "La pertinence prime sur la quantité." },
+        { "id": "d", "texte": "Terminer par des recommandations", "correct": true, "explication": "Le diagnostic sert une décision." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.gfi.diagnostic.001", "notions": ["gfi.diagnostic.methode"],
+      "question": "Présentez le plan type d'un diagnostic financier et trois règles de rédaction.",
+      "reponse": "Plan : contexte et objectif ; activité et performance (CA, VA, EBE, marges) ; rentabilité (économique, financière, levier) ; équilibre (FRNG, BFR, trésorerie, rotations) ; structure et solvabilité (autonomie, endettement, capacité de remboursement) ; synthèse forces/faiblesses et recommandations. Règles : comparer dans le temps et avec le secteur ; expliquer les causes et conséquences ; rédiger avec des chiffres commentés et conclure par des actions.",
+      "indispensables": ["Activité / rentabilité / équilibre / structure", "Comparaisons temporelles et sectorielles", "Liens de cause à effet", "Recommandations"],
+      "erreurs": ["Énumérer des ratios sans les interpréter"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.gfi.diagnostic.01", "notions": ["gfi.diagnostic.methode"], "type": "redaction", "niveau": 3, "fictif": true,
+      "titre": "Rédiger une synthèse de diagnostic",
+      "enonce": "Indicateurs de la société Kayak Loire (N−1 → N) : CA HT 1,20 M€ → 1,50 M€ ; EBE 150 k€ → 160 k€ ; taux de marge brute d'exploitation 12,5 % → 10,7 % ; résultat net 60 k€ → 55 k€ ; FRNG 90 k€ → 85 k€ ; BFRE 40 jours → 52 jours de CA ; trésorerie nette + 25 k€ → − 32 k€ ; dettes financières ÷ CAF 2,1 → 2,6 ans.",
+      "questions": [
+        { "id": "1", "consigne": "Rédigez une synthèse de 8 à 12 lignes (constats reliés, forces, faiblesses, recommandations).",
+          "reponse": { "type": "libre", "criteres": ["Croissance forte de l'activité (+ 25 %) mais rentabilité en baisse (marge, résultat)", "Dégradation du BFRE (+ 12 jours) expliquant le passage de la trésorerie en négatif", "FRNG stable voire en légère baisse : la croissance n'a pas été financée", "Endettement encore soutenable (2,6 ans) : marge de manœuvre pour emprunter", "Recommandations : maîtriser les délais clients / stocks, financer le BFR, surveiller les coûts"],
+            "corrige": "Kayak Loire connaît une croissance soutenue (CA + 25 %), mais elle s'accompagne d'une érosion de la rentabilité : l'EBE ne progresse que de 6,7 %, si bien que le taux de marge brute d'exploitation recule de 12,5 % à 10,7 % et que le résultat net baisse. Surtout, le BFRE s'alourdit de 12 jours de CA, ce qui, appliqué à un CA plus élevé, représente un besoin supplémentaire important ; le FRNG n'ayant pas été renforcé, la trésorerie bascule de + 25 k€ à − 32 k€ : c'est un effet de ciseaux. La structure financière reste saine (capacité de remboursement de 2,6 ans), ce qui laisse une marge pour un financement à moyen terme. Recommandations : identifier l'origine de la hausse du BFRE (délais clients, stocks), renforcer le recouvrement, financer la croissance par des ressources stables plutôt que par le découvert, et analyser la hausse des charges qui pèse sur la marge." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}

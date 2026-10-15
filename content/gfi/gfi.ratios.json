@@ -1,0 +1,755 @@
+{
+  "chapitre": "gfi.ratios",
+  "notions": [
+    {
+      "id": "gfi.ratios.structure",
+      "titre": "Ratios de structure et d'endettement",
+      "niveau": "I",
+      "prerequis": [
+        "gfi.bilan-fonctionnel.reclassement",
+        "gfi.performance.caf"
+      ],
+      "connexes": [
+        "gfi.ratios.levier",
+        "gfi.financement.long-terme"
+      ],
+      "question": "L'entreprise est-elle trop dépendante de ses prêteurs, et pourrait-elle rembourser ses dettes ?",
+      "definition": "Les ratios de structure comparent les capitaux propres et les dettes financières pour apprécier l'indépendance financière et la capacité d'endettement. Les banques les utilisent pour décider d'accorder un prêt. Les seuils indiqués sont des repères usuels, à adapter au secteur.",
+      "fonctionnement": [
+        {
+          "type": "tableau",
+          "entetes": [
+            "Ratio",
+            "Formule",
+            "Repère usuel"
+          ],
+          "lignes": [
+            [
+              "Autonomie financière",
+              "Capitaux propres ÷ Total des ressources (ou du bilan)",
+              "Souvent attendu au-dessus de 20 à 30 %"
+            ],
+            [
+              "Taux d'endettement (gearing)",
+              "Dettes financières ÷ Capitaux propres",
+              "Inférieur à 1 en général"
+            ],
+            [
+              "Capacité de remboursement",
+              "Dettes financières ÷ CAF",
+              "Inférieure à 3 ou 4 ans"
+            ],
+            [
+              "Financement des immobilisations",
+              "Ressources stables ÷ Emplois stables",
+              "Supérieur à 1 (équivaut à FRNG > 0)"
+            ]
+          ]
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Taux d'endettement",
+          "en": "gearing / debt-to-equity ratio",
+          "es": "ratio de endeudamiento",
+          "definition": "Dettes financières rapportées aux capitaux propres."
+        },
+        {
+          "fr": "Capacité de remboursement",
+          "en": "debt repayment capacity",
+          "es": "capacidad de devolución",
+          "definition": "Nombre d'années de CAF nécessaires pour rembourser les dettes financières."
+        },
+        {
+          "fr": "Autonomie financière",
+          "en": "equity ratio / financial independence",
+          "es": "autonomía financiera",
+          "definition": "Part des capitaux propres dans les ressources."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Capitaux propres 300 000 € ; dettes financières 360 000 € ; CAF 80 000 €. Endettement : 360 000 ÷ 300 000 = 1,2 ; capacité de remboursement : 360 000 ÷ 80 000 = 4,5 ans. Un banquier jugera l'entreprise déjà très endettée."
+      },
+      "confusions": [
+        {
+          "a": "Dettes financières",
+          "b": "Total des dettes",
+          "explication": "Les ratios d'endettement ne retiennent que les dettes financières (emprunts, souvent concours bancaires inclus selon la convention), pas les dettes fournisseurs."
+        }
+      ],
+      "verification": [
+        "Pourquoi un banquier s'intéresse-t-il au rapport dettes financières ÷ CAF ?"
+      ],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Les seuils et le périmètre des dettes financières (avec ou sans concours bancaires, nettes ou non de la trésorerie) diffèrent selon les manuels : appliquer la convention du cours."
+    },
+    {
+      "id": "gfi.ratios.liquidite",
+      "titre": "Ratios de liquidité",
+      "niveau": "I",
+      "prerequis": [
+        "gfi.equilibre.rentabilite-vs-liquidite"
+      ],
+      "connexes": [
+        "gfi.equilibre.tresorerie-nette"
+      ],
+      "question": "L'entreprise peut-elle payer ses dettes à court terme avec ses actifs à court terme ?",
+      "definition": "Les ratios de liquidité comparent les actifs à moins d'un an aux dettes à moins d'un an. Liquidité générale : l'ensemble de l'actif circulant couvre-t-il les dettes à court terme ? Liquidité réduite : même question sans les stocks, qui peuvent être longs à vendre. Liquidité immédiate : seules les disponibilités sont prises en compte.",
+      "fonctionnement": [
+        {
+          "type": "tableau",
+          "entetes": [
+            "Ratio",
+            "Formule",
+            "Repère"
+          ],
+          "lignes": [
+            [
+              "Liquidité générale",
+              "Actif circulant (à moins d'un an) ÷ Dettes à court terme",
+              "> 1"
+            ],
+            [
+              "Liquidité réduite",
+              "(Actif circulant − Stocks) ÷ Dettes à court terme",
+              "Proche de 1"
+            ],
+            [
+              "Liquidité immédiate",
+              "Disponibilités ÷ Dettes à court terme",
+              "Variable ; un ratio très élevé peut signaler une trésorerie oisive"
+            ]
+          ]
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Liquidité générale",
+          "en": "current ratio",
+          "es": "ratio de liquidez general",
+          "definition": "Actif circulant ÷ dettes à court terme."
+        },
+        {
+          "fr": "Liquidité réduite",
+          "en": "quick ratio / acid-test ratio",
+          "es": "prueba ácida",
+          "definition": "Actif circulant hors stocks ÷ dettes à court terme."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Actif circulant 360 000 € dont stocks 160 000 € et disponibilités 20 000 € ; dettes à court terme 240 000 €. Liquidité générale 1,5 ; réduite (360 000 − 160 000) ÷ 240 000 = 0,83 ; immédiate 0,08. L'entreprise dépend de l'écoulement de ses stocks."
+      },
+      "confusions": [
+        {
+          "a": "Liquidité (court terme)",
+          "b": "Solvabilité (capacité globale à rembourser toutes ses dettes)",
+          "explication": "Une entreprise solvable à long terme peut manquer de liquidité à court terme."
+        }
+      ],
+      "verification": [
+        "Pourquoi retire-t-on les stocks dans la liquidité réduite ?"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gfi.ratios.rotation",
+      "titre": "Délais clients, délais fournisseurs, rotation des stocks",
+      "niveau": "I",
+      "prerequis": [
+        "gfi.equilibre.bfr"
+      ],
+      "connexes": [
+        "odg.stocks.valorisation",
+        "tci.paiement.risques"
+      ],
+      "question": "En combien de jours l'entreprise encaisse-t-elle ses clients, paie-t-elle ses fournisseurs et écoule-t-elle ses stocks ?",
+      "definition": "Les ratios de rotation expriment les postes du BFRE en jours d'activité, ce qui permet de les comparer d'une année sur l'autre, avec le secteur et avec les délais légaux. Comme les créances et dettes figurent TTC au bilan, on les rapporte à des flux TTC.",
+      "fonctionnement": [
+        {
+          "type": "formule",
+          "formule": "Délai clients (jours) = Créances clients TTC (+ EENE) ÷ CA TTC × 360"
+        },
+        {
+          "type": "formule",
+          "formule": "Délai fournisseurs (jours) = Dettes fournisseurs TTC ÷ Achats TTC × 360"
+        },
+        {
+          "type": "formule",
+          "formule": "Rotation du stock de marchandises (jours) = Stock moyen ÷ Coût d'achat des marchandises vendues × 360        (stock moyen = (SI + SF) ÷ 2)"
+        },
+        {
+          "type": "attention",
+          "texte": "En France, le délai de paiement entre professionnels est en principe plafonné à 60 jours à compter de l'émission de la facture, ou 45 jours fin de mois si les parties en conviennent (Code de commerce, art. L441-10)."
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Délai de recouvrement clients",
+          "en": "days sales outstanding (DSO)",
+          "es": "periodo medio de cobro",
+          "definition": "Durée moyenne de crédit accordée aux clients."
+        },
+        {
+          "fr": "Délai fournisseurs",
+          "en": "days payable outstanding (DPO)",
+          "es": "periodo medio de pago",
+          "definition": "Durée moyenne de crédit obtenue des fournisseurs."
+        },
+        {
+          "fr": "Rotation des stocks",
+          "en": "days inventory outstanding / stock turnover",
+          "es": "rotación de existencias",
+          "definition": "Durée moyenne de séjour des biens en stock."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "CA HT 900 000 € (TTC 1 080 000 €) ; créances clients 135 000 € → 135 000 ÷ 1 080 000 × 360 = 45 jours. Achats HT 500 000 € (TTC 600 000 €) ; fournisseurs 100 000 € → 60 jours. L'entreprise est payée plus vite qu'elle ne paie : favorable au BFRE."
+      },
+      "confusions": [
+        {
+          "a": "Rapporter les créances TTC au CA HT",
+          "b": "Rapporter les créances TTC au CA TTC",
+          "explication": "Il faut des grandeurs homogènes : sinon le délai est surévalué de 20 % (taux normal)."
+        }
+      ],
+      "verification": [
+        "Pourquoi le stock de marchandises est-il rapporté au coût d'achat et non au chiffre d'affaires ?"
+      ],
+      "sources": [
+        "src.code-commerce"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gfi.ratios.rentabilite",
+      "titre": "Rentabilité économique et rentabilité financière",
+      "niveau": "I",
+      "prerequis": [
+        "gfi.performance.sig",
+        "gfi.bilan-fonctionnel.reclassement"
+      ],
+      "connexes": [
+        "gfi.ratios.levier",
+        "gfi.equilibre.rentabilite-vs-liquidite"
+      ],
+      "question": "Que rapportent les capitaux investis dans l'entreprise, et que rapportent les fonds des associés ?",
+      "definition": "La rentabilité économique mesure la performance de l'outil économique, indépendamment de son financement : résultat d'exploitation (souvent après impôt) rapporté aux capitaux investis (immobilisations + BFRE). La rentabilité financière mesure ce que l'entreprise rapporte à ses actionnaires : résultat net rapporté aux capitaux propres. On mesure aussi des taux de marge (EBE ÷ CA, résultat net ÷ CA).",
+      "fonctionnement": [
+        {
+          "type": "formule",
+          "formule": "Rentabilité économique = Résultat d'exploitation ÷ Capitaux investis (immobilisations d'exploitation + BFRE)"
+        },
+        {
+          "type": "formule",
+          "formule": "Rentabilité financière (ROE) = Résultat net ÷ Capitaux propres"
+        },
+        {
+          "type": "formule",
+          "formule": "Taux de marge brute d'exploitation = EBE ÷ CA HT        Taux de marge nette = Résultat net ÷ CA HT"
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Rentabilité économique",
+          "en": "return on capital employed (ROCE) / return on assets",
+          "es": "rentabilidad económica",
+          "definition": "Résultat d'exploitation ÷ capitaux investis."
+        },
+        {
+          "fr": "Rentabilité financière",
+          "en": "return on equity (ROE)",
+          "es": "rentabilidad financiera",
+          "definition": "Résultat net ÷ capitaux propres."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Capitaux investis 500 000 € (financés par 300 000 € de capitaux propres et 200 000 € de dettes) ; résultat d'exploitation 60 000 € → rentabilité économique 12 %. Résultat net 37 500 € → rentabilité financière 37 500 ÷ 300 000 = 12,5 %."
+      },
+      "confusions": [
+        {
+          "a": "Rentabilité (résultat ÷ capitaux)",
+          "b": "Marge (résultat ÷ CA)",
+          "explication": "Une entreprise peut avoir une faible marge mais une bonne rentabilité si elle fait tourner rapidement ses capitaux (grande distribution)."
+        }
+      ],
+      "verification": [
+        "Pourquoi la rentabilité économique ne dépend-elle pas du mode de financement ?"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gfi.ratios.levier",
+      "titre": "L'effet de levier financier",
+      "niveau": "A",
+      "prerequis": [
+        "gfi.ratios.rentabilite",
+        "gfi.ratios.structure"
+      ],
+      "connexes": [
+        "gfi.financement.long-terme",
+        "odg.couts.levier-operationnel"
+      ],
+      "question": "Pourquoi s'endetter peut-il augmenter la rentabilité des actionnaires, et quand cela devient-il dangereux ?",
+      "definition": "L'effet de levier décrit l'influence de l'endettement sur la rentabilité financière. Si la rentabilité économique est supérieure au coût de la dette, chaque euro emprunté rapporte plus qu'il ne coûte : la rentabilité financière augmente avec l'endettement (levier positif). Si la rentabilité économique devient inférieure au coût de la dette, l'endettement la fait chuter (effet de massue). Le levier accroît donc à la fois la rentabilité espérée et le risque.",
+      "fonctionnement": [
+        {
+          "type": "formule",
+          "formule": "Rf = [ Re + (Re − i) × D ÷ CP ] × (1 − t)"
+        },
+        {
+          "type": "liste",
+          "items": [
+            "Re : rentabilité économique avant impôt ; i : taux d'intérêt de la dette ; D : dettes financières ; CP : capitaux propres ; t : taux d'impôt sur les sociétés",
+            "(Re − i) : différentiel ; D ÷ CP : bras de levier"
+          ]
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Effet de levier",
+          "en": "financial leverage effect",
+          "es": "efecto apalancamiento financiero",
+          "definition": "Effet de l'endettement sur la rentabilité financière."
+        },
+        {
+          "fr": "Effet de massue",
+          "en": "reverse leverage effect",
+          "es": "efecto apalancamiento negativo",
+          "definition": "Baisse de la rentabilité financière due à l'endettement quand Re < i."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Re = 12 %, i = 5 %, D = 200 000 €, CP = 300 000 €, t = 25 %. Avant impôt : 12 + (12 − 5) × 2/3 = 16,67 % ; après impôt : 12,5 %. Sans dette (CP = 500 000 €), Rf après impôt serait 12 × 0,75 = 9 %. Si Re tombait à 3 % : [3 + (3 − 5) × 2/3] × 0,75 = 1,25 % seulement."
+      },
+      "confusions": [
+        {
+          "a": "Levier financier (structure de financement)",
+          "b": "Levier opérationnel (structure des coûts)",
+          "explication": "Le premier dépend des dettes, le second de la part des charges fixes."
+        }
+      ],
+      "verification": [
+        "À quelle condition l'endettement augmente-t-il la rentabilité financière ?"
+      ],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.gfi.ratios.001",
+      "notion": "gfi.ratios.structure",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "interpreter",
+      "enonce": "Dettes financières 480 000 € ; CAF 60 000 €. Que conclure de la capacité de remboursement ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "8 années de CAF seraient nécessaires : l'entreprise est fortement endettée au regard de ses ressources internes",
+          "correct": true,
+          "explication": "480 000 ÷ 60 000 = 8 ans, bien au-delà du repère usuel de 3 à 4 ans."
+        },
+        {
+          "id": "b",
+          "texte": "0,125 : la capacité est excellente",
+          "correct": false,
+          "explication": "Le ratio a été inversé."
+        },
+        {
+          "id": "c",
+          "texte": "Impossible à interpréter sans les capitaux propres",
+          "correct": false,
+          "explication": "Ce ratio se suffit à lui-même."
+        },
+        {
+          "id": "d",
+          "texte": "8 ans : c'est conforme aux repères usuels",
+          "correct": false,
+          "explication": "Le repère usuel est de 3 à 4 ans."
+        }
+      ]
+    },
+    {
+      "id": "q.gfi.ratios.002",
+      "notion": "gfi.ratios.liquidite",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
+      "enonce": "Actif circulant 300 000 € dont stocks 120 000 € ; dettes à court terme 200 000 €. Liquidité réduite ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "0,9",
+          "correct": true,
+          "explication": "(300 000 − 120 000) ÷ 200 000 = 0,9."
+        },
+        {
+          "id": "b",
+          "texte": "1,5",
+          "correct": false,
+          "explication": "C'est la liquidité générale."
+        },
+        {
+          "id": "c",
+          "texte": "0,6",
+          "correct": false,
+          "explication": "C'est stocks ÷ dettes, sans signification."
+        },
+        {
+          "id": "d",
+          "texte": "1,1",
+          "correct": false,
+          "explication": "Aucun calcul correct ne donne ce résultat."
+        }
+      ]
+    },
+    {
+      "id": "q.gfi.ratios.003",
+      "notion": "gfi.ratios.rotation",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
+      "enonce": "Créances clients 96 000 € TTC ; CA HT 480 000 € (TVA 20 %). Délai clients ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "60 jours",
+          "correct": true,
+          "explication": "CA TTC 576 000 € ; 96 000 ÷ 576 000 × 360 = 60 jours."
+        },
+        {
+          "id": "b",
+          "texte": "72 jours",
+          "correct": false,
+          "explication": "Créances TTC rapportées au CA HT : grandeurs non homogènes."
+        },
+        {
+          "id": "c",
+          "texte": "50 jours",
+          "correct": false,
+          "explication": "Aucun calcul correct ne donne ce résultat."
+        },
+        {
+          "id": "d",
+          "texte": "6 jours",
+          "correct": false,
+          "explication": "6 est le nombre de rotations des créances par an (576 000 ÷ 96 000), pas un délai en jours."
+        }
+      ]
+    },
+    {
+      "id": "q.gfi.ratios.004",
+      "notion": "gfi.ratios.rotation",
+      "format": "multiple",
+      "niveau": 2,
+      "competence": "analyser-cas",
+      "enonce": "Lesquelles de ces évolutions augmentent le BFRE ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Le délai clients passe de 45 à 60 jours",
+          "correct": true,
+          "explication": "Les créances augmentent."
+        },
+        {
+          "id": "b",
+          "texte": "La rotation des stocks passe de 30 à 50 jours",
+          "correct": true,
+          "explication": "Le stock moyen augmente."
+        },
+        {
+          "id": "c",
+          "texte": "Le délai fournisseurs passe de 30 à 60 jours",
+          "correct": false,
+          "explication": "Les dettes fournisseurs augmentent : le BFRE diminue."
+        },
+        {
+          "id": "d",
+          "texte": "Les clients paient désormais à la commande",
+          "correct": false,
+          "explication": "Les créances diminuent, voire des acomptes apparaissent."
+        }
+      ]
+    },
+    {
+      "id": "q.gfi.ratios.005",
+      "notion": "gfi.ratios.rentabilite",
+      "format": "unique",
+      "niveau": 1,
+      "competence": "memoriser",
+      "enonce": "La rentabilité financière (ROE) se calcule par :",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Résultat net ÷ Capitaux propres",
+          "correct": true,
+          "explication": "Ce que l'entreprise rapporte aux associés."
+        },
+        {
+          "id": "b",
+          "texte": "Résultat d'exploitation ÷ Capitaux investis",
+          "correct": false,
+          "explication": "C'est la rentabilité économique."
+        },
+        {
+          "id": "c",
+          "texte": "Résultat net ÷ Chiffre d'affaires",
+          "correct": false,
+          "explication": "C'est le taux de marge nette."
+        },
+        {
+          "id": "d",
+          "texte": "EBE ÷ Capitaux propres",
+          "correct": false,
+          "explication": "Ce n'est pas un ratio standard."
+        }
+      ]
+    },
+    {
+      "id": "q.gfi.ratios.006",
+      "notion": "gfi.ratios.levier",
+      "format": "unique",
+      "niveau": 3,
+      "competence": "appliquer",
+      "enonce": "Re = 10 %, i = 4 %, D/CP = 1,5, pas d'impôt. Rentabilité financière ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "19 %",
+          "correct": true,
+          "explication": "10 + (10 − 4) × 1,5 = 19 %."
+        },
+        {
+          "id": "b",
+          "texte": "15 %",
+          "correct": false,
+          "explication": "Le bras de levier a été mal appliqué."
+        },
+        {
+          "id": "c",
+          "texte": "10 %",
+          "correct": false,
+          "explication": "Ce serait la rentabilité sans dette."
+        },
+        {
+          "id": "d",
+          "texte": "1 %",
+          "correct": false,
+          "explication": "Signe du différentiel inversé."
+        }
+      ]
+    },
+    {
+      "id": "q.gfi.ratios.007",
+      "notion": "gfi.ratios.levier",
+      "format": "vrai-faux",
+      "niveau": 2,
+      "competence": "comprendre",
+      "enonce": "Vrai ou faux : quand la rentabilité économique est inférieure au taux d'intérêt, s'endetter davantage diminue la rentabilité financière.",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Vrai",
+          "correct": true,
+          "explication": "Le différentiel est négatif : c'est l'effet de massue."
+        },
+        {
+          "id": "b",
+          "texte": "Faux",
+          "correct": false,
+          "explication": "Le levier joue alors à la baisse."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.gfi.ratios.001",
+      "notions": [
+        "gfi.ratios.rotation"
+      ],
+      "question": "Donnez les formules des délais clients, fournisseurs et de rotation des stocks, en précisant les précautions de calcul.",
+      "reponse": "Délai clients = créances clients TTC (+ effets escomptés non échus) ÷ CA TTC × 360. Délai fournisseurs = dettes fournisseurs TTC ÷ achats TTC × 360. Rotation des stocks de marchandises = stock moyen ÷ coût d'achat des marchandises vendues × 360. Précaution : homogénéité HT/TTC et base de coût pour les stocks.",
+      "indispensables": [
+        "Trois formules",
+        "Homogénéité TTC/TTC",
+        "Stock rapporté au coût d'achat",
+        "Résultat en jours"
+      ],
+      "complementaires": [
+        "Plafond légal de 60 jours ou 45 jours fin de mois"
+      ],
+      "erreurs": [
+        "Rapporter des créances TTC au CA HT"
+      ]
+    },
+    {
+      "id": "f.gfi.ratios.002",
+      "notions": [
+        "gfi.ratios.levier",
+        "gfi.ratios.rentabilite"
+      ],
+      "question": "Écrivez la formule de l'effet de levier, expliquez chacun de ses termes et la condition d'un levier positif.",
+      "reponse": "Rf = [Re + (Re − i) × D/CP] × (1 − t). Re : rentabilité économique ; i : coût de la dette ; D/CP : bras de levier ; t : taux d'IS. Si Re > i, chaque euro emprunté rapporte plus qu'il ne coûte : l'endettement augmente Rf. Si Re < i, il la diminue (effet de massue). Le levier augmente aussi le risque.",
+      "indispensables": [
+        "Formule",
+        "Différentiel Re − i",
+        "Bras de levier D/CP",
+        "Condition Re > i"
+      ],
+      "complementaires": [
+        "Effet de massue",
+        "Risque accru"
+      ],
+      "erreurs": [
+        "Confondre avec le levier opérationnel"
+      ]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.gfi.ratios.01",
+      "notions": [
+        "gfi.ratios.rotation",
+        "gfi.ratios.liquidite"
+      ],
+      "type": "calcul",
+      "niveau": 2,
+      "fictif": true,
+      "titre": "Diagnostic du cycle d'exploitation",
+      "enonce": "Société Négoce Atlantique : CA HT 900 000 € ; achats de marchandises HT 500 000 € ; coût d'achat des marchandises vendues 480 000 € ; stock initial 36 000 € ; stock final 44 000 € ; créances clients 135 000 € TTC ; dettes fournisseurs 100 000 € TTC ; disponibilités 15 000 € ; dettes à court terme totales 210 000 €. TVA 20 %.",
+      "questions": [
+        {
+          "id": "1",
+          "consigne": "Délai clients (jours) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 45,
+            "tolerance": 0.5,
+            "unite": "jours"
+          },
+          "correction": [
+            "CA TTC = 1 080 000 € ; 135 000 ÷ 1 080 000 × 360 = 45 jours"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Délai fournisseurs (jours) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 60,
+            "tolerance": 0.5,
+            "unite": "jours"
+          },
+          "correction": [
+            "Achats TTC = 600 000 € ; 100 000 ÷ 600 000 × 360 = 60 jours"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Rotation des stocks (jours) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 30,
+            "tolerance": 0.5,
+            "unite": "jours"
+          },
+          "correction": [
+            "Stock moyen : (36 000 + 44 000) ÷ 2 = 40 000 €",
+            "40 000 ÷ 480 000 × 360 = 30 jours"
+          ]
+        },
+        {
+          "id": "4",
+          "consigne": "Liquidité réduite (2 décimales) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 0.71,
+            "tolerance": 0.01
+          },
+          "correction": [
+            "(135 000 + 15 000) ÷ 210 000 = 0,71",
+            "Les créances et disponibilités ne couvrent pas les dettes à court terme : l'entreprise compte sur la vente de ses stocks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e.gfi.ratios.02",
+      "notions": [
+        "gfi.ratios.levier",
+        "gfi.ratios.rentabilite"
+      ],
+      "type": "calcul",
+      "niveau": 3,
+      "fictif": true,
+      "titre": "Faut-il financer l'extension par emprunt ?",
+      "enonce": "La société Céramiques du Berry envisage un investissement de 400 000 €. Capitaux investis après investissement : 1 000 000 €. Résultat d'exploitation prévu : 110 000 €. Deux options : (A) augmentation de capital (capitaux propres 1 000 000 €, aucune dette) ; (B) capitaux propres 600 000 € et emprunt de 400 000 € à 4 %. IS 25 %.",
+      "questions": [
+        {
+          "id": "1",
+          "consigne": "Rentabilité économique avant impôt (en %) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 11,
+            "tolerance": 0.01,
+            "unite": "%"
+          },
+          "correction": [
+            "110 000 ÷ 1 000 000 = 11 %"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Rentabilité financière après impôt, option A (en %) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 8.25,
+            "tolerance": 0.01,
+            "unite": "%"
+          },
+          "correction": [
+            "Résultat net : 110 000 × 0,75 = 82 500 € ; 82 500 ÷ 1 000 000 = 8,25 %"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Rentabilité financière après impôt, option B (en %, 2 décimales) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 11.75,
+            "tolerance": 0.01,
+            "unite": "%"
+          },
+          "correction": [
+            "Intérêts : 16 000 € ; résultat avant impôt 94 000 € ; résultat net 70 500 €",
+            "70 500 ÷ 600 000 = 11,75 %",
+            "Contrôle : [11 + (11 − 4) × 400/600] × 0,75 = 11,75 %"
+          ]
+        },
+        {
+          "id": "4",
+          "consigne": "Quelle limite faut-il signaler avant de recommander l'option B ?",
+          "reponse": {
+            "type": "libre",
+            "criteres": [
+              "Le levier n'est favorable que si Re reste supérieure à 4 %",
+              "Risque accru : intérêts et remboursements fixes même si l'activité baisse",
+              "Effet sur l'endettement et la capacité de remboursement",
+              "Dilution évitée pour les associés actuels dans l'option B"
+            ],
+            "corrige": "L'option B augmente la rentabilité financière tant que la rentabilité économique (11 %) dépasse le coût de la dette (4 %). Mais elle accroît le risque : si le résultat d'exploitation baissait sous 40 000 € (Re < 4 %), le levier jouerait à la baisse. Il faut aussi vérifier la capacité de remboursement (dettes ÷ CAF) et l'acceptation par la banque ; en contrepartie, l'option B évite de diluer le capital des associés."
+          },
+          "correction": [
+            "Voir le corrigé et les critères"
+          ]
+        }
+      ]
+    }
+  ]
+}

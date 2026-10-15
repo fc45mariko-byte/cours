@@ -167,5 +167,13 @@
     "url": "https://www.anc.gouv.fr",
     "acces": "reference",
     "pertinence": "PCG applicable aux exercices ouverts à compter du 1er janvier 2025"
+  },
+  {
+    "id": "src.cmf",
+    "titre": "Code monétaire et financier, art. L313-23 et s. (cession de créances professionnelles, dite « Dailly »)",
+    "auteur": "République française (Légifrance)",
+    "url": "https://www.legifrance.gouv.fr",
+    "acces": "reference",
+    "pertinence": "Financement à court terme par cession de créances"
   }
 ]

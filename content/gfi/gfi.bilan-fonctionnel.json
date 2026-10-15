@@ -1,0 +1,152 @@
+{
+  "chapitre": "gfi.bilan-fonctionnel",
+  "notions": [
+    {
+      "id": "gfi.bilan-fonctionnel.reclassement",
+      "titre": "Du bilan comptable au bilan fonctionnel",
+      "niveau": "I",
+      "prerequis": ["cpt.synthese.bilan"],
+      "connexes": ["gfi.bilan-fonctionnel.retraitements", "gfi.equilibre.frng"],
+      "question": "Comment relire le bilan pour comprendre comment l'entreprise finance son activité ?",
+      "definition": "Le bilan fonctionnel reclasse les postes du bilan comptable selon les grandes fonctions de l'entreprise : investissement, financement et exploitation. Les actifs sont pris en valeur brute (les amortissements et dépréciations sont considérés comme des ressources accumulées). On distingue des emplois stables et des ressources stables (cycle long), un actif et un passif circulants d'exploitation et hors exploitation (cycle court), et une trésorerie active et passive.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Emplois (actif)", "Ressources (passif)"], "lignes": [
+          ["Emplois stables : actif immobilisé brut", "Ressources stables : capitaux propres + amortissements et dépréciations + provisions pour risques et charges + dettes financières (hors concours bancaires courants)"],
+          ["Actif circulant d'exploitation (brut) : stocks, créances clients, avances versées, autres créances d'exploitation", "Passif circulant d'exploitation : fournisseurs, avances reçues, dettes fiscales et sociales"],
+          ["Actif circulant hors exploitation : créances diverses, créances sur cessions d'immobilisations, VMP non assimilables à de la trésorerie", "Passif circulant hors exploitation : dettes sur immobilisations, impôt sur les sociétés à payer, dettes diverses"],
+          ["Trésorerie active : disponibilités, VMP très liquides", "Trésorerie passive : concours bancaires courants, soldes créditeurs de banque"]
+        ] },
+        { "type": "attention", "texte": "Les amortissements et dépréciations quittent l'actif (on prend les valeurs brutes) et rejoignent les ressources stables : le total du bilan fonctionnel est donc supérieur à celui du bilan comptable." }
+      ],
+      "termes": [
+        { "fr": "Bilan fonctionnel", "en": "functional balance sheet", "es": "balance funcional", "definition": "Bilan reclassé par cycles : investissement, financement, exploitation." },
+        { "fr": "Emplois stables", "en": "long-term uses of funds", "es": "empleos estables", "definition": "Actifs immobilisés en valeur brute." },
+        { "fr": "Ressources stables", "en": "long-term sources of funds / permanent capital", "es": "recursos permanentes", "definition": "Capitaux propres, amortissements, provisions et dettes financières." },
+        { "fr": "Concours bancaires courants", "en": "bank overdrafts", "es": "descubiertos bancarios / créditos a corto plazo", "definition": "Crédits bancaires à court terme (découverts)." }
+      ],
+      "exemple": { "fictif": true, "texte": "La société Mobilier Ligérien a un matériel brut de 400 000 € amorti de 146 000 €. Au bilan comptable, il figure pour 254 000 € net ; au bilan fonctionnel, 400 000 € en emplois stables, et les 146 000 € d'amortissements s'ajoutent aux ressources stables." },
+      "confusions": [
+        { "a": "Bilan comptable (valeurs nettes, patrimoine)", "b": "Bilan fonctionnel (valeurs brutes, fonctions)", "explication": "Le premier évalue le patrimoine ; le second analyse l'équilibre entre emplois et ressources." },
+        { "a": "Emprunts (ressources stables)", "b": "Concours bancaires courants (trésorerie passive)", "explication": "Les dettes financières sont des ressources stables, sauf les découverts et soldes créditeurs de banque, classés en trésorerie passive." }
+      ],
+      "verification": ["Où classe-t-on les amortissements dans le bilan fonctionnel, et pourquoi ?"],
+      "sources": ["src.pcg"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gfi.bilan-fonctionnel.retraitements",
+      "titre": "Les retraitements usuels du bilan fonctionnel",
+      "niveau": "A",
+      "prerequis": ["gfi.bilan-fonctionnel.reclassement", "cpt.tresorerie.effets"],
+      "connexes": ["gfi.financement.long-terme"],
+      "question": "Quelles corrections apporter au bilan pour qu'il reflète la réalité économique des financements ?",
+      "definition": "Certains éléments sont reclassés ou réintégrés pour que le bilan fonctionnel traduise la réalité économique. Les plus fréquents : les effets escomptés non échus (EENE), réintégrés dans les créances clients et dans la trésorerie passive ; le crédit-bail, traité comme un investissement financé par emprunt ; les charges et produits constatés d'avance, rattachés au cycle concerné (généralement l'exploitation) ; les intérêts courus sur emprunts, sortis des dettes financières vers le passif circulant hors exploitation ; le capital souscrit non appelé, retranché de l'actif et des capitaux propres.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Retraitement", "Emplois", "Ressources"], "lignes": [
+          ["Effets escomptés non échus", "+ créances clients (actif circulant d'exploitation)", "+ trésorerie passive"],
+          ["Crédit-bail", "+ valeur d'origine du bien (emplois stables)", "+ amortissements théoriques (ressources propres) ; + part de la valeur non amortie (dettes financières)"],
+          ["Intérêts courus non échus", "—", "Retirés des dettes financières, ajoutés au passif circulant hors exploitation"],
+          ["Charges / produits constatés d'avance", "CCA en actif circulant (d'exploitation en général)", "PCA en passif circulant (d'exploitation en général)"],
+          ["Capital souscrit non appelé", "Retiré de l'actif", "Retiré des capitaux propres"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Effets escomptés non échus", "en": "discounted bills not yet due", "es": "efectos descontados pendientes de vencimiento", "definition": "Effets remis à l'escompte dont l'échéance n'est pas atteinte." },
+        { "fr": "Crédit-bail", "en": "finance lease / leasing", "es": "arrendamiento financiero / leasing", "definition": "Location d'un bien assortie d'une option d'achat." }
+      ],
+      "exemple": { "fictif": true, "texte": "Au 31/12, 30 000 € d'effets ont été escomptés et ne sont pas échus. Économiquement, la banque a fait une avance de trésorerie et les clients n'ont pas encore payé : on ajoute 30 000 € aux créances clients et 30 000 € à la trésorerie passive. Le BFRE augmente et la trésorerie nette diminue de 30 000 €." },
+      "confusions": [
+        { "a": "Effets escomptés (EENE)", "b": "Effets à recevoir (413)", "explication": "Les effets à recevoir sont encore à l'actif ; les EENE en sont sortis comptablement et doivent être réintégrés." }
+      ],
+      "verification": ["Quel est l'effet du retraitement des effets escomptés non échus sur le FRNG, le BFR et la trésorerie nette ?"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Les retraitements exigés varient selon les enseignants (notamment le crédit-bail et les VMP) : suivre la convention du cours."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.gfi.bilan-fonctionnel.001", "notion": "gfi.bilan-fonctionnel.reclassement", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Dans le bilan fonctionnel, les immobilisations sont retenues pour :",
+      "choix": [
+        { "id": "a", "texte": "Leur valeur brute", "correct": true, "explication": "Le bilan fonctionnel s'intéresse au montant investi, pas à la valeur résiduelle." },
+        { "id": "b", "texte": "Leur valeur nette comptable", "correct": false, "explication": "C'est la présentation du bilan comptable." },
+        { "id": "c", "texte": "Leur valeur de marché", "correct": false, "explication": "C'est l'approche du bilan financier (liquidité), pas fonctionnel." },
+        { "id": "d", "texte": "Leur montant amorti", "correct": false, "explication": "Les amortissements sont classés en ressources stables." }
+      ]
+    },
+    {
+      "id": "q.gfi.bilan-fonctionnel.002", "notion": "gfi.bilan-fonctionnel.reclassement", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Lesquels de ces éléments sont des ressources stables ?",
+      "choix": [
+        { "id": "a", "texte": "Amortissements cumulés", "correct": true, "explication": "Considérés comme des ressources accumulées par l'entreprise." },
+        { "id": "b", "texte": "Emprunt bancaire à 5 ans", "correct": true, "explication": "Dette financière, hors concours bancaires courants." },
+        { "id": "c", "texte": "Découvert bancaire", "correct": false, "explication": "Trésorerie passive." },
+        { "id": "d", "texte": "Provisions pour risques", "correct": true, "explication": "Classées en ressources stables (sauf si elles sont à très court terme)." },
+        { "id": "e", "texte": "Dettes fournisseurs", "correct": false, "explication": "Passif circulant d'exploitation." }
+      ]
+    },
+    {
+      "id": "q.gfi.bilan-fonctionnel.003", "notion": "gfi.bilan-fonctionnel.reclassement", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Une dette envers un fournisseur d'immobilisations est classée :",
+      "choix": [
+        { "id": "a", "texte": "En passif circulant hors exploitation", "correct": true, "explication": "Elle est à court terme mais ne relève pas du cycle d'exploitation." },
+        { "id": "b", "texte": "En passif circulant d'exploitation", "correct": false, "explication": "Seuls les fournisseurs liés aux achats de l'exploitation y figurent." },
+        { "id": "c", "texte": "En ressources stables", "correct": false, "explication": "C'est une dette à court terme, pas un financement durable." },
+        { "id": "d", "texte": "En trésorerie passive", "correct": false, "explication": "La trésorerie passive regroupe les concours bancaires courants." }
+      ]
+    },
+    {
+      "id": "q.gfi.bilan-fonctionnel.004", "notion": "gfi.bilan-fonctionnel.retraitements", "format": "unique", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "On réintègre 50 000 € d'effets escomptés non échus. Quel est l'effet sur la trésorerie nette ?",
+      "choix": [
+        { "id": "a", "texte": "Elle diminue de 50 000 €", "correct": true, "explication": "La trésorerie passive augmente de 50 000 € (le FRNG est inchangé et le BFR augmente d'autant)." },
+        { "id": "b", "texte": "Elle augmente de 50 000 €", "correct": false, "explication": "L'escompte est un financement bancaire à court terme : il pèse sur la trésorerie nette." },
+        { "id": "c", "texte": "Aucun effet", "correct": false, "explication": "Le retraitement augmente le BFR et la trésorerie passive." },
+        { "id": "d", "texte": "Elle diminue de 100 000 €", "correct": false, "explication": "Le montant est ajouté une seule fois de chaque côté." }
+      ]
+    },
+    {
+      "id": "q.gfi.bilan-fonctionnel.005", "notion": "gfi.bilan-fonctionnel.retraitements", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : le retraitement du crédit-bail augmente à la fois les emplois stables et les ressources stables.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "Le bien est traité comme une immobilisation financée par emprunt et par amortissements." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "Il augmente les deux masses : le FRNG n'est en principe pas modifié." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.gfi.bilan-fonctionnel.001", "notions": ["gfi.bilan-fonctionnel.reclassement"],
+      "question": "Présentez les quatre masses du bilan fonctionnel de chaque côté et la règle de valorisation des actifs.",
+      "reponse": "Emplois : emplois stables (immobilisations brutes), actif circulant d'exploitation, actif circulant hors exploitation, trésorerie active. Ressources : ressources stables (capitaux propres, amortissements et dépréciations, provisions, dettes financières hors concours bancaires), passif circulant d'exploitation, passif circulant hors exploitation, trésorerie passive. Les actifs sont pris en valeur brute.",
+      "indispensables": ["Emplois stables en brut", "Amortissements en ressources stables", "Distinction exploitation / hors exploitation", "Concours bancaires en trésorerie passive"],
+      "complementaires": ["Retraitements : EENE, crédit-bail, intérêts courus"],
+      "erreurs": ["Classer le découvert en dettes financières stables"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.gfi.bilan-fonctionnel.01", "notions": ["gfi.bilan-fonctionnel.reclassement", "gfi.bilan-fonctionnel.retraitements"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Construire les masses du bilan fonctionnel",
+      "enonce": "Données de la société Mobilier Ligérien au 31/12 (en €).",
+      "donnees": { "entetes": ["Poste", "Montant"], "lignes": [
+        ["Immobilisations (valeur brute)", "400 000"], ["Amortissements des immobilisations", "146 000"], ["Stocks (brut)", "80 000"],
+        ["Créances clients (brut)", "120 000"], ["Dépréciation des créances clients", "4 000"], ["Autres créances d'exploitation", "10 000"],
+        ["Créances diverses hors exploitation", "5 000"], ["Disponibilités", "25 000"], ["Capitaux propres", "220 000"],
+        ["Provisions pour risques", "10 000"], ["Emprunts bancaires (hors découverts)", "130 000"], ["Fournisseurs", "70 000"],
+        ["Dettes fiscales et sociales", "30 000"], ["Dettes sur immobilisations", "12 000"], ["Concours bancaires courants", "18 000"]
+      ] },
+      "questions": [
+        { "id": "1", "consigne": "Ressources stables (€) ?", "reponse": { "type": "nombre", "valeur": 510000, "tolerance": 0.01, "unite": "€" },
+          "correction": ["220 000 + 146 000 + 4 000 + 10 000 + 130 000 = 510 000 €", "Les amortissements et la dépréciation des clients rejoignent les ressources stables"],
+          "erreurs": ["Oublier la dépréciation des créances (506 000)"] },
+        { "id": "2", "consigne": "Actif circulant d'exploitation (€) ?", "reponse": { "type": "nombre", "valeur": 210000, "tolerance": 0.01, "unite": "€" },
+          "correction": ["80 000 + 120 000 (brut) + 10 000 = 210 000 €"] },
+        { "id": "3", "consigne": "Passif circulant d'exploitation (€) ?", "reponse": { "type": "nombre", "valeur": 100000, "tolerance": 0.01, "unite": "€" },
+          "correction": ["70 000 + 30 000 = 100 000 € (les dettes sur immobilisations sont hors exploitation)"] },
+        { "id": "4", "consigne": "Total du bilan fonctionnel (€) ?", "reponse": { "type": "nombre", "valeur": 640000, "tolerance": 0.01, "unite": "€" },
+          "correction": ["Emplois : 400 000 + 210 000 + 5 000 + 25 000 = 640 000 €", "Ressources : 510 000 + 100 000 + 12 000 + 18 000 = 640 000 €"] }
+      ]
+    }
+  ]
+}
