@@ -1,0 +1,286 @@
+{
+  "chapitre": "tci.douane",
+  "notions": [
+    {
+      "id": "tci.douane.role",
+      "titre": "Le rôle de la douane et l'union douanière de l'UE",
+      "niveau": "F",
+      "prerequis": ["tci.operation.acteurs"],
+      "connexes": ["dai.normes.omc", "tci.intra-ue.vs-pays-tiers", "eco.politique.integration-regionale"],
+      "question": "Pourquoi une marchandise qui va de Lyon à Milan ne passe-t-elle pas en douane, alors qu'elle y passe pour aller à Genève ?",
+      "definition": "L'Union européenne est une union douanière : à l'intérieur, les marchandises circulent sans droits de douane ni formalités douanières ; vis-à-vis des pays tiers, les États membres appliquent un tarif douanier commun et une réglementation commune, le Code des douanes de l'Union (CDU). Les douanes nationales l'appliquent : elles perçoivent droits et taxes, contrôlent la conformité et les prohibitions, et produisent les statistiques du commerce extérieur.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Missions de la douane", "items": [
+          "Fiscale : perception des droits de douane et de la TVA à l'importation",
+          "Économique : application des mesures de politique commerciale (quotas, antidumping, préférences)",
+          "Protection : normes sanitaires, contrefaçons, produits dangereux, biens à double usage",
+          "Sûreté et sécurité de la chaîne logistique",
+          "Statistiques des échanges"
+        ] },
+        { "type": "texte", "texte": "Les trois éléments qui déterminent la taxation d'une marchandise importée : son **espèce tarifaire** (ce qu'elle est), son **origine** (d'où elle vient économiquement) et sa **valeur en douane** (combien elle vaut)." }
+      ],
+      "termes": [
+        { "fr": "Union douanière", "en": "customs union", "es": "unión aduanera", "definition": "Zone sans droits de douane internes, avec un tarif extérieur commun.", "distinction": "Une zone de libre-échange supprime les droits entre membres mais laisse chacun fixer son tarif extérieur." },
+        { "fr": "Pays tiers", "en": "third country", "es": "tercer país", "definition": "Pays situé hors du territoire douanier de l'Union." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une entreprise de Nantes expédie des machines à Milan (aucune formalité douanière, régime TVA intracommunautaire) et à Genève (déclaration d'exportation en France, déclaration d'importation en Suisse, la Suisse ne faisant pas partie de l'union douanière)." },
+      "verification": ["Quels sont les trois éléments de taxation d'une marchandise importée ?"],
+      "sources": ["src.cdu", "src.douane-fr"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.douane.espece",
+      "titre": "L'espèce tarifaire : SH, NC, TARIC",
+      "niveau": "F",
+      "prerequis": ["tci.douane.role"],
+      "connexes": ["tci.douane.calcul-droits-tva"],
+      "question": "Comment savoir quel droit de douane s'applique à un produit ?",
+      "definition": "L'espèce tarifaire est le classement d'une marchandise dans la nomenclature douanière. Le Système harmonisé (SH), géré par l'Organisation mondiale des douanes, classe les produits avec un code à 6 chiffres commun à plus de 200 pays. L'UE le complète par la Nomenclature combinée (NC, 8 chiffres) puis par le TARIC (10 chiffres), qui intègre les mesures propres à l'UE (droits préférentiels, antidumping, contingents).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Niveau", "Chiffres", "Portée"], "lignes": [
+          ["Chapitre du SH", "2", "Mondiale (ex. 61 = vêtements en bonneterie)"],
+          ["Position", "4", "Mondiale"],
+          ["Sous-position SH", "6", "Mondiale"],
+          ["Nomenclature combinée", "8", "UE : droit de douane et statistiques"],
+          ["Code TARIC", "10", "UE : mesures spécifiques"]
+        ] },
+        { "type": "attention", "texte": "Un mauvais classement entraîne l'application d'un mauvais taux, donc des redressements et des pénalités. En cas de doute, l'entreprise peut demander à la douane un renseignement tarifaire contraignant (RTC), qui l'engage." }
+      ],
+      "termes": [
+        { "fr": "Système harmonisé (SH)", "en": "Harmonized System (HS)", "es": "Sistema Armonizado (SA)", "definition": "Nomenclature internationale des marchandises à 6 chiffres de l'Organisation mondiale des douanes." },
+        { "fr": "Renseignement tarifaire contraignant (RTC)", "en": "Binding Tariff Information (BTI)", "es": "información arancelaria vinculante (IAV)", "definition": "Décision de la douane sur le classement d'un produit, opposable à l'administration." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un importateur de vélos électriques hésite entre deux positions tarifaires aux droits différents. Il demande un RTC : la douane classe le produit et l'importateur dispose d'une décision opposable pour ses futures importations." },
+      "verification": ["Pourquoi les 6 premiers chiffres d'un code tarifaire sont-ils identiques en France et au Canada ?"],
+      "sources": ["src.cdu"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.douane.origine",
+      "titre": "Origine préférentielle et origine non préférentielle",
+      "niveau": "A",
+      "prerequis": ["tci.douane.role"],
+      "connexes": ["tci.documents.liste-colisage", "eco.politique.integration-regionale"],
+      "question": "Un téléphone assemblé au Vietnam avec des composants coréens est-il « vietnamien » ?",
+      "definition": "L'origine est la « nationalité économique » d'une marchandise. L'origine non préférentielle s'applique à toutes les importations ; elle sert aux mesures de politique commerciale (antidumping, embargos, marquage) et se détermine, en cas de pays multiples, par la dernière transformation ou ouvraison substantielle. L'origine préférentielle est définie par chaque accord commercial (ou système de préférences) et permet, si ses règles sont respectées et prouvées, d'obtenir un droit réduit ou nul.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "Origine non préférentielle", "Origine préférentielle"], "lignes": [
+          ["Source des règles", "CDU (règles générales)", "Chaque accord de libre-échange ou système de préférences"],
+          ["Effet", "Mesures commerciales, marquage, statistiques", "Droit de douane réduit ou nul"],
+          ["Critère principal", "Dernière transformation substantielle", "Règles par produit : changement de position tarifaire, valeur ajoutée minimale, opérations spécifiques ; cumul possible"],
+          ["Preuve", "Certificat d'origine (souvent CCI), si exigé", "Certificat (ex. EUR.1) ou déclaration d'origine de l'exportateur, selon l'accord"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Origine préférentielle", "en": "preferential origin", "es": "origen preferencial", "definition": "Origine qui donne droit à un traitement tarifaire favorable en vertu d'un accord." },
+        { "fr": "Cumul d'origine", "en": "cumulation of origin", "es": "acumulación de origen", "definition": "Possibilité de considérer des matières d'un pays partenaire comme originaires pour l'application de l'accord." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant français de fromages exporte au Canada. Grâce à l'accord UE–Canada (CETA), ses produits « originaires de l'UE » peuvent bénéficier d'un droit réduit, à condition de respecter la règle d'origine du produit et de porter une déclaration d'origine sur la facture. Sans cette preuve, le droit normal canadien s'applique." },
+      "contreExemple": "« Made in France » ne suffit pas à obtenir une préférence : une marchandise fabriquée en France avec trop de matières non originaires peut ne pas être d'origine préférentielle au sens de l'accord.",
+      "verification": ["Quelle origine faut-il prouver pour bénéficier d'un accord de libre-échange ?"],
+      "sources": ["src.cdu"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.douane.valeur",
+      "titre": "La valeur en douane",
+      "niveau": "F",
+      "prerequis": ["tci.douane.role", "tci.incoterms.repartition-couts"],
+      "connexes": ["tci.douane.calcul-droits-tva", "tci.operation.facture-commerciale"],
+      "question": "Sur quel montant la douane calcule-t-elle les droits : le prix d'usine, le prix payé, le prix rendu ?",
+      "definition": "La valeur en douane est, en principe, la valeur transactionnelle : le prix effectivement payé ou à payer pour les marchandises vendues pour l'exportation vers l'UE, ajusté de certains éléments. Dans l'UE, elle inclut notamment les frais de transport et d'assurance jusqu'au point d'entrée dans le territoire douanier de l'Union ; elle exclut les frais postérieurs à l'entrée.",
+      "explication": "En pratique, la valeur en douane d'une importation dans l'UE correspond à une valeur « rendu frontière de l'UE ». Selon l'Incoterm, il faut donc ajouter ou retirer des frais au prix facturé : à un prix EXW, on ajoute le transport et l'assurance jusqu'à la frontière ; à un prix DDP, on retire les frais postérieurs à l'entrée et les droits et taxes à l'import.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Éléments à ajouter au prix (s'ils ne sont pas inclus)", "items": [
+          "Transport et assurance jusqu'au lieu d'introduction dans l'UE",
+          "Commissions et frais de courtage (sauf commissions à l'achat)",
+          "Coût des emballages et contenants",
+          "Prestations fournies gratuitement par l'acheteur (moules, outils…)",
+          "Redevances et droits de licence liés aux marchandises, sous conditions"
+        ] },
+        { "type": "liste", "titre": "Éléments à exclure (s'ils sont distincts)", "items": [
+          "Transport après l'entrée dans l'UE",
+          "Droits de douane et taxes payables dans l'UE",
+          "Frais de montage ou d'entretien après importation"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Valeur transactionnelle", "en": "transaction value", "es": "valor de transacción", "definition": "Prix effectivement payé ou à payer, base principale de la valeur en douane." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un importateur d'Orléans achète des lampes « FOB Shenzhen » pour 30 000 €. Fret jusqu'au Havre : 2 100 € ; assurance : 90 € ; transport Le Havre → Orléans : 380 €. Valeur en douane = 30 000 + 2 100 + 90 = 32 190 € (le transport après le Havre est exclu)." },
+      "verification": ["Pourquoi le post-acheminement en France est-il exclu de la valeur en douane ?"],
+      "sources": ["src.cdu"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.douane.calcul-droits-tva",
+      "titre": "Calculer les droits de douane et la TVA à l'importation",
+      "niveau": "F",
+      "prerequis": ["tci.douane.valeur", "tci.douane.espece"],
+      "connexes": ["cpt.tva.mecanisme", "tci.incoterms.dap-dpu-ddp"],
+      "question": "Combien coûte réellement l'importation d'une marchandise, au-delà de son prix ?",
+      "definition": "Les droits de douane ad valorem se calculent en appliquant le taux du tarif à la valeur en douane. La TVA à l'importation se calcule, en France, sur une base comprenant la valeur en douane, les droits de douane et autres taxes (hors TVA), et les frais accessoires (transport, assurance, commissions) jusqu'au premier lieu de destination en France.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Droits = valeur en douane × taux        Base TVA = valeur en douane + droits + frais jusqu'au premier lieu de destination        TVA = base × 20 % (taux normal)" },
+        { "type": "texte", "texte": "Depuis le 1er janvier 2022, les entreprises identifiées à la TVA en France déclarent la TVA à l'importation sur leur déclaration de TVA et la déduisent simultanément (autoliquidation) : elle n'est plus payée à la douane, ce qui évite d'en faire l'avance de trésorerie. Les droits de douane, eux, restent un coût définitif." },
+        { "type": "attention", "texte": "La TVA à l'importation est en principe récupérable par une entreprise assujettie ; les droits de douane ne le sont pas : ils s'ajoutent au coût d'achat de la marchandise." }
+      ],
+      "termes": [
+        { "fr": "Droit ad valorem", "en": "ad valorem duty", "es": "derecho ad valorem", "definition": "Droit de douane exprimé en pourcentage de la valeur.", "distinction": "Un droit spécifique est exprimé par unité (par kg, par litre)." },
+        { "fr": "Autoliquidation de la TVA à l'importation", "en": "import VAT reverse charge / postponed accounting", "es": "autoliquidación del IVA de importación", "definition": "Déclaration de la TVA à l'importation sur la déclaration de TVA de l'entreprise, avec déduction simultanée." }
+      ],
+      "exemple": { "fictif": true, "texte": "Suite de l'exemple des lampes : valeur en douane 32 190 €, taux 2,7 %. Droits = 869,13 €. Base TVA = 32 190 + 869,13 + 380 (transport jusqu'à Orléans, premier lieu de destination) = 33 439,13 €. TVA à 20 % = 6 687,83 €, autoliquidée. Coût d'achat définitif hors TVA : 30 000 + 2 100 + 90 + 869,13 + 380 = 33 439,13 €." },
+      "verification": ["Pourquoi la TVA à l'importation n'est-elle pas un coût pour une entreprise assujettie, alors que les droits de douane le sont ?"],
+      "sources": ["src.cdu", "src.directive-tva", "src.douane-fr"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.douane.declaration",
+      "titre": "La déclaration en douane, l'EORI et le statut d'OEA",
+      "niveau": "F",
+      "prerequis": ["tci.douane.role"],
+      "connexes": ["tci.operation.acteurs", "tci.incoterms.dedouanement"],
+      "question": "Que doit faire une entreprise pour qu'une marchandise puisse sortir de l'UE ou y entrer ?",
+      "definition": "Toute marchandise qui entre dans l'UE ou en sort doit être placée sous un régime douanier par une déclaration en douane, déposée électroniquement par le déclarant (l'entreprise ou son représentant en douane). L'opérateur doit disposer d'un numéro EORI, identifiant unique des opérateurs économiques dans l'UE. Le statut d'opérateur économique agréé (OEA) est une certification qui accorde des facilités aux entreprises fiables.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Contenu essentiel d'une déclaration", "items": [
+          "Régime demandé (mise en libre pratique, exportation, régime particulier)",
+          "Identité des opérateurs (numéros EORI)",
+          "Code tarifaire, origine, valeur, poids, nombre de colis",
+          "Documents justificatifs (facture, documents de transport, preuves d'origine, licences)"
+        ] },
+        { "type": "tableau", "entetes": ["Certificat OEA", "Facilités"], "lignes": [
+          ["OEA « simplifications douanières »", "Accès facilité aux procédures simplifiées, moins de contrôles documentaires"],
+          ["OEA « sécurité et sûreté »", "Moins de contrôles physiques et de sûreté, reconnaissance mutuelle avec certains pays"],
+          ["Les deux combinés", "Cumul des avantages"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Numéro EORI", "en": "EORI number", "es": "número EORI", "definition": "Identifiant attribué à tout opérateur effectuant des formalités douanières dans l'UE." },
+        { "fr": "Opérateur économique agréé (OEA)", "en": "Authorised Economic Operator (AEO)", "es": "operador económico autorizado (OEA)", "definition": "Statut accordé par la douane aux entreprises fiables, ouvrant droit à des facilités." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une start-up qui exporte pour la première fois vers les États-Unis découvre que son transitaire ne peut pas déposer la déclaration d'export : elle n'a pas de numéro EORI. Elle doit le demander en ligne à la douane avant toute expédition." },
+      "verification": ["Quelle différence entre le numéro EORI et le statut OEA ?"],
+      "sources": ["src.cdu", "src.douane-fr"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.douane.regimes-particuliers",
+      "titre": "Les régimes douaniers particuliers",
+      "niveau": "A",
+      "prerequis": ["tci.douane.declaration"],
+      "connexes": ["gfi.equilibre.bfr"],
+      "question": "Comment éviter de payer des droits sur une marchandise qui ne fait que passer, attendre ou être transformée avant de repartir ?",
+      "definition": "Les régimes particuliers du Code des douanes de l'Union permettent de suspendre, ou d'alléger, les droits et taxes pour des marchandises qui ne sont pas (encore) destinées à la consommation dans l'UE : transit, stockage (entrepôt douanier, zone franche), utilisation (admission temporaire, destination particulière) et perfectionnement (actif et passif).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Régime", "Principe", "Exemple"], "lignes": [
+          ["Transit", "Acheminer des marchandises non dédouanées d'un point à un autre, droits suspendus", "Conteneur débarqué au Havre, dédouané à Lyon"],
+          ["Entrepôt douanier", "Stocker sans payer les droits jusqu'à la mise en libre pratique ou la réexportation", "Stock de vins australiens vendus progressivement"],
+          ["Admission temporaire", "Utiliser temporairement dans l'UE avec exonération totale ou partielle, puis réexporter", "Matériel d'un salon professionnel"],
+          ["Perfectionnement actif", "Importer en suspension de droits des marchandises qui seront transformées puis réexportées", "Tissu importé, transformé en vêtements exportés"],
+          ["Perfectionnement passif", "Exporter temporairement pour transformation ou réparation, puis réimporter en ne payant des droits que sur la plus-value", "Machine envoyée en réparation en Suisse"]
+        ] },
+        { "type": "texte", "texte": "Ces régimes exigent en général une autorisation et une garantie (caution), et un suivi rigoureux des stocks." }
+      ],
+      "termes": [
+        { "fr": "Mise en libre pratique", "en": "release for free circulation", "es": "despacho a libre práctica", "definition": "Régime qui confère le statut de marchandise de l'Union à une marchandise importée, après paiement des droits." },
+        { "fr": "Perfectionnement actif", "en": "inward processing", "es": "perfeccionamiento activo", "definition": "Transformation dans l'UE de marchandises importées en suspension de droits, en vue de leur réexportation." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de montres jurassien importe des mouvements de Chine sous perfectionnement actif. Les montres terminées sont exportées en Suisse : aucun droit n'est payé sur les mouvements. S'il en vend une partie en France, il paie alors les droits correspondants." },
+      "verification": ["Quel régime choisir pour présenter des machines dans un salon à Paris puis les renvoyer au Japon ?"],
+      "sources": ["src.cdu"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    { "id": "q.tci.douane.001", "notion": "tci.douane.role", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quels sont les trois éléments qui déterminent la taxation d'une marchandise importée ?",
+      "choix": [
+        { "id": "a", "texte": "L'espèce tarifaire, l'origine et la valeur", "correct": true, "explication": "Ce que c'est, d'où cela vient, combien cela vaut." },
+        { "id": "b", "texte": "Le poids, le transporteur et l'Incoterm", "correct": false, "explication": "L'Incoterm et le poids peuvent influer indirectement, mais ne sont pas les éléments de taxation." },
+        { "id": "c", "texte": "Le pays de l'acheteur, la monnaie et le prix", "correct": false, "explication": "La monnaie et le pays de l'acheteur ne déterminent pas le droit." },
+        { "id": "d", "texte": "La TVA, l'origine et la marque", "correct": false, "explication": "La marque ne détermine pas le droit." }
+      ] },
+    { "id": "q.tci.douane.002", "notion": "tci.douane.espece", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Combien de chiffres compte un code du Système harmonisé (commun à tous les pays qui l'appliquent) ?",
+      "choix": [
+        { "id": "a", "texte": "6", "correct": true, "explication": "Le SH de l'OMD comporte 6 chiffres." },
+        { "id": "b", "texte": "8", "correct": false, "explication": "C'est la Nomenclature combinée de l'UE." },
+        { "id": "c", "texte": "10", "correct": false, "explication": "C'est le TARIC." },
+        { "id": "d", "texte": "4", "correct": false, "explication": "4 chiffres correspondent à la position, pas au code complet." }
+      ] },
+    { "id": "q.tci.douane.003", "notion": "tci.douane.origine", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quelle origine permet d'obtenir un droit réduit au titre d'un accord de libre-échange ?",
+      "choix": [
+        { "id": "a", "texte": "L'origine préférentielle, définie par l'accord et prouvée", "correct": true, "explication": "Seules les règles d'origine de l'accord comptent pour la préférence." },
+        { "id": "b", "texte": "L'origine non préférentielle", "correct": false, "explication": "Elle sert aux mesures de politique commerciale, pas aux préférences tarifaires." },
+        { "id": "c", "texte": "Le pays d'expédition", "correct": false, "explication": "Le pays d'expédition peut être différent du pays d'origine." },
+        { "id": "d", "texte": "La nationalité du vendeur", "correct": false, "explication": "L'origine concerne la marchandise, pas l'entreprise." }
+      ] },
+    { "id": "q.tci.douane.004", "notion": "tci.douane.valeur", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Achat FOB Bangkok 20 000 € ; fret jusqu'à Marseille 1 500 € ; assurance 60 € ; transport Marseille → Lyon 300 €. Valeur en douane ?",
+      "choix": [
+        { "id": "a", "texte": "21 560 €", "correct": true, "explication": "Prix FOB + fret + assurance jusqu'à l'entrée dans l'UE : 20 000 + 1 500 + 60." },
+        { "id": "b", "texte": "21 860 €", "correct": false, "explication": "Le transport après l'entrée dans l'UE (Marseille → Lyon) est exclu de la valeur en douane." },
+        { "id": "c", "texte": "20 000 €", "correct": false, "explication": "En FOB, il faut ajouter fret et assurance jusqu'à la frontière de l'UE." },
+        { "id": "d", "texte": "21 500 €", "correct": false, "explication": "L'assurance jusqu'à la frontière doit aussi être ajoutée." }
+      ] },
+    { "id": "q.tci.douane.005", "notion": "tci.douane.calcul-droits-tva", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Valeur en douane 10 000 € ; droit 5 % ; frais jusqu'au premier lieu de destination en France 200 €. Base de la TVA à l'importation ?",
+      "choix": [
+        { "id": "a", "texte": "10 700 €", "correct": true, "explication": "10 000 + 500 (droits) + 200 (frais accessoires) = 10 700 €." },
+        { "id": "b", "texte": "10 000 €", "correct": false, "explication": "La base TVA inclut aussi les droits et les frais accessoires." },
+        { "id": "c", "texte": "10 500 €", "correct": false, "explication": "Il manque les frais jusqu'au premier lieu de destination." },
+        { "id": "d", "texte": "12 840 €", "correct": false, "explication": "C'est le montant TTC, pas la base." }
+      ] },
+    { "id": "q.tci.douane.006", "notion": "tci.douane.calcul-droits-tva", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : pour une entreprise assujettie, la TVA à l'importation et les droits de douane sont tous deux des coûts définitifs.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "La TVA est déductible pour une entreprise assujettie (et autoliquidée en France depuis 2022)." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "Seuls les droits de douane sont un coût définitif ; la TVA à l'importation est récupérable." }
+      ] },
+    { "id": "q.tci.douane.007", "notion": "tci.douane.declaration", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quel identifiant est exigé de tout opérateur effectuant des formalités douanières dans l'UE ?",
+      "choix": [
+        { "id": "a", "texte": "Le numéro EORI", "correct": true, "explication": "Economic Operators Registration and Identification." },
+        { "id": "b", "texte": "Le code BIC", "correct": false, "explication": "Il identifie une banque." },
+        { "id": "c", "texte": "Le code TARIC", "correct": false, "explication": "Il identifie un produit, pas un opérateur." },
+        { "id": "d", "texte": "Le statut OEA", "correct": false, "explication": "C'est une certification facultative, pas un identifiant obligatoire." }
+      ] },
+    { "id": "q.tci.douane.008", "notion": "tci.douane.regimes-particuliers", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Une entreprise importe du cuir d'Argentine, le transforme en sacs en France et réexporte tous les sacs au Japon. Quel régime lui évite de payer les droits sur le cuir ?",
+      "choix": [
+        { "id": "a", "texte": "Le perfectionnement actif", "correct": true, "explication": "Il suspend les droits sur les marchandises importées transformées puis réexportées." },
+        { "id": "b", "texte": "Le perfectionnement passif", "correct": false, "explication": "Il concerne des marchandises de l'Union exportées temporairement pour transformation hors de l'UE." },
+        { "id": "c", "texte": "L'admission temporaire", "correct": false, "explication": "Elle suppose que la marchandise soit réexportée en l'état, pas transformée." },
+        { "id": "d", "texte": "La mise en libre pratique", "correct": false, "explication": "Elle implique le paiement des droits." }
+      ] }
+  ],
+  "flashcards": [
+    { "id": "f.tci.douane.001", "notions": ["tci.douane.valeur", "tci.douane.calcul-droits-tva"],
+      "question": "Expliquez comment on passe d'un prix d'achat FOB au coût total d'une importation en France, en distinguant ce qui est récupérable.",
+      "reponse": "1) Valeur en douane = prix FOB + fret et assurance jusqu'à l'entrée dans l'UE (les frais après l'entrée sont exclus). 2) Droits de douane = valeur en douane × taux du tarif (selon l'espèce et l'origine). 3) Base de TVA = valeur en douane + droits + frais jusqu'au premier lieu de destination en France ; TVA = base × taux. 4) Coût d'achat définitif = prix + transport et assurance (avant et après l'entrée) + droits de douane. La TVA à l'importation, autoliquidée depuis 2022, est déductible pour une entreprise assujettie : elle n'est pas un coût.",
+      "indispensables": ["Valeur en douane rendu frontière UE", "Droits = valeur × taux", "Base TVA incluant droits et frais jusqu'au premier lieu de destination", "Droits = coût, TVA = récupérable"],
+      "complementaires": ["Autoliquidation depuis le 1er janvier 2022", "Rôle de l'origine préférentielle sur le taux"],
+      "relance": "Que devient la valeur en douane si l'achat est conclu en DDP ?" }
+  ],
+  "exercices": [
+    { "id": "e.tci.douane.01", "notions": ["tci.douane.valeur", "tci.douane.calcul-droits-tva"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Coût d'une importation de Chine",
+      "enonce": "La société Cuisines du Loiret importe des plans de travail de Chine. Données :",
+      "donnees": { "entetes": ["Élément", "Montant"], "lignes": [["Prix FOB Shanghai", "50 000 €"], ["Fret maritime Shanghai → Le Havre", "3 000 €"], ["Assurance transport jusqu'au Havre", "200 €"], ["Transport Le Havre → Orléans (premier lieu de destination)", "400 €"], ["Taux du droit de douane", "4 %"], ["Taux de TVA", "20 %"]] },
+      "questions": [
+        { "id": "1", "consigne": "Valeur en douane (en €) ?", "reponse": { "type": "nombre", "valeur": 53200, "tolerance": 0.5, "unite": "€" },
+          "correction": ["Valeur en douane = FOB + fret + assurance jusqu'à l'entrée dans l'UE", "50 000 + 3 000 + 200 = 53 200 €", "Le transport Le Havre → Orléans, postérieur à l'entrée, est exclu."] },
+        { "id": "2", "consigne": "Droits de douane (en €) ?", "reponse": { "type": "nombre", "valeur": 2128, "tolerance": 0.5, "unite": "€" },
+          "correction": ["53 200 × 4 % = 2 128 €"] },
+        { "id": "3", "consigne": "Base de la TVA à l'importation (en €) ?", "reponse": { "type": "nombre", "valeur": 55728, "tolerance": 0.5, "unite": "€" },
+          "correction": ["Base = valeur en douane + droits + frais jusqu'au premier lieu de destination", "53 200 + 2 128 + 400 = 55 728 €"],
+          "erreurs": ["Oublier les droits de douane dans la base", "Oublier le transport jusqu'à Orléans"] },
+        { "id": "4", "consigne": "Montant de la TVA à l'importation (en €) ?", "reponse": { "type": "nombre", "valeur": 11145.6, "tolerance": 0.05, "unite": "€" },
+          "correction": ["55 728 × 20 % = 11 145,60 €", "Elle est autoliquidée : déclarée et déduite sur la même déclaration de TVA."] },
+        { "id": "5", "consigne": "Coût d'achat définitif hors TVA (en €) ?", "reponse": { "type": "nombre", "valeur": 55728, "tolerance": 0.5, "unite": "€" },
+          "correction": ["50 000 + 3 000 + 200 + 400 + 2 128 = 55 728 €", "Il coïncide ici avec la base de TVA, car tous les frais jusqu'au premier lieu de destination y sont inclus."] }
+      ] }
+  ]
+}

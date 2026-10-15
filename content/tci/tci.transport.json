@@ -1,0 +1,342 @@
+{
+  "chapitre": "tci.transport",
+  "notions": [
+    {
+      "id": "tci.transport.choix-mode",
+      "titre": "Choisir un mode de transport",
+      "niveau": "F",
+      "prerequis": ["tci.operation.acteurs"],
+      "connexes": ["tci.incoterms.choix", "gfi.equilibre.bfr"],
+      "question": "Comment choisir entre bateau, avion, camion, train ou une combinaison ?",
+      "definition": "Le choix du mode de transport résulte d'un arbitrage entre le coût, le délai, la fiabilité, la sécurité de la marchandise, sa nature (poids, volume, valeur, fragilité, dangerosité) et la géographie (distance, accès à la mer, infrastructures).",
+      "explication": "Aucun mode n'est le meilleur dans l'absolu. Plus la valeur de la marchandise est élevée par rapport à son poids, plus un transport rapide et cher (avion) se justifie, car le coût du transport pèse peu dans le prix et l'immobilisation de stock coûte cher. Pour des marchandises lourdes et peu chères, le maritime domine.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Mode", "Points forts", "Limites", "Marchandises typiques"], "lignes": [
+          ["Maritime", "Coût par tonne très faible, très gros volumes", "Lenteur (semaines), ruptures de charge, aléas portuaires", "Vrac, conteneurs de produits courants"],
+          ["Aérien", "Rapidité (jours), sécurité", "Coût élevé, limites de poids et de volume, marchandises dangereuses encadrées", "Produits de forte valeur, urgents ou périssables"],
+          ["Routier", "Porte-à-porte, souplesse", "Coût sur longue distance, capacité limitée par véhicule", "Échanges européens, distribution"],
+          ["Ferroviaire", "Gros tonnages, coût modéré, émissions réduites", "Moins flexible, infrastructures et écartements variables", "Pondéreux, conteneurs sur longue distance (ex. Chine–Europe)"],
+          ["Multimodal", "Combine les avantages (ex. conteneur mer + route)", "Coordination, responsabilité à organiser", "Conteneurs porte-à-porte"]
+        ] },
+        { "type": "attention", "texte": "Le délai a un coût financier : une marchandise qui voyage six semaines est six semaines de stock à financer (besoin en fonds de roulement)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de composants électroniques de Grenoble expédie vers Singapour des puces valant 400 000 € pour 80 kg : l'avion s'impose (fret de l'ordre de quelques centaines d'euros, négligeable face à la valeur, livraison en 3 jours). Le même client achète 18 tonnes de boîtiers plastiques à 2 € le kilo : le conteneur maritime est logique." },
+      "confusions": [
+        { "a": "Coût du transport", "b": "Coût logistique total", "explication": "Le coût total inclut aussi le stock immobilisé, l'emballage, l'assurance, les ruptures et les retards. Un fret plus cher peut réduire le coût total." }
+      ],
+      "verification": ["Pourquoi le rapport valeur/poids est-il un critère décisif ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.transport.maritime",
+      "titre": "Le transport maritime : lignes, conteneurs, groupage",
+      "niveau": "F",
+      "prerequis": ["tci.transport.choix-mode"],
+      "connexes": ["tci.incoterms.fas-fob", "tci.documents.connaissement", "tci.transport.fret-maritime"],
+      "question": "Comment s'organise concrètement un envoi par mer ?",
+      "definition": "Le transport maritime de ligne régulière (lignes, horaires et escales fixes) transporte surtout des conteneurs ; le tramping (navires affrétés à la demande) transporte des vracs. Un conteneur se réserve complet (FCL) ou en groupage (LCL), où plusieurs expéditeurs partagent un conteneur.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Notion", "Signification"], "lignes": [
+          ["EVP / TEU", "Équivalent vingt pieds (Twenty-foot Equivalent Unit) : unité de mesure des conteneurs et de la capacité des navires. Un conteneur de 40 pieds = 2 EVP"],
+          ["Conteneur 20' / 40'", "Boîte standard ISO d'environ 33 m³ (20') ou 67 m³ (40') ; variantes frigorifiques (reefer), open top, plateau"],
+          ["FCL (Full Container Load)", "Conteneur complet réservé par un seul chargeur"],
+          ["LCL (Less than Container Load)", "Groupage : la marchandise est consolidée avec celle d'autres chargeurs par un groupeur"],
+          ["Affrètement", "Location de tout ou partie d'un navire (au voyage, à temps) pour le vrac"]
+        ] },
+        { "type": "etapes", "titre": "Parcours d'un conteneur complet", "etapes": [
+          "Réservation (booking) auprès de la compagnie ou du commissionnaire",
+          "Livraison du conteneur vide chez l'expéditeur, empotage, scellé",
+          "Acheminement au terminal portuaire, dédouanement export",
+          "Chargement à bord, émission du connaissement",
+          "Transport maritime, éventuels transbordements",
+          "Déchargement, dédouanement import, acheminement, dépotage chez le destinataire"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Empotage / dépotage", "en": "stuffing / stripping", "es": "llenado / vaciado", "definition": "Chargement de la marchandise dans le conteneur / déchargement du conteneur." },
+        { "fr": "Équivalent vingt pieds (EVP)", "en": "TEU", "es": "TEU", "definition": "Unité de mesure correspondant à un conteneur de 20 pieds." },
+        { "fr": "Groupage", "en": "consolidation (LCL)", "es": "grupaje", "definition": "Regroupement des envois de plusieurs chargeurs dans un même conteneur." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une PME de cosmétiques expédie 6 m³ vers Montréal : un conteneur de 20 pieds (environ 33 m³) serait sous-utilisé. Elle choisit le groupage (LCL) : elle paie au mètre cube ou à la tonne, mais accepte un délai un peu plus long lié à la consolidation et au dégroupage." },
+      "confusions": [
+        { "a": "Ligne régulière", "b": "Tramping", "explication": "La ligne régulière suit un horaire publié ; le tramping navigue à la demande, selon les contrats d'affrètement." }
+      ],
+      "verification": ["Quand préférer le groupage au conteneur complet ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.transport.fret-maritime",
+      "titre": "Calculer un fret maritime",
+      "niveau": "A",
+      "prerequis": ["tci.transport.maritime"],
+      "connexes": ["tci.incoterms.repartition-couts", "tci.transport.aerien"],
+      "question": "Comment le prix d'un transport maritime est-il calculé ?",
+      "definition": "Le fret maritime conventionnel ou en groupage est calculé sur une « unité payante » (UP) : le poids brut en tonnes ou le volume en mètres cubes, selon ce qui est le plus élevé (1 t = 1 m³), multiplié par un taux de base. S'y ajoutent des surcharges (BAF, CAF, frais de manutention au terminal…). Un conteneur complet est en général facturé au forfait par conteneur.",
+      "explication": "Un navire est limité à la fois en poids et en volume. Une marchandise légère et encombrante occupe de la place sans peser lourd : on la taxe donc au volume. D'où la règle de l'unité payante : on retient la plus grande des deux mesures.",
+      "fonctionnement": [
+        { "type": "formule", "titre": "Unité payante en maritime", "formule": "UP = max(poids brut en tonnes ; volume en m³)      Fret de base = UP × taux" },
+        { "type": "tableau", "titre": "Surcharges courantes", "entetes": ["Sigle", "Signification"], "lignes": [
+          ["BAF", "Bunker Adjustment Factor : ajustement au prix du carburant"],
+          ["CAF", "Currency Adjustment Factor : ajustement aux variations de change"],
+          ["THC", "Terminal Handling Charges : manutention au terminal (départ ou arrivée)"],
+          ["Autres", "Surcharges de congestion, de sûreté, de pointe saisonnière, selon les compagnies"]
+        ] },
+        { "type": "attention", "texte": "Les compagnies expriment souvent la CAF en pourcentage du fret de base et la BAF en montant par UP ou par conteneur : lire attentivement la base de chaque surcharge." }
+      ],
+      "termes": [
+        { "fr": "Unité payante", "en": "freight ton / revenue ton", "es": "unidad de flete", "definition": "Quantité sur laquelle le fret est calculé : la plus élevée entre le poids (en tonnes) et le volume (en m³)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Envoi en groupage : 3 palettes, poids brut 1,8 t, volume 4,2 m³. UP = max(1,8 ; 4,2) = 4,2. Taux : 85 €/UP → fret de base 357 €. BAF 12 €/UP → 50,40 €. CAF 5 % du fret de base → 17,85 €. Total du fret : 425,25 €." },
+      "contreExemple": "Calculer le fret sur le poids parce qu'on « paie ce qui pèse » : pour des marchandises légères (coton, meubles, polystyrène), c'est le volume qui détermine le prix.",
+      "verification": ["Calculez l'UP d'un envoi de 3,5 t pour 2,2 m³."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.transport.aerien",
+      "titre": "Le transport aérien et le poids taxable",
+      "niveau": "F",
+      "prerequis": ["tci.transport.choix-mode"],
+      "connexes": ["tci.transport.fret-maritime", "tci.documents.autres-transport", "tci.transport.responsabilite"],
+      "question": "Comment se calcule le prix d'un envoi par avion ?",
+      "definition": "Le fret aérien est calculé sur le poids taxable : le plus élevé entre le poids réel et le poids volumétrique. Selon la convention usuelle de l'IATA, 1 m³ correspond à 167 kg (soit un rapport de 1 kg pour 6 000 cm³). Le document de transport est la lettre de transport aérien (LTA, Air Waybill).",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Poids volumétrique (kg) = L × l × h (cm) ÷ 6 000      Poids taxable = max(poids réel ; poids volumétrique)" },
+        { "type": "liste", "titre": "Particularités", "items": [
+          "Tarifs dégressifs par tranches de poids (plus l'envoi est lourd, plus le prix au kilo baisse)",
+          "Forfait minimum par expédition",
+          "Groupage aérien très répandu (consolidateurs)",
+          "Marchandises dangereuses soumises à une réglementation stricte (IATA DGR)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Lettre de transport aérien (LTA)", "en": "Air Waybill (AWB)", "es": "carta de porte aéreo", "definition": "Document de transport aérien : preuve du contrat et de la prise en charge ; elle n'est pas un titre négociable." },
+        { "fr": "Poids taxable", "en": "chargeable weight", "es": "peso tasable", "definition": "Poids retenu pour la facturation : le plus élevé entre poids réel et poids volumétrique." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un colis de 120 × 80 × 100 cm pèse 95 kg. Poids volumétrique = 960 000 ÷ 6 000 = 160 kg. Poids taxable = 160 kg. Avec un tarif de 3,20 €/kg, le fret vaut 512 €." },
+      "confusions": [
+        { "a": "Ratio maritime (1 t = 1 m³)", "b": "Ratio aérien (1 m³ = 167 kg)", "explication": "L'avion est beaucoup plus sensible au volume : la place y est rare et coûteuse." }
+      ],
+      "verification": ["Pourquoi un colis volumineux mais léger coûte-t-il cher en avion ?"],
+      "sources": ["src.montreal"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Le ratio 1/6 000 est la règle IATA usuelle ; certains transporteurs express appliquent 1/5 000. Vérifier le tarif du transporteur."
+    },
+    {
+      "id": "tci.transport.routier",
+      "titre": "Le transport routier international et la lettre de voiture CMR",
+      "niveau": "F",
+      "prerequis": ["tci.transport.choix-mode"],
+      "connexes": ["tci.transport.responsabilite", "tci.assurance.reserves"],
+      "question": "Quelles règles s'appliquent quand un camion transporte une marchandise d'un pays à un autre ?",
+      "definition": "Le transport international de marchandises par route est régi par la Convention de Genève de 1956 (CMR) dès lors que le lieu de prise en charge et le lieu de livraison sont dans deux pays différents dont l'un au moins est partie à la convention. Le contrat est constaté par la lettre de voiture CMR, établie en trois exemplaires originaux (expéditeur, destinataire, transporteur).",
+      "explication": "La CMR fixe des règles impératives : contenu de la lettre de voiture, responsabilité présumée du transporteur avec des limites d'indemnisation, délais de réserves et de prescription. Les parties ne peuvent pas y déroger au détriment des règles de la convention.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Points clés de la CMR", "items": [
+          "Le transporteur est présumé responsable de la perte, de l'avarie ou du retard, sauf cas d'exonération (faute de l'ayant droit, vice propre, emballage défectueux…)",
+          "Indemnisation limitée à 8,33 droits de tirage spéciaux (DTS) par kg de poids brut manquant ou avarié, sauf déclaration de valeur ou d'intérêt spécial à la livraison",
+          "Réserves à la livraison : immédiates pour les dommages apparents ; écrites dans les 7 jours (dimanches et jours fériés non compris) pour les dommages non apparents",
+          "Prescription : 1 an (3 ans en cas de dol ou de faute équivalente)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Lettre de voiture CMR", "en": "CMR consignment note", "es": "carta de porte CMR", "definition": "Document constatant le contrat de transport routier international ; non négociable." },
+        { "fr": "Droit de tirage spécial (DTS)", "en": "Special Drawing Right (SDR)", "es": "derecho especial de giro (DEG)", "definition": "Unité de compte du FMI, fondée sur un panier de monnaies, utilisée pour exprimer les limites d'indemnisation des conventions de transport." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un camion transporte 2 000 kg de vaisselle de Limoges à Milan. 300 kg arrivent brisés, d'une valeur de 9 000 €. L'indemnité maximale CMR est 300 × 8,33 = 2 499 DTS (environ 3 000 € selon le cours du DTS). Sans assurance marchandises, l'ayant droit supporte la différence." },
+      "contreExemple": "Penser que le transporteur rembourse toujours la valeur réelle : la limite par kilogramme est faible pour une marchandise de valeur. D'où l'intérêt d'une assurance ad valorem.",
+      "verification": ["Pourquoi une entreprise qui expédie des produits de luxe par route a-t-elle besoin d'une assurance marchandises ?"],
+      "sources": ["src.cmr"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.transport.ferroviaire",
+      "titre": "Le transport ferroviaire international",
+      "niveau": "F",
+      "prerequis": ["tci.transport.choix-mode"],
+      "connexes": ["tci.transport.multimodal"],
+      "question": "Quand le train est-il une option pertinente à l'international ?",
+      "definition": "Le transport ferroviaire international de marchandises est régi, en Europe et dans de nombreux pays, par les Règles uniformes CIM (annexe de la convention COTIF). Le contrat est constaté par la lettre de voiture CIM. Il convient aux gros tonnages et aux longues distances terrestres, notamment en transport combiné (conteneurs ou caisses mobiles).",
+      "explication": "Le train offre une capacité importante et des émissions plus faibles que la route, mais demande des terminaux et des correspondances. Les liaisons Chine–Europe montrent qu'il peut offrir un compromis de délai entre le maritime et l'aérien.",
+      "termes": [
+        { "fr": "Lettre de voiture CIM", "en": "CIM consignment note", "es": "carta de porte CIM", "definition": "Document constatant le contrat de transport ferroviaire international soumis aux Règles uniformes CIM." },
+        { "fr": "Transport combiné", "en": "combined transport", "es": "transporte combinado", "definition": "Transport où l'essentiel du trajet se fait par rail ou voie d'eau, les parcours initiaux et finaux par route étant aussi courts que possible." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un distributeur lyonnais importe des pièces de Chongqing (Chine) par train : environ trois semaines de trajet, contre cinq à six par mer et quelques jours par avion, pour un coût intermédiaire." },
+      "verification": ["Citez deux avantages et deux limites du rail à l'international."],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Délais et disponibilité des liaisons Chine–Europe variables selon le contexte géopolitique : à vérifier au moment de l'étude."
+    },
+    {
+      "id": "tci.transport.multimodal",
+      "titre": "Transport multimodal et commissionnaire de transport",
+      "niveau": "F",
+      "prerequis": ["tci.transport.maritime", "tci.operation.acteurs"],
+      "connexes": ["tci.incoterms.cpt-cip", "tci.incoterms.fca"],
+      "question": "Qui est responsable quand une marchandise passe du camion au navire puis au train ?",
+      "definition": "Le transport multimodal est un transport réalisé par au moins deux modes différents sous un contrat unique conclu avec un seul opérateur (opérateur de transport multimodal ou commissionnaire de transport), qui organise l'ensemble et en répond vis-à-vis du client.",
+      "explication": "Chaque segment est soumis à son propre régime (CMR, règles maritimes, CIM…). Avec un contrat unique, le client n'a qu'un interlocuteur, et c'est l'organisateur qui se retourne ensuite contre le transporteur responsable. Les Incoterms « tous modes » (FCA, CPT, CIP, D) sont adaptés à ce type de transport.",
+      "termes": [
+        { "fr": "Transport multimodal", "en": "multimodal transport", "es": "transporte multimodal", "definition": "Transport utilisant plusieurs modes sous un contrat unique et une responsabilité unique de l'organisateur.", "distinction": "L'intermodalité désigne le passage d'un mode à l'autre sans manipuler la marchandise elle-même (dans un conteneur)." },
+        { "fr": "Rupture de charge", "en": "transshipment / break of bulk", "es": "ruptura de carga", "definition": "Moment où la marchandise change de moyen de transport ; moment de risque accru (manutention, vol, retard)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un vin de Bourgogne part en conteneur : camion jusqu'à Fos-sur-Mer, navire jusqu'à Shanghai, camion jusqu'à l'entrepôt de l'importateur à Suzhou. Un seul commissionnaire a organisé le tout : en cas de casse, l'exportateur s'adresse à lui." },
+      "verification": ["Pourquoi FOB est-il peu adapté à un transport multimodal en conteneur ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.transport.responsabilite",
+      "titre": "Responsabilité et limites d'indemnisation des transporteurs",
+      "niveau": "A",
+      "prerequis": ["tci.transport.routier", "tci.transport.aerien", "tci.transport.maritime"],
+      "connexes": ["tci.assurance.transport", "tci.assurance.reserves"],
+      "question": "Si un transporteur perd la marchandise, combien rembourse-t-il ?",
+      "definition": "Les conventions internationales de transport instituent une responsabilité présumée du transporteur, mais plafonnent l'indemnisation par kilogramme (ou par colis) et prévoient des cas d'exonération. L'indemnisation réelle est donc souvent inférieure à la valeur de la marchandise.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Mode", "Texte principal", "Plafond usuel (en DTS)"], "lignes": [
+          ["Route", "CMR (1956)", "8,33 DTS / kg de poids brut"],
+          ["Mer", "Règles de La Haye-Visby", "666,67 DTS par colis ou 2 DTS / kg, le montant le plus élevé étant retenu"],
+          ["Air", "Convention de Montréal (1999)", "Plafond par kg révisé périodiquement par l'OACI (26 DTS / kg après la révision de 2019)"],
+          ["Rail", "Règles CIM", "17 DTS / kg"]
+        ] },
+        { "type": "attention", "texte": "Les plafonds peuvent être dépassés en cas de déclaration de valeur ou de faute particulièrement grave, selon chaque texte. Ils ne remplacent pas une assurance marchandises." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un colis de 50 kg de pièces d'horlogerie (valeur 30 000 €) est perdu en route : l'indemnité CMR maximale est 50 × 8,33 = 416,5 DTS, soit environ 500 €. L'assurance ad valorem est la seule protection réelle." },
+      "verification": ["Pourquoi les limites par kilogramme pénalisent-elles les marchandises de forte valeur ?"],
+      "sources": ["src.cmr", "src.montreal"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Montants des plafonds aérien (révision OACI périodique) et ferroviaire à confirmer dans les textes en vigueur."
+    },
+    {
+      "id": "tci.transport.emballage-marquage",
+      "titre": "Emballage, marquage et colisage",
+      "niveau": "F",
+      "prerequis": ["tci.transport.choix-mode"],
+      "connexes": ["tci.documents.liste-colisage", "tci.assurance.transport"],
+      "question": "Pourquoi un emballage insuffisant peut-il faire perdre toute indemnisation ?",
+      "definition": "L'emballage protège la marchandise pendant le transport et les manutentions ; le marquage identifie chaque colis (destinataire, numéro, poids, consignes) ; le colisage décrit la répartition de la marchandise entre les colis. Ces obligations incombent au vendeur selon les Incoterms (rubrique A8), sauf accord contraire.",
+      "explication": "Un emballage inadapté au mode de transport est une cause classique d'exonération du transporteur et d'exclusion de garantie par l'assureur : le dommage est alors à la charge de celui qui devait emballer.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Bonnes pratiques", "items": [
+          "Adapter l'emballage au mode et au trajet (humidité en maritime, chocs en manutention)",
+          "Respecter les normes phytosanitaires des palettes en bois (norme NIMP 15 / ISPM 15) dans de nombreux pays",
+          "Marquer chaque colis de façon cohérente avec les documents (marques, numéros)",
+          "Utiliser les pictogrammes de manutention normalisés (haut, fragile, craint l'humidité)"
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Des machines expédiées vers l'Inde dans des caisses non traitées sont bloquées à l'arrivée : les palettes en bois ne portent pas le marquage NIMP 15. Le délai et les frais de fumigation sont à la charge de l'exportateur, responsable de l'emballage." },
+      "verification": ["Quel lien entre emballage et exclusion de garantie de l'assurance ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    { "id": "q.tci.transport.001", "notion": "tci.transport.choix-mode", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Quelle marchandise justifie le plus probablement un transport aérien depuis la France vers le Japon ?",
+      "choix": [
+        { "id": "a", "texte": "Des montres de luxe d'une valeur de 250 000 € pour 40 kg", "correct": true, "explication": "Rapport valeur/poids très élevé : le fret aérien pèse peu dans le prix et réduit le risque et le stock immobilisé." },
+        { "id": "b", "texte": "20 tonnes de tuiles en terre cuite", "correct": false, "explication": "Marchandise lourde et peu chère : le maritime s'impose." },
+        { "id": "c", "texte": "Un vrac de 30 000 tonnes de blé", "correct": false, "explication": "Vrac de masse : navire affrété." },
+        { "id": "d", "texte": "Des meubles en kit bon marché", "correct": false, "explication": "Volumineux et peu chers : le poids volumétrique rendrait l'aérien prohibitif." }
+      ] },
+    { "id": "q.tci.transport.002", "notion": "tci.transport.maritime", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Que signifie LCL ?",
+      "choix": [
+        { "id": "a", "texte": "Un envoi en groupage, qui ne remplit pas un conteneur entier", "correct": true, "explication": "Less than Container Load : la marchandise est consolidée avec celle d'autres chargeurs." },
+        { "id": "b", "texte": "Un conteneur complet réservé par un seul chargeur", "correct": false, "explication": "C'est FCL (Full Container Load)." },
+        { "id": "c", "texte": "Un connaissement émis par le capitaine", "correct": false, "explication": "Rien à voir avec un document." },
+        { "id": "d", "texte": "Une surcharge liée au carburant", "correct": false, "explication": "C'est la BAF." }
+      ] },
+    { "id": "q.tci.transport.003", "notion": "tci.transport.fret-maritime", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Un envoi maritime en groupage pèse 2,6 t et mesure 1,9 m³. Le taux est de 70 € par unité payante. Quel est le fret de base ?",
+      "choix": [
+        { "id": "a", "texte": "182 €", "correct": true, "explication": "UP = max(2,6 ; 1,9) = 2,6 ; 2,6 × 70 = 182 €." },
+        { "id": "b", "texte": "133 €", "correct": false, "explication": "Calcul sur le volume (1,9 × 70) : on retient la plus grande des deux mesures." },
+        { "id": "c", "texte": "315 €", "correct": false, "explication": "Addition du poids et du volume : l'UP n'est pas une somme." },
+        { "id": "d", "texte": "26,92 €", "correct": false, "explication": "Division au lieu d'une multiplication." }
+      ] },
+    { "id": "q.tci.transport.004", "notion": "tci.transport.fret-maritime", "format": "multiple", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelles affirmations sur les surcharges maritimes sont exactes ? (plusieurs réponses possibles)",
+      "choix": [
+        { "id": "a", "texte": "La BAF ajuste le fret au prix du carburant", "correct": true, "explication": "Bunker Adjustment Factor." },
+        { "id": "b", "texte": "La CAF ajuste le fret aux variations de change", "correct": true, "explication": "Currency Adjustment Factor." },
+        { "id": "c", "texte": "Les THC rémunèrent la manutention au terminal", "correct": true, "explication": "Terminal Handling Charges." },
+        { "id": "d", "texte": "La CAF maritime est la même chose que l'Incoterm CIF", "correct": false, "explication": "Homonymie trompeuse : la CAF (surcharge de change) n'a rien à voir avec le « coût, assurance, fret » de CIF (parfois traduit CAF en français)." }
+      ] },
+    { "id": "q.tci.transport.005", "notion": "tci.transport.aerien", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Un colis aérien mesure 100 × 60 × 50 cm et pèse 30 kg. Avec le ratio de 6 000 cm³ par kg, quel est le poids taxable ?",
+      "choix": [
+        { "id": "a", "texte": "50 kg", "correct": true, "explication": "Volume 300 000 cm³ ÷ 6 000 = 50 kg > 30 kg : le poids volumétrique est retenu." },
+        { "id": "b", "texte": "30 kg", "correct": false, "explication": "C'est le poids réel, inférieur au poids volumétrique." },
+        { "id": "c", "texte": "80 kg", "correct": false, "explication": "On ne cumule pas les deux poids : on retient le plus élevé." },
+        { "id": "d", "texte": "300 kg", "correct": false, "explication": "Erreur de conversion : il faut diviser le volume en cm³ par 6 000." }
+      ] },
+    { "id": "q.tci.transport.006", "notion": "tci.transport.routier", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Un destinataire découvre en ouvrant les cartons, trois jours après la livraison par un transporteur routier international, que des produits sont cassés (dommage non apparent à la livraison). Que doit-il faire selon la CMR ?",
+      "choix": [
+        { "id": "a", "texte": "Adresser des réserves écrites au transporteur dans les 7 jours (hors dimanches et jours fériés)", "correct": true, "explication": "C'est le délai CMR pour les dommages non apparents." },
+        { "id": "b", "texte": "Rien : passé le moment de la livraison, aucun recours n'est possible", "correct": false, "explication": "La CMR prévoit un délai pour les dommages non apparents." },
+        { "id": "c", "texte": "Attendre un an, délai de prescription, avant d'agir", "correct": false, "explication": "La prescription fixe le délai pour agir en justice ; les réserves doivent être faites bien avant." },
+        { "id": "d", "texte": "Envoyer des réserves dans les 3 jours selon les règles de La Haye-Visby", "correct": false, "explication": "Ce délai concerne le transport maritime, pas la route." }
+      ] },
+    { "id": "q.tci.transport.007", "notion": "tci.transport.multimodal", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quel est le principal avantage d'un contrat de transport multimodal pour l'expéditeur ?",
+      "choix": [
+        { "id": "a", "texte": "Un interlocuteur unique responsable de l'ensemble du trajet", "correct": true, "explication": "L'organisateur répond vis-à-vis du client puis se retourne contre le transporteur fautif." },
+        { "id": "b", "texte": "La suppression de toutes les ruptures de charge", "correct": false, "explication": "Les changements de mode demeurent ; c'est le conteneur qui évite de manipuler la marchandise elle-même." },
+        { "id": "c", "texte": "L'absence de limite d'indemnisation", "correct": false, "explication": "Des limites s'appliquent toujours selon les régimes en cause." },
+        { "id": "d", "texte": "La dispense de dédouanement", "correct": false, "explication": "Le dédouanement reste obligatoire hors union douanière." }
+      ] },
+    { "id": "q.tci.transport.008", "notion": "tci.transport.responsabilite", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : en cas de perte, le transporteur international rembourse toujours la valeur réelle de la marchandise.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "Les conventions plafonnent l'indemnisation par kg ou par colis." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "L'indemnité est plafonnée (par ex. 8,33 DTS/kg en CMR), sauf déclaration de valeur ou faute grave selon les textes." }
+      ] },
+    { "id": "q.tci.transport.009", "notion": "tci.transport.emballage-marquage", "format": "unique", "niveau": 2, "competence": "analyser-cas",
+      "enonce": "Une machine arrive endommagée. L'expert établit que la caisse n'était pas adaptée au transport maritime. Conséquence la plus probable ?",
+      "choix": [
+        { "id": "a", "texte": "Le transporteur et l'assureur peuvent refuser d'indemniser ; la perte reste à la charge de celui qui devait emballer", "correct": true, "explication": "L'emballage insuffisant est une cause d'exonération du transporteur et une exclusion classique des polices d'assurance." },
+        { "id": "b", "texte": "Le transporteur indemnise intégralement, l'emballage n'ayant pas d'importance", "correct": false, "explication": "L'emballage défectueux est un cas d'exonération." },
+        { "id": "c", "texte": "La douane rembourse les droits payés", "correct": false, "explication": "Sans rapport avec la question de l'emballage." },
+        { "id": "d", "texte": "L'acheteur est toujours responsable, quel que soit l'Incoterm", "correct": false, "explication": "L'emballage incombe en principe au vendeur (rubrique A8)." }
+      ] }
+  ],
+  "flashcards": [
+    { "id": "f.tci.transport.001", "notions": ["tci.transport.fret-maritime", "tci.transport.aerien"],
+      "question": "Expliquez pourquoi le maritime et l'aérien taxent tantôt le poids, tantôt le volume, et donnez les ratios usuels.",
+      "reponse": "Un moyen de transport est limité à la fois en poids et en volume. Pour ne pas transporter à perte des marchandises légères mais encombrantes, on taxe sur la plus élevée des deux mesures. En maritime, l'unité payante est le maximum entre le poids en tonnes et le volume en m³ (1 t = 1 m³). En aérien, l'espace est plus rare : on retient le maximum entre le poids réel et le poids volumétrique, calculé avec 1 kg pour 6 000 cm³ (soit 1 m³ = 167 kg).",
+      "indispensables": ["Double contrainte poids/volume", "On retient la mesure la plus élevée", "Maritime : 1 t = 1 m³", "Aérien : 6 000 cm³ par kg (167 kg/m³)"],
+      "erreurs": ["Additionner poids et volume", "Retenir toujours le poids réel"],
+      "relance": "Calculez le poids taxable aérien d'un carton de 80 × 60 × 50 cm pesant 12 kg." },
+    { "id": "f.tci.transport.002", "notions": ["tci.transport.responsabilite", "tci.transport.routier"],
+      "question": "Une entreprise dit : « Le transporteur est responsable, inutile d'assurer la marchandise. » Réfutez avec un exemple chiffré.",
+      "reponse": "Le transporteur est présumé responsable mais son indemnisation est plafonnée et il peut s'exonérer (emballage, vice propre, force majeure selon les textes). Exemple CMR : 100 kg de parfums valant 20 000 € perdus → indemnité maximale 100 × 8,33 = 833 DTS, soit environ 1 000 €. Il manque environ 19 000 €. Seule une assurance marchandises ad valorem couvre la valeur réelle.",
+      "indispensables": ["Responsabilité présumée mais plafonnée", "Calcul d'un plafond par kg", "Cas d'exonération", "Conclusion : assurance ad valorem"],
+      "relance": "Quel plafond s'applique en transport maritime sous La Haye-Visby ?" }
+  ],
+  "exercices": [
+    { "id": "e.tci.transport.01", "notions": ["tci.transport.fret-maritime"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Fret maritime en groupage",
+      "enonce": "La société Atelier Céramique du Berry expédie en groupage du Havre à New York 4 palettes de vaisselle. Poids brut total : 2 400 kg. Dimensions de chaque palette : 1,20 m × 1,00 m × 1,10 m. Taux de base : 78 € par unité payante. BAF : 9 € par unité payante. CAF : 4 % du fret de base.",
+      "questions": [
+        { "id": "1", "consigne": "Calculez le volume total (en m³).", "reponse": { "type": "nombre", "valeur": 5.28, "tolerance": 0.005, "unite": "m³" },
+          "correction": ["Volume d'une palette : 1,20 × 1,00 × 1,10 = 1,32 m³", "Volume total : 4 × 1,32 = 5,28 m³"] },
+        { "id": "2", "consigne": "Quelle est l'unité payante ?", "reponse": { "type": "nombre", "valeur": 5.28, "tolerance": 0.005 },
+          "correction": ["Poids : 2 400 kg = 2,4 t", "UP = max(2,4 ; 5,28) = 5,28 : la marchandise est taxée au volume"],
+          "erreurs": ["Oublier de convertir les kilogrammes en tonnes"] },
+        { "id": "3", "consigne": "Calculez le fret total, surcharges comprises (en €, arrondi au centime).", "reponse": { "type": "nombre", "valeur": 475.83, "tolerance": 0.02, "unite": "€" },
+          "correction": ["Fret de base : 5,28 × 78 = 411,84 €", "BAF : 5,28 × 9 = 47,52 €", "CAF : 4 % × 411,84 = 16,47 € (16,4736)", "Total : 411,84 + 47,52 + 16,47 = 475,83 €"],
+          "erreurs": ["Calculer la CAF sur le fret augmenté de la BAF : vérifier la base indiquée par la compagnie"] }
+      ] },
+    { "id": "e.tci.transport.02", "notions": ["tci.transport.aerien", "tci.transport.choix-mode"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Avion ou bateau ?",
+      "enonce": "Un fabricant de Lyon doit livrer à Montréal 6 cartons de 60 × 40 × 50 cm, 14 kg chacun, valeur totale 18 000 €. Tarif aérien : 3,80 € par kg taxable (minimum 150 €). Ratio : 6 000 cm³ par kg.",
+      "questions": [
+        { "id": "1", "consigne": "Poids volumétrique total (en kg) ?", "reponse": { "type": "nombre", "valeur": 120, "tolerance": 0.1, "unite": "kg" },
+          "correction": ["Volume d'un carton : 60 × 40 × 50 = 120 000 cm³", "Poids volumétrique d'un carton : 120 000 ÷ 6 000 = 20 kg", "Total : 6 × 20 = 120 kg"] },
+        { "id": "2", "consigne": "Fret aérien (en €) ?", "reponse": { "type": "nombre", "valeur": 456, "tolerance": 0.5, "unite": "€" },
+          "correction": ["Poids réel : 6 × 14 = 84 kg ; poids taxable = max(84 ; 120) = 120 kg", "Fret : 120 × 3,80 = 456 € (supérieur au minimum de 150 €)"] },
+        { "id": "3", "consigne": "Le fret aérien représente-t-il plus ou moins de 3 % de la valeur de la marchandise ?", "reponse": { "type": "choix", "options": ["Moins de 3 %", "Plus de 3 %"], "correcte": 0 },
+          "correction": ["456 ÷ 18 000 = 2,53 % : le coût est modéré au regard de la valeur, ce qui peut justifier l'aérien si le délai compte."] }
+      ] }
+  ]
+}

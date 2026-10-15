@@ -1,0 +1,176 @@
+{
+  "chapitre": "tci.operation",
+  "notions": [
+    {
+      "id": "tci.operation.acteurs",
+      "titre": "Les acteurs d'une opération d'import-export",
+      "niveau": "F",
+      "connexes": ["tci.operation.flux", "tci.transport.multimodal"],
+      "question": "Qui intervient entre le moment où un vendeur accepte une commande étrangère et celui où l'acheteur reçoit la marchandise et paie ?",
+      "definition": "Une opération d'import-export mobilise, autour du vendeur (exportateur) et de l'acheteur (importateur), des intermédiaires spécialisés : transporteurs, commissionnaires de transport et transitaires, déclarants en douane, banques, assureurs et administrations douanières et fiscales.",
+      "explication": "Le vendeur et l'acheteur ne peuvent pas tout faire seuls : déplacer la marchandise, la dédouaner, l'assurer et faire circuler l'argent supposent des compétences et des agréments particuliers. Chaque intermédiaire est rémunéré et engage sa responsabilité selon son propre contrat.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Acteur", "Rôle", "Contrat qui le lie"], "lignes": [
+          ["Transporteur", "Déplace physiquement la marchandise (armateur, compagnie aérienne, transporteur routier)", "Contrat de transport"],
+          ["Commissionnaire de transport", "Organise de bout en bout un transport qu'il fait exécuter par d'autres, en son nom ; il répond de ses substitués", "Contrat de commission de transport"],
+          ["Transitaire", "Mandataire qui accomplit des opérations ponctuelles (réservation, formalités) au nom et pour le compte de son client", "Mandat"],
+          ["Représentant en douane (déclarant)", "Établit et dépose la déclaration en douane pour le compte de l'importateur ou de l'exportateur", "Mandat de représentation directe ou indirecte"],
+          ["Banques", "Exécutent les paiements, financent, garantissent (crédit documentaire, garanties)", "Convention de compte, ordre de crédit documentaire"],
+          ["Assureur", "Couvre les dommages à la marchandise ou le risque d'impayé", "Police d'assurance"],
+          ["Douane", "Contrôle, taxe, applique les mesures de politique commerciale", "Relation de droit public"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Commissionnaire de transport", "en": "freight forwarder (acting as principal)", "es": "comisionista de transporte", "definition": "Professionnel qui organise librement un transport de bout en bout pour son client et répond du résultat, y compris des fautes des transporteurs qu'il choisit.", "distinction": "Le transitaire, simple mandataire, ne répond que de ses propres fautes." },
+        { "fr": "Transitaire", "en": "forwarding agent", "es": "transitario", "definition": "Mandataire chargé d'opérations précises (formalités, réservation de fret, réception) pour le compte de son client." },
+        { "fr": "Exportateur", "en": "exporter", "es": "exportador", "definition": "Entreprise qui vend et expédie une marchandise vers un pays étranger." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une cidrerie normande exporte 2 palettes vers Tokyo. Elle confie l'ensemble à un commissionnaire de transport du Havre, qui choisit la compagnie maritime, réserve le conteneur de groupage, fait établir la déclaration d'export par son service douane et transmet les documents à la banque de la cidrerie, payée par crédit documentaire. Un assureur couvre la marchandise jusqu'à l'entrepôt de l'importateur." },
+      "confusions": [
+        { "a": "Commissionnaire de transport", "b": "Transitaire", "explication": "Le commissionnaire organise et garantit le résultat (responsabilité de plein droit, y compris du fait de ses substitués) ; le transitaire exécute un mandat et ne répond que de sa faute prouvée." },
+        { "a": "Transitaire", "b": "Transporteur", "explication": "Le transitaire n'exécute pas le déplacement : il l'organise ou en accomplit les formalités." }
+      ],
+      "verification": ["Pourquoi une PME confie-t-elle souvent un export à un commissionnaire plutôt qu'à un simple transitaire ?"],
+      "sources": ["src.douane-fr"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.operation.flux",
+      "titre": "Flux physique, flux documentaire, flux financier",
+      "niveau": "F",
+      "prerequis": ["tci.operation.acteurs"],
+      "connexes": ["tci.paiement.credit-documentaire", "tci.documents.coherence"],
+      "question": "Pourquoi une vente internationale doit-elle être pensée comme trois circuits parallèles ?",
+      "definition": "Toute opération internationale combine trois flux : le flux physique (la marchandise), le flux documentaire (les documents commerciaux, de transport, d'assurance, douaniers) et le flux financier (le paiement). Ils sont décalés dans le temps et dans l'espace.",
+      "explication": "La marchandise voyage avec le transporteur, les documents passent souvent par les banques, l'argent circule entre comptes bancaires. La sécurité de l'opération repose sur la manière dont ces flux sont reliés : par exemple, en crédit documentaire, le paiement dépend de la remise de documents qui représentent la marchandise.",
+      "fonctionnement": [
+        { "type": "etapes", "titre": "Chronologie type d'une exportation", "etapes": [
+          "Demande de prix, offre et facture pro forma",
+          "Commande et accusé de réception",
+          "Mise en place du moyen de paiement (ex. ouverture d'un crédit documentaire)",
+          "Préparation, emballage, marquage ; dédouanement export",
+          "Remise au transporteur ; émission du document de transport",
+          "Envoi des documents (directement ou via les banques)",
+          "Paiement (avant, contre documents ou à échéance)",
+          "Arrivée, dédouanement import, livraison à l'acheteur"
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Une PME de Nancy vend des appareils de mesure à Lima, payés par remise documentaire. Le navire arrive à Callao le 12 mai ; les documents, envoyés par la banque française, arrivent le 15 mai à la banque péruvienne. L'importateur ne peut retirer la marchandise qu'après avoir payé à sa banque et obtenu les documents : flux physique et flux financier sont reliés par le flux documentaire." },
+      "confusions": [
+        { "a": "Livraison (flux physique)", "b": "Paiement (flux financier)", "explication": "Ils ne sont presque jamais simultanés : le choix de la technique de paiement sert précisément à gérer ce décalage." }
+      ],
+      "verification": ["Dans une vente payée d'avance, quel flux précède les deux autres ? Quel risque cela crée-t-il pour l'acheteur ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.operation.offre-export",
+      "titre": "L'offre export et la facture pro forma",
+      "niveau": "F",
+      "prerequis": ["tci.operation.flux"],
+      "connexes": ["tci.incoterms.redaction", "aec.correspondance.offer", "dai.cvim.formation"],
+      "question": "Que doit contenir une proposition de prix envoyée à un client étranger pour éviter les malentendus ?",
+      "definition": "L'offre export est la proposition commerciale chiffrée adressée au client étranger. La facture pro forma est un document qui en reprend le contenu sous forme de facture anticipée : elle n'est pas une facture comptable mais sert au client à obtenir une licence d'importation, un financement ou l'ouverture d'un crédit documentaire.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Mentions indispensables", "items": [
+          "Désignation précise, quantités, prix unitaire et total, monnaie",
+          "Incoterm avec lieu et édition",
+          "Délai de livraison ou date d'expédition",
+          "Conditions et moyen de paiement",
+          "Durée de validité de l'offre",
+          "Emballage, poids, volume (utiles au client pour le transport et la douane)",
+          "Origine des marchandises, code tarifaire si possible"
+        ] },
+        { "type": "attention", "texte": "Une offre précise et ferme peut engager le vendeur dès son acceptation (en droit de la vente internationale, une offre qui fixe un délai d'acceptation peut même être irrévocable). Pour garder une marge, préciser « sous réserve de confirmation » ou une durée de validité courte." }
+      ],
+      "termes": [
+        { "fr": "Facture pro forma", "en": "pro forma invoice", "es": "factura proforma", "definition": "Facture anticipée reprenant l'offre, sans valeur comptable, utilisée par l'acheteur pour ses démarches préalables (licence, financement, crédit documentaire)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un importateur algérien demande une facture pro forma à un fabricant de pompes de Lyon pour obtenir l'accord de sa banque et ouvrir un crédit documentaire. La pro forma indique : 40 pompes, 1 250 € l'unité, 50 000 €, FCA Lyon Incoterms® 2020, expédition 6 semaines après ouverture du crédit, paiement par crédit documentaire irrévocable, validité 30 jours." },
+      "confusions": [
+        { "a": "Facture pro forma", "b": "Facture commerciale", "explication": "La pro forma précède la vente et n'est pas comptabilisée ; la facture commerciale constate la vente réalisée et sert de base à la comptabilité, à la TVA et à la douane." }
+      ],
+      "verification": ["Citez cinq mentions d'une offre export et expliquez à quoi sert chacune pour le client."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.operation.facture-commerciale",
+      "titre": "La facture commerciale internationale",
+      "niveau": "F",
+      "prerequis": ["tci.operation.offre-export"],
+      "connexes": ["tci.douane.valeur", "tci.paiement.credoc-conformite", "cpt.achats-ventes.factures"],
+      "question": "Pourquoi la facture d'une vente internationale est-elle un document beaucoup plus exigeant qu'une facture nationale ?",
+      "definition": "La facture commerciale constate la vente et le montant dû. À l'international, elle sert aussi de base au dédouanement (valeur en douane), au contrôle de l'origine et, en crédit documentaire, de document à présenter en stricte conformité avec les termes du crédit.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Mentions usuelles d'une facture export", "items": [
+          "Identité, adresse et numéros d'identification (TVA intracommunautaire, EORI) du vendeur et de l'acheteur",
+          "Numéro et date, référence de la commande",
+          "Description précise des marchandises, quantité, prix unitaire, total, monnaie",
+          "Incoterm et lieu",
+          "Origine des marchandises",
+          "Mention de l'exonération de TVA et sa base légale (export ou livraison intracommunautaire)",
+          "Poids, nombre de colis, marques"
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Pour une vente payée par crédit documentaire, le crédit exige « 200 cartons de café torréfié en grains ». La facture indique « 200 cartons de café ». Écart de libellé : la banque peut refuser les documents. La facture doit reprendre exactement la description des marchandises figurant dans le crédit." },
+      "confusions": [
+        { "a": "Facture commerciale", "b": "Liste de colisage", "explication": "La facture porte la valeur ; la liste de colisage décrit le contenu de chaque colis (poids, dimensions, marques) sans les prix." }
+      ],
+      "verification": ["Pourquoi la description des marchandises sur la facture est-elle décisive en crédit documentaire ?"],
+      "sources": ["src.icc-ucp600"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    { "id": "q.tci.operation.001", "notion": "tci.operation.acteurs", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Une marchandise confiée à un commissionnaire de transport est endommagée par le transporteur routier qu'il a choisi. Qui l'expéditeur peut-il mettre en cause ?",
+      "choix": [
+        { "id": "a", "texte": "Le commissionnaire de transport, qui répond des transporteurs qu'il s'est substitués", "correct": true, "explication": "Le commissionnaire est garant du résultat et répond du fait de ses substitués, à charge pour lui de se retourner contre eux." },
+        { "id": "b", "texte": "Uniquement le transporteur routier, avec qui l'expéditeur n'a pourtant pas contracté", "correct": false, "explication": "L'expéditeur a contracté avec le commissionnaire ; il peut agir contre lui sans avoir à rechercher le transporteur." },
+        { "id": "c", "texte": "Personne, car le commissionnaire n'est qu'un mandataire", "correct": false, "explication": "C'est la situation du transitaire, pas celle du commissionnaire de transport." },
+        { "id": "d", "texte": "La douane, qui a contrôlé la marchandise", "correct": false, "explication": "La douane n'est pas responsable de l'intégrité de la marchandise pendant le transport." }
+      ] },
+    { "id": "q.tci.operation.002", "notion": "tci.operation.acteurs", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quel acteur établit la déclaration en douane pour le compte d'une entreprise ?",
+      "choix": [
+        { "id": "a", "texte": "Le représentant en douane", "correct": true, "explication": "Il agit en représentation directe (au nom et pour le compte) ou indirecte (en son nom pour le compte) de son client." },
+        { "id": "b", "texte": "L'assureur transport", "correct": false, "explication": "L'assureur couvre les dommages ; il n'intervient pas dans les formalités." },
+        { "id": "c", "texte": "La banque notificatrice", "correct": false, "explication": "La banque intervient dans le paiement, pas dans la déclaration en douane." },
+        { "id": "d", "texte": "Le transporteur maritime, obligatoirement", "correct": false, "explication": "Le transporteur peut proposer ce service, mais ce n'est pas son rôle de principe." }
+      ] },
+    { "id": "q.tci.operation.003", "notion": "tci.operation.flux", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "enonce": "Vrai ou faux : dans une vente internationale, la marchandise, les documents et le paiement circulent en général en même temps.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "Les trois flux sont décalés dans le temps et l'espace." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "Le décalage entre flux est la raison d'être des techniques de paiement documentaires." }
+      ] },
+    { "id": "q.tci.operation.004", "notion": "tci.operation.offre-export", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "À quoi peut servir une facture pro forma pour l'acheteur étranger ? (plusieurs réponses possibles)",
+      "choix": [
+        { "id": "a", "texte": "Demander l'ouverture d'un crédit documentaire à sa banque", "correct": true, "explication": "La banque a besoin des conditions précises de la vente." },
+        { "id": "b", "texte": "Obtenir une licence ou une autorisation d'importation", "correct": true, "explication": "De nombreux pays l'exigent avant l'importation." },
+        { "id": "c", "texte": "Comptabiliser l'achat dans ses comptes", "correct": false, "explication": "La pro forma n'est pas une pièce comptable ; c'est la facture commerciale qui l'est." },
+        { "id": "d", "texte": "Préparer le financement ou le budget de l'achat", "correct": true, "explication": "Elle donne un montant précis et des conditions." }
+      ] },
+    { "id": "q.tci.operation.005", "notion": "tci.operation.facture-commerciale", "format": "unique", "niveau": 3, "competence": "detecter-erreur",
+      "enonce": "Le crédit documentaire exige « 500 m de tissu coton imprimé ». Quelle facture risque d'être refusée par la banque ?",
+      "choix": [
+        { "id": "a", "texte": "Une facture indiquant « 500 m de textile »", "correct": true, "explication": "La description sur la facture doit correspondre à celle du crédit ; « textile » est plus vague que « tissu coton imprimé »." },
+        { "id": "b", "texte": "Une facture indiquant « 500 m de tissu coton imprimé, réf. 44-B »", "correct": false, "explication": "Ajouter une référence n'entre pas en conflit avec la description : la description exigée y figure." },
+        { "id": "c", "texte": "Une facture en euros pour un crédit libellé en euros", "correct": false, "explication": "La monnaie est cohérente : pas d'irrégularité." },
+        { "id": "d", "texte": "Une facture mentionnant l'Incoterm prévu au crédit", "correct": false, "explication": "C'est au contraire une bonne pratique." }
+      ] }
+  ],
+  "flashcards": [
+    { "id": "f.tci.operation.001", "notions": ["tci.operation.acteurs"],
+      "question": "Distinguez commissionnaire de transport et transitaire, et expliquez la conséquence pour l'exportateur en cas de dommage.",
+      "reponse": "Le commissionnaire de transport organise librement le transport de bout en bout, en son nom, et choisit ses substitués (transporteurs). Il est garant du résultat : il répond de ses fautes et de celles de ses substitués. Le transitaire est un mandataire qui accomplit des opérations précises au nom et pour le compte de son client ; il ne répond que de sa faute personnelle prouvée. Conséquence : en cas de dommage, l'exportateur peut agir directement contre le commissionnaire, alors qu'avec un transitaire il devra souvent agir contre le transporteur.",
+      "indispensables": ["Commissionnaire : organisation de bout en bout et garantie du résultat", "Responsabilité du commissionnaire du fait de ses substitués", "Transitaire : mandataire, responsabilité pour faute prouvée", "Conséquence sur le recours de l'exportateur"],
+      "erreurs": ["Confondre transitaire et transporteur"],
+      "relance": "Contre qui agir si un transitaire a correctement réservé le fret mais que le transporteur a perdu la marchandise ?" },
+    { "id": "f.tci.operation.002", "notions": ["tci.operation.flux", "tci.operation.offre-export"],
+      "question": "Décrivez la chronologie d'une exportation, de la demande de prix au paiement, en reliant les trois flux.",
+      "reponse": "1) Demande de prix, offre et facture pro forma (documentaire). 2) Commande et accusé de réception. 3) Mise en place du paiement, par exemple ouverture d'un crédit documentaire (financier/documentaire). 4) Préparation, emballage, dédouanement export (physique/documentaire). 5) Remise au transporteur et émission du document de transport. 6) Transmission des documents, souvent via les banques. 7) Paiement selon la technique choisie. 8) Arrivée, dédouanement import, livraison. Les flux sont décalés : la technique de paiement relie le paiement aux documents qui représentent la marchandise.",
+      "indispensables": ["Offre et pro forma avant la commande", "Mise en place du paiement avant l'expédition (si technique documentaire)", "Document de transport émis à la remise au transporteur", "Décalage entre flux et rôle des documents"],
+      "relance": "À quel moment le vendeur obtient-il le connaissement, et pourquoi en a-t-il besoin pour être payé ?" }
+  ]
+}
