@@ -1,0 +1,767 @@
+{
+  "chapitre": "tci.incoterms",
+  "notions": [
+    {
+      "id": "tci.incoterms.fonction",
+      "titre": "Fonction et nature contractuelle des Incoterms",
+      "niveau": "F",
+      "prerequis": ["tci.operation.acteurs"],
+      "connexes": ["dai.normes.soft-law", "tci.incoterms.vs-propriete"],
+      "question": "Comment un vendeur à Lyon et un acheteur à Valence peuvent-ils savoir, sans négocier chaque détail, qui organise le transport, qui paie quoi et à quel moment la marchandise voyage aux risques de l'acheteur ?",
+      "definition": "Les Incoterms® sont des règles publiées par la Chambre de commerce internationale (ICC) qui définissent, par un sigle de trois lettres, la répartition entre vendeur et acheteur des obligations de livraison, des risques et des frais dans un contrat de vente de marchandises. Ils ne s'appliquent que si le contrat y fait référence.",
+      "explication": "Un Incoterm est un raccourci contractuel : trois lettres renvoient à un ensemble de dix obligations standardisées pour chaque partie. Il ne s'agit pas d'une loi : c'est une règle privée (soft law) que les parties choisissent d'intégrer à leur contrat. L'édition en vigueur à la date de vérification est celle de 2020, applicable depuis le 1er janvier 2020.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Ce que règle un Incoterm", "items": [
+          "Le lieu et le moment de la livraison",
+          "Le transfert des risques du vendeur à l'acheteur",
+          "La répartition des frais (transport, chargement, dédouanement…)",
+          "Qui conclut le contrat de transport et, pour CIF et CIP, l'assurance",
+          "Les formalités douanières à l'export et à l'import",
+          "Les documents et les notifications à fournir"
+        ] },
+        { "type": "liste", "titre": "Ce qu'un Incoterm ne règle pas", "items": [
+          "Le transfert de propriété de la marchandise",
+          "Le prix, la monnaie et les conditions de paiement",
+          "Les conséquences d'une inexécution (dommages-intérêts, résolution)",
+          "La loi applicable et le tribunal compétent"
+        ] },
+        { "type": "tableau", "titre": "Les dix rubriques A (vendeur) / B (acheteur) de l'édition 2020", "entetes": ["Rubrique", "Contenu"], "lignes": [
+          ["A1 / B1", "Obligations générales"],
+          ["A2 / B2", "Livraison / prise de livraison"],
+          ["A3 / B3", "Transfert des risques"],
+          ["A4 / B4", "Transport"],
+          ["A5 / B5", "Assurance"],
+          ["A6 / B6", "Document de livraison ou de transport"],
+          ["A7 / B7", "Dédouanement export / import"],
+          ["A8 / B8", "Vérification, emballage, marquage"],
+          ["A9 / B9", "Répartition des frais"],
+          ["A10 / B10", "Notifications"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Incoterm", "en": "Incoterms® rule", "es": "regla Incoterms®", "definition": "Règle de l'ICC désignée par trois lettres qui répartit livraison, risques et frais entre vendeur et acheteur.", "distinction": "Ce n'est ni une loi ni un contrat complet : c'est une clause qui s'insère dans le contrat de vente." },
+        { "fr": "Chambre de commerce internationale (CCI / ICC)", "en": "International Chamber of Commerce", "es": "Cámara de Comercio Internacional", "definition": "Organisation privée internationale des entreprises, basée à Paris, qui rédige les Incoterms et les règles du crédit documentaire (UCP 600)." }
+      ],
+      "exemple": { "fictif": true, "texte": "La PME Savonnerie du Rhône vend 2 000 savons à un grossiste de Valence. Le contrat indique « FCA Lyon, entrepôt du transporteur Transalp, Incoterms® 2020 ». Sans autre négociation, les deux parties savent que la Savonnerie dédouane à l'export (inutile dans l'UE, mais l'obligation existe), remet la marchandise au transporteur choisi par l'acheteur à Lyon, et que tout dommage survenu ensuite sur la route est au risque du grossiste." },
+      "contreExemple": "Un vendeur pense qu'en vendant « CIF » il reste propriétaire jusqu'au paiement. Faux raisonnement : l'Incoterm ne dit rien de la propriété. Pour la conserver jusqu'au paiement, il faut une clause de réserve de propriété dans le contrat, dont l'efficacité dépend de la loi applicable.",
+      "confusions": [
+        { "a": "Transfert des risques", "b": "Transfert de propriété", "explication": "L'Incoterm fixe le moment où la perte ou le dommage passe à la charge de l'acheteur. La propriété est réglée par le contrat et la loi applicable (par exemple la CVIM n'en traite pas non plus)." },
+        { "a": "Incoterm", "b": "Contrat de transport", "explication": "L'Incoterm lie le vendeur et l'acheteur. Le transporteur n'est pas partie au contrat de vente : ses obligations viennent du contrat de transport (connaissement, CMR, LTA)." }
+      ],
+      "verification": [
+        "Citez quatre questions qu'un Incoterm règle et deux qu'il ne règle pas.",
+        "Pourquoi un Incoterm n'a-t-il de valeur que si le contrat le mentionne ?"
+      ],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.familles",
+      "titre": "Les quatre familles et les deux catégories d'Incoterms",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.fonction"],
+      "connexes": ["tci.transport.choix-mode"],
+      "question": "Comment s'y retrouver parmi onze règles sans les apprendre une par une ?",
+      "definition": "Les onze Incoterms® 2020 se classent de deux façons : par la première lettre (E, F, C, D), qui indique jusqu'où va l'engagement du vendeur, et par le mode de transport : sept règles pour tout mode de transport et quatre réservées au transport maritime et fluvial.",
+      "explication": "La première lettre résume la logique : E = la marchandise est mise à disposition au départ (Ex) ; F = le transport principal n'est pas payé par le vendeur (Free) ; C = le transport principal est payé par le vendeur (Cost/Carriage) mais le risque passe au départ ; D = le vendeur livre à destination (Delivered) et supporte le risque jusque-là.",
+      "fonctionnement": [
+        { "type": "tableau", "titre": "Classement des onze règles", "entetes": ["Famille", "Tous modes de transport", "Maritime et fluvial uniquement", "Transport principal payé par", "Risque transféré"], "lignes": [
+          ["E — départ", "EXW", "—", "Acheteur", "Chez le vendeur"],
+          ["F — transport principal non payé", "FCA", "FAS, FOB", "Acheteur", "Au départ"],
+          ["C — transport principal payé", "CPT, CIP", "CFR, CIF", "Vendeur", "Au départ"],
+          ["D — arrivée", "DAP, DPU, DDP", "—", "Vendeur", "À destination"]
+        ] },
+        { "type": "attention", "texte": "Les règles C sont des ventes au départ : le vendeur paie le transport jusqu'à destination, mais le risque passe à l'acheteur dès la remise au transporteur (CPT, CIP) ou la mise à bord (CFR, CIF)." }
+      ],
+      "termes": [
+        { "fr": "Vente au départ", "en": "shipment contract", "es": "venta en origen", "definition": "Vente où le risque passe à l'acheteur au pays d'expédition (familles E, F et C).", "distinction": "S'oppose à la vente à l'arrivée (famille D)." },
+        { "fr": "Vente à l'arrivée", "en": "arrival contract", "es": "venta en destino", "definition": "Vente où le vendeur supporte le risque jusqu'à la livraison au pays de destination (famille D)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un exportateur de pièces détachées expédie un conteneur par mer du Havre à New York. Les quatre règles maritimes (FAS, FOB, CFR, CIF) sont envisageables en théorie, mais le conteneur est remis au terminal plusieurs jours avant le chargement : les règles « tous modes » FCA, CPT ou CIP décrivent mieux la réalité (voir la notion « Choisir un Incoterm »)." },
+      "confusions": [
+        { "a": "Famille C", "b": "Famille D", "explication": "Dans les deux cas le vendeur paie le transport jusqu'à destination, mais en C le risque passe au départ, en D il passe à l'arrivée." }
+      ],
+      "verification": ["Donnez les quatre règles réservées au transport maritime et fluvial.", "Pourquoi dit-on qu'une vente CIF est une vente au départ ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.transfert-risque",
+      "titre": "Le point de transfert des risques",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.familles"],
+      "connexes": ["tci.assurance.transport", "dai.cvim.obligations"],
+      "question": "Si la marchandise est perdue ou endommagée pendant le voyage, qui supporte la perte : le vendeur ou l'acheteur ?",
+      "definition": "Le transfert des risques est le moment, fixé par la rubrique A3/B3 de l'Incoterm, à partir duquel la perte ou le dommage accidentel subi par la marchandise est à la charge de l'acheteur. Il coïncide avec la livraison au sens de l'Incoterm (rubrique A2).",
+      "explication": "« Supporter le risque » veut dire : si la marchandise est perdue ou abîmée sans faute du vendeur après ce moment, l'acheteur doit quand même payer le prix. Il devra se retourner contre le transporteur ou son assureur. Avant ce moment, c'est le vendeur qui perd.",
+      "fonctionnement": [
+        { "type": "tableau", "titre": "Où le risque passe-t-il ?", "entetes": ["Règle", "Point de transfert des risques"], "lignes": [
+          ["EXW", "Mise à disposition de l'acheteur, non chargée, dans les locaux du vendeur ou au lieu convenu"],
+          ["FCA", "Remise au transporteur désigné par l'acheteur (chargée sur son véhicule si la livraison a lieu chez le vendeur)"],
+          ["FAS", "Le long du navire, au port d'embarquement"],
+          ["FOB", "À bord du navire, au port d'embarquement"],
+          ["CFR, CIF", "À bord du navire, au port d'embarquement"],
+          ["CPT, CIP", "Remise au premier transporteur"],
+          ["DAP", "À destination, sur le moyen de transport arrivant, prête à être déchargée"],
+          ["DPU", "À destination, une fois déchargée"],
+          ["DDP", "À destination, prête à être déchargée, dédouanée à l'import"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Livraison (au sens Incoterms)", "en": "delivery", "es": "entrega", "definition": "Moment et lieu où le vendeur a exécuté son obligation de livrer ; c'est là que le risque passe.", "distinction": "Ne correspond pas forcément à l'arrivée chez l'acheteur : en FOB, la livraison a lieu au port de départ." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une cave de Bordeaux vend 1 200 bouteilles « FOB Bordeaux » à un importateur de Montréal. Les palettes sont chargées à bord le 3 mars. Le 10 mars, une tempête endommage une partie de la cargaison. Le risque était passé à l'importateur le 3 mars, au chargement : il doit payer la totalité du prix et déclarer le sinistre à son assureur." },
+      "contreExemple": "Une PME vend « CIF Shanghai » et pense être responsable jusqu'à Shanghai parce qu'elle paie le fret et l'assurance jusque-là. Raisonnement incorrect : en CIF, le risque passe dès la mise à bord au port de départ. L'assurance que le vendeur souscrit couvre l'acheteur pendant le voyage.",
+      "confusions": [
+        { "a": "Point de transfert des risques", "b": "Point de transfert des frais", "explication": "Ils coïncident pour E, F et D, mais pas pour la famille C où les frais vont jusqu'à destination." }
+      ],
+      "verification": ["En DAP, la marchandise est endommagée pendant le déchargement par l'acheteur : qui supporte le dommage ? Justifiez.", "Pourquoi l'acheteur CIF a-t-il intérêt à vérifier la police d'assurance souscrite par le vendeur ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.repartition-couts",
+      "titre": "Le point de transfert des frais",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.transfert-risque"],
+      "connexes": ["tci.douane.valeur", "ici.mix.prix-export"],
+      "question": "Quels frais un vendeur doit-il intégrer dans son prix selon l'Incoterm choisi ?",
+      "definition": "La rubrique A9/B9 de chaque Incoterm répartit les frais : en principe, le vendeur supporte les frais jusqu'au point de livraison et l'acheteur ensuite, sauf pour la famille C où le vendeur paie en plus le transport principal (et l'assurance pour CIF et CIP).",
+      "explication": "Chaque Incoterm correspond donc à un niveau de prix : un prix EXW ne comprend que la marchandise prête à l'usine ; un prix DDP comprend tout, jusqu'aux droits de douane du pays de destination. Passer d'un Incoterm à l'autre revient à ajouter ou retirer des frais.",
+      "fonctionnement": [
+        { "type": "etapes", "titre": "Construire un prix de vente de l'usine au client (maritime)", "etapes": [
+          "Prix EXW : marchandise emballée, à disposition à l'usine",
+          "+ chargement, pré-acheminement jusqu'au port, dédouanement export = prix FAS",
+          "+ manutention au port de départ et mise à bord = prix FOB",
+          "+ fret maritime principal = prix CFR",
+          "+ prime d'assurance = prix CIF",
+          "+ déchargement, post-acheminement = prix rendu (DAP ou DPU selon le déchargement)",
+          "+ droits de douane et taxes à l'import = prix DDP"
+        ] },
+        { "type": "formule", "titre": "Prime d'assurance CIF (usage courant)", "formule": "Prime = taux × 110 % × valeur CIF   donc   CIF = CFR ÷ (1 − 1,1 × taux)", "legende": "L'Incoterm CIF impose une couverture d'au moins 110 % du prix du contrat. Comme la prime fait partie de la valeur CIF, on la calcule en résolvant l'équation." }
+      ],
+      "termes": [
+        { "fr": "Pré-acheminement", "en": "pre-carriage", "es": "pretransporte", "definition": "Transport de l'usine jusqu'au point de départ du transport principal (port, aéroport, terminal)." },
+        { "fr": "Post-acheminement", "en": "on-carriage", "es": "postransporte", "definition": "Transport du point d'arrivée du transport principal jusqu'au lieu final de livraison." },
+        { "fr": "Fret", "en": "freight", "es": "flete", "definition": "Prix du transport principal payé au transporteur ; par extension, la marchandise transportée." }
+      ],
+      "exemple": { "fictif": true, "texte": "Valeur EXW d'un lot de machines : 40 000 €. Pré-acheminement et dédouanement export : 750 €. Manutention au port de départ : 350 €. Prix FOB = 41 100 €. Fret maritime : 2 400 €, donc CFR = 43 500 €. Avec un taux d'assurance de 0,3 %, CIF = 43 500 ÷ (1 − 1,1 × 0,003) = 43 644,03 €, soit une prime de 144,03 €." },
+      "confusions": [
+        { "a": "Frais de transport principal", "b": "Risque pendant le transport principal", "explication": "En CFR, le vendeur paie le fret mais l'acheteur supporte le risque pendant ce même trajet." }
+      ],
+      "verification": ["Quels frais séparent un prix FOB d'un prix CFR ?", "Pourquoi un prix DDP n'est-il pas comparable à un prix DAP pour un acheteur ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.dissociation-c",
+      "titre": "Les deux points critiques de la famille C",
+      "niveau": "A",
+      "prerequis": ["tci.incoterms.transfert-risque", "tci.incoterms.repartition-couts"],
+      "connexes": ["tci.assurance.transport"],
+      "question": "Pourquoi les règles CPT, CIP, CFR et CIF sont-elles les plus souvent mal comprises ?",
+      "definition": "Dans la famille C, le transfert des risques (au départ) et le transfert des frais (à destination) ont lieu à deux endroits différents : ce sont les deux « points critiques ».",
+      "explication": "Le vendeur organise et paie le voyage, ce qui donne l'impression qu'il en est responsable. En réalité il a livré dès la remise au transporteur (CPT, CIP) ou la mise à bord (CFR, CIF). Pendant tout le transport principal, la marchandise voyage aux risques de l'acheteur, mais avec un transport payé par le vendeur.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Règle", "Point critique 1 : risques", "Point critique 2 : frais"], "lignes": [
+          ["CPT / CIP", "Remise au premier transporteur, pays de départ", "Lieu de destination convenu"],
+          ["CFR / CIF", "À bord du navire, port d'embarquement", "Port de destination convenu"]
+        ] },
+        { "type": "attention", "texte": "Le contrat doit préciser le lieu de livraison au départ si plusieurs transporteurs se succèdent ; à défaut, en CPT et CIP, le risque passe à la remise au premier transporteur." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de Clermont-Ferrand vend « CPT Madrid » à un client espagnol. Il remet les colis à un transporteur routier à Clermont le lundi. Le camion est accidenté près de Burgos le mercredi. Le fabricant a payé le transport jusqu'à Madrid, mais le risque est passé au client lundi à Clermont : le client doit payer et se retourner contre le transporteur (convention CMR) ou son assureur." },
+      "contreExemple": "Inversement, si la vente avait été conclue « DAP Madrid », le même accident aurait été à la charge du vendeur, alors que le prix payé par le client pouvait être identique.",
+      "verification": ["Expliquez à un client pourquoi il doit s'assurer lui-même en CPT alors que le vendeur paie le transport.", "Où se situent les deux points critiques d'une vente CIF Valparaiso au départ du Havre ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.exw",
+      "titre": "EXW — À l'usine",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.familles"],
+      "connexes": ["tci.incoterms.fca"],
+      "question": "Que fait exactement un vendeur qui vend « à l'usine » ?",
+      "definition": "EXW (Ex Works, « à l'usine ») : le vendeur livre en mettant la marchandise, non chargée et non dédouanée à l'export, à la disposition de l'acheteur dans ses locaux ou en un autre lieu convenu. C'est l'Incoterm qui impose le minimum d'obligations au vendeur.",
+      "explication": "L'acheteur fait tout : chargement, transport, dédouanement export et import, assurance s'il le souhaite. Le risque passe dès que la marchandise est mise à sa disposition.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Obligations clés", "items": [
+          "Vendeur : emballer, mettre à disposition à la date convenue, prévenir l'acheteur, l'aider à obtenir les documents (à ses frais et risques)",
+          "Acheteur : charger, transporter, dédouaner à l'export et à l'import, payer tous les frais à partir de la mise à disposition"
+        ] },
+        { "type": "attention", "texte": "Dans une vente hors UE, l'acheteur étranger doit accomplir le dédouanement export en France, ce qui est souvent impossible ou risqué en pratique (l'exportateur reste le déclarant attendu par la douane et a besoin de la preuve d'exportation pour justifier l'exonération de TVA). L'ICC recommande alors d'utiliser FCA." }
+      ],
+      "termes": [
+        { "fr": "Mise à disposition", "en": "placing at the disposal", "es": "puesta a disposición", "definition": "Livraison sans remise matérielle : la marchandise est prête et l'acheteur est prévenu qu'il peut venir la prendre." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un atelier de Limoges vend des assiettes « EXW Limoges » à un distributeur belge qui envoie son propre camion. Le chauffeur charge lui-même les palettes. Si une palette tombe pendant le chargement, le dommage est pour le distributeur : la marchandise était déjà livrée, non chargée." },
+      "contreExemple": "Si l'atelier charge lui-même le camion (ce qui arrive souvent par courtoisie), il le fait aux risques de l'acheteur en EXW. Pour que le chargement fasse partie de l'obligation du vendeur, il faut choisir FCA dans les locaux du vendeur.",
+      "verification": ["Pourquoi EXW est-il déconseillé pour une exportation vers un pays hors UE ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.fca",
+      "titre": "FCA — Franco transporteur",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.familles"],
+      "connexes": ["tci.incoterms.exw", "tci.documents.connaissement"],
+      "question": "Comment livrer au transporteur de l'acheteur tout en gardant la maîtrise du dédouanement export ?",
+      "definition": "FCA (Free Carrier, « franco transporteur ») : le vendeur, dédouané à l'export, remet la marchandise au transporteur ou à une autre personne désignée par l'acheteur, au lieu convenu. Le risque passe à cette remise.",
+      "explication": "Le lieu choisi change le contenu de l'obligation. Si la livraison a lieu dans les locaux du vendeur, il charge la marchandise sur le véhicule de l'acheteur. Si elle a lieu ailleurs (entrepôt d'un transitaire, terminal), le vendeur y amène la marchandise sur son propre véhicule et la livre prête à être déchargée : le déchargement est à la charge de l'acheteur.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Lieu de livraison", "Qui charge / décharge", "Fin de l'obligation du vendeur"], "lignes": [
+          ["Locaux du vendeur", "Le vendeur charge sur le véhicule de l'acheteur", "Marchandise chargée"],
+          ["Autre lieu (terminal, entrepôt du transitaire)", "Le vendeur n'a pas à décharger son propre véhicule", "Marchandise prête à être déchargée"]
+        ] },
+        { "type": "texte", "texte": "Nouveauté 2020 : en FCA, les parties peuvent convenir que l'acheteur demandera à son transporteur de délivrer au vendeur un connaissement portant la mention « à bord », utile si le vendeur est payé par crédit documentaire." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de cosmétiques de Grasse vend « FCA Marseille, terminal à conteneurs du transitaire X, Incoterms® 2020 » à un importateur marocain. Il dédouane à l'export, apporte les cartons au terminal avec son camion : dès que le camion est arrivé et prêt à être déchargé, le risque passe à l'importateur." },
+      "contreExemple": "Une entreprise qui écrit seulement « FCA France » ne fixe aucun point précis de livraison : en cas de dommage, il sera difficile de savoir si le risque était déjà passé. Le lieu doit être précis.",
+      "verification": ["Quelle différence entre « FCA locaux du vendeur » et « FCA entrepôt du transitaire » pour le chargement ?", "Pourquoi l'ICC conseille-t-elle FCA plutôt qu'EXW pour l'export hors UE ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.fas-fob",
+      "titre": "FAS et FOB — Franco le long du navire, franco à bord",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.familles"],
+      "connexes": ["tci.incoterms.cfr-cif", "tci.transport.maritime"],
+      "question": "Où s'arrête l'obligation d'un vendeur qui expédie par mer sans payer le fret ?",
+      "definition": "FAS (Free Alongside Ship) : le vendeur livre la marchandise dédouanée à l'export le long du navire désigné par l'acheteur, au port d'embarquement convenu. FOB (Free On Board) : le vendeur livre la marchandise à bord de ce navire. Ces deux règles sont réservées au transport maritime et fluvial.",
+      "explication": "Dans les deux cas, l'acheteur choisit le navire, conclut le contrat de transport et paie le fret. La seule différence porte sur le dernier geste du vendeur : déposer la marchandise sur le quai le long du navire (FAS) ou la faire charger à bord (FOB).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "FAS", "FOB"], "lignes": [
+          ["Livraison et risque", "Le long du navire, sur le quai ou une barge", "À bord du navire"],
+          ["Frais de mise à bord", "Acheteur", "Vendeur"],
+          ["Dédouanement export", "Vendeur", "Vendeur"],
+          ["Usage typique", "Vrac, colis lourds (machines, grains)", "Vrac et marchandises conventionnelles"]
+        ] },
+        { "type": "attention", "texte": "FOB n'est pas adapté à une marchandise conteneurisée remise au terminal avant le chargement : entre la remise et la mise à bord, le vendeur supporterait un risque qu'il ne contrôle plus. On lui préfère FCA." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un négociant en céréales de Rouen vend 5 000 tonnes de blé « FOB Rouen » à un meunier égyptien qui affrète lui-même le navire. Le négociant fait charger le blé dans les cales : une fois le blé à bord, tout dommage (mouille, échauffement) est au risque du meunier." },
+      "verification": ["Pourquoi FOB est-il une mauvaise idée pour un conteneur remis au terminal du Havre trois jours avant le départ ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.cfr-cif",
+      "titre": "CFR et CIF — Coût et fret, coût, assurance et fret",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.dissociation-c"],
+      "connexes": ["tci.incoterms.assurance", "tci.paiement.credit-documentaire"],
+      "question": "Comment un vendeur peut-il proposer un prix « rendu port de destination » sans supporter le risque du voyage en mer ?",
+      "definition": "CFR (Cost and Freight) : le vendeur livre à bord du navire au port d'embarquement et paie le fret jusqu'au port de destination convenu. CIF (Cost, Insurance and Freight) : même obligation, et le vendeur souscrit en plus, au profit de l'acheteur, une assurance couvrant au minimum les clauses C de l'Institute Cargo Clauses pour 110 % du prix du contrat.",
+      "explication": "Ce sont deux ventes au départ : le risque passe à bord au port d'embarquement. Le vendeur organise et paie le transport maritime ; en CIF, il fournit aussi une assurance dont l'acheteur est bénéficiaire, puisque c'est lui qui supporte le risque pendant le voyage.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "CFR", "CIF"], "lignes": [
+          ["Risque", "À bord, port d'embarquement", "À bord, port d'embarquement"],
+          ["Fret jusqu'au port de destination", "Vendeur", "Vendeur"],
+          ["Assurance", "Aucune obligation", "Vendeur, clauses C minimum, 110 % du prix"],
+          ["Déchargement au port de destination", "Acheteur, sauf si inclus dans le contrat de transport", "Acheteur, sauf si inclus dans le contrat de transport"]
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de tuiles du Nord vend « CIF Dakar » à un importateur sénégalais. Il réserve un navire, paie le fret jusqu'à Dakar et souscrit une police d'assurance de 110 % du prix, au bénéfice de l'importateur. Les tuiles sont endommagées pendant la traversée par un événement couvert : l'importateur paie le prix et se fait indemniser par l'assureur." },
+      "contreExemple": "Une couverture « clauses C » ne couvre pas tous les dommages (par exemple les vols ou la casse ordinaire ne sont pas couverts). L'acheteur CIF qui pense être « tous risques » peut se retrouver sans indemnisation : il doit négocier une couverture supérieure ou s'assurer en complément.",
+      "verification": ["Qui est bénéficiaire de l'assurance souscrite par le vendeur CIF ? Pourquoi ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.cpt-cip",
+      "titre": "CPT et CIP — Port payé jusqu'à, port payé assurance comprise jusqu'à",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.dissociation-c"],
+      "connexes": ["tci.incoterms.cfr-cif", "tci.transport.multimodal"],
+      "question": "Quel équivalent de CFR et CIF utiliser pour un transport routier, aérien ou en conteneur ?",
+      "definition": "CPT (Carriage Paid To) : le vendeur remet la marchandise au transporteur qu'il a choisi et paie le transport jusqu'au lieu de destination convenu. CIP (Carriage and Insurance Paid To) : même obligation, plus une assurance couvrant au minimum les clauses A (tous risques sous réserve des exclusions) pour 110 % du prix.",
+      "explication": "Ce sont les versions « tous modes » de CFR et CIF : le risque passe à la remise au premier transporteur au départ. Depuis l'édition 2020, le niveau de couverture exigé en CIP (clauses A) est plus élevé qu'en CIF (clauses C).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "CPT", "CIP"], "lignes": [
+          ["Risque", "Remise au premier transporteur", "Remise au premier transporteur"],
+          ["Transport jusqu'à destination", "Vendeur", "Vendeur"],
+          ["Assurance", "Aucune obligation", "Clauses A minimum, 110 % du prix"]
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de Toulouse expédie des composants électroniques par avion à Montréal en « CIP Montréal-Trudeau ». Il remet les colis à la compagnie aérienne à Toulouse-Blagnac : le risque passe à ce moment-là. Il paie le fret aérien et une assurance tous risques au profit de l'acheteur." },
+      "verification": ["Pourquoi l'ICC a-t-elle relevé à « clauses A » le minimum d'assurance en CIP mais pas en CIF ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "La justification officielle de l'ICC (marchandises manufacturées en CIP, matières premières en CIF) est à confirmer dans l'introduction des Incoterms® 2020."
+    },
+    {
+      "id": "tci.incoterms.dap-dpu-ddp",
+      "titre": "DAP, DPU et DDP — Les ventes à l'arrivée",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.familles"],
+      "connexes": ["tci.douane.calcul-droits-tva", "tci.incoterms.chargement-dechargement"],
+      "question": "Jusqu'où va l'engagement d'un vendeur qui livre à destination ?",
+      "definition": "DAP (Delivered at Place) : livraison à destination, marchandise prête à être déchargée du moyen de transport arrivant. DPU (Delivered at Place Unloaded) : livraison à destination une fois la marchandise déchargée. DDP (Delivered Duty Paid) : livraison comme en DAP, marchandise dédouanée à l'import, droits et taxes payés par le vendeur.",
+      "explication": "Dans les trois règles, le vendeur supporte le risque et les frais jusqu'à destination. Ce qui les distingue : le déchargement (seul DPU l'impose au vendeur) et le dédouanement à l'import (seul DDP l'impose au vendeur). DPU a remplacé DAT (« rendu au terminal ») dans l'édition 2020.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Règle", "Déchargement à destination", "Dédouanement import, droits et taxes", "Obligations du vendeur"], "lignes": [
+          ["DAP", "Acheteur", "Acheteur", "Élevées"],
+          ["DPU", "Vendeur", "Acheteur", "Élevées + déchargement"],
+          ["DDP", "Acheteur", "Vendeur", "Maximales"]
+        ] },
+        { "type": "attention", "texte": "En DDP, le vendeur doit pouvoir accomplir les formalités d'importation dans le pays de l'acheteur et y payer la TVA d'importation, ce qui suppose souvent un représentant fiscal ou un transitaire local. Sans cette capacité, préférer DAP." }
+      ],
+      "termes": [
+        { "fr": "Rendu droits acquittés", "en": "Delivered Duty Paid", "es": "Entregada derechos pagados", "definition": "Traduction française de DDP : la marchandise est livrée dédouanée, droits et taxes payés par le vendeur." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une entreprise de mobilier de Nantes vend une cuisine « DDP Genève, adresse du client » à un particulier suisse aisé. Elle doit dédouaner la cuisine en Suisse et payer la TVA suisse à l'importation, puis livrer au domicile. Si elle n'a pas de transitaire en Suisse, elle risque un blocage en douane dont elle supporterait seule le coût." },
+      "contreExemple": "Un vendeur en DAP pense que le déchargement chez le client est à sa charge parce qu'il « livre à destination ». Faux : en DAP, la livraison a lieu marchandise prête à être déchargée ; c'est en DPU que le vendeur décharge.",
+      "verification": ["Quelle est la seule règle Incoterms® 2020 qui oblige le vendeur à décharger à destination ?", "Quel risque principal prend un vendeur en DDP ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.assurance",
+      "titre": "Incoterms et obligations d'assurance",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.cfr-cif", "tci.incoterms.cpt-cip"],
+      "connexes": ["tci.assurance.transport"],
+      "question": "Qui doit assurer la marchandise pendant le transport ?",
+      "definition": "Seuls CIF et CIP créent une obligation d'assurance à la charge du vendeur, au profit de l'acheteur : clauses C minimum pour CIF, clauses A minimum pour CIP, pour au moins 110 % du prix du contrat et dans la monnaie du contrat. Pour les neuf autres règles, aucune partie n'est obligée de s'assurer : chacune a intérêt à couvrir la période où elle supporte le risque.",
+      "explication": "Le bon réflexe : regarder qui supporte le risque à chaque étape (rubrique A3/B3), puis vérifier que cette partie est assurée pour cette étape.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Règle", "Obligation d'assurance", "Qui a intérêt à s'assurer pendant le transport principal"], "lignes": [
+          ["EXW, FCA, FAS, FOB", "Aucune", "Acheteur"],
+          ["CFR, CPT", "Aucune", "Acheteur"],
+          ["CIF", "Vendeur, clauses C, 110 %", "Acheteur (assuré par la police du vendeur)"],
+          ["CIP", "Vendeur, clauses A, 110 %", "Acheteur (assuré par la police du vendeur)"],
+          ["DAP, DPU, DDP", "Aucune", "Vendeur"]
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Un importateur lyonnais achète des textiles « FOB Ho Chi Minh-Ville ». Aucune des parties n'a d'obligation d'assurance, mais le risque est à l'importateur dès la mise à bord : il souscrit une police d'abonnement auprès de son assureur pour couvrir toutes ses importations." },
+      "verification": ["En DAP, l'acheteur doit-il assurer la marchandise pendant le transport principal ? Justifiez."],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.dedouanement",
+      "titre": "Qui dédouane à l'export et à l'import ?",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.familles"],
+      "connexes": ["tci.douane.declaration", "tci.intra-ue.vs-pays-tiers"],
+      "question": "Quelle partie doit accomplir les formalités douanières dans chaque pays ?",
+      "definition": "Selon la rubrique A7/B7, le dédouanement export incombe au vendeur dans toutes les règles sauf EXW, et le dédouanement import incombe à l'acheteur dans toutes les règles sauf DDP.",
+      "explication": "La règle est simple à retenir : chaque partie s'occupe des formalités de son propre pays, sauf aux deux extrémités de la liste (EXW et DDP), où une seule partie fait tout.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "Dédouanement export", "Dédouanement import"], "lignes": [
+          ["EXW", "Acheteur", "Acheteur"],
+          ["FCA, FAS, FOB, CFR, CIF, CPT, CIP, DAP, DPU", "Vendeur", "Acheteur"],
+          ["DDP", "Vendeur", "Vendeur"]
+        ] },
+        { "type": "attention", "texte": "Entre deux États membres de l'UE, il n'y a pas de dédouanement (union douanière). Les obligations A7/B7 restent écrites dans l'Incoterm mais n'ont pas d'objet ; la TVA suit le régime intracommunautaire." }
+      ],
+      "exemple": { "fictif": true, "texte": "Vente « DAP Casablanca » d'un exportateur de Lille : il dédouane en France à l'export, transporte jusqu'à Casablanca, puis l'acheteur marocain dédouane à l'import et paie les droits marocains." },
+      "verification": ["Dans quelles règles l'acheteur s'occupe-t-il du dédouanement export ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.chargement-dechargement",
+      "titre": "Chargement et déchargement selon la règle",
+      "niveau": "A",
+      "prerequis": ["tci.incoterms.exw", "tci.incoterms.fca", "tci.incoterms.dap-dpu-ddp"],
+      "connexes": ["tci.incoterms.transfert-risque"],
+      "question": "Qui charge au départ et qui décharge à l'arrivée ?",
+      "definition": "Les règles Incoterms® répartissent précisément les opérations de chargement au départ et de déchargement à destination ; elles déterminent à la fois qui paie ces opérations et qui en supporte le risque.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Règle", "Chargement au départ", "Déchargement à destination"], "lignes": [
+          ["EXW", "Acheteur", "Acheteur"],
+          ["FCA (locaux du vendeur)", "Vendeur", "Acheteur"],
+          ["FCA (autre lieu)", "Acheteur décharge le véhicule du vendeur", "Acheteur"],
+          ["FOB, CFR, CIF", "Vendeur (mise à bord)", "Acheteur, sauf frais inclus dans le contrat de transport"],
+          ["CPT, CIP", "Vendeur", "Acheteur, sauf frais inclus dans le contrat de transport"],
+          ["DAP, DDP", "Vendeur", "Acheteur"],
+          ["DPU", "Vendeur", "Vendeur"]
+        ] },
+        { "type": "texte", "texte": "En famille C, si le contrat de transport conclu par le vendeur inclut des frais de déchargement à destination, le vendeur ne peut pas les refacturer séparément à l'acheteur, sauf accord contraire." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un équipementier livre une presse de 8 tonnes « DPU usine de l'acheteur, Saragosse ». Il doit organiser la grue de déchargement : si la presse tombe pendant le déchargement, le dommage est pour lui. En « DAP », la grue et le risque du déchargement auraient été à la charge de l'acheteur." },
+      "verification": ["Pourquoi le choix entre DAP et DPU est-il décisif pour une machine lourde ?"],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.choix",
+      "titre": "Choisir un Incoterm",
+      "niveau": "A",
+      "prerequis": ["tci.incoterms.transfert-risque", "tci.incoterms.repartition-couts", "tci.incoterms.dedouanement"],
+      "connexes": ["tci.paiement.choix", "tci.transport.choix-mode"],
+      "question": "Sur quels critères une entreprise choisit-elle l'Incoterm d'une vente ?",
+      "definition": "Choisir un Incoterm consiste à répartir livraison, risques, frais et formalités en fonction du mode de transport, de la capacité de chaque partie à organiser le transport et le dédouanement, du rapport de force commercial et des exigences de paiement.",
+      "fonctionnement": [
+        { "type": "etapes", "titre": "Méthode en cinq questions", "etapes": [
+          "Quel mode de transport ? Conteneur, route, air → règles tous modes (FCA, CPT, CIP, D). Vrac maritime chargé directement à bord → FAS, FOB, CFR, CIF possibles.",
+          "Qui maîtrise le mieux la logistique (transitaire, tarifs de fret) ?",
+          "Qui peut dédouaner dans chaque pays ? EXW et DDP seulement si l'autre partie peut accomplir les formalités dans un pays qui n'est pas le sien.",
+          "Quel argument commercial ? Un prix « rendu » (C ou D) facilite la décision du client.",
+          "Quel moyen de paiement ? Un crédit documentaire exige un document de transport que le vendeur peut obtenir : en FCA, prévoir l'option du connaissement « à bord »."
+        ] },
+        { "type": "liste", "titre": "Erreurs fréquentes", "items": [
+          "Utiliser FOB ou CIF pour un conteneur ou un envoi aérien",
+          "Choisir EXW pour un export hors UE",
+          "Choisir DDP sans pouvoir dédouaner ni payer la TVA dans le pays de l'acheteur",
+          "Omettre le lieu précis ou l'édition (« Incoterms® 2020 »)"
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Une PME bretonne de conserves exporte un conteneur de 20 pieds vers Montréal, payé par crédit documentaire. Elle a un transitaire au Havre et veut proposer un prix rendu. Choix raisonné : CIP Montréal (tous modes, prix rendu, assurance tous risques rassurante pour la banque et le client). FOB Le Havre aurait été inadapté au conteneur, EXW aurait obligé l'acheteur canadien à dédouaner en France." },
+      "verification": ["Proposez et justifiez un Incoterm pour un envoi aérien de pièces détachées de Toulouse vers Mexico, payé d'avance par l'acheteur, qui a son propre transitaire."],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.redaction",
+      "titre": "Rédiger la clause Incoterm",
+      "niveau": "F",
+      "prerequis": ["tci.incoterms.fonction"],
+      "connexes": ["dai.contrat.clauses"],
+      "question": "Comment écrire un Incoterm dans un contrat ou une facture pour qu'il soit sans ambiguïté ?",
+      "definition": "Une clause Incoterm complète comporte trois éléments : le sigle de la règle, le lieu ou port précis, et la mention de l'édition (par exemple « Incoterms® 2020 »).",
+      "fonctionnement": [
+        { "type": "formule", "formule": "[Règle] + [lieu ou port précis] + Incoterms® 2020", "legende": "Exemple : « FCA 12 rue des Docks, 76600 Le Havre, France, Incoterms® 2020 »." },
+        { "type": "liste", "titre": "Règles de rédaction", "items": [
+          "Familles E, F : lieu de livraison au départ",
+          "Famille C : lieu ou port de destination (jusqu'où le transport est payé) ; préciser aussi le lieu de livraison au départ si besoin",
+          "Famille D : lieu de livraison à destination, le plus précis possible (adresse)",
+          "Toujours mentionner l'édition : les parties peuvent choisir une édition antérieure, encore valable si elles la citent"
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Formulation à éviter : « CIF Espagne ». Formulation correcte : « CIF port de Valence, Espagne, Incoterms® 2020 »." },
+      "verification": ["Corrigez la clause « Franco Allemagne » sur un devis destiné à un client de Hambourg."],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.vs-propriete",
+      "titre": "Incoterm, propriété et contrat de vente",
+      "niveau": "A",
+      "prerequis": ["tci.incoterms.fonction"],
+      "connexes": ["dai.cvim.champ", "dai.contrat.clauses"],
+      "question": "L'Incoterm suffit-il à régler toute la relation entre vendeur et acheteur ?",
+      "definition": "L'Incoterm n'est qu'une clause du contrat de vente. Le transfert de propriété, le prix, le paiement, les garanties et les sanctions de l'inexécution relèvent des autres clauses et de la loi applicable au contrat (par exemple la CVIM).",
+      "explication": "Un contrat international solide combine donc plusieurs couches : l'Incoterm (livraison, risques, frais), les clauses de paiement, une éventuelle réserve de propriété, la loi applicable et le règlement des litiges.",
+      "exemple": { "fictif": true, "texte": "Un vendeur d'Orléans livre en « FCA Orléans » des machines payables à 90 jours. L'acheteur italien fait faillite avant de payer. L'Incoterm ne protège pas le vendeur : seule une clause de réserve de propriété, valable selon la loi applicable, pourrait lui permettre de revendiquer les machines." },
+      "verification": ["Citez trois clauses à ajouter à un contrat qui ne contient qu'un Incoterm."],
+      "sources": ["src.icc-incoterms-2020", "src.cvim"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tci.incoterms.cas",
+      "titre": "Études de cas sur les Incoterms",
+      "niveau": "A",
+      "prerequis": ["tci.incoterms.choix", "tci.incoterms.transfert-risque"],
+      "connexes": ["tci.paiement.choix"],
+      "question": "Comment raisonner face à un litige ou une négociation réelle ?",
+      "explication": "Cette fiche rassemble des cas complets à résoudre dans l'onglet Exercices : identifier l'Incoterm, situer le point de transfert des risques, répartir les frais et proposer une solution. La méthode est toujours la même.",
+      "fonctionnement": [
+        { "type": "etapes", "titre": "Méthode de résolution d'un cas", "etapes": [
+          "Lire la clause : règle, lieu, édition. Est-elle complète et adaptée au mode de transport ?",
+          "Situer l'événement (dommage, retard, frais) sur le trajet.",
+          "Comparer avec le point de transfert des risques (A3) ou des frais (A9).",
+          "Conclure : qui supporte la perte ou le coût ? Contre qui peut-il se retourner (transporteur, assureur) ?",
+          "Proposer une amélioration de la clause pour l'avenir."
+        ] }
+      ],
+      "verification": ["Appliquez la méthode à un cas de votre choix et rédigez la conclusion en trois phrases."],
+      "sources": ["src.icc-incoterms-2020"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.tci.incoterms.001", "notion": "tci.incoterms.fonction", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Qui rédige et publie les règles Incoterms® ?",
+      "choix": [
+        { "id": "a", "texte": "La Chambre de commerce internationale (ICC)", "correct": true, "explication": "L'ICC, organisation privée basée à Paris, publie les Incoterms depuis 1936 ; l'édition en vigueur date de 2020." },
+        { "id": "b", "texte": "L'Organisation mondiale du commerce (OMC)", "correct": false, "explication": "L'OMC négocie des accords entre États sur les droits de douane et les obstacles au commerce ; elle ne rédige pas de règles contractuelles entre entreprises." },
+        { "id": "c", "texte": "La Commission des Nations unies pour le droit commercial international (CNUDCI)", "correct": false, "explication": "La CNUDCI a élaboré la CVIM (droit de la vente), pas les Incoterms." },
+        { "id": "d", "texte": "L'Union européenne, par règlement", "correct": false, "explication": "Les Incoterms ne sont pas une norme publique : ils ne s'appliquent que si le contrat les cite." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.002", "notion": "tci.incoterms.fonction", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Parmi ces questions, lesquelles sont réglées par un Incoterm ? (plusieurs réponses possibles)",
+      "choix": [
+        { "id": "a", "texte": "Le moment où le risque de perte passe à l'acheteur", "correct": true, "explication": "C'est la rubrique A3/B3 de chaque règle." },
+        { "id": "b", "texte": "Qui paie le transport principal", "correct": true, "explication": "La répartition des frais figure en A9/B9 et le transport en A4/B4." },
+        { "id": "c", "texte": "Le moment du transfert de propriété", "correct": false, "explication": "Distracteur classique : la propriété relève du contrat et de la loi applicable, pas de l'Incoterm." },
+        { "id": "d", "texte": "Le délai de paiement du prix", "correct": false, "explication": "Le paiement relève des conditions de paiement du contrat, pas de l'Incoterm." },
+        { "id": "e", "texte": "Qui accomplit le dédouanement à l'export", "correct": true, "explication": "Rubrique A7/B7 : le vendeur sauf en EXW." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.003", "notion": "tci.incoterms.familles", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelle liste ne contient que des règles réservées au transport maritime et fluvial ?",
+      "choix": [
+        { "id": "a", "texte": "FAS, FOB, CFR, CIF", "correct": true, "explication": "Ce sont les quatre règles maritimes de l'édition 2020." },
+        { "id": "b", "texte": "FCA, FOB, CFR, CIF", "correct": false, "explication": "FCA s'utilise pour tout mode de transport." },
+        { "id": "c", "texte": "FOB, CFR, CIF, CIP", "correct": false, "explication": "CIP est la version tous modes de CIF." },
+        { "id": "d", "texte": "FAS, FOB, CPT, DPU", "correct": false, "explication": "CPT et DPU s'utilisent pour tout mode de transport." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.004", "notion": "tci.incoterms.transfert-risque", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Vente « CFR Abidjan » au départ du Havre. Le conteneur, chargé à bord au Havre, tombe à la mer pendant une tempête au large du Portugal. Qui supporte la perte ?",
+      "choix": [
+        { "id": "a", "texte": "L'acheteur, car le risque est passé à la mise à bord au Havre", "correct": true, "explication": "En CFR, le risque passe à bord au port d'embarquement, même si le vendeur paie le fret jusqu'à Abidjan." },
+        { "id": "b", "texte": "Le vendeur, car il a payé le fret jusqu'à Abidjan", "correct": false, "explication": "C'est la confusion entre point de transfert des frais (Abidjan) et point de transfert des risques (à bord au Havre)." },
+        { "id": "c", "texte": "Le vendeur, jusqu'à l'arrivée du navire à Abidjan", "correct": false, "explication": "Ce serait le cas dans une vente à l'arrivée (famille D), pas en CFR." },
+        { "id": "d", "texte": "Les deux parties pour moitié", "correct": false, "explication": "Les Incoterms ne prévoient jamais de partage du risque : il passe en un point précis." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.005", "notion": "tci.incoterms.transfert-risque", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Vente « DAP entrepôt de l'acheteur, Milan ». Le camion arrive ; pendant le déchargement par les caristes de l'acheteur, une palette tombe. Qui supporte le dommage ?",
+      "choix": [
+        { "id": "a", "texte": "L'acheteur", "correct": true, "explication": "En DAP, la livraison a lieu marchandise prête à être déchargée : le risque est passé à l'arrivée du camion, avant le déchargement." },
+        { "id": "b", "texte": "Le vendeur, car il livre à destination", "correct": false, "explication": "Livrer à destination ne veut pas dire décharger : seul DPU impose le déchargement au vendeur." },
+        { "id": "c", "texte": "Le transporteur, dans tous les cas", "correct": false, "explication": "Le transporteur n'intervient pas dans un déchargement réalisé par l'acheteur ; la question porte sur la répartition vendeur / acheteur." },
+        { "id": "d", "texte": "Le vendeur, car le risque ne passe qu'au dédouanement", "correct": false, "explication": "Pas de dédouanement entre la France et l'Italie (union douanière), et le dédouanement ne fixe pas le transfert des risques." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.006", "notion": "tci.incoterms.dissociation-c", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : dans une vente CPT, le vendeur supporte le risque jusqu'au lieu de destination puisqu'il paie le transport jusque-là.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "C'est l'erreur typique sur la famille C : payer le transport n'implique pas d'en supporter le risque." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "En CPT, le risque passe à la remise au premier transporteur, au départ ; seuls les frais vont jusqu'à destination." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.007", "notion": "tci.incoterms.exw", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Pourquoi l'ICC déconseille-t-elle EXW pour une exportation vers un pays hors UE ?",
+      "choix": [
+        { "id": "a", "texte": "Parce que l'acheteur étranger doit accomplir le dédouanement export dans le pays du vendeur, ce qui est souvent difficile", "correct": true, "explication": "En EXW, le dédouanement export est à la charge de l'acheteur ; or c'est en pratique le vendeur qui a besoin de la preuve d'exportation (exonération de TVA). FCA règle ce problème." },
+        { "id": "b", "texte": "Parce que EXW est réservé au transport maritime", "correct": false, "explication": "EXW s'utilise pour tout mode de transport." },
+        { "id": "c", "texte": "Parce qu'EXW n'existe plus depuis l'édition 2020", "correct": false, "explication": "EXW existe toujours ; c'est DAT qui a disparu en 2020, remplacé par DPU." },
+        { "id": "d", "texte": "Parce que le vendeur supporte trop de risques", "correct": false, "explication": "C'est l'inverse : EXW est la règle qui impose le moins d'obligations au vendeur." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.008", "notion": "tci.incoterms.fca", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Vente « FCA entrepôt du transitaire, Roissy ». Le vendeur apporte les colis avec sa camionnette. Quand le risque passe-t-il à l'acheteur ?",
+      "choix": [
+        { "id": "a", "texte": "Quand la camionnette est arrivée à l'entrepôt, prête à être déchargée", "correct": true, "explication": "Quand le lieu de livraison n'est pas chez le vendeur, celui-ci livre sur son propre moyen de transport, prêt à être déchargé." },
+        { "id": "b", "texte": "Quand les colis sont chargés dans l'avion", "correct": false, "explication": "La mise à bord n'est pas le critère en FCA ; ce serait plutôt la logique de FOB, règle maritime." },
+        { "id": "c", "texte": "Quand les colis quittent l'usine du vendeur", "correct": false, "explication": "Le lieu convenu est l'entrepôt du transitaire, pas l'usine." },
+        { "id": "d", "texte": "Quand les colis sont déchargés par le vendeur à l'entrepôt", "correct": false, "explication": "Le vendeur n'a pas à décharger sa camionnette dans ce cas : c'est à l'acheteur (ou à son transitaire) de le faire." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.009", "notion": "tci.incoterms.fas-fob", "format": "unique", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "Une PME exporte un conteneur complet du Havre vers Houston et propose « FOB Le Havre ». Elle remet le conteneur au terminal trois jours avant le chargement. Quel est le principal défaut de ce choix ?",
+      "choix": [
+        { "id": "a", "texte": "Entre la remise au terminal et la mise à bord, le vendeur supporte un risque sur une marchandise qu'il ne contrôle plus", "correct": true, "explication": "En FOB, le risque ne passe qu'à bord ; le conteneur est pourtant déjà entre les mains du terminal. FCA terminal du Havre aurait fait passer le risque à la remise." },
+        { "id": "b", "texte": "FOB interdit le transport par conteneur", "correct": false, "explication": "Aucune interdiction : c'est une inadaptation, pas une interdiction." },
+        { "id": "c", "texte": "En FOB, c'est le vendeur qui paie le fret jusqu'à Houston", "correct": false, "explication": "En FOB, le fret principal est payé par l'acheteur." },
+        { "id": "d", "texte": "FOB oblige le vendeur à dédouaner à l'import aux États-Unis", "correct": false, "explication": "Le dédouanement import est à la charge de l'acheteur dans toutes les règles sauf DDP." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.010", "notion": "tci.incoterms.cfr-cif", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "En CIF (Incoterms® 2020), quel niveau minimal d'assurance le vendeur doit-il souscrire ?",
+      "choix": [
+        { "id": "a", "texte": "Clauses C de l'Institute Cargo Clauses, pour 110 % du prix", "correct": true, "explication": "CIF maintient la couverture minimale (clauses C) ; c'est CIP qui exige les clauses A depuis 2020." },
+        { "id": "b", "texte": "Clauses A (tous risques), pour 110 % du prix", "correct": false, "explication": "C'est l'exigence de CIP, pas de CIF." },
+        { "id": "c", "texte": "Clauses C, pour 100 % du prix", "correct": false, "explication": "Le minimum est 110 % du prix du contrat, pour couvrir le profit espéré de l'acheteur." },
+        { "id": "d", "texte": "Aucune assurance obligatoire", "correct": false, "explication": "C'est le cas de CFR ; le « I » de CIF signifie Insurance." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.011", "notion": "tci.incoterms.cpt-cip", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quelle est la différence entre CIP et CIF ?",
+      "choix": [
+        { "id": "a", "texte": "CIP s'utilise pour tout mode de transport et exige au minimum les clauses A ; CIF est maritime et exige au minimum les clauses C", "correct": true, "explication": "Le risque passe à la remise au premier transporteur en CIP, à bord en CIF ; et le niveau d'assurance diffère depuis 2020." },
+        { "id": "b", "texte": "En CIP, le risque passe à destination ; en CIF, au départ", "correct": false, "explication": "Les deux sont des ventes au départ (famille C)." },
+        { "id": "c", "texte": "En CIP, l'acheteur souscrit l'assurance ; en CIF, le vendeur", "correct": false, "explication": "Dans les deux règles, c'est le vendeur qui souscrit l'assurance au profit de l'acheteur." },
+        { "id": "d", "texte": "Aucune différence : ce sont deux noms de la même règle", "correct": false, "explication": "Elles diffèrent par le mode de transport et le niveau d'assurance." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.012", "notion": "tci.incoterms.dap-dpu-ddp", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelle règle Incoterms® 2020 a remplacé DAT ?",
+      "choix": [
+        { "id": "a", "texte": "DPU", "correct": true, "explication": "DPU (Delivered at Place Unloaded) a remplacé DAT : le déchargement à destination peut avoir lieu en tout lieu, pas seulement dans un terminal." },
+        { "id": "b", "texte": "DAP", "correct": false, "explication": "DAP existait déjà en 2010 et existe toujours." },
+        { "id": "c", "texte": "DDU", "correct": false, "explication": "DDU a disparu en 2010 ; il n'existe plus." },
+        { "id": "d", "texte": "FCA", "correct": false, "explication": "FCA n'a rien à voir avec DAT, c'est une règle de départ." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.013", "notion": "tci.incoterms.dap-dpu-ddp", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Une entreprise française vend « DDP Bogotá ». Quelles obligations lui incombent ? (plusieurs réponses possibles)",
+      "choix": [
+        { "id": "a", "texte": "Dédouaner la marchandise à l'import en Colombie", "correct": true, "explication": "DDP est la seule règle où le vendeur dédouane à l'import." },
+        { "id": "b", "texte": "Payer les droits de douane et taxes colombiens à l'importation", "correct": true, "explication": "« Duty Paid » : droits et taxes payés par le vendeur, sauf accord contraire pour la TVA." },
+        { "id": "c", "texte": "Décharger la marchandise à destination", "correct": false, "explication": "En DDP, la marchandise est livrée prête à être déchargée ; seul DPU impose le déchargement au vendeur." },
+        { "id": "d", "texte": "Supporter le risque jusqu'à la livraison à Bogotá", "correct": true, "explication": "Famille D : risque à la charge du vendeur jusqu'à destination." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.014", "notion": "tci.incoterms.dedouanement", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Dans quelle règle le vendeur ne dédouane-t-il pas à l'export ?",
+      "choix": [
+        { "id": "a", "texte": "EXW", "correct": true, "explication": "En EXW, l'acheteur accomplit toutes les formalités, y compris à l'export." },
+        { "id": "b", "texte": "FCA", "correct": false, "explication": "En FCA, le vendeur dédouane à l'export : c'est même la principale différence avec EXW." },
+        { "id": "c", "texte": "DDP", "correct": false, "explication": "En DDP, le vendeur dédouane à l'export et à l'import." },
+        { "id": "d", "texte": "FAS", "correct": false, "explication": "Depuis 2010, le vendeur FAS dédouane à l'export." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.015", "notion": "tci.incoterms.redaction", "format": "unique", "niveau": 2, "competence": "detecter-erreur",
+      "enonce": "Laquelle de ces clauses est rédigée correctement ?",
+      "choix": [
+        { "id": "a", "texte": "« CIP aéroport de Montréal-Trudeau, Canada, Incoterms® 2020 »", "correct": true, "explication": "Règle, lieu précis et édition sont présents ; en famille C, le lieu indiqué est la destination." },
+        { "id": "b", "texte": "« FOB Canada »", "correct": false, "explication": "Lieu imprécis (pays et non port), édition absente, et FOB désigne le port d'embarquement, pas le pays de destination." },
+        { "id": "c", "texte": "« Franco domicile »", "correct": false, "explication": "Ce n'est pas une règle Incoterms : la répartition des risques et des frais reste incertaine." },
+        { "id": "d", "texte": "« DAP Incoterms® 2020 »", "correct": false, "explication": "Le lieu de destination manque : impossible de savoir où la livraison a lieu." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.016", "notion": "tci.incoterms.choix", "format": "unique", "niveau": 3, "competence": "resoudre",
+      "enonce": "Un fabricant de Bordeaux vend des colis par avion à un client de Singapour. Il veut proposer un prix incluant le transport, mais ne veut pas supporter le risque du vol et ne peut pas dédouaner à Singapour. Quelle règle choisir ?",
+      "choix": [
+        { "id": "a", "texte": "CPT aéroport de Singapour-Changi", "correct": true, "explication": "Tous modes, transport payé jusqu'à destination, risque transféré au départ, dédouanement import par l'acheteur." },
+        { "id": "b", "texte": "CFR Singapour", "correct": false, "explication": "CFR est réservé au transport maritime." },
+        { "id": "c", "texte": "DAP Singapour", "correct": false, "explication": "En DAP, le vendeur supporterait le risque pendant le vol, ce qu'il refuse." },
+        { "id": "d", "texte": "DDP Singapour", "correct": false, "explication": "DDP impose le dédouanement import, impossible pour ce vendeur, et le risque jusqu'à destination." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.017", "notion": "tci.incoterms.repartition-couts", "format": "unique", "niveau": 2, "competence": "interpreter",
+      "support": { "type": "tableau", "entetes": ["Élément", "Montant"], "lignes": [["Valeur EXW", "20 000 €"], ["Pré-acheminement jusqu'au port + dédouanement export", "600 €"], ["Manutention et mise à bord", "250 €"], ["Fret maritime", "1 800 €"], ["Assurance", "75 €"]] },
+      "enonce": "D'après le tableau, quel est le prix CFR ?",
+      "choix": [
+        { "id": "a", "texte": "22 650 €", "correct": true, "explication": "CFR = EXW + pré-acheminement et dédouanement + mise à bord + fret = 20 000 + 600 + 250 + 1 800 = 22 650 €." },
+        { "id": "b", "texte": "22 725 €", "correct": false, "explication": "C'est le prix CIF : l'assurance ne fait pas partie du prix CFR." },
+        { "id": "c", "texte": "20 850 €", "correct": false, "explication": "C'est le prix FOB : il manque le fret maritime." },
+        { "id": "d", "texte": "21 800 €", "correct": false, "explication": "Ce calcul oublie le pré-acheminement, le dédouanement et la mise à bord." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.018", "notion": "tci.incoterms.vs-propriete", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : en FOB, l'acheteur devient propriétaire de la marchandise dès qu'elle est à bord.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "L'Incoterm fixe le transfert des risques, pas celui de la propriété." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "Le moment du transfert de propriété dépend du contrat (réserve de propriété) et de la loi applicable." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.019", "notion": "tci.incoterms.chargement-dechargement", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Une machine de 6 tonnes doit être livrée et déchargée par le vendeur dans l'usine du client. Quelle règle traduit cet accord ?",
+      "choix": [
+        { "id": "a", "texte": "DPU usine du client", "correct": true, "explication": "DPU est la seule règle qui impose au vendeur de décharger à destination." },
+        { "id": "b", "texte": "DAP usine du client", "correct": false, "explication": "En DAP, la livraison a lieu prête à être déchargée ; le déchargement est à la charge de l'acheteur." },
+        { "id": "c", "texte": "DDP usine du client", "correct": false, "explication": "DDP ajoute le dédouanement import mais pas le déchargement." },
+        { "id": "d", "texte": "CPT usine du client", "correct": false, "explication": "En CPT, le risque passe au départ et le déchargement n'est pas une obligation du vendeur." }
+      ]
+    },
+    {
+      "id": "q.tci.incoterms.020", "notion": "tci.incoterms.assurance", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vente « FCA Lyon » d'un lot envoyé par route à Varsovie. Aucune assurance n'est prévue au contrat. Qui a intérêt à assurer la marchandise pendant le trajet routier ?",
+      "choix": [
+        { "id": "a", "texte": "L'acheteur, car il supporte le risque depuis la remise au transporteur à Lyon", "correct": true, "explication": "Aucune obligation d'assurance en FCA, mais le risque du trajet est à l'acheteur." },
+        { "id": "b", "texte": "Le vendeur, car FCA l'oblige à assurer", "correct": false, "explication": "Seules CIF et CIP imposent une assurance au vendeur." },
+        { "id": "c", "texte": "Le transporteur, qui est obligatoirement assuré pour la valeur totale", "correct": false, "explication": "La responsabilité du transporteur routier est limitée par la CMR (par kilogramme) ; elle ne couvre pas toujours la valeur réelle." },
+        { "id": "d", "texte": "Personne : la marchandise ne voyage dans l'UE qu'aux risques de l'État de départ", "correct": false, "explication": "Aucune règle de ce type n'existe." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.tci.incoterms.001", "notions": ["tci.incoterms.dissociation-c", "tci.incoterms.transfert-risque"],
+      "question": "Expliquez pourquoi, dans une vente CIF, le vendeur paie l'assurance alors que c'est l'acheteur qui est assuré.",
+      "reponse": "En CIF, le risque passe à l'acheteur dès la mise à bord au port d'embarquement. Pendant la traversée, c'est donc l'acheteur qui subit la perte en cas de sinistre. Le vendeur, qui organise et paie le transport, a l'obligation de souscrire une assurance (clauses C minimum, 110 % du prix) dont l'acheteur est bénéficiaire. Le vendeur paie la prime et l'intègre dans son prix ; l'acheteur est indemnisé en cas de dommage couvert.",
+      "indispensables": ["Le risque passe à bord au port d'embarquement", "L'acheteur supporte la perte pendant le voyage", "L'assurance est souscrite au profit de l'acheteur", "Le vendeur paie la prime et l'intègre dans le prix"],
+      "complementaires": ["Minimum clauses C, 110 % du prix", "En CIP le minimum est les clauses A"],
+      "erreurs": ["Dire que le vendeur supporte le risque jusqu'au port de destination", "Dire que l'assurance protège le vendeur"],
+      "relance": "Si la marchandise est endommagée en mer, à qui l'assureur verse-t-il l'indemnité, et pourquoi ?"
+    },
+    {
+      "id": "f.tci.incoterms.002", "notions": ["tci.incoterms.choix", "tci.incoterms.fas-fob", "tci.incoterms.fca"],
+      "question": "Construisez un exemple montrant qu'utiliser FOB pour un conteneur est une erreur, puis proposez la correction.",
+      "reponse": "Exemple : une PME vend « FOB Le Havre » un conteneur remis au terminal le lundi, chargé à bord le jeudi. Le mardi, le conteneur est endommagé par un portique du terminal. En FOB, le risque ne passe qu'à bord : le vendeur supporte la perte, alors qu'il n'avait plus la garde du conteneur. Correction : « FCA terminal X, Le Havre, Incoterms® 2020 » (ou CPT/CIP si le vendeur paie le fret) : le risque passe dès la remise au terminal.",
+      "indispensables": ["Décalage entre remise au terminal et mise à bord", "En FOB le risque passe à bord", "Le vendeur supporte un risque sans contrôler la marchandise", "Correction par FCA (ou CPT/CIP)"],
+      "complementaires": ["Les règles maritimes conviennent au vrac chargé directement à bord"],
+      "erreurs": ["Prétendre que FOB est interdit pour les conteneurs"],
+      "relance": "À quel moment exact le risque passerait-il en FCA terminal du Havre ?"
+    },
+    {
+      "id": "f.tci.incoterms.003", "notions": ["tci.incoterms.dap-dpu-ddp"],
+      "question": "Comparez DAP, DPU et DDP : quels sont les deux critères qui les distinguent ?",
+      "reponse": "Les trois règles sont des ventes à l'arrivée : le vendeur supporte risques et frais jusqu'au lieu de destination. Deux critères les distinguent : 1) le déchargement à destination, à la charge du vendeur uniquement en DPU ; 2) le dédouanement à l'import avec paiement des droits et taxes, à la charge du vendeur uniquement en DDP. DAP est la base : ni déchargement ni dédouanement import pour le vendeur.",
+      "indispensables": ["Risque et frais jusqu'à destination pour le vendeur dans les trois cas", "DPU : le vendeur décharge", "DDP : le vendeur dédouane à l'import et paie droits et taxes", "DAP : ni l'un ni l'autre"],
+      "complementaires": ["DPU a remplacé DAT en 2020", "DDP suppose une capacité à dédouaner dans le pays de l'acheteur"],
+      "erreurs": ["Croire qu'en DDP le vendeur décharge", "Croire qu'en DAP le vendeur décharge"],
+      "relance": "Quelle règle choisir si le vendeur doit décharger une machine mais ne peut pas dédouaner à l'import ?"
+    },
+    {
+      "id": "f.tci.incoterms.004", "notions": ["tci.incoterms.fonction", "tci.incoterms.vs-propriete"],
+      "question": "Un client vous dit : « Avec l'Incoterm, le contrat est complet. » Expliquez pourquoi c'est faux.",
+      "reponse": "L'Incoterm règle uniquement la livraison, le transfert des risques, la répartition des frais, le transport et l'assurance (CIF, CIP), les formalités douanières, les documents et les notifications. Il ne règle ni le transfert de propriété, ni le prix et le paiement, ni les sanctions de l'inexécution, ni la loi applicable et le tribunal compétent. Ces points doivent être prévus par d'autres clauses du contrat et par la loi applicable (par exemple la CVIM).",
+      "indispensables": ["Liste de ce que règle l'Incoterm (risques, frais, livraison, douane)", "Au moins trois points non réglés (propriété, paiement, litiges/loi applicable)", "Nécessité d'autres clauses ou de la loi applicable"],
+      "complementaires": ["Clause de réserve de propriété", "Clause attributive de juridiction ou d'arbitrage"],
+      "relance": "Quelle clause protège un vendeur impayé dont l'acheteur fait faillite ?"
+    },
+    {
+      "id": "f.tci.incoterms.005", "notions": ["tci.incoterms.dedouanement", "tci.incoterms.exw"],
+      "question": "Énoncez la règle générale du dédouanement dans les Incoterms et ses deux exceptions.",
+      "reponse": "Règle générale : le vendeur dédouane à l'export et l'acheteur dédouane à l'import. Exceptions : en EXW, l'acheteur dédouane aussi à l'export ; en DDP, le vendeur dédouane aussi à l'import et paie les droits et taxes.",
+      "indispensables": ["Vendeur à l'export, acheteur à l'import", "Exception EXW", "Exception DDP"],
+      "erreurs": ["Penser qu'il y a dédouanement entre deux pays de l'UE"],
+      "relance": "Pourquoi EXW pose-t-il un problème pratique pour un export hors UE ?"
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.tci.incoterms.01", "notions": ["tci.incoterms.repartition-couts"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Du prix EXW au prix CIF",
+      "enonce": "La société Biscuiterie de l'Orne vend un lot de biscuits à un importateur de Montréal, transport maritime en conventionnel depuis Le Havre. Données en euros :",
+      "donnees": { "entetes": ["Élément", "Montant"], "lignes": [["Valeur EXW", "36 000 €"], ["Pré-acheminement usine → port du Havre", "520 €"], ["Dédouanement export", "130 €"], ["Manutention portuaire et mise à bord", "350 €"], ["Fret maritime Le Havre → Montréal", "2 900 €"], ["Taux d'assurance", "0,4 % de 110 % de la valeur CIF"]] },
+      "questions": [
+        { "id": "1", "consigne": "Calculez le prix FOB Le Havre (en €).", "reponse": { "type": "nombre", "valeur": 37000, "tolerance": 0.5, "unite": "€" },
+          "correction": ["FOB = EXW + pré-acheminement + dédouanement export + manutention et mise à bord", "FOB = 36 000 + 520 + 130 + 350 = 37 000 €"],
+          "erreurs": ["Oublier la mise à bord : en FOB, le vendeur livre à bord.", "Ajouter le fret : il n'est pas à la charge du vendeur FOB."] },
+        { "id": "2", "consigne": "Calculez le prix CFR Montréal (en €).", "reponse": { "type": "nombre", "valeur": 39900, "tolerance": 0.5, "unite": "€" },
+          "correction": ["CFR = FOB + fret maritime", "CFR = 37 000 + 2 900 = 39 900 €"] },
+        { "id": "3", "consigne": "Calculez le prix CIF Montréal, arrondi au centime (en €).", "reponse": { "type": "nombre", "valeur": 40076.34, "tolerance": 0.05, "unite": "€" },
+          "correction": ["La prime vaut 0,4 % × 110 % × CIF = 0,0044 × CIF, et CIF = CFR + prime.", "Donc CIF = CFR + 0,0044 × CIF, soit CIF × (1 − 0,0044) = CFR.", "CIF = 39 900 ÷ 0,9956 = 40 076,34 € (arrondi au centime)"],
+          "erreurs": ["Calculer la prime sur la valeur CFR (39 900 × 0,0044 = 175,56 €) : la prime porte sur la valeur CIF, qui la contient.", "Oublier la majoration de 110 %."] },
+        { "id": "4", "consigne": "Quel est le montant de la prime d'assurance (en €) ?", "reponse": { "type": "nombre", "valeur": 176.34, "tolerance": 0.05, "unite": "€" },
+          "correction": ["Prime = CIF − CFR = 40 076,34 − 39 900 = 176,34 €", "Vérification : 0,0044 × 40 076,34 = 176,34 €."] }
+      ]
+    },
+    {
+      "id": "e.tci.incoterms.02", "notions": ["tci.incoterms.transfert-risque", "tci.incoterms.dissociation-c", "tci.incoterms.chargement-dechargement"], "type": "cas", "niveau": 2, "fictif": true,
+      "titre": "Qui supporte le dommage ?",
+      "enonce": "Pour chaque situation, indiquez qui supporte la perte selon l'Incoterm.",
+      "questions": [
+        { "id": "1", "consigne": "« CPT Lisbonne » au départ de Tours : le camion est accidenté en Espagne.", "reponse": { "type": "choix", "options": ["Le vendeur", "L'acheteur"], "correcte": 1 },
+          "correction": ["En CPT, le risque passe à la remise au premier transporteur, à Tours.", "L'accident survient après : il est à la charge de l'acheteur, qui se retournera contre le transporteur (CMR) ou son assureur."] },
+        { "id": "2", "consigne": "« DPU entrepôt de l'acheteur, Turin » : la palette tombe pendant le déchargement par le chauffeur du vendeur.", "reponse": { "type": "choix", "options": ["Le vendeur", "L'acheteur"], "correcte": 0 },
+          "correction": ["En DPU, la livraison n'a lieu qu'une fois la marchandise déchargée.", "Le dommage survient avant la livraison : il est pour le vendeur."] },
+        { "id": "3", "consigne": "« EXW Orléans » : la palette tombe pendant le chargement par le personnel du vendeur sur le camion de l'acheteur.", "reponse": { "type": "choix", "options": ["Le vendeur", "L'acheteur"], "correcte": 1 },
+          "correction": ["En EXW, la livraison a lieu à la mise à disposition, marchandise non chargée.", "Si le vendeur charge, il le fait aux risques de l'acheteur : la perte est pour l'acheteur. Pour l'éviter, il fallait choisir FCA locaux du vendeur."],
+          "erreurs": ["Penser que celui qui manipule la marchandise supporte automatiquement le risque."] },
+        { "id": "4", "consigne": "« FOB Marseille » : la caisse tombe du palan avant d'être posée à bord.", "reponse": { "type": "choix", "options": ["Le vendeur", "L'acheteur"], "correcte": 0 },
+          "correction": ["En FOB, le risque passe quand la marchandise est à bord.", "La caisse n'était pas encore à bord : le dommage est pour le vendeur."] }
+      ]
+    },
+    {
+      "id": "e.tci.incoterms.03", "notions": ["tci.incoterms.choix", "tci.incoterms.redaction"], "type": "cas", "niveau": 3, "fictif": true,
+      "titre": "Choisir et rédiger l'Incoterm",
+      "enonce": "La société Verrerie d'Argonne vend des flacons en verre à un parfumeur de Dubaï. Transport en conteneur depuis le port du Havre. Le parfumeur a son propre transitaire aux Émirats et peut dédouaner sur place ; il veut connaître un prix incluant le transport et une assurance complète. Paiement par crédit documentaire.",
+      "questions": [
+        { "id": "1", "consigne": "Quelle règle est la plus adaptée ?", "reponse": { "type": "choix", "options": ["FOB Le Havre", "CIF Jebel Ali", "CIP Jebel Ali", "DDP Dubaï"], "correcte": 2 },
+          "correction": ["Conteneur : on préfère une règle tous modes (exclut FOB et CIF).", "Prix incluant transport et assurance complète : CIP impose les clauses A (tous risques) ; CIF n'impose que les clauses C.", "DDP n'est pas nécessaire puisque l'acheteur dédouane lui-même, et ferait supporter au vendeur le risque jusqu'à Dubaï."] },
+        { "id": "2", "consigne": "Rédigez la clause complète.", "reponse": { "type": "libre", "criteres": ["Le sigle CIP", "Le lieu de destination précis (port de Jebel Ali, Dubaï, Émirats arabes unis)", "La mention Incoterms® 2020", "Éventuellement le lieu de remise au départ (terminal du Havre)"], "corrige": "« CIP port de Jebel Ali, Dubaï, Émirats arabes unis, Incoterms® 2020 » — avec, si besoin, la précision : « livraison au terminal X du Havre »." },
+          "correction": ["En famille C, le lieu indiqué après le sigle est la destination jusqu'à laquelle le transport est payé.", "Préciser l'édition évite toute discussion sur la version applicable."] }
+      ]
+    }
+  ]
+}

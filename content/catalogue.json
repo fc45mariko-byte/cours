@@ -1,0 +1,2926 @@
+{
+ "matieres": [
+  {
+   "id": "tci",
+   "titre": "Techniques du commerce international",
+   "statut": "ORL",
+   "semestres": [
+    "S5",
+    "S6"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "peach",
+   "categorie": "Commerce international",
+   "chapitres": [
+    {
+     "id": "tci.operation",
+     "titre": "L'opération d'import-export",
+     "notions": [
+      {
+       "id": "tci.operation.acteurs",
+       "titre": "Les acteurs : vendeur, acheteur, transporteur, commissionnaire, transitaire, banques, douane, assureur",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.operation.flux",
+       "titre": "Flux physique, documentaire et financier",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.operation.offre-export",
+       "titre": "L'offre et la facture pro forma",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.operation.facture-commerciale",
+       "titre": "La facture commerciale internationale : mentions",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "tci.incoterms",
+     "titre": "Incoterms® 2020",
+     "notions": [
+      {
+       "id": "tci.incoterms.fonction",
+       "titre": "Fonction et nature contractuelle des Incoterms",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.familles",
+       "titre": "Les 4 familles E, F, C, D et les 2 catégories (tous modes / maritime)",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.transfert-risque",
+       "titre": "Le point de transfert des risques",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.repartition-couts",
+       "titre": "Le point de transfert des frais",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.dissociation-c",
+       "titre": "La règle des deux points critiques dans la famille C",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.incoterms.exw",
+       "titre": "EXW",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.fca",
+       "titre": "FCA, y compris le connaissement « à bord »",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.fas-fob",
+       "titre": "FAS et FOB",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.cfr-cif",
+       "titre": "CFR et CIF",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.cpt-cip",
+       "titre": "CPT et CIP",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.dap-dpu-ddp",
+       "titre": "DAP, DPU et DDP",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.assurance",
+       "titre": "Obligations d'assurance : CIF en clause C, CIP en clause A",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.dedouanement",
+       "titre": "Qui dédouane à l'export et à l'import",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.chargement-dechargement",
+       "titre": "Chargement et déchargement selon la règle",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.incoterms.choix",
+       "titre": "Choisir un Incoterm : critères et erreurs",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.incoterms.redaction",
+       "titre": "Rédiger la clause : règle, lieu précis, version",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.incoterms.vs-propriete",
+       "titre": "Incoterm, transfert de propriété et contrat de vente",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.incoterms.cas",
+       "titre": "Études de cas",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "tci.transport",
+     "titre": "Transport international",
+     "notions": [
+      {
+       "id": "tci.transport.choix-mode",
+       "titre": "Choisir un mode : coût, délai, sécurité, nature de la marchandise",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.transport.maritime",
+       "titre": "Transport maritime : lignes régulières, tramping, conteneurs EVP, FCL / LCL",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.transport.fret-maritime",
+       "titre": "Calcul du fret maritime : unité payante, BAF, CAF, THC",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.transport.aerien",
+       "titre": "Transport aérien : LTA / AWB, poids taxable (rapport 1/6)",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.transport.routier",
+       "titre": "Transport routier : lettre de voiture CMR",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.transport.ferroviaire",
+       "titre": "Transport ferroviaire : lettre de voiture CIM",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.transport.multimodal",
+       "titre": "Transport multimodal et commissionnaire de transport",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.transport.responsabilite",
+       "titre": "Responsabilité et limites d'indemnisation du transporteur",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.transport.emballage-marquage",
+       "titre": "Emballage, marquage, colisage",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "tci.documents",
+     "titre": "Documents du commerce international",
+     "notions": [
+      {
+       "id": "tci.documents.connaissement",
+       "titre": "Le connaissement : fonctions, titre de propriété",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.documents.connaissement-net-clause",
+       "titre": "Connaissement net ou clausé ; connaissement à ordre, nominatif, au porteur",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.documents.autres-transport",
+       "titre": "Sea waybill, LTA, CMR, CIM : non négociables",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.documents.liste-colisage",
+       "titre": "Liste de colisage et certificats (origine, sanitaire, inspection)",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.documents.coherence",
+       "titre": "Cohérence documentaire",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "tci.paiement",
+     "titre": "Paiements internationaux",
+     "notions": [
+      {
+       "id": "tci.paiement.risques",
+       "titre": "Risque de non-paiement, risque pays, risque de change",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.paiement.instruments-vs-techniques",
+       "titre": "Instruments (virement, chèque, effet) et techniques (encaissement simple, remise, crédit)",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.paiement.virement-swift",
+       "titre": "Virement SWIFT, IBAN / BIC",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.paiement.lettre-change",
+       "titre": "Lettre de change et billet à ordre",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.paiement.remise-documentaire",
+       "titre": "Remise documentaire D/P et D/A (URC 522)",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.paiement.credit-documentaire",
+       "titre": "Le crédit documentaire : mécanisme et acteurs",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.paiement.credoc-types",
+       "titre": "Révocable / irrévocable ; notifié / confirmé",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.paiement.credoc-realisation",
+       "titre": "Réalisation : à vue, paiement différé, acceptation, négociation",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.paiement.credoc-conformite",
+       "titre": "Examen des documents, réserves, autonomie",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.paiement.garanties",
+       "titre": "Garanties bancaires et lettre de crédit stand-by",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.paiement.choix",
+       "titre": "Choisir une technique de paiement selon le risque",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "tci.change",
+     "titre": "Risque de change",
+     "notions": [
+      {
+       "id": "tci.change.notion",
+       "titre": "Cours au comptant et à terme, cotation",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.change.couverture-terme",
+       "titre": "Couverture à terme",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.change.options",
+       "titre": "Options de change",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.change.techniques-internes",
+       "titre": "Facturation en devise nationale, termaillage",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "tci.assurance",
+     "titre": "Assurances",
+     "notions": [
+      {
+       "id": "tci.assurance.transport",
+       "titre": "Assurance transport : police, clauses ICC A / B / C",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.assurance.avaries",
+       "titre": "Avaries particulières et avarie commune",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.assurance.reserves",
+       "titre": "Réserves à la livraison et recours",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.assurance.credit",
+       "titre": "Assurance-crédit export",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "tci.douane",
+     "titre": "Douane",
+     "notions": [
+      {
+       "id": "tci.douane.role",
+       "titre": "Rôle de la douane, union douanière de l'UE",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.douane.espece",
+       "titre": "Espèce tarifaire : SH, NC, TARIC",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.douane.origine",
+       "titre": "Origine préférentielle et non préférentielle",
+       "niveau": "A"
+      },
+      {
+       "id": "tci.douane.valeur",
+       "titre": "Valeur en douane (valeur transactionnelle, ajustements)",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.douane.calcul-droits-tva",
+       "titre": "Calcul des droits et de la TVA à l'importation",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.douane.declaration",
+       "titre": "Déclaration en douane, EORI, statut OEA",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.douane.regimes-particuliers",
+       "titre": "Entrepôt, perfectionnement actif / passif, admission temporaire, transit",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "tci.intra-ue",
+     "titre": "Échanges intracommunautaires",
+     "notions": [
+      {
+       "id": "tci.intra-ue.livraison-acquisition",
+       "titre": "Livraison et acquisition intracommunautaires",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.intra-ue.autoliquidation",
+       "titre": "Autoliquidation de la TVA",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.intra-ue.declarations",
+       "titre": "État récapitulatif TVA et enquête EMEBI",
+       "niveau": "F"
+      },
+      {
+       "id": "tci.intra-ue.vs-pays-tiers",
+       "titre": "Comparaison UE / pays tiers",
+       "niveau": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ici",
+   "titre": "Introduction au commerce international",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "peach",
+   "categorie": "Commerce international",
+   "chapitres": [
+    {
+     "id": "ici.diagnostic",
+     "titre": "Diagnostic et sélection des marchés",
+     "notions": [
+      {
+       "id": "ici.diagnostic.interne",
+       "titre": "Diagnostic export interne",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.diagnostic.swot",
+       "titre": "SWOT et facteurs clés de succès",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.diagnostic.selection-marches",
+       "titre": "Sélection des marchés : critères, grille de notation",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.diagnostic.uppsala",
+       "titre": "Modèle d'Uppsala et distance psychique",
+       "niveau": "A"
+      },
+      {
+       "id": "ici.diagnostic.born-global",
+       "titre": "Les « born global »",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "ici.information",
+     "titre": "Information sur les marchés",
+     "notions": [
+      {
+       "id": "ici.information.sources",
+       "titre": "Sources d'information sur les marchés ; acteurs publics d'appui à l'export",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.information.etude-marche",
+       "titre": "Étude de marché documentaire et terrain",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "ici.risque",
+     "titre": "Risque pays",
+     "notions": [
+      {
+       "id": "ici.risque.risque-pays",
+       "titre": "Risque pays : politique, économique, de transfert",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.risque.notation",
+       "titre": "Les classements de risque pays (lecture)",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "ici.presence",
+     "titre": "Modes de présence à l'international",
+     "notions": [
+      {
+       "id": "ici.presence.export-indirect",
+       "titre": "Export indirect",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.presence.export-direct",
+       "titre": "Export direct",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.presence.agent-commercial",
+       "titre": "Agent commercial",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.presence.distributeur",
+       "titre": "Distributeur et concessionnaire",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.presence.licence-franchise",
+       "titre": "Licence et franchise",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.presence.joint-venture",
+       "titre": "Joint-venture",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.presence.filiale",
+       "titre": "Filiale et succursale",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.presence.choix",
+       "titre": "Arbitrage contrôle / engagement / risque",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "ici.prospection",
+     "titre": "Prospection",
+     "notions": [
+      {
+       "id": "ici.prospection.outils",
+       "titre": "Salons, missions, VIE, prospection digitale",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.prospection.plan",
+       "titre": "Plan de prospection",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "ici.mix",
+     "titre": "Marketing mix international",
+     "notions": [
+      {
+       "id": "ici.mix.standardisation-adaptation",
+       "titre": "Standardisation ou adaptation",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.mix.produit",
+       "titre": "Produit et normes",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.mix.prix-export",
+       "titre": "Prix export : escalade des prix",
+       "niveau": "A"
+      },
+      {
+       "id": "ici.mix.distribution",
+       "titre": "Canaux de distribution",
+       "niveau": "F"
+      },
+      {
+       "id": "ici.mix.communication",
+       "titre": "Communication internationale",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dai",
+   "titre": "Droit des affaires internationales",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "lilac",
+   "categorie": "Droit",
+   "chapitres": [
+    {
+     "id": "dai.normes",
+     "titre": "Sources et normes du commerce international",
+     "notions": [
+      {
+       "id": "dai.normes.sources",
+       "titre": "Sources du droit du commerce international",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.normes.hard-law",
+       "titre": "Traités, règlements et directives de l'UE",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.normes.soft-law",
+       "titre": "Soft law, lex mercatoria, usages, règles de la CCI",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.normes.omc",
+       "titre": "OMC : principes (nation la plus favorisée, traitement national), ORD",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "dai.cvim",
+     "titre": "La vente internationale (CVIM)",
+     "notions": [
+      {
+       "id": "dai.cvim.champ",
+       "titre": "Champ d'application et exclusion",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.cvim.formation",
+       "titre": "Offre et acceptation",
+       "niveau": "A"
+      },
+      {
+       "id": "dai.cvim.obligations",
+       "titre": "Obligations du vendeur et de l'acheteur",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.cvim.contravention-essentielle",
+       "titre": "Contravention essentielle et résolution",
+       "niveau": "A"
+      },
+      {
+       "id": "dai.cvim.remedes",
+       "titre": "Remèdes et dommages-intérêts",
+       "niveau": "A"
+      },
+      {
+       "id": "dai.cvim.exoneration",
+       "titre": "Exonération (art. 79)",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dai.contrat",
+     "titre": "Le contrat international",
+     "notions": [
+      {
+       "id": "dai.contrat.clauses",
+       "titre": "Clauses clés : prix, livraison, force majeure, hardship, réserve de propriété",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.contrat.unidroit",
+       "titre": "Principes UNIDROIT",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dai.conflits",
+     "titre": "Loi applicable et juridiction",
+     "notions": [
+      {
+       "id": "dai.conflits.loi-applicable",
+       "titre": "Loi applicable : Rome I",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.conflits.juridiction",
+       "titre": "Juridiction compétente : Bruxelles I bis, clause attributive",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.conflits.distinction",
+       "titre": "Distinguer loi applicable et juridiction",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "dai.litiges",
+     "titre": "Règlement des litiges",
+     "notions": [
+      {
+       "id": "dai.litiges.modes-amiables",
+       "titre": "Négociation, médiation, conciliation",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.litiges.arbitrage",
+       "titre": "Arbitrage : clause compromissoire, institutions",
+       "niveau": "F"
+      },
+      {
+       "id": "dai.litiges.new-york",
+       "titre": "Convention de New York et exécution des sentences",
+       "niveau": "A"
+      },
+      {
+       "id": "dai.litiges.exequatur",
+       "titre": "Exécution des jugements étrangers",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dai.distribution",
+     "titre": "Distribution et concurrence",
+     "notions": [
+      {
+       "id": "dai.distribution.agent",
+       "titre": "Statut de l'agent commercial (directive 86/653)",
+       "niveau": "A"
+      },
+      {
+       "id": "dai.distribution.concurrence",
+       "titre": "Droit de la concurrence de l'UE : ententes et restrictions verticales",
+       "niveau": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dcl",
+   "titre": "Droit des contrats de la Common law",
+   "statut": "ORL",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "lilac",
+   "categorie": "Droit",
+   "chapitres": [
+    {
+     "id": "dcl.systemes",
+     "titre": "Les systèmes juridiques",
+     "notions": [
+      {
+       "id": "dcl.systemes.civil-common",
+       "titre": "Civil law et common law",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.systemes.precedent",
+       "titre": "Stare decisis, ratio decidendi, obiter dictum",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.systemes.equity",
+       "titre": "Equity et ses remèdes",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.systemes.statutes",
+       "titre": "Statute law et case law",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "dcl.juridictions",
+     "titre": "Organisation judiciaire",
+     "notions": [
+      {
+       "id": "dcl.juridictions.angleterre",
+       "titre": "Organisation judiciaire anglaise et britannique",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.juridictions.usa",
+       "titre": "Organisation judiciaire américaine (fédéral / États)",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.juridictions.brexit",
+       "titre": "Conséquences du Brexit : CJUE, reconnaissance des jugements, Conventions de La Haye 2005 et 2019",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dcl.formation",
+     "titre": "Formation du contrat",
+     "notions": [
+      {
+       "id": "dcl.formation.offer",
+       "titre": "Offer et invitation to treat",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.formation.acceptance",
+       "titre": "Acceptance, mirror image rule, postal rule",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.formation.consideration",
+       "titre": "Consideration et promissory estoppel",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.formation.intention",
+       "titre": "Intention to create legal relations",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.formation.capacity-formalities",
+       "titre": "Capacité, deeds, forme écrite",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dcl.contenu",
+     "titre": "Contenu du contrat",
+     "notions": [
+      {
+       "id": "dcl.contenu.terms",
+       "titre": "Express et implied terms",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.contenu.classification",
+       "titre": "Conditions, warranties, innominate terms",
+       "niveau": "A"
+      },
+      {
+       "id": "dcl.contenu.exclusion",
+       "titre": "Clauses d'exclusion et limites",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dcl.vices",
+     "titre": "Vices du consentement",
+     "notions": [
+      {
+       "id": "dcl.vices.misrepresentation",
+       "titre": "Misrepresentation",
+       "niveau": "A"
+      },
+      {
+       "id": "dcl.vices.mistake-duress",
+       "titre": "Mistake, duress, undue influence",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dcl.inexecution",
+     "titre": "Inexécution et remèdes",
+     "notions": [
+      {
+       "id": "dcl.inexecution.breach",
+       "titre": "Breach et discharge",
+       "niveau": "F"
+      },
+      {
+       "id": "dcl.inexecution.damages",
+       "titre": "Damages : expectation, remoteness (Hadley v Baxendale), mitigation",
+       "niveau": "A"
+      },
+      {
+       "id": "dcl.inexecution.equitable",
+       "titre": "Specific performance et injunction",
+       "niveau": "A"
+      },
+      {
+       "id": "dcl.inexecution.privity",
+       "titre": "Privity of contract",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dcl.ucc",
+     "titre": "Uniform Commercial Code",
+     "notions": [
+      {
+       "id": "dcl.ucc.article2",
+       "titre": "UCC article 2 : champ, battle of the forms",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "dcl.lexique",
+     "titre": "Vocabulaire juridique",
+     "notions": [
+      {
+       "id": "dcl.lexique.contrat-anglais",
+       "titre": "Vocabulaire des contrats anglo-saxons",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpt",
+   "titre": "Comptabilité générale",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "mint",
+   "categorie": "Gestion",
+   "chapitres": [
+    {
+     "id": "cpt.cadre",
+     "titre": "Cadre comptable",
+     "notions": [
+      {
+       "id": "cpt.cadre.role",
+       "titre": "Rôle et utilisateurs de la comptabilité",
+       "niveau": "P"
+      },
+      {
+       "id": "cpt.cadre.principes",
+       "titre": "Principes comptables (prudence, permanence, image fidèle…)",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.cadre.pcg",
+       "titre": "Le PCG et les classes de comptes",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cpt.mecanisme",
+     "titre": "Mécanismes comptables",
+     "notions": [
+      {
+       "id": "cpt.mecanisme.bilan-resultat",
+       "titre": "Bilan et compte de résultat : structure",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.mecanisme.partie-double",
+       "titre": "La partie double",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.mecanisme.debit-credit",
+       "titre": "Le fonctionnement débit / crédit des comptes",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.mecanisme.journal",
+       "titre": "Le journal",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.mecanisme.grand-livre",
+       "titre": "Le grand livre",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.mecanisme.balance",
+       "titre": "La balance",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cpt.tva",
+     "titre": "La TVA",
+     "notions": [
+      {
+       "id": "cpt.tva.mecanisme",
+       "titre": "Mécanisme de la TVA, taux",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.tva.ecritures",
+       "titre": "Écritures de TVA collectée et déductible",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.tva.declaration",
+       "titre": "Liquidation de la TVA à décaisser",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cpt.achats-ventes",
+     "titre": "Achats et ventes",
+     "notions": [
+      {
+       "id": "cpt.achats-ventes.factures",
+       "titre": "Facture d'achat et de vente",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.achats-ventes.reductions",
+       "titre": "Réductions commerciales (RRR) et financières (escompte)",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.achats-ventes.frais-accessoires",
+       "titre": "Frais accessoires, ports, emballages",
+       "niveau": "A"
+      },
+      {
+       "id": "cpt.achats-ventes.avoirs",
+       "titre": "Avoirs",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.achats-ventes.international",
+       "titre": "Achats et ventes à l'international, TVA intracommunautaire",
+       "niveau": "A"
+      },
+      {
+       "id": "cpt.achats-ventes.devises",
+       "titre": "Opérations en devises et écarts de change",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cpt.tresorerie",
+     "titre": "Trésorerie",
+     "notions": [
+      {
+       "id": "cpt.tresorerie.reglements",
+       "titre": "Règlements : virement, chèque, espèces",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.tresorerie.effets",
+       "titre": "Effets de commerce",
+       "niveau": "A"
+      },
+      {
+       "id": "cpt.tresorerie.rapprochement",
+       "titre": "Rapprochement bancaire",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cpt.personnel",
+     "titre": "Charges de personnel",
+     "notions": [
+      {
+       "id": "cpt.personnel.paie",
+       "titre": "Brut, net, cotisations : écritures 421 / 431 / 641 / 645",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cpt.investissements",
+     "titre": "Investissements et amortissements",
+     "notions": [
+      {
+       "id": "cpt.investissements.immobilisations",
+       "titre": "Acquisition d'immobilisations",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.investissements.amortissement-lineaire",
+       "titre": "Amortissement linéaire, plan d'amortissement",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.investissements.amortissement-degressif",
+       "titre": "Amortissement dégressif",
+       "niveau": "A"
+      },
+      {
+       "id": "cpt.investissements.cessions",
+       "titre": "Cession d'immobilisations",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cpt.inventaire",
+     "titre": "Travaux d'inventaire",
+     "notions": [
+      {
+       "id": "cpt.inventaire.stocks",
+       "titre": "Variation de stocks",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.inventaire.depreciations",
+       "titre": "Dépréciations (créances, stocks)",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.inventaire.provisions",
+       "titre": "Provisions pour risques et charges",
+       "niveau": "A"
+      },
+      {
+       "id": "cpt.inventaire.regularisations",
+       "titre": "Charges et produits constatés d'avance, factures à recevoir ou à établir",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cpt.synthese",
+     "titre": "Documents de synthèse",
+     "notions": [
+      {
+       "id": "cpt.synthese.compte-resultat",
+       "titre": "Établir le compte de résultat",
+       "niveau": "F"
+      },
+      {
+       "id": "cpt.synthese.bilan",
+       "titre": "Établir le bilan",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gfi",
+   "titre": "Gestion financière",
+   "statut": "ORL",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "mint",
+   "categorie": "Gestion",
+   "chapitres": [
+    {
+     "id": "gfi.bilan-fonctionnel",
+     "titre": "Le bilan fonctionnel",
+     "notions": [
+      {
+       "id": "gfi.bilan-fonctionnel.reclassement",
+       "titre": "Du bilan comptable au bilan fonctionnel",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.bilan-fonctionnel.retraitements",
+       "titre": "Retraitements usuels",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "gfi.equilibre",
+     "titre": "Équilibre financier",
+     "notions": [
+      {
+       "id": "gfi.equilibre.frng",
+       "titre": "Fonds de roulement net global",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.equilibre.bfr",
+       "titre": "Besoin en fonds de roulement : exploitation et hors exploitation",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.equilibre.tresorerie-nette",
+       "titre": "Trésorerie nette",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.equilibre.situations",
+       "titre": "Les six situations d'équilibre et de déséquilibre",
+       "niveau": "A"
+      },
+      {
+       "id": "gfi.equilibre.rentabilite-vs-liquidite",
+       "titre": "Rentabilité et liquidité",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.equilibre.effet-ciseaux",
+       "titre": "Croissance et effet de ciseaux",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "gfi.performance",
+     "titre": "Analyse de l'activité",
+     "notions": [
+      {
+       "id": "gfi.performance.sig",
+       "titre": "Soldes intermédiaires de gestion",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.performance.caf",
+       "titre": "Capacité d'autofinancement (méthodes additive et soustractive)",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "gfi.ratios",
+     "titre": "Les ratios",
+     "notions": [
+      {
+       "id": "gfi.ratios.structure",
+       "titre": "Ratios de structure et d'endettement",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.ratios.liquidite",
+       "titre": "Ratios de liquidité",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.ratios.rotation",
+       "titre": "Délais clients, fournisseurs, rotation des stocks",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.ratios.rentabilite",
+       "titre": "Rentabilité économique et financière",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.ratios.levier",
+       "titre": "Effet de levier",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "gfi.diagnostic",
+     "titre": "Diagnostic financier",
+     "notions": [
+      {
+       "id": "gfi.diagnostic.methode",
+       "titre": "Méthode du diagnostic financier rédigé",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "gfi.financement",
+     "titre": "Financement",
+     "notions": [
+      {
+       "id": "gfi.financement.court-terme",
+       "titre": "Découvert, escompte, affacturage, Dailly",
+       "niveau": "F"
+      },
+      {
+       "id": "gfi.financement.long-terme",
+       "titre": "Emprunt, crédit-bail, augmentation de capital",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "odg",
+   "titre": "Outils de gestion",
+   "statut": "ORL",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "mint",
+   "categorie": "Gestion",
+   "chapitres": [
+    {
+     "id": "odg.couts",
+     "titre": "Coûts et rentabilité",
+     "notions": [
+      {
+       "id": "odg.couts.fixes-variables",
+       "titre": "Charges fixes et variables",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.couts.mcv",
+       "titre": "Marge sur coût variable, taux de marge",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.couts.seuil",
+       "titre": "Seuil de rentabilité, point mort, marge de sécurité",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.couts.levier-operationnel",
+       "titre": "Levier opérationnel",
+       "niveau": "A"
+      },
+      {
+       "id": "odg.couts.couts-complets",
+       "titre": "Coûts complets, centres d'analyse",
+       "niveau": "A"
+      },
+      {
+       "id": "odg.couts.abc",
+       "titre": "Méthode ABC (Activity-Based Costing)",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "odg.stocks",
+     "titre": "Gestion des stocks",
+     "notions": [
+      {
+       "id": "odg.stocks.valorisation",
+       "titre": "Valorisation des stocks : CMUP, FIFO",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.stocks.wilson",
+       "titre": "Quantité économique de commande (Wilson / Harris)",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.stocks.point-commande",
+       "titre": "Stock d'alerte, stock de sécurité",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.stocks.pareto",
+       "titre": "Méthode ABC / Pareto (20 / 80)",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "odg.prevision",
+     "titre": "Prévision",
+     "notions": [
+      {
+       "id": "odg.prevision.moindres-carres",
+       "titre": "Ajustement linéaire (moindres carrés)",
+       "niveau": "A"
+      },
+      {
+       "id": "odg.prevision.saisonnalite",
+       "titre": "Coefficients saisonniers",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "odg.budget",
+     "titre": "Budgets et écarts",
+     "notions": [
+      {
+       "id": "odg.budget.budgets",
+       "titre": "Budgets et prévisions",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.budget.ecarts",
+       "titre": "Analyse des écarts",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "odg.pilotage",
+     "titre": "Pilotage et tableau de bord",
+     "notions": [
+      {
+       "id": "odg.pilotage.indicateurs",
+       "titre": "Choisir des indicateurs (KPI)",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.pilotage.tableau-de-bord",
+       "titre": "Construire un tableau de bord",
+       "niveau": "F"
+      },
+      {
+       "id": "odg.pilotage.balanced-scorecard",
+       "titre": "Balanced scorecard",
+       "niveau": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mgi",
+   "titre": "Management interculturel",
+   "statut": "ORL",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Isabelle Noël",
+   "couleur": "butter",
+   "categorie": "Management",
+   "chapitres": [
+    {
+     "id": "mgi.fondements",
+     "titre": "Fondements",
+     "notions": [
+      {
+       "id": "mgi.fondements.culture",
+       "titre": "Définir la culture : niveaux, stéréotype, préjugé",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.fondements.limites",
+       "titre": "Ce qu'une grille peut et ne peut pas dire",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "mgi.grilles",
+     "titre": "Les grilles d'analyse",
+     "notions": [
+      {
+       "id": "mgi.grilles.hofstede",
+       "titre": "Les 6 dimensions de Hofstede",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.grilles.hofstede-critiques",
+       "titre": "Critiques de Hofstede",
+       "niveau": "A"
+      },
+      {
+       "id": "mgi.grilles.hall",
+       "titre": "Hall : contexte, temps, espace",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.grilles.trompenaars",
+       "titre": "Trompenaars et Hampden-Turner : 7 dilemmes",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.grilles.comparer",
+       "titre": "Choisir la grille adaptée à un cas",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "mgi.management",
+     "titre": "Management",
+     "notions": [
+      {
+       "id": "mgi.management.pratiques",
+       "titre": "Culture et pratiques managériales",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.management.equipes",
+       "titre": "Équipes multiculturelles et à distance",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.management.expatriation",
+       "titre": "Expatriation, choc culturel",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "mgi.negociation",
+     "titre": "Négociation internationale",
+     "notions": [
+      {
+       "id": "mgi.negociation.phases",
+       "titre": "Phases de la négociation",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.negociation.styles",
+       "titre": "Styles de négociation et culture",
+       "niveau": "F"
+      },
+      {
+       "id": "mgi.negociation.batna",
+       "titre": "BATNA, ZOPA, concessions",
+       "niveau": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gdp",
+   "titre": "Gestion de projet",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Sonia Tesson",
+   "couleur": "butter",
+   "categorie": "Management",
+   "chapitres": [
+    {
+     "id": "gdp.cadrage",
+     "titre": "Cadrage",
+     "notions": [
+      {
+       "id": "gdp.cadrage.projet",
+       "titre": "Projet et triangle QCD",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.cadrage.charte",
+       "titre": "Charte, cahier des charges",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.cadrage.smart",
+       "titre": "Objectifs SMART",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.cadrage.parties-prenantes",
+       "titre": "Parties prenantes, matrice pouvoir / intérêt",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "gdp.organisation",
+     "titre": "Organisation",
+     "notions": [
+      {
+       "id": "gdp.organisation.wbs",
+       "titre": "WBS",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.organisation.raci",
+       "titre": "Matrice RACI",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "gdp.planification",
+     "titre": "Planification",
+     "notions": [
+      {
+       "id": "gdp.planification.anteriorites",
+       "titre": "Tableau des antériorités",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.planification.pert",
+       "titre": "Réseau PERT",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.planification.mpm",
+       "titre": "Méthode MPM",
+       "niveau": "A"
+      },
+      {
+       "id": "gdp.planification.dates-marges",
+       "titre": "Dates au plus tôt / au plus tard, marges totale et libre",
+       "niveau": "A"
+      },
+      {
+       "id": "gdp.planification.chemin-critique",
+       "titre": "Chemin critique",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.planification.gantt",
+       "titre": "Diagramme de Gantt",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.planification.pert-probabiliste",
+       "titre": "Durées PERT à trois estimations",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "gdp.pilotage",
+     "titre": "Pilotage et clôture",
+     "notions": [
+      {
+       "id": "gdp.pilotage.risques",
+       "titre": "Gestion des risques : éviter, réduire, transférer, accepter",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.pilotage.budget",
+       "titre": "Budget de projet",
+       "niveau": "F"
+      },
+      {
+       "id": "gdp.pilotage.valeur-acquise",
+       "titre": "Valeur acquise",
+       "niveau": "A"
+      },
+      {
+       "id": "gdp.pilotage.agile",
+       "titre": "Méthodes agiles",
+       "niveau": "A"
+      },
+      {
+       "id": "gdp.pilotage.cloture",
+       "titre": "Clôture, retour d'expérience",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "red",
+   "titre": "Rédaction de documents universitaires",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Sonia Tesson",
+   "couleur": "sky",
+   "categorie": "Méthodologie",
+   "chapitres": [
+    {
+     "id": "red.sources",
+     "titre": "Sources",
+     "notions": [
+      {
+       "id": "red.sources.typologie",
+       "titre": "Types et fiabilité des sources",
+       "niveau": "F"
+      },
+      {
+       "id": "red.sources.recherche",
+       "titre": "Recherche documentaire",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "red.argumentation",
+     "titre": "Argumentation",
+     "notions": [
+      {
+       "id": "red.argumentation.problematique",
+       "titre": "Problématique",
+       "niveau": "F"
+      },
+      {
+       "id": "red.argumentation.plan",
+       "titre": "Plan",
+       "niveau": "F"
+      },
+      {
+       "id": "red.argumentation.paragraphe",
+       "titre": "Paragraphe argumentatif",
+       "niveau": "F"
+      },
+      {
+       "id": "red.argumentation.intro-conclusion",
+       "titre": "Introduction et conclusion",
+       "niveau": "F"
+      },
+      {
+       "id": "red.argumentation.note-synthese",
+       "titre": "Note de synthèse",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "red.attribution",
+     "titre": "Citer et référencer",
+     "notions": [
+      {
+       "id": "red.attribution.citation-paraphrase",
+       "titre": "Citation, paraphrase",
+       "niveau": "F"
+      },
+      {
+       "id": "red.attribution.plagiat",
+       "titre": "Plagiat",
+       "niveau": "F"
+      },
+      {
+       "id": "red.attribution.normes",
+       "titre": "Normes bibliographiques (norme à confirmer)",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aec",
+   "titre": "Anglais économique et commercial",
+   "statut": "ORL",
+   "semestres": [
+    "S5",
+    "S6"
+   ],
+   "enseignant": "Alice Michel",
+   "couleur": "pink",
+   "categorie": "Anglais",
+   "chapitres": [
+    {
+     "id": "aec.correspondance",
+     "titre": "Correspondance commerciale",
+     "notions": [
+      {
+       "id": "aec.correspondance.layout",
+       "titre": "Business letter layout",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.salutations",
+       "titre": "Salutations et formules de clôture",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.registre",
+       "titre": "Registre et atténuation",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.enquiry",
+       "titre": "Enquiry",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.offer",
+       "titre": "Offer et quotation",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.order",
+       "titre": "Order et acknowledgement",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.complaint",
+       "titre": "Complaint et reply",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.reminder",
+       "titre": "Payment reminders",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.correspondance.email",
+       "titre": "Courriel professionnel",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "aec.lexique",
+     "titre": "Lexique",
+     "notions": [
+      {
+       "id": "aec.lexique.entreprise",
+       "titre": "L'entreprise",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.lexique.finance",
+       "titre": "Finance et comptabilité",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.lexique.commerce-international",
+       "titre": "Commerce international",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.lexique.marketing",
+       "titre": "Marketing",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.lexique.economie",
+       "titre": "Économie",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.lexique.faux-amis",
+       "titre": "Faux amis",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.lexique.chiffres",
+       "titre": "Nombres et tendances",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "aec.presse",
+     "titre": "Presse économique",
+     "notions": [
+      {
+       "id": "aec.presse.lecture",
+       "titre": "Lire un article économique",
+       "niveau": "F"
+      },
+      {
+       "id": "aec.presse.synthese",
+       "titre": "Synthèse écrite",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "aec.grammaire",
+     "titre": "Grammaire utile",
+     "notions": [
+      {
+       "id": "aec.grammaire.modaux",
+       "titre": "Modaux",
+       "niveau": "P"
+      },
+      {
+       "id": "aec.grammaire.passif",
+       "titre": "Passif",
+       "niveau": "P"
+      },
+      {
+       "id": "aec.grammaire.conditionnels",
+       "titre": "Conditionnels",
+       "niveau": "P"
+      },
+      {
+       "id": "aec.grammaire.temps",
+       "titre": "Present perfect et prétérit",
+       "niveau": "P"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tra",
+   "titre": "Traduction anglaise : thème et version",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Alice Michel",
+   "couleur": "pink",
+   "categorie": "Anglais",
+   "chapitres": [
+    {
+     "id": "tra.procedes",
+     "titre": "Procédés de traduction",
+     "notions": [
+      {
+       "id": "tra.procedes.directs",
+       "titre": "Procédés directs : emprunt, calque, traduction littérale",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.procedes.obliques",
+       "titre": "Procédés obliques : transposition, modulation, équivalence, adaptation",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "tra.contrastes",
+     "titre": "Contrastes français / anglais",
+     "notions": [
+      {
+       "id": "tra.contrastes.nominalisation",
+       "titre": "Nominalisation et verbalisation",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.contrastes.temps-aspect",
+       "titre": "Temps et aspects",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.contrastes.articles",
+       "titre": "Articles et déterminants",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.contrastes.ing",
+       "titre": "Les formes en -ing",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.contrastes.passif",
+       "titre": "Le passif",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.contrastes.prepositions",
+       "titre": "Prépositions et particules",
+       "niveau": "A"
+      },
+      {
+       "id": "tra.contrastes.ordre",
+       "titre": "Ordre des mots, chassé-croisé",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "tra.pratique",
+     "titre": "Pratique et méthode",
+     "notions": [
+      {
+       "id": "tra.pratique.version",
+       "titre": "La version",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.pratique.theme",
+       "titre": "Le thème",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.pratique.titres-presse",
+       "titre": "Titres de presse",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.pratique.faux-amis",
+       "titre": "Faux amis",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.pratique.nombres",
+       "titre": "Nombres",
+       "niveau": "F"
+      },
+      {
+       "id": "tra.pratique.methode",
+       "titre": "Méthode d'épreuve",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cea",
+   "titre": "Compréhension et expression anglaises",
+   "statut": "ORL",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Elodie Gallet",
+   "couleur": "pink",
+   "categorie": "Anglais",
+   "chapitres": [
+    {
+     "id": "cea.oral",
+     "titre": "L'anglais oral",
+     "notions": [
+      {
+       "id": "cea.oral.formes-faibles",
+       "titre": "Formes faibles",
+       "niveau": "F"
+      },
+      {
+       "id": "cea.oral.liaisons",
+       "titre": "Liaisons et assimilations",
+       "niveau": "F"
+      },
+      {
+       "id": "cea.oral.accents",
+       "titre": "Les accents",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cea.methode",
+     "titre": "Méthode d'écoute",
+     "notions": [
+      {
+       "id": "cea.methode.ecoute",
+       "titre": "Écoute globale puis ciblée",
+       "niveau": "F"
+      },
+      {
+       "id": "cea.methode.prise-notes",
+       "titre": "Prise de notes",
+       "niveau": "F"
+      },
+      {
+       "id": "cea.methode.restitution",
+       "titre": "Restitution : compte rendu",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cea.expression",
+     "titre": "Expression orale",
+     "notions": [
+      {
+       "id": "cea.expression.presentation",
+       "titre": "Présentation orale",
+       "niveau": "A"
+      },
+      {
+       "id": "cea.expression.interaction",
+       "titre": "Interaction orale",
+       "niveau": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eec",
+   "titre": "Espagnol économique et commercial",
+   "statut": "ORL",
+   "semestres": [
+    "S5",
+    "S6"
+   ],
+   "enseignant": "Claire Decobert",
+   "couleur": "pink",
+   "categorie": "Espagnol",
+   "chapitres": [
+    {
+     "id": "eec.correspondencia",
+     "titre": "Correspondencia comercial",
+     "notions": [
+      {
+       "id": "eec.correspondencia.estructura",
+       "titre": "Structure de la carta comercial",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.correspondencia.cortesia",
+       "titre": "Usted, subjonctif, conditionnel de courtoisie",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.correspondencia.ciclo",
+       "titre": "Le cycle : consulta, presupuesto, pedido, albarán, factura",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.correspondencia.reclamacion",
+       "titre": "La reclamación",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.correspondencia.email",
+       "titre": "Courriel",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "eec.lexico",
+     "titre": "Léxico",
+     "notions": [
+      {
+       "id": "eec.lexico.empresa",
+       "titre": "L'entreprise",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.lexico.finanzas",
+       "titre": "Finances",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.lexico.comercio-exterior",
+       "titre": "Commerce extérieur",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.lexico.falsos-amigos",
+       "titre": "Faux amis",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "eec.economia",
+     "titre": "Economía",
+     "notions": [
+      {
+       "id": "eec.economia.espana-sectores",
+       "titre": "Les secteurs de l'économie espagnole",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.economia.espana-historia",
+       "titre": "Repères : plan de stabilisation de 1959, entrée dans la CEE en 1986, euro",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.economia.latam",
+       "titre": "Économies latino-américaines",
+       "niveau": "F"
+      },
+      {
+       "id": "eec.economia.bloques",
+       "titre": "Mercosur, Alliance du Pacifique, accords avec l'UE",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "eec.escritos",
+     "titre": "Écrits professionnels",
+     "notions": [
+      {
+       "id": "eec.escritos.informe",
+       "titre": "L'informe",
+       "niveau": "A"
+      },
+      {
+       "id": "eec.escritos.cv",
+       "titre": "CV en espagnol",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tve",
+   "titre": "Thème et version espagnols",
+   "statut": "ORL",
+   "semestres": [
+    "S5",
+    "S6"
+   ],
+   "enseignant": "Annie Baccon, Sylvie Fournié-Chaboche",
+   "couleur": "pink",
+   "categorie": "Espagnol",
+   "chapitres": [
+    {
+     "id": "tve.contrastes",
+     "titre": "Contrastes français / espagnol",
+     "notions": [
+      {
+       "id": "tve.contrastes.calque",
+       "titre": "Le calque",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.ser-estar",
+       "titre": "Ser et estar",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.por-para",
+       "titre": "Por et para",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.subjuntivo",
+       "titre": "Le subjonctif",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.concordancia",
+       "titre": "Concordance des temps",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.a-personal",
+       "titre": "La a personal",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.gustar",
+       "titre": "Verbes du type gustar",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.on",
+       "titre": "Traduire « on »",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.contrastes.perifrasis",
+       "titre": "Périphrases verbales",
+       "niveau": "A"
+      },
+      {
+       "id": "tve.contrastes.pronombres",
+       "titre": "Pronoms et enclise",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "tve.lexico",
+     "titre": "Lexique et registre",
+     "notions": [
+      {
+       "id": "tve.lexico.falsos-amigos",
+       "titre": "Faux amis",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.lexico.registro",
+       "titre": "Registre",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "tve.metodo",
+     "titre": "Méthode",
+     "notions": [
+      {
+       "id": "tve.metodo.tema",
+       "titre": "Le thème",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.metodo.version",
+       "titre": "La version",
+       "niveau": "F"
+      },
+      {
+       "id": "tve.metodo.diario-errores",
+       "titre": "Le journal d'erreurs",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvb",
+   "titre": "Civilisation britannique : the UK since 1945",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Karine Rivière de Franco",
+   "couleur": "sky",
+   "categorie": "Civilisations",
+   "chapitres": [
+    {
+     "id": "cvb.institutions",
+     "titre": "Institutions",
+     "notions": [
+      {
+       "id": "cvb.institutions.parlement",
+       "titre": "Parlement et gouvernement",
+       "niveau": "P"
+      },
+      {
+       "id": "cvb.institutions.partis",
+       "titre": "Partis et système électoral",
+       "niveau": "P"
+      }
+     ]
+    },
+    {
+     "id": "cvb.welfare",
+     "titre": "Le Welfare State",
+     "notions": [
+      {
+       "id": "cvb.welfare.beveridge",
+       "titre": "Le rapport Beveridge",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.welfare.attlee",
+       "titre": "Attlee et le Welfare State, NHS",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.welfare.nationalisations",
+       "titre": "Les nationalisations",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cvb.consensus",
+     "titre": "Consensus et crise",
+     "notions": [
+      {
+       "id": "cvb.consensus.butskellism",
+       "titre": "Le consensus",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.consensus.declin",
+       "titre": "Déclin et « stop-go »",
+       "niveau": "A"
+      },
+      {
+       "id": "cvb.consensus.europe",
+       "titre": "Le Royaume-Uni et l'Europe (1973, 1975)",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.consensus.crise-1970",
+       "titre": "Crise des années 1970, Winter of Discontent",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cvb.thatcher",
+     "titre": "Le thatchérisme",
+     "notions": [
+      {
+       "id": "cvb.thatcher.monetarisme",
+       "titre": "Le monétarisme",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.thatcher.privatisations",
+       "titre": "Les privatisations",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.thatcher.syndicats",
+       "titre": "Les syndicats et la grève des mineurs",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.thatcher.big-bang",
+       "titre": "Le Big Bang",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.thatcher.poll-tax",
+       "titre": "La poll tax et la chute de Thatcher",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cvb.new-labour",
+     "titre": "De Major au New Labour",
+     "notions": [
+      {
+       "id": "cvb.new-labour.major",
+       "titre": "Le gouvernement Major",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.new-labour.third-way",
+       "titre": "La Third Way",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.new-labour.devolution",
+       "titre": "La dévolution",
+       "niveau": "F"
+      },
+      {
+       "id": "cvb.new-labour.good-friday",
+       "titre": "L'accord du Vendredi saint",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cvb.methode",
+     "titre": "Méthode",
+     "notions": [
+      {
+       "id": "cvb.methode.commentaire",
+       "titre": "Commentaire de document de civilisation",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cve",
+   "titre": "Civilisation espagnole",
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
+   "enseignant": "Claire Decobert",
+   "couleur": "sky",
+   "categorie": "Civilisations",
+   "chapitres": [
+    {
+     "id": "cve.franquismo",
+     "titre": "Le franquisme",
+     "notions": [
+      {
+       "id": "cve.franquismo.herencia",
+       "titre": "L'héritage franquiste",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cve.transicion",
+     "titre": "La Transición",
+     "notions": [
+      {
+       "id": "cve.transicion.reforma",
+       "titre": "La Ley para la Reforma Política",
+       "niveau": "F"
+      },
+      {
+       "id": "cve.transicion.elecciones-1977",
+       "titre": "Les élections de 1977 et la légalisation du PCE",
+       "niveau": "F"
+      },
+      {
+       "id": "cve.transicion.moncloa",
+       "titre": "Les Pactes de la Moncloa",
+       "niveau": "F"
+      },
+      {
+       "id": "cve.transicion.constitucion",
+       "titre": "La Constitution de 1978",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cve.consolidacion",
+     "titre": "Consolidation démocratique",
+     "notions": [
+      {
+       "id": "cve.consolidacion.23f",
+       "titre": "Le 23-F",
+       "niveau": "F"
+      },
+      {
+       "id": "cve.consolidacion.gonzalez",
+       "titre": "Les gouvernements González, l'entrée dans la CEE, 1992",
+       "niveau": "F"
+      },
+      {
+       "id": "cve.consolidacion.aznar",
+       "titre": "Aznar et l'euro",
+       "niveau": "F"
+      },
+      {
+       "id": "cve.consolidacion.11m",
+       "titre": "Le 11-M",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cve.autonomias",
+     "titre": "L'État des autonomies",
+     "notions": [
+      {
+       "id": "cve.autonomias.estado",
+       "titre": "L'État des autonomies",
+       "niveau": "F"
+      },
+      {
+       "id": "cve.autonomias.cataluna",
+       "titre": "La question catalane (2006-2017)",
+       "niveau": "A"
+      },
+      {
+       "id": "cve.autonomias.pais-vasco",
+       "titre": "Le Pays basque et ETA",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cve.actualidad",
+     "titre": "L'Espagne depuis 2008",
+     "notions": [
+      {
+       "id": "cve.actualidad.crisis-2008",
+       "titre": "Crise de 2008, 15-M, fin du bipartisme",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cve.metodo",
+     "titre": "Méthode",
+     "notions": [
+      {
+       "id": "cve.metodo.comentario",
+       "titre": "Commentaire de document",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cva",
+   "titre": "Civilisation américaine : publicité et marketing",
+   "statut": "ORL",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Eric Tabuteau",
+   "couleur": "sky",
+   "categorie": "Civilisations",
+   "chapitres": [
+    {
+     "id": "cva.naissance",
+     "titre": "Naissance de la publicité",
+     "notions": [
+      {
+       "id": "cva.naissance.surproduction",
+       "titre": "Production de masse et naissance de la publicité",
+       "niveau": "F"
+      },
+      {
+       "id": "cva.naissance.agences",
+       "titre": "Les agences : Lasker, Hopkins, reason-why",
+       "niveau": "F"
+      },
+      {
+       "id": "cva.naissance.relations-publiques",
+       "titre": "Bernays et les relations publiques",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cva.mesure",
+     "titre": "La mesure",
+     "notions": [
+      {
+       "id": "cva.mesure.etudes",
+       "titre": "Gallup, Nielsen, études de marché",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cva.age-or",
+     "titre": "L'âge d'or",
+     "notions": [
+      {
+       "id": "cva.age-or.television",
+       "titre": "Télévision et USP",
+       "niveau": "F"
+      },
+      {
+       "id": "cva.age-or.creative-revolution",
+       "titre": "La creative revolution",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cva.regulation",
+     "titre": "Régulation",
+     "notions": [
+      {
+       "id": "cva.regulation.ftc",
+       "titre": "Régulation : FTC, tabac",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cva.contemporain",
+     "titre": "Époque contemporaine",
+     "notions": [
+      {
+       "id": "cva.contemporain.segmentation",
+       "titre": "Segmentation",
+       "niveau": "F"
+      },
+      {
+       "id": "cva.contemporain.numerique",
+       "titre": "Publicité numérique et données",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cva.methode",
+     "titre": "Méthode",
+     "notions": [
+      {
+       "id": "cva.methode.analyse-publicite",
+       "titre": "Analyser une publicité",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvl",
+   "titre": "Civilisation latino-américaine",
+   "statut": "ORL?",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Marcos Eymar",
+   "couleur": "sky",
+   "categorie": "Civilisations",
+   "chapitres": [
+    {
+     "id": "cvl.urbanizacion",
+     "titre": "Urbanisation",
+     "notions": [
+      {
+       "id": "cvl.urbanizacion.exodo",
+       "titre": "L'exode rural",
+       "niveau": "F"
+      },
+      {
+       "id": "cvl.urbanizacion.metropolis",
+       "titre": "Les métropoles",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cvl.informalidad",
+     "titre": "Informalité",
+     "notions": [
+      {
+       "id": "cvl.informalidad.asentamientos",
+       "titre": "Favelas, villas, barriadas",
+       "niveau": "F"
+      },
+      {
+       "id": "cvl.informalidad.economia",
+       "titre": "L'économie informelle",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cvl.fracturas",
+     "titre": "Fractures urbaines",
+     "notions": [
+      {
+       "id": "cvl.fracturas.segregacion",
+       "titre": "Ségrégation, barrios cerrados",
+       "niveau": "F"
+      },
+      {
+       "id": "cvl.fracturas.violencia",
+       "titre": "La violence urbaine",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "cvl.politicas",
+     "titre": "Politiques urbaines",
+     "notions": [
+      {
+       "id": "cvl.politicas.medellin",
+       "titre": "Medellín et l'urbanisme social",
+       "niveau": "F"
+      },
+      {
+       "id": "cvl.politicas.otros",
+       "titre": "Autres cas : Bogotá, Curitiba",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "cvl.representaciones",
+     "titre": "Représentations",
+     "notions": [
+      {
+       "id": "cvl.representaciones.cine",
+       "titre": "Le cinéma de la ville",
+       "niveau": "F"
+      },
+      {
+       "id": "cvl.representaciones.metodo-imagen",
+       "titre": "Analyser une image ou un film",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stg",
+   "titre": "Stage et rapport de stage",
+   "statut": "ORL",
+   "semestres": [
+    "S6"
+   ],
+   "enseignant": "Aline Henninger, Mayumi Shimosakai",
+   "couleur": "butter",
+   "categorie": "Méthodologie",
+   "chapitres": [
+    {
+     "id": "stg.cadre",
+     "titre": "Cadre du stage",
+     "notions": [
+      {
+       "id": "stg.cadre.objectifs",
+       "titre": "Objectifs et types de stage",
+       "niveau": "F"
+      },
+      {
+       "id": "stg.cadre.convention",
+       "titre": "Convention, gratification, assurance",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "stg.recherche",
+     "titre": "Recherche de stage",
+     "notions": [
+      {
+       "id": "stg.recherche.candidature",
+       "titre": "CV et lettre de motivation",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "stg.rapport",
+     "titre": "Le rapport",
+     "notions": [
+      {
+       "id": "stg.rapport.problematique",
+       "titre": "Problématique de gestion ou de langues",
+       "niveau": "F"
+      },
+      {
+       "id": "stg.rapport.structure",
+       "titre": "Structure du rapport",
+       "niveau": "F"
+      },
+      {
+       "id": "stg.rapport.note-synthese",
+       "titre": "Note de synthèse",
+       "niveau": "F"
+      },
+      {
+       "id": "stg.rapport.forme",
+       "titre": "Forme du rapport",
+       "niveau": "F"
+      },
+      {
+       "id": "stg.rapport.erreurs",
+       "titre": "Erreurs courantes",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "stg.soutenance",
+     "titre": "La soutenance",
+     "notions": [
+      {
+       "id": "stg.soutenance.preparation",
+       "titre": "Préparer la soutenance",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "stg.evaluation",
+     "titre": "Évaluation",
+     "notions": [
+      {
+       "id": "stg.evaluation.bareme",
+       "titre": "Barème",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco",
+   "titre": "Économie internationale",
+   "statut": "COMP",
+   "semestres": [],
+   "enseignant": "",
+   "couleur": "lilac",
+   "categorie": "Compléments",
+   "chapitres": [
+    {
+     "id": "eco.theories",
+     "titre": "Théories du commerce international",
+     "notions": [
+      {
+       "id": "eco.theories.avantage-absolu",
+       "titre": "Avantage absolu (Smith)",
+       "niveau": "F"
+      },
+      {
+       "id": "eco.theories.avantage-comparatif",
+       "titre": "Avantage comparatif (Ricardo)",
+       "niveau": "F"
+      },
+      {
+       "id": "eco.theories.hos",
+       "titre": "Le modèle HOS",
+       "niveau": "A"
+      },
+      {
+       "id": "eco.theories.nouvelles",
+       "titre": "Nouvelles théories du commerce international",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "eco.mesure",
+     "titre": "Mesurer les échanges",
+     "notions": [
+      {
+       "id": "eco.mesure.balance-paiements",
+       "titre": "Balance des paiements",
+       "niveau": "F"
+      },
+      {
+       "id": "eco.mesure.termes-echange",
+       "titre": "Termes de l'échange, taux de couverture",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "eco.change",
+     "titre": "Le change",
+     "notions": [
+      {
+       "id": "eco.change.taux-change",
+       "titre": "Taux de change, régimes",
+       "niveau": "F"
+      }
+     ]
+    },
+    {
+     "id": "eco.politique",
+     "titre": "Politiques commerciales",
+     "notions": [
+      {
+       "id": "eco.politique.protectionnisme",
+       "titre": "Libre-échange et protectionnisme",
+       "niveau": "F"
+      },
+      {
+       "id": "eco.politique.integration-regionale",
+       "titre": "Intégration régionale",
+       "niveau": "F"
+      },
+      {
+       "id": "eco.politique.chaines-valeur",
+       "titre": "Chaînes de valeur mondiales",
+       "niveau": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mks",
+   "titre": "Marketing international et supply chain",
+   "statut": "COMP",
+   "semestres": [],
+   "enseignant": "",
+   "couleur": "peach",
+   "categorie": "Compléments",
+   "chapitres": [
+    {
+     "id": "mks.marketing",
+     "titre": "Marketing international",
+     "notions": [
+      {
+       "id": "mks.marketing.segmentation",
+       "titre": "Segmentation, ciblage, positionnement",
+       "niveau": "F"
+      },
+      {
+       "id": "mks.marketing.digital",
+       "titre": "Marketing digital à l'international",
+       "niveau": "A"
+      }
+     ]
+    },
+    {
+     "id": "mks.supply",
+     "titre": "Supply chain",
+     "notions": [
+      {
+       "id": "mks.supply.chaine-logistique",
+       "titre": "La chaîne logistique",
+       "niveau": "F"
+      },
+      {
+       "id": "mks.supply.entreposage",
+       "titre": "Entreposage, stocks, plateformes",
+       "niveau": "F"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

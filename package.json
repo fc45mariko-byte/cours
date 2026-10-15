@@ -1,0 +1,23 @@
+{
+  "name": "cours-l3-lea",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "index": "node scripts/build-index.mjs",
+    "dev": "npm run index && vite",
+    "build": "npm run index && tsc --noEmit && vite build && node scripts/publish.mjs",
+    "test": "npm run index && vitest run",
+    "test:e2e": "playwright test",
+    "check": "npm run index && tsc --noEmit && vitest run"
+  },
+  "dependencies": {
+    "preact": "10.29.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "typescript": "5.9.3",
+    "vite": "6.4.4",
+    "vitest": "3.2.7"
+  }
+}

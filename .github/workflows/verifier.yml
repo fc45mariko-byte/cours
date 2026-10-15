@@ -1,0 +1,20 @@
+name: Vérifier le site
+on:
+  push:
+  pull_request:
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Contenu, types et tests unitaires
+        run: npm run check
+      - name: Construction
+        run: npx vite build && node scripts/publish.mjs
+      - name: Le site publié à la racine est à jour
+        run: git diff --exit-code -- index.html || (echo "Lancer « npm run build » et committer index.html et assets/" && exit 1)
+      - name: Tests de bout en bout
+        run: npx playwright install --with-deps chromium && PW_CHROMIUM= npx playwright test

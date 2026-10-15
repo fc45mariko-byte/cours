@@ -1,0 +1,106 @@
+/* Système de design — tous les choix visuels sont ici.
+   Changer l'identité visuelle = modifier ce fichier, sans toucher au contenu ni à la logique.
+   Inspiré de la maquette fournie : fond crème, cartes pastel, puces arrondies, police DM Sans. */
+:root {
+  --font: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --bg-page: #f7f3ee;
+  --bg-panel: #efe9e3;
+  --surface: #ffffff;
+  --surface-2: #faf8f5;
+  --ink: #1c1c1e;
+  --ink-inverse: #ffffff;
+  --muted: #6e6a66;
+  --line: #e4ddd5;
+  --focus: #3b5bdb;
+
+  --pastel-pink: #f5c9c9;
+  --pastel-peach: #f9dcbf;
+  --pastel-lilac: #d7d3fa;
+  --pastel-mint: #c4ebd8;
+  --pastel-sky: #cfe6f7;
+  --pastel-butter: #f6ebb5;
+
+  /* Teintes plus soutenues pour graphiques et accents (contraste suffisant sur blanc). */
+  --accent-pink: #c2566b;
+  --accent-peach: #c26b1e;
+  --accent-lilac: #6553c9;
+  --accent-mint: #2f8a5f;
+  --accent-sky: #2f74a8;
+  --accent-butter: #9a7b12;
+
+  --ok: #2f8a5f;
+  --ok-bg: #e2f4ea;
+  --ko: #b3261e;
+  --ko-bg: #fbe4e2;
+  --warn: #8a5a00;
+  --warn-bg: #fdf0d2;
+
+  --radius-card: 22px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+  --shadow: 0 1px 2px rgba(28, 28, 30, 0.04), 0 6px 18px rgba(28, 28, 30, 0.05);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --title-size: clamp(2.1rem, 4.6vw, 3.5rem);
+  --h2-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  --text-size: 1rem;
+  --small-size: 0.82rem;
+  --line-height: 1.6;
+
+  --sidebar-w: 84px;
+  --panel-w: 320px;
+  --content-max: 860px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg-page: #17161a;
+    --bg-panel: #201f24;
+    --surface: #2a2930;
+    --surface-2: #232228;
+    --ink: #f2efea;
+    --ink-inverse: #17161a;
+    --muted: #aaa4a0;
+    --line: #3a3840;
+    --focus: #9db1ff;
+    --pastel-pink: #4a2e33;
+    --pastel-peach: #4a3826;
+    --pastel-lilac: #34305a;
+    --pastel-mint: #24433a;
+    --pastel-sky: #243c50;
+    --pastel-butter: #46401f;
+    --accent-pink: #f0a3b1;
+    --accent-peach: #f2b77d;
+    --accent-lilac: #b6abff;
+    --accent-mint: #86d6ae;
+    --accent-sky: #8cc3ec;
+    --accent-butter: #e6cf6c;
+    --ok: #86d6ae;
+    --ok-bg: #1f3a2d;
+    --ko: #f2a39c;
+    --ko-bg: #46241f;
+    --warn: #f0c770;
+    --warn-bg: #3f3218;
+    --shadow: none;
+  }
+}
+:root[data-theme='dark'] {
+  --bg-page: #17161a; --bg-panel: #201f24; --surface: #2a2930; --surface-2: #232228;
+  --ink: #f2efea; --ink-inverse: #17161a; --muted: #aaa4a0; --line: #3a3840; --focus: #9db1ff;
+  --pastel-pink: #4a2e33; --pastel-peach: #4a3826; --pastel-lilac: #34305a; --pastel-mint: #24433a;
+  --pastel-sky: #243c50; --pastel-butter: #46401f;
+  --accent-pink: #f0a3b1; --accent-peach: #f2b77d; --accent-lilac: #b6abff; --accent-mint: #86d6ae;
+  --accent-sky: #8cc3ec; --accent-butter: #e6cf6c;
+  --ok: #86d6ae; --ok-bg: #1f3a2d; --ko: #f2a39c; --ko-bg: #46241f; --warn: #f0c770; --warn-bg: #3f3218;
+  --shadow: none;
+}
