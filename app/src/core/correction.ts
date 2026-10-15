@@ -23,7 +23,7 @@ export function corrigerQcm(q: Question, selection: string[]): { juste: boolean;
  * Retourne null si la saisie n'est pas un nombre.
  */
 export function lireNombre(saisie: string): number | null {
-  let s = saisie.trim().replace(/[€%$£\s  ]/g, '');
+  let s = saisie.trim().replace(/[€%$£\s  ]/g, '').replace(/^[−–]/, '-');
   if (!s) return null;
   const virgules = (s.match(/,/g) ?? []).length;
   const points = (s.match(/\./g) ?? []).length;

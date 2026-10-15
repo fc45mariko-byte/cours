@@ -1,0 +1,284 @@
+{
+  "chapitre": "cpt.investissements",
+  "notions": [
+    {
+      "id": "cpt.investissements.immobilisations",
+      "titre": "Acquisition d'immobilisations et coût d'entrée",
+      "niveau": "I",
+      "prerequis": ["cpt.tva.ecritures", "cpt.cadre.pcg"],
+      "connexes": ["cpt.investissements.amortissement-lineaire", "gfi.bilan-fonctionnel.reclassement"],
+      "question": "Quand un achat devient-il une immobilisation plutôt qu'une charge, et pour quel montant l'inscrit-on au bilan ?",
+      "definition": "Une immobilisation est un élément identifiable, contrôlé par l'entreprise, destiné à servir de façon durable à son activité (plus d'un exercice) et dont elle attend des avantages économiques futurs. Elle est inscrite à l'actif (classe 2) pour son coût d'acquisition : prix d'achat net des remises, augmenté des droits de douane et taxes non récupérables, et des coûts directement attribuables à la mise en état d'utilisation (transport, installation, essais). La TVA récupérable n'en fait pas partie. Les frais d'acquisition (droits de mutation, honoraires, frais d'actes) peuvent, sur option, être incorporés ou passés en charges.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Coût d'acquisition = prix d'achat net des réductions + droits et taxes non récupérables + frais directement attribuables à la mise en état d'utilisation" },
+        { "type": "tableau", "entetes": ["Compte", "Contenu"], "lignes": [
+          ["205", "Concessions, brevets, licences, logiciels"],
+          ["211 / 213", "Terrains / Constructions"],
+          ["2154", "Matériel industriel"],
+          ["2182", "Matériel de transport"],
+          ["2183", "Matériel de bureau et informatique"],
+          ["2184", "Mobilier"],
+          ["404", "Fournisseurs d'immobilisations (dette)"]
+        ] },
+        { "type": "attention", "texte": "Les dépenses de formation du personnel à l'utilisation de la machine ne sont pas des frais de mise en état : ce sont des charges." }
+      ],
+      "termes": [
+        { "fr": "Immobilisation", "en": "fixed asset / non-current asset", "es": "inmovilizado", "definition": "Bien ou droit destiné à servir durablement l'activité." },
+        { "fr": "Coût d'acquisition", "en": "acquisition cost", "es": "precio de adquisición", "definition": "Montant auquel l'immobilisation est inscrite à l'actif." },
+        { "fr": "Immobilisation incorporelle", "en": "intangible asset", "es": "inmovilizado intangible", "definition": "Immobilisation sans substance physique (logiciel, brevet, marque)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Machine : prix catalogue 40 000 € HT, remise 5 % (38 000), transport 1 200 €, installation 800 €, formation des opérateurs 500 €. Coût d'acquisition : 38 000 + 1 200 + 800 = 40 000 €. Écriture : D 2154 40 000 / D 44562 8 000 / C 404 48 000 (la formation est passée en charge)." },
+      "contreExemple": "Des cartouches d'encre, même achetées en grande quantité, sont consommées rapidement : ce sont des charges (606), pas des immobilisations.",
+      "confusions": [
+        { "a": "401 Fournisseurs", "b": "404 Fournisseurs d'immobilisations", "explication": "La dette envers le vendeur d'une immobilisation est isolée en 404." },
+        { "a": "Immobilisation", "b": "Charge", "explication": "L'immobilisation sert plusieurs exercices et va à l'actif ; la charge est consommée dans l'exercice et va au compte de résultat." }
+      ],
+      "verification": ["Citez deux frais qui entrent dans le coût d'acquisition d'une machine et un frais qui n'y entre pas."],
+      "sources": ["src.pcg"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.investissements.amortissement-lineaire",
+      "titre": "L'amortissement linéaire et le plan d'amortissement",
+      "niveau": "I",
+      "prerequis": ["cpt.investissements.immobilisations"],
+      "connexes": ["cpt.investissements.amortissement-degressif", "gfi.performance.caf"],
+      "question": "Comment répartir le coût d'une machine sur les années pendant lesquelles elle sert ?",
+      "definition": "L'amortissement constate la consommation des avantages économiques d'une immobilisation sur sa durée d'utilisation. Dans le mode linéaire, l'annuité est constante : base amortissable × taux, avec taux = 100 % ÷ durée. La première annuité est calculée prorata temporis à partir de la date de mise en service. Chaque année : débit 6811 Dotations aux amortissements, crédit 28xx Amortissements des immobilisations. La valeur nette comptable (VNC) est la valeur brute diminuée des amortissements cumulés.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Annuité = Base amortissable × (1 ÷ durée)        1re annuité = Annuité × (mois d'utilisation ÷ 12)        VNC = Valeur brute − amortissements cumulés" },
+        { "type": "tableau", "entetes": ["Année", "Base", "Annuité", "Cumul", "VNC fin"], "lignes": [
+          ["N (9 mois)", "24 000", "3 600", "3 600", "20 400"],
+          ["N+1", "24 000", "4 800", "8 400", "15 600"],
+          ["N+2", "24 000", "4 800", "13 200", "10 800"],
+          ["N+3", "24 000", "4 800", "18 000", "6 000"],
+          ["N+4", "24 000", "4 800", "22 800", "1 200"],
+          ["N+5 (3 mois)", "24 000", "1 200", "24 000", "0"]
+        ] },
+        { "type": "attention", "texte": "Une immobilisation mise en service en cours d'année est amortie sur une année de plus dans le plan : la dernière annuité complète le prorata de la première." }
+      ],
+      "termes": [
+        { "fr": "Amortissement", "en": "depreciation (tangible) / amortisation (intangible)", "es": "amortización", "definition": "Constatation de la consommation d'une immobilisation." },
+        { "fr": "Valeur nette comptable (VNC)", "en": "net book value / carrying amount", "es": "valor neto contable", "definition": "Valeur brute moins amortissements et dépréciations cumulés." },
+        { "fr": "Plan d'amortissement", "en": "depreciation schedule", "es": "cuadro de amortización", "definition": "Tableau prévisionnel des annuités sur toute la durée." }
+      ],
+      "exemple": { "fictif": true, "texte": "Machine de 24 000 € HT mise en service le 1er avril N, durée 5 ans (taux 20 %). Annuité pleine : 4 800 € ; N : 4 800 × 9/12 = 3 600 €. Écriture au 31/12/N : D 6811 3 600 / C 28154 3 600." },
+      "contreExemple": "Les terrains ne sont en principe pas amortis : leur utilisation ne les consomme pas (sauf exceptions comme les carrières).",
+      "confusions": [
+        { "a": "Amortissement", "b": "Dépréciation", "explication": "L'amortissement constate une consommation irréversible et planifiée ; la dépréciation constate une perte de valeur, éventuellement réversible." },
+        { "a": "Date d'acquisition (dégressif)", "b": "Date de mise en service (linéaire)", "explication": "Le prorata linéaire part de la mise en service ; le dégressif fiscal part du premier jour du mois d'acquisition." }
+      ],
+      "verification": ["Ordinateur de 3 000 € mis en service le 1er octobre, amorti sur 3 ans : première annuité ?"],
+      "sources": ["src.pcg"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.investissements.amortissement-degressif",
+      "titre": "L'amortissement dégressif",
+      "niveau": "A",
+      "prerequis": ["cpt.investissements.amortissement-lineaire"],
+      "connexes": ["gfi.performance.caf"],
+      "question": "Pourquoi et comment amortir plus vite au début de la vie d'un bien ?",
+      "definition": "Le mode dégressif est un régime fiscal (article 39 A du CGI) réservé à certains biens neufs (essentiellement matériels et outillages) d'une durée d'au moins trois ans. Le taux dégressif est le taux linéaire multiplié par un coefficient : 1,25 (durée de 3 ou 4 ans), 1,75 (5 ou 6 ans), 2,25 (plus de 6 ans). Il s'applique à la VNC de début d'exercice ; la première annuité est calculée en mois, à partir du premier jour du mois d'acquisition. Lorsque l'annuité dégressive devient inférieure à l'annuité linéaire calculée sur la durée restante (VNC ÷ durée restante), on passe au linéaire.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Taux dégressif = (1 ÷ durée) × coefficient        Annuité = VNC début × taux dégressif (× mois ÷ 12 la 1re année)" },
+        { "type": "etapes", "etapes": [
+          "Calculer le taux dégressif",
+          "Année 1 : valeur d'origine × taux × mois ÷ 12 (à partir du 1er jour du mois d'acquisition)",
+          "Années suivantes : VNC de début × taux",
+          "Chaque année, comparer avec le taux linéaire de la durée restante (1 ÷ durée restante) ; dès qu'il est supérieur ou égal, annuité = VNC ÷ durée restante jusqu'à la fin"
+        ] },
+        { "type": "attention", "texte": "Si l'amortissement économique (souvent linéaire) diffère de l'amortissement fiscal dégressif, l'excédent est comptabilisé en amortissement dérogatoire (6872 / 145), une provision réglementée." }
+      ],
+      "termes": [
+        { "fr": "Amortissement dégressif", "en": "declining balance depreciation", "es": "amortización degresiva", "definition": "Mode d'amortissement à annuités décroissantes appliquées à la VNC." },
+        { "fr": "Amortissement dérogatoire", "en": "excess tax depreciation", "es": "amortización fiscal excedentaria (libertad de amortización)", "definition": "Supplément d'amortissement fiscal par rapport à l'amortissement comptable." }
+      ],
+      "exemple": { "fictif": true, "texte": "Machine neuve 24 000 € acquise le 10 avril N, durée 5 ans : taux linéaire 20 %, taux dégressif 20 × 1,75 = 35 %. N : 24 000 × 35 % × 9/12 = 6 300 € (VNC 17 700). N+1 : durée restante 4,25 ans, taux linéaire 23,5 % < 35 % → 17 700 × 35 % = 6 195 € (VNC 11 505). N+2 : 3,25 ans, 30,8 % < 35 % → 4 026,75 € (VNC 7 478,25). N+3 : 2,25 ans, 44,4 % > 35 % → passage au linéaire : 7 478,25 ÷ 2,25 = 3 323,67 € par an, le solde sur les 3 derniers mois." },
+      "confusions": [
+        { "a": "Appliquer le taux à la valeur d'origine chaque année", "b": "Appliquer le taux à la VNC", "explication": "Seule la première annuité porte sur la valeur d'origine ; ensuite, on applique le taux à la VNC, d'où des annuités décroissantes." }
+      ],
+      "verification": ["Pourquoi est-il nécessaire de passer au linéaire en fin de plan ?"],
+      "sources": ["src.cgi", "src.pcg"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.investissements.cessions",
+      "titre": "La cession d'une immobilisation",
+      "niveau": "A",
+      "prerequis": ["cpt.investissements.amortissement-lineaire"],
+      "connexes": ["gfi.performance.caf", "cpt.synthese.compte-resultat"],
+      "question": "Une entreprise revend une machine d'occasion : comment calculer et comptabiliser la plus-value ou moins-value ?",
+      "definition": "La cession entraîne trois écritures : (1) une dotation complémentaire d'amortissement jusqu'à la date de cession ; (2) la sortie du bien de l'actif : on solde le compte d'immobilisation (valeur brute) et le compte d'amortissement, la VNC passe en charge (675 Valeurs comptables des éléments d'actif cédés) ; (3) l'enregistrement du prix de cession en produit (775 Produits des cessions d'éléments d'actif), la créance sur l'acquéreur allant en 462 Créances sur cessions d'immobilisations. Le résultat de cession (plus- ou moins-value) est la différence 775 − 675.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Résultat de cession = Prix de cession − VNC à la date de cession" },
+        { "type": "tableau", "entetes": ["Écriture", "Débit", "Crédit"], "lignes": [
+          ["Dotation complémentaire", "6811", "28xx"],
+          ["Sortie du bien", "28xx (cumul) + 675 (VNC)", "2xx (valeur brute)"],
+          ["Prix de cession", "462 (ou 512) TTC", "775 (HT) + 44571"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Cession", "en": "disposal", "es": "enajenación / venta de inmovilizado", "definition": "Sortie d'un bien de l'actif par vente." },
+        { "fr": "Plus-value de cession", "en": "gain on disposal", "es": "beneficio por enajenación", "definition": "Excédent du prix de cession sur la VNC." },
+        { "fr": "Moins-value de cession", "en": "loss on disposal", "es": "pérdida por enajenación", "definition": "Insuffisance du prix de cession par rapport à la VNC." }
+      ],
+      "exemple": { "fictif": true, "texte": "Machine acquise 30 000 € le 1er janvier N, amortie linéairement sur 5 ans, cédée le 30 juin N+3 pour 12 000 € HT. Amortissements au 31/12/N+2 : 18 000 ; complément N+3 : 6 000 × 6/12 = 3 000 ; cumul 21 000 ; VNC 9 000 ; plus-value 3 000 €. Écritures : D 6811 / C 28154 3 000 ; D 28154 21 000 + D 675 9 000 / C 2154 30 000 ; D 462 14 400 / C 775 12 000 / C 44571 2 400." },
+      "confusions": [
+        { "a": "Prix de cession (775)", "b": "Plus-value", "explication": "La plus-value n'est pas enregistrée directement : elle résulte de la différence entre 775 et 675." }
+      ],
+      "verification": ["Pourquoi passer une dotation complémentaire avant la sortie du bien ?"],
+      "sources": ["src.pcg", "src.anc-2022-06"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Le règlement ANC 2022-06 (exercices ouverts depuis le 1er janvier 2025) redéfinit le résultat exceptionnel et modifie la nomenclature : vérifier si les comptes 675 / 775 restent ceux enseignés et le classement du résultat de cession."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cpt.investissements.001", "notion": "cpt.investissements.immobilisations", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Lesquels de ces frais entrent dans le coût d'acquisition d'une machine ?",
+      "choix": [
+        { "id": "a", "texte": "Le transport jusqu'à l'usine", "correct": true, "explication": "Frais directement attribuables à la mise en état d'utilisation." },
+        { "id": "b", "texte": "L'installation et les essais de démarrage", "correct": true, "explication": "Nécessaires pour que la machine fonctionne." },
+        { "id": "c", "texte": "La TVA récupérable", "correct": false, "explication": "Elle est déduite : ce n'est pas un coût." },
+        { "id": "d", "texte": "La formation des opérateurs", "correct": false, "explication": "Charge de l'exercice : elle porte sur le personnel, pas sur la machine." },
+        { "id": "e", "texte": "Les droits de douane à l'importation", "correct": true, "explication": "Taxe non récupérable liée à l'acquisition." }
+      ]
+    },
+    {
+      "id": "q.cpt.investissements.002", "notion": "cpt.investissements.immobilisations", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Achat à crédit d'un ordinateur portable 1 200 € HT (TVA 20 %) destiné à être utilisé trois ans. Écriture ?",
+      "choix": [
+        { "id": "a", "texte": "D 2183 1 200 / D 44562 240 / C 404 1 440", "correct": true, "explication": "Immobilisation, TVA sur immobilisations, fournisseur d'immobilisations." },
+        { "id": "b", "texte": "D 606 1 200 / D 44566 240 / C 401 1 440", "correct": false, "explication": "Un bien utilisé durablement est une immobilisation." },
+        { "id": "c", "texte": "D 2183 1 440 / C 404 1 440", "correct": false, "explication": "La TVA récupérable n'entre pas dans le coût." },
+        { "id": "d", "texte": "D 2183 1 200 / D 44566 240 / C 401 1 440", "correct": false, "explication": "Les comptes de TVA et de fournisseur ne sont pas ceux des immobilisations." }
+      ]
+    },
+    {
+      "id": "q.cpt.investissements.003", "notion": "cpt.investissements.amortissement-lineaire", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Véhicule de 18 000 € mis en service le 1er juillet N, amorti linéairement sur 4 ans. Annuité de l'exercice N (clôture au 31/12) ?",
+      "choix": [
+        { "id": "a", "texte": "2 250 €", "correct": true, "explication": "18 000 × 25 % × 6/12 = 2 250 €." },
+        { "id": "b", "texte": "4 500 €", "correct": false, "explication": "Annuité pleine : le prorata temporis a été oublié." },
+        { "id": "c", "texte": "3 000 €", "correct": false, "explication": "Aucun calcul correct ne donne ce montant." },
+        { "id": "d", "texte": "1 125 €", "correct": false, "explication": "Le prorata a été appliqué deux fois." }
+      ]
+    },
+    {
+      "id": "q.cpt.investissements.004", "notion": "cpt.investissements.amortissement-lineaire", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelle écriture constate l'amortissement annuel d'un matériel industriel ?",
+      "choix": [
+        { "id": "a", "texte": "D 6811 / C 28154", "correct": true, "explication": "Dotation en charge ; amortissement cumulé au crédit (il vient diminuer l'actif)." },
+        { "id": "b", "texte": "D 28154 / C 6811", "correct": false, "explication": "Écriture inversée." },
+        { "id": "c", "texte": "D 6811 / C 2154", "correct": false, "explication": "On ne diminue pas directement la valeur brute : on cumule les amortissements dans un compte distinct." },
+        { "id": "d", "texte": "D 6817 / C 491", "correct": false, "explication": "Ce sont les comptes de dépréciation des créances clients." }
+      ]
+    },
+    {
+      "id": "q.cpt.investissements.005", "notion": "cpt.investissements.amortissement-degressif", "format": "unique", "niveau": 2, "competence": "memoriser",
+      "enonce": "Quel est le taux dégressif d'un bien amorti sur 8 ans ?",
+      "choix": [
+        { "id": "a", "texte": "28,125 %", "correct": true, "explication": "12,5 % × 2,25 (durée supérieure à 6 ans)." },
+        { "id": "b", "texte": "21,875 %", "correct": false, "explication": "Coefficient 1,75 réservé aux durées de 5 ou 6 ans." },
+        { "id": "c", "texte": "12,5 %", "correct": false, "explication": "C'est le taux linéaire." },
+        { "id": "d", "texte": "25 %", "correct": false, "explication": "Aucun coefficient ne donne ce taux pour 8 ans." }
+      ]
+    },
+    {
+      "id": "q.cpt.investissements.006", "notion": "cpt.investissements.amortissement-degressif", "format": "multiple", "niveau": 3, "competence": "comprendre",
+      "enonce": "Quelles affirmations sur l'amortissement dégressif sont exactes ?",
+      "choix": [
+        { "id": "a", "texte": "La première annuité est calculée à partir du premier jour du mois d'acquisition", "correct": true, "explication": "Règle fiscale : on compte les mois, et non les jours, à partir du mois d'acquisition." },
+        { "id": "b", "texte": "À partir de la deuxième année, le taux s'applique à la VNC", "correct": true, "explication": "D'où des annuités décroissantes." },
+        { "id": "c", "texte": "On passe au linéaire quand le taux linéaire sur la durée restante dépasse ou égale le taux dégressif", "correct": true, "explication": "Cela permet d'amortir totalement le bien à la fin de sa durée." },
+        { "id": "d", "texte": "Il s'applique à tous les biens, neufs ou d'occasion", "correct": false, "explication": "Il est réservé à certains biens neufs." }
+      ]
+    },
+    {
+      "id": "q.cpt.investissements.007", "notion": "cpt.investissements.cessions", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Valeur brute 50 000 €, amortissements cumulés à la date de cession 38 000 €, prix de cession 10 000 € HT. Résultat de cession ?",
+      "choix": [
+        { "id": "a", "texte": "Moins-value de 2 000 €", "correct": true, "explication": "VNC = 12 000 ; 10 000 − 12 000 = − 2 000 €." },
+        { "id": "b", "texte": "Plus-value de 10 000 €", "correct": false, "explication": "Le prix de cession n'est pas le résultat : il faut retrancher la VNC." },
+        { "id": "c", "texte": "Moins-value de 40 000 €", "correct": false, "explication": "La comparaison se fait avec la VNC, pas avec la valeur brute." },
+        { "id": "d", "texte": "Plus-value de 2 000 €", "correct": false, "explication": "Le signe est inversé." }
+      ]
+    },
+    {
+      "id": "q.cpt.investissements.008", "notion": "cpt.investissements.cessions", "format": "unique", "niveau": 3, "competence": "detecter-erreur",
+      "enonce": "Pour la sortie d'un bien cédé, un étudiant écrit : D 675 30 000 / C 2154 30 000 (valeur brute), alors que le bien était amorti à hauteur de 21 000 €. Quelle est l'erreur ?",
+      "choix": [
+        { "id": "a", "texte": "Il faut solder aussi le compte d'amortissement : D 28154 21 000 et D 675 seulement 9 000 (la VNC)", "correct": true, "explication": "Sinon, la charge est surévaluée de 21 000 et l'amortissement reste au bilan pour un bien disparu." },
+        { "id": "b", "texte": "Il fallait créditer 775", "correct": false, "explication": "775 enregistre le prix de cession, dans une autre écriture." },
+        { "id": "c", "texte": "Aucune : la valeur brute va en 675", "correct": false, "explication": "675 reçoit la VNC, pas la valeur brute." },
+        { "id": "d", "texte": "Il fallait débiter 6811 de 30 000", "correct": false, "explication": "6811 ne concerne que la dotation complémentaire de l'année." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cpt.investissements.001", "notions": ["cpt.investissements.amortissement-lineaire", "cpt.investissements.amortissement-degressif"],
+      "question": "Comparez amortissement linéaire et dégressif : base, taux, point de départ du prorata, profil des annuités.",
+      "reponse": "Linéaire : annuité constante = valeur d'origine ÷ durée, prorata au jour près à partir de la mise en service. Dégressif (fiscal, biens neufs éligibles) : taux linéaire × coefficient 1,25 / 1,75 / 2,25 selon la durée (3-4, 5-6, plus de 6 ans), appliqué à la VNC ; première annuité en mois à partir du premier jour du mois d'acquisition ; annuités décroissantes avec passage au linéaire sur la durée restante quand il devient plus avantageux.",
+      "indispensables": ["Linéaire : annuité constante, prorata depuis la mise en service", "Dégressif : coefficients 1,25 / 1,75 / 2,25", "Dégressif : taux appliqué à la VNC", "Passage au linéaire en fin de plan"],
+      "complementaires": ["Amortissement dérogatoire si écart avec l'amortissement économique"],
+      "erreurs": ["Appliquer le taux dégressif à la valeur d'origine chaque année"]
+    },
+    {
+      "id": "f.cpt.investissements.002", "notions": ["cpt.investissements.cessions"],
+      "question": "Listez les trois écritures de cession d'une immobilisation amortie et indiquez comment on lit le résultat de cession.",
+      "reponse": "1) Dotation complémentaire jusqu'à la date de cession : D 6811 / C 28xx. 2) Sortie du bien : D 28xx (cumul des amortissements) et D 675 (VNC) / C 2xx (valeur brute). 3) Prix de cession : D 462 ou 512 / C 775 (HT) et C 44571. Résultat de cession = 775 − 675 (plus-value si positif).",
+      "indispensables": ["Dotation complémentaire", "Sortie : 28xx et 675 au débit, 2xx au crédit", "Prix de cession en 775", "Résultat = prix − VNC"],
+      "erreurs": ["Mettre la valeur brute en 675", "Enregistrer directement la plus-value"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.cpt.investissements.01", "notions": ["cpt.investissements.immobilisations", "cpt.investissements.amortissement-lineaire"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Acquisition et premier amortissement d'un four",
+      "enonce": "La boulangerie industrielle Pain de Loire achète un four : prix 52 000 € HT, remise 4 %, livraison 1 500 € HT, installation 2 080 € HT, contrat d'entretien annuel 900 € HT. TVA 20 %. Le four est mis en service le 1er mars N et amorti linéairement sur 8 ans. Exercice clos le 31 décembre.",
+      "questions": [
+        { "id": "1", "consigne": "Coût d'acquisition du four (€) ?", "reponse": { "type": "nombre", "valeur": 53500, "tolerance": 0.01, "unite": "€" },
+          "correction": ["52 000 × 0,96 = 49 920 €", "49 920 + 1 500 + 2 080 = 53 500 €", "Le contrat d'entretien est une charge annuelle, non incorporée"] },
+        { "id": "2", "consigne": "Dotation de l'exercice N (€) ?", "reponse": { "type": "nombre", "valeur": 5572.92, "tolerance": 0.02, "unite": "€" },
+          "correction": ["Annuité pleine : 53 500 ÷ 8 = 6 687,50 €", "N : 6 687,50 × 10/12 = 5 572,92 € (mars à décembre)"],
+          "erreurs": ["Compter 9 mois au lieu de 10"] },
+        { "id": "3", "consigne": "VNC au 31/12/N+1 (€) ?", "reponse": { "type": "nombre", "valeur": 41239.58, "tolerance": 0.02, "unite": "€" },
+          "correction": ["Cumul : 5 572,92 + 6 687,50 = 12 260,42 €", "VNC : 53 500 − 12 260,42 = 41 239,58 €"] }
+      ]
+    },
+    {
+      "id": "e.cpt.investissements.02", "notions": ["cpt.investissements.amortissement-degressif"], "type": "calcul", "niveau": 3, "fictif": true,
+      "titre": "Plan d'amortissement dégressif",
+      "enonce": "Un matériel neuf de 40 000 € est acquis le 15 septembre N, durée 4 ans, amorti en dégressif. Exercice clos le 31 décembre.",
+      "questions": [
+        { "id": "1", "consigne": "Taux dégressif (en %) ?", "reponse": { "type": "nombre", "valeur": 31.25, "tolerance": 0.001, "unite": "%" },
+          "correction": ["Taux linéaire 25 % ; coefficient 1,25 (durée de 4 ans) ; 25 × 1,25 = 31,25 %"] },
+        { "id": "2", "consigne": "Annuité N (€) ?", "reponse": { "type": "nombre", "valeur": 4166.67, "tolerance": 0.02, "unite": "€" },
+          "correction": ["Prorata à partir du 1er septembre : 4 mois", "40 000 × 31,25 % × 4/12 = 4 166,67 €"],
+          "erreurs": ["Partir du 15 septembre (règle du linéaire)"] },
+        { "id": "3", "consigne": "Annuité N+1 (€) ?", "reponse": { "type": "nombre", "valeur": 11197.92, "tolerance": 0.02, "unite": "€" },
+          "correction": ["VNC début N+1 : 40 000 − 4 166,67 = 35 833,33 €", "Durée restante 3 ans et 8 mois (3,667 ans) : taux linéaire 27,3 % < 31,25 % → on reste en dégressif", "35 833,33 × 31,25 % = 11 197,92 €"] },
+        { "id": "4", "consigne": "En quelle année passe-t-on au linéaire ?",
+          "reponse": { "type": "choix", "options": ["N+1", "N+2", "N+3", "On ne passe jamais au linéaire"], "correcte": 1 },
+          "correction": ["Début N+2 : VNC = 24 635,41 € ; durée restante 2,667 ans → taux linéaire 37,5 % > 31,25 % : passage au linéaire", "Annuité N+2 et N+3 : 24 635,41 ÷ 2,667 = 9 238,28 € ; N+4 (8 mois) : 6 158,85 €"] }
+      ]
+    },
+    {
+      "id": "e.cpt.investissements.03", "notions": ["cpt.investissements.cessions"], "type": "ecriture", "niveau": 3, "fictif": true,
+      "titre": "Cession d'une camionnette",
+      "enonce": "Une camionnette acquise 32 000 € HT le 1er janvier N, amortie linéairement sur 4 ans, est cédée le 1er octobre N+2 pour 9 000 € HT (TVA 20 %), payable à 30 jours. Comptes : 2182, 28182, 6811, 675, 775, 462, 44571.",
+      "questions": [
+        { "id": "1", "consigne": "Dotation complémentaire N+2.", "reponse": { "type": "ecriture", "lignes": [ { "compte": "6811", "debit": 6000 }, { "compte": "28182", "credit": 6000 } ] },
+          "correction": ["Annuité : 32 000 ÷ 4 = 8 000 € ; 9 mois : 6 000 €"] },
+        { "id": "2", "consigne": "Sortie de l'immobilisation.", "reponse": { "type": "ecriture", "lignes": [ { "compte": "28182", "debit": 22000 }, { "compte": "675", "debit": 10000 }, { "compte": "2182", "credit": 32000 } ] },
+          "correction": ["Cumul : 8 000 × 2 + 6 000 = 22 000 €", "VNC : 32 000 − 22 000 = 10 000 €"] },
+        { "id": "3", "consigne": "Constatation du prix de cession.", "reponse": { "type": "ecriture", "lignes": [ { "compte": "462", "debit": 10800 }, { "compte": "775", "credit": 9000 }, { "compte": "44571", "credit": 1800 } ] },
+          "correction": ["La cession d'un bien ayant ouvert droit à déduction est soumise à la TVA"] },
+        { "id": "4", "consigne": "Résultat de cession (€, négatif si moins-value) ?", "reponse": { "type": "nombre", "valeur": -1000, "tolerance": 0.01, "unite": "€" },
+          "correction": ["9 000 − 10 000 = − 1 000 € : moins-value"] }
+      ]
+    }
+  ]
+}

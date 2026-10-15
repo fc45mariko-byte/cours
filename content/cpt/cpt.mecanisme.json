@@ -1,0 +1,194 @@
+{
+  "chapitre": "cpt.mecanisme",
+  "notions": [
+    {
+      "id": "cpt.mecanisme.bilan-resultat",
+      "titre": "Bilan et compte de résultat : deux photographies complémentaires",
+      "niveau": "F",
+      "prerequis": ["cpt.cadre.pcg"],
+      "connexes": ["cpt.synthese.bilan", "cpt.synthese.compte-resultat", "gfi.bilan-fonctionnel.reclassement"],
+      "question": "Comment résumer en deux documents ce qu'une entreprise possède, ce qu'elle doit et ce qu'elle a gagné ?",
+      "definition": "Le bilan présente, à une date donnée, le patrimoine de l'entreprise : à l'actif, ses emplois (ce qu'elle possède ou détient : immobilisations, stocks, créances, trésorerie) ; au passif, ses ressources (capitaux propres et dettes). Le compte de résultat récapitule, pour un exercice, les produits et les charges ; leur différence est le résultat (bénéfice ou perte), qui vient augmenter ou diminuer les capitaux propres.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Actif = Passif = Capitaux propres + Dettes        Résultat = Produits − Charges" },
+        { "type": "tableau", "entetes": ["", "Bilan", "Compte de résultat"], "lignes": [
+          ["Nature", "Stock : situation à une date", "Flux : activité d'une période"],
+          ["Contenu", "Actif (emplois) / Passif (ressources)", "Charges / Produits"],
+          ["Lien", "Le résultat figure au passif dans les capitaux propres", "Le résultat est le solde produits − charges"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Actif", "en": "assets", "es": "activo", "definition": "Éléments du patrimoine ayant une valeur économique positive pour l'entreprise." },
+        { "fr": "Passif", "en": "liabilities and equity", "es": "pasivo y patrimonio neto", "definition": "Ressources de l'entreprise : capitaux propres et dettes." },
+        { "fr": "Capitaux propres", "en": "equity", "es": "patrimonio neto", "definition": "Ressources apportées ou laissées par les associés (capital, réserves, résultat)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Au 31/12, la société Kayak Loire a : matériel 30 000 €, stock 8 000 €, créances clients 5 000 €, banque 7 000 € (actif = 50 000 €) ; capital 20 000 €, résultat de l'année 6 000 €, emprunt 18 000 €, fournisseurs 6 000 € (passif = 50 000 €). Son compte de résultat montre 96 000 € de produits et 90 000 € de charges : résultat 6 000 €, que l'on retrouve au passif." },
+      "confusions": [
+        { "a": "Un bénéfice", "b": "De la trésorerie disponible", "explication": "Le résultat mesure un enrichissement ; il peut être bénéficiaire alors que la banque est à découvert (clients pas encore payés, stocks)." }
+      ],
+      "verification": ["Pourquoi le bilan est-il toujours équilibré ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.mecanisme.partie-double",
+      "titre": "La partie double",
+      "niveau": "F",
+      "prerequis": ["cpt.mecanisme.bilan-resultat"],
+      "connexes": ["cpt.mecanisme.debit-credit"],
+      "question": "Pourquoi chaque opération est-elle enregistrée deux fois ?",
+      "definition": "Selon le principe de la partie double, toute opération est enregistrée dans au moins deux comptes : un ou plusieurs comptes sont débités et un ou plusieurs comptes sont crédités, pour un total identique. Chaque opération a une origine (ressource) et une destination (emploi).",
+      "explication": "Quand une entreprise achète un ordinateur payé par la banque, deux choses changent : elle possède un ordinateur de plus (emploi) et elle a moins d'argent en banque (ressource utilisée). La partie double enregistre les deux faces. Comme le total des débits égale toujours le total des crédits, l'équilibre permet de détecter certaines erreurs.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Pour chaque écriture : Σ débits = Σ crédits" }
+      ],
+      "exemple": { "fictif": true, "texte": "Achat d'un ordinateur 1 000 € HT, TVA 200 €, payé par virement : débit 2183 Matériel informatique 1 000 ; débit 44562 TVA déductible sur immobilisations 200 ; crédit 512 Banque 1 200. Total débits = total crédits = 1 200 €." },
+      "contreExemple": "Une écriture équilibrée n'est pas forcément juste : enregistrer le même achat en 607 au lieu de 2183 respecte la partie double, mais fausse le résultat et le bilan.",
+      "verification": ["Donnez un exemple d'erreur que l'équilibre débit/crédit ne permet pas de détecter."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.mecanisme.debit-credit",
+      "titre": "Le fonctionnement des comptes : débit et crédit",
+      "niveau": "F",
+      "prerequis": ["cpt.mecanisme.partie-double"],
+      "connexes": ["cpt.cadre.pcg"],
+      "question": "Comment savoir si un compte doit être débité ou crédité ?",
+      "definition": "Un compte se présente comme un tableau à deux colonnes : le débit (à gauche) et le crédit (à droite). Les comptes d'actif et de charges augmentent au débit ; les comptes de passif et de produits augmentent au crédit. Le solde d'un compte est la différence entre ses débits et ses crédits.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Type de compte", "Augmente au", "Diminue au", "Solde normal"], "lignes": [
+          ["Actif (classes 2, 3, 5, créances 41)", "Débit", "Crédit", "Débiteur"],
+          ["Passif (classe 1, dettes 40, 42, 43, 44)", "Crédit", "Débit", "Créditeur"],
+          ["Charges (classe 6)", "Débit", "Crédit", "Débiteur"],
+          ["Produits (classe 7)", "Crédit", "Débit", "Créditeur"]
+        ] },
+        { "type": "attention", "texte": "« Débit » et « crédit » ne signifient pas « dépense » et « recette » : quand la banque reçoit de l'argent, le compte 512 est débité (l'actif augmente)." }
+      ],
+      "termes": [
+        { "fr": "Débit", "en": "debit", "es": "debe", "definition": "Colonne de gauche d'un compte." },
+        { "fr": "Crédit", "en": "credit", "es": "haber", "definition": "Colonne de droite d'un compte." },
+        { "fr": "Solde", "en": "balance", "es": "saldo", "definition": "Différence entre le total des débits et le total des crédits d'un compte." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un client règle 600 € par virement : le compte 512 Banque augmente (débit 600) et la créance 411 Clients diminue (crédit 600)." },
+      "contreExemple": "Penser que le compte « Banque » est crédité quand l'argent arrive, par analogie avec le relevé de la banque : le relevé est tenu du point de vue de la banque, pour qui le compte du client est une dette.",
+      "verification": ["Pourquoi le relevé bancaire indique-t-il « crédit » quand l'entreprise débite son compte 512 ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.mecanisme.journal",
+      "titre": "Le journal",
+      "niveau": "F",
+      "prerequis": ["cpt.mecanisme.debit-credit"],
+      "connexes": ["cpt.mecanisme.grand-livre"],
+      "question": "Où et comment les opérations sont-elles d'abord enregistrées ?",
+      "definition": "Le journal est le livre où les opérations sont enregistrées chronologiquement, écriture par écriture, à partir des pièces justificatives (factures, relevés). Chaque écriture comporte une date, les numéros et intitulés des comptes débités et crédités, un libellé, la référence de la pièce et les montants.",
+      "fonctionnement": [
+        { "type": "liste", "titre": "Règles", "items": [
+          "Une écriture = une pièce justificative",
+          "Comptes débités d'abord, puis comptes crédités",
+          "Pas de rature ni de suppression : une erreur se corrige par une contre-passation ou une écriture rectificative",
+          "Journaux auxiliaires fréquents : achats, ventes, banque, opérations diverses"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Pièce justificative", "en": "supporting document", "es": "justificante", "definition": "Document qui prouve l'opération enregistrée (facture, relevé, bulletin de paie)." },
+        { "fr": "Contre-passation", "en": "reversing entry", "es": "contraasiento", "definition": "Écriture inverse qui annule une écriture antérieure." }
+      ],
+      "exemple": { "fictif": true, "texte": "Le 3 mars, facture d'achat FA-112 de 500 € HT de marchandises, TVA 100 €, à 30 jours : au journal des achats, débit 607 500, débit 44566 100, crédit 401 600, libellé « FA-112 Fournisseur Duval »." },
+      "verification": ["Pourquoi est-il interdit d'effacer une écriture erronée ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.mecanisme.grand-livre",
+      "titre": "Le grand livre",
+      "niveau": "F",
+      "prerequis": ["cpt.mecanisme.journal"],
+      "connexes": ["cpt.mecanisme.balance"],
+      "question": "Comment connaître le solde du compte « Clients » à une date donnée ?",
+      "definition": "Le grand livre regroupe, compte par compte, toutes les écritures passées au journal. Il permet de suivre les mouvements et le solde de chaque compte. Le report du journal vers les comptes du grand livre est appelé report ou « majorisation ».",
+      "exemple": { "fictif": true, "texte": "Au grand livre, le compte 411 Clients montre : débit 1 200 (facture du 2/03), débit 840 (facture du 10/03), crédit 1 200 (règlement du 25/03). Solde débiteur : 840 €, montant encore dû par les clients." },
+      "verification": ["Que signifie un solde créditeur au compte 401 ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.mecanisme.balance",
+      "titre": "La balance",
+      "niveau": "F",
+      "prerequis": ["cpt.mecanisme.grand-livre"],
+      "connexes": ["cpt.synthese.bilan", "cpt.synthese.compte-resultat"],
+      "question": "Comment contrôler l'ensemble des comptes avant d'établir le bilan ?",
+      "definition": "La balance est un tableau qui reprend, pour chaque compte, le total des débits, le total des crédits et le solde. Elle vérifie que total des débits = total des crédits et total des soldes débiteurs = total des soldes créditeurs. Elle sert de base à l'établissement du bilan et du compte de résultat.",
+      "fonctionnement": [
+        { "type": "tableau", "titre": "Extrait de balance", "entetes": ["Compte", "Total débit", "Total crédit", "Solde débiteur", "Solde créditeur"], "lignes": [
+          ["411 Clients", "2 040", "1 200", "840", ""],
+          ["401 Fournisseurs", "300", "900", "", "600"],
+          ["512 Banque", "1 200", "300", "900", ""],
+          ["607 Achats de marchandises", "750", "0", "750", ""],
+          ["707 Ventes de marchandises", "0", "1 700", "", "1 700"],
+          ["44571 TVA collectée", "0", "340", "", "340"],
+          ["44566 TVA déductible", "150", "0", "150", ""],
+          ["Totaux", "4 440", "4 440", "2 640", "2 640"]
+        ] }
+      ],
+      "exemple": { "fictif": true, "texte": "Le comptable constate que le total des soldes débiteurs dépasse de 90 € celui des soldes créditeurs : une écriture déséquilibrée ou un report erroné est à rechercher avant de clôturer." },
+      "verification": ["Une balance équilibrée garantit-elle des comptes sans erreur ? Justifiez."],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    { "id": "q.cpt.mecanisme.001", "notion": "cpt.mecanisme.bilan-resultat", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Où figure le résultat de l'exercice dans le bilan ?",
+      "choix": [
+        { "id": "a", "texte": "Au passif, dans les capitaux propres", "correct": true, "explication": "Le bénéfice appartient aux associés : il augmente les capitaux propres (une perte les diminue)." },
+        { "id": "b", "texte": "À l'actif, dans la trésorerie", "correct": false, "explication": "Le résultat n'est pas une somme d'argent en banque." },
+        { "id": "c", "texte": "Il ne figure pas au bilan, seulement au compte de résultat", "correct": false, "explication": "Il figure dans les deux documents : c'est le lien entre eux." },
+        { "id": "d", "texte": "Au passif, dans les dettes", "correct": false, "explication": "Le résultat n'est pas une dette envers un tiers." }
+      ] },
+    { "id": "q.cpt.mecanisme.002", "notion": "cpt.mecanisme.debit-credit", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Une entreprise reçoit un virement de 1 000 € d'un client. Quel compte est débité ?",
+      "choix": [
+        { "id": "a", "texte": "512 Banque", "correct": true, "explication": "La trésorerie (actif) augmente : débit." },
+        { "id": "b", "texte": "411 Clients", "correct": false, "explication": "La créance diminue : elle est créditée." },
+        { "id": "c", "texte": "707 Ventes", "correct": false, "explication": "La vente a déjà été enregistrée lors de la facture ; le règlement ne crée pas de produit." },
+        { "id": "d", "texte": "401 Fournisseurs", "correct": false, "explication": "Aucun fournisseur n'est concerné." }
+      ] },
+    { "id": "q.cpt.mecanisme.003", "notion": "cpt.mecanisme.debit-credit", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quels comptes ont normalement un solde créditeur ? (plusieurs réponses possibles)",
+      "choix": [
+        { "id": "a", "texte": "401 Fournisseurs", "correct": true, "explication": "Dette : solde créditeur." },
+        { "id": "b", "texte": "707 Ventes de marchandises", "correct": true, "explication": "Produit : solde créditeur." },
+        { "id": "c", "texte": "411 Clients", "correct": false, "explication": "Créance : solde débiteur." },
+        { "id": "d", "texte": "101 Capital", "correct": true, "explication": "Capitaux propres : solde créditeur." },
+        { "id": "e", "texte": "641 Rémunérations du personnel", "correct": false, "explication": "Charge : solde débiteur." }
+      ] },
+    { "id": "q.cpt.mecanisme.004", "notion": "cpt.mecanisme.partie-double", "format": "unique", "niveau": 3, "competence": "detecter-erreur",
+      "enonce": "Achat d'un ordinateur 1 200 € TTC (1 000 € HT) payé par chèque, enregistré : débit 606 1 000, débit 44566 200, crédit 512 1 200. Quelle est l'erreur ?",
+      "choix": [
+        { "id": "a", "texte": "L'ordinateur est une immobilisation : il fallait débiter 2183, et la TVA en 44562", "correct": true, "explication": "Un bien durable est immobilisé ; enregistré en charge, il fausse le résultat et le bilan, même si l'écriture est équilibrée." },
+        { "id": "b", "texte": "L'écriture est déséquilibrée", "correct": false, "explication": "1 000 + 200 = 1 200 : elle est équilibrée." },
+        { "id": "c", "texte": "Il fallait créditer 401", "correct": false, "explication": "Le paiement est immédiat par chèque : c'est bien la banque qui est créditée." },
+        { "id": "d", "texte": "Aucune erreur", "correct": false, "explication": "Le compte 606 ne convient pas à un bien durable." }
+      ] },
+    { "id": "q.cpt.mecanisme.005", "notion": "cpt.mecanisme.balance", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : si la balance est équilibrée, les comptes sont nécessairement exacts.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "Une erreur de compte ou un oubli d'écriture n'empêche pas l'équilibre." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "L'équilibre ne détecte que les erreurs qui déséquilibrent débits et crédits." }
+      ] },
+    { "id": "q.cpt.mecanisme.006", "notion": "cpt.mecanisme.journal", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Comment corrige-t-on une écriture erronée déjà passée au journal ?",
+      "choix": [
+        { "id": "a", "texte": "Par une contre-passation ou une écriture rectificative", "correct": true, "explication": "La traçabilité impose de ne jamais effacer." },
+        { "id": "b", "texte": "En l'effaçant et en la réécrivant", "correct": false, "explication": "Interdit : la comptabilité doit rester inaltérable." },
+        { "id": "c", "texte": "En modifiant directement le grand livre", "correct": false, "explication": "Le grand livre découle du journal." },
+        { "id": "d", "texte": "En ne faisant rien, la balance corrigera", "correct": false, "explication": "La balance ne corrige rien." }
+      ] }
+  ],
+  "flashcards": [
+    { "id": "f.cpt.mecanisme.001", "notions": ["cpt.mecanisme.debit-credit", "cpt.mecanisme.partie-double"],
+      "question": "Expliquez la règle de fonctionnement des comptes (débit/crédit) pour les quatre catégories, et appliquez-la au règlement d'un fournisseur par virement.",
+      "reponse": "Actif et charges augmentent au débit et diminuent au crédit ; passif et produits augmentent au crédit et diminuent au débit. Règlement d'un fournisseur : la dette diminue (débit 401) et la banque diminue (crédit 512), pour le même montant.",
+      "indispensables": ["Actif et charges : augmentation au débit", "Passif et produits : augmentation au crédit", "Écriture du règlement : débit 401, crédit 512"],
+      "erreurs": ["Assimiler débit à « argent qui sort »"],
+      "relance": "Pourquoi le relevé bancaire montre-t-il l'opération inverse ?" }
+  ]
+}

@@ -1,0 +1,702 @@
+{
+  "chapitre": "cpt.tresorerie",
+  "notions": [
+    {
+      "id": "cpt.tresorerie.reglements",
+      "titre": "Les règlements : virement, chèque, espèces, carte",
+      "niveau": "F",
+      "prerequis": [
+        "cpt.achats-ventes.factures"
+      ],
+      "connexes": [
+        "cpt.tresorerie.rapprochement",
+        "tci.paiement.virement-swift"
+      ],
+      "question": "Que se passe-t-il en comptabilité quand une facture est payée ?",
+      "definition": "Le règlement éteint la créance ou la dette née de la facture. Chez l'encaisseur : débit d'un compte de trésorerie (512 Banque, 530 Caisse, ou 5112 Chèques à encaisser), crédit du compte client 411. Chez le payeur : débit du compte fournisseur 401, crédit du compte de trésorerie. Le règlement n'a aucun effet sur le résultat : il transforme une créance ou une dette en mouvement de trésorerie.",
+      "fonctionnement": [
+        {
+          "type": "tableau",
+          "entetes": [
+            "Opération",
+            "Débit",
+            "Crédit"
+          ],
+          "lignes": [
+            [
+              "Client paie par virement",
+              "512 Banque",
+              "411 Clients"
+            ],
+            [
+              "Client remet un chèque",
+              "5112 Chèques à encaisser",
+              "411 Clients"
+            ],
+            [
+              "Remise des chèques à la banque",
+              "512 Banque",
+              "5112 Chèques à encaisser"
+            ],
+            [
+              "Paiement d'un fournisseur par virement",
+              "401 Fournisseurs",
+              "512 Banque"
+            ],
+            [
+              "Vente au comptant en espèces",
+              "530 Caisse",
+              "707 Ventes, 44571 TVA collectée"
+            ]
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Le compte 530 Caisse ne peut jamais être créditeur : on ne peut pas sortir plus d'espèces qu'il n'y en a."
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Règlement",
+          "en": "payment / settlement",
+          "es": "pago / liquidación",
+          "definition": "Paiement qui éteint une dette ou une créance."
+        },
+        {
+          "fr": "Virement",
+          "en": "bank transfer / wire transfer",
+          "es": "transferencia bancaria",
+          "definition": "Transfert de fonds d'un compte bancaire à un autre."
+        },
+        {
+          "fr": "Caisse",
+          "en": "petty cash / cash in hand",
+          "es": "caja",
+          "definition": "Espèces détenues dans l'entreprise."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Le 15 mai, la société Sologne Vélos reçoit par virement le paiement d'une facture client de 3 600 € : D 512 3 600 / C 411 3 600. Le même jour, elle règle un fournisseur par virement 2 160 € : D 401 2 160 / C 512 2 160."
+      },
+      "confusions": [
+        {
+          "a": "Encaissement d'une créance",
+          "b": "Produit",
+          "explication": "Le produit a été constaté à la facture ; l'encaissement ne fait qu'échanger une créance contre de la trésorerie."
+        }
+      ],
+      "verification": [
+        "Pourquoi le paiement d'un fournisseur ne figure-t-il pas en charge ?"
+      ],
+      "sources": [
+        "src.pcg"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.tresorerie.effets",
+      "titre": "Les effets de commerce : lettre de change, billet à ordre, escompte",
+      "niveau": "I",
+      "prerequis": [
+        "cpt.tresorerie.reglements"
+      ],
+      "connexes": [
+        "gfi.financement.court-terme",
+        "tci.paiement.lettre-change"
+      ],
+      "question": "Comment une créance client peut-elle devenir un titre négociable, et même se transformer en trésorerie avant l'échéance ?",
+      "definition": "Un effet de commerce est un titre qui constate une créance payable à une date déterminée. La lettre de change (traite) est émise par le créancier (tireur), qui donne l'ordre à son débiteur (tiré) de payer à l'échéance ; le billet à ordre est émis par le débiteur, qui s'engage à payer. En comptabilité, la créance passe de 411 à 413 Clients – effets à recevoir (et la dette de 401 à 403 Fournisseurs – effets à payer). Avant l'échéance, l'entreprise peut remettre l'effet à l'encaissement ou à l'escompte : la banque avance alors les fonds moyennant des agios.",
+      "fonctionnement": [
+        {
+          "type": "tableau",
+          "entetes": [
+            "Étape",
+            "Débit",
+            "Crédit"
+          ],
+          "lignes": [
+            [
+              "Acceptation de l'effet par le client",
+              "413 Effets à recevoir",
+              "411 Clients"
+            ],
+            [
+              "Remise à l'encaissement",
+              "5113 Effets à l'encaissement",
+              "413"
+            ],
+            [
+              "Encaissement à l'échéance",
+              "512 Banque, 627 Frais bancaires",
+              "5113"
+            ],
+            [
+              "Remise à l'escompte",
+              "5114 Effets à l'escompte",
+              "413"
+            ],
+            [
+              "Avis de crédit d'escompte",
+              "512 (net), 661 Intérêts, 627 Commissions, 44566 TVA sur commissions",
+              "5114"
+            ]
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Après escompte, l'entreprise reste garante du paiement si le client est défaillant : les effets escomptés non échus sont un engagement hors bilan."
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Lettre de change",
+          "en": "bill of exchange / draft",
+          "es": "letra de cambio",
+          "definition": "Titre par lequel le tireur ordonne au tiré de payer à l'échéance."
+        },
+        {
+          "fr": "Billet à ordre",
+          "en": "promissory note",
+          "es": "pagaré",
+          "definition": "Titre par lequel le débiteur s'engage à payer."
+        },
+        {
+          "fr": "Escompte bancaire",
+          "en": "discounting",
+          "es": "descuento bancario",
+          "definition": "Avance par la banque du montant d'un effet avant l'échéance, contre agios."
+        },
+        {
+          "fr": "Agios",
+          "en": "bank charges and interest",
+          "es": "gastos e intereses bancarios",
+          "definition": "Intérêts et commissions prélevés par la banque."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Un client accepte une LCR de 4 800 € à 60 jours : D 413 / C 411 4 800. L'entreprise la remet à l'escompte : D 5114 / C 413 4 800. Avis de crédit : intérêts 40 €, commission 10 € HT, TVA 2 € ; net 4 748 € : D 512 4 748 / D 661 40 / D 627 10 / D 44566 2 / C 5114 4 800."
+      },
+      "confusions": [
+        {
+          "a": "Escompte de règlement (665/765)",
+          "b": "Escompte bancaire d'un effet (661)",
+          "explication": "Le premier est une réduction de prix pour paiement anticipé ; le second est un financement par la banque."
+        },
+        {
+          "a": "Tireur",
+          "b": "Tiré",
+          "explication": "Le tireur (créancier) émet la lettre de change ; le tiré (débiteur) doit payer."
+        }
+      ],
+      "verification": [
+        "Qui émet une lettre de change ? Qui émet un billet à ordre ?"
+      ],
+      "sources": [
+        "src.pcg",
+        "src.code-commerce"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cpt.tresorerie.rapprochement",
+      "titre": "Le rapprochement bancaire",
+      "niveau": "I",
+      "prerequis": [
+        "cpt.tresorerie.reglements",
+        "cpt.mecanisme.grand-livre"
+      ],
+      "connexes": [
+        "cpt.cadre.principes"
+      ],
+      "question": "Pourquoi le solde du compte 512 de l'entreprise diffère-t-il presque toujours de celui du relevé bancaire ?",
+      "definition": "Le rapprochement bancaire compare le compte 512 tenu par l'entreprise et le relevé tenu par la banque, qui fonctionnent en sens inverse (un dépôt est un débit pour l'entreprise et un crédit pour la banque). Les écarts proviennent de décalages : opérations connues de l'entreprise mais pas encore de la banque (chèques émis non encaissés, remises non créditées) et opérations connues de la banque mais pas encore de l'entreprise (frais, agios, virements reçus, prélèvements). L'état de rapprochement ajuste chaque solde pour aboutir au même solde rectifié ; seules les opérations manquantes chez l'entreprise donnent lieu à écriture.",
+      "fonctionnement": [
+        {
+          "type": "etapes",
+          "etapes": [
+            "Pointer les opérations communes au compte 512 et au relevé",
+            "Lister les opérations non pointées de chaque côté",
+            "Corriger le solde comptable des opérations que seule la banque a enregistrées",
+            "Corriger le solde bancaire des opérations que seule l'entreprise a enregistrées",
+            "Vérifier que les deux soldes rectifiés sont égaux, puis passer les écritures de régularisation dans les comptes de l'entreprise"
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Solde débiteur en 512 (compta) = solde créditeur sur le relevé (banque) : c'est la même somme vue de deux côtés."
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Rapprochement bancaire",
+          "en": "bank reconciliation",
+          "es": "conciliación bancaria",
+          "definition": "Comparaison du compte banque et du relevé pour expliquer les écarts."
+        },
+        {
+          "fr": "Relevé bancaire",
+          "en": "bank statement",
+          "es": "extracto bancario",
+          "definition": "Document de la banque récapitulant les opérations du compte."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Compte 512 : 8 450 € débiteur. Relevé : 10 300 € créditeur. Écarts : chèque émis 1 200 non encore présenté ; remise de chèques 600 non créditée ; agios 50 non enregistrés ; virement client 1 300 non enregistré. Entreprise : 8 450 − 50 + 1 300 = 9 700. Banque : 10 300 − 1 200 + 600 = 9 700. Écritures : D 661 50 / C 512 ; D 512 1 300 / C 411."
+      },
+      "confusions": [
+        {
+          "a": "Corriger les erreurs de la banque",
+          "b": "Passer des écritures dans les comptes de l'entreprise",
+          "explication": "L'entreprise n'enregistre que ce qui lui manquait ; les décalages côté banque se résorbent seuls (ou font l'objet d'une réclamation)."
+        }
+      ],
+      "verification": [
+        "Un chèque émis non encore présenté : ajuste-t-on le solde de l'entreprise ou celui de la banque ?"
+      ],
+      "sources": [
+        "src.pcg"
+      ],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cpt.tresorerie.001",
+      "notion": "cpt.tresorerie.reglements",
+      "format": "unique",
+      "niveau": 1,
+      "competence": "appliquer",
+      "enonce": "Un client règle par chèque une facture de 1 440 €. Le chèque sera remis à la banque la semaine suivante. Quelle écriture le jour de la réception ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "D 5112 Chèques à encaisser / C 411 : 1 440",
+          "correct": true,
+          "explication": "Le chèque est en attente de remise : on utilise un compte d'attente de trésorerie."
+        },
+        {
+          "id": "b",
+          "texte": "D 411 / C 5112 : 1 440",
+          "correct": false,
+          "explication": "Écriture inversée : la créance client doit diminuer."
+        },
+        {
+          "id": "c",
+          "texte": "D 5112 / C 707 : 1 440",
+          "correct": false,
+          "explication": "La vente a déjà été comptabilisée à la facture."
+        },
+        {
+          "id": "d",
+          "texte": "D 530 / C 411 : 1 440",
+          "correct": false,
+          "explication": "530 enregistre les espèces, pas les chèques."
+        }
+      ]
+    },
+    {
+      "id": "q.cpt.tresorerie.002",
+      "notion": "cpt.tresorerie.reglements",
+      "format": "vrai-faux",
+      "niveau": 1,
+      "competence": "comprendre",
+      "enonce": "Vrai ou faux : l'encaissement d'une facture client augmente le résultat de l'entreprise.",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Vrai",
+          "correct": false,
+          "explication": "Le produit a été enregistré à la facturation ; l'encaissement est neutre sur le résultat."
+        },
+        {
+          "id": "b",
+          "texte": "Faux",
+          "correct": true,
+          "explication": "Il échange une créance (411) contre de la trésorerie (512)."
+        }
+      ]
+    },
+    {
+      "id": "q.cpt.tresorerie.003",
+      "notion": "cpt.tresorerie.effets",
+      "format": "unique",
+      "niveau": 1,
+      "competence": "memoriser",
+      "enonce": "Dans une lettre de change, qui est le tiré ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Le débiteur, qui devra payer à l'échéance",
+          "correct": true,
+          "explication": "Le tireur (créancier) donne l'ordre au tiré de payer."
+        },
+        {
+          "id": "b",
+          "texte": "Le créancier qui émet l'effet",
+          "correct": false,
+          "explication": "C'est le tireur."
+        },
+        {
+          "id": "c",
+          "texte": "La banque qui escompte l'effet",
+          "correct": false,
+          "explication": "La banque est le bénéficiaire éventuel, pas le tiré."
+        },
+        {
+          "id": "d",
+          "texte": "Le notaire qui authentifie l'effet",
+          "correct": false,
+          "explication": "Aucun notaire n'intervient."
+        }
+      ]
+    },
+    {
+      "id": "q.cpt.tresorerie.004",
+      "notion": "cpt.tresorerie.effets",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
+      "enonce": "Un client accepte une lettre de change de 2 000 € en règlement de sa facture. Écriture chez le fournisseur ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "D 413 / C 411 : 2 000",
+          "correct": true,
+          "explication": "La créance change de forme : de la créance ordinaire à l'effet à recevoir."
+        },
+        {
+          "id": "b",
+          "texte": "D 512 / C 411 : 2 000",
+          "correct": false,
+          "explication": "Rien n'est encore encaissé."
+        },
+        {
+          "id": "c",
+          "texte": "D 403 / C 401 : 2 000",
+          "correct": false,
+          "explication": "Ce sont les comptes utilisés par le client (débiteur)."
+        },
+        {
+          "id": "d",
+          "texte": "D 5114 / C 411 : 2 000",
+          "correct": false,
+          "explication": "5114 n'intervient qu'en cas de remise à l'escompte."
+        }
+      ]
+    },
+    {
+      "id": "q.cpt.tresorerie.005",
+      "notion": "cpt.tresorerie.effets",
+      "format": "multiple",
+      "niveau": 3,
+      "competence": "comprendre",
+      "enonce": "À propos de l'escompte d'un effet de commerce, quelles affirmations sont exactes ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "La banque verse le montant de l'effet diminué des agios",
+          "correct": true,
+          "explication": "Elle avance les fonds contre intérêts et commissions."
+        },
+        {
+          "id": "b",
+          "texte": "Les intérêts d'escompte sont une charge financière (661)",
+          "correct": true,
+          "explication": "C'est le coût du financement."
+        },
+        {
+          "id": "c",
+          "texte": "L'entreprise est définitivement libérée du risque d'impayé",
+          "correct": false,
+          "explication": "Recours de la banque : l'engagement reste hors bilan jusqu'à l'échéance."
+        },
+        {
+          "id": "d",
+          "texte": "C'est la même opération que l'escompte de règlement accordé à un client",
+          "correct": false,
+          "explication": "Celui-ci est une réduction de prix (665), pas un financement bancaire."
+        }
+      ]
+    },
+    {
+      "id": "q.cpt.tresorerie.006",
+      "notion": "cpt.tresorerie.rapprochement",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "distinguer",
+      "enonce": "Lors d'un rapprochement, vous constatez des frais de tenue de compte de 25 € sur le relevé, non comptabilisés. Que faites-vous ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Je diminue le solde comptable et je passe l'écriture D 627 / C 512",
+          "correct": true,
+          "explication": "L'opération manque dans les comptes de l'entreprise."
+        },
+        {
+          "id": "b",
+          "texte": "Je diminue le solde du relevé",
+          "correct": false,
+          "explication": "La banque l'a déjà enregistrée."
+        },
+        {
+          "id": "c",
+          "texte": "Je demande à la banque d'annuler l'opération",
+          "correct": false,
+          "explication": "Les frais sont réels : aucune erreur de la banque."
+        },
+        {
+          "id": "d",
+          "texte": "Je l'ignore, le montant est faible",
+          "correct": false,
+          "explication": "Toute opération doit être enregistrée."
+        }
+      ]
+    },
+    {
+      "id": "q.cpt.tresorerie.007",
+      "notion": "cpt.tresorerie.rapprochement",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
+      "enonce": "Solde 512 : 4 000 € débiteur. Seul écart : un chèque émis de 700 € non encore présenté à la banque. Quel solde affiche le relevé bancaire ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "4 700 € créditeur",
+          "correct": true,
+          "explication": "La banque n'a pas encore débité les 700 € : son solde est plus élevé."
+        },
+        {
+          "id": "b",
+          "texte": "3 300 € créditeur",
+          "correct": false,
+          "explication": "Sens inversé : c'est l'entreprise qui a déjà diminué son solde."
+        },
+        {
+          "id": "c",
+          "texte": "4 000 € débiteur",
+          "correct": false,
+          "explication": "Il y a un écart de 700 € et le relevé présente un solde créditeur."
+        },
+        {
+          "id": "d",
+          "texte": "4 700 € débiteur",
+          "correct": false,
+          "explication": "Le compte n'est pas à découvert : le solde du relevé est créditeur."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cpt.tresorerie.001",
+      "notions": [
+        "cpt.tresorerie.effets"
+      ],
+      "question": "Décrivez le circuit d'une lettre de change acceptée puis escomptée, avec les comptes utilisés chez le fournisseur.",
+      "reponse": "Le fournisseur (tireur) émet la lettre de change sur son client (tiré), qui l'accepte : D 413 / C 411. Il la remet à l'escompte : D 5114 / C 413. La banque crédite le net : D 512, D 661 (intérêts), D 627 (commissions) et D 44566 (TVA sur commissions) / C 5114. Jusqu'à l'échéance, le fournisseur reste garant : engagement hors bilan.",
+      "indispensables": [
+        "Tireur créancier, tiré débiteur",
+        "413 / 411 à l'acceptation",
+        "5114 à la remise à l'escompte",
+        "Agios en 661 et 627"
+      ],
+      "complementaires": [
+        "Engagement hors bilan",
+        "Billet à ordre émis par le débiteur"
+      ],
+      "erreurs": [
+        "Confondre escompte bancaire et escompte de règlement"
+      ]
+    },
+    {
+      "id": "f.cpt.tresorerie.002",
+      "notions": [
+        "cpt.tresorerie.rapprochement"
+      ],
+      "question": "Expliquez la méthode du rapprochement bancaire et indiquez quelles écritures l'entreprise passe à l'issue.",
+      "reponse": "On compare le compte 512 et le relevé (sens inversés), on pointe les opérations communes, puis on ajuste chaque solde des opérations connues de l'autre seulement : le solde comptable reçoit les frais, agios, virements et prélèvements non comptabilisés ; le solde bancaire reçoit les chèques émis non présentés et les remises non créditées. Les soldes rectifiés doivent être égaux. L'entreprise n'enregistre que les opérations qui manquaient dans ses comptes.",
+      "indispensables": [
+        "Sens inverses des deux comptes",
+        "Pointage",
+        "Ajustement de chaque côté",
+        "Écritures uniquement pour ce qui manque chez l'entreprise"
+      ],
+      "erreurs": [
+        "Passer en comptabilité les chèques non encore présentés"
+      ],
+      "relance": "Que faire si un écart ne s'explique par aucun décalage ?"
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.cpt.tresorerie.01",
+      "notions": [
+        "cpt.tresorerie.rapprochement"
+      ],
+      "type": "calcul",
+      "niveau": 2,
+      "fictif": true,
+      "titre": "État de rapprochement au 31 mars",
+      "enonce": "Au 31 mars, le compte 512 de la société Loire Événements présente un solde débiteur de 12 380 €. Le relevé bancaire présente un solde créditeur de 14 305 €. Après pointage : chèque n° 418 émis le 29/03 (1 650 €) non présenté ; remise de chèques du 31/03 (2 200 €) non encore créditée ; prélèvement de l'assurance (420 €) non comptabilisé ; agios (75 €) non comptabilisés ; virement d'un client (2 970 €) non comptabilisé.",
+      "questions": [
+        {
+          "id": "1",
+          "consigne": "Solde comptable rectifié (€) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 14855,
+            "tolerance": 0.01,
+            "unite": "€"
+          },
+          "correction": [
+            "12 380 − 420 − 75 + 2 970 = 14 855 €"
+          ],
+          "erreurs": [
+            "Intégrer le chèque n° 418 côté entreprise : il y est déjà"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Solde bancaire rectifié (€) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 14855,
+            "tolerance": 0.01,
+            "unite": "€"
+          },
+          "correction": [
+            "14 305 − 1 650 + 2 200 = 14 855 €"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Les deux soldes rectifiés sont-ils égaux ? Que concluez-vous ?",
+          "reponse": {
+            "type": "choix",
+            "options": [
+              "Oui : le rapprochement est équilibré, on passe les écritures des opérations manquantes chez l'entreprise",
+              "Non : il reste un écart à rechercher",
+              "Oui : aucune écriture n'est nécessaire"
+            ],
+            "correcte": 0
+          },
+          "correction": [
+            "14 855 = 14 855 : les écarts sont tous expliqués",
+            "Écritures chez l'entreprise : D 616 / C 512 420 (assurance) ; D 661 / C 512 75 (agios) ; D 512 / C 411 2 970 (virement client)",
+            "Si un écart subsistait, on rechercherait une erreur (saisie, pointage) avant toute écriture"
+          ]
+        },
+        {
+          "id": "4",
+          "consigne": "Passez l'écriture de l'encaissement du virement client (comptes 512, 411).",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "512",
+                "debit": 2970
+              },
+              {
+                "compte": "411",
+                "credit": 2970
+              }
+            ]
+          },
+          "correction": [
+            "La banque augmente (D 512), la créance client est soldée (C 411)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e.cpt.tresorerie.02",
+      "notions": [
+        "cpt.tresorerie.effets"
+      ],
+      "type": "ecriture",
+      "niveau": 2,
+      "fictif": true,
+      "titre": "Escompte d'une lettre de change",
+      "enonce": "La société Métallerie du Val a tiré une lettre de change de 6 000 € sur son client, qui l'a acceptée. Elle la remet à l'escompte. L'avis de crédit indique : intérêts 54 €, commission 15 € HT, TVA sur commission 3 €. Comptes : 411, 413, 5114, 512, 661, 627, 44566.",
+      "questions": [
+        {
+          "id": "1",
+          "consigne": "Écriture d'acceptation.",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "413",
+                "debit": 6000
+              },
+              {
+                "compte": "411",
+                "credit": 6000
+              }
+            ]
+          },
+          "correction": [
+            "La créance ordinaire devient un effet à recevoir"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Écriture de remise à l'escompte.",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "5114",
+                "debit": 6000
+              },
+              {
+                "compte": "413",
+                "credit": 6000
+              }
+            ]
+          },
+          "correction": [
+            "L'effet passe en « effets à l'escompte »"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Écriture de l'avis de crédit.",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "512",
+                "debit": 5928
+              },
+              {
+                "compte": "661",
+                "debit": 54
+              },
+              {
+                "compte": "627",
+                "debit": 15
+              },
+              {
+                "compte": "44566",
+                "debit": 3
+              },
+              {
+                "compte": "5114",
+                "credit": 6000
+              }
+            ]
+          },
+          "correction": [
+            "Net crédité : 6 000 − 54 − 15 − 3 = 5 928 €",
+            "Intérêts en charge financière (661), commission en services bancaires (627)"
+          ]
+        }
+      ]
+    }
+  ]
+}

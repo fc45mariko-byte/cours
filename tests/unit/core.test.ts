@@ -31,7 +31,7 @@ describe('correction des QCM', () => {
 describe('lecture des nombres', () => {
   it.each([
     ['12 500,50', 12500.5], ['12500.5', 12500.5], ['12 500 €', 12500], ['1.234,56', 1234.56],
-    ['1,234.56', 1234.56], ['-3,5 %', -3.5], ['1 000 000', 1000000], ['0,075', 0.075], ['1.000.000', 1000000],
+    ['1,234.56', 1234.56], ['-3,5 %', -3.5], ['1.000.000', 1000000], ['− 1 000', -1000], ['0,075', 0.075], ['1.000.000', 1000000],
   ])('%s → %d', (s, n) => expect(lireNombre(s)).toBe(n));
   it('refuse le texte', () => { expect(lireNombre('douze')).toBeNull(); expect(lireNombre('')).toBeNull(); });
   it('applique la tolérance', () => {
