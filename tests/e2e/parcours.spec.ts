@@ -1,4 +1,9 @@
+import { readFileSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
+
+// Une notion encore non rédigée, quel que soit l'avancement du contenu.
+const index = JSON.parse(readFileSync(new URL('../../app/src/generated/index.json', import.meta.url), 'utf8'));
+const nonRedigee = Object.keys(index.notions).find((id) => !index.notions[id].redigee);
 
 const erreursConsole = (page: Page) => {
   const e: string[] = [];
@@ -27,7 +32,8 @@ test('fiche : rubriques, prérequis et notion non rédigée', async ({ page }) =
   await expect(page.getByRole('heading', { level: 1, name: 'Le point de transfert des risques' })).toBeVisible();
   await expect(page.getByRole('heading', { name: /Définition/ })).toBeVisible();
   await expect(page.getByText('exemple fictif')).toBeVisible();
-  await page.goto('/#/notion/tci.operation.acteurs');
+  test.skip(!nonRedigee, 'toutes les notions sont rédigées');
+  await page.goto(`/#/notion/${nonRedigee}`);
   await expect(page.getByText('en cours de rédaction')).toBeVisible();
 });
 
