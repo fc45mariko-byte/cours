@@ -1,0 +1,584 @@
+{
+  "chapitre": "ici.diagnostic",
+  "notions": [
+    {
+      "id": "ici.diagnostic.interne",
+      "titre": "Le diagnostic export interne",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": [
+        "ici.diagnostic.swot",
+        "ici.diagnostic.selection-marches"
+      ],
+      "question": "L'entreprise a-t-elle les moyens de se lancer à l'export ?",
+      "definition": "Le diagnostic export interne évalue les ressources et compétences de l'entreprise au regard d'un projet international : produit (adaptabilité, normes, avantage concurrentiel), capacités de production (pouvoir servir de nouveaux volumes), ressources humaines (langues, compétences en commerce international), ressources financières (financer la prospection et un BFR plus lourd), organisation (service export, logistique, ADV) et motivation de la direction. Il fait apparaître des forces et des faiblesses.",
+      "fonctionnement": [
+        {
+          "type": "tableau",
+          "entetes": [
+            "Domaine",
+            "Questions"
+          ],
+          "lignes": [
+            [
+              "Produit",
+              "Est-il compétitif, adaptable, conforme aux normes étrangères ? Protégé (marque, brevet) ?"
+            ],
+            [
+              "Production",
+              "Capacité disponible ? Délais tenables à l'export ?"
+            ],
+            [
+              "Humain",
+              "Langues, maîtrise des Incoterms, de la douane, des paiements internationaux ?"
+            ],
+            [
+              "Finances",
+              "Budget de prospection, capacité à financer des délais clients plus longs ?"
+            ],
+            [
+              "Organisation",
+              "Qui traite les commandes export, la logistique, le recouvrement ?"
+            ],
+            [
+              "Stratégie",
+              "Engagement de la direction, horizon de rentabilité accepté ?"
+            ]
+          ]
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Diagnostic export",
+          "en": "export readiness assessment / export audit",
+          "es": "diagnóstico exportador",
+          "definition": "Évaluation de la capacité d'une entreprise à exporter."
+        },
+        {
+          "fr": "Avantage concurrentiel",
+          "en": "competitive advantage",
+          "es": "ventaja competitiva",
+          "definition": "Élément qui distingue durablement l'offre des concurrents."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Une biscuiterie bretonne a un produit apprécié et une marque déposée (forces), mais personne ne parle espagnol et sa capacité de production est saturée en décembre (faiblesses). Avant de viser le Mexique, elle recrute un VIE hispanophone et planifie un investissement de production."
+      },
+      "confusions": [
+        {
+          "a": "Diagnostic interne (forces / faiblesses)",
+          "b": "Diagnostic externe (opportunités / menaces des marchés)",
+          "explication": "Le premier porte sur l'entreprise, le second sur son environnement ; les deux se combinent dans le SWOT."
+        }
+      ],
+      "verification": [
+        "Citez quatre domaines à examiner dans un diagnostic export interne."
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.diagnostic.swot",
+      "titre": "SWOT et facteurs clés de succès",
+      "niveau": "F",
+      "prerequis": [
+        "ici.diagnostic.interne"
+      ],
+      "connexes": [
+        "ici.diagnostic.selection-marches",
+        "ici.risque.risque-pays"
+      ],
+      "question": "Comment croiser ce que l'entreprise sait faire et ce que le marché étranger exige ?",
+      "definition": "La matrice SWOT (Strengths, Weaknesses, Opportunities, Threats) croise le diagnostic interne (forces, faiblesses) et le diagnostic externe d'un marché (opportunités, menaces). Les facteurs clés de succès (FCS) sont les éléments indispensables pour réussir sur un marché donné (prix, réseau de distribution, réactivité, normes, image). Une stratégie pertinente s'appuie sur les forces pour saisir les opportunités, et corrige les faiblesses qui empêchent de maîtriser les FCS.",
+      "fonctionnement": [
+        {
+          "type": "tableau",
+          "entetes": [
+            "",
+            "Positif",
+            "Négatif"
+          ],
+          "lignes": [
+            [
+              "Interne (entreprise)",
+              "Forces",
+              "Faiblesses"
+            ],
+            [
+              "Externe (marché)",
+              "Opportunités",
+              "Menaces"
+            ]
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Un même élément ne peut pas être à la fois interne et externe : « la croissance du marché » est une opportunité, pas une force."
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Matrice SWOT",
+          "en": "SWOT analysis",
+          "es": "análisis DAFO (FODA en Amérique latine)",
+          "definition": "Croisement forces / faiblesses / opportunités / menaces."
+        },
+        {
+          "fr": "Facteur clé de succès",
+          "en": "key success factor",
+          "es": "factor clave de éxito",
+          "definition": "Élément indispensable pour réussir sur un marché."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Fabricant de vélos électriques visant l'Allemagne : forces (qualité, brevet de batterie) ; faiblesses (pas de réseau de distribution, prix élevé) ; opportunités (subventions locales, forte demande urbaine) ; menaces (concurrents allemands installés, normes strictes). FCS : réseau de revendeurs et service après-vente de proximité."
+      },
+      "confusions": [
+        {
+          "a": "DAFO (espagnol)",
+          "b": "SWOT (anglais)",
+          "explication": "Même outil : Debilidades, Amenazas, Fortalezas, Oportunidades."
+        }
+      ],
+      "verification": [
+        "« L'arrivée d'un concurrent chinois à bas prix » : force, faiblesse, opportunité ou menace ?"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.diagnostic.selection-marches",
+      "titre": "Sélectionner les marchés : critères et grille de notation",
+      "niveau": "F",
+      "prerequis": [
+        "ici.diagnostic.swot",
+        "ici.information.sources"
+      ],
+      "connexes": [
+        "ici.risque.risque-pays",
+        "ici.prospection.plan"
+      ],
+      "question": "Parmi des dizaines de pays possibles, comment choisir objectivement les deux ou trois à prospecter ?",
+      "definition": "La sélection des marchés procède par entonnoir : une présélection large sur des critères macroéconomiques et d'accessibilité, puis une analyse fine de quelques pays. La grille multicritère attribue à chaque critère un coefficient (selon son importance pour l'entreprise) et à chaque pays une note ; le score pondéré permet de classer les pays. Critères usuels : taille et croissance du marché, accessibilité (droits de douane, normes, distance, logistique), concurrence, risque pays, proximité culturelle et linguistique, coût d'entrée.",
+      "fonctionnement": [
+        {
+          "type": "formule",
+          "formule": "Score d'un pays = Σ (coefficient du critère × note du pays sur ce critère)"
+        },
+        {
+          "type": "etapes",
+          "etapes": [
+            "Définir les critères pertinents pour le produit",
+            "Pondérer les critères (total des coefficients = 100 % ou 10)",
+            "Noter chaque pays sur une même échelle (par exemple de 1 à 5) à partir de données sourcées",
+            "Calculer les scores pondérés et classer",
+            "Contrôler la robustesse : un changement de pondération modifie-t-il le classement ?"
+          ]
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Grille multicritère",
+          "en": "weighted scoring matrix",
+          "es": "matriz de selección ponderada",
+          "definition": "Outil de classement par critères pondérés."
+        },
+        {
+          "fr": "Marché cible",
+          "en": "target market",
+          "es": "mercado objetivo",
+          "definition": "Marché retenu pour la prospection."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Critères (coefficients) : taille du marché 0,3 ; accessibilité 0,3 ; concurrence 0,2 ; risque pays 0,2. Espagne : 4, 5, 2, 4 → 1,2 + 1,5 + 0,4 + 0,8 = 3,9. Mexique : 5, 3, 3, 3 → 1,5 + 0,9 + 0,6 + 0,6 = 3,6. L'Espagne est prioritaire."
+      },
+      "confusions": [
+        {
+          "a": "Taille du marché",
+          "b": "Accessibilité du marché",
+          "explication": "Un grand marché peut être fermé (barrières tarifaires, normes) ; un petit marché proche peut être plus rentable."
+        }
+      ],
+      "verification": [
+        "Pourquoi faut-il vérifier la sensibilité du classement à la pondération ?"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.diagnostic.uppsala",
+      "titre": "Le modèle d'Uppsala et la distance psychique",
+      "niveau": "A",
+      "prerequis": [
+        "ici.diagnostic.interne"
+      ],
+      "connexes": [
+        "ici.diagnostic.born-global",
+        "ici.presence.choix",
+        "mgi.fondements.culture"
+      ],
+      "question": "Pourquoi les entreprises s'internationalisent-elles souvent pas à pas, en commençant par des pays proches ?",
+      "definition": "Le modèle d'Uppsala (Johanson et Vahlne, 1977) décrit l'internationalisation comme un processus graduel d'apprentissage. Faute de connaissance des marchés étrangers, l'entreprise s'engage progressivement : exportations irrégulières, puis via un agent, puis par une filiale commerciale, enfin par une production locale (chaîne d'établissement). Elle commence par les pays de faible distance psychique, c'est-à-dire ceux où les différences de langue, de culture, d'institutions et de pratiques d'affaires gênent le moins la circulation de l'information. Les auteurs ont révisé le modèle en 2009 pour y intégrer le rôle des réseaux.",
+      "fonctionnement": [
+        {
+          "type": "etapes",
+          "etapes": [
+            "Pas d'exportation régulière",
+            "Exportation par des représentants indépendants (agents)",
+            "Filiale commerciale",
+            "Filiale de production"
+          ]
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Distance psychique",
+          "en": "psychic distance",
+          "es": "distancia psíquica",
+          "definition": "Ensemble des facteurs (langue, culture, institutions) qui gênent l'échange d'information avec un marché."
+        },
+        {
+          "fr": "Chaîne d'établissement",
+          "en": "establishment chain",
+          "es": "cadena de establecimiento",
+          "definition": "Séquence d'engagements croissants sur un marché."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Une PME de Tours exporte d'abord en Belgique et en Suisse romande (même langue), puis en Espagne via un agent, ouvre une filiale commerciale à Madrid au bout de cinq ans, et n'envisage le Mexique qu'ensuite, en s'appuyant sur son expérience hispanophone."
+      },
+      "contreExemple": "Une start-up de logiciels qui vend dès sa création dans trente pays via une plateforme en ligne ne suit pas ce schéma : c'est le cas des « born global ».",
+      "confusions": [
+        {
+          "a": "Distance psychique",
+          "b": "Distance géographique",
+          "explication": "Le Québec peut être psychiquement plus proche de la France que la Pologne, pourtant géographiquement plus proche."
+        }
+      ],
+      "verification": [
+        "Quelles sont les étapes de la chaîne d'établissement selon le modèle d'Uppsala ?"
+      ],
+      "sources": [
+        "src.johanson-vahlne"
+      ],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.diagnostic.born-global",
+      "titre": "Les « born global »",
+      "niveau": "A",
+      "prerequis": [
+        "ici.diagnostic.uppsala"
+      ],
+      "connexes": [
+        "ici.prospection.outils"
+      ],
+      "question": "Comment certaines jeunes entreprises deviennent-elles internationales dès leur création ?",
+      "definition": "Les « born global » (ou entreprises à internationalisation précoce et rapide) visent les marchés étrangers dès leur création ou dans les toutes premières années, souvent sur plusieurs continents à la fois, au lieu de suivre un processus graduel. La notion a été popularisée dans les années 1990 (Knight et Cavusgil, 1996 ; Oviatt et McDougall parlent d'« international new ventures »). Ce phénomène s'explique par les technologies numériques, la baisse des coûts de transport et de communication, des marchés de niche mondiaux et des dirigeants à l'expérience internationale.",
+      "fonctionnement": [
+        {
+          "type": "liste",
+          "items": [
+            "Critère souvent retenu dans les études : une part importante du CA réalisée à l'étranger (par exemple au moins un quart) dans les trois premières années",
+            "Secteurs fréquents : logiciels, biotechnologies, produits de niche à forte valeur ajoutée",
+            "Ressources clés : réseaux, partenariats, plateformes numériques, innovation"
+          ]
+        }
+      ],
+      "termes": [
+        {
+          "fr": "Born global",
+          "en": "born global firm / international new venture",
+          "es": "empresa nacida global (born global)",
+          "definition": "Entreprise internationale dès sa création."
+        },
+        {
+          "fr": "Marché de niche",
+          "en": "niche market",
+          "es": "nicho de mercado",
+          "definition": "Segment étroit et spécialisé."
+        }
+      ],
+      "exemple": {
+        "fictif": true,
+        "texte": "Une start-up orléanaise conçoit un logiciel de traduction pour les vétérinaires. Le marché français est trop petit : dès la première année, elle vend en ligne aux États-Unis, en Espagne et au Brésil, avec une interface multilingue."
+      },
+      "confusions": [
+        {
+          "a": "Born global (rapide, multimarché)",
+          "b": "Modèle d'Uppsala (graduel, de proche en proche)",
+          "explication": "Les deux décrivent des trajectoires différentes ; le modèle d'Uppsala révisé intègre d'ailleurs le rôle des réseaux qui explique une partie des born global."
+        }
+      ],
+      "verification": [
+        "Citez trois facteurs qui expliquent l'apparition des born global."
+      ],
+      "sources": [
+        "src.knight-cavusgil"
+      ],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Le seuil chiffré (part du CA à l'étranger, délai) varie selon les auteurs : utiliser la définition donnée en cours."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.ici.diagnostic.001",
+      "notion": "ici.diagnostic.interne",
+      "format": "multiple",
+      "niveau": 1,
+      "competence": "distinguer",
+      "enonce": "Lesquels de ces éléments relèvent du diagnostic export interne ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Les compétences linguistiques des salariés",
+          "correct": true,
+          "explication": "Ressource humaine de l'entreprise."
+        },
+        {
+          "id": "b",
+          "texte": "La capacité de production disponible",
+          "correct": true,
+          "explication": "Ressource interne."
+        },
+        {
+          "id": "c",
+          "texte": "Le taux de croissance du marché chilien",
+          "correct": false,
+          "explication": "Élément externe (opportunité)."
+        },
+        {
+          "id": "d",
+          "texte": "La capacité à financer des délais clients plus longs",
+          "correct": true,
+          "explication": "Ressource financière interne."
+        }
+      ]
+    },
+    {
+      "id": "q.ici.diagnostic.002",
+      "notion": "ici.diagnostic.swot",
+      "format": "unique",
+      "niveau": 1,
+      "competence": "distinguer",
+      "enonce": "Dans un SWOT, « une réglementation sanitaire plus stricte annoncée dans le pays cible » est :",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Une menace",
+          "correct": true,
+          "explication": "Élément externe défavorable."
+        },
+        {
+          "id": "b",
+          "texte": "Une faiblesse",
+          "correct": false,
+          "explication": "Une faiblesse est interne à l'entreprise."
+        },
+        {
+          "id": "c",
+          "texte": "Une force",
+          "correct": false,
+          "explication": "Élément externe, et défavorable."
+        },
+        {
+          "id": "d",
+          "texte": "Une opportunité",
+          "correct": false,
+          "explication": "Sauf si l'entreprise est déjà conforme et ses concurrents non ; par défaut c'est une menace."
+        }
+      ]
+    },
+    {
+      "id": "q.ici.diagnostic.003",
+      "notion": "ici.diagnostic.selection-marches",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
+      "enonce": "Critères : taille 0,5 ; accessibilité 0,3 ; risque 0,2. Le Portugal obtient 2, 5, 4 (sur 5). Score pondéré ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "3,3",
+          "correct": true,
+          "explication": "1,0 + 1,5 + 0,8 = 3,3."
+        },
+        {
+          "id": "b",
+          "texte": "3,7",
+          "correct": false,
+          "explication": "Moyenne non pondérée (11 ÷ 3)."
+        },
+        {
+          "id": "c",
+          "texte": "11",
+          "correct": false,
+          "explication": "Somme non pondérée."
+        },
+        {
+          "id": "d",
+          "texte": "2,9",
+          "correct": false,
+          "explication": "Erreur de calcul."
+        }
+      ]
+    },
+    {
+      "id": "q.ici.diagnostic.004",
+      "notion": "ici.diagnostic.uppsala",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "comprendre",
+      "enonce": "Selon le modèle d'Uppsala, pourquoi l'entreprise commence-t-elle par des pays de faible distance psychique ?",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Parce que l'information y circule mieux et que l'incertitude y est plus faible",
+          "correct": true,
+          "explication": "Le modèle repose sur l'apprentissage et la réduction de l'incertitude."
+        },
+        {
+          "id": "b",
+          "texte": "Parce que les droits de douane y sont toujours nuls",
+          "correct": false,
+          "explication": "Le modèle ne repose pas sur les droits de douane."
+        },
+        {
+          "id": "c",
+          "texte": "Parce qu'ils sont les plus grands marchés",
+          "correct": false,
+          "explication": "La taille n'est pas le critère du modèle."
+        },
+        {
+          "id": "d",
+          "texte": "Parce que la loi l'impose",
+          "correct": false,
+          "explication": "Il s'agit d'une observation de comportement, pas d'une règle."
+        }
+      ]
+    },
+    {
+      "id": "q.ici.diagnostic.005",
+      "notion": "ici.diagnostic.born-global",
+      "format": "vrai-faux",
+      "niveau": 2,
+      "competence": "comprendre",
+      "enonce": "Vrai ou faux : une entreprise « born global » suit la chaîne d'établissement du modèle d'Uppsala, mais plus rapidement.",
+      "choix": [
+        {
+          "id": "a",
+          "texte": "Vrai",
+          "correct": false,
+          "explication": "Elle ne suit pas d'étapes graduelles : elle vise d'emblée plusieurs marchés, souvent lointains."
+        },
+        {
+          "id": "b",
+          "texte": "Faux",
+          "correct": true,
+          "explication": "Elle remet en cause le schéma graduel."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.ici.diagnostic.001",
+      "notions": [
+        "ici.diagnostic.swot",
+        "ici.diagnostic.selection-marches"
+      ],
+      "question": "Expliquez comment passer d'un SWOT à la sélection d'un marché cible avec une grille multicritère.",
+      "reponse": "Le SWOT croise forces/faiblesses (interne) et opportunités/menaces (marché). On en déduit les facteurs clés de succès et les critères qui comptent pour l'entreprise (taille, accessibilité, concurrence, risque, proximité culturelle). On pondère ces critères, on note chaque pays avec des données sourcées, on calcule les scores pondérés, on classe et on teste la sensibilité du classement à la pondération.",
+      "indispensables": [
+        "Interne vs externe",
+        "Critères pondérés",
+        "Score = Σ coefficient × note",
+        "Test de sensibilité"
+      ],
+      "erreurs": [
+        "Classer « croissance du marché » parmi les forces"
+      ]
+    },
+    {
+      "id": "f.ici.diagnostic.002",
+      "notions": [
+        "ici.diagnostic.uppsala",
+        "ici.diagnostic.born-global"
+      ],
+      "question": "Comparez le modèle d'Uppsala et le phénomène des born global.",
+      "reponse": "Uppsala (Johanson et Vahlne, 1977) : internationalisation graduelle par apprentissage, chaîne d'établissement (export irrégulier, agent, filiale commerciale, filiale de production), en commençant par les pays de faible distance psychique. Born global (Knight et Cavusgil, 1996) : entreprises internationales dès leur création, sur plusieurs marchés, grâce au numérique, aux réseaux, aux niches mondiales et à l'expérience des fondateurs.",
+      "indispensables": [
+        "Processus graduel et distance psychique",
+        "Chaîne d'établissement",
+        "Internationalisation immédiate des born global",
+        "Facteurs explicatifs"
+      ],
+      "complementaires": [
+        "Révision du modèle en 2009 (réseaux)"
+      ],
+      "erreurs": [
+        "Confondre distance psychique et distance géographique"
+      ]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.ici.diagnostic.01",
+      "notions": [
+        "ici.diagnostic.selection-marches"
+      ],
+      "type": "calcul",
+      "niveau": 2,
+      "fictif": true,
+      "titre": "Grille de sélection pour une cidrerie",
+      "enonce": "La Cidrerie du Perche hésite entre trois pays. Critères et coefficients : taille du marché 0,25 ; accessibilité réglementaire 0,25 ; concurrence locale 0,20 ; proximité culturelle 0,15 ; risque pays 0,15. Notes sur 5 — Royaume-Uni : 5, 2, 2, 4, 4 ; Espagne : 3, 5, 4, 4, 4 ; Japon : 4, 2, 4, 1, 5.",
+      "questions": [
+        {
+          "id": "1",
+          "consigne": "Score de l'Espagne ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 4,
+            "tolerance": 0.001
+          },
+          "correction": [
+            "3 × 0,25 + 5 × 0,25 + 4 × 0,20 + 4 × 0,15 + 4 × 0,15",
+            "= 0,75 + 1,25 + 0,80 + 0,60 + 0,60 = 4,00"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Score du Royaume-Uni ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 3.35,
+            "tolerance": 0.001
+          },
+          "correction": [
+            "5 × 0,25 + 2 × 0,25 + 2 × 0,20 + 4 × 0,15 + 4 × 0,15",
+            "= 1,25 + 0,50 + 0,40 + 0,60 + 0,60 = 3,35"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Quel pays retenir en priorité ?",
+          "reponse": {
+            "type": "choix",
+            "options": [
+              "Royaume-Uni",
+              "Espagne",
+              "Japon"
+            ],
+            "correcte": 1
+          },
+          "correction": [
+            "Japon : 1,00 + 0,50 + 0,80 + 0,15 + 0,75 = 3,20",
+            "L'Espagne obtient le meilleur score grâce à son accessibilité réglementaire (marché unique)"
+          ]
+        }
+      ]
+    }
+  ]
+}

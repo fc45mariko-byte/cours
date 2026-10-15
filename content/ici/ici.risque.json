@@ -1,0 +1,103 @@
+{
+  "chapitre": "ici.risque",
+  "notions": [
+    {
+      "id": "ici.risque.risque-pays",
+      "titre": "Le risque pays : politique, économique, de transfert",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["ici.risque.notation", "tci.paiement.risques", "tci.paiement.garanties"],
+      "question": "Quels risques un exportateur court-il du seul fait du pays de son client ?",
+      "definition": "Le risque pays regroupe les risques liés à l'environnement d'un pays, indépendamment de la solvabilité du client : risque politique (guerre, troubles, expropriation, sanctions, embargo), risque économique et financier (récession, inflation, dévaluation, crise bancaire), risque de transfert ou de non-transfert (le client paie en monnaie locale, mais l'État empêche ou retarde la conversion et le transfert des devises), risque juridique et réglementaire (instabilité des règles, corruption, difficulté à faire exécuter un jugement). Il se distingue du risque commercial, propre au client (insolvabilité, refus de payer).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Risque", "Exemple", "Couverture possible"], "lignes": [
+          ["Politique", "Embargo empêchant la livraison", "Assurance-crédit publique ou privée, crédit documentaire confirmé"],
+          ["De transfert", "Contrôle des changes bloquant les devises", "Crédit documentaire confirmé par une banque d'un pays sûr"],
+          ["Économique / de change", "Forte dévaluation de la monnaie locale", "Facturation en euros, couverture de change"],
+          ["Commercial (à distinguer)", "Faillite du client", "Assurance-crédit, garanties bancaires"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Risque pays", "en": "country risk", "es": "riesgo país", "definition": "Risque lié à l'environnement politique, économique et juridique d'un pays." },
+        { "fr": "Risque de non-transfert", "en": "transfer risk", "es": "riesgo de transferencia", "definition": "Impossibilité de convertir et transférer les fonds hors du pays." },
+        { "fr": "Embargo", "en": "embargo", "es": "embargo", "definition": "Interdiction de commercer avec un pays, décidée par un État ou une organisation." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un client argentin paie sa facture en pesos auprès de sa banque, mais un contrôle des changes empêche l'achat d'euros : l'exportateur français n'est pas payé alors que son client est solvable. C'est un risque de transfert, couvrable par un crédit documentaire confirmé par une banque française." },
+      "confusions": [
+        { "a": "Risque pays", "b": "Risque commercial (client)", "explication": "Un client excellent peut ne pas payer à cause de son pays ; un pays stable peut abriter un client défaillant." }
+      ],
+      "verification": ["Pourquoi la confirmation d'un crédit documentaire protège-t-elle contre le risque de transfert ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.risque.notation",
+      "titre": "Lire les classements de risque pays",
+      "niveau": "F",
+      "prerequis": ["ici.risque.risque-pays"],
+      "connexes": ["ici.diagnostic.selection-marches"],
+      "question": "Comment utiliser les notes de risque pays publiées par les assureurs et l'OCDE ?",
+      "definition": "Plusieurs organismes publient des évaluations du risque pays : les assureurs-crédit (Coface, Allianz Trade, Credendo…) évaluent le risque d'impayé des entreprises d'un pays sur une échelle de lettres ; l'OCDE classe les pays de 0 (risque le plus faible) à 7 (le plus élevé) pour fixer les primes minimales des crédits à l'exportation bénéficiant d'un soutien public ; les agences de notation (S&P, Moody's, Fitch) notent la dette souveraine (de AAA à D). Ces classements sont des indicateurs parmi d'autres : il faut lire leur date, leur méthode et leur objet.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Source", "Ce qui est évalué", "Échelle"], "lignes": [
+          ["OCDE", "Risque de crédit pays (transfert, force majeure)", "0 à 7"],
+          ["Assureurs-crédit", "Risque d'impayé des entreprises du pays, environnement des affaires", "Lettres (selon chaque assureur)"],
+          ["Agences de notation", "Capacité de l'État à rembourser sa dette", "AAA à D (ou Aaa à C)"]
+        ] },
+        { "type": "attention", "texte": "Une note souveraine élevée ne garantit pas que les entreprises du pays paient bien, et inversement." }
+      ],
+      "termes": [
+        { "fr": "Notation souveraine", "en": "sovereign credit rating", "es": "calificación soberana", "definition": "Évaluation de la solvabilité d'un État." },
+        { "fr": "Assureur-crédit", "en": "credit insurer", "es": "aseguradora de crédito", "definition": "Assureur couvrant le risque d'impayé des créances commerciales." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un exportateur compare deux pays : le premier est classé 2 par l'OCDE et bien évalué par les assureurs ; le second est classé 6 et mal évalué. Pour le second, il exigera un crédit documentaire confirmé ou un paiement d'avance, et vérifiera la disponibilité d'une assurance-crédit." },
+      "confusions": [
+        { "a": "Classement OCDE de 0 à 7", "b": "Note d'agence AAA à D", "explication": "Le premier sert aux crédits à l'exportation soutenus par les États ; la seconde évalue la dette d'un État pour les investisseurs." }
+      ],
+      "verification": ["Pourquoi faut-il toujours vérifier la date d'un classement de risque pays ?"],
+      "sources": ["src.ocde-risque-pays"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Échelles exactes des assureurs-crédit (elles diffèrent selon l'assureur) : consulter la méthodologie publiée par chacun."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.ici.risque.001", "notion": "ici.risque.risque-pays", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Le client, solvable, a payé en monnaie locale, mais sa banque centrale bloque les sorties de devises. Quel risque s'est réalisé ?",
+      "choix": [
+        { "id": "a", "texte": "Le risque de transfert (non-transfert)", "correct": true, "explication": "Les fonds existent mais ne peuvent être transférés." },
+        { "id": "b", "texte": "Le risque commercial", "correct": false, "explication": "Le client n'est pas défaillant." },
+        { "id": "c", "texte": "Le risque de transport", "correct": false, "explication": "Il concerne les marchandises." },
+        { "id": "d", "texte": "Le risque de fabrication", "correct": false, "explication": "Il concerne l'interruption du contrat avant expédition." }
+      ]
+    },
+    {
+      "id": "q.ici.risque.002", "notion": "ici.risque.risque-pays", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Lesquels de ces événements relèvent du risque pays ?",
+      "choix": [
+        { "id": "a", "texte": "Un embargo décidé contre le pays importateur", "correct": true, "explication": "Risque politique." },
+        { "id": "b", "texte": "Une dévaluation de 40 % de la monnaie locale", "correct": true, "explication": "Risque économique et de change." },
+        { "id": "c", "texte": "La faillite du client", "correct": false, "explication": "Risque commercial." },
+        { "id": "d", "texte": "Une révolution entraînant l'annulation des contrats", "correct": true, "explication": "Risque politique." }
+      ]
+    },
+    {
+      "id": "q.ici.risque.003", "notion": "ici.risque.notation", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Dans la classification de l'OCDE, un pays classé 7 présente :",
+      "choix": [
+        { "id": "a", "texte": "Le risque le plus élevé", "correct": true, "explication": "L'échelle va de 0 (le plus faible) à 7 (le plus élevé)." },
+        { "id": "b", "texte": "Le risque le plus faible", "correct": false, "explication": "Sens de l'échelle inversé." },
+        { "id": "c", "texte": "Une note de dette AAA", "correct": false, "explication": "Échelle d'agence de notation, sans lien direct." },
+        { "id": "d", "texte": "Un risque moyen", "correct": false, "explication": "7 est le maximum." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.ici.risque.001", "notions": ["ici.risque.risque-pays", "ici.risque.notation"],
+      "question": "Présentez les composantes du risque pays, la différence avec le risque commercial, et les sources de classement disponibles.",
+      "reponse": "Risque pays : politique (guerre, embargo, expropriation), économique et financier (crise, dévaluation), de transfert (blocage des devises), juridique. Risque commercial : défaillance du client lui-même. Classements : OCDE (0 à 7, crédits export publics), assureurs-crédit (risque d'impayé des entreprises), agences de notation (dette souveraine AAA à D). Couvertures : crédit documentaire confirmé, assurance-crédit, paiement d'avance, facturation en euros.",
+      "indispensables": ["Quatre composantes", "Distinction avec le risque commercial", "OCDE 0-7", "Moyens de couverture"],
+      "erreurs": ["Confondre note souveraine et risque d'impayé des entreprises"]
+    }
+  ]
+}

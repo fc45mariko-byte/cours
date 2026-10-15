@@ -1,0 +1,118 @@
+{
+  "chapitre": "ici.information",
+  "notions": [
+    {
+      "id": "ici.information.sources",
+      "titre": "Sources d'information et acteurs publics d'appui à l'export",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["ici.information.etude-marche", "ici.prospection.outils"],
+      "question": "Où trouver une information fiable sur un marché étranger, et qui peut aider une PME à exporter ?",
+      "definition": "L'information sur les marchés provient de sources statistiques (Banque mondiale, FMI, OCDE, Eurostat, instituts nationaux), douanières (statistiques du commerce extérieur, bases tarifaires comme l'outil Access2Markets de la Commission européenne), sectorielles (fédérations professionnelles, salons, études privées) et institutionnelles. En France, la Team France Export regroupe Business France, les CCI et les régions, avec Bpifrance pour le financement et l'assurance prospection ; les services économiques des ambassades (DG Trésor) et les conseillers du commerce extérieur complètent le dispositif.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Acteur", "Rôle principal"], "lignes": [
+          ["Business France", "Études et informations marchés, prospection collective (pavillons France sur les salons), gestion du VIE"],
+          ["CCI (CCI International)", "Accompagnement de proximité des PME, formalités (certificats d'origine), formation"],
+          ["Régions", "Stratégie régionale d'export, aides financières"],
+          ["Bpifrance", "Financement, assurance prospection, garanties publiques à l'export (gérées pour le compte de l'État)"],
+          ["Douane", "Information tarifaire, origine, statut d'opérateur économique agréé, conseil aux entreprises"],
+          ["Services économiques (DG Trésor)", "Veille économique et réglementaire dans les pays"]
+        ] },
+        { "type": "attention", "texte": "Toujours dater et sourcer une donnée, et croiser au moins deux sources : les statistiques diffèrent selon les définitions et les années." }
+      ],
+      "termes": [
+        { "fr": "Veille", "en": "market intelligence / monitoring", "es": "vigilancia / inteligencia de mercado", "definition": "Collecte organisée et continue d'informations." },
+        { "fr": "Appui à l'export", "en": "export support / export promotion", "es": "apoyo a la exportación", "definition": "Services publics ou privés aidant les entreprises à exporter." },
+        { "fr": "Assurance prospection", "en": "market development insurance", "es": "seguro de prospección", "definition": "Avance remboursable en fonction du succès, couvrant une partie des dépenses de prospection." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une PME de cosmétiques qui vise la Colombie consulte les droits de douane et les exigences sanitaires sur les bases officielles, achète une fiche marché de Business France, participe au pavillon France d'un salon à Bogotá, et obtient une assurance prospection de Bpifrance pour financer deux voyages." },
+      "confusions": [
+        { "a": "Source primaire (données collectées soi-même)", "b": "Source secondaire (données publiées par d'autres)", "explication": "L'étude documentaire exploite les secondes ; l'étude terrain produit les premières." }
+      ],
+      "verification": ["Citez trois membres de la Team France Export et leur rôle."],
+      "sources": ["src.team-france-export", "src.douane-fr"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Organisation du dispositif public d'appui à l'export et noms des outils (évolutions fréquentes) : vérifier sur teamfrance-export.fr."
+    },
+    {
+      "id": "ici.information.etude-marche",
+      "titre": "L'étude de marché documentaire et terrain",
+      "niveau": "F",
+      "prerequis": ["ici.information.sources"],
+      "connexes": ["ici.diagnostic.selection-marches", "ici.mix.standardisation-adaptation"],
+      "question": "Comment connaître la demande, la concurrence et l'environnement d'un marché avant d'y investir ?",
+      "definition": "L'étude de marché commence par une étude documentaire (desk research) à partir de sources secondaires : données macroéconomiques, statistiques d'import, réglementation, concurrents, prix. Elle se poursuit par une étude terrain (field research) qui collecte des données primaires : entretiens avec des distributeurs et prescripteurs, visites de points de vente (store checks), questionnaires, tests de produit, participation à des salons. Elle analyse l'offre, la demande, la distribution et l'environnement (PESTEL).",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Définir l'objectif et les questions (quel marché, quel produit, quelles décisions)",
+          "Étude documentaire : taille, croissance, importations, concurrents, prix, normes, droits de douane",
+          "Analyse PESTEL : politique, économique, socioculturel, technologique, écologique, légal",
+          "Étude terrain qualitative (entretiens, observation) puis quantitative si nécessaire",
+          "Synthèse : opportunités, contraintes, recommandations (marché, cible, positionnement, mode d'entrée)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Étude documentaire", "en": "desk research / secondary research", "es": "investigación documental / de gabinete", "definition": "Exploitation de données existantes." },
+        { "fr": "Étude terrain", "en": "field research / primary research", "es": "investigación de campo", "definition": "Collecte de données nouvelles auprès du marché." },
+        { "fr": "Analyse PESTEL", "en": "PESTEL analysis", "es": "análisis PESTEL", "definition": "Analyse des facteurs politiques, économiques, socioculturels, technologiques, environnementaux et légaux." }
+      ],
+      "exemple": { "fictif": true, "texte": "Avant d'exporter ses rillettes en Espagne, une conserverie étudie les importations de produits de charcuterie (documentaire), puis visite vingt épiceries fines à Madrid et Barcelone et interroge quatre importateurs (terrain) : le produit plaît mais le format de 400 g est jugé trop grand." },
+      "confusions": [
+        { "a": "Étude qualitative (comprendre, peu de répondants)", "b": "Étude quantitative (mesurer, échantillon représentatif)", "explication": "La première explore les motivations, la seconde chiffre des comportements." }
+      ],
+      "verification": ["Pourquoi commencer par l'étude documentaire avant l'étude terrain ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.ici.information.001", "notion": "ici.information.sources", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quel organisme gère le Volontariat international en entreprise (VIE) ?",
+      "choix": [
+        { "id": "a", "texte": "Business France", "correct": true, "explication": "Il gère le dispositif VIE pour le compte de l'État." },
+        { "id": "b", "texte": "La Banque de France", "correct": false, "explication": "Elle n'intervient pas dans le VIE." },
+        { "id": "c", "texte": "L'OMC", "correct": false, "explication": "Organisation internationale sans rôle d'appui aux entreprises." },
+        { "id": "d", "texte": "La douane", "correct": false, "explication": "Elle conseille sur les formalités, pas sur le VIE." }
+      ]
+    },
+    {
+      "id": "q.ici.information.002", "notion": "ici.information.sources", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quels acteurs font partie de la Team France Export ?",
+      "choix": [
+        { "id": "a", "texte": "Business France", "correct": true, "explication": "Pilier du dispositif." },
+        { "id": "b", "texte": "Les CCI", "correct": true, "explication": "Accompagnement de proximité." },
+        { "id": "c", "texte": "Les régions", "correct": true, "explication": "Elles copilotent la stratégie régionale d'export." },
+        { "id": "d", "texte": "Le FMI", "correct": false, "explication": "Organisation internationale, pas un acteur d'appui aux PME." }
+      ]
+    },
+    {
+      "id": "q.ici.information.003", "notion": "ici.information.etude-marche", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Visiter des magasins à Lisbonne pour relever les prix des concurrents relève :",
+      "choix": [
+        { "id": "a", "texte": "De l'étude terrain", "correct": true, "explication": "Collecte de données primaires (store check)." },
+        { "id": "b", "texte": "De l'étude documentaire", "correct": false, "explication": "Elle exploite des données déjà publiées." },
+        { "id": "c", "texte": "De l'analyse PESTEL", "correct": false, "explication": "Le PESTEL porte sur l'environnement général." },
+        { "id": "d", "texte": "Du SWOT", "correct": false, "explication": "Le SWOT synthétise ; il ne collecte pas." }
+      ]
+    },
+    {
+      "id": "q.ici.information.004", "notion": "ici.information.etude-marche", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Dans un PESTEL, l'obligation d'étiqueter les produits en espagnol au Mexique relève du facteur :",
+      "choix": [
+        { "id": "a", "texte": "Légal", "correct": true, "explication": "C'est une contrainte réglementaire." },
+        { "id": "b", "texte": "Socioculturel", "correct": false, "explication": "La langue est culturelle, mais l'obligation d'étiquetage est juridique." },
+        { "id": "c", "texte": "Technologique", "correct": false, "explication": "Aucun lien avec la technologie." },
+        { "id": "d", "texte": "Économique", "correct": false, "explication": "Ce n'est pas une variable économique." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.ici.information.001", "notions": ["ici.information.sources", "ici.information.etude-marche"],
+      "question": "Décrivez la démarche d'une étude de marché à l'export et les principaux acteurs qui peuvent aider une PME française.",
+      "reponse": "Objectifs → étude documentaire (sources secondaires : statistiques, douane, réglementation, concurrents, prix) → PESTEL → étude terrain (entretiens, store checks, salons, tests) → synthèse et recommandations. Acteurs : Team France Export (Business France, CCI, régions), Bpifrance (financement, assurance prospection), douane, services économiques des ambassades, conseillers du commerce extérieur.",
+      "indispensables": ["Documentaire puis terrain", "PESTEL", "Team France Export", "Bpifrance"],
+      "erreurs": ["Se fier à une seule source non datée"]
+    }
+  ]
+}

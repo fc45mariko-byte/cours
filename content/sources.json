@@ -197,5 +197,50 @@
     "url": "https://www.legifrance.gouv.fr",
     "acces": "reference",
     "pertinence": "Cadre légal du stage : convention, durée, gratification"
+  },
+  {
+    "id": "src.johanson-vahlne",
+    "titre": "« The Internationalization Process of the Firm — A Model of Knowledge Development and Increasing Foreign Market Commitments », Journal of International Business Studies, vol. 8, n° 1, 1977 ; révision « The Uppsala internationalization process model revisited », JIBS, 2009",
+    "auteur": "Jan Johanson, Jan-Erik Vahlne",
+    "acces": "reference",
+    "pertinence": "Modèle d'Uppsala, distance psychique"
+  },
+  {
+    "id": "src.knight-cavusgil",
+    "titre": "« The Born Global Firm: A Challenge to Traditional Internationalization Theory », Advances in International Marketing, vol. 8, 1996",
+    "auteur": "Gary A. Knight, S. Tamer Cavusgil",
+    "acces": "reference",
+    "pertinence": "Entreprises « born global »"
+  },
+  {
+    "id": "src.levitt",
+    "titre": "« The Globalization of Markets », Harvard Business Review, mai-juin 1983",
+    "auteur": "Theodore Levitt",
+    "acces": "reference",
+    "pertinence": "Thèse de la standardisation mondiale"
+  },
+  {
+    "id": "src.team-france-export",
+    "titre": "Team France Export (Business France, CCI, régions, Bpifrance) — portail d'accompagnement à l'export",
+    "auteur": "Business France et partenaires",
+    "url": "https://www.teamfrance-export.fr",
+    "acces": "reference",
+    "pertinence": "Acteurs publics d'appui à l'export, VIE"
+  },
+  {
+    "id": "src.ocde-risque-pays",
+    "titre": "Classification des risques pays de l'OCDE (Arrangement sur les crédits à l'exportation bénéficiant d'un soutien public)",
+    "auteur": "OCDE",
+    "url": "https://www.oecd.org",
+    "acces": "reference",
+    "pertinence": "Classement des pays de 0 à 7"
+  },
+  {
+    "id": "src.directive-agents",
+    "titre": "Directive 86/653/CEE du Conseil du 18 décembre 1986 relative à la coordination des droits des États membres concernant les agents commerciaux indépendants",
+    "auteur": "Conseil des Communautés européennes",
+    "url": "https://eur-lex.europa.eu",
+    "acces": "reference",
+    "pertinence": "Statut de l'agent commercial"
   }
 ]

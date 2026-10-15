@@ -1,0 +1,244 @@
+{
+  "chapitre": "ici.mix",
+  "notions": [
+    {
+      "id": "ici.mix.standardisation-adaptation",
+      "titre": "Standardiser ou adapter le marketing mix",
+      "niveau": "F",
+      "prerequis": ["ici.information.etude-marche"],
+      "connexes": ["ici.mix.produit", "ici.mix.communication", "mgi.grilles.hofstede"],
+      "question": "Faut-il vendre le même produit, avec le même message, partout dans le monde ?",
+      "definition": "La standardisation consiste à proposer une offre identique sur tous les marchés pour bénéficier d'économies d'échelle et d'une image cohérente ; Theodore Levitt (1983) défendait l'idée de marchés devenus mondiaux. L'adaptation modifie l'offre pour répondre aux différences de goûts, de normes, de pouvoir d'achat, de langue et de culture. En pratique, les entreprises combinent les deux (« glocalisation » : penser global, agir local), en standardisant ce qui peut l'être (marque, technologie) et en adaptant ce qui doit l'être (recette, emballage, prix, message).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "Standardisation", "Adaptation"], "lignes": [
+          ["Avantages", "Économies d'échelle, image mondiale cohérente, simplicité", "Meilleure réponse aux attentes, conformité locale"],
+          ["Inconvénients", "Risque de rejet, non-conformité", "Coûts, complexité, image dispersée"],
+          ["Facteurs favorables", "Produits techniques, cibles mondiales homogènes (luxe, high-tech)", "Alimentaire, produits culturels, réglementation stricte"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Standardisation", "en": "standardisation", "es": "estandarización", "definition": "Offre identique sur tous les marchés." },
+        { "fr": "Adaptation", "en": "adaptation / localisation", "es": "adaptación", "definition": "Modification de l'offre selon les marchés." },
+        { "fr": "Glocalisation", "en": "glocalisation (think global, act local)", "es": "glocalización", "definition": "Combinaison de stratégie mondiale et d'adaptation locale." },
+        { "fr": "Marketing mix (4P)", "en": "marketing mix (product, price, place, promotion)", "es": "marketing mix (producto, precio, distribución, comunicación)", "definition": "Ensemble des décisions sur produit, prix, distribution et communication." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de biscuits garde sa marque et son logo partout (standardisation), mais réduit le sucre pour le Japon, adapte le format des paquets au pouvoir d'achat en Amérique latine et traduit les mentions obligatoires (adaptation)." },
+      "confusions": [
+        { "a": "Adaptation obligatoire (normes, langue, étiquetage)", "b": "Adaptation volontaire (goûts, positionnement)", "explication": "La première s'impose légalement ; la seconde résulte d'un choix marketing." }
+      ],
+      "verification": ["Citez deux éléments qu'une entreprise peut standardiser et deux qu'elle doit souvent adapter."],
+      "sources": ["src.levitt"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.mix.produit",
+      "titre": "Le produit à l'international : normes, étiquetage, marque",
+      "niveau": "F",
+      "prerequis": ["ici.mix.standardisation-adaptation"],
+      "connexes": ["tci.douane.espece", "tci.transport.emballage-marquage"],
+      "question": "Quelles modifications un produit doit-il subir pour être vendu légalement et avec succès à l'étranger ?",
+      "definition": "La politique produit à l'international tient compte des contraintes obligatoires (normes techniques et de sécurité, exigences sanitaires et phytosanitaires, étiquetage dans la langue du pays, unités de mesure, tension électrique) et des attentes des consommateurs (goûts, formats, couleurs, symboles). Dans l'Union européenne, le marquage CE atteste la conformité de nombreux produits aux exigences européennes. La protection de la marque doit être assurée dans chaque pays visé (dépôt national, marque de l'Union européenne, système de Madrid), et le nom de marque vérifié linguistiquement.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Contraintes techniques : normes, prises électriques, unités (pouces, livres), certification",
+          "Contraintes légales : étiquetage, composition, allergènes, mentions obligatoires, restrictions de substances",
+          "Contraintes culturelles : couleurs, symboles, religion (halal, casher), goûts",
+          "Emballage : climat, transport, recyclage, taille des portions",
+          "Marque : disponibilité et dépôt, connotations du nom dans la langue locale"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Marquage CE", "en": "CE marking", "es": "marcado CE", "definition": "Marquage attestant la conformité d'un produit aux exigences de l'UE." },
+        { "fr": "Norme", "en": "standard", "es": "norma", "definition": "Référentiel technique, obligatoire ou volontaire." },
+        { "fr": "Étiquetage", "en": "labelling", "es": "etiquetado", "definition": "Informations figurant sur le produit ou l'emballage." },
+        { "fr": "Dépôt de marque", "en": "trademark registration", "es": "registro de marca", "definition": "Formalité donnant un droit exclusif sur une marque dans un territoire." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une marque française de sauces vise le Mexique : étiquetage en espagnol avec les mentions et logos d'avertissement nutritionnel exigés localement, recette plus pimentée testée auprès de consommateurs, dépôt de la marque auprès de l'office mexicain avant le lancement." },
+      "confusions": [
+        { "a": "Marquage CE (conformité réglementaire)", "b": "Label de qualité", "explication": "Le marquage CE n'est pas un gage de qualité supérieure : il atteste la conformité aux exigences essentielles." }
+      ],
+      "verification": ["Pourquoi faut-il vérifier un nom de marque dans chaque langue cible ?"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Exigences d'étiquetage propres à chaque pays (exemple mexicain) : vérifier la réglementation en vigueur avant usage."
+    },
+    {
+      "id": "ici.mix.prix-export",
+      "titre": "Le prix export et l'escalade des prix",
+      "niveau": "A",
+      "prerequis": ["ici.mix.standardisation-adaptation", "tci.incoterms.repartition-couts"],
+      "connexes": ["tci.douane.calcul-droits-tva", "odg.couts.couts-complets"],
+      "question": "Pourquoi un produit vendu 100 € départ usine coûte-t-il parfois plus du double au consommateur étranger ?",
+      "definition": "Le prix export se construit à partir du coût de revient et de la marge souhaitée, en tenant compte de l'Incoterm (frais de transport, d'assurance, de dédouanement pris en charge), des prix de la concurrence locale et du pouvoir d'achat. L'escalade des prix désigne l'augmentation du prix final provoquée par l'accumulation, au-delà du prix départ, des frais de transport, des droits de douane, des taxes à l'importation, des marges successives des intermédiaires et de la TVA locale. Elle peut rendre le produit non compétitif ; on la réduit en raccourcissant le circuit, en adaptant le produit ou en optimisant l'origine et la logistique.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Prix départ usine (EXW)",
+          "+ transport et assurance jusqu'à la frontière du pays d'importation → valeur en douane (souvent CIF)",
+          "+ droits de douane (taux × valeur en douane) + frais de dédouanement",
+          "= coût débarqué (landed cost) pour l'importateur",
+          "+ marge de l'importateur, + marge du détaillant",
+          "+ TVA ou taxe locale sur le prix de vente final"
+        ] },
+        { "type": "attention", "texte": "Les marges en pourcentage s'appliquent à des bases déjà alourdies par les frais et droits : c'est ce qui fait « s'envoler » le prix final." }
+      ],
+      "termes": [
+        { "fr": "Escalade des prix", "en": "price escalation", "es": "escalada de precios", "definition": "Hausse du prix final due aux coûts et marges cumulés à l'export." },
+        { "fr": "Coût débarqué", "en": "landed cost", "es": "coste puesto en destino", "definition": "Coût de la marchandise dédouanée dans le pays d'importation." },
+        { "fr": "Prix départ usine", "en": "ex-works price", "es": "precio en fábrica", "definition": "Prix sans transport ni formalités." }
+      ],
+      "exemple": { "fictif": true, "texte": "Prix EXW 100 € ; transport et assurance jusqu'au port mexicain 15 € (CIF 115 €) ; droits 10 % : 11,50 € ; frais de dédouanement 3,50 € → coût débarqué 130 €. Marge importateur 25 % → 162,50 € ; marge détaillant 40 % → 227,50 € ; IVA 16 % → 263,90 €. Le prix final représente 2,64 fois le prix départ usine." },
+      "confusions": [
+        { "a": "Prix export (fixé par l'exportateur)", "b": "Prix de vente au consommateur (fixé par le distributeur)", "explication": "Avec un distributeur, l'exportateur ne maîtrise que son propre prix de vente." }
+      ],
+      "verification": ["Citez trois moyens de limiter l'escalade des prix."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.mix.distribution",
+      "titre": "Les canaux de distribution à l'international",
+      "niveau": "F",
+      "prerequis": ["ici.presence.distributeur"],
+      "connexes": ["ici.presence.choix", "ici.mix.prix-export"],
+      "question": "Par quels circuits les produits atteignent-ils le client final à l'étranger ?",
+      "definition": "Un canal de distribution est le chemin suivi par le produit jusqu'au client final ; sa longueur dépend du nombre d'intermédiaires. Circuit direct : du producteur au client (vente en ligne, force de vente propre). Circuit court : un intermédiaire (détaillant ou grande distribution). Circuit long : importateur, grossiste, détaillant. Le choix tient compte des habitudes d'achat locales, de la structure de la distribution (concentration, poids du commerce traditionnel ou du e-commerce), du coût, du contrôle souhaité et du service attendu.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Circuit", "Intermédiaires", "Avantages", "Inconvénients"], "lignes": [
+          ["Direct", "Aucun", "Marge et contrôle maximaux, relation client", "Logistique et service à assurer soi-même"],
+          ["Court", "Un (détaillant, enseigne)", "Accès à de gros volumes", "Pouvoir de négociation de l'enseigne"],
+          ["Long", "Plusieurs (importateur, grossiste, détaillant)", "Couverture large, peu d'investissement", "Escalade des prix, faible contrôle"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Canal de distribution", "en": "distribution channel", "es": "canal de distribución", "definition": "Chemin du produit du producteur au client final." },
+        { "fr": "Grossiste", "en": "wholesaler", "es": "mayorista", "definition": "Intermédiaire qui achète en gros pour revendre aux détaillants." },
+        { "fr": "Détaillant", "en": "retailer", "es": "minorista / detallista", "definition": "Intermédiaire qui vend au consommateur final." },
+        { "fr": "Place de marché en ligne", "en": "online marketplace", "es": "marketplace / plataforma de venta en línea", "definition": "Plateforme mettant en relation vendeurs et acheteurs." }
+      ],
+      "exemple": { "fictif": true, "texte": "En Allemagne, une marque de thé vend en ligne directement (circuit direct), via une chaîne de magasins bio (circuit court) et via un importateur qui alimente les épiceries indépendantes (circuit long)." },
+      "confusions": [
+        { "a": "Canal (type de circuit)", "b": "Intermédiaire (acteur du circuit)", "explication": "Le canal est le chemin ; les intermédiaires en sont les étapes." }
+      ],
+      "verification": ["Pourquoi un circuit long accentue-t-il l'escalade des prix ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "ici.mix.communication",
+      "titre": "La communication internationale",
+      "niveau": "F",
+      "prerequis": ["ici.mix.standardisation-adaptation"],
+      "connexes": ["mgi.grilles.hall", "ici.prospection.outils"],
+      "question": "Comment faire passer le même message dans des langues et des cultures différentes ?",
+      "definition": "La communication internationale adapte le message, les supports et le ton aux marchés : langue (traduction et localisation, pas seulement traduction littérale), références culturelles (humour, symboles, couleurs, rôle des personnages), réglementation de la publicité (produits interdits ou encadrés, publicité comparative, protection des mineurs), médias disponibles et usages numériques (réseaux sociaux dominants). En communication B to B, salons, documentation technique, site web et réseaux professionnels priment.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Localiser : adapter les unités, les dates, les références, les visuels, pas seulement le texte",
+          "Vérifier la réglementation de la publicité dans chaque pays",
+          "Tester le nom, le slogan et les visuels auprès de locuteurs natifs",
+          "Choisir les canaux pertinents (moteurs de recherche et réseaux sociaux locaux)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Localisation", "en": "localisation (L10n)", "es": "localización", "definition": "Adaptation linguistique et culturelle d'un contenu à un marché." },
+        { "fr": "Communication B to B", "en": "business-to-business (B2B) communication", "es": "comunicación B2B (entre empresas)", "definition": "Communication destinée à des clients professionnels." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un slogan fondé sur un jeu de mots en français est remplacé, pour l'Espagne, par une formule originale testée auprès de consommateurs, et les visuels sont réalisés avec des modèles et des décors locaux." },
+      "confusions": [
+        { "a": "Traduction", "b": "Localisation", "explication": "La traduction transpose le texte ; la localisation adapte l'ensemble du message au contexte culturel." }
+      ],
+      "verification": ["Pourquoi une traduction littérale d'un slogan est-elle risquée ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.ici.mix.001", "notion": "ici.mix.standardisation-adaptation", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Quel est le principal avantage de la standardisation du marketing mix ?",
+      "choix": [
+        { "id": "a", "texte": "Les économies d'échelle et la cohérence de l'image", "correct": true, "explication": "Un seul produit et un seul message pour tous les marchés." },
+        { "id": "b", "texte": "La parfaite adéquation aux goûts locaux", "correct": false, "explication": "C'est l'avantage de l'adaptation." },
+        { "id": "c", "texte": "Le respect automatique des normes locales", "correct": false, "explication": "Au contraire, la standardisation peut entrer en conflit avec elles." },
+        { "id": "d", "texte": "La possibilité de fixer des prix différents", "correct": false, "explication": "C'est une forme d'adaptation." }
+      ]
+    },
+    {
+      "id": "q.ici.mix.002", "notion": "ici.mix.produit", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Parmi ces adaptations du produit, lesquelles sont en général obligatoires ?",
+      "choix": [
+        { "id": "a", "texte": "Étiquetage dans la langue officielle du pays", "correct": true, "explication": "Exigence légale fréquente." },
+        { "id": "b", "texte": "Conformité aux normes de sécurité locales", "correct": true, "explication": "Condition de mise sur le marché." },
+        { "id": "c", "texte": "Changement de couleur de l'emballage pour plaire davantage", "correct": false, "explication": "Adaptation volontaire, marketing." },
+        { "id": "d", "texte": "Recette moins sucrée", "correct": false, "explication": "Adaptation volontaire (sauf réglementation nutritionnelle spécifique)." }
+      ]
+    },
+    {
+      "id": "q.ici.mix.003", "notion": "ici.mix.prix-export", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Coût débarqué 200 € ; marge de l'importateur 20 % ; marge du détaillant 50 % ; TVA locale 20 % sur le prix final. Prix TTC au consommateur ?",
+      "choix": [
+        { "id": "a", "texte": "432 €", "correct": true, "explication": "200 × 1,20 = 240 ; × 1,50 = 360 ; × 1,20 = 432 €." },
+        { "id": "b", "texte": "380 €", "correct": false, "explication": "On a additionné les taux (200 × 1,90) : les marges se cumulent en cascade." },
+        { "id": "c", "texte": "360 €", "correct": false, "explication": "C'est le prix hors taxe." },
+        { "id": "d", "texte": "290 €", "correct": false, "explication": "Aucun calcul correct ne donne ce montant." }
+      ]
+    },
+    {
+      "id": "q.ici.mix.004", "notion": "ici.mix.prix-export", "format": "multiple", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "Quelles décisions peuvent réduire l'escalade des prix sur un marché lointain ?",
+      "choix": [
+        { "id": "a", "texte": "Raccourcir le circuit de distribution", "correct": true, "explication": "Moins de marges cumulées." },
+        { "id": "b", "texte": "Bénéficier d'un tarif préférentiel grâce à l'origine du produit", "correct": true, "explication": "Droits de douane réduits ou nuls (accord de libre-échange)." },
+        { "id": "c", "texte": "Ajouter un intermédiaire grossiste", "correct": false, "explication": "Une marge de plus." },
+        { "id": "d", "texte": "Assembler ou conditionner localement", "correct": true, "explication": "Droits souvent plus faibles sur les composants, transport optimisé." }
+      ]
+    },
+    {
+      "id": "q.ici.mix.005", "notion": "ici.mix.distribution", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Producteur → importateur → grossiste → détaillant → consommateur : de quel circuit s'agit-il ?",
+      "choix": [
+        { "id": "a", "texte": "Un circuit long", "correct": true, "explication": "Plusieurs intermédiaires." },
+        { "id": "b", "texte": "Un circuit court", "correct": false, "explication": "Il ne comporterait qu'un intermédiaire." },
+        { "id": "c", "texte": "Un circuit direct", "correct": false, "explication": "Il n'aurait aucun intermédiaire." },
+        { "id": "d", "texte": "Une franchise", "correct": false, "explication": "Mode de présence, pas circuit." }
+      ]
+    },
+    {
+      "id": "q.ici.mix.006", "notion": "ici.mix.communication", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "enonce": "Vrai ou faux : une bonne traduction suffit pour adapter une campagne publicitaire à un nouveau pays.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "Il faut localiser : références, visuels, humour, réglementation, canaux." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "La localisation va au-delà de la traduction." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.ici.mix.001", "notions": ["ici.mix.standardisation-adaptation", "ici.mix.produit", "ici.mix.communication"],
+      "question": "Standardisation ou adaptation : présentez le débat, les facteurs de choix, et les adaptations obligatoires du produit et de la communication.",
+      "reponse": "Standardisation (Levitt, 1983) : économies d'échelle, image cohérente ; adaptation : réponse aux attentes locales et conformité. En pratique, glocalisation. Facteurs : nature du produit, homogénéité des cibles, réglementation, coûts. Adaptations obligatoires : normes, sécurité, étiquetage en langue locale, mentions légales, réglementation publicitaire ; adaptations volontaires : goûts, formats, visuels, ton. La communication se localise, au-delà de la traduction.",
+      "indispensables": ["Avantages de chaque option", "Glocalisation", "Adaptations obligatoires vs volontaires", "Localisation de la communication"],
+      "erreurs": ["Réduire l'adaptation à la traduction"]
+    },
+    {
+      "id": "f.ici.mix.002", "notions": ["ici.mix.prix-export", "ici.mix.distribution"],
+      "question": "Expliquez l'escalade des prix et le lien avec la longueur du canal de distribution.",
+      "reponse": "Du prix départ usine au prix consommateur s'ajoutent transport et assurance, droits de douane et frais de dédouanement (coût débarqué), marges successives des intermédiaires, puis TVA locale. Les marges et taxes en pourcentage s'appliquent sur des bases déjà augmentées : le prix final peut atteindre deux à trois fois le prix départ. Plus le canal est long, plus l'escalade est forte ; on la limite par un canal plus court, une origine préférentielle, un assemblage local ou un produit adapté.",
+      "indispensables": ["Étapes de construction du prix", "Effet cumulatif des pourcentages", "Lien avec la longueur du canal", "Moyens de limiter l'escalade"],
+      "erreurs": ["Additionner les taux de marge"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.ici.mix.01", "notions": ["ici.mix.prix-export"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Escalade du prix d'une sauce au Mexique",
+      "enonce": "Prix départ usine d'un carton : 100 €. Transport et assurance jusqu'à Veracruz : 15 €. Droits de douane : 10 % de la valeur CIF. Frais de dédouanement : 3,50 €. Marge de l'importateur : 25 % de son coût. Marge du détaillant : 40 % de son prix d'achat. IVA : 16 % du prix de vente du détaillant.",
+      "questions": [
+        { "id": "1", "consigne": "Coût débarqué pour l'importateur (€) ?", "reponse": { "type": "nombre", "valeur": 130, "tolerance": 0.01, "unite": "€" },
+          "correction": ["CIF : 100 + 15 = 115 €", "Droits : 11,50 € ; frais : 3,50 €", "Coût débarqué : 130 €"] },
+        { "id": "2", "consigne": "Prix de vente TTC au consommateur (€) ?", "reponse": { "type": "nombre", "valeur": 263.9, "tolerance": 0.02, "unite": "€" },
+          "correction": ["Importateur : 130 × 1,25 = 162,50 €", "Détaillant : 162,50 × 1,40 = 227,50 €", "TTC : 227,50 × 1,16 = 263,90 €"] },
+        { "id": "3", "consigne": "Coefficient d'escalade (prix final ÷ prix départ usine, 2 décimales) ?", "reponse": { "type": "nombre", "valeur": 2.64, "tolerance": 0.01 },
+          "correction": ["263,90 ÷ 100 = 2,64"] },
+        { "id": "4", "consigne": "Nouveau prix TTC si l'entreprise vend directement aux détaillants (même marge détaillant), en prenant à sa charge les 15 € de frais d'importation supplémentaires (€) ?", "reponse": { "type": "nombre", "valeur": 235.48, "tolerance": 0.05, "unite": "€" },
+          "correction": ["Prix d'achat du détaillant : 130 + 15 = 145 €", "× 1,40 = 203 € ; × 1,16 = 235,48 €", "Le circuit raccourci réduit le prix final d'environ 11 %"] }
+      ]
+    }
+  ]
+}
