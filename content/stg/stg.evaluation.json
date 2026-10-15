@@ -1,0 +1,88 @@
+{
+  "chapitre": "stg.evaluation",
+  "notions": [
+    {
+      "id": "stg.evaluation.bareme",
+      "titre": "Le barème et la validation du stage",
+      "niveau": "F",
+      "prerequis": ["stg.rapport.structure", "stg.soutenance.preparation"],
+      "connexes": ["stg.rapport.erreurs"],
+      "question": "Comment la note de stage est-elle calculée, et que se passe-t-il si elle est insuffisante ?",
+      "definition": "Le livret d'Orléans (2021-2022) note le stage sur 100 points : 20 points pour l'évaluation par l'organisme d'accueil (grille remplie par le maître de stage), 40 points pour le rapport et 40 points pour la soutenance. Le stage est validé à partir de 50/100. L'UE de stage est exclue de la compensation : sa note n'entre pas dans la moyenne du semestre, et le diplôme ne peut être délivré qu'après validation du stage. Le rapport est apprécié selon cinq critères : présentation et expression, qualité du plan, analyse et synthèse, valeur des propositions, caractère scientifique.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Composante", "Points", "Évaluateur"], "lignes": [
+          ["Évaluation du stagiaire en milieu professionnel", "20", "Maître de stage (grille d'évaluation)"],
+          ["Rapport de stage", "40", "Enseignant-tuteur (et jury)"],
+          ["Soutenance", "40", "Jury"],
+          ["Total — validation", "100 — au moins 50", ""]
+        ] },
+        { "type": "attention", "texte": "Remettre le rapport au tuteur au moins 10 jours avant la soutenance, et s'assurer que l'organisme a bien transmis sa grille d'évaluation avant la soutenance." }
+      ],
+      "termes": [
+        { "fr": "Compensation", "en": "compensation (averaging of marks)", "es": "compensación de notas", "definition": "Mécanisme permettant à une bonne note de compenser une note insuffisante." },
+        { "fr": "Grille d'évaluation", "en": "assessment grid / rubric", "es": "rúbrica / ficha de evaluación", "definition": "Document listant les critères de notation." }
+      ],
+      "exemple": { "fictif": true, "texte": "Organisme 15/20, rapport 21/40, soutenance 17/40 : total 53/100, stage validé. Avec un rapport à 14/40 (simple compte rendu), le total tomberait à 46/100 : stage non validé, même avec une excellente moyenne dans les autres UE, puisque le stage n'est pas compensable." },
+      "confusions": [
+        { "a": "UE de stage (non compensable)", "b": "Autres UE du semestre (compensables entre elles)", "explication": "Une bonne moyenne générale ne rattrape pas un stage non validé." }
+      ],
+      "verification": ["Quelles sont les trois composantes de la note de stage et leur poids ?"],
+      "sources": ["src.orleans-stage"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Barème et règle de non-compensation issus du livret 2021-2022 : vérifier les modalités de contrôle des connaissances de l'année en cours."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.stg.evaluation.001", "notion": "stg.evaluation.bareme", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Comment se répartissent les 100 points de la note de stage (livret 2021-2022) ?",
+      "choix": [
+        { "id": "a", "texte": "Organisme 20, rapport 40, soutenance 40", "correct": true, "explication": "Répartition indiquée par le livret." },
+        { "id": "b", "texte": "Rapport 50, soutenance 50", "correct": false, "explication": "L'évaluation de l'organisme compte pour 20 points." },
+        { "id": "c", "texte": "Organisme 40, rapport 40, soutenance 20", "correct": false, "explication": "Les poids de l'organisme et de la soutenance sont inversés." },
+        { "id": "d", "texte": "Rapport 100", "correct": false, "explication": "Trois composantes sont évaluées." }
+      ]
+    },
+    {
+      "id": "q.stg.evaluation.002", "notion": "stg.evaluation.bareme", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : une note de stage de 45/100 peut être compensée par de bonnes notes dans les autres UE du semestre.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "L'UE de stage est exclue de la compensation." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "Le stage doit être validé pour lui-même (au moins 50/100)." }
+      ]
+    },
+    {
+      "id": "q.stg.evaluation.003", "notion": "stg.evaluation.bareme", "format": "multiple", "niveau": 2, "competence": "memoriser",
+      "enonce": "Quels critères le livret retient-il pour noter le rapport ?",
+      "choix": [
+        { "id": "a", "texte": "Présentation, qualité de l'expression, orthographe", "correct": true, "explication": "Critère 1." },
+        { "id": "b", "texte": "Qualité du plan", "correct": true, "explication": "Critère 2." },
+        { "id": "c", "texte": "Valeur des propositions", "correct": true, "explication": "Critère 4." },
+        { "id": "d", "texte": "Nombre d'annexes", "correct": false, "explication": "Les annexes doivent seulement être utiles." },
+        { "id": "e", "texte": "Caractère scientifique", "correct": true, "explication": "Critère 5 : références théoriques." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.stg.evaluation.001", "notions": ["stg.evaluation.bareme"],
+      "question": "Expliquez le barème du stage, le seuil de validation et la règle de compensation.",
+      "reponse": "Note sur 100 : 20 points pour l'organisme d'accueil (grille du maître de stage), 40 pour le rapport, 40 pour la soutenance. Validation à 50/100. L'UE de stage n'entre pas dans la compensation ni dans la moyenne du semestre ; le diplôme n'est délivré qu'après validation du stage. Rapport noté sur la présentation, le plan, l'analyse et la synthèse, la valeur des propositions et le caractère scientifique.",
+      "indispensables": ["20 / 40 / 40", "Validation à 50", "Non compensable", "Cinq critères du rapport"],
+      "erreurs": ["Croire que la moyenne générale rattrape le stage"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.stg.evaluation.01", "notions": ["stg.evaluation.bareme"], "type": "calcul", "niveau": 1, "fictif": true,
+      "titre": "Calculer une note de stage",
+      "enonce": "Un étudiant obtient 16/20 à la grille de l'organisme d'accueil, 13/20 au rapport et 12/20 à la soutenance (notes données sur 20 par le jury).",
+      "questions": [
+        { "id": "1", "consigne": "Note finale sur 100 ?", "reponse": { "type": "nombre", "valeur": 66, "tolerance": 0.01, "unite": "/100" },
+          "correction": ["Organisme : 16 sur 20 points", "Rapport : 13/20 × 40 = 26 points", "Soutenance : 12/20 × 40 = 24 points", "Total : 16 + 26 + 24 = 66/100 : stage validé"] },
+        { "id": "2", "consigne": "Quelle note minimale au rapport (sur 20) lui aurait suffi pour valider, les autres notes restant inchangées ?", "reponse": { "type": "nombre", "valeur": 5, "tolerance": 0.01, "unite": "/20" },
+          "correction": ["Il faut 50 − 16 − 24 = 10 points sur 40 au rapport", "10/40 = 5/20"] }
+      ]
+    }
+  ]
+}

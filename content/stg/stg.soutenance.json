@@ -1,0 +1,70 @@
+{
+  "chapitre": "stg.soutenance",
+  "notions": [
+    {
+      "id": "stg.soutenance.preparation",
+      "titre": "Préparer et réussir la soutenance",
+      "niveau": "F",
+      "prerequis": ["stg.rapport.structure"],
+      "connexes": ["stg.evaluation.bareme"],
+      "question": "Comment présenter en vingt minutes un travail que le jury a déjà lu ?",
+      "definition": "Selon le livret d'Orléans, la soutenance réunit l'enseignant-tuteur et au moins un représentant de l'organisme d'accueil (à défaut, un second enseignant). L'exposé dure 15 à 20 minutes, suivi de 10 à 15 minutes de questions. Ce n'est pas une répétition du rapport, que le jury a lu : il s'agit de synthétiser la démarche et les résultats, d'évoquer les difficultés résolues et de montrer le recul acquis. Pour un stage à l'étranger, la soutenance peut se faire dans la langue du pays.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Construire un support visuel sobre (diaporama, de préférence exporté en PDF) : une idée par diapositive",
+          "Structure : contexte et problématique ; démarche ; résultats et propositions ; limites et bilan personnel",
+          "S'entraîner en se chronométrant, en s'enregistrant ou en se filmant",
+          "Vérifier le matériel (ordinateur, projecteur, clé USB, connexion pour une visioconférence)",
+          "Anticiper les questions : choix de la problématique, chiffres, limites, transposition à d'autres marchés",
+          "Le jour J : tenue professionnelle, arriver en avance, maîtriser le temps, écouter et faire reformuler les questions"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Soutenance", "en": "oral defence / viva", "es": "defensa oral / exposición", "definition": "Présentation orale du travail devant un jury." },
+        { "fr": "Support de présentation", "en": "slide deck / visual aid", "es": "presentación / apoyo visual", "definition": "Document projeté pendant l'exposé." },
+        { "fr": "Jury", "en": "examining panel / board of examiners", "es": "tribunal", "definition": "Personnes chargées d'évaluer la soutenance." }
+      ],
+      "exemple": { "fictif": true, "texte": "Diapositive 1 : titre et problématique. 2 : l'entreprise en trois chiffres. 3-4 : diagnostic des litiges (graphique). 5-7 : trois propositions avec leur coût et leur gain. 8 : limites et suites. 9 : ce que le stage m'a appris. Durée visée : 17 minutes, laissant une marge." },
+      "contreExemple": "Lire à l'écran des paragraphes entiers du rapport : le livret le déconseille expressément, le jury ayant déjà lu le document.",
+      "confusions": [
+        { "a": "Résumer le rapport page après page", "b": "Synthétiser la démarche et les résultats", "explication": "L'oral apporte une valeur ajoutée : hiérarchisation, recul, difficultés, échange." }
+      ],
+      "verification": ["Quelle est la durée de l'exposé et celle des questions selon le livret ?"],
+      "sources": ["src.orleans-stage"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Date limite de soutenance (2 juillet en 2021-2022, dérogation jusqu'au 2 septembre) : à vérifier pour l'année en cours."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.stg.soutenance.001", "notion": "stg.soutenance.preparation", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quel est le cadrage horaire de la soutenance selon le livret d'Orléans ?",
+      "choix": [
+        { "id": "a", "texte": "Exposé de 15 à 20 minutes, puis 10 à 15 minutes de questions", "correct": true, "explication": "Cadrage indiqué par le livret." },
+        { "id": "b", "texte": "Exposé de 45 minutes", "correct": false, "explication": "Beaucoup trop long." },
+        { "id": "c", "texte": "Questions uniquement, sans exposé", "correct": false, "explication": "L'étudiant présente d'abord son travail." },
+        { "id": "d", "texte": "5 minutes d'exposé", "correct": false, "explication": "Trop court pour présenter la démarche." }
+      ]
+    },
+    {
+      "id": "q.stg.soutenance.002", "notion": "stg.soutenance.preparation", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles pratiques le livret recommande-t-il pour la soutenance ?",
+      "choix": [
+        { "id": "a", "texte": "S'entraîner en s'enregistrant ou en se filmant", "correct": true, "explication": "Première clé de réussite selon le livret." },
+        { "id": "b", "texte": "Relire les meilleurs passages du rapport", "correct": false, "explication": "Le livret le déconseille : le jury l'a déjà lu." },
+        { "id": "c", "texte": "Vérifier le matériel et privilégier le format PDF", "correct": true, "explication": "Conseil explicite du livret." },
+        { "id": "d", "texte": "Faire reformuler une question mal comprise", "correct": true, "explication": "Le jury ne cherche pas à piéger." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.stg.soutenance.001", "notions": ["stg.soutenance.preparation"],
+      "question": "Comment préparer la soutenance de stage (format, contenu, entraînement, jour J) ?",
+      "reponse": "Jury : enseignant-tuteur et représentant de l'organisme. Exposé de 15 à 20 minutes puis 10 à 15 minutes de questions. Contenu : problématique, démarche, résultats et propositions, limites, bilan — sans relire le rapport. Support visuel sobre, de préférence en PDF ; entraînement chronométré, enregistré ou filmé ; vérification du matériel ; tenue professionnelle, arrivée en avance, écoute des questions.",
+      "indispensables": ["Durées", "Ne pas relire le rapport", "Synthèse démarche et résultats", "Entraînement"],
+      "complementaires": ["Langue du pays possible pour un stage à l'étranger"],
+      "erreurs": ["Dépasser le temps imparti"]
+    }
+  ]
+}

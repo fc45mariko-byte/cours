@@ -1,0 +1,67 @@
+{
+  "chapitre": "stg.recherche",
+  "notions": [
+    {
+      "id": "stg.recherche.candidature",
+      "titre": "CV et lettre de motivation",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["stg.cadre.objectifs", "stg.rapport.problematique"],
+      "question": "Comment obtenir un entretien quand on n'a pas encore d'expérience dans le commerce international ?",
+      "definition": "Le livret d'Orléans présente la recherche de stage comme une démarche personnelle comparable à une recherche d'emploi : une lettre de candidature précisant la demande et un curriculum vitae, dans le but d'obtenir un entretien. Le CV présente de façon synthétique formation, expériences, langues et compétences ; la lettre de motivation montre l'adéquation entre ce que l'on apporte et les besoins de l'entreprise (vous, moi, nous). Le BSIP de l'UFR peut relire CV et lettre.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "CV : une page, titre clair (« Étudiant(e) en L3 LEA anglais-espagnol – recherche stage export de 6 semaines, avril-mai »), rubriques formation, expériences, langues (niveau CECRL, certifications), compétences (logiciels, outils), centres d'intérêt utiles",
+          "Valoriser les expériences même modestes par des résultats (« accueil d'une clientèle internationale, 50 contacts par jour »)",
+          "Lettre : vous (ce que je sais de l'entreprise et de ses besoins) → moi (ce que j'apporte, preuves à l'appui) → nous (proposition de rencontre)",
+          "Adapter chaque envoi à l'entreprise et à la langue (CV en anglais ou en espagnol pour une entreprise étrangère)",
+          "Relancer poliment une à deux semaines après l'envoi"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Curriculum vitae (CV)", "en": "CV (UK) / résumé (US)", "es": "currículum (vítae) / CV", "definition": "Document synthétique présentant parcours et compétences." },
+        { "fr": "Lettre de motivation", "en": "cover letter / covering letter", "es": "carta de presentación / de motivación", "definition": "Lettre accompagnant le CV et justifiant la candidature." },
+        { "fr": "Candidature spontanée", "en": "speculative / unsolicited application", "es": "candidatura espontánea", "definition": "Candidature envoyée sans offre publiée." }
+      ],
+      "exemple": { "fictif": true, "texte": "Plutôt que « Je suis dynamique et motivée », une étudiante écrit : « Votre développement en Amérique latine, annoncé lors du salon de Lyon, exigera des supports commerciaux en espagnol : j'ai traduit le catalogue d'une coopérative lors d'un emploi d'été et je maîtrise les Incoterms, que j'étudie en techniques du commerce international. »" },
+      "contreExemple": "Une lettre identique envoyée à cinquante entreprises, centrée sur ce que le stage apportera à l'étudiant, a peu de chances d'aboutir.",
+      "confusions": [
+        { "a": "CV britannique (CV, souvent sans photo ni date de naissance)", "b": "Résumé américain (une page, très orienté résultats)", "explication": "Les usages varient selon les pays : adapter forme et contenu au pays de l'entreprise." }
+      ],
+      "verification": ["Quelles sont les trois parties d'une lettre de motivation selon le schéma vous / moi / nous ?"],
+      "sources": ["src.orleans-stage"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.stg.recherche.001", "notion": "stg.recherche.candidature", "format": "unique", "niveau": 1, "competence": "comprendre",
+      "enonce": "Quelle phrase d'accroche est la plus efficace dans une lettre de motivation pour un stage export ?",
+      "choix": [
+        { "id": "a", "texte": "« Votre récente implantation au Chili appelle un suivi commercial en espagnol, que je peux assurer. »", "correct": true, "explication": "Elle part des besoins de l'entreprise et propose une contribution précise." },
+        { "id": "b", "texte": "« Je suis à la recherche d'un stage pour valider ma licence. »", "correct": false, "explication": "Centrée sur l'étudiant, elle n'apporte rien à l'entreprise." },
+        { "id": "c", "texte": "« Je suis dynamique, rigoureux et motivé. »", "correct": false, "explication": "Qualités affirmées sans preuve." },
+        { "id": "d", "texte": "« Madame, Monsieur, veuillez trouver ci-joint mon CV. »", "correct": false, "explication": "Formule neutre, sans accroche." }
+      ]
+    },
+    {
+      "id": "q.stg.recherche.002", "notion": "stg.recherche.candidature", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles pratiques améliorent un CV de candidature à un stage export ?",
+      "choix": [
+        { "id": "a", "texte": "Indiquer les niveaux de langue selon le CECRL ou une certification", "correct": true, "explication": "Le recruteur peut évaluer objectivement le niveau." },
+        { "id": "b", "texte": "Chiffrer les résultats des expériences", "correct": true, "explication": "Les chiffres rendent l'expérience concrète." },
+        { "id": "c", "texte": "Utiliser le même CV en français pour toutes les entreprises, y compris étrangères", "correct": false, "explication": "Il faut adapter la langue et les usages du pays." },
+        { "id": "d", "texte": "Préciser dans le titre le type et la période de stage recherchés", "correct": true, "explication": "Le recruteur comprend immédiatement la demande." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.stg.recherche.001", "notions": ["stg.recherche.candidature"],
+      "question": "Expliquez comment construire une candidature de stage efficace (CV et lettre).",
+      "reponse": "CV d'une page, titre précisant le stage recherché, expériences valorisées par des résultats, langues avec niveau CECRL, compétences utiles. Lettre structurée vous / moi / nous : besoins de l'entreprise, preuves de ce que j'apporte, proposition d'entretien. Adapter chaque candidature (entreprise, pays, langue) et relancer.",
+      "indispensables": ["CV synthétique et ciblé", "Lettre vous / moi / nous", "Preuves plutôt qu'adjectifs", "Adaptation à l'entreprise et au pays"],
+      "erreurs": ["Lettre générique centrée sur l'étudiant"]
+    }
+  ]
+}
