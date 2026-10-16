@@ -1,0 +1,102 @@
+{
+  "chapitre": "dcl.lexique",
+  "notions": [
+    {
+      "id": "dcl.lexique.contrat-anglais",
+      "titre": "Le vocabulaire des contrats anglo-saxons",
+      "niveau": "F",
+      "prerequis": ["dcl.systemes.civil-common"],
+      "connexes": ["dai.contrat.clauses", "dcl.contenu.terms"],
+      "question": "Comment lire et traduire les formules typiques d'un contrat rédigé en anglais juridique ?",
+      "definition": "Les contrats de common law suivent une structure et un vocabulaire codifiés : parties et date, recitals (« Whereas… », exposé préalable), definitions, clauses opérationnelles, puis boilerplate clauses (clauses standard : entire agreement, severability, waiver, assignment, notices, force majeure, governing law, jurisdiction). Le verbe « shall » exprime une obligation (doit), « may » une faculté (peut), « will » souvent un engagement ou un futur. Des formules archaïques subsistent : « hereinafter » (ci-après), « hereto » (aux présentes), « notwithstanding » (nonobstant), « provided that » (à condition que, sous réserve que), « in witness whereof » (en foi de quoi). Plusieurs faux amis exigent la prudence : « consideration », « warranty », « condition », « damages », « eventually », « actual ».",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Anglais", "Français", "Remarque"], "lignes": [
+          ["Whereas (recitals)", "Attendu que / Préambule", "Exposé du contexte, sans obligation"],
+          ["Shall", "Doit / s'engage à", "Obligation ; à ne pas traduire par un futur"],
+          ["Hereinafter referred to as", "Ci-après dénommé", "Définition d'une partie"],
+          ["Notwithstanding", "Nonobstant / par dérogation à", "Clause qui prime"],
+          ["Provided that", "Sous réserve que / à condition que", "Condition ou exception"],
+          ["Indemnify and hold harmless", "Garantir et indemniser", "Prise en charge des réclamations de tiers"],
+          ["Severability", "Divisibilité / autonomie des clauses", "Une clause nulle n'invalide pas le reste"],
+          ["Waiver", "Renonciation", "Ne pas exercer un droit n'y fait pas renoncer"],
+          ["Governing law", "Loi applicable", "Distincte de la juridiction"],
+          ["Damages", "Dommages-intérêts", "Faux ami : pas « dommages » au sens de dégâts"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Préambule / considérants", "en": "recitals (Whereas clauses)", "es": "exponendo / considerandos", "definition": "Exposé du contexte du contrat." },
+        { "fr": "Clauses types", "en": "boilerplate clauses", "es": "cláusulas estándar / de estilo", "definition": "Clauses générales reprises dans la plupart des contrats." },
+        { "fr": "Divisibilité", "en": "severability clause", "es": "cláusula de divisibilidad / salvaguarda", "definition": "Maintien du contrat malgré la nullité d'une clause." },
+        { "fr": "Renonciation", "en": "waiver", "es": "renuncia", "definition": "Abandon volontaire d'un droit." },
+        { "fr": "Cession", "en": "assignment", "es": "cesión", "definition": "Transfert du contrat ou de droits à un tiers." },
+        { "fr": "Garantir et indemniser", "en": "indemnify and hold harmless", "es": "indemnizar y mantener indemne", "definition": "Prise en charge des pertes ou réclamations de tiers." }
+      ],
+      "exemple": { "fictif": true, "texte": "« The Distributor shall not, without the prior written consent of the Supplier, assign this Agreement, provided that such consent shall not be unreasonably withheld. » → « Le Distributeur ne peut céder le présent Contrat sans l'accord écrit préalable du Fournisseur, lequel ne pourra refuser cet accord sans motif raisonnable. »" },
+      "confusions": [
+        { "a": "Warranty (garantie / déclaration ; terme accessoire)", "b": "Guarantee (cautionnement)", "explication": "La guarantee est un engagement de payer la dette d'autrui." },
+        { "a": "Eventually (finalement)", "b": "Éventuellement (possibly)", "explication": "Faux ami classique." }
+      ],
+      "verification": ["Comment traduire « shall » dans une clause contractuelle, et pourquoi ?"],
+      "sources": ["src.boye"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dcl.lexique.001", "notion": "dcl.lexique.contrat-anglais", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Dans un contrat, « The Buyer shall pay the price within 30 days » signifie :",
+      "choix": [
+        { "id": "a", "texte": "L'Acheteur doit payer le prix sous 30 jours", "correct": true, "explication": "« Shall » exprime l'obligation." },
+        { "id": "b", "texte": "L'Acheteur paiera peut-être le prix", "correct": false, "explication": "« Shall » n'exprime pas une possibilité." },
+        { "id": "c", "texte": "L'Acheteur peut payer le prix", "correct": false, "explication": "C'est le sens de « may »." },
+        { "id": "d", "texte": "L'Acheteur a payé le prix", "correct": false, "explication": "Contresens temporel." }
+      ]
+    },
+    {
+      "id": "q.dcl.lexique.002", "notion": "dcl.lexique.contrat-anglais", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quelle clause prévoit que la nullité d'une stipulation n'affecte pas le reste du contrat ?",
+      "choix": [
+        { "id": "a", "texte": "Severability", "correct": true, "explication": "Clause de divisibilité." },
+        { "id": "b", "texte": "Waiver", "correct": false, "explication": "Renonciation." },
+        { "id": "c", "texte": "Assignment", "correct": false, "explication": "Cession." },
+        { "id": "d", "texte": "Governing law", "correct": false, "explication": "Loi applicable." }
+      ]
+    },
+    {
+      "id": "q.dcl.lexique.003", "notion": "dcl.lexique.contrat-anglais", "format": "multiple", "niveau": 2, "competence": "detecter-erreur",
+      "enonce": "Quelles traductions sont des contresens ?",
+      "choix": [
+        { "id": "a", "texte": "« damages » → « dommages matériels »", "correct": true, "explication": "En droit des contrats, « damages » signifie dommages-intérêts." },
+        { "id": "b", "texte": "« notwithstanding » → « nonobstant »", "correct": false, "explication": "Traduction correcte." },
+        { "id": "c", "texte": "« eventually » → « éventuellement »", "correct": true, "explication": "« Eventually » signifie « finalement »." },
+        { "id": "d", "texte": "« hereinafter » → « ci-après »", "correct": false, "explication": "Traduction correcte." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dcl.lexique.001", "notions": ["dcl.lexique.contrat-anglais"],
+      "question": "Décrivez la structure d'un contrat anglo-saxon et traduisez dix termes ou formules clés.",
+      "reponse": "Structure : parties et date, recitals (Whereas), definitions, clauses opérationnelles, boilerplate (entire agreement, severability, waiver, assignment, notices, force majeure, governing law, jurisdiction), signature (in witness whereof). Termes : shall = doit ; may = peut ; hereinafter = ci-après ; notwithstanding = nonobstant ; provided that = sous réserve que ; indemnify and hold harmless = garantir et indemniser ; severability = divisibilité ; waiver = renonciation ; assignment = cession ; damages = dommages-intérêts.",
+      "indispensables": ["Structure", "Shall / may", "Clauses boilerplate", "Faux amis"],
+      "erreurs": ["Traduire shall par un futur"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.dcl.lexique.01", "notions": ["dcl.lexique.contrat-anglais"], "type": "traduction", "niveau": 2, "fictif": true,
+      "titre": "Traduire des clauses de contrat",
+      "enonce": "Traduisez en français les clauses suivantes d'un contrat de distribution soumis au droit anglais.",
+      "questions": [
+        { "id": "1", "consigne": "« No failure or delay by either party in exercising any right under this Agreement shall constitute a waiver of that right. »",
+          "reponse": { "type": "libre", "criteres": ["« shall » rendu par une obligation ou une règle (« ne vaut pas »)", "« waiver » traduit par « renonciation »", "Sens complet : absence ou retard d'exercice ≠ renonciation"],
+            "corrige": "« Le fait pour l'une des parties de ne pas exercer, ou d'exercer tardivement, un droit qu'elle tient du présent Contrat ne vaut pas renonciation à ce droit. »" },
+          "correction": ["Voir le corrigé"] },
+        { "id": "2", "consigne": "« This Agreement shall be governed by and construed in accordance with the laws of England and Wales. The courts of England shall have exclusive jurisdiction. »",
+          "reponse": { "type": "libre", "criteres": ["Loi applicable : droit anglais (Angleterre et pays de Galles)", "« construed » : interprété", "Compétence exclusive des tribunaux anglais", "Deux clauses distinctes bien rendues"],
+            "corrige": "« Le présent Contrat est régi par le droit de l'Angleterre et du pays de Galles et interprété conformément à celui-ci. Les tribunaux anglais sont seuls compétents. »" },
+          "correction": ["Voir le corrigé"] }
+      ]
+    }
+  ]
+}

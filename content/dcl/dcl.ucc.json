@@ -1,0 +1,76 @@
+{
+  "chapitre": "dcl.ucc",
+  "notions": [
+    {
+      "id": "dcl.ucc.article2",
+      "titre": "UCC article 2 : champ et battle of the forms",
+      "niveau": "A",
+      "prerequis": ["dcl.juridictions.usa", "dcl.formation.acceptance"],
+      "connexes": ["dai.cvim.formation", "dai.cvim.champ"],
+      "question": "Quelles règles régissent la vente de marchandises aux États-Unis, notamment quand les conditions générales de l'acheteur et du vendeur se contredisent ?",
+      "definition": "L'Uniform Commercial Code (UCC) est un texte modèle élaboré par l'Uniform Law Commission et l'American Law Institute, adopté (avec des variantes) par les États ; son article 2 régit la vente de marchandises (goods) et prévoit des règles particulières entre commerçants (merchants). Il assouplit la common law : un contrat peut être formé par tout comportement manifestant un accord, même si certains termes restent ouverts (§ 2-204). Selon le § 2-207 (battle of the forms), une acceptation contenant des termes additionnels ou différents vaut acceptation, sauf si elle est expressément conditionnée à l'accord sur ces termes ; entre commerçants, les termes additionnels deviennent partie du contrat sauf s'ils modifient substantiellement l'offre ou si l'offrant s'y oppose ; pour les termes contradictoires, la majorité des juridictions appliquent la knock-out rule (ils s'annulent et le Code comble le vide). L'article 2 prévoit aussi des garanties implicites (merchantability, § 2-314 ; fitness for a particular purpose, § 2-315) et la perfect tender rule (§ 2-601). La CVIM, ratifiée par les États-Unis, prime l'UCC pour les ventes internationales entrant dans son champ.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Question", "Common law anglaise", "UCC art. 2"], "lignes": [
+          ["Acceptation avec termes différents", "Contre-offre (mirror image) ; last shot", "Acceptation en principe (§ 2-207)"],
+          ["Termes additionnels entre merchants", "—", "Intégrés sauf modification substantielle ou objection"],
+          ["Termes contradictoires", "Dernier document l'emporte", "Knock-out rule (majorité des juridictions)"],
+          ["Garanties implicites", "Sale of Goods Act 1979", "§ 2-314 merchantability, § 2-315 fitness"]
+        ] },
+        { "type": "attention", "texte": "Une vente entre une société française et une société américaine relève en principe de la CVIM, sauf exclusion : l'UCC ne s'applique alors qu'aux questions non couvertes, si la loi d'un État américain est applicable." }
+      ],
+      "termes": [
+        { "fr": "Code de commerce uniforme (UCC)", "en": "Uniform Commercial Code (UCC)", "es": "Código Comercial Uniforme (UCC)", "definition": "Texte modèle adopté par les États américains." },
+        { "fr": "Commerçant (au sens de l'UCC)", "en": "merchant", "es": "comerciante", "definition": "Professionnel habituel du type de marchandises concerné." },
+        { "fr": "Garantie implicite de qualité marchande", "en": "implied warranty of merchantability", "es": "garantía implícita de comerciabilidad", "definition": "Les marchandises doivent être propres à leur usage ordinaire." },
+        { "fr": "Règle de l'annulation réciproque", "en": "knock-out rule", "es": "regla de anulación recíproca", "definition": "Les clauses contradictoires s'annulent." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un acheteur de l'Ohio commande des pièces à un fournisseur du Michigan (bon de commande avec garantie de 3 ans) ; le fournisseur accepte sur un formulaire limitant la garantie à 1 an. Selon le § 2-207, le contrat est formé ; les clauses de garantie contradictoires s'annulent (knock-out) et la garantie implicite de merchantability s'applique." },
+      "confusions": [
+        { "a": "Battle of the forms selon l'UCC", "b": "Last shot doctrine anglaise (Butler Machine Tool)", "explication": "L'UCC évite que le dernier formulaire envoyé l'emporte automatiquement." }
+      ],
+      "verification": ["Pourquoi une vente France–États-Unis n'est-elle généralement pas régie par l'UCC ?"],
+      "sources": ["src.ucc", "src.cvim"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Le § 2-207 est appliqué diversement selon les États (knock-out rule majoritaire) : vérifier la jurisprudence de l'État concerné."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dcl.ucc.001", "notion": "dcl.ucc.article2", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Que régit l'article 2 de l'Uniform Commercial Code ?",
+      "choix": [
+        { "id": "a", "texte": "La vente de marchandises", "correct": true, "explication": "Article 2 : Sales." },
+        { "id": "b", "texte": "Les contrats de travail", "correct": false, "explication": "Hors champ." },
+        { "id": "c", "texte": "La vente de terrains", "correct": false, "explication": "Les immeubles sont exclus." },
+        { "id": "d", "texte": "Les sociétés", "correct": false, "explication": "Hors champ." }
+      ]
+    },
+    {
+      "id": "q.dcl.ucc.002", "notion": "dcl.ucc.article2", "format": "unique", "niveau": 3, "competence": "distinguer",
+      "enonce": "Entre deux merchants, l'acceptation contient une clause additionnelle qui ne modifie pas substantiellement l'offre, et l'offrant ne s'y oppose pas. Selon le § 2-207 :",
+      "choix": [
+        { "id": "a", "texte": "Le contrat est formé et la clause en fait partie", "correct": true, "explication": "§ 2-207(2)." },
+        { "id": "b", "texte": "Il n'y a pas de contrat (mirror image rule)", "correct": false, "explication": "L'UCC écarte la mirror image rule stricte." },
+        { "id": "c", "texte": "Le contrat est formé mais la clause est nulle", "correct": false, "explication": "Elle est intégrée dans ce cas." },
+        { "id": "d", "texte": "La CVIM s'applique obligatoirement", "correct": false, "explication": "Il s'agit d'une vente interne américaine." }
+      ]
+    },
+    {
+      "id": "q.dcl.ucc.003", "notion": "dcl.ucc.article2", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : pour une vente de marchandises entre une société de New York et une société de Lyon, l'UCC s'applique en principe, plutôt que la CVIM.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "France et États-Unis étant États contractants, la CVIM s'applique, sauf exclusion." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "La CVIM prime pour les ventes internationales dans son champ." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dcl.ucc.001", "notions": ["dcl.ucc.article2"],
+      "question": "Présentez l'article 2 de l'UCC et sa solution à la battle of the forms, en la comparant au droit anglais et à la CVIM.",
+      "reponse": "UCC : texte modèle adopté par les États ; art. 2 : vente de marchandises, règles propres aux merchants ; formation souple (§ 2-204). § 2-207 : une acceptation avec termes additionnels ou différents vaut acceptation sauf si expressément conditionnée ; entre merchants, termes additionnels intégrés sauf modification substantielle ou objection ; termes contradictoires annulés (knock-out, majoritaire). Droit anglais : contre-offre et last shot (Butler Machine Tool). CVIM : art. 19, modifications substantielles = contre-offre. Garanties implicites §§ 2-314, 2-315 ; perfect tender rule § 2-601. La CVIM prime pour les ventes internationales.",
+      "indispensables": ["Nature de l'UCC", "Règle du § 2-207", "Comparaison avec le last shot et la CVIM", "Primauté de la CVIM"],
+      "erreurs": ["Appliquer l'UCC à une vente franco-américaine sans vérifier la CVIM"]
+    }
+  ]
+}

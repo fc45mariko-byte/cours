@@ -1,0 +1,206 @@
+{
+  "chapitre": "dcl.inexecution",
+  "notions": [
+    {
+      "id": "dcl.inexecution.breach",
+      "titre": "Breach et discharge du contrat",
+      "niveau": "F",
+      "prerequis": ["dcl.contenu.classification"],
+      "connexes": ["dcl.inexecution.damages", "dai.cvim.exoneration"],
+      "question": "Comment un contrat anglais prend-il fin, et que se passe-t-il en cas d'inexécution ?",
+      "definition": "Un contrat est éteint (discharged) par l'exécution complète (performance ; la règle stricte des entire obligations, Cutter v Powell, 1795, est tempérée par la substantial performance), par l'accord des parties, par la frustration ou par la violation (breach). La frustration libère les parties lorsqu'un événement postérieur, non imputable à elles, rend l'exécution impossible, illégale ou radicalement différente de ce qui était convenu (Taylor v Caldwell, 1863 ; Krell v Henry, 1903 ; une simple hausse des coûts ne suffit pas, Davis Contractors v Fareham UDC, 1956) ; ses effets sont réglés par le Law Reform (Frustrated Contracts) Act 1943. En cas de breach, la victime a toujours droit à des dommages-intérêts ; si la violation est une repudiatory breach (violation d'une condition ou violation grave d'un innominate term, ou refus d'exécuter), elle peut choisir de mettre fin au contrat. L'anticipatory breach, annonce avant l'échéance qu'on n'exécutera pas, permet d'agir immédiatement (Hochster v De la Tour, 1853).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Mode d'extinction", "Point clé", "Affaire"], "lignes": [
+          ["Performance", "Exécution complète ; substantial performance", "Cutter v Powell (1795)"],
+          ["Agreement", "Accord des parties, avec consideration ou deed", "—"],
+          ["Frustration", "Événement rendant l'exécution impossible ou radicalement différente", "Taylor v Caldwell (1863) ; Krell v Henry [1903]"],
+          ["Breach", "Dommages-intérêts ; résiliation si repudiatory breach", "Hochster v De la Tour (1853)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Inexécution / violation du contrat", "en": "breach of contract", "es": "incumplimiento contractual", "definition": "Non-respect d'une obligation contractuelle." },
+        { "fr": "Extinction du contrat", "en": "discharge", "es": "extinción del contrato", "definition": "Fin des obligations contractuelles." },
+        { "fr": "Frustration (impossibilité)", "en": "frustration", "es": "frustración del contrato", "definition": "Libération pour événement postérieur rendant l'exécution impossible ou radicalement différente." },
+        { "fr": "Inexécution anticipée", "en": "anticipatory breach", "es": "incumplimiento anticipado", "definition": "Refus annoncé d'exécuter avant l'échéance." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une salle louée pour un salon à Londres est détruite par un incendie avant l'événement : le contrat est frustré (Taylor v Caldwell). En revanche, si le coût du montage du stand double, l'exposant reste lié." },
+      "confusions": [
+        { "a": "Frustration (common law, étroite)", "b": "Force majeure (clause contractuelle)", "explication": "La frustration est une doctrine stricte ; les parties ont intérêt à prévoir une clause de force majeure détaillée." }
+      ],
+      "verification": ["Pourquoi l'augmentation des coûts ne suffit-elle pas à frustrer un contrat ?"],
+      "sources": ["src.azzouz"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.inexecution.damages",
+      "titre": "Damages : expectation, remoteness, mitigation",
+      "niveau": "A",
+      "prerequis": ["dcl.inexecution.breach"],
+      "connexes": ["dai.cvim.remedes", "dcl.inexecution.equitable"],
+      "question": "Comment le juge anglais calcule-t-il les dommages-intérêts pour inexécution d'un contrat ?",
+      "definition": "Les dommages-intérêts contractuels visent à placer la victime dans la situation où elle se serait trouvée si le contrat avait été exécuté (expectation interest, Robinson v Harman, 1848) ; à défaut, ils peuvent couvrir les dépenses engagées en vain (reliance interest). Ils sont limités par la remoteness (Hadley v Baxendale, 1854) : ne sont réparables que les pertes qui découlent naturellement de la violation (premier volet) ou que les parties pouvaient raisonnablement envisager lors du contrat, compte tenu des circonstances particulières connues (second volet) (Victoria Laundry v Newman, 1949 ; The Heron II, 1969 ; The Achilleas, 2008). La victime doit limiter son préjudice (mitigation, British Westinghouse, 1912). Les parties peuvent fixer à l'avance une indemnité (liquidated damages), valable si elle protège un intérêt légitime de manière non exorbitante ; sinon c'est une penalty inopposable (Cavendish Square Holding v Makdessi, 2015).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Principe", "Affaire"], "lignes": [
+          ["Expectation interest", "Robinson v Harman (1848)"],
+          ["Remoteness : deux volets", "Hadley v Baxendale (1854)"],
+          ["Gains exceptionnels non prévisibles exclus", "Victoria Laundry v Newman [1949]"],
+          ["Mitigation", "British Westinghouse v Underground Electric Railways [1912]"],
+          ["Liquidated damages vs penalty", "Cavendish v Makdessi [2015]"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Dommages-intérêts", "en": "damages", "es": "daños y perjuicios", "definition": "Somme réparant le préjudice." },
+        { "fr": "Caractère prévisible du dommage", "en": "remoteness of damage", "es": "previsibilidad del daño", "definition": "Limite des pertes réparables." },
+        { "fr": "Atténuation du préjudice", "en": "mitigation", "es": "mitigación del daño", "definition": "Obligation de limiter sa perte." },
+        { "fr": "Indemnité forfaitaire", "en": "liquidated damages", "es": "cláusula penal / indemnización pactada", "definition": "Montant fixé à l'avance par le contrat." }
+      ],
+      "exemple": { "fictif": true, "texte": "Dans Hadley v Baxendale, un transporteur livre en retard un arbre de moulin ; le moulin reste arrêté. Le transporteur ignorait que le meunier n'avait pas de pièce de rechange : la perte de bénéfices n'était pas prévisible, elle n'est pas indemnisée." },
+      "confusions": [
+        { "a": "Liquidated damages (valables)", "b": "Penalty (inopposable)", "explication": "Depuis Makdessi, le critère est l'intérêt légitime protégé et le caractère non exorbitant." }
+      ],
+      "verification": ["Énoncez les deux volets de la règle de Hadley v Baxendale."],
+      "sources": ["src.azzouz"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.inexecution.equitable",
+      "titre": "Specific performance et injunction",
+      "niveau": "A",
+      "prerequis": ["dcl.systemes.equity", "dcl.inexecution.damages"],
+      "connexes": ["dcl.systemes.equity"],
+      "question": "Peut-on obtenir en droit anglais l'exécution forcée d'un contrat plutôt que de l'argent ?",
+      "definition": "Les remèdes d'equity ne sont accordés que si les dommages-intérêts sont inadéquats, et à la discrétion du juge. La specific performance ordonne à la partie défaillante d'exécuter ; elle est accordée pour les biens uniques (œuvre d'art, terrain) mais refusée pour les contrats de services personnels, ceux qui exigeraient une surveillance constante du juge, ou si le demandeur n'a pas les « mains propres ». L'injunction interdit un comportement (prohibitory) ou ordonne d'en réparer les effets (mandatory) ; elle peut faire respecter une clause de non-concurrence ou d'exclusivité, sans pour autant contraindre indirectement à exécuter un contrat de travail (Lumley v Wagner, 1852 ; Warner Bros v Nelson, 1937).",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Condition : dommages-intérêts inadéquats",
+          "Discrétion : clean hands, délai, proportionnalité",
+          "Refus : services personnels, surveillance continue, contrats sans consideration",
+          "Injunction interlocutoire possible en urgence"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Exécution forcée en nature", "en": "specific performance", "es": "cumplimiento específico / en forma específica", "definition": "Ordre d'exécuter le contrat." },
+        { "fr": "Injonction", "en": "injunction", "es": "medida cautelar / orden judicial", "definition": "Ordre de faire ou de ne pas faire." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un distributeur exclusif anglais apprend que le fabricant va vendre directement sur son territoire en violation du contrat : il demande une injunction interdisant ces ventes, car le préjudice pour sa clientèle serait difficile à chiffrer." },
+      "confusions": [
+        { "a": "Specific performance (exceptionnelle en common law)", "b": "Exécution forcée en nature (principe en droit français, art. 1221 C. civ.)", "explication": "Les deux systèmes ont des points de départ opposés." }
+      ],
+      "verification": ["Pourquoi la specific performance est-elle refusée pour les contrats de services personnels ?"],
+      "sources": ["src.azzouz", "src.code-civil"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.inexecution.privity",
+      "titre": "Privity of contract",
+      "niveau": "A",
+      "prerequis": ["dcl.formation.consideration"],
+      "connexes": ["dcl.inexecution.breach"],
+      "question": "Un tiers bénéficiaire d'un contrat peut-il en exiger l'exécution ?",
+      "definition": "Selon la doctrine de la privity of contract, seules les parties au contrat peuvent en tirer des droits ou se voir imposer des obligations (Tweddle v Atkinson, 1861 ; Dunlop Pneumatic Tyre v Selfridge, 1915). Le Contracts (Rights of Third Parties) Act 1999 permet toutefois à un tiers d'agir en exécution d'une clause lorsque le contrat le prévoit expressément ou lorsque la clause entend lui conférer un avantage (sauf intention contraire des parties), à condition qu'il soit identifié (nominativement, par catégorie ou par description). Les contrats commerciaux excluent souvent cette loi par une clause expresse. D'autres exceptions existent (agency, assignment, trusts).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Règle", "Source"], "lignes": [
+          ["Seules les parties peuvent agir", "Tweddle v Atkinson (1861) ; Dunlop v Selfridge [1915]"],
+          ["Exception : tiers désigné ou bénéficiaire", "Contracts (Rights of Third Parties) Act 1999, s. 1"],
+          ["Exclusion contractuelle de la loi de 1999", "Clause « no third party rights »"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Effet relatif du contrat", "en": "privity of contract", "es": "relatividad de los contratos", "definition": "Seules les parties sont liées par le contrat et peuvent s'en prévaloir." },
+        { "fr": "Tiers bénéficiaire", "en": "third party beneficiary", "es": "tercero beneficiario", "definition": "Personne qui tire un avantage d'un contrat auquel elle n'est pas partie." },
+        { "fr": "Cession de créance", "en": "assignment", "es": "cesión de créditos", "definition": "Transfert d'un droit contractuel à un tiers." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une société mère anglaise conclut avec un prestataire un contrat prévoyant que « les filiales du groupe pourront bénéficier de l'assistance technique ». Sous le Contracts (Rights of Third Parties) Act 1999, une filiale pourrait en exiger l'exécution, sauf si le contrat contient une clause excluant les droits des tiers." },
+      "confusions": [
+        { "a": "Privity (droit anglais)", "b": "Effet relatif des contrats (art. 1199 C. civ.)", "explication": "Principe proche, mais le droit français connaît depuis longtemps la stipulation pour autrui." }
+      ],
+      "verification": ["À quelles conditions un tiers peut-il agir selon la loi de 1999 ?"],
+      "sources": ["src.uk-statutes", "src.azzouz"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dcl.inexecution.001", "notion": "dcl.inexecution.breach", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Un salon commercial est annulé par décision des autorités après la conclusion du contrat de location de stand. Quelle doctrine peut libérer les parties ?",
+      "choix": [
+        { "id": "a", "texte": "La frustration", "correct": true, "explication": "Événement postérieur rendant l'exécution impossible ou illégale." },
+        { "id": "b", "texte": "La misrepresentation", "correct": false, "explication": "Aucune déclaration fausse." },
+        { "id": "c", "texte": "La postal rule", "correct": false, "explication": "Formation du contrat." },
+        { "id": "d", "texte": "La privity", "correct": false, "explication": "Effet relatif." }
+      ]
+    },
+    {
+      "id": "q.dcl.inexecution.002", "notion": "dcl.inexecution.breach", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : en cas d'anticipatory breach, la victime doit attendre la date d'exécution pour agir.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "Elle peut agir immédiatement (Hochster v De la Tour)." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "Elle peut mettre fin au contrat et réclamer des dommages sans attendre." }
+      ]
+    },
+    {
+      "id": "q.dcl.inexecution.003", "notion": "dcl.inexecution.damages", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Selon Hadley v Baxendale, quelles pertes sont réparables ?",
+      "choix": [
+        { "id": "a", "texte": "Celles qui découlent naturellement de la violation, ou que les parties pouvaient raisonnablement envisager lors du contrat", "correct": true, "explication": "Deux volets de la remoteness." },
+        { "id": "b", "texte": "Toutes les pertes subies, sans limite", "correct": false, "explication": "La remoteness les limite." },
+        { "id": "c", "texte": "Uniquement les pertes chiffrées dans le contrat", "correct": false, "explication": "Ce serait des liquidated damages." },
+        { "id": "d", "texte": "Seulement le prix du contrat", "correct": false, "explication": "Les pertes consécutives prévisibles sont réparables." }
+      ]
+    },
+    {
+      "id": "q.dcl.inexecution.004", "notion": "dcl.inexecution.damages", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Un acheteur ne reçoit pas les marchandises et n'en achète pas de remplacement alors que le marché en offre ; il réclame six mois de bénéfices perdus. Quel principe limite sa demande ?",
+      "choix": [
+        { "id": "a", "texte": "La mitigation", "correct": true, "explication": "Il devait limiter son préjudice (British Westinghouse)." },
+        { "id": "b", "texte": "La privity", "correct": false, "explication": "Il est partie au contrat." },
+        { "id": "c", "texte": "La consideration", "correct": false, "explication": "Sans rapport." },
+        { "id": "d", "texte": "La postal rule", "correct": false, "explication": "Sans rapport." }
+      ]
+    },
+    {
+      "id": "q.dcl.inexecution.005", "notion": "dcl.inexecution.equitable", "format": "multiple", "niveau": 3, "competence": "comprendre",
+      "enonce": "Dans quels cas la specific performance sera-t-elle en principe refusée ?",
+      "choix": [
+        { "id": "a", "texte": "Contrat de services personnels", "correct": true, "explication": "On ne force pas une personne à travailler." },
+        { "id": "b", "texte": "Les dommages-intérêts suffisent à réparer", "correct": true, "explication": "Condition d'inadéquation des dommages." },
+        { "id": "c", "texte": "Vente d'un terrain unique", "correct": false, "explication": "Cas typique où elle est accordée." },
+        { "id": "d", "texte": "Le demandeur a agi de mauvaise foi", "correct": true, "explication": "Clean hands." }
+      ]
+    },
+    {
+      "id": "q.dcl.inexecution.006", "notion": "dcl.inexecution.privity", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Un contrat entre A et B stipule expressément que C pourra exiger une prestation. Selon le droit anglais actuel :",
+      "choix": [
+        { "id": "a", "texte": "C peut agir en vertu du Contracts (Rights of Third Parties) Act 1999, sauf exclusion", "correct": true, "explication": "s. 1(1)(a)." },
+        { "id": "b", "texte": "C ne peut jamais agir (privity)", "correct": false, "explication": "La loi de 1999 a tempéré la règle." },
+        { "id": "c", "texte": "C devient partie au contrat", "correct": false, "explication": "Il reste tiers, mais peut faire exécuter la clause." },
+        { "id": "d", "texte": "C doit fournir une consideration", "correct": false, "explication": "Ce n'est pas exigé par la loi de 1999." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dcl.inexecution.001", "notions": ["dcl.inexecution.breach", "dcl.inexecution.damages", "dcl.inexecution.equitable", "dcl.inexecution.privity"],
+      "question": "Présentez l'extinction du contrat et les remèdes à l'inexécution en droit anglais, ainsi que la privity.",
+      "reponse": "Discharge : performance (Cutter v Powell), accord, frustration (Taylor v Caldwell, Krell v Henry ; pas pour une simple hausse de coûts, Davis Contractors ; LR(FC)A 1943), breach (dommages ; résiliation si repudiatory ; anticipatory breach, Hochster). Damages : expectation (Robinson v Harman), remoteness (Hadley v Baxendale, deux volets), mitigation (British Westinghouse), liquidated damages vs penalty (Makdessi). Equity : specific performance et injunction, discrétionnaires, si dommages inadéquats. Privity : seules les parties (Tweddle, Dunlop) ; exception Contracts (Rights of Third Parties) Act 1999.",
+      "indispensables": ["Modes de discharge", "Frustration", "Règle de Hadley v Baxendale", "Remèdes d'equity", "Loi de 1999"],
+      "erreurs": ["Considérer la specific performance comme le remède normal"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.dcl.inexecution.01", "notions": ["dcl.inexecution.damages", "dcl.inexecution.breach"], "type": "cas", "niveau": 3, "fictif": true,
+      "titre": "Une machine livrée en retard à Birmingham",
+      "enonce": "Midlands Bakery Ltd achète à un fabricant français un four industriel (contrat soumis au droit anglais, CVIM exclue), livrable le 1er septembre. Le four est livré le 1er novembre. Pendant ces deux mois, la boulangerie perd 40 000 £ de marge sur ses ventes habituelles et 120 000 £ sur un contrat exceptionnel avec une chaîne de supermarchés, dont le fabricant n'avait jamais entendu parler. Elle aurait pu louer un four de remplacement pour 10 000 £ mais ne l'a pas fait.",
+      "questions": [
+        { "id": "1", "consigne": "La perte de 120 000 £ sur le contrat exceptionnel est-elle réparable ?", "reponse": { "type": "choix", "options": ["Oui, toute perte causée est réparable", "Non, elle n'était ni naturelle ni connue du fabricant (Hadley v Baxendale ; Victoria Laundry)", "Oui, au titre de l'equity"], "correcte": 1 },
+          "correction": ["Second volet de Hadley v Baxendale : la circonstance particulière n'avait pas été communiquée", "Victoria Laundry : les gains exceptionnels non prévisibles sont exclus"] },
+        { "id": "2", "consigne": "Évaluez les dommages-intérêts recouvrables et justifiez.",
+          "reponse": { "type": "libre", "criteres": ["Marge habituelle perdue : perte naturelle, en principe réparable", "Contrat exceptionnel exclu (remoteness)", "Mitigation : la location d'un four à 10 000 £ aurait évité les pertes ; l'indemnité peut être limitée à ce coût raisonnable", "Conclusion chiffrée argumentée"],
+            "corrige": "La perte de marge habituelle (40 000 £) découle naturellement du retard de livraison d'un four (premier volet de Hadley v Baxendale). La perte sur le contrat exceptionnel (120 000 £) n'était pas prévisible pour le fabricant, qui l'ignorait : elle est exclue. Mais la boulangerie devait limiter son préjudice : en louant un four pour 10 000 £, elle aurait évité l'essentiel de la perte de marge. Le juge peut donc limiter l'indemnité à environ 10 000 £ (coût raisonnable de la mitigation), plus les pertes qui n'auraient pas pu être évitées malgré la location." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}
