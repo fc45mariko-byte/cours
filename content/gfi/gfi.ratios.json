@@ -4,7 +4,7 @@
     {
       "id": "gfi.ratios.structure",
       "titre": "Ratios de structure et d'endettement",
-      "niveau": "I",
+      "niveau": "F",
       "prerequis": [
         "gfi.bilan-fonctionnel.reclassement",
         "gfi.performance.caf"
@@ -87,7 +87,7 @@
     {
       "id": "gfi.ratios.liquidite",
       "titre": "Ratios de liquidité",
-      "niveau": "I",
+      "niveau": "F",
       "prerequis": [
         "gfi.equilibre.rentabilite-vs-liquidite"
       ],
@@ -156,7 +156,7 @@
     {
       "id": "gfi.ratios.rotation",
       "titre": "Délais clients, délais fournisseurs, rotation des stocks",
-      "niveau": "I",
+      "niveau": "F",
       "prerequis": [
         "gfi.equilibre.bfr"
       ],
@@ -226,7 +226,7 @@
     {
       "id": "gfi.ratios.rentabilite",
       "titre": "Rentabilité économique et rentabilité financière",
-      "niveau": "I",
+      "niveau": "F",
       "prerequis": [
         "gfi.performance.sig",
         "gfi.bilan-fonctionnel.reclassement"

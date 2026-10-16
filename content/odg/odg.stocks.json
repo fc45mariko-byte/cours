@@ -4,214 +4,617 @@
     {
       "id": "odg.stocks.valorisation",
       "titre": "Valoriser les sorties de stock : CMUP et FIFO",
-      "niveau": "I",
-      "prerequis": ["cpt.inventaire.stocks"],
-      "connexes": ["odg.couts.couts-complets", "gfi.ratios.rotation"],
+      "niveau": "F",
+      "prerequis": [
+        "cpt.inventaire.stocks"
+      ],
+      "connexes": [
+        "odg.couts.couts-complets",
+        "gfi.ratios.rotation"
+      ],
       "question": "À quel prix valoriser une sortie de stock quand les mêmes articles ont été achetés à des prix différents ?",
       "definition": "Lorsque des articles identiques sont entrés en stock à des coûts différents, il faut une méthode pour valoriser les sorties et le stock final. Le coût moyen unitaire pondéré (CMUP) calcule une moyenne, soit après chaque entrée, soit sur l'ensemble de la période. La méthode FIFO (premier entré, premier sorti, PEPS) considère que les sorties portent d'abord sur les lots les plus anciens. Le PCG admet ces deux méthodes ; la méthode LIFO (dernier entré, premier sorti) n'est pas admise en France pour les comptes individuels.",
       "fonctionnement": [
-        { "type": "formule", "formule": "CMUP après chaque entrée = (Valeur du stock avant entrée + Valeur de l'entrée) ÷ (Quantité avant + Quantité entrée)" },
-        { "type": "formule", "formule": "CMUP de période = (Valeur du stock initial + Valeur des entrées de la période) ÷ (Quantité initiale + Quantités entrées)" },
-        { "type": "tableau", "entetes": ["Situation de prix", "FIFO", "CMUP"], "lignes": [
-          ["Prix en hausse", "Sorties valorisées aux prix anciens (bas) : coût plus faible, stock final plus élevé", "Position intermédiaire"],
-          ["Prix en baisse", "Sorties aux prix anciens (hauts) : coût plus élevé, stock final plus faible", "Position intermédiaire"]
-        ] }
+        {
+          "type": "formule",
+          "formule": "CMUP après chaque entrée = (Valeur du stock avant entrée + Valeur de l'entrée) ÷ (Quantité avant + Quantité entrée)"
+        },
+        {
+          "type": "formule",
+          "formule": "CMUP de période = (Valeur du stock initial + Valeur des entrées de la période) ÷ (Quantité initiale + Quantités entrées)"
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Situation de prix",
+            "FIFO",
+            "CMUP"
+          ],
+          "lignes": [
+            [
+              "Prix en hausse",
+              "Sorties valorisées aux prix anciens (bas) : coût plus faible, stock final plus élevé",
+              "Position intermédiaire"
+            ],
+            [
+              "Prix en baisse",
+              "Sorties aux prix anciens (hauts) : coût plus élevé, stock final plus faible",
+              "Position intermédiaire"
+            ]
+          ]
+        }
       ],
       "termes": [
-        { "fr": "Coût moyen unitaire pondéré (CMUP)", "en": "weighted average cost (WAC)", "es": "precio medio ponderado (PMP)", "definition": "Moyenne des coûts d'entrée pondérée par les quantités." },
-        { "fr": "Premier entré, premier sorti (PEPS)", "en": "first in, first out (FIFO)", "es": "FIFO (primera entrada, primera salida)", "definition": "Les sorties sont valorisées au coût des lots les plus anciens." },
-        { "fr": "Fiche de stock", "en": "stock card / inventory record", "es": "ficha de almacén", "definition": "Document de suivi des entrées, sorties et soldes d'un article." }
+        {
+          "fr": "Coût moyen unitaire pondéré (CMUP)",
+          "en": "weighted average cost (WAC)",
+          "es": "precio medio ponderado (PMP)",
+          "definition": "Moyenne des coûts d'entrée pondérée par les quantités."
+        },
+        {
+          "fr": "Premier entré, premier sorti (PEPS)",
+          "en": "first in, first out (FIFO)",
+          "es": "FIFO (primera entrada, primera salida)",
+          "definition": "Les sorties sont valorisées au coût des lots les plus anciens."
+        },
+        {
+          "fr": "Fiche de stock",
+          "en": "stock card / inventory record",
+          "es": "ficha de almacén",
+          "definition": "Document de suivi des entrées, sorties et soldes d'un article."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Stock : 100 u à 10 € ; entrée de 200 u à 11,50 €. CMUP après entrée : (1 000 + 2 300) ÷ 300 = 11 €. Une sortie de 150 u vaut 1 650 € au CMUP, et 100 × 10 + 50 × 11,50 = 1 575 € en FIFO." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Stock : 100 u à 10 € ; entrée de 200 u à 11,50 €. CMUP après entrée : (1 000 + 2 300) ÷ 300 = 11 €. Une sortie de 150 u vaut 1 650 € au CMUP, et 100 × 10 + 50 × 11,50 = 1 575 € en FIFO."
+      },
       "confusions": [
-        { "a": "CMUP après chaque entrée", "b": "CMUP de fin de période", "explication": "Le premier permet de valoriser chaque sortie au fil de l'eau ; le second attend la fin de la période et donne un seul coût pour toutes les sorties." }
+        {
+          "a": "CMUP après chaque entrée",
+          "b": "CMUP de fin de période",
+          "explication": "Le premier permet de valoriser chaque sortie au fil de l'eau ; le second attend la fin de la période et donne un seul coût pour toutes les sorties."
+        }
       ],
-      "verification": ["En période d'inflation, quelle méthode donne le stock final le plus élevé ?"],
-      "sources": ["src.pcg"],
+      "verification": [
+        "En période d'inflation, quelle méthode donne le stock final le plus élevé ?"
+      ],
+      "sources": [
+        "src.pcg"
+      ],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "odg.stocks.wilson",
       "titre": "La quantité économique de commande (modèle de Wilson)",
-      "niveau": "I",
-      "prerequis": ["odg.couts.fixes-variables"],
-      "connexes": ["odg.stocks.point-commande"],
+      "niveau": "F",
+      "prerequis": [
+        "odg.couts.fixes-variables"
+      ],
+      "connexes": [
+        "odg.stocks.point-commande"
+      ],
       "question": "Faut-il commander souvent en petites quantités ou rarement en grandes quantités ?",
       "definition": "Le modèle de Wilson (ou de Harris-Wilson) détermine la quantité à commander qui minimise le coût total de gestion du stock, somme de deux coûts qui varient en sens inverse : le coût de passation des commandes (frais administratifs, transport, réception), qui augmente avec le nombre de commandes, et le coût de possession du stock (immobilisation financière, stockage, assurance, obsolescence), qui augmente avec la quantité stockée. À l'optimum, les deux coûts sont égaux.",
       "fonctionnement": [
-        { "type": "formule", "formule": "Q* = √(2 × D × Cc ÷ Cp)        N* = D ÷ Q*        Coût total de gestion = (D ÷ Q) × Cc + (Q ÷ 2) × Cp" },
-        { "type": "liste", "items": [
-          "D : demande (consommation) annuelle en unités",
-          "Cc : coût de passation d'une commande",
-          "Cp : coût de possession d'une unité pendant un an (souvent taux de possession × prix unitaire)",
-          "Q ÷ 2 : stock moyen, sous l'hypothèse d'une consommation régulière et d'un stock de sécurité nul"
-        ] },
-        { "type": "attention", "texte": "Hypothèses fortes : demande connue et régulière, prix constant (pas de remise sur quantité), délai de livraison fixe, pas de rupture." }
+        {
+          "type": "formule",
+          "formule": "Q* = √(2 × D × Cc ÷ Cp)        N* = D ÷ Q*        Coût total de gestion = (D ÷ Q) × Cc + (Q ÷ 2) × Cp"
+        },
+        {
+          "type": "liste",
+          "items": [
+            "D : demande (consommation) annuelle en unités",
+            "Cc : coût de passation d'une commande",
+            "Cp : coût de possession d'une unité pendant un an (souvent taux de possession × prix unitaire)",
+            "Q ÷ 2 : stock moyen, sous l'hypothèse d'une consommation régulière et d'un stock de sécurité nul"
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Hypothèses fortes : demande connue et régulière, prix constant (pas de remise sur quantité), délai de livraison fixe, pas de rupture."
+        }
       ],
       "termes": [
-        { "fr": "Quantité économique de commande", "en": "economic order quantity (EOQ)", "es": "lote económico de pedido", "definition": "Quantité minimisant le coût total de gestion du stock." },
-        { "fr": "Coût de passation", "en": "ordering cost", "es": "coste de emisión de pedido", "definition": "Coût administratif et logistique d'une commande." },
-        { "fr": "Coût de possession", "en": "holding / carrying cost", "es": "coste de posesión / mantenimiento", "definition": "Coût de détention d'une unité en stock pendant une période." }
+        {
+          "fr": "Quantité économique de commande",
+          "en": "economic order quantity (EOQ)",
+          "es": "lote económico de pedido",
+          "definition": "Quantité minimisant le coût total de gestion du stock."
+        },
+        {
+          "fr": "Coût de passation",
+          "en": "ordering cost",
+          "es": "coste de emisión de pedido",
+          "definition": "Coût administratif et logistique d'une commande."
+        },
+        {
+          "fr": "Coût de possession",
+          "en": "holding / carrying cost",
+          "es": "coste de posesión / mantenimiento",
+          "definition": "Coût de détention d'une unité en stock pendant une période."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Consommation annuelle 40 000 unités ; coût de passation 200 € ; prix 40 € ; taux de possession 10 % (Cp = 4 €). Q* = √(2 × 40 000 × 200 ÷ 4) = √4 000 000 = 2 000 unités ; 20 commandes par an. Coût de passation : 20 × 200 = 4 000 € ; coût de possession : 1 000 × 4 = 4 000 € ; total 8 000 €." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Consommation annuelle 40 000 unités ; coût de passation 200 € ; prix 40 € ; taux de possession 10 % (Cp = 4 €). Q* = √(2 × 40 000 × 200 ÷ 4) = √4 000 000 = 2 000 unités ; 20 commandes par an. Coût de passation : 20 × 200 = 4 000 € ; coût de possession : 1 000 × 4 = 4 000 € ; total 8 000 €."
+      },
       "confusions": [
-        { "a": "Coût d'achat des marchandises", "b": "Coût de gestion du stock", "explication": "Le modèle de Wilson ne minimise que les coûts de passation et de possession ; le prix d'achat est supposé identique quelle que soit la quantité." }
+        {
+          "a": "Coût d'achat des marchandises",
+          "b": "Coût de gestion du stock",
+          "explication": "Le modèle de Wilson ne minimise que les coûts de passation et de possession ; le prix d'achat est supposé identique quelle que soit la quantité."
+        }
       ],
-      "verification": ["Que devient Q* si le coût de passation est multiplié par 4 ?"],
-      "sources": ["src.wilson"],
+      "verification": [
+        "Que devient Q* si le coût de passation est multiplié par 4 ?"
+      ],
+      "sources": [
+        "src.wilson"
+      ],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "odg.stocks.point-commande",
       "titre": "Stock de sécurité, stock d'alerte (point de commande)",
-      "niveau": "I",
-      "prerequis": ["odg.stocks.wilson"],
-      "connexes": ["tci.transport.choix-mode"],
+      "niveau": "F",
+      "prerequis": [
+        "odg.stocks.wilson"
+      ],
+      "connexes": [
+        "tci.transport.choix-mode"
+      ],
       "question": "À quel moment faut-il passer commande pour ne jamais tomber en rupture ?",
       "definition": "Le stock d'alerte (ou point de commande) est le niveau de stock qui déclenche une nouvelle commande : il doit couvrir la consommation pendant le délai de réapprovisionnement, majorée d'un stock de sécurité. Le stock de sécurité protège contre les aléas (retard de livraison, hausse imprévue de la consommation). Un stock minimum trop élevé immobilise des capitaux ; trop faible, il expose à la rupture.",
       "fonctionnement": [
-        { "type": "formule", "formule": "Stock d'alerte = Consommation journalière × Délai de livraison (jours) + Stock de sécurité" },
-        { "type": "formule", "formule": "Stock moyen (avec sécurité) = Q ÷ 2 + Stock de sécurité" }
+        {
+          "type": "formule",
+          "formule": "Stock d'alerte = Consommation journalière × Délai de livraison (jours) + Stock de sécurité"
+        },
+        {
+          "type": "formule",
+          "formule": "Stock moyen (avec sécurité) = Q ÷ 2 + Stock de sécurité"
+        }
       ],
       "termes": [
-        { "fr": "Stock de sécurité", "en": "safety stock / buffer stock", "es": "stock de seguridad", "definition": "Stock destiné à absorber les aléas." },
-        { "fr": "Stock d'alerte / point de commande", "en": "reorder point", "es": "punto de pedido", "definition": "Niveau qui déclenche une commande." },
-        { "fr": "Rupture de stock", "en": "stockout", "es": "rotura de stock", "definition": "Impossibilité de servir faute de stock." },
-        { "fr": "Délai de réapprovisionnement", "en": "lead time", "es": "plazo de reaprovisionamiento", "definition": "Durée entre la commande et la réception." }
+        {
+          "fr": "Stock de sécurité",
+          "en": "safety stock / buffer stock",
+          "es": "stock de seguridad",
+          "definition": "Stock destiné à absorber les aléas."
+        },
+        {
+          "fr": "Stock d'alerte / point de commande",
+          "en": "reorder point",
+          "es": "punto de pedido",
+          "definition": "Niveau qui déclenche une commande."
+        },
+        {
+          "fr": "Rupture de stock",
+          "en": "stockout",
+          "es": "rotura de stock",
+          "definition": "Impossibilité de servir faute de stock."
+        },
+        {
+          "fr": "Délai de réapprovisionnement",
+          "en": "lead time",
+          "es": "plazo de reaprovisionamiento",
+          "definition": "Durée entre la commande et la réception."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Consommation 100 unités par jour ; délai de livraison 8 jours ; stock de sécurité 300 unités. Stock d'alerte = 100 × 8 + 300 = 1 100 unités : dès que le stock descend à 1 100, on commande." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Consommation 100 unités par jour ; délai de livraison 8 jours ; stock de sécurité 300 unités. Stock d'alerte = 100 × 8 + 300 = 1 100 unités : dès que le stock descend à 1 100, on commande."
+      },
       "contreExemple": "Pour un importateur dont les marchandises arrivent par voie maritime d'Asie, un délai de 6 semaines impose un stock d'alerte bien plus élevé qu'avec un fournisseur européen livrant en 3 jours.",
       "confusions": [
-        { "a": "Stock de sécurité", "b": "Stock d'alerte", "explication": "Le stock de sécurité est une réserve qu'on ne devrait pas consommer ; le stock d'alerte inclut la consommation prévue pendant le délai." }
+        {
+          "a": "Stock de sécurité",
+          "b": "Stock d'alerte",
+          "explication": "Le stock de sécurité est une réserve qu'on ne devrait pas consommer ; le stock d'alerte inclut la consommation prévue pendant le délai."
+        }
       ],
-      "verification": ["Quel est l'effet d'un allongement du délai de livraison sur le stock d'alerte ?"],
+      "verification": [
+        "Quel est l'effet d'un allongement du délai de livraison sur le stock d'alerte ?"
+      ],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "odg.stocks.pareto",
       "titre": "La méthode ABC des stocks (loi de Pareto, 20/80)",
       "niveau": "F",
-      "prerequis": ["odg.stocks.valorisation"],
-      "connexes": ["odg.couts.abc", "odg.pilotage.indicateurs"],
+      "prerequis": [
+        "odg.stocks.valorisation"
+      ],
+      "connexes": [
+        "odg.couts.abc",
+        "odg.pilotage.indicateurs"
+      ],
       "question": "Comment concentrer ses efforts de gestion sur les articles qui comptent vraiment ?",
       "definition": "La méthode ABC classe les articles selon leur poids dans la valeur totale des consommations (ou du chiffre d'affaires). Elle s'appuie sur l'observation de Pareto : une petite partie des articles représente l'essentiel de la valeur. Classe A : environ 20 % des articles, 70 à 80 % de la valeur, suivis de très près ; classe B : articles intermédiaires ; classe C : la majorité des articles pour une faible part de la valeur, gérés de façon simplifiée.",
       "fonctionnement": [
-        { "type": "etapes", "etapes": [
-          "Calculer la valeur annuelle consommée de chaque article (quantité × coût)",
-          "Classer les articles par valeur décroissante",
-          "Calculer les pourcentages cumulés d'articles et de valeur",
-          "Fixer les limites des classes A, B, C et adapter la politique de gestion à chaque classe"
-        ] }
+        {
+          "type": "etapes",
+          "etapes": [
+            "Calculer la valeur annuelle consommée de chaque article (quantité × coût)",
+            "Classer les articles par valeur décroissante",
+            "Calculer les pourcentages cumulés d'articles et de valeur",
+            "Fixer les limites des classes A, B, C et adapter la politique de gestion à chaque classe"
+          ]
+        }
       ],
       "termes": [
-        { "fr": "Loi de Pareto (20/80)", "en": "Pareto principle (80/20 rule)", "es": "principio de Pareto (80/20)", "definition": "Une minorité de causes explique une majorité des effets." },
-        { "fr": "Analyse ABC", "en": "ABC analysis", "es": "análisis ABC", "definition": "Classement des articles par importance de valeur." }
+        {
+          "fr": "Loi de Pareto (20/80)",
+          "en": "Pareto principle (80/20 rule)",
+          "es": "principio de Pareto (80/20)",
+          "definition": "Une minorité de causes explique une majorité des effets."
+        },
+        {
+          "fr": "Analyse ABC",
+          "en": "ABC analysis",
+          "es": "análisis ABC",
+          "definition": "Classement des articles par importance de valeur."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Un distributeur de pièces détachées gère 2 000 références. 400 d'entre elles (20 %) représentent 78 % de la valeur consommée : elles sont suivies quotidiennement avec un modèle de Wilson et un stock de sécurité calculé ; les 1 200 références de classe C (60 %, 7 % de la valeur) sont commandées par lots semestriels." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Un distributeur de pièces détachées gère 2 000 références. 400 d'entre elles (20 %) représentent 78 % de la valeur consommée : elles sont suivies quotidiennement avec un modèle de Wilson et un stock de sécurité calculé ; les 1 200 références de classe C (60 %, 7 % de la valeur) sont commandées par lots semestriels."
+      },
       "confusions": [
-        { "a": "Méthode ABC des stocks", "b": "Méthode ABC des coûts (activités)", "explication": "Même sigle, objets différents : classement des articles d'un côté, calcul de coûts de l'autre." }
+        {
+          "a": "Méthode ABC des stocks",
+          "b": "Méthode ABC des coûts (activités)",
+          "explication": "Même sigle, objets différents : classement des articles d'un côté, calcul de coûts de l'autre."
+        }
       ],
-      "verification": ["Pourquoi ne gère-t-on pas toutes les références avec la même rigueur ?"],
+      "verification": [
+        "Pourquoi ne gère-t-on pas toutes les références avec la même rigueur ?"
+      ],
       "verifieLe": "2026-10-15"
     }
   ],
   "questions": [
     {
-      "id": "q.odg.stocks.001", "notion": "odg.stocks.valorisation", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "id": "q.odg.stocks.001",
+      "notion": "odg.stocks.valorisation",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
       "enonce": "Stock : 200 u à 15 €. Entrée : 300 u à 16 €. Quel est le CMUP après cette entrée ?",
       "choix": [
-        { "id": "a", "texte": "15,60 €", "correct": true, "explication": "(3 000 + 4 800) ÷ 500 = 15,60 €." },
-        { "id": "b", "texte": "15,50 €", "correct": false, "explication": "Moyenne simple des prix, non pondérée par les quantités." },
-        { "id": "c", "texte": "16,00 €", "correct": false, "explication": "C'est le dernier prix d'achat." },
-        { "id": "d", "texte": "15,40 €", "correct": false, "explication": "Les quantités ont été inversées dans la pondération." }
+        {
+          "id": "a",
+          "texte": "15,60 €",
+          "correct": true,
+          "explication": "(3 000 + 4 800) ÷ 500 = 15,60 €."
+        },
+        {
+          "id": "b",
+          "texte": "15,50 €",
+          "correct": false,
+          "explication": "Moyenne simple des prix, non pondérée par les quantités."
+        },
+        {
+          "id": "c",
+          "texte": "16,00 €",
+          "correct": false,
+          "explication": "C'est le dernier prix d'achat."
+        },
+        {
+          "id": "d",
+          "texte": "15,40 €",
+          "correct": false,
+          "explication": "Les quantités ont été inversées dans la pondération."
+        }
       ]
     },
     {
-      "id": "q.odg.stocks.002", "notion": "odg.stocks.valorisation", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "id": "q.odg.stocks.002",
+      "notion": "odg.stocks.valorisation",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "comprendre",
       "enonce": "Les prix d'achat augmentent régulièrement. Par rapport au CMUP, la méthode FIFO conduit à :",
       "choix": [
-        { "id": "a", "texte": "Un coût des sorties plus faible et un stock final plus élevé", "correct": true, "explication": "Les sorties sont valorisées aux prix anciens, plus bas ; le stock final aux prix récents." },
-        { "id": "b", "texte": "Un coût des sorties plus élevé et un stock final plus faible", "correct": false, "explication": "C'est l'effet en période de baisse des prix." },
-        { "id": "c", "texte": "Les mêmes valeurs", "correct": false, "explication": "Les méthodes ne donnent les mêmes résultats que si les prix sont stables." },
-        { "id": "d", "texte": "Un stock final nul", "correct": false, "explication": "La méthode ne change pas les quantités." }
+        {
+          "id": "a",
+          "texte": "Un coût des sorties plus faible et un stock final plus élevé",
+          "correct": true,
+          "explication": "Les sorties sont valorisées aux prix anciens, plus bas ; le stock final aux prix récents."
+        },
+        {
+          "id": "b",
+          "texte": "Un coût des sorties plus élevé et un stock final plus faible",
+          "correct": false,
+          "explication": "C'est l'effet en période de baisse des prix."
+        },
+        {
+          "id": "c",
+          "texte": "Les mêmes valeurs",
+          "correct": false,
+          "explication": "Les méthodes ne donnent les mêmes résultats que si les prix sont stables."
+        },
+        {
+          "id": "d",
+          "texte": "Un stock final nul",
+          "correct": false,
+          "explication": "La méthode ne change pas les quantités."
+        }
       ]
     },
     {
-      "id": "q.odg.stocks.003", "notion": "odg.stocks.wilson", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "id": "q.odg.stocks.003",
+      "notion": "odg.stocks.wilson",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
       "enonce": "D = 18 000 unités par an ; Cc = 100 € ; Cp = 1 € par unité et par an. Quantité économique ?",
       "choix": [
-        { "id": "a", "texte": "1 897 unités environ", "correct": true, "explication": "√(2 × 18 000 × 100 ÷ 1) = √3 600 000 ≈ 1 897." },
-        { "id": "b", "texte": "1 342 unités environ", "correct": false, "explication": "Le facteur 2 a été oublié (√1 800 000)." },
-        { "id": "c", "texte": "3 600 000 unités", "correct": false, "explication": "La racine carrée n'a pas été prise." },
-        { "id": "d", "texte": "60 unités", "correct": false, "explication": "Calcul sans signification." }
+        {
+          "id": "a",
+          "texte": "1 897 unités environ",
+          "correct": true,
+          "explication": "√(2 × 18 000 × 100 ÷ 1) = √3 600 000 ≈ 1 897."
+        },
+        {
+          "id": "b",
+          "texte": "1 342 unités environ",
+          "correct": false,
+          "explication": "Le facteur 2 a été oublié (√1 800 000)."
+        },
+        {
+          "id": "c",
+          "texte": "3 600 000 unités",
+          "correct": false,
+          "explication": "La racine carrée n'a pas été prise."
+        },
+        {
+          "id": "d",
+          "texte": "60 unités",
+          "correct": false,
+          "explication": "Calcul sans signification."
+        }
       ]
     },
     {
-      "id": "q.odg.stocks.004", "notion": "odg.stocks.wilson", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "id": "q.odg.stocks.004",
+      "notion": "odg.stocks.wilson",
+      "format": "vrai-faux",
+      "niveau": 2,
+      "competence": "comprendre",
       "enonce": "Vrai ou faux : à la quantité économique de commande, le coût de passation annuel est égal au coût de possession annuel.",
       "choix": [
-        { "id": "a", "texte": "Vrai", "correct": true, "explication": "C'est une propriété de l'optimum du modèle de Wilson." },
-        { "id": "b", "texte": "Faux", "correct": false, "explication": "Les deux courbes se croisent précisément à l'optimum." }
+        {
+          "id": "a",
+          "texte": "Vrai",
+          "correct": true,
+          "explication": "C'est une propriété de l'optimum du modèle de Wilson."
+        },
+        {
+          "id": "b",
+          "texte": "Faux",
+          "correct": false,
+          "explication": "Les deux courbes se croisent précisément à l'optimum."
+        }
       ]
     },
     {
-      "id": "q.odg.stocks.005", "notion": "odg.stocks.point-commande", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "id": "q.odg.stocks.005",
+      "notion": "odg.stocks.point-commande",
+      "format": "unique",
+      "niveau": 1,
+      "competence": "appliquer",
       "enonce": "Consommation 50 u/jour ; délai de livraison 12 jours ; stock de sécurité 200 u. Stock d'alerte ?",
       "choix": [
-        { "id": "a", "texte": "800 unités", "correct": true, "explication": "50 × 12 + 200 = 800." },
-        { "id": "b", "texte": "600 unités", "correct": false, "explication": "Le stock de sécurité a été oublié." },
-        { "id": "c", "texte": "200 unités", "correct": false, "explication": "C'est le stock de sécurité seul." },
-        { "id": "d", "texte": "262 unités", "correct": false, "explication": "On a additionné au lieu de multiplier." }
+        {
+          "id": "a",
+          "texte": "800 unités",
+          "correct": true,
+          "explication": "50 × 12 + 200 = 800."
+        },
+        {
+          "id": "b",
+          "texte": "600 unités",
+          "correct": false,
+          "explication": "Le stock de sécurité a été oublié."
+        },
+        {
+          "id": "c",
+          "texte": "200 unités",
+          "correct": false,
+          "explication": "C'est le stock de sécurité seul."
+        },
+        {
+          "id": "d",
+          "texte": "262 unités",
+          "correct": false,
+          "explication": "On a additionné au lieu de multiplier."
+        }
       ]
     },
     {
-      "id": "q.odg.stocks.006", "notion": "odg.stocks.pareto", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "id": "q.odg.stocks.006",
+      "notion": "odg.stocks.pareto",
+      "format": "unique",
+      "niveau": 1,
+      "competence": "memoriser",
       "enonce": "Dans une analyse ABC des stocks, les articles de classe A sont :",
       "choix": [
-        { "id": "a", "texte": "Peu nombreux mais représentent la plus grande part de la valeur", "correct": true, "explication": "Environ 20 % des articles pour 70 à 80 % de la valeur." },
-        { "id": "b", "texte": "Les plus nombreux", "correct": false, "explication": "C'est la classe C." },
-        { "id": "c", "texte": "Ceux dont le nom commence par A", "correct": false, "explication": "Le classement porte sur la valeur." },
-        { "id": "d", "texte": "Ceux qu'on gère de la façon la plus simplifiée", "correct": false, "explication": "Au contraire, ils font l'objet du suivi le plus rigoureux." }
+        {
+          "id": "a",
+          "texte": "Peu nombreux mais représentent la plus grande part de la valeur",
+          "correct": true,
+          "explication": "Environ 20 % des articles pour 70 à 80 % de la valeur."
+        },
+        {
+          "id": "b",
+          "texte": "Les plus nombreux",
+          "correct": false,
+          "explication": "C'est la classe C."
+        },
+        {
+          "id": "c",
+          "texte": "Ceux dont le nom commence par A",
+          "correct": false,
+          "explication": "Le classement porte sur la valeur."
+        },
+        {
+          "id": "d",
+          "texte": "Ceux qu'on gère de la façon la plus simplifiée",
+          "correct": false,
+          "explication": "Au contraire, ils font l'objet du suivi le plus rigoureux."
+        }
       ]
     }
   ],
   "flashcards": [
     {
-      "id": "f.odg.stocks.001", "notions": ["odg.stocks.wilson", "odg.stocks.point-commande"],
+      "id": "f.odg.stocks.001",
+      "notions": [
+        "odg.stocks.wilson",
+        "odg.stocks.point-commande"
+      ],
       "question": "Expliquez le modèle de Wilson (formule, logique, hypothèses) et le calcul du stock d'alerte.",
       "reponse": "Q* = √(2 × D × Cc ÷ Cp) minimise la somme du coût de passation (D ÷ Q × Cc), décroissant avec Q, et du coût de possession (Q ÷ 2 × Cp), croissant avec Q ; à l'optimum ils sont égaux. Hypothèses : demande régulière et connue, prix constant, délai fixe, pas de rupture. Stock d'alerte = consommation journalière × délai de livraison + stock de sécurité.",
-      "indispensables": ["Formule de Q*", "Deux coûts de sens opposé", "Hypothèses", "Formule du stock d'alerte"],
-      "complementaires": ["Nombre de commandes N = D ÷ Q*"],
-      "erreurs": ["Oublier le stock de sécurité", "Utiliser le prix d'achat au lieu du coût de possession"]
+      "indispensables": [
+        "Formule de Q*",
+        "Deux coûts de sens opposé",
+        "Hypothèses",
+        "Formule du stock d'alerte"
+      ],
+      "complementaires": [
+        "Nombre de commandes N = D ÷ Q*"
+      ],
+      "erreurs": [
+        "Oublier le stock de sécurité",
+        "Utiliser le prix d'achat au lieu du coût de possession"
+      ]
     }
   ],
   "exercices": [
     {
-      "id": "e.odg.stocks.01", "notions": ["odg.stocks.valorisation"], "type": "calcul", "niveau": 2, "fictif": true,
+      "id": "e.odg.stocks.01",
+      "notions": [
+        "odg.stocks.valorisation"
+      ],
+      "type": "calcul",
+      "niveau": 2,
+      "fictif": true,
       "titre": "Fiche de stock : CMUP et FIFO",
       "enonce": "Mouvements de l'article « bouteille 75 cl » en mars : stock au 1/3 : 100 u à 10 € ; 5/3 : entrée 200 u à 11,50 € ; 12/3 : sortie 150 u ; 20/3 : entrée 250 u à 12 € ; 28/3 : sortie 300 u.",
       "questions": [
-        { "id": "1", "consigne": "CMUP après chaque entrée : valeur de la sortie du 28/3 (€) ?", "reponse": { "type": "nombre", "valeur": 3487.5, "tolerance": 0.05, "unite": "€" },
-          "correction": ["5/3 : (1 000 + 2 300) ÷ 300 = 11 € ; sortie du 12/3 : 150 × 11 = 1 650 € ; reste 150 u = 1 650 €", "20/3 : (1 650 + 3 000) ÷ 400 = 11,625 €", "28/3 : 300 × 11,625 = 3 487,50 €"] },
-        { "id": "2", "consigne": "FIFO : valeur de la sortie du 28/3 (€) ?", "reponse": { "type": "nombre", "valeur": 3525, "tolerance": 0.05, "unite": "€" },
-          "correction": ["12/3 : 100 × 10 + 50 × 11,50 = 1 575 € ; reste 150 u à 11,50 €", "28/3 : 150 × 11,50 + 150 × 12 = 1 725 + 1 800 = 3 525 €"] },
-        { "id": "3", "consigne": "FIFO : valeur du stock final au 31/3 (€) ?", "reponse": { "type": "nombre", "valeur": 1200, "tolerance": 0.05, "unite": "€" },
-          "correction": ["Reste 100 u du dernier lot : 100 × 12 = 1 200 €", "Au CMUP après chaque entrée : 100 × 11,625 = 1 162,50 € — en période de hausse, FIFO donne un stock final plus élevé"] }
+        {
+          "id": "1",
+          "consigne": "CMUP après chaque entrée : valeur de la sortie du 28/3 (€) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 3487.5,
+            "tolerance": 0.05,
+            "unite": "€"
+          },
+          "correction": [
+            "5/3 : (1 000 + 2 300) ÷ 300 = 11 € ; sortie du 12/3 : 150 × 11 = 1 650 € ; reste 150 u = 1 650 €",
+            "20/3 : (1 650 + 3 000) ÷ 400 = 11,625 €",
+            "28/3 : 300 × 11,625 = 3 487,50 €"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "FIFO : valeur de la sortie du 28/3 (€) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 3525,
+            "tolerance": 0.05,
+            "unite": "€"
+          },
+          "correction": [
+            "12/3 : 100 × 10 + 50 × 11,50 = 1 575 € ; reste 150 u à 11,50 €",
+            "28/3 : 150 × 11,50 + 150 × 12 = 1 725 + 1 800 = 3 525 €"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "FIFO : valeur du stock final au 31/3 (€) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 1200,
+            "tolerance": 0.05,
+            "unite": "€"
+          },
+          "correction": [
+            "Reste 100 u du dernier lot : 100 × 12 = 1 200 €",
+            "Au CMUP après chaque entrée : 100 × 11,625 = 1 162,50 € — en période de hausse, FIFO donne un stock final plus élevé"
+          ]
+        }
       ]
     },
     {
-      "id": "e.odg.stocks.02", "notions": ["odg.stocks.wilson", "odg.stocks.point-commande"], "type": "calcul", "niveau": 2, "fictif": true,
+      "id": "e.odg.stocks.02",
+      "notions": [
+        "odg.stocks.wilson",
+        "odg.stocks.point-commande"
+      ],
+      "type": "calcul",
+      "niveau": 2,
+      "fictif": true,
       "titre": "Politique d'approvisionnement d'un importateur",
       "enonce": "La société Céramiques Import vend 40 000 vases par an (360 jours, ventes régulières). Prix d'achat 40 € ; coût de passation d'une commande 200 € ; taux de possession annuel 10 % de la valeur moyenne stockée ; délai de livraison 9 jours ; stock de sécurité 500 vases.",
       "questions": [
-        { "id": "1", "consigne": "Quantité économique de commande (unités) ?", "reponse": { "type": "nombre", "valeur": 2000, "tolerance": 1, "unite": "u" },
-          "correction": ["Cp = 10 % × 40 = 4 €", "Q* = √(2 × 40 000 × 200 ÷ 4) = √4 000 000 = 2 000"] },
-        { "id": "2", "consigne": "Nombre de commandes par an ?", "reponse": { "type": "nombre", "valeur": 20, "tolerance": 0.01 },
-          "correction": ["40 000 ÷ 2 000 = 20"] },
-        { "id": "3", "consigne": "Coût total de gestion du stock, hors stock de sécurité (€) ?", "reponse": { "type": "nombre", "valeur": 8000, "tolerance": 1, "unite": "€" },
-          "correction": ["Passation : 20 × 200 = 4 000 €", "Possession : 2 000 ÷ 2 × 4 = 4 000 €", "Total : 8 000 €"] },
-        { "id": "4", "consigne": "Stock d'alerte (unités) ?", "reponse": { "type": "nombre", "valeur": 1500, "tolerance": 1, "unite": "u" },
-          "correction": ["Consommation journalière : 40 000 ÷ 360 ≈ 111,1 u", "111,1 × 9 = 1 000 ; + 500 = 1 500 vases"] }
+        {
+          "id": "1",
+          "consigne": "Quantité économique de commande (unités) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 2000,
+            "tolerance": 1,
+            "unite": "u"
+          },
+          "correction": [
+            "Cp = 10 % × 40 = 4 €",
+            "Q* = √(2 × 40 000 × 200 ÷ 4) = √4 000 000 = 2 000"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Nombre de commandes par an ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 20,
+            "tolerance": 0.01
+          },
+          "correction": [
+            "40 000 ÷ 2 000 = 20"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Coût total de gestion du stock, hors stock de sécurité (€) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 8000,
+            "tolerance": 1,
+            "unite": "€"
+          },
+          "correction": [
+            "Passation : 20 × 200 = 4 000 €",
+            "Possession : 2 000 ÷ 2 × 4 = 4 000 €",
+            "Total : 8 000 €"
+          ]
+        },
+        {
+          "id": "4",
+          "consigne": "Stock d'alerte (unités) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 1500,
+            "tolerance": 1,
+            "unite": "u"
+          },
+          "correction": [
+            "Consommation journalière : 40 000 ÷ 360 ≈ 111,1 u",
+            "111,1 × 9 = 1 000 ; + 500 = 1 500 vases"
+          ]
+        }
       ]
     }
   ]

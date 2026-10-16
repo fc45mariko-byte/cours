@@ -5,160 +5,435 @@
       "id": "cpt.achats-ventes.factures",
       "titre": "La facture d'achat et la facture de vente",
       "niveau": "F",
-      "prerequis": ["cpt.tva.ecritures"],
-      "connexes": ["cpt.achats-ventes.reductions", "tci.documents.coherence"],
+      "prerequis": [
+        "cpt.tva.ecritures"
+      ],
+      "connexes": [
+        "cpt.achats-ventes.reductions",
+        "tci.documents.coherence"
+      ],
       "question": "Comment une facture devient-elle une écriture comptable chez le vendeur et chez l'acheteur ?",
       "definition": "La facture est la pièce justificative d'une vente ou d'un achat. Le vendeur l'enregistre au journal des ventes (client 411 au débit, vente 70x et TVA collectée 44571 au crédit) ; l'acheteur l'enregistre au journal des achats (achat 60x et TVA déductible 44566 au débit, fournisseur 401 au crédit). Une même facture donne donc deux écritures « en miroir ».",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["", "Chez le vendeur", "Chez l'acheteur"], "lignes": [
-          ["Compte de tiers (TTC)", "Débit 411 Clients", "Crédit 401 Fournisseurs"],
-          ["Montant HT", "Crédit 707 Ventes de marchandises (ou 701, 706)", "Débit 607 Achats de marchandises (ou 601, 604…)"],
-          ["TVA", "Crédit 44571 TVA collectée", "Débit 44566 TVA déductible"]
-        ] },
-        { "type": "liste", "items": [
-          "601 : achats de matières premières (transformées) ; 607 : achats de marchandises (revendues en l'état) ; 604 : achats d'études et prestations ; 606 : achats non stockés (fournitures, petit équipement)",
-          "701 : ventes de produits finis ; 706 : prestations de services ; 707 : ventes de marchandises"
-        ] }
+        {
+          "type": "tableau",
+          "entetes": [
+            "",
+            "Chez le vendeur",
+            "Chez l'acheteur"
+          ],
+          "lignes": [
+            [
+              "Compte de tiers (TTC)",
+              "Débit 411 Clients",
+              "Crédit 401 Fournisseurs"
+            ],
+            [
+              "Montant HT",
+              "Crédit 707 Ventes de marchandises (ou 701, 706)",
+              "Débit 607 Achats de marchandises (ou 601, 604…)"
+            ],
+            [
+              "TVA",
+              "Crédit 44571 TVA collectée",
+              "Débit 44566 TVA déductible"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "items": [
+            "601 : achats de matières premières (transformées) ; 607 : achats de marchandises (revendues en l'état) ; 604 : achats d'études et prestations ; 606 : achats non stockés (fournitures, petit équipement)",
+            "701 : ventes de produits finis ; 706 : prestations de services ; 707 : ventes de marchandises"
+          ]
+        }
       ],
       "termes": [
-        { "fr": "Facture", "en": "invoice", "es": "factura", "definition": "Document émis par le vendeur détaillant la vente et le montant dû." },
-        { "fr": "Pièce justificative", "en": "supporting document", "es": "justificante", "definition": "Document qui prouve une opération et fonde l'écriture." },
-        { "fr": "Journal des ventes", "en": "sales journal", "es": "diario de ventas", "definition": "Journal auxiliaire où sont enregistrées les factures émises." }
+        {
+          "fr": "Facture",
+          "en": "invoice",
+          "es": "factura",
+          "definition": "Document émis par le vendeur détaillant la vente et le montant dû."
+        },
+        {
+          "fr": "Pièce justificative",
+          "en": "supporting document",
+          "es": "justificante",
+          "definition": "Document qui prouve une opération et fonde l'écriture."
+        },
+        {
+          "fr": "Journal des ventes",
+          "en": "sales journal",
+          "es": "diario de ventas",
+          "definition": "Journal auxiliaire où sont enregistrées les factures émises."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "La brasserie Houblon d'Orléans vend 600 € HT de bière à un restaurant. Chez la brasserie : D 411 720 / C 701 600 / C 44571 120 (elle fabrique : ventes de produits finis). Chez le restaurant : D 607 600 / D 44566 120 / C 401 720 (il revend en l'état)." },
+      "exemple": {
+        "fictif": true,
+        "texte": "La brasserie Houblon d'Orléans vend 600 € HT de bière à un restaurant. Chez la brasserie : D 411 720 / C 701 600 / C 44571 120 (elle fabrique : ventes de produits finis). Chez le restaurant : D 607 600 / D 44566 120 / C 401 720 (il revend en l'état)."
+      },
       "confusions": [
-        { "a": "607 Achats de marchandises", "b": "606 Achats non stockés", "explication": "607 : biens destinés à être revendus ; 606 : consommables utilisés par l'entreprise (fournitures de bureau, électricité…)." }
+        {
+          "a": "607 Achats de marchandises",
+          "b": "606 Achats non stockés",
+          "explication": "607 : biens destinés à être revendus ; 606 : consommables utilisés par l'entreprise (fournitures de bureau, électricité…)."
+        }
       ],
-      "verification": ["Une même facture de 600 € HT : quels comptes mouvemente le vendeur, quels comptes l'acheteur ?"],
-      "sources": ["src.pcg"],
+      "verification": [
+        "Une même facture de 600 € HT : quels comptes mouvemente le vendeur, quels comptes l'acheteur ?"
+      ],
+      "sources": [
+        "src.pcg"
+      ],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cpt.achats-ventes.reductions",
       "titre": "Réductions commerciales (rabais, remises, ristournes) et escompte",
-      "niveau": "I",
-      "prerequis": ["cpt.achats-ventes.factures"],
-      "connexes": ["cpt.achats-ventes.avoirs", "gfi.financement.court-terme"],
+      "niveau": "F",
+      "prerequis": [
+        "cpt.achats-ventes.factures"
+      ],
+      "connexes": [
+        "cpt.achats-ventes.avoirs",
+        "gfi.financement.court-terme"
+      ],
       "question": "Pourquoi une remise et un escompte, qui diminuent tous deux le prix, ne s'enregistrent-ils pas de la même façon ?",
       "definition": "Les réductions commerciales (rabais pour défaut de qualité, remise pour volume ou fidélité, ristourne calculée sur le chiffre d'affaires d'une période) diminuent le prix de vente : figurant sur la facture initiale, elles ne sont pas comptabilisées séparément, on enregistre directement le net commercial. L'escompte de règlement est une réduction financière accordée pour paiement anticipé : il est enregistré en charge financière chez le vendeur (665 Escomptes accordés) et en produit financier chez l'acheteur (765 Escomptes obtenus).",
       "fonctionnement": [
-        { "type": "etapes", "etapes": [
-          "Montant brut",
-          "− réductions commerciales en cascade (chaque taux s'applique au montant précédent) → net commercial",
-          "− escompte (taux × net commercial) → net financier",
-          "+ TVA calculée sur le net financier → net à payer TTC"
-        ] },
-        { "type": "tableau", "entetes": ["", "Vendeur", "Acheteur"], "lignes": [
-          ["Net commercial", "Crédit 707", "Débit 607"],
-          ["Escompte", "Débit 665", "Crédit 765"],
-          ["TVA (sur le net financier)", "Crédit 44571", "Débit 44566"],
-          ["Net à payer", "Débit 411", "Crédit 401"]
-        ] },
-        { "type": "attention", "texte": "Deux remises de 10 % et 5 % ne font pas 15 % : 1 000 × 0,90 × 0,95 = 855 (soit 14,5 %)." }
+        {
+          "type": "etapes",
+          "etapes": [
+            "Montant brut",
+            "− réductions commerciales en cascade (chaque taux s'applique au montant précédent) → net commercial",
+            "− escompte (taux × net commercial) → net financier",
+            "+ TVA calculée sur le net financier → net à payer TTC"
+          ]
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "",
+            "Vendeur",
+            "Acheteur"
+          ],
+          "lignes": [
+            [
+              "Net commercial",
+              "Crédit 707",
+              "Débit 607"
+            ],
+            [
+              "Escompte",
+              "Débit 665",
+              "Crédit 765"
+            ],
+            [
+              "TVA (sur le net financier)",
+              "Crédit 44571",
+              "Débit 44566"
+            ],
+            [
+              "Net à payer",
+              "Débit 411",
+              "Crédit 401"
+            ]
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Deux remises de 10 % et 5 % ne font pas 15 % : 1 000 × 0,90 × 0,95 = 855 (soit 14,5 %)."
+        }
       ],
       "termes": [
-        { "fr": "Rabais", "en": "allowance (price reduction for defects)", "es": "rebaja", "definition": "Réduction pour défaut de qualité ou de conformité." },
-        { "fr": "Remise", "en": "trade discount", "es": "descuento comercial", "definition": "Réduction pour importance de la commande ou statut du client." },
-        { "fr": "Ristourne", "en": "volume rebate", "es": "rappel / bonificación por volumen", "definition": "Réduction calculée sur le chiffre d'affaires réalisé sur une période." },
-        { "fr": "Escompte de règlement", "en": "cash / early payment discount", "es": "descuento por pronto pago", "definition": "Réduction financière accordée pour paiement avant l'échéance." }
+        {
+          "fr": "Rabais",
+          "en": "allowance (price reduction for defects)",
+          "es": "rebaja",
+          "definition": "Réduction pour défaut de qualité ou de conformité."
+        },
+        {
+          "fr": "Remise",
+          "en": "trade discount",
+          "es": "descuento comercial",
+          "definition": "Réduction pour importance de la commande ou statut du client."
+        },
+        {
+          "fr": "Ristourne",
+          "en": "volume rebate",
+          "es": "rappel / bonificación por volumen",
+          "definition": "Réduction calculée sur le chiffre d'affaires réalisé sur une période."
+        },
+        {
+          "fr": "Escompte de règlement",
+          "en": "cash / early payment discount",
+          "es": "descuento por pronto pago",
+          "definition": "Réduction financière accordée pour paiement avant l'échéance."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Facture : brut 10 000 € ; remise 10 % (1 000) → net commercial 9 000 € ; escompte 2 % (180) → net financier 8 820 € ; TVA 20 % 1 764 € ; net à payer 10 584 €. Vendeur : D 411 10 584 / D 665 180 / C 707 9 000 / C 44571 1 764. Acheteur : D 607 9 000 / D 44566 1 764 / C 401 10 584 / C 765 180." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Facture : brut 10 000 € ; remise 10 % (1 000) → net commercial 9 000 € ; escompte 2 % (180) → net financier 8 820 € ; TVA 20 % 1 764 € ; net à payer 10 584 €. Vendeur : D 411 10 584 / D 665 180 / C 707 9 000 / C 44571 1 764. Acheteur : D 607 9 000 / D 44566 1 764 / C 401 10 584 / C 765 180."
+      },
       "confusions": [
-        { "a": "Remise (réduction commerciale)", "b": "Escompte (réduction financière)", "explication": "La remise réduit le prix, sans compte propre si elle figure sur la facture ; l'escompte rémunère un paiement rapide et a son compte (665/765)." },
-        { "a": "Additionner les taux de remise", "b": "Appliquer les remises en cascade", "explication": "Chaque remise s'applique au montant déjà réduit." }
+        {
+          "a": "Remise (réduction commerciale)",
+          "b": "Escompte (réduction financière)",
+          "explication": "La remise réduit le prix, sans compte propre si elle figure sur la facture ; l'escompte rémunère un paiement rapide et a son compte (665/765)."
+        },
+        {
+          "a": "Additionner les taux de remise",
+          "b": "Appliquer les remises en cascade",
+          "explication": "Chaque remise s'applique au montant déjà réduit."
+        }
       ],
-      "verification": ["Pourquoi la TVA est-elle calculée sur le net financier et non sur le net commercial ?"],
-      "sources": ["src.pcg"],
+      "verification": [
+        "Pourquoi la TVA est-elle calculée sur le net financier et non sur le net commercial ?"
+      ],
+      "sources": [
+        "src.pcg"
+      ],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cpt.achats-ventes.frais-accessoires",
       "titre": "Frais accessoires : transports, ports et emballages",
-      "niveau": "I",
-      "prerequis": ["cpt.achats-ventes.factures"],
-      "connexes": ["tci.transport.emballage-marquage", "cpt.investissements.immobilisations"],
+      "niveau": "A",
+      "prerequis": [
+        "cpt.achats-ventes.factures"
+      ],
+      "connexes": [
+        "tci.transport.emballage-marquage",
+        "cpt.investissements.immobilisations"
+      ],
       "question": "Où enregistrer les frais de port et les emballages qui accompagnent un achat ou une vente ?",
       "definition": "Les frais accessoires d'achat (transport, commissions, droits de douane) font partie du coût d'achat : ils peuvent être inclus dans le compte d'achat (607) ou isolés dans un compte de charge par nature (6241 Transports sur achats). Les ports facturés aux clients sont des produits (7085 Ports et frais accessoires facturés). Les emballages perdus (non récupérés) sont des achats (6026 Emballages) ; les emballages consignés, à rendre, donnent lieu à une créance ou une dette (4096 chez l'acheteur, 4196 chez le vendeur).",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Élément", "Chez l'acheteur", "Chez le vendeur"], "lignes": [
-          ["Port facturé par le fournisseur", "Débit 6241 (ou 607)", "Crédit 7085"],
-          ["Transport payé à un transporteur", "Débit 6241", "Débit 6242 Transports sur ventes"],
-          ["Emballages consignés", "Débit 4096 (créance, sans TVA)", "Crédit 4196 (dette, sans TVA)"]
-        ] },
-        { "type": "attention", "texte": "Le port facturé est soumis à la TVA comme la marchandise ; la consignation d'emballages ne l'est pas tant que les emballages sont rendus." }
+        {
+          "type": "tableau",
+          "entetes": [
+            "Élément",
+            "Chez l'acheteur",
+            "Chez le vendeur"
+          ],
+          "lignes": [
+            [
+              "Port facturé par le fournisseur",
+              "Débit 6241 (ou 607)",
+              "Crédit 7085"
+            ],
+            [
+              "Transport payé à un transporteur",
+              "Débit 6241",
+              "Débit 6242 Transports sur ventes"
+            ],
+            [
+              "Emballages consignés",
+              "Débit 4096 (créance, sans TVA)",
+              "Crédit 4196 (dette, sans TVA)"
+            ]
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Le port facturé est soumis à la TVA comme la marchandise ; la consignation d'emballages ne l'est pas tant que les emballages sont rendus."
+        }
       ],
       "termes": [
-        { "fr": "Frais de port", "en": "carriage / shipping costs", "es": "portes / gastos de envío", "definition": "Coût du transport facturé avec la marchandise." },
-        { "fr": "Emballage consigné", "en": "returnable packaging (deposit)", "es": "envase retornable (en depósito)", "definition": "Emballage facturé provisoirement et remboursé à son retour." }
+        {
+          "fr": "Frais de port",
+          "en": "carriage / shipping costs",
+          "es": "portes / gastos de envío",
+          "definition": "Coût du transport facturé avec la marchandise."
+        },
+        {
+          "fr": "Emballage consigné",
+          "en": "returnable packaging (deposit)",
+          "es": "envase retornable (en depósito)",
+          "definition": "Emballage facturé provisoirement et remboursé à son retour."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Achat de marchandises 5 000 € HT, port facturé 200 € HT, TVA 20 % : D 607 5 000 / D 6241 200 / D 44566 1 040 / C 401 6 240." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Achat de marchandises 5 000 € HT, port facturé 200 € HT, TVA 20 % : D 607 5 000 / D 6241 200 / D 44566 1 040 / C 401 6 240."
+      },
       "confusions": [
-        { "a": "6241 Transports sur achats", "b": "6242 Transports sur ventes", "explication": "Le premier porte sur les marchandises reçues, le second sur les livraisons aux clients." }
+        {
+          "a": "6241 Transports sur achats",
+          "b": "6242 Transports sur ventes",
+          "explication": "Le premier porte sur les marchandises reçues, le second sur les livraisons aux clients."
+        }
       ],
-      "verification": ["Un fournisseur facture 120 € de port : quel compte chez lui, quel compte chez vous ?"],
-      "sources": ["src.pcg"],
+      "verification": [
+        "Un fournisseur facture 120 € de port : quel compte chez lui, quel compte chez vous ?"
+      ],
+      "sources": [
+        "src.pcg"
+      ],
       "verifieLe": "2026-10-15",
       "aVerifier": "Comptes de sous-classes (6241, 6242, 7085, 4096, 4196) : vérifier la nomenclature du PCG applicable depuis 2025 (règlement ANC 2022-06) et les conventions de l'enseignant."
     },
     {
       "id": "cpt.achats-ventes.avoirs",
       "titre": "Les avoirs : retours et réductions après facturation",
-      "niveau": "I",
-      "prerequis": ["cpt.achats-ventes.reductions"],
-      "connexes": ["cpt.tva.ecritures"],
+      "niveau": "F",
+      "prerequis": [
+        "cpt.achats-ventes.reductions"
+      ],
+      "connexes": [
+        "cpt.tva.ecritures"
+      ],
       "question": "Comment corriger une facture déjà envoyée quand le client retourne des articles ou obtient une réduction ?",
       "definition": "L'avoir est une facture rectificative qui diminue la créance du vendeur et la dette de l'acheteur. Un retour de marchandises annule tout ou partie de l'achat ou de la vente (on contre-passe en 607 ou 707). Une réduction commerciale accordée après coup est enregistrée dans les comptes de RRR : 709 (RRR accordés, chez le vendeur) et 609 (RRR obtenus, chez l'acheteur). La TVA correspondante est régularisée.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Avoir pour…", "Chez le vendeur (avoir émis)", "Chez l'acheteur (avoir reçu)"], "lignes": [
-          ["Retour de marchandises", "D 707, D 44571 / C 411", "D 401 / C 607, C 44566"],
-          ["Rabais, remise, ristourne", "D 709, D 44571 / C 411", "D 401 / C 609, C 44566"],
-          ["Escompte accordé après la facture", "D 665, D 44571 / C 411", "D 401 / C 765, C 44566"]
-        ] }
+        {
+          "type": "tableau",
+          "entetes": [
+            "Avoir pour…",
+            "Chez le vendeur (avoir émis)",
+            "Chez l'acheteur (avoir reçu)"
+          ],
+          "lignes": [
+            [
+              "Retour de marchandises",
+              "D 707, D 44571 / C 411",
+              "D 401 / C 607, C 44566"
+            ],
+            [
+              "Rabais, remise, ristourne",
+              "D 709, D 44571 / C 411",
+              "D 401 / C 609, C 44566"
+            ],
+            [
+              "Escompte accordé après la facture",
+              "D 665, D 44571 / C 411",
+              "D 401 / C 765, C 44566"
+            ]
+          ]
+        }
       ],
       "termes": [
-        { "fr": "Avoir", "en": "credit note", "es": "factura rectificativa / nota de abono", "definition": "Document qui réduit la somme due par le client." },
-        { "fr": "Retour de marchandises", "en": "sales / purchase return", "es": "devolución de mercancías", "definition": "Renvoi au vendeur de biens non conformes ou non désirés." }
+        {
+          "fr": "Avoir",
+          "en": "credit note",
+          "es": "factura rectificativa / nota de abono",
+          "definition": "Document qui réduit la somme due par le client."
+        },
+        {
+          "fr": "Retour de marchandises",
+          "en": "sales / purchase return",
+          "es": "devolución de mercancías",
+          "definition": "Renvoi au vendeur de biens non conformes ou non désirés."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Le client Alizé retourne des marchandises vendues 500 € HT (TVA 20 %). Chez le vendeur : D 707 500 / D 44571 100 / C 411 600. Chez Alizé : D 401 600 / C 607 500 / C 44566 100." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Le client Alizé retourne des marchandises vendues 500 € HT (TVA 20 %). Chez le vendeur : D 707 500 / D 44571 100 / C 411 600. Chez Alizé : D 401 600 / C 607 500 / C 44566 100."
+      },
       "confusions": [
-        { "a": "Retour (annulation de 707 / 607)", "b": "Rabais accordé ultérieurement (709 / 609)", "explication": "Le retour annule la vente ; le rabais maintient la vente mais en réduit le prix." }
+        {
+          "a": "Retour (annulation de 707 / 607)",
+          "b": "Rabais accordé ultérieurement (709 / 609)",
+          "explication": "Le retour annule la vente ; le rabais maintient la vente mais en réduit le prix."
+        }
       ],
-      "verification": ["Pourquoi l'avoir modifie-t-il aussi la TVA ?"],
-      "sources": ["src.pcg"],
+      "verification": [
+        "Pourquoi l'avoir modifie-t-il aussi la TVA ?"
+      ],
+      "sources": [
+        "src.pcg"
+      ],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cpt.achats-ventes.international",
       "titre": "Achats et ventes à l'international : TVA intracommunautaire, importations, exportations",
       "niveau": "A",
-      "prerequis": ["cpt.tva.ecritures", "tci.intra-ue.livraison-acquisition"],
-      "connexes": ["tci.intra-ue.autoliquidation", "tci.douane.valeur", "cpt.achats-ventes.devises"],
+      "prerequis": [
+        "cpt.tva.ecritures",
+        "tci.intra-ue.livraison-acquisition"
+      ],
+      "connexes": [
+        "tci.intra-ue.autoliquidation",
+        "tci.douane.valeur",
+        "cpt.achats-ventes.devises"
+      ],
       "question": "Comment enregistrer la TVA quand le fournisseur ou le client est à l'étranger ?",
       "definition": "Une livraison intracommunautaire (vente à un assujetti d'un autre État membre) et une exportation hors de l'Union sont exonérées de TVA en France : la facture est HT avec la mention de l'exonération. Pour une acquisition intracommunautaire, l'acheteur français autoliquide la TVA : il la déclare due et la déduit simultanément. Depuis le 1er janvier 2022, la TVA à l'importation est également autoliquidée sur la déclaration de TVA pour les entreprises identifiées en France.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Opération", "Écriture"], "lignes": [
-          ["Livraison intracommunautaire 10 000 €", "D 411 10 000 / C 707 10 000 (pas de TVA)"],
-          ["Exportation 10 000 €", "D 411 10 000 / C 707 10 000 (pas de TVA)"],
-          ["Acquisition intracommunautaire 10 000 €", "D 607 10 000 / C 401 10 000, puis D 445662 TVA déductible intracommunautaire 2 000 / C 4452 TVA due intracommunautaire 2 000"],
-          ["Importation 10 000 € (valeur en douane)", "D 607 10 000 / C 401 10 000 ; TVA autoliquidée : D compte de TVA déductible / C compte de TVA due, 2 000"]
-        ] },
-        { "type": "liste", "items": [
-          "Mentions d'exonération : « Exonération de TVA, article 262 ter I du CGI » (livraison intracommunautaire) ; « Exonération de TVA, article 262 I du CGI » (exportation)",
-          "Les droits de douane payés à l'importation font partie du coût d'achat"
-        ] }
+        {
+          "type": "tableau",
+          "entetes": [
+            "Opération",
+            "Écriture"
+          ],
+          "lignes": [
+            [
+              "Livraison intracommunautaire 10 000 €",
+              "D 411 10 000 / C 707 10 000 (pas de TVA)"
+            ],
+            [
+              "Exportation 10 000 €",
+              "D 411 10 000 / C 707 10 000 (pas de TVA)"
+            ],
+            [
+              "Acquisition intracommunautaire 10 000 €",
+              "D 607 10 000 / C 401 10 000, puis D 445662 TVA déductible intracommunautaire 2 000 / C 4452 TVA due intracommunautaire 2 000"
+            ],
+            [
+              "Importation 10 000 € (valeur en douane)",
+              "D 607 10 000 / C 401 10 000 ; TVA autoliquidée : D compte de TVA déductible / C compte de TVA due, 2 000"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "items": [
+            "Mentions d'exonération : « Exonération de TVA, article 262 ter I du CGI » (livraison intracommunautaire) ; « Exonération de TVA, article 262 I du CGI » (exportation)",
+            "Les droits de douane payés à l'importation font partie du coût d'achat"
+          ]
+        }
       ],
       "termes": [
-        { "fr": "Livraison intracommunautaire", "en": "intra-Community supply", "es": "entrega intracomunitaria", "definition": "Vente de biens expédiés vers un assujetti d'un autre État membre." },
-        { "fr": "Acquisition intracommunautaire", "en": "intra-Community acquisition", "es": "adquisición intracomunitaria", "definition": "Achat de biens expédiés depuis un autre État membre." },
-        { "fr": "Autoliquidation", "en": "reverse charge", "es": "inversión del sujeto pasivo", "definition": "Mécanisme par lequel l'acheteur déclare lui-même la TVA due." }
+        {
+          "fr": "Livraison intracommunautaire",
+          "en": "intra-Community supply",
+          "es": "entrega intracomunitaria",
+          "definition": "Vente de biens expédiés vers un assujetti d'un autre État membre."
+        },
+        {
+          "fr": "Acquisition intracommunautaire",
+          "en": "intra-Community acquisition",
+          "es": "adquisición intracomunitaria",
+          "definition": "Achat de biens expédiés depuis un autre État membre."
+        },
+        {
+          "fr": "Autoliquidation",
+          "en": "reverse charge",
+          "es": "inversión del sujeto pasivo",
+          "definition": "Mécanisme par lequel l'acheteur déclare lui-même la TVA due."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "La société Val de Loire Cosmétiques achète 8 000 € de flacons à un fournisseur italien : D 607 8 000 / C 401 8 000 ; D 445662 1 600 / C 4452 1 600. Effet net sur la TVA à payer : nul, si la TVA est entièrement déductible." },
+      "exemple": {
+        "fictif": true,
+        "texte": "La société Val de Loire Cosmétiques achète 8 000 € de flacons à un fournisseur italien : D 607 8 000 / C 401 8 000 ; D 445662 1 600 / C 4452 1 600. Effet net sur la TVA à payer : nul, si la TVA est entièrement déductible."
+      },
       "contreExemple": "Un achat auprès d'un fournisseur allemand par un particulier français ne relève pas de l'autoliquidation : le vendeur facture en principe la TVA (règles de vente à distance).",
       "confusions": [
-        { "a": "Exonération (livraison intracommunautaire, export)", "b": "Non-déductibilité", "explication": "Une vente exonérée ouvre quand même droit à déduction de la TVA sur les achats correspondants." }
+        {
+          "a": "Exonération (livraison intracommunautaire, export)",
+          "b": "Non-déductibilité",
+          "explication": "Une vente exonérée ouvre quand même droit à déduction de la TVA sur les achats correspondants."
+        }
       ],
-      "verification": ["Pourquoi l'autoliquidation n'a-t-elle en principe aucun effet sur la trésorerie ?"],
-      "sources": ["src.cgi", "src.directive-tva", "src.douane-fr"],
+      "verification": [
+        "Pourquoi l'autoliquidation n'a-t-elle en principe aucun effet sur la trésorerie ?"
+      ],
+      "sources": [
+        "src.cgi",
+        "src.directive-tva",
+        "src.douane-fr"
+      ],
       "verifieLe": "2026-10-15",
       "aVerifier": "Sous-comptes exacts de TVA intracommunautaire et d'importation (445662, 4452, sous-comptes d'importation) : varient selon les manuels et le plan de comptes de l'enseignant."
     },
@@ -166,230 +441,786 @@
       "id": "cpt.achats-ventes.devises",
       "titre": "Opérations en devises et différences de change",
       "niveau": "A",
-      "prerequis": ["cpt.achats-ventes.factures", "tci.change.notion"],
-      "connexes": ["tci.change.couverture-terme", "cpt.inventaire.provisions"],
+      "prerequis": [
+        "cpt.achats-ventes.factures",
+        "tci.change.notion"
+      ],
+      "connexes": [
+        "tci.change.couverture-terme",
+        "cpt.inventaire.provisions"
+      ],
       "question": "Une facture en dollars est payée deux mois plus tard à un autre cours : où passe la différence ?",
       "definition": "Une facture libellée en devise est convertie en euros au cours du jour de l'opération. Au règlement, si le cours a changé, le montant en euros payé ou encaissé diffère du montant enregistré : la différence est un gain ou une perte de change réalisé. Pour les opérations commerciales, le PCG prévoit les comptes 656 « Pertes de change sur créances et dettes commerciales » et 756 « Gains de change sur créances et dettes commerciales » ; les comptes 666 et 766 concernent les opérations financières. À la clôture, les créances et dettes non réglées sont réévaluées : les écarts latents sont inscrits au bilan (476 Différence de conversion actif pour une perte latente, 477 Différence de conversion passif pour un gain latent) et une perte latente donne lieu à une provision.",
       "fonctionnement": [
-        { "type": "etapes", "etapes": [
-          "À la facture : montant en devise ÷ cours du jour (si 1 EUR = x devises)",
-          "Au règlement : montant en devise ÷ cours du jour du règlement",
-          "Écart = montant réglé − montant enregistré ; gain ou perte selon qu'il s'agit d'une créance ou d'une dette"
-        ] },
-        { "type": "tableau", "entetes": ["Situation", "Évolution", "Résultat"], "lignes": [
-          ["Créance client en devise", "La devise se déprécie (on reçoit moins d'euros)", "Perte de change"],
-          ["Créance client en devise", "La devise s'apprécie", "Gain de change"],
-          ["Dette fournisseur en devise", "La devise se déprécie (on paie moins d'euros)", "Gain de change"],
-          ["Dette fournisseur en devise", "La devise s'apprécie", "Perte de change"]
-        ] }
+        {
+          "type": "etapes",
+          "etapes": [
+            "À la facture : montant en devise ÷ cours du jour (si 1 EUR = x devises)",
+            "Au règlement : montant en devise ÷ cours du jour du règlement",
+            "Écart = montant réglé − montant enregistré ; gain ou perte selon qu'il s'agit d'une créance ou d'une dette"
+          ]
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Situation",
+            "Évolution",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "Créance client en devise",
+              "La devise se déprécie (on reçoit moins d'euros)",
+              "Perte de change"
+            ],
+            [
+              "Créance client en devise",
+              "La devise s'apprécie",
+              "Gain de change"
+            ],
+            [
+              "Dette fournisseur en devise",
+              "La devise se déprécie (on paie moins d'euros)",
+              "Gain de change"
+            ],
+            [
+              "Dette fournisseur en devise",
+              "La devise s'apprécie",
+              "Perte de change"
+            ]
+          ]
+        }
       ],
       "termes": [
-        { "fr": "Gain de change", "en": "foreign exchange gain", "es": "diferencia positiva de cambio", "definition": "Différence favorable entre deux cours de conversion." },
-        { "fr": "Perte de change", "en": "foreign exchange loss", "es": "diferencia negativa de cambio", "definition": "Différence défavorable entre deux cours de conversion." },
-        { "fr": "Écart de conversion", "en": "translation difference", "es": "diferencia de conversión", "definition": "Écart latent constaté à la clôture sur une créance ou dette non réglée." }
+        {
+          "fr": "Gain de change",
+          "en": "foreign exchange gain",
+          "es": "diferencia positiva de cambio",
+          "definition": "Différence favorable entre deux cours de conversion."
+        },
+        {
+          "fr": "Perte de change",
+          "en": "foreign exchange loss",
+          "es": "diferencia negativa de cambio",
+          "definition": "Différence défavorable entre deux cours de conversion."
+        },
+        {
+          "fr": "Écart de conversion",
+          "en": "translation difference",
+          "es": "diferencia de conversión",
+          "definition": "Écart latent constaté à la clôture sur une créance ou dette non réglée."
+        }
       ],
-      "exemple": { "fictif": true, "texte": "Achat de 12 000 USD le 2 mai, 1 EUR = 1,20 USD : D 607 10 000 / C 401 10 000. Règlement le 30 juin, 1 EUR = 1,25 USD : 12 000 ÷ 1,25 = 9 600 €. D 401 10 000 / C 512 9 600 / C 756 400. Le dollar s'est déprécié : la dette coûte moins cher, gain de 400 €." },
+      "exemple": {
+        "fictif": true,
+        "texte": "Achat de 12 000 USD le 2 mai, 1 EUR = 1,20 USD : D 607 10 000 / C 401 10 000. Règlement le 30 juin, 1 EUR = 1,25 USD : 12 000 ÷ 1,25 = 9 600 €. D 401 10 000 / C 512 9 600 / C 756 400. Le dollar s'est déprécié : la dette coûte moins cher, gain de 400 €."
+      },
       "confusions": [
-        { "a": "Gain/perte réalisé (656/756)", "b": "Écart latent de clôture (476/477)", "explication": "Le premier est constaté au règlement et touche le résultat ; le second porte sur une opération non dénouée et reste au bilan (seule la perte latente est provisionnée, par prudence)." },
-        { "a": "Cours « 1 EUR = x USD »", "b": "Cours « 1 USD = x EUR »", "explication": "Avec le premier, on divise le montant en dollars par le cours ; avec le second, on multiplie." }
+        {
+          "a": "Gain/perte réalisé (656/756)",
+          "b": "Écart latent de clôture (476/477)",
+          "explication": "Le premier est constaté au règlement et touche le résultat ; le second porte sur une opération non dénouée et reste au bilan (seule la perte latente est provisionnée, par prudence)."
+        },
+        {
+          "a": "Cours « 1 EUR = x USD »",
+          "b": "Cours « 1 USD = x EUR »",
+          "explication": "Avec le premier, on divise le montant en dollars par le cours ; avec le second, on multiplie."
+        }
       ],
-      "verification": ["Une créance de 5 000 USD enregistrée à 1 EUR = 1,10 USD est encaissée à 1,05 : gain ou perte, et de combien ?"],
-      "sources": ["src.pcg", "src.anc-2015-05"],
+      "verification": [
+        "Une créance de 5 000 USD enregistrée à 1 EUR = 1,10 USD est encaissée à 1,05 : gain ou perte, et de combien ?"
+      ],
+      "sources": [
+        "src.pcg",
+        "src.anc-2015-05"
+      ],
       "verifieLe": "2026-10-15",
       "aVerifier": "Beaucoup de manuels utilisent encore 666/766 pour toutes les différences de change ; le règlement ANC 2015-05 a réservé 656/756 aux opérations commerciales. Vérifier la convention de l'enseignant et la nomenclature du PCG 2025."
     }
   ],
   "questions": [
     {
-      "id": "q.cpt.achats-ventes.001", "notion": "cpt.achats-ventes.factures", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "id": "q.cpt.achats-ventes.001",
+      "notion": "cpt.achats-ventes.factures",
+      "format": "unique",
+      "niveau": 1,
+      "competence": "distinguer",
       "enonce": "Un garage achète des pneus qu'il revend en l'état à ses clients. Quel compte d'achat utilise-t-il ?",
       "choix": [
-        { "id": "a", "texte": "607 Achats de marchandises", "correct": true, "explication": "Les pneus sont revendus sans transformation." },
-        { "id": "b", "texte": "601 Achats de matières premières", "correct": false, "explication": "Réservé aux biens transformés par l'entreprise." },
-        { "id": "c", "texte": "606 Achats non stockés", "correct": false, "explication": "Concerne les consommables utilisés par l'entreprise." },
-        { "id": "d", "texte": "2154 Matériel industriel", "correct": false, "explication": "Les pneus destinés à la revente ne sont pas des immobilisations." }
+        {
+          "id": "a",
+          "texte": "607 Achats de marchandises",
+          "correct": true,
+          "explication": "Les pneus sont revendus sans transformation."
+        },
+        {
+          "id": "b",
+          "texte": "601 Achats de matières premières",
+          "correct": false,
+          "explication": "Réservé aux biens transformés par l'entreprise."
+        },
+        {
+          "id": "c",
+          "texte": "606 Achats non stockés",
+          "correct": false,
+          "explication": "Concerne les consommables utilisés par l'entreprise."
+        },
+        {
+          "id": "d",
+          "texte": "2154 Matériel industriel",
+          "correct": false,
+          "explication": "Les pneus destinés à la revente ne sont pas des immobilisations."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.002", "notion": "cpt.achats-ventes.factures", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "id": "q.cpt.achats-ventes.002",
+      "notion": "cpt.achats-ventes.factures",
+      "format": "vrai-faux",
+      "niveau": 1,
+      "competence": "comprendre",
       "enonce": "Vrai ou faux : une même facture est enregistrée au journal des ventes chez le vendeur et au journal des achats chez l'acheteur.",
       "choix": [
-        { "id": "a", "texte": "Vrai", "correct": true, "explication": "Chaque entreprise enregistre l'opération de son point de vue, en miroir." },
-        { "id": "b", "texte": "Faux", "correct": false, "explication": "Les deux parties enregistrent bien la même pièce." }
+        {
+          "id": "a",
+          "texte": "Vrai",
+          "correct": true,
+          "explication": "Chaque entreprise enregistre l'opération de son point de vue, en miroir."
+        },
+        {
+          "id": "b",
+          "texte": "Faux",
+          "correct": false,
+          "explication": "Les deux parties enregistrent bien la même pièce."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.003", "notion": "cpt.achats-ventes.reductions", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "id": "q.cpt.achats-ventes.003",
+      "notion": "cpt.achats-ventes.reductions",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
       "enonce": "Brut 2 000 €, remise 10 % puis remise 5 %. Quel est le net commercial ?",
       "choix": [
-        { "id": "a", "texte": "1 710 €", "correct": true, "explication": "2 000 × 0,90 = 1 800 ; 1 800 × 0,95 = 1 710 €." },
-        { "id": "b", "texte": "1 700 €", "correct": false, "explication": "C'est 2 000 − 15 % : les remises ne s'additionnent pas." },
-        { "id": "c", "texte": "1 800 €", "correct": false, "explication": "La seconde remise a été oubliée." },
-        { "id": "d", "texte": "1 690 €", "correct": false, "explication": "Aucun calcul correct ne donne ce résultat." }
+        {
+          "id": "a",
+          "texte": "1 710 €",
+          "correct": true,
+          "explication": "2 000 × 0,90 = 1 800 ; 1 800 × 0,95 = 1 710 €."
+        },
+        {
+          "id": "b",
+          "texte": "1 700 €",
+          "correct": false,
+          "explication": "C'est 2 000 − 15 % : les remises ne s'additionnent pas."
+        },
+        {
+          "id": "c",
+          "texte": "1 800 €",
+          "correct": false,
+          "explication": "La seconde remise a été oubliée."
+        },
+        {
+          "id": "d",
+          "texte": "1 690 €",
+          "correct": false,
+          "explication": "Aucun calcul correct ne donne ce résultat."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.004", "notion": "cpt.achats-ventes.reductions", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "id": "q.cpt.achats-ventes.004",
+      "notion": "cpt.achats-ventes.reductions",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "distinguer",
       "enonce": "Chez le vendeur, l'escompte de règlement figurant sur la facture est enregistré :",
       "choix": [
-        { "id": "a", "texte": "Au débit du compte 665 Escomptes accordés", "correct": true, "explication": "C'est une charge financière pour le vendeur." },
-        { "id": "b", "texte": "Au crédit du compte 765 Escomptes obtenus", "correct": false, "explication": "765 est utilisé chez l'acheteur, qui bénéficie de l'escompte." },
-        { "id": "c", "texte": "Il n'est pas enregistré : on comptabilise le net financier en 707", "correct": false, "explication": "Contrairement aux réductions commerciales, l'escompte a son propre compte." },
-        { "id": "d", "texte": "Au débit du compte 709 RRR accordés", "correct": false, "explication": "709 concerne les réductions commerciales accordées après facturation." }
+        {
+          "id": "a",
+          "texte": "Au débit du compte 665 Escomptes accordés",
+          "correct": true,
+          "explication": "C'est une charge financière pour le vendeur."
+        },
+        {
+          "id": "b",
+          "texte": "Au crédit du compte 765 Escomptes obtenus",
+          "correct": false,
+          "explication": "765 est utilisé chez l'acheteur, qui bénéficie de l'escompte."
+        },
+        {
+          "id": "c",
+          "texte": "Il n'est pas enregistré : on comptabilise le net financier en 707",
+          "correct": false,
+          "explication": "Contrairement aux réductions commerciales, l'escompte a son propre compte."
+        },
+        {
+          "id": "d",
+          "texte": "Au débit du compte 709 RRR accordés",
+          "correct": false,
+          "explication": "709 concerne les réductions commerciales accordées après facturation."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.005", "notion": "cpt.achats-ventes.reductions", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "id": "q.cpt.achats-ventes.005",
+      "notion": "cpt.achats-ventes.reductions",
+      "format": "multiple",
+      "niveau": 2,
+      "competence": "distinguer",
       "enonce": "Lesquelles de ces réductions sont de nature commerciale ?",
       "choix": [
-        { "id": "a", "texte": "Rabais", "correct": true, "explication": "Réduction pour défaut de qualité ou de conformité." },
-        { "id": "b", "texte": "Remise", "correct": true, "explication": "Réduction pour volume ou statut du client." },
-        { "id": "c", "texte": "Ristourne", "correct": true, "explication": "Réduction calculée sur le chiffre d'affaires d'une période." },
-        { "id": "d", "texte": "Escompte", "correct": false, "explication": "Réduction financière, liée au délai de paiement." }
+        {
+          "id": "a",
+          "texte": "Rabais",
+          "correct": true,
+          "explication": "Réduction pour défaut de qualité ou de conformité."
+        },
+        {
+          "id": "b",
+          "texte": "Remise",
+          "correct": true,
+          "explication": "Réduction pour volume ou statut du client."
+        },
+        {
+          "id": "c",
+          "texte": "Ristourne",
+          "correct": true,
+          "explication": "Réduction calculée sur le chiffre d'affaires d'une période."
+        },
+        {
+          "id": "d",
+          "texte": "Escompte",
+          "correct": false,
+          "explication": "Réduction financière, liée au délai de paiement."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.006", "notion": "cpt.achats-ventes.frais-accessoires", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "id": "q.cpt.achats-ventes.006",
+      "notion": "cpt.achats-ventes.frais-accessoires",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
       "enonce": "Une entreprise facture à son client 150 € HT de frais de port. Quel compte crédite-t-elle ?",
       "choix": [
-        { "id": "a", "texte": "7085 Ports et frais accessoires facturés", "correct": true, "explication": "Les ports refacturés sont un produit." },
-        { "id": "b", "texte": "6242 Transports sur ventes", "correct": false, "explication": "Compte de charge, utilisé pour le transport qu'elle paie elle-même." },
-        { "id": "c", "texte": "6241 Transports sur achats", "correct": false, "explication": "Charge liée aux achats, pas aux ventes." },
-        { "id": "d", "texte": "4196 Clients – emballages consignés", "correct": false, "explication": "Concerne la consignation d'emballages." }
+        {
+          "id": "a",
+          "texte": "7085 Ports et frais accessoires facturés",
+          "correct": true,
+          "explication": "Les ports refacturés sont un produit."
+        },
+        {
+          "id": "b",
+          "texte": "6242 Transports sur ventes",
+          "correct": false,
+          "explication": "Compte de charge, utilisé pour le transport qu'elle paie elle-même."
+        },
+        {
+          "id": "c",
+          "texte": "6241 Transports sur achats",
+          "correct": false,
+          "explication": "Charge liée aux achats, pas aux ventes."
+        },
+        {
+          "id": "d",
+          "texte": "4196 Clients – emballages consignés",
+          "correct": false,
+          "explication": "Concerne la consignation d'emballages."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.007", "notion": "cpt.achats-ventes.avoirs", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "id": "q.cpt.achats-ventes.007",
+      "notion": "cpt.achats-ventes.avoirs",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
       "enonce": "Vous recevez d'un fournisseur un avoir pour un rabais de 300 € HT (TVA 20 %) sur un achat de marchandises. Quelle écriture passez-vous ?",
       "choix": [
-        { "id": "a", "texte": "D 401 360 / C 609 300 / C 44566 60", "correct": true, "explication": "La dette diminue ; le rabais obtenu est enregistré en 609 ; la TVA déductible est réduite." },
-        { "id": "b", "texte": "D 401 360 / C 707 300 / C 44571 60", "correct": false, "explication": "Vous êtes l'acheteur : ni vente ni TVA collectée." },
-        { "id": "c", "texte": "D 609 300 / D 44566 60 / C 401 360", "correct": false, "explication": "Écriture inversée : elle augmenterait la dette." },
-        { "id": "d", "texte": "D 401 360 / C 765 360", "correct": false, "explication": "Un rabais n'est pas un escompte, et la TVA doit être régularisée." }
+        {
+          "id": "a",
+          "texte": "D 401 360 / C 609 300 / C 44566 60",
+          "correct": true,
+          "explication": "La dette diminue ; le rabais obtenu est enregistré en 609 ; la TVA déductible est réduite."
+        },
+        {
+          "id": "b",
+          "texte": "D 401 360 / C 707 300 / C 44571 60",
+          "correct": false,
+          "explication": "Vous êtes l'acheteur : ni vente ni TVA collectée."
+        },
+        {
+          "id": "c",
+          "texte": "D 609 300 / D 44566 60 / C 401 360",
+          "correct": false,
+          "explication": "Écriture inversée : elle augmenterait la dette."
+        },
+        {
+          "id": "d",
+          "texte": "D 401 360 / C 765 360",
+          "correct": false,
+          "explication": "Un rabais n'est pas un escompte, et la TVA doit être régularisée."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.008", "notion": "cpt.achats-ventes.avoirs", "format": "vrai-faux", "niveau": 2, "competence": "distinguer",
+      "id": "q.cpt.achats-ventes.008",
+      "notion": "cpt.achats-ventes.avoirs",
+      "format": "vrai-faux",
+      "niveau": 2,
+      "competence": "distinguer",
       "enonce": "Vrai ou faux : chez le vendeur, un retour de marchandises est enregistré au débit du compte 709.",
       "choix": [
-        { "id": "a", "texte": "Vrai", "correct": false, "explication": "709 est réservé aux rabais, remises, ristournes accordés ; un retour annule la vente." },
-        { "id": "b", "texte": "Faux", "correct": true, "explication": "Le retour se comptabilise au débit du compte de vente lui-même (707)." }
+        {
+          "id": "a",
+          "texte": "Vrai",
+          "correct": false,
+          "explication": "709 est réservé aux rabais, remises, ristournes accordés ; un retour annule la vente."
+        },
+        {
+          "id": "b",
+          "texte": "Faux",
+          "correct": true,
+          "explication": "Le retour se comptabilise au débit du compte de vente lui-même (707)."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.009", "notion": "cpt.achats-ventes.international", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "id": "q.cpt.achats-ventes.009",
+      "notion": "cpt.achats-ventes.international",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
       "enonce": "Une PME de Tours vend 20 000 € de marchandises à une société espagnole assujettie, avec transport vers Valence. Quelle écriture ?",
       "choix": [
-        { "id": "a", "texte": "D 411 20 000 / C 707 20 000, facture portant la mention d'exonération", "correct": true, "explication": "Livraison intracommunautaire exonérée : pas de TVA française." },
-        { "id": "b", "texte": "D 411 24 000 / C 707 20 000 / C 44571 4 000", "correct": false, "explication": "Une livraison intracommunautaire à un assujetti est exonérée." },
-        { "id": "c", "texte": "D 411 20 000 / C 707 20 000 et D 445662 / C 4452 4 000", "correct": false, "explication": "L'autoliquidation est faite par l'acheteur espagnol, pas par le vendeur." },
-        { "id": "d", "texte": "D 411 24 200 / C 707 20 000 / C 44571 4 200 (TVA espagnole à 21 %)", "correct": false, "explication": "Le vendeur ne facture pas la TVA espagnole : le client l'autoliquide en Espagne." }
+        {
+          "id": "a",
+          "texte": "D 411 20 000 / C 707 20 000, facture portant la mention d'exonération",
+          "correct": true,
+          "explication": "Livraison intracommunautaire exonérée : pas de TVA française."
+        },
+        {
+          "id": "b",
+          "texte": "D 411 24 000 / C 707 20 000 / C 44571 4 000",
+          "correct": false,
+          "explication": "Une livraison intracommunautaire à un assujetti est exonérée."
+        },
+        {
+          "id": "c",
+          "texte": "D 411 20 000 / C 707 20 000 et D 445662 / C 4452 4 000",
+          "correct": false,
+          "explication": "L'autoliquidation est faite par l'acheteur espagnol, pas par le vendeur."
+        },
+        {
+          "id": "d",
+          "texte": "D 411 24 200 / C 707 20 000 / C 44571 4 200 (TVA espagnole à 21 %)",
+          "correct": false,
+          "explication": "Le vendeur ne facture pas la TVA espagnole : le client l'autoliquide en Espagne."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.010", "notion": "cpt.achats-ventes.international", "format": "multiple", "niveau": 3, "competence": "comprendre",
+      "id": "q.cpt.achats-ventes.010",
+      "notion": "cpt.achats-ventes.international",
+      "format": "multiple",
+      "niveau": 3,
+      "competence": "comprendre",
       "enonce": "À propos d'une acquisition intracommunautaire de 5 000 € par une entreprise française (TVA 20 %, entièrement déductible), quelles affirmations sont exactes ?",
       "choix": [
-        { "id": "a", "texte": "Le fournisseur facture 5 000 € sans TVA", "correct": true, "explication": "Pour lui, c'est une livraison intracommunautaire exonérée." },
-        { "id": "b", "texte": "L'acheteur constate 1 000 € de TVA due et 1 000 € de TVA déductible", "correct": true, "explication": "C'est l'autoliquidation." },
-        { "id": "c", "texte": "L'opération augmente la TVA à décaisser de 1 000 €", "correct": false, "explication": "La TVA due et la TVA déductible se compensent : effet nul." },
-        { "id": "d", "texte": "Le compte 401 est crédité de 6 000 €", "correct": false, "explication": "La dette envers le fournisseur est de 5 000 € (montant de la facture)." }
+        {
+          "id": "a",
+          "texte": "Le fournisseur facture 5 000 € sans TVA",
+          "correct": true,
+          "explication": "Pour lui, c'est une livraison intracommunautaire exonérée."
+        },
+        {
+          "id": "b",
+          "texte": "L'acheteur constate 1 000 € de TVA due et 1 000 € de TVA déductible",
+          "correct": true,
+          "explication": "C'est l'autoliquidation."
+        },
+        {
+          "id": "c",
+          "texte": "L'opération augmente la TVA à décaisser de 1 000 €",
+          "correct": false,
+          "explication": "La TVA due et la TVA déductible se compensent : effet nul."
+        },
+        {
+          "id": "d",
+          "texte": "Le compte 401 est crédité de 6 000 €",
+          "correct": false,
+          "explication": "La dette envers le fournisseur est de 5 000 € (montant de la facture)."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.011", "notion": "cpt.achats-ventes.devises", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "id": "q.cpt.achats-ventes.011",
+      "notion": "cpt.achats-ventes.devises",
+      "format": "unique",
+      "niveau": 2,
+      "competence": "appliquer",
       "enonce": "Créance de 11 000 USD enregistrée au cours 1 EUR = 1,10 USD. Elle est encaissée au cours 1 EUR = 1,00 USD. Quel est le résultat de change ?",
       "choix": [
-        { "id": "a", "texte": "Gain de 1 000 €", "correct": true, "explication": "Enregistrée 10 000 € ; encaissée 11 000 € : le dollar s'est apprécié, on reçoit plus d'euros." },
-        { "id": "b", "texte": "Perte de 1 000 €", "correct": false, "explication": "Le sens est inversé : pour une créance, l'appréciation de la devise est favorable." },
-        { "id": "c", "texte": "Gain de 1 100 €", "correct": false, "explication": "Il faut convertir aux deux cours : 11 000 − 10 000 = 1 000 €." },
-        { "id": "d", "texte": "Aucun, le montant en dollars est inchangé", "correct": false, "explication": "La comptabilité est tenue en euros : la variation du cours a un effet." }
+        {
+          "id": "a",
+          "texte": "Gain de 1 000 €",
+          "correct": true,
+          "explication": "Enregistrée 10 000 € ; encaissée 11 000 € : le dollar s'est apprécié, on reçoit plus d'euros."
+        },
+        {
+          "id": "b",
+          "texte": "Perte de 1 000 €",
+          "correct": false,
+          "explication": "Le sens est inversé : pour une créance, l'appréciation de la devise est favorable."
+        },
+        {
+          "id": "c",
+          "texte": "Gain de 1 100 €",
+          "correct": false,
+          "explication": "Il faut convertir aux deux cours : 11 000 − 10 000 = 1 000 €."
+        },
+        {
+          "id": "d",
+          "texte": "Aucun, le montant en dollars est inchangé",
+          "correct": false,
+          "explication": "La comptabilité est tenue en euros : la variation du cours a un effet."
+        }
       ]
     },
     {
-      "id": "q.cpt.achats-ventes.012", "notion": "cpt.achats-ventes.devises", "format": "unique", "niveau": 3, "competence": "distinguer",
+      "id": "q.cpt.achats-ventes.012",
+      "notion": "cpt.achats-ventes.devises",
+      "format": "unique",
+      "niveau": 3,
+      "competence": "distinguer",
       "enonce": "Au 31/12, une dette fournisseur en devises non réglée fait apparaître une perte latente. Que fait-on ?",
       "choix": [
-        { "id": "a", "texte": "On l'inscrit en 476 Différence de conversion actif et on constitue une provision pour perte de change", "correct": true, "explication": "Principe de prudence : la perte latente est provisionnée." },
-        { "id": "b", "texte": "On l'enregistre en 656 Pertes de change", "correct": false, "explication": "656 enregistre les pertes réalisées, au règlement." },
-        { "id": "c", "texte": "On l'inscrit en 477 Différence de conversion passif", "correct": false, "explication": "477 concerne les gains latents." },
-        { "id": "d", "texte": "On ne fait rien jusqu'au règlement", "correct": false, "explication": "La dette doit être réévaluée au cours de clôture." }
+        {
+          "id": "a",
+          "texte": "On l'inscrit en 476 Différence de conversion actif et on constitue une provision pour perte de change",
+          "correct": true,
+          "explication": "Principe de prudence : la perte latente est provisionnée."
+        },
+        {
+          "id": "b",
+          "texte": "On l'enregistre en 656 Pertes de change",
+          "correct": false,
+          "explication": "656 enregistre les pertes réalisées, au règlement."
+        },
+        {
+          "id": "c",
+          "texte": "On l'inscrit en 477 Différence de conversion passif",
+          "correct": false,
+          "explication": "477 concerne les gains latents."
+        },
+        {
+          "id": "d",
+          "texte": "On ne fait rien jusqu'au règlement",
+          "correct": false,
+          "explication": "La dette doit être réévaluée au cours de clôture."
+        }
       ]
     }
   ],
   "flashcards": [
     {
-      "id": "f.cpt.achats-ventes.001", "notions": ["cpt.achats-ventes.reductions"],
+      "id": "f.cpt.achats-ventes.001",
+      "notions": [
+        "cpt.achats-ventes.reductions"
+      ],
       "question": "Présentez la cascade de calcul d'une facture avec réductions commerciales et escompte, et indiquez comment chaque élément est comptabilisé chez le vendeur.",
       "reponse": "Brut − réductions commerciales en cascade = net commercial ; − escompte = net financier ; + TVA sur le net financier = net à payer. Chez le vendeur : D 411 (net à payer), D 665 (escompte), C 707 (net commercial), C 44571 (TVA). Les réductions commerciales sur facture ne sont pas comptabilisées séparément.",
-      "indispensables": ["Remises en cascade jusqu'au net commercial", "Escompte sur le net commercial", "TVA sur le net financier", "707 au net commercial, 665 pour l'escompte"],
-      "complementaires": ["Chez l'acheteur : 607 et 765"],
-      "erreurs": ["Calculer la TVA sur le brut", "Additionner les taux de remise"],
+      "indispensables": [
+        "Remises en cascade jusqu'au net commercial",
+        "Escompte sur le net commercial",
+        "TVA sur le net financier",
+        "707 au net commercial, 665 pour l'escompte"
+      ],
+      "complementaires": [
+        "Chez l'acheteur : 607 et 765"
+      ],
+      "erreurs": [
+        "Calculer la TVA sur le brut",
+        "Additionner les taux de remise"
+      ],
       "relance": "Pourquoi l'escompte, lui, a-t-il un compte propre ?"
     },
     {
-      "id": "f.cpt.achats-ventes.002", "notions": ["cpt.achats-ventes.international"],
+      "id": "f.cpt.achats-ventes.002",
+      "notions": [
+        "cpt.achats-ventes.international"
+      ],
       "question": "Comparez le traitement de la TVA pour une vente intracommunautaire, une exportation et une acquisition intracommunautaire.",
       "reponse": "Vente à un assujetti d'un autre État membre et exportation hors UE : exonérées, facture HT avec mention (art. 262 ter I et 262 I du CGI). Acquisition intracommunautaire : l'acheteur autoliquide, en enregistrant simultanément TVA due (4452) et TVA déductible (445662), sans effet sur la trésorerie si la TVA est déductible.",
-      "indispensables": ["Livraison intracommunautaire et export exonérés", "Acquisition : autoliquidation par l'acheteur", "TVA due et déductible se compensent"],
-      "complementaires": ["Mentions légales d'exonération", "Importation autoliquidée depuis 2022"],
-      "erreurs": ["Facturer la TVA française à un client européen assujetti"]
+      "indispensables": [
+        "Livraison intracommunautaire et export exonérés",
+        "Acquisition : autoliquidation par l'acheteur",
+        "TVA due et déductible se compensent"
+      ],
+      "complementaires": [
+        "Mentions légales d'exonération",
+        "Importation autoliquidée depuis 2022"
+      ],
+      "erreurs": [
+        "Facturer la TVA française à un client européen assujetti"
+      ]
     },
     {
-      "id": "f.cpt.achats-ventes.003", "notions": ["cpt.achats-ventes.devises"],
+      "id": "f.cpt.achats-ventes.003",
+      "notions": [
+        "cpt.achats-ventes.devises"
+      ],
       "question": "Expliquez comment naît une différence de change sur une dette fournisseur en devises et comment elle est comptabilisée.",
       "reponse": "La facture est convertie au cours du jour de l'opération. Au paiement, le cours a pu varier : on paie un montant en euros différent. Si la devise s'est appréciée, on paie plus : perte de change (656 pour une opération commerciale) ; si elle s'est dépréciée, gain (756). À la clôture, une dette non réglée est réévaluée : écart latent en 476 (perte) ou 477 (gain), avec provision pour la perte latente.",
-      "indispensables": ["Conversion au cours du jour de l'opération", "Écart constaté au règlement", "Sens : appréciation de la devise = perte sur une dette", "Écarts latents 476 / 477"],
-      "complementaires": ["656/756 commerciales, 666/766 financières", "Provision pour perte de change"],
-      "erreurs": ["Inverser gain et perte entre créance et dette"],
+      "indispensables": [
+        "Conversion au cours du jour de l'opération",
+        "Écart constaté au règlement",
+        "Sens : appréciation de la devise = perte sur une dette",
+        "Écarts latents 476 / 477"
+      ],
+      "complementaires": [
+        "656/756 commerciales, 666/766 financières",
+        "Provision pour perte de change"
+      ],
+      "erreurs": [
+        "Inverser gain et perte entre créance et dette"
+      ],
       "relance": "Comment l'entreprise aurait-elle pu éviter ce risque ?"
     }
   ],
   "exercices": [
     {
-      "id": "e.cpt.achats-ventes.01", "notions": ["cpt.achats-ventes.reductions", "cpt.achats-ventes.factures"], "type": "ecriture", "niveau": 2, "fictif": true,
+      "id": "e.cpt.achats-ventes.01",
+      "notions": [
+        "cpt.achats-ventes.reductions",
+        "cpt.achats-ventes.factures"
+      ],
+      "type": "ecriture",
+      "niveau": 2,
+      "fictif": true,
       "titre": "Facture avec remise et escompte",
       "enonce": "La société Bois & Cie vend à un client des marchandises : brut 6 000 € ; remise 5 % ; escompte 2 % pour paiement comptant ; TVA 20 %. Le client paie à 30 jours (créance enregistrée en 411).",
       "questions": [
-        { "id": "1", "consigne": "Calculez le net commercial (€).", "reponse": { "type": "nombre", "valeur": 5700, "tolerance": 0.01, "unite": "€" },
-          "correction": ["6 000 × (1 − 0,05) = 5 700 €"] },
-        { "id": "2", "consigne": "Calculez le net à payer TTC (€).", "reponse": { "type": "nombre", "valeur": 6703.2, "tolerance": 0.01, "unite": "€" },
-          "correction": ["Escompte : 5 700 × 2 % = 114 € ; net financier : 5 586 €", "TVA : 5 586 × 20 % = 1 117,20 € ; net à payer : 6 703,20 €"],
-          "erreurs": ["Calculer la TVA sur le net commercial (1 140 €)"] },
-        { "id": "3", "consigne": "Passez l'écriture chez le vendeur (comptes 411, 665, 707, 44571).",
-          "reponse": { "type": "ecriture", "lignes": [ { "compte": "411", "debit": 6703.2 }, { "compte": "665", "debit": 114 }, { "compte": "707", "credit": 5700 }, { "compte": "44571", "credit": 1117.2 } ] },
-          "correction": ["Débits : 6 703,20 + 114 = 6 817,20 ; crédits : 5 700 + 1 117,20 = 6 817,20"] },
-        { "id": "4", "consigne": "Passez l'écriture chez l'acheteur (comptes 607, 44566, 401, 765).",
-          "reponse": { "type": "ecriture", "lignes": [ { "compte": "607", "debit": 5700 }, { "compte": "44566", "debit": 1117.2 }, { "compte": "401", "credit": 6703.2 }, { "compte": "765", "credit": 114 } ] },
-          "correction": ["Écriture en miroir : l'escompte est un produit financier (765) pour l'acheteur"] }
+        {
+          "id": "1",
+          "consigne": "Calculez le net commercial (€).",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 5700,
+            "tolerance": 0.01,
+            "unite": "€"
+          },
+          "correction": [
+            "6 000 × (1 − 0,05) = 5 700 €"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Calculez le net à payer TTC (€).",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 6703.2,
+            "tolerance": 0.01,
+            "unite": "€"
+          },
+          "correction": [
+            "Escompte : 5 700 × 2 % = 114 € ; net financier : 5 586 €",
+            "TVA : 5 586 × 20 % = 1 117,20 € ; net à payer : 6 703,20 €"
+          ],
+          "erreurs": [
+            "Calculer la TVA sur le net commercial (1 140 €)"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Passez l'écriture chez le vendeur (comptes 411, 665, 707, 44571).",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "411",
+                "debit": 6703.2
+              },
+              {
+                "compte": "665",
+                "debit": 114
+              },
+              {
+                "compte": "707",
+                "credit": 5700
+              },
+              {
+                "compte": "44571",
+                "credit": 1117.2
+              }
+            ]
+          },
+          "correction": [
+            "Débits : 6 703,20 + 114 = 6 817,20 ; crédits : 5 700 + 1 117,20 = 6 817,20"
+          ]
+        },
+        {
+          "id": "4",
+          "consigne": "Passez l'écriture chez l'acheteur (comptes 607, 44566, 401, 765).",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "607",
+                "debit": 5700
+              },
+              {
+                "compte": "44566",
+                "debit": 1117.2
+              },
+              {
+                "compte": "401",
+                "credit": 6703.2
+              },
+              {
+                "compte": "765",
+                "credit": 114
+              }
+            ]
+          },
+          "correction": [
+            "Écriture en miroir : l'escompte est un produit financier (765) pour l'acheteur"
+          ]
+        }
       ]
     },
     {
-      "id": "e.cpt.achats-ventes.02", "notions": ["cpt.achats-ventes.avoirs"], "type": "ecriture", "niveau": 2, "fictif": true,
+      "id": "e.cpt.achats-ventes.02",
+      "notions": [
+        "cpt.achats-ventes.avoirs"
+      ],
+      "type": "ecriture",
+      "niveau": 2,
+      "fictif": true,
       "titre": "Avoir pour retour et rabais",
       "enonce": "La société Textiles du Centre a vendu des marchandises. Le client retourne des articles défectueux pour 800 € HT et obtient en outre un rabais de 150 € HT sur le reste de la livraison. Un seul avoir est émis (TVA 20 %).",
       "questions": [
-        { "id": "1", "consigne": "Montant TTC de l'avoir (€) ?", "reponse": { "type": "nombre", "valeur": 1140, "tolerance": 0.01, "unite": "€" },
-          "correction": ["HT : 800 + 150 = 950 € ; TVA : 190 € ; TTC : 1 140 €"] },
-        { "id": "2", "consigne": "Écriture chez le vendeur (comptes 707, 709, 44571, 411).",
-          "reponse": { "type": "ecriture", "lignes": [ { "compte": "707", "debit": 800 }, { "compte": "709", "debit": 150 }, { "compte": "44571", "debit": 190 }, { "compte": "411", "credit": 1140 } ] },
-          "correction": ["Retour : annulation partielle de la vente (D 707)", "Rabais accordé après facture : D 709", "Régularisation de TVA collectée : D 44571", "La créance client diminue : C 411"] }
+        {
+          "id": "1",
+          "consigne": "Montant TTC de l'avoir (€) ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 1140,
+            "tolerance": 0.01,
+            "unite": "€"
+          },
+          "correction": [
+            "HT : 800 + 150 = 950 € ; TVA : 190 € ; TTC : 1 140 €"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Écriture chez le vendeur (comptes 707, 709, 44571, 411).",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "707",
+                "debit": 800
+              },
+              {
+                "compte": "709",
+                "debit": 150
+              },
+              {
+                "compte": "44571",
+                "debit": 190
+              },
+              {
+                "compte": "411",
+                "credit": 1140
+              }
+            ]
+          },
+          "correction": [
+            "Retour : annulation partielle de la vente (D 707)",
+            "Rabais accordé après facture : D 709",
+            "Régularisation de TVA collectée : D 44571",
+            "La créance client diminue : C 411"
+          ]
+        }
       ]
     },
     {
-      "id": "e.cpt.achats-ventes.03", "notions": ["cpt.achats-ventes.devises"], "type": "ecriture", "niveau": 3, "fictif": true,
+      "id": "e.cpt.achats-ventes.03",
+      "notions": [
+        "cpt.achats-ventes.devises"
+      ],
+      "type": "ecriture",
+      "niveau": 3,
+      "fictif": true,
       "titre": "Vente en dollars et encaissement",
       "enonce": "Le 5 septembre, Optique Lorraine vend des montures à un client américain pour 27 000 USD (exportation, pas de TVA). Cours : 1 EUR = 1,08 USD. Le client paie le 20 octobre ; cours : 1 EUR = 1,125 USD. Utilisez 411, 707, 512, 656, 756.",
       "questions": [
-        { "id": "1", "consigne": "Écriture du 5 septembre.",
-          "reponse": { "type": "ecriture", "lignes": [ { "compte": "411", "debit": 25000 }, { "compte": "707", "credit": 25000 } ] },
-          "correction": ["27 000 ÷ 1,08 = 25 000 €"] },
-        { "id": "2", "consigne": "Montant encaissé en euros le 20 octobre ?", "reponse": { "type": "nombre", "valeur": 24000, "tolerance": 0.01, "unite": "€" },
-          "correction": ["27 000 ÷ 1,125 = 24 000 €"] },
-        { "id": "3", "consigne": "Écriture du 20 octobre.",
-          "reponse": { "type": "ecriture", "lignes": [ { "compte": "512", "debit": 24000 }, { "compte": "656", "debit": 1000 }, { "compte": "411", "credit": 25000 } ] },
-          "correction": ["La créance est soldée pour sa valeur d'origine (25 000)", "Le dollar s'est déprécié : on encaisse moins, perte de change commerciale 1 000 € (656)"],
-          "erreurs": ["Créditer 411 de 24 000 et laisser un solde", "Utiliser 756 (gain)"] }
+        {
+          "id": "1",
+          "consigne": "Écriture du 5 septembre.",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "411",
+                "debit": 25000
+              },
+              {
+                "compte": "707",
+                "credit": 25000
+              }
+            ]
+          },
+          "correction": [
+            "27 000 ÷ 1,08 = 25 000 €"
+          ]
+        },
+        {
+          "id": "2",
+          "consigne": "Montant encaissé en euros le 20 octobre ?",
+          "reponse": {
+            "type": "nombre",
+            "valeur": 24000,
+            "tolerance": 0.01,
+            "unite": "€"
+          },
+          "correction": [
+            "27 000 ÷ 1,125 = 24 000 €"
+          ]
+        },
+        {
+          "id": "3",
+          "consigne": "Écriture du 20 octobre.",
+          "reponse": {
+            "type": "ecriture",
+            "lignes": [
+              {
+                "compte": "512",
+                "debit": 24000
+              },
+              {
+                "compte": "656",
+                "debit": 1000
+              },
+              {
+                "compte": "411",
+                "credit": 25000
+              }
+            ]
+          },
+          "correction": [
+            "La créance est soldée pour sa valeur d'origine (25 000)",
+            "Le dollar s'est déprécié : on encaisse moins, perte de change commerciale 1 000 € (656)"
+          ],
+          "erreurs": [
+            "Créditer 411 de 24 000 et laisser un solde",
+            "Utiliser 756 (gain)"
+          ]
+        }
       ]
     }
   ]

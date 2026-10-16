@@ -67,7 +67,7 @@ export function construireIndex() {
         idx.redigee = true;
         if (n.verifieLe) notionsVerifiees[n.id] = n.verifieLe;
         idx.titre = n.titre;
-        idx.niveau = n.niveau;
+        if (n.niveau && n.niveau !== idx.niveau) err(n.id, `niveau ${n.niveau} différent du catalogue (${idx.niveau})`);
         idx.prerequis = n.prerequis ?? [];
         idx.connexes = n.connexes ?? [];
         idx.definition = n.definition ?? n.explication?.slice(0, 220);

@@ -97,7 +97,7 @@
     {
       "id": "cpt.tresorerie.effets",
       "titre": "Les effets de commerce : lettre de change, billet à ordre, escompte",
-      "niveau": "I",
+      "niveau": "A",
       "prerequis": [
         "cpt.tresorerie.reglements"
       ],
@@ -202,7 +202,7 @@
     {
       "id": "cpt.tresorerie.rapprochement",
       "titre": "Le rapprochement bancaire",
-      "niveau": "I",
+      "niveau": "A",
       "prerequis": [
         "cpt.tresorerie.reglements",
         "cpt.mecanisme.grand-livre"
