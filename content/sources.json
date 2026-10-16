@@ -435,5 +435,19 @@
     "url": "https://www.legifrance.gouv.fr",
     "acces": "reference",
     "pertinence": "Droit de citation et plagiat"
+  },
+  {
+    "id": "src.vinay-darbelnet",
+    "titre": "Stylistique comparée du français et de l'anglais, Paris, Didier, 1958",
+    "auteur": "Jean-Paul Vinay, Jean Darbelnet",
+    "acces": "reference",
+    "pertinence": "Procédés de traduction"
+  },
+  {
+    "id": "src.chuquet-paillard",
+    "titre": "Approche linguistique des problèmes de traduction anglais-français, Ophrys, 1987",
+    "auteur": "Hélène Chuquet, Michel Paillard",
+    "acces": "reference",
+    "pertinence": "Contrastes anglais-français"
   }
 ]

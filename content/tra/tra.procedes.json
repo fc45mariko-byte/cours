@@ -1,0 +1,126 @@
+{
+  "chapitre": "tra.procedes",
+  "notions": [
+    {
+      "id": "tra.procedes.directs",
+      "titre": "Procédés directs : emprunt, calque, traduction littérale",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tra.procedes.obliques", "tve.contrastes.calque"],
+      "question": "Quand peut-on traduire « mot à mot », et quand cela devient-il une faute ?",
+      "definition": "Vinay et Darbelnet (Stylistique comparée du français et de l'anglais, 1958) distinguent sept procédés de traduction. Les trois procédés directs suivent de près la langue source. L'emprunt reprend tel quel un mot étranger (marketing, start-up, leasing), souvent pour combler un manque ou pour un effet de couleur locale. Le calque traduit littéralement les éléments d'une expression (skyscraper → gratte-ciel, weekend → fin de semaine au Québec) ; il est légitime lorsqu'il est consacré par l'usage, fautif sinon (« faire du sens » pour « to make sense »). La traduction littérale, mot à mot correcte, n'est possible que lorsque les deux langues ont une structure et un sens parallèles (The report is on the table → Le rapport est sur la table).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Procédé", "Exemple", "Statut"], "lignes": [
+          ["Emprunt", "le leasing, le marketing", "Admis si l'usage l'a consacré ; en France, des équivalents officiels existent (crédit-bail, mercatique)"],
+          ["Calque admis", "skyscraper → gratte-ciel", "Consacré"],
+          ["Calque fautif", "to make sense → « faire du sens »", "Anglicisme à éviter : « avoir du sens »"],
+          ["Traduction littérale", "The firm employs 200 people → L'entreprise emploie 200 personnes", "Correcte si le sens et l'usage sont respectés"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Emprunt", "en": "borrowing / loan word", "es": "préstamo", "definition": "Mot étranger repris tel quel." },
+        { "fr": "Calque", "en": "calque / loan translation", "es": "calco", "definition": "Traduction littérale des éléments d'une expression." },
+        { "fr": "Anglicisme", "en": "anglicism", "es": "anglicismo", "definition": "Emprunt ou calque fautif de l'anglais." }
+      ],
+      "exemple": { "fictif": true, "texte": "« The company will implement a new policy » ne se traduit pas « L'entreprise va implémenter une nouvelle politique » (calque), mais « L'entreprise va mettre en œuvre une nouvelle politique »." },
+      "confusions": [
+        { "a": "Traduction littérale réussie", "b": "Mot-à-mot fautif", "explication": "La traduction littérale n'est acceptable que si elle produit un français naturel et exact." }
+      ],
+      "verification": ["Donnez un calque fautif courant et sa correction."],
+      "sources": ["src.vinay-darbelnet"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tra.procedes.obliques",
+      "titre": "Procédés obliques : transposition, modulation, équivalence, adaptation",
+      "niveau": "F",
+      "prerequis": ["tra.procedes.directs"],
+      "connexes": ["tra.contrastes.nominalisation", "tra.contrastes.ordre"],
+      "question": "Que faire quand le mot-à-mot ne fonctionne pas ?",
+      "definition": "Les procédés obliques s'éloignent de la forme de l'original pour en restituer le sens. La transposition change la catégorie grammaticale sans changer le sens (After he arrived → Après son arrivée : verbe → nom). La modulation change le point de vue (It is not difficult → C'est facile ; Keep off the grass → Pelouse interdite). L'équivalence rend une situation par une expression entièrement différente, typique des proverbes, interjections et formules figées (It's raining cats and dogs → Il pleut des cordes). L'adaptation remplace une réalité culturelle inconnue du lecteur cible par une réalité équivalente (une référence au cricket par une référence au football, selon le contexte).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Procédé", "Anglais", "Français"], "lignes": [
+          ["Transposition", "As soon as he arrived", "Dès son arrivée"],
+          ["Transposition", "The price increase was sharp.", "Les prix ont fortement augmenté."],
+          ["Modulation", "It is not unlikely that…", "Il est probable que…"],
+          ["Modulation", "Second-hand car", "Voiture d'occasion"],
+          ["Équivalence", "Wet paint", "Peinture fraîche"],
+          ["Équivalence", "First come, first served", "Premier arrivé, premier servi"],
+          ["Adaptation", "Thanksgiving rush", "La cohue des fêtes de fin d'année (selon le contexte)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Transposition", "en": "transposition", "es": "transposición", "definition": "Changement de catégorie grammaticale." },
+        { "fr": "Modulation", "en": "modulation", "es": "modulación", "definition": "Changement de point de vue." },
+        { "fr": "Équivalence", "en": "equivalence", "es": "equivalencia", "definition": "Expression différente pour une même situation." },
+        { "fr": "Adaptation", "en": "adaptation", "es": "adaptación", "definition": "Remplacement d'une réalité culturelle." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Sales are expected to pick up » → « On s'attend à une reprise des ventes » (transposition : verbe → nom, et passif rendu par « on »)." },
+      "confusions": [
+        { "a": "Adaptation (réalité culturelle)", "b": "Équivalence (expression figée)", "explication": "L'adaptation change le référent ; l'équivalence change l'expression pour la même situation." }
+      ],
+      "verification": ["Identifiez le procédé : « No smoking » → « Défense de fumer »."],
+      "sources": ["src.vinay-darbelnet"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.tra.procedes.001", "notion": "tra.procedes.directs", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "« Gratte-ciel » pour « skyscraper » est un exemple de :",
+      "choix": [
+        { "id": "a", "texte": "Calque", "correct": true, "explication": "Traduction littérale des éléments, consacrée par l'usage." },
+        { "id": "b", "texte": "Emprunt", "correct": false, "explication": "L'emprunt garderait « skyscraper »." },
+        { "id": "c", "texte": "Modulation", "correct": false, "explication": "Le point de vue est le même." },
+        { "id": "d", "texte": "Adaptation", "correct": false, "explication": "Pas de changement de référent culturel." }
+      ]
+    },
+    {
+      "id": "q.tra.procedes.002", "notion": "tra.procedes.directs", "format": "unique", "niveau": 2, "competence": "detecter-erreur",
+      "enonce": "Quelle traduction de « This decision makes sense » est fautive ?",
+      "choix": [
+        { "id": "a", "texte": "« Cette décision fait du sens. »", "correct": true, "explication": "Calque fautif (anglicisme)." },
+        { "id": "b", "texte": "« Cette décision a du sens. »", "correct": false, "explication": "Correct." },
+        { "id": "c", "texte": "« Cette décision est sensée. »", "correct": false, "explication": "Correct." },
+        { "id": "d", "texte": "« Cette décision est logique. »", "correct": false, "explication": "Correct." }
+      ]
+    },
+    {
+      "id": "q.tra.procedes.003", "notion": "tra.procedes.obliques", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "« After he had signed the contract » → « Après la signature du contrat ». Quel procédé ?",
+      "choix": [
+        { "id": "a", "texte": "Transposition", "correct": true, "explication": "Verbe → nom." },
+        { "id": "b", "texte": "Modulation", "correct": false, "explication": "Le point de vue ne change pas." },
+        { "id": "c", "texte": "Équivalence", "correct": false, "explication": "Pas d'expression figée." },
+        { "id": "d", "texte": "Emprunt", "correct": false, "explication": "Aucun mot anglais conservé." }
+      ]
+    },
+    {
+      "id": "q.tra.procedes.004", "notion": "tra.procedes.obliques", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "« It is not easy » → « C'est difficile ». Quel procédé ?",
+      "choix": [
+        { "id": "a", "texte": "Modulation", "correct": true, "explication": "Passage du négatif au positif contraire : changement de point de vue." },
+        { "id": "b", "texte": "Transposition", "correct": false, "explication": "La catégorie grammaticale ne change pas." },
+        { "id": "c", "texte": "Calque", "correct": false, "explication": "Ce serait « Ce n'est pas facile »." },
+        { "id": "d", "texte": "Adaptation", "correct": false, "explication": "Pas de référent culturel." }
+      ]
+    },
+    {
+      "id": "q.tra.procedes.005", "notion": "tra.procedes.obliques", "format": "vrai-faux", "niveau": 1, "competence": "memoriser",
+      "enonce": "Vrai ou faux : « It's raining cats and dogs » → « Il pleut des cordes » est une équivalence.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "Expression figée rendue par une autre expression figée." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "C'est l'exemple type d'équivalence." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.tra.procedes.001", "notions": ["tra.procedes.directs", "tra.procedes.obliques"],
+      "question": "Présentez les sept procédés de traduction de Vinay et Darbelnet avec un exemple chacun.",
+      "reponse": "Directs : emprunt (le marketing), calque (skyscraper → gratte-ciel ; fautif : faire du sens), traduction littérale (The firm employs 200 people → L'entreprise emploie 200 personnes). Obliques : transposition (after he arrived → après son arrivée), modulation (It is not easy → C'est difficile ; second-hand → d'occasion), équivalence (Wet paint → Peinture fraîche), adaptation (remplacer une référence culturelle par un équivalent connu du lecteur).",
+      "indispensables": ["Sept procédés", "Directs vs obliques", "Un exemple correct par procédé"],
+      "erreurs": ["Confondre transposition et modulation"]
+    }
+  ]
+}

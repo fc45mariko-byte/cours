@@ -1,0 +1,292 @@
+{
+  "chapitre": "tra.contrastes",
+  "notions": [
+    {
+      "id": "tra.contrastes.nominalisation",
+      "titre": "Nominalisation et verbalisation",
+      "niveau": "F",
+      "prerequis": ["tra.procedes.obliques"],
+      "connexes": ["tra.pratique.titres-presse"],
+      "question": "Pourquoi le français préfère-t-il souvent les noms là où l'anglais emploie des verbes ?",
+      "definition": "Le français a tendance à nominaliser (exprimer une action par un nom : « la hausse des prix », « dès la signature ») là où l'anglais préfère des verbes et des propositions (prices rose ; as soon as the contract is signed). En version (anglais → français), on transpose souvent des verbes en noms pour obtenir un français naturel ; en thème (français → anglais), on transforme des groupes nominaux lourds en propositions verbales. L'anglais administratif et journalistique utilise aussi des noms composés compacts (sales growth forecast), qu'il faut déplier en français (prévision de croissance des ventes).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Anglais (verbal)", "Français (nominal)"], "lignes": [
+          ["Before the goods are shipped", "Avant l'expédition des marchandises"],
+          ["Prices rose sharply", "Forte hausse des prix (titre) / Les prix ont fortement augmenté"],
+          ["Since the company was founded", "Depuis la création de l'entreprise"],
+          ["export sales growth target", "objectif de croissance des ventes à l'export"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Nominalisation", "en": "nominalisation", "es": "nominalización", "definition": "Expression d'une action par un nom." },
+        { "fr": "Nom composé", "en": "compound noun", "es": "sustantivo compuesto", "definition": "Nom formé de plusieurs éléments." }
+      ],
+      "exemple": { "fictif": true, "texte": "Version : « Once the new plant has been built, production will double » → « Une fois la nouvelle usine construite / Après la construction de la nouvelle usine, la production doublera »." },
+      "confusions": [
+        { "a": "Ordre des noms composés anglais (déterminant avant)", "b": "Ordre français (complément après)", "explication": "Un « price increase » est une « hausse des prix » : on lit le nom composé anglais de droite à gauche." }
+      ],
+      "verification": ["Traduisez : « customer satisfaction survey results »."],
+      "sources": ["src.chuquet-paillard"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tra.contrastes.temps-aspect",
+      "titre": "Temps et aspects",
+      "niveau": "F",
+      "prerequis": ["aec.grammaire.temps"],
+      "connexes": ["tra.pratique.version"],
+      "question": "Comment traduire les temps et les aspects (simple, -ing, perfect) entre l'anglais et le français ?",
+      "definition": "L'anglais combine temps (présent, passé) et aspects (simple, progressif be + -ing, parfait have + participe), alors que le français marque l'aspect autrement (imparfait / passé simple ou composé, « être en train de », adverbes). Correspondances fréquentes : le prétérit se traduit par le passé composé (oral, presse) ou le passé simple (récit écrit) pour une action ponctuelle, par l'imparfait pour une habitude ou une description ; le present perfect par le passé composé ou par le présent avec « depuis » (We have known them for years → Nous les connaissons depuis des années) ; le progressif souvent par un temps simple, parfois par « être en train de ». Le futur anglais en will ou be going to se rend par le futur simple ou proche.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Anglais", "Français"], "lignes": [
+          ["We have been working on this project since May.", "Nous travaillons sur ce projet depuis mai."],
+          ["Sales fell in 2024.", "Les ventes ont baissé (ont reculé) en 2024."],
+          ["He used to export to Mexico.", "Il exportait (autrefois) au Mexique."],
+          ["The company is recruiting.", "L'entreprise recrute."],
+          ["By 2030, we will have doubled our exports.", "D'ici 2030, nous aurons doublé nos exportations."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Aspect progressif", "en": "progressive / continuous aspect", "es": "aspecto progresivo", "definition": "Action vue en cours de déroulement." },
+        { "fr": "Aspect parfait", "en": "perfect aspect", "es": "aspecto perfectivo", "definition": "Action vue dans son résultat ou son lien au présent." }
+      ],
+      "exemple": { "fictif": true, "texte": "Thème : « Je travaille chez eux depuis trois ans » → « I have been working for them for three years » (et non « I work for them since three years »)." },
+      "confusions": [
+        { "a": "Present perfect", "b": "Passé composé (toujours)", "explication": "Avec « for / since », le present perfect se rend souvent par un présent français." }
+      ],
+      "verification": ["Traduisez : « We have been negotiating for six months. »"],
+      "sources": ["src.chuquet-paillard"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tra.contrastes.articles",
+      "titre": "Articles et déterminants",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tra.pratique.theme"],
+      "question": "Pourquoi « the » et « le » ne se correspondent-ils pas toujours ?",
+      "definition": "L'anglais n'emploie pas d'article devant un nom pris dans un sens général (Inflation is rising ; Exporters face new rules), devant les noms indénombrables pris globalement (Information is key) ni devant la plupart des noms de pays singuliers (France, Mexico ; mais the United States, the UK). Le français emploie l'article défini dans ces cas (L'inflation augmente ; Les exportateurs…). Inversement, l'anglais emploie « a / an » devant un nom de profession (She is an engineer → Elle est ingénieure). Le possessif est plus fréquent en anglais pour les parties du corps et les objets personnels (He raised his hand → Il a levé la main). Les indénombrables (information, advice, equipment, furniture, news, research) ne prennent ni « a » ni pluriel.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Français", "Anglais"], "lignes": [
+          ["Le commerce international est en plein essor.", "International trade is booming."],
+          ["Les PME exportent davantage.", "SMEs are exporting more."],
+          ["Elle est comptable.", "She is an accountant."],
+          ["Un conseil / des informations", "a piece of advice / some information"],
+          ["La France et les États-Unis", "France and the United States"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Article défini / indéfini", "en": "definite / indefinite article", "es": "artículo determinado / indeterminado", "definition": "The / a(n) ; le, la, les / un, une, des." },
+        { "fr": "Nom indénombrable", "en": "uncountable noun", "es": "sustantivo incontable", "definition": "Nom sans pluriel ni « a »." },
+        { "fr": "Article zéro", "en": "zero article", "es": "artículo cero", "definition": "Absence d'article." }
+      ],
+      "exemple": { "fictif": true, "texte": "Thème : « Les informations que vous nous avez envoyées sont utiles » → « The information you sent us is useful » (singulier, sans -s)." },
+      "confusions": [
+        { "a": "« Les exportateurs » (sens général)", "b": "« The exporters » (des exportateurs déterminés)", "explication": "« The » signale des exportateurs précis, déjà identifiés." }
+      ],
+      "verification": ["Traduisez : « La croissance ralentit en Europe. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tra.contrastes.ing",
+      "titre": "Les formes en -ing",
+      "niveau": "F",
+      "prerequis": ["tra.contrastes.temps-aspect"],
+      "connexes": ["tra.contrastes.nominalisation"],
+      "question": "Comment traduire les nombreuses formes en -ing de l'anglais ?",
+      "definition": "La forme en -ing a plusieurs valeurs qu'il faut identifier avant de traduire : aspect progressif (is growing → croît, est en train de croître) ; gérondif à valeur nominale, sujet ou complément (Exporting requires… → Exporter exige… / L'exportation exige… ; after signing → après avoir signé) ; participe présent à valeur adjectivale ou circonstancielle (rising prices → la hausse des prix ; Being a small firm, we… → Comme nous sommes une petite entreprise…) ; adjectif (a challenging market → un marché difficile). Le français utilise selon les cas un infinitif, un nom, une proposition relative, une subordonnée ou un gérondif (« en + participe ») ; le participe présent français est souvent lourd.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Anglais", "Valeur", "Français"], "lignes": [
+          ["Exporting to Asia is risky.", "Gérondif sujet", "Exporter en Asie est risqué."],
+          ["Before signing the contract…", "Gérondif après préposition", "Avant de signer le contrat…"],
+          ["Rising costs…", "Participe adjectival", "La hausse des coûts…"],
+          ["Having analysed the market, we…", "Participe circonstanciel", "Après avoir analysé le marché, nous…"],
+          ["Companies operating in Mexico", "Participe = relative", "Les entreprises qui opèrent au Mexique"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Gérondif (anglais)", "en": "gerund", "es": "gerundio inglés (forma -ing nominal)", "definition": "Forme verbale en -ing à valeur nominale." },
+        { "fr": "Participe présent", "en": "present participle", "es": "participio presente / gerundio", "definition": "Forme en -ing à valeur verbale ou adjectivale." }
+      ],
+      "exemple": { "fictif": true, "texte": "Version : « Faced with falling demand, the company is cutting jobs » → « Confrontée à la baisse de la demande, l'entreprise supprime des emplois »." },
+      "confusions": [
+        { "a": "Gérondif anglais (-ing nominal)", "b": "Gérondif français (en + -ant)", "explication": "Même nom, fonctions différentes." }
+      ],
+      "verification": ["Traduisez : « Doing business in Brazil requires patience. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tra.contrastes.passif",
+      "titre": "Le passif",
+      "niveau": "F",
+      "prerequis": ["aec.grammaire.passif"],
+      "connexes": ["tve.contrastes.on"],
+      "question": "Faut-il traduire un passif anglais par un passif français ?",
+      "definition": "L'anglais utilise le passif beaucoup plus que le français, notamment dans la presse et les textes techniques. En version, on le rend souvent par « on » (It is said that… → On dit que…), par une tournure pronominale (These products are sold worldwide → Ces produits se vendent dans le monde entier), par un actif avec sujet explicite, ou par une nominalisation. Le passif à sujet bénéficiaire (He was given a bonus) n'existe pas en français : « On lui a accordé une prime ». En thème, « on » se traduit souvent par un passif anglais (On a livré les marchandises → The goods were delivered) ou par we / people / they selon le sens.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Anglais", "Français"], "lignes": [
+          ["The plant is expected to close.", "L'usine devrait fermer. / On s'attend à la fermeture de l'usine."],
+          ["We were told that…", "On nous a dit que…"],
+          ["English is spoken here.", "Ici, on parle anglais."],
+          ["The contract was signed yesterday.", "Le contrat a été signé hier."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Tournure pronominale à sens passif", "en": "pronominal passive", "es": "pasiva refleja", "definition": "« Se vendre », « se fabriquer »…" },
+        { "fr": "Pronom indéfini « on »", "en": "indefinite pronoun « on » (one, we, they, people)", "es": "sujeto impersonal (se, uno)", "definition": "Sujet indéterminé." }
+      ],
+      "exemple": { "fictif": true, "texte": "Version : « The company was granted a loan by the regional bank » → « La banque régionale a accordé un prêt à l'entreprise » ou « L'entreprise a obtenu un prêt de la banque régionale »." },
+      "confusions": [
+        { "a": "Passif anglais fréquent", "b": "Passif français lourd", "explication": "Une traduction systématique au passif rend le français maladroit." }
+      ],
+      "verification": ["Traduisez : « She was offered a job in Madrid. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tra.contrastes.prepositions",
+      "titre": "Prépositions et particules",
+      "niveau": "A",
+      "prerequis": ["tra.procedes.obliques"],
+      "connexes": ["tra.contrastes.ordre"],
+      "question": "Comment traduire les verbes à particule et les prépositions anglaises ?",
+      "definition": "L'anglais exprime souvent la manière par le verbe et le résultat ou la direction par la particule (to walk out, to sell off, to phase out, to step up), alors que le français fait l'inverse ou n'exprime qu'un élément (to phase out → supprimer progressivement ; to step up efforts → intensifier ses efforts ; prices went up → les prix ont augmenté). Les verbes à particule (phrasal verbs) ont souvent un sens figé : to set up (créer), to take over (racheter, prendre le contrôle), to lay off (licencier), to carry out (réaliser), to put off (reporter). Les prépositions ne se correspondent pas une à une : to depend on → dépendre de ; interested in → intéressé par ; at the end of → à la fin de.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Anglais", "Français"], "lignes": [
+          ["to set up a subsidiary", "créer une filiale"],
+          ["to take over a competitor", "racheter un concurrent"],
+          ["to lay off 200 workers", "licencier 200 salariés"],
+          ["to phase out coal", "abandonner progressivement le charbon"],
+          ["to carry out a survey", "réaliser une enquête"],
+          ["to put off a meeting", "reporter une réunion"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Verbe à particule", "en": "phrasal verb", "es": "verbo frasal / con partícula", "definition": "Verbe + particule au sens souvent figé." },
+        { "fr": "Préposition", "en": "preposition", "es": "preposición", "definition": "Mot introduisant un complément." }
+      ],
+      "exemple": { "fictif": true, "texte": "Version : « The group plans to sell off its loss-making units » → « Le groupe prévoit de céder ses filiales déficitaires »." },
+      "confusions": [
+        { "a": "To take over (racheter)", "b": "To take on (embaucher, assumer)", "explication": "Une particule change complètement le sens." }
+      ],
+      "verification": ["Traduisez : « The firm was taken over and 300 staff were laid off. »"],
+      "sources": ["src.vinay-darbelnet"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tra.contrastes.ordre",
+      "titre": "Ordre des mots et chassé-croisé",
+      "niveau": "A",
+      "prerequis": ["tra.contrastes.prepositions"],
+      "connexes": ["tra.procedes.obliques"],
+      "question": "Pourquoi faut-il parfois inverser les éléments d'une phrase en traduisant ?",
+      "definition": "Le chassé-croisé est une double transposition où les deux éléments de sens échangent leur catégorie grammaticale : He swam across the river → Il a traversé la rivière à la nage (le mouvement est exprimé en anglais par la particule « across » et la manière par le verbe ; en français, le mouvement par le verbe « traverser » et la manière par « à la nage »). Plus largement, l'ordre des mots diffère : place des adjectifs (a new French company → une nouvelle entreprise française), des adverbes (He often travels → Il voyage souvent), mise en relief (It was the CFO who decided → C'est le directeur financier qui a décidé), et les longs groupes adjectivaux antéposés de l'anglais qui deviennent des compléments ou des relatives en français.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Anglais", "Français"], "lignes": [
+          ["The truck drove out of the warehouse.", "Le camion est sorti de l'entrepôt."],
+          ["She flew to Madrid.", "Elle s'est rendue à Madrid en avion."],
+          ["a fast-growing Spanish start-up", "une jeune entreprise espagnole en forte croissance"],
+          ["the recently signed agreement", "l'accord signé récemment"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Chassé-croisé", "en": "chassé-croisé (crossed transposition)", "es": "cruce / transposición cruzada", "definition": "Double transposition inversant les rôles grammaticaux." },
+        { "fr": "Mise en relief", "en": "emphasis / cleft sentence", "es": "énfasis / oración escindida", "definition": "Construction qui souligne un élément." }
+      ],
+      "exemple": { "fictif": true, "texte": "Version : « Exporters rushed into the Mexican market » → « Les exportateurs se sont précipités sur le marché mexicain »." },
+      "confusions": [
+        { "a": "Ordre anglais conservé", "b": "Ordre naturel du français", "explication": "Garder l'ordre des adjectifs anglais produit un français incorrect." }
+      ],
+      "verification": ["Traduisez : « The container was lifted off the ship. »"],
+      "sources": ["src.vinay-darbelnet"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.tra.contrastes.001", "notion": "tra.contrastes.nominalisation", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Traduction la plus naturelle de « export sales growth » :",
+      "choix": [
+        { "id": "a", "texte": "la croissance des ventes à l'export", "correct": true, "explication": "On déplie le nom composé de droite à gauche." },
+        { "id": "b", "texte": "l'export ventes croissance", "correct": false, "explication": "Ordre anglais conservé." },
+        { "id": "c", "texte": "les ventes de croissance export", "correct": false, "explication": "Contresens." },
+        { "id": "d", "texte": "la croissance export des ventes", "correct": false, "explication": "Maladroit." }
+      ]
+    },
+    {
+      "id": "q.tra.contrastes.002", "notion": "tra.contrastes.temps-aspect", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "« We have been working with them for ten years. »",
+      "choix": [
+        { "id": "a", "texte": "Nous travaillons avec eux depuis dix ans.", "correct": true, "explication": "Present perfect + for → présent + depuis." },
+        { "id": "b", "texte": "Nous avons travaillé avec eux pendant dix ans.", "correct": false, "explication": "Laisse entendre que c'est terminé." },
+        { "id": "c", "texte": "Nous travaillions avec eux il y a dix ans.", "correct": false, "explication": "Contresens." },
+        { "id": "d", "texte": "Nous avons été en train de travailler avec eux dix ans.", "correct": false, "explication": "Calque fautif." }
+      ]
+    },
+    {
+      "id": "q.tra.contrastes.003", "notion": "tra.contrastes.articles", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Thème : « L'information est essentielle à l'export. »",
+      "choix": [
+        { "id": "a", "texte": "Information is essential for exporting.", "correct": true, "explication": "Indénombrable, sens général : pas d'article." },
+        { "id": "b", "texte": "The informations are essential for export.", "correct": false, "explication": "Information est indénombrable." },
+        { "id": "c", "texte": "An information is essential.", "correct": false, "explication": "Pas de « an » devant un indénombrable." },
+        { "id": "d", "texte": "The information are essential.", "correct": false, "explication": "Accord singulier." }
+      ]
+    },
+    {
+      "id": "q.tra.contrastes.004", "notion": "tra.contrastes.ing", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "« Before signing the contract, check the Incoterm. »",
+      "choix": [
+        { "id": "a", "texte": "Avant de signer le contrat, vérifiez l'Incoterm.", "correct": true, "explication": "Gérondif après préposition → infinitif." },
+        { "id": "b", "texte": "Avant signant le contrat, vérifiez l'Incoterm.", "correct": false, "explication": "Calque fautif." },
+        { "id": "c", "texte": "En signant le contrat, vérifiez l'Incoterm.", "correct": false, "explication": "Change le sens (simultanéité)." },
+        { "id": "d", "texte": "Avant la signant du contrat…", "correct": false, "explication": "Agrammatical." }
+      ]
+    },
+    {
+      "id": "q.tra.contrastes.005", "notion": "tra.contrastes.passif", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "« He was given a promotion. »",
+      "choix": [
+        { "id": "a", "texte": "On lui a accordé une promotion. / Il a obtenu une promotion.", "correct": true, "explication": "Passif à sujet bénéficiaire rendu par « on » ou un actif." },
+        { "id": "b", "texte": "Il a été donné une promotion.", "correct": false, "explication": "Agrammatical en français." },
+        { "id": "c", "texte": "Il a donné une promotion.", "correct": false, "explication": "Contresens." },
+        { "id": "d", "texte": "Une promotion était donnée.", "correct": false, "explication": "Perd le bénéficiaire et le temps." }
+      ]
+    },
+    {
+      "id": "q.tra.contrastes.006", "notion": "tra.contrastes.prepositions", "format": "unique", "niveau": 2, "competence": "memoriser",
+      "enonce": "« To lay off staff » signifie :",
+      "choix": [
+        { "id": "a", "texte": "Licencier du personnel", "correct": true, "explication": "Phrasal verb figé." },
+        { "id": "b", "texte": "Embaucher du personnel", "correct": false, "explication": "To take on / to hire." },
+        { "id": "c", "texte": "Former le personnel", "correct": false, "explication": "To train." },
+        { "id": "d", "texte": "Loger le personnel", "correct": false, "explication": "Contresens." }
+      ]
+    },
+    {
+      "id": "q.tra.contrastes.007", "notion": "tra.contrastes.ordre", "format": "unique", "niveau": 3, "competence": "appliquer",
+      "enonce": "« The investors pulled out of the project. »",
+      "choix": [
+        { "id": "a", "texte": "Les investisseurs se sont retirés du projet.", "correct": true, "explication": "La particule « out » (sortie) devient le verbe « se retirer »." },
+        { "id": "b", "texte": "Les investisseurs ont tiré hors du projet.", "correct": false, "explication": "Calque absurde." },
+        { "id": "c", "texte": "Les investisseurs ont sorti le projet.", "correct": false, "explication": "Contresens." },
+        { "id": "d", "texte": "Les investisseurs ont poussé le projet.", "correct": false, "explication": "Contresens." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.tra.contrastes.001", "notions": ["tra.contrastes.nominalisation", "tra.contrastes.temps-aspect", "tra.contrastes.articles", "tra.contrastes.ing"],
+      "question": "Résumez les principaux contrastes anglais-français : nominalisation, temps et aspects, articles, formes en -ing.",
+      "reponse": "Le français nominalise (dès la signature) là où l'anglais emploie des verbes ; les noms composés anglais se déplient de droite à gauche. Present perfect + for/since → présent + depuis ; prétérit → passé composé, passé simple ou imparfait selon la valeur ; progressif souvent → temps simple. Article zéro en anglais pour le sens général, les indénombrables, la plupart des pays ; « a » devant une profession. -ing : progressif, gérondif (→ infinitif, nom), participe (→ relative, subordonnée, nom).",
+      "indispensables": ["Nominalisation", "Present perfect + depuis", "Article zéro", "Valeurs de -ing"],
+      "erreurs": ["The informations", "Avant signant"]
+    },
+    {
+      "id": "f.tra.contrastes.002", "notions": ["tra.contrastes.passif", "tra.contrastes.prepositions", "tra.contrastes.ordre"],
+      "question": "Comment traduire le passif anglais, les verbes à particule et le chassé-croisé ?",
+      "reponse": "Passif : souvent « on », tournure pronominale (se vendre), actif avec sujet, nominalisation ; passif à sujet bénéficiaire (He was given) → « on lui a donné ». Phrasal verbs : sens figés à connaître (set up = créer, take over = racheter, lay off = licencier, carry out = réaliser, put off = reporter, phase out = supprimer progressivement). Chassé-croisé : la particule anglaise (direction) devient le verbe français, le verbe anglais (manière) devient un complément (swam across → traversa à la nage).",
+      "indispensables": ["Traductions du passif", "Phrasal verbs courants", "Principe du chassé-croisé"],
+      "erreurs": ["Calquer le passif à sujet bénéficiaire"]
+    }
+  ]
+}
