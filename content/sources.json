@@ -749,5 +749,34 @@
     "auteur": "Friedrich List",
     "acces": "reference",
     "pertinence": "Protectionnisme éducateur"
+  },
+  {
+    "id": "src.kotler",
+    "titre": "Marketing Management, Pearson (éditions successives ; éd. française : Pearson France)",
+    "auteur": "Philip Kotler et Kevin Lane Keller",
+    "acces": "reference",
+    "pertinence": "Segmentation, ciblage, positionnement, marketing digital"
+  },
+  {
+    "id": "src.chopra",
+    "titre": "Supply Chain Management: Strategy, Planning, and Operation, Pearson (éditions successives)",
+    "auteur": "Sunil Chopra et Peter Meindl",
+    "acces": "reference",
+    "pertinence": "Chaîne logistique, stocks, entrepôts"
+  },
+  {
+    "id": "src.lee-bullwhip",
+    "titre": "« The Bullwhip Effect in Supply Chains », Sloan Management Review, vol. 38, n° 3, 1997, p. 93-102",
+    "auteur": "Hau L. Lee, V. Padmanabhan et Seungjin Whang",
+    "acces": "reference",
+    "pertinence": "Effet coup de fouet"
+  },
+  {
+    "id": "src.rgpd",
+    "titre": "Règlement (UE) 2016/679 du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel (RGPD)",
+    "auteur": "Parlement européen et Conseil",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "acces": "reference",
+    "pertinence": "Données personnelles et marketing digital"
   }
 ]

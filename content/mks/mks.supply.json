@@ -1,0 +1,171 @@
+{
+  "chapitre": "mks.supply",
+  "notions": [
+    {
+      "id": "mks.supply.chaine-logistique",
+      "titre": "La chaîne logistique (supply chain)",
+      "niveau": "F",
+      "prerequis": ["tci.operation.flux"],
+      "connexes": ["mks.supply.entreposage", "eco.politique.chaines-valeur", "tci.transport.multimodal"],
+      "question": "Qu'est-ce qu'une supply chain et comment la piloter à l'international ?",
+      "definition": "La chaîne logistique (supply chain) est l'ensemble des acteurs et des opérations qui permettent de livrer un produit au client final, depuis les fournisseurs de matières premières jusqu'au client, voire au retour des produits (logistique inverse). Elle coordonne trois flux : physiques (marchandises), d'information (commandes, prévisions, suivi) et financiers (paiements). Le supply chain management vise à satisfaire le client au meilleur coût en optimisant l'ensemble plutôt que chaque maillon séparément. Le modèle SCOR la décompose en processus : planifier, approvisionner, produire, livrer, gérer les retours. On distingue les flux poussés (production selon des prévisions, puis stockage) et les flux tirés (production déclenchée par la demande réelle, comme le juste-à-temps hérité de Toyota). Un phénomène classique est l'effet coup de fouet (bullwhip effect, Lee, Padmanabhan et Whang, 1997) : de petites variations de la demande finale s'amplifient en remontant la chaîne, à cause des prévisions isolées, des commandes groupées et des promotions. Le partage de l'information et la collaboration limitent cet effet. À l'international, la chaîne s'allonge (délais de transport, douane, change, risques géopolitiques), ce qui oblige à arbitrer entre coût, délai et résilience.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Planifier (plan) : prévoir la demande, dimensionner capacités et stocks",
+          "Approvisionner (source) : choisir et gérer les fournisseurs",
+          "Produire (make)",
+          "Livrer (deliver) : entreposage, transport, dédouanement",
+          "Retours (return) : logistique inverse, recyclage"
+        ] },
+        { "type": "tableau", "entetes": ["", "Flux poussé", "Flux tiré"], "lignes": [
+          ["Déclencheur", "Prévisions", "Commande réelle"],
+          ["Stocks", "Élevés", "Réduits"],
+          ["Risque", "Invendus, obsolescence", "Rupture si la chaîne est perturbée"]
+        ] },
+        { "type": "liste", "titre": "Indicateurs", "items": [
+          "Taux de service : commandes livrées complètes et à l'heure (OTIF, on time in full)",
+          "Délai de livraison (lead time)",
+          "Rotation des stocks",
+          "Coût logistique rapporté au chiffre d'affaires"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Chaîne logistique", "en": "supply chain", "es": "cadena de suministro", "definition": "Ensemble des acteurs et flux qui livrent le produit au client." },
+        { "fr": "Juste-à-temps", "en": "just-in-time (JIT)", "es": "justo a tiempo", "definition": "Production et approvisionnement au moment exact du besoin." },
+        { "fr": "Effet coup de fouet", "en": "bullwhip effect", "es": "efecto látigo", "definition": "Amplification des variations de la demande en amont de la chaîne." },
+        { "fr": "Logistique inverse", "en": "reverse logistics", "es": "logística inversa", "definition": "Gestion des retours, réparations et recyclage." },
+        { "fr": "Délai d'approvisionnement", "en": "lead time", "es": "plazo de entrega / lead time", "definition": "Temps entre la commande et la réception." }
+      ],
+      "exemple": { "fictif": false, "texte": "Lee, Padmanabhan et Whang (1997) décrivent comment, pour des couches pour bébés dont la consommation finale est stable, les commandes passées par les distributeurs au fabricant varient fortement : c'est l'effet coup de fouet.", "source": "src.lee-bullwhip" },
+      "confusions": [
+        { "a": "Logistique (transport, stockage)", "b": "Supply chain management (coordination de tous les acteurs et flux)", "explication": "La logistique est une partie de la supply chain." },
+        { "a": "Chaîne logistique (flux d'un produit)", "b": "Chaîne de valeur mondiale (répartition de la valeur entre pays)", "explication": "Notions liées mais d'angle différent." }
+      ],
+      "verification": ["Pourquoi le partage d'information réduit-il l'effet coup de fouet ?"],
+      "sources": ["src.chopra", "src.lee-bullwhip"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "mks.supply.entreposage",
+      "titre": "Entreposage, stocks et plateformes",
+      "niveau": "F",
+      "prerequis": ["mks.supply.chaine-logistique"],
+      "connexes": ["odg.stocks.wilson", "odg.stocks.pareto", "odg.stocks.point-commande", "tci.douane.regimes-particuliers"],
+      "question": "Comment organiser le stockage et la circulation des marchandises dans une chaîne logistique internationale ?",
+      "definition": "Les stocks permettent d'absorber les écarts entre production et demande, de faire face aux aléas (stock de sécurité) et de bénéficier d'économies d'échelle, mais ils immobilisent de la trésorerie et coûtent (stockage, assurance, obsolescence). Les entrepôts n'ont pas tous la même fonction : l'entrepôt de stockage conserve des marchandises ; la plateforme de cross-docking les fait transiter sans stockage, du quai de réception au quai d'expédition, en moins de 24 à 48 heures ; le hub concentre les flux d'une région ; l'entrepôt sous douane permet de stocker des marchandises tierces en suspension de droits et de taxes jusqu'à leur mise en libre pratique ou leur réexportation. La gestion des stocks s'appuie sur la classification ABC (Pareto), la quantité économique de commande (Wilson), le point de commande, et sur des règles de sortie : FIFO (premier entré, premier sorti), FEFO (premier périmé, premier sorti, pour les produits datés). Un logiciel de gestion d'entrepôt (WMS) suit emplacements et mouvements. Beaucoup d'entreprises confient ces opérations à des prestataires logistiques (3PL), voire l'organisation de toute la chaîne à un intégrateur (4PL).",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Rotation des stocks = consommation (ou coût des ventes) annuelle / stock moyen ; durée moyenne de stockage = 360 / rotation", "legende": "Convention de l'année commerciale de 360 jours." },
+        { "type": "formule", "formule": "Point de commande = consommation journalière × (délai d'approvisionnement + stock de sécurité en jours)", "legende": "Niveau de stock déclenchant une nouvelle commande." },
+        { "type": "tableau", "entetes": ["Type de site", "Fonction"], "lignes": [
+          ["Entrepôt de stockage", "Conserver les marchandises"],
+          ["Plateforme de cross-docking", "Éclater et regrouper sans stocker"],
+          ["Hub", "Concentrer les flux d'une zone"],
+          ["Entrepôt sous douane", "Stocker en suspension de droits"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Entrepôt", "en": "warehouse", "es": "almacén", "definition": "Bâtiment de stockage et de préparation des marchandises." },
+        { "fr": "Transbordement sans stockage", "en": "cross-docking", "es": "cross-docking / transbordo directo", "definition": "Transit rapide des marchandises d'un quai à l'autre." },
+        { "fr": "Stock de sécurité", "en": "safety stock", "es": "stock de seguridad", "definition": "Réserve couvrant les aléas de demande ou de délai." },
+        { "fr": "Prestataire logistique", "en": "third-party logistics provider (3PL)", "es": "operador logístico (3PL)", "definition": "Entreprise réalisant les opérations logistiques pour le compte d'autrui." },
+        { "fr": "Préparation de commandes", "en": "order picking", "es": "preparación de pedidos / picking", "definition": "Prélèvement des articles pour constituer une commande." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un distributeur fictif de pièces détachées reçoit des conteneurs d'Asie au Havre, stocke en entrepôt sous douane les références à faible rotation et fait transiter les références à forte rotation par une plateforme de cross-docking vers ses magasins espagnols." },
+      "confusions": [
+        { "a": "Entrepôt (stockage)", "b": "Plateforme de cross-docking (transit sans stockage)", "explication": "La seconde vise la vitesse, pas la conservation." },
+        { "a": "FIFO (ordre d'entrée)", "b": "FEFO (date de péremption)", "explication": "Pour les produits datés, FEFO évite de jeter des produits périmés." }
+      ],
+      "verification": ["Calculez la durée moyenne de stockage d'un article dont la rotation est de 8 fois par an."],
+      "sources": ["src.chopra", "src.wilson"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.mks.supply.001", "notion": "mks.supply.chaine-logistique", "format": "multiple", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quels flux une supply chain coordonne-t-elle ?",
+      "choix": [
+        { "id": "a", "texte": "Physiques", "correct": true, "explication": "Marchandises." },
+        { "id": "b", "texte": "D'information", "correct": true, "explication": "Commandes, prévisions, suivi." },
+        { "id": "c", "texte": "Financiers", "correct": true, "explication": "Paiements." },
+        { "id": "d", "texte": "Migratoires", "correct": false, "explication": "Hors sujet." }
+      ]
+    },
+    {
+      "id": "q.mks.supply.002", "notion": "mks.supply.chaine-logistique", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Qu'est-ce que l'effet coup de fouet ?",
+      "choix": [
+        { "id": "a", "texte": "L'amplification des variations de commandes en remontant la chaîne", "correct": true, "explication": "Lee, Padmanabhan et Whang (1997)." },
+        { "id": "b", "texte": "Une hausse brutale des prix du transport", "correct": false, "explication": "Phénomène différent." },
+        { "id": "c", "texte": "La livraison express", "correct": false, "explication": "Sans rapport." },
+        { "id": "d", "texte": "Une sanction douanière", "correct": false, "explication": "Sans rapport." }
+      ]
+    },
+    {
+      "id": "q.mks.supply.003", "notion": "mks.supply.chaine-logistique", "format": "unique", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "Après une rupture d'approvisionnement venue d'Asie, une entreprise en juste-à-temps envisage plusieurs mesures. Laquelle améliore la résilience sans abandonner la logique de flux tiré ?",
+      "choix": [
+        { "id": "a", "texte": "Diversifier les fournisseurs et constituer un stock de sécurité ciblé sur les composants critiques", "correct": true, "explication": "Arbitrage entre coût et résilience." },
+        { "id": "b", "texte": "Supprimer tout stock", "correct": false, "explication": "Augmente la vulnérabilité." },
+        { "id": "c", "texte": "Produire massivement sur prévisions", "correct": false, "explication": "Retour au flux poussé." },
+        { "id": "d", "texte": "Cesser de partager les prévisions avec les fournisseurs", "correct": false, "explication": "Aggraverait l'effet coup de fouet." }
+      ]
+    },
+    {
+      "id": "q.mks.supply.004", "notion": "mks.supply.entreposage", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Consommation annuelle : 12 000 unités ; stock moyen : 1 500 unités. Quelle est la durée moyenne de stockage (année de 360 jours) ?",
+      "support": "Rotation = consommation / stock moyen ; durée = 360 / rotation",
+      "choix": [
+        { "id": "a", "texte": "45 jours", "correct": true, "explication": "Rotation = 8 ; 360 / 8 = 45." },
+        { "id": "b", "texte": "8 jours", "correct": false, "explication": "C'est la rotation (8 fois par an)." },
+        { "id": "c", "texte": "125 jours", "correct": false, "explication": "Calcul erroné." },
+        { "id": "d", "texte": "30 jours", "correct": false, "explication": "Correspondrait à une rotation de 12." }
+      ]
+    },
+    {
+      "id": "q.mks.supply.005", "notion": "mks.supply.entreposage", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Quelle règle de sortie convient à des yaourts ?",
+      "choix": [
+        { "id": "a", "texte": "FEFO", "correct": true, "explication": "Premier périmé, premier sorti." },
+        { "id": "b", "texte": "LIFO", "correct": false, "explication": "Les plus anciens risqueraient de périmer." },
+        { "id": "c", "texte": "Aucune règle", "correct": false, "explication": "Risque de pertes." },
+        { "id": "d", "texte": "Cross-docking systématique", "correct": false, "explication": "Mode d'organisation, pas règle de sortie." }
+      ]
+    },
+    {
+      "id": "q.mks.supply.006", "notion": "mks.supply.entreposage", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Dans un entrepôt sous douane, les droits de douane sont payés dès l'entrée des marchandises tierces.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "Les droits sont suspendus jusqu'à la mise en libre pratique." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "C'est l'intérêt du régime : suspension des droits et taxes." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.mks.supply.001", "notions": ["mks.supply.chaine-logistique"],
+      "question": "Définissez la supply chain et ses enjeux internationaux.",
+      "reponse": "Acteurs et opérations du fournisseur au client (et retours). Trois flux : physiques, information, financiers. SCOR : plan, source, make, deliver, return. Flux poussé (prévisions) vs tiré (demande, juste-à-temps). Effet coup de fouet (Lee et al., 1997) : partage d'information. International : délais, douane, change, risques → arbitrage coût / délai / résilience. KPI : OTIF, lead time, rotation.",
+      "indispensables": ["Trois flux", "Poussé / tiré", "Effet coup de fouet", "Arbitrages"]
+    },
+    {
+      "id": "f.mks.supply.002", "notions": ["mks.supply.entreposage"],
+      "question": "Quelles sont les fonctions des entrepôts et les outils de gestion des stocks ?",
+      "reponse": "Stockage, cross-docking (transit < 24-48 h), hub, entrepôt sous douane (suspension des droits). Outils : ABC, Wilson, point de commande = conso. journalière × (délai + sécurité), FIFO / FEFO, WMS. Rotation = conso. / stock moyen ; durée = 360 / rotation. Externalisation : 3PL, 4PL.",
+      "indispensables": ["Types de sites", "Formules", "FIFO / FEFO"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.mks.supply.01", "notions": ["mks.supply.entreposage", "mks.supply.chaine-logistique"], "type": "calcul", "niveau": 2, "fictif": true,
+      "titre": "Gérer le stock d'un composant importé",
+      "enonce": "Une entreprise consomme 40 unités par jour d'un composant importé de Corée (année de 360 jours). Délai d'approvisionnement : 25 jours. Stock de sécurité : 10 jours de consommation. Stock moyen constaté : 1 800 unités.",
+      "questions": [
+        { "id": "1", "consigne": "Consommation annuelle (unités).", "reponse": { "type": "nombre", "valeur": 14400, "tolerance": 0, "unite": "unités" }, "correction": ["40 × 360 = 14 400."] },
+        { "id": "2", "consigne": "Point de commande (unités).", "reponse": { "type": "nombre", "valeur": 1400, "tolerance": 0, "unite": "unités" }, "correction": ["40 × (25 + 10) = 1 400."] },
+        { "id": "3", "consigne": "Rotation annuelle du stock.", "reponse": { "type": "nombre", "valeur": 8, "tolerance": 0, "unite": "fois" }, "correction": ["14 400 / 1 800 = 8."] },
+        { "id": "4", "consigne": "Durée moyenne de stockage (jours).", "reponse": { "type": "nombre", "valeur": 45, "tolerance": 0, "unite": "jours" }, "correction": ["360 / 8 = 45 jours."] }
+      ]
+    }
+  ]
+}
