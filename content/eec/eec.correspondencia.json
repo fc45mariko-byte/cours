@@ -1,0 +1,241 @@
+{
+  "chapitre": "eec.correspondencia",
+  "notions": [
+    {
+      "id": "eec.correspondencia.estructura",
+      "titre": "La structure de la carta comercial",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["aec.correspondance.layout", "eec.correspondencia.cortesia"],
+      "question": "Comment se présente une lettre commerciale en espagnol ?",
+      "definition": "La carta comercial espagnole comprend : el membrete (en-tête de l'entreprise), la fecha (« Orléans, 15 de octubre de 2026 », mois en minuscules), los datos del destinatario, las referencias (« Su ref. / Nuestra ref. »), el asunto (objet), el saludo suivi de deux-points (« Estimado señor García: », « Estimada señora López: », « Muy señores nuestros: » plus traditionnel), el cuerpo (introducción, desarrollo, cierre), la despedida (« Atentamente, », « Le saluda atentamente, », « Reciba un cordial saludo, »), la firma (nom, poste) et, le cas échéant, « Anexos » (pièces jointes). En Amérique latine, on rencontre aussi « De mi consideración: » en ouverture.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Membrete",
+          "Lugar y fecha : Orléans, 15 de octubre de 2026",
+          "Destinatario : Sr. D. Juan García, Director de Compras, Importaciones Castilla S.L., Madrid",
+          "Referencia y asunto : Asunto: Pedido n.º 4521",
+          "Saludo : Estimado señor García:",
+          "Cuerpo",
+          "Despedida : Atentamente, / Reciba un cordial saludo,",
+          "Firma, nombre y cargo ; Anexos"
+        ] },
+        { "type": "attention", "texte": "En espagnol, la formule d'appel est suivie de deux-points, et non d'une virgule comme en français ou en anglais." }
+      ],
+      "termes": [
+        { "fr": "En-tête", "en": "letterhead", "es": "membrete", "definition": "Coordonnées imprimées de l'expéditeur." },
+        { "fr": "Objet", "en": "subject", "es": "asunto", "definition": "Motif de la lettre." },
+        { "fr": "Formule d'appel", "en": "salutation", "es": "saludo / encabezamiento", "definition": "Adresse au destinataire." },
+        { "fr": "Formule de clôture", "en": "complimentary close", "es": "despedida", "definition": "Formule finale avant la signature." },
+        { "fr": "Pièces jointes", "en": "enclosures", "es": "anexos", "definition": "Documents joints." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Orléans, 15 de octubre de 2026 — Asunto: Solicitud de catálogo — Estimada señora López: Nos dirigimos a usted para… Quedamos a la espera de sus noticias. Atentamente, Claire Martin, Departamento de Exportación »" },
+      "confusions": [
+        { "a": "Señor (avec le nom de famille)", "b": "Don / Doña (avec le prénom)", "explication": "« Sr. D. Juan García » : don précède le prénom ; on écrit « Estimado señor García », pas « Estimado señor Juan »." }
+      ],
+      "verification": ["Quelle ponctuation suit la formule d'appel en espagnol ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "eec.correspondencia.cortesia",
+      "titre": "Usted, subjonctif et conditionnel de courtoisie",
+      "niveau": "F",
+      "prerequis": ["eec.correspondencia.estructura"],
+      "connexes": ["tve.contrastes.subjuntivo", "aec.correspondance.registre"],
+      "question": "Comment exprimer la politesse en espagnol des affaires ?",
+      "definition": "La correspondance commerciale emploie le vouvoiement de politesse : usted / ustedes, avec le verbe à la 3e personne (¿Podría usted enviarnos…? ; Les agradecemos su pedido). La politesse passe aussi par le conditionnel (Desearíamos recibir…, ¿Podrían indicarnos…?), l'imparfait de courtoisie (Queríamos saber si…), et le subjonctif après les verbes de demande et de souhait (Les rogamos que nos envíen…, Esperamos que la mercancía llegue a tiempo). En Espagne, « vosotros » s'emploie entre collègues proches ; en Amérique latine, « ustedes » est le seul pluriel de 2e personne, formel comme familier.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Procédé", "Exemple", "Traduction"], "lignes": [
+          ["Usted + 3e personne", "¿Podría usted confirmar el pedido?", "Pourriez-vous confirmer la commande ?"],
+          ["Conditionnel", "Desearíamos recibir su catálogo.", "Nous souhaiterions recevoir votre catalogue."],
+          ["Imparfait de courtoisie", "Queríamos consultarle sobre…", "Nous voudrions vous consulter sur…"],
+          ["Subjonctif de demande", "Les rogamos que nos envíen la factura.", "Nous vous prions de nous envoyer la facture."],
+          ["Formule figée", "Sin otro particular, les saludamos atentamente.", "(Formule de fin de lettre)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Vouvoiement", "en": "formal address", "es": "trato de usted", "definition": "Emploi de usted / ustedes." },
+        { "fr": "Conditionnel", "en": "conditional", "es": "condicional", "definition": "Mode exprimant l'hypothèse ou la politesse." },
+        { "fr": "Subjonctif", "en": "subjunctive", "es": "subjuntivo", "definition": "Mode du souhait, de la demande, du doute." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Les agradeceríamos que nos enviaran su lista de precios actualizada y que nos indicaran sus condiciones de pago. »" },
+      "confusions": [
+        { "a": "Le rogamos que nos envía (fautif)", "b": "Le rogamos que nos envíe", "explication": "Rogar que + subjonctif." }
+      ],
+      "verification": ["Mettez au subjonctif : « Esperamos que la mercancía (llegar) pronto »."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "eec.correspondencia.ciclo",
+      "titre": "Le cycle commercial : consulta, presupuesto, pedido, albarán, factura",
+      "niveau": "F",
+      "prerequis": ["eec.correspondencia.cortesia"],
+      "connexes": ["aec.correspondance.enquiry", "aec.correspondance.order", "eec.lexico.comercio-exterior"],
+      "question": "Quels documents et quelles lettres jalonnent une opération commerciale en espagnol ?",
+      "definition": "Le cycle commercial suit les étapes suivantes : la solicitud de información ou consulta (demande de renseignements) ; la oferta ou el presupuesto (devis ; « cotización » en Amérique latine) ; el pedido (commande, avec une nota de pedido ou orden de compra) ; la confirmación del pedido ; el albarán (bon de livraison en Espagne ; « remito » en Argentine, « guía de remisión » au Pérou) qui accompagne la marchandise ; la factura (facture), avec éventuellement une factura proforma préalable ; enfin le cobro / pago et le recibo (reçu). Chaque lettre reprend les références du document précédent.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Étape", "Document", "Formule"], "lignes": [
+          ["Demande", "Consulta / solicitud de información", "Les agradeceríamos que nos enviaran su catálogo y tarifas."],
+          ["Offre", "Oferta / presupuesto (cotización)", "Nos complace enviarles nuestro presupuesto para…"],
+          ["Commande", "Pedido / orden de compra", "Les rogamos nos suministren las siguientes mercancías…"],
+          ["Livraison", "Albarán (remito)", "Adjuntamos el albarán correspondiente."],
+          ["Facturation", "Factura", "Les remitimos la factura n.º… con vencimiento a 30 días."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Devis", "en": "quotation", "es": "presupuesto (cotización en Latinoamérica)", "definition": "Proposition de prix." },
+        { "fr": "Commande", "en": "order", "es": "pedido", "definition": "Demande ferme d'achat." },
+        { "fr": "Bon de livraison", "en": "delivery note", "es": "albarán (remito, guía de remisión)", "definition": "Document accompagnant la livraison." },
+        { "fr": "Facture", "en": "invoice", "es": "factura", "definition": "Document réclamant le paiement." },
+        { "fr": "Échéance", "en": "due date", "es": "vencimiento", "definition": "Date limite de paiement." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Estimado señor García: Les agradecemos su pedido n.º 4521 del 10 de octubre, que confirmamos por la presente. La mercancía saldrá de nuestro almacén el 25 de octubre. Adjuntamos la factura proforma. Atentamente, … »" },
+      "confusions": [
+        { "a": "Presupuesto (devis)", "b": "Presupuesto (budget)", "explication": "Même mot pour deux notions ; le contexte tranche." }
+      ],
+      "verification": ["Comment dit-on « bon de livraison » en Espagne et en Argentine ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "eec.correspondencia.reclamacion",
+      "titre": "La reclamación",
+      "niveau": "F",
+      "prerequis": ["eec.correspondencia.cortesia"],
+      "connexes": ["aec.correspondance.complaint"],
+      "question": "Comment formuler une réclamation et y répondre en espagnol ?",
+      "definition": "La carta de reclamación expose les faits avec précision (référence du pedido, date de réception, problème : mercancía defectuosa / dañada, error en el pedido, retraso en la entrega, falta de mercancía), indique les conséquences et formule une demande claire (sustitución, reembolso, descuento, nota de abono) avec un délai, sur un ton ferme mais courtois. La réponse (contestación a una reclamación) remercie, s'excuse si la réclamation est fondée (« Lamentamos sinceramente las molestias ocasionadas »), propose une solution et rassure.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Réclamation", "Réponse"], "lignes": [
+          ["Lamentamos comunicarles que la mercancía llegó dañada.", "Acusamos recibo de su carta del…"],
+          ["Al abrir las cajas, comprobamos que…", "Lamentamos sinceramente las molestias ocasionadas."],
+          ["Les rogamos que procedan a la sustitución de…", "Procederemos inmediatamente a la sustitución de los artículos."],
+          ["En caso contrario, nos veremos obligados a…", "Hemos tomado las medidas necesarias para que no vuelva a ocurrir."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Réclamation", "en": "complaint / claim", "es": "reclamación", "definition": "Lettre signalant un problème." },
+        { "fr": "Avoir", "en": "credit note", "es": "nota de abono / factura rectificativa", "definition": "Document réduisant la somme due." },
+        { "fr": "Remboursement", "en": "refund", "es": "reembolso", "definition": "Restitution d'une somme." },
+        { "fr": "Gêne occasionnée", "en": "inconvenience", "es": "molestias", "definition": "Désagrément causé au client." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Estimada señora Ruiz: Lamentamos comunicarle que, al abrir las cajas del pedido n.º 785, comprobamos que 120 platos estaban desportillados. Le rogamos que nos envíe los artículos de sustitución antes del 31 de diciembre o, en su defecto, una nota de abono por 1 500 €. Atentamente, … »" },
+      "confusions": [
+        { "a": "Reclamar (exiger, réclamer)", "b": "Reclamo (Amérique latine : réclamation)", "explication": "« Reclamo » est courant en Amérique latine pour « reclamación »." }
+      ],
+      "verification": ["Comment s'excuser formellement en espagnol dans une réponse à réclamation ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "eec.correspondencia.email",
+      "titre": "Le courriel professionnel en espagnol",
+      "niveau": "F",
+      "prerequis": ["eec.correspondencia.estructura"],
+      "connexes": ["aec.correspondance.email"],
+      "question": "Quelles conventions suivre dans un courriel professionnel en espagnol ?",
+      "definition": "Le correo electrónico professionnel reprend les principes de la lettre en plus bref : asunto précis ; saludo selon la relation (« Estimado Sr. García: », « Hola, Juan: » entre collègues) ; message principal dès la première phrase ; pièces jointes signalées (« Le adjunto el presupuesto », « Adjunto encontrará… ») ; demande claire et délai ; despedida (« Un saludo, », « Saludos cordiales, », « Quedo a su disposición para cualquier consulta. ») ; firma complète. En Espagne, on passe rapidement au tutoiement dans certains secteurs ; il vaut mieux attendre que l'interlocuteur en prenne l'initiative.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Élément", "Exemple"], "lignes": [
+          ["Asunto", "Pedido 785 – nueva fecha de entrega"],
+          ["Saludo", "Estimada Sra. Ruiz:"],
+          ["Mensaje", "Le escribo para informarle de que…"],
+          ["Adjunto", "Le adjunto el albarán actualizado."],
+          ["Petición", "¿Podría confirmarme antes del viernes si…?"],
+          ["Despedida", "Quedo a la espera de su respuesta. Un saludo cordial,"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Courriel", "en": "e-mail", "es": "correo electrónico", "definition": "Message électronique." },
+        { "fr": "Pièce jointe", "en": "attachment", "es": "archivo adjunto", "definition": "Fichier joint." },
+        { "fr": "Rester à disposition", "en": "to remain at someone's disposal", "es": "quedar a disposición", "definition": "Formule de fin courante." }
+      ],
+      "exemple": { "fictif": true, "texte": "Asunto: Pedido 785 – retraso. « Estimada Sra. Ruiz: Le escribo para informarle de que, debido a un problema de producción, el pedido 785 saldrá el 18 de diciembre en lugar del 15. Lamentamos las molestias. ¿Podría confirmarme antes del viernes si esta nueva fecha le conviene? Un saludo cordial, Claire Martin »" },
+      "confusions": [
+        { "a": "Adjuntar (joindre)", "b": "Adjunto (adjoint, joint)", "explication": "« Le adjunto… » = « Je vous joins… »." }
+      ],
+      "verification": ["Comment annoncer une pièce jointe dans un courriel en espagnol ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.eec.correspondencia.001", "notion": "eec.correspondencia.estructura", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelle formule d'appel est correcte en espagnol ?",
+      "choix": [
+        { "id": "a", "texte": "Estimado señor García:", "correct": true, "explication": "Señor + nom de famille, suivi de deux-points." },
+        { "id": "b", "texte": "Estimado señor García,", "correct": false, "explication": "La virgule est un gallicisme ou un anglicisme." },
+        { "id": "c", "texte": "Querido señor Juan:", "correct": false, "explication": "Querido est familier ; señor s'emploie avec le nom." },
+        { "id": "d", "texte": "Monsieur García:", "correct": false, "explication": "Mot français." }
+      ]
+    },
+    {
+      "id": "q.eec.correspondencia.002", "notion": "eec.correspondencia.cortesia", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Complétez : « Les rogamos que nos ___ la factura lo antes posible. »",
+      "choix": [
+        { "id": "a", "texte": "envíen", "correct": true, "explication": "Rogar que + subjonctif, 3e personne du pluriel (ustedes)." },
+        { "id": "b", "texte": "envían", "correct": false, "explication": "Indicatif : fautif après rogar que." },
+        { "id": "c", "texte": "enviar", "correct": false, "explication": "Infinitif impossible après que." },
+        { "id": "d", "texte": "enviáis", "correct": false, "explication": "Vosotros, inapproprié ici." }
+      ]
+    },
+    {
+      "id": "q.eec.correspondencia.003", "notion": "eec.correspondencia.ciclo", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "En Espagne, le document qui accompagne la marchandise livrée s'appelle :",
+      "choix": [
+        { "id": "a", "texte": "El albarán", "correct": true, "explication": "Remito en Argentine, guía de remisión au Pérou." },
+        { "id": "b", "texte": "El presupuesto", "correct": false, "explication": "Le devis." },
+        { "id": "c", "texte": "La factura", "correct": false, "explication": "La facture." },
+        { "id": "d", "texte": "El pedido", "correct": false, "explication": "La commande." }
+      ]
+    },
+    {
+      "id": "q.eec.correspondencia.004", "notion": "eec.correspondencia.ciclo", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Associez correctement (plusieurs réponses) :",
+      "choix": [
+        { "id": "a", "texte": "cotización = devis (Amérique latine)", "correct": true, "explication": "Équivalent de presupuesto." },
+        { "id": "b", "texte": "pedido = commande", "correct": true, "explication": "Correct." },
+        { "id": "c", "texte": "vencimiento = échéance", "correct": true, "explication": "Correct." },
+        { "id": "d", "texte": "factura proforma = avoir", "correct": false, "explication": "L'avoir est une nota de abono." }
+      ]
+    },
+    {
+      "id": "q.eec.correspondencia.005", "notion": "eec.correspondencia.reclamacion", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Quelle phrase convient pour s'excuser dans une réponse à réclamation ?",
+      "choix": [
+        { "id": "a", "texte": "Lamentamos sinceramente las molestias ocasionadas.", "correct": true, "explication": "Formule usuelle." },
+        { "id": "b", "texte": "Estamos muy embarazados.", "correct": false, "explication": "Faux ami : « embarazada » = enceinte." },
+        { "id": "c", "texte": "No es culpa nuestra.", "correct": false, "explication": "Maladroit." },
+        { "id": "d", "texte": "Perdón por la molestia, chicos.", "correct": false, "explication": "Trop familier." }
+      ]
+    },
+    {
+      "id": "q.eec.correspondencia.006", "notion": "eec.correspondencia.email", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "enonce": "Vrai ou faux : « Le adjunto el presupuesto » signifie « Je vous joins le devis ».",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "Adjuntar = joindre." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "C'est la formule usuelle." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.eec.correspondencia.001", "notions": ["eec.correspondencia.estructura", "eec.correspondencia.cortesia", "eec.correspondencia.ciclo"],
+      "question": "Présentez la structure de la carta comercial, les procédés de courtoisie et les documents du cycle commercial en espagnol.",
+      "reponse": "Structure : membrete, lugar y fecha (15 de octubre de 2026), destinatario, referencia, asunto, saludo + deux-points (Estimado señor García:), cuerpo, despedida (Atentamente, / Reciba un cordial saludo,), firma, anexos. Courtoisie : usted / ustedes + 3e personne, conditionnel (Desearíamos), imparfait de courtoisie (Queríamos), subjonctif après rogar, esperar, agradecer que. Cycle : consulta → oferta / presupuesto (cotización) → pedido / orden de compra → confirmación → albarán (remito) → factura → pago, recibo.",
+      "indispensables": ["Deux-points après le saludo", "Usted + subjonctif", "Documents du cycle"],
+      "erreurs": ["Virgule après la formule d'appel", "Les rogamos que nos envían"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.eec.correspondencia.01", "notions": ["eec.correspondencia.ciclo", "eec.correspondencia.cortesia"], "type": "redaction", "niveau": 2, "fictif": true,
+      "titre": "Rédiger une demande de devis en espagnol",
+      "enonce": "Vous êtes assistant(e) export chez Loire Kitchenware (Orléans). Vous avez rencontré la société Cerámicas de Talavera S.L. au salon Ambiente de Francfort. Demandez-lui son catalogue, ses prix pour 2 000 assiettes, ses conditions de paiement et de livraison (FCA Talavera de la Reina), et le délai de livraison. Destinataire : Sra. Carmen Ruiz, Directora Comercial.",
+      "questions": [
+        { "id": "1", "consigne": "Rédigez la lettre ou le courriel.",
+          "reponse": { "type": "libre", "criteres": ["Saludo « Estimada señora Ruiz: » et despedida adaptée", "Source du contact (feria de Fráncfort)", "Demandes précises au conditionnel ou au subjonctif", "Incoterm et quantité mentionnés", "Usted / ustedes cohérent"],
+            "corrige": "Estimada señora Ruiz:\n\nTuvimos el placer de conocer su empresa en la feria Ambiente de Fráncfort y nos interesaron mucho sus vajillas de cerámica.\n\nLoire Kitchenware es una cadena de tiendas de artículos de cocina con sede en Orléans (Francia). Le agradeceríamos que nos enviara su catálogo actualizado, así como un presupuesto para 2 000 platos llanos, FCA Talavera de la Reina (Incoterms® 2020).\n\nAsimismo, le rogamos que nos indique sus condiciones de pago y el plazo de entrega.\n\nQuedamos a la espera de sus noticias.\n\nAtentamente,\n\nClaire Martin\nDepartamento de Exportación – Loire Kitchenware" },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}
