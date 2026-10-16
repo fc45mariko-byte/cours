@@ -518,5 +518,97 @@
     "url": "https://www.ine.es/",
     "acces": "reference",
     "pertinence": "Chômage et données économiques espagnoles"
+  },
+  {
+    "id": "src.fox",
+    "titre": "The Mirror Makers: A History of American Advertising and Its Creators, William Morrow, 1984",
+    "auteur": "Stephen Fox",
+    "acces": "reference",
+    "pertinence": "Histoire des agences et des publicitaires américains"
+  },
+  {
+    "id": "src.marchand",
+    "titre": "Advertising the American Dream: Making Way for Modernity, 1920-1940, University of California Press, 1985",
+    "auteur": "Roland Marchand",
+    "acces": "reference",
+    "pertinence": "Publicité américaine de l'entre-deux-guerres"
+  },
+  {
+    "id": "src.frank-cool",
+    "titre": "The Conquest of Cool: Business Culture, Counterculture, and the Rise of Hip Consumerism, University of Chicago Press, 1997",
+    "auteur": "Thomas Frank",
+    "acces": "reference",
+    "pertinence": "Creative revolution des années 1960"
+  },
+  {
+    "id": "src.tye",
+    "titre": "The Father of Spin: Edward L. Bernays and the Birth of Public Relations, Crown, 1998",
+    "auteur": "Larry Tye",
+    "acces": "reference",
+    "pertinence": "Biographie de Bernays"
+  },
+  {
+    "id": "src.bernays",
+    "titre": "Propaganda, Horace Liveright, 1928",
+    "auteur": "Edward L. Bernays",
+    "acces": "reference",
+    "pertinence": "Texte fondateur des relations publiques"
+  },
+  {
+    "id": "src.hopkins",
+    "titre": "Scientific Advertising, Lord & Thomas, 1923",
+    "auteur": "Claude C. Hopkins",
+    "acces": "reference",
+    "pertinence": "Publicité testée et reason-why"
+  },
+  {
+    "id": "src.reeves",
+    "titre": "Reality in Advertising, Knopf, 1961",
+    "auteur": "Rosser Reeves",
+    "acces": "reference",
+    "pertinence": "Unique Selling Proposition"
+  },
+  {
+    "id": "src.ogilvy",
+    "titre": "Confessions of an Advertising Man, Atheneum, 1963",
+    "auteur": "David Ogilvy",
+    "acces": "reference",
+    "pertinence": "Méthode publicitaire de l'âge d'or"
+  },
+  {
+    "id": "src.ftc-act",
+    "titre": "Federal Trade Commission Act (1914), 15 U.S.C. §§ 41-58, et Public Health Cigarette Smoking Act (1970)",
+    "auteur": "Congrès des États-Unis",
+    "url": "https://www.ftc.gov/legal-library/browse/statutes/federal-trade-commission-act",
+    "acces": "reference",
+    "pertinence": "Régulation de la publicité aux États-Unis"
+  },
+  {
+    "id": "src.wendell-smith",
+    "titre": "« Product Differentiation and Market Segmentation as Alternative Marketing Strategies », Journal of Marketing, vol. 21, n° 1, 1956, p. 3-8",
+    "auteur": "Wendell R. Smith",
+    "acces": "reference",
+    "pertinence": "Concept de segmentation"
+  },
+  {
+    "id": "src.cohen-consumers",
+    "titre": "A Consumers' Republic: The Politics of Mass Consumption in Postwar America, Knopf, 2003",
+    "auteur": "Lizabeth Cohen",
+    "acces": "reference",
+    "pertinence": "Consommation de masse et segmentation"
+  },
+  {
+    "id": "src.zuboff",
+    "titre": "The Age of Surveillance Capitalism, PublicAffairs, 2019",
+    "auteur": "Shoshana Zuboff",
+    "acces": "reference",
+    "pertinence": "Publicité numérique et données personnelles"
+  },
+  {
+    "id": "src.barthes",
+    "titre": "« Rhétorique de l'image », Communications, n° 4, 1964, p. 40-51",
+    "auteur": "Roland Barthes",
+    "acces": "reference",
+    "pertinence": "Analyse sémiologique de l'image publicitaire"
   }
 ]

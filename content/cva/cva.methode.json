@@ -1,0 +1,102 @@
+{
+  "chapitre": "cva.methode",
+  "notions": [
+    {
+      "id": "cva.methode.analyse-publicite",
+      "titre": "Analyser une publicité",
+      "niveau": "F",
+      "prerequis": ["cva.age-or.creative-revolution"],
+      "connexes": ["cvb.methode.commentaire", "cvl.representaciones.metodo-imagen"],
+      "question": "Comment analyser une publicité comme document de civilisation ?",
+      "definition": "Analyser une publicité consiste à décrire ses composantes, à expliquer ses procédés de persuasion et à la replacer dans son contexte historique et culturel. On identifie d'abord l'annonceur, la marque, le support, la date et la cible présumée. On décrit ensuite la composition : accroche (headline), texte (body copy), visuel, slogan (tagline), logo, appel à l'action. Roland Barthes (« Rhétorique de l'image », 1964) distingue le message dénoté (ce que l'on voit littéralement) du message connoté (les significations culturelles associées). On analyse les leviers de persuasion : argument rationnel (logos), crédibilité de la source (ethos), émotion (pathos) ; le modèle AIDA (attention, intérêt, désir, action) résume le parcours visé. Enfin, on interprète ce que la publicité révèle de la société : rôles de genre, représentations ethniques, valeurs (liberté, réussite, famille), et on mesure ses omissions.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Identifier : annonceur, marque, produit, support, date, cible",
+          "Décrire : composition, accroche, texte, visuel, slogan, logo",
+          "Dénotation : ce que l'on voit littéralement",
+          "Connotation : valeurs, symboles, références culturelles",
+          "Persuasion : logos, ethos, pathos ; AIDA",
+          "Contexte : période, courant publicitaire (reason-why, USP, creative revolution)",
+          "Interprétation critique : représentations, stéréotypes, omissions"
+        ] },
+        { "type": "tableau", "entetes": ["Élément (anglais)", "Rôle"], "lignes": [
+          ["Headline", "Accroche, attire l'attention"],
+          ["Body copy", "Développe l'argument"],
+          ["Visual", "Image principale"],
+          ["Tagline / slogan", "Formule mémorisable associée à la marque"],
+          ["Call to action", "Incite à agir (acheter, appeler, cliquer)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Accroche", "en": "headline", "es": "titular / gancho", "definition": "Titre principal de l'annonce." },
+        { "fr": "Dénotation", "en": "denotation", "es": "denotación", "definition": "Sens littéral de l'image ou du texte." },
+        { "fr": "Connotation", "en": "connotation", "es": "connotación", "definition": "Sens associé, culturel ou symbolique." },
+        { "fr": "Stéréotype", "en": "stereotype", "es": "estereotipo", "definition": "Représentation simplifiée et figée d'un groupe." },
+        { "fr": "Appel à l'action", "en": "call to action", "es": "llamada a la acción", "definition": "Incitation explicite à agir." }
+      ],
+      "exemple": { "fictif": false, "texte": "Dans « Rhétorique de l'image », Barthes analyse une publicité Panzani : au-delà des pâtes et des légumes représentés (dénotation), l'image connote l'« italianité » par les couleurs et le filet du marché.", "source": "src.barthes" },
+      "confusions": [
+        { "a": "Description (ce que l'on voit)", "b": "Analyse (ce que cela signifie et pourquoi)", "explication": "La description n'est qu'une étape." },
+        { "a": "Cible présumée (déduite du document)", "b": "Cible réelle (connue par l'annonceur)", "explication": "Sans source, il faut parler de cible présumée." }
+      ],
+      "verification": ["Quelle différence y a-t-il entre dénotation et connotation ?"],
+      "sources": ["src.barthes", "src.marchand"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cva.methode.001", "notion": "cva.methode.analyse-publicite", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Comment appelle-t-on en anglais le texte argumentatif d'une annonce ?",
+      "choix": [
+        { "id": "a", "texte": "Body copy", "correct": true, "explication": "Il développe l'argument." },
+        { "id": "b", "texte": "Headline", "correct": false, "explication": "L'accroche." },
+        { "id": "c", "texte": "Tagline", "correct": false, "explication": "Le slogan." },
+        { "id": "d", "texte": "Layout", "correct": false, "explication": "La mise en page." }
+      ]
+    },
+    {
+      "id": "q.cva.methode.002", "notion": "cva.methode.analyse-publicite", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "« Une femme souriante dans une cuisine moderne » : à quel niveau d'analyse appartient cette phrase ?",
+      "choix": [
+        { "id": "a", "texte": "Dénotation", "correct": true, "explication": "Description littérale." },
+        { "id": "b", "texte": "Connotation", "correct": false, "explication": "La connotation serait par exemple « le bonheur domestique associé au progrès technique »." },
+        { "id": "c", "texte": "Ethos", "correct": false, "explication": "Crédibilité de la source." },
+        { "id": "d", "texte": "Appel à l'action", "correct": false, "explication": "Incitation à agir." }
+      ]
+    },
+    {
+      "id": "q.cva.methode.003", "notion": "cva.methode.analyse-publicite", "format": "multiple", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "Une publicité des années 1950 montre une ménagère ravie de son réfrigérateur, avec le texte « Give her the kitchen she deserves ». Quels éléments d'analyse sont pertinents ?",
+      "choix": [
+        { "id": "a", "texte": "La cible présumée est le mari, acheteur du bien d'équipement", "correct": true, "explication": "Le texte s'adresse à « you » qui offre à « her »." },
+        { "id": "b", "texte": "La publicité reflète une répartition genrée des rôles", "correct": true, "explication": "Femme au foyer, homme pourvoyeur." },
+        { "id": "c", "texte": "Le réfrigérateur connote la modernité et la prospérité d'après-guerre", "correct": true, "explication": "Consommation de masse des années 1950." },
+        { "id": "d", "texte": "Il s'agit d'une publicité numérique ciblée", "correct": false, "explication": "Anachronisme." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cva.methode.001", "notions": ["cva.methode.analyse-publicite"],
+      "question": "Quelle méthode suivre pour analyser une publicité ?",
+      "reponse": "Identifier (annonceur, marque, support, date, cible présumée) ; décrire (headline, body copy, visual, tagline, logo, call to action) ; dénotation / connotation (Barthes) ; persuasion (logos, ethos, pathos, AIDA) ; contexte (courant publicitaire, période) ; interprétation critique (représentations, stéréotypes, omissions).",
+      "indispensables": ["Composantes", "Dénotation / connotation", "Persuasion", "Contexte et critique"],
+      "erreurs": ["S'arrêter à la description"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.cva.methode.01", "notions": ["cva.methode.analyse-publicite", "cva.age-or.creative-revolution", "cva.age-or.television"], "type": "analyse", "niveau": 2, "fictif": true,
+      "titre": "Comparer deux publicités automobiles",
+      "enonce": "Publicité A (fictive, 1955) : grande berline chromée, famille souriante, accroche « Bigger, Better, Bolder », texte énumérant puissance et longueur. Publicité B (fictive, 1962, dans l'esprit de « Think Small ») : petite voiture au centre d'une page blanche, accroche « It's ugly, but it gets you there », texte ironique sur l'économie de carburant.",
+      "questions": [
+        { "id": "1", "consigne": "Laquelle relève de la creative revolution ?", "reponse": { "type": "choix", "options": ["Publicité A", "Publicité B"], "correcte": 1 }, "correction": ["Autodérision, sobriété visuelle, complicité avec le lecteur."] },
+        { "id": "2", "consigne": "Rédigez en anglais un paragraphe comparant les deux stratégies de persuasion.",
+          "reponse": { "type": "libre", "criteres": ["Ad A : abondance, statut social, répétition d'arguments de puissance", "Ad B : ironie, honnêteté apparente, économie, lecteur intelligent", "Lien avec le contexte (prospérité des années 1950, creative revolution)", "Vocabulaire : headline, body copy, connotation, target"],
+            "corrige": "Ad A relies on abundance and status: the headline « Bigger, Better, Bolder » and the chrome-laden sedan connote post-war prosperity and suburban family success, while the body copy piles up claims about power and size, in the insistent style of 1950s advertising. Ad B, by contrast, adopts the self-deprecating tone of the creative revolution: its headline admits a weakness, the white space isolates the small car, and the ironic copy treats readers as intelligent consumers who value thrift over display. Whereas A targets the desire for social recognition, B flatters the reader's sense of being smarter than the conformist crowd." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}

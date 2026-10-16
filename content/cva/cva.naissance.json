@@ -1,0 +1,178 @@
+{
+  "chapitre": "cva.naissance",
+  "notions": [
+    {
+      "id": "cva.naissance.surproduction",
+      "titre": "Production de masse et naissance de la publicité moderne",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["cva.naissance.agences", "cva.naissance.relations-publiques"],
+      "question": "Pourquoi la publicité moderne naît-elle aux États-Unis à la fin du XIXe siècle ?",
+      "definition": "Après la guerre de Sécession, l'industrialisation américaine permet une production de masse (mass production) qui dépasse la demande locale : les industriels doivent écouler des volumes croissants sur un marché désormais national grâce au chemin de fer, au télégraphe et à la poste. La publicité change alors de fonction : elle ne se contente plus d'annoncer un produit disponible, elle doit créer la demande et fidéliser le consommateur à une marque. Apparaissent les marques nationales emballées (branded goods), qui remplacent les produits vendus en vrac et anonymes (savon Ivory de Procter & Gamble, 1879 ; Coca-Cola, 1886 ; biscuits Uneeda, 1898), les grands magazines nationaux financés par la publicité (Ladies' Home Journal, 1883) et les catalogues de vente par correspondance (Montgomery Ward, Sears). Les excès des « patent medicines » (remèdes miracles) contribuent à l'adoption du Pure Food and Drug Act de 1906. Au début du XXe siècle, la publicité devient une industrie à part entière, au cœur de la culture de consommation américaine.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Industrialisation et production de masse : l'offre dépasse la demande",
+          "Unification du marché national (chemin de fer, poste, télégraphe)",
+          "Marques nationales emballées : le fabricant s'adresse directement au consommateur",
+          "Presse magazine nationale financée par la publicité",
+          "La publicité doit créer la demande et la fidélité à la marque"
+        ] },
+        { "type": "attention", "texte": "Le basculement essentiel est le passage d'une publicité d'information (announcement) à une publicité de persuasion qui crée des besoins et associe la marque à des valeurs." }
+      ],
+      "termes": [
+        { "fr": "Production de masse", "en": "mass production", "es": "producción en masa", "definition": "Fabrication en très grandes séries standardisées." },
+        { "fr": "Marque", "en": "brand", "es": "marca", "definition": "Nom ou signe identifiant les produits d'un fabricant." },
+        { "fr": "Produit de marque emballé", "en": "packaged branded good", "es": "producto de marca envasado", "definition": "Produit standardisé vendu sous emballage et marque du fabricant." },
+        { "fr": "Société de consommation", "en": "consumer society / consumer culture", "es": "sociedad de consumo", "definition": "Société dans laquelle la consommation de biens est centrale dans la vie sociale." }
+      ],
+      "exemple": { "fictif": false, "texte": "La campagne lancée en 1899 par l'agence N. W. Ayer & Son pour les biscuits Uneeda de la National Biscuit Company, avec un emballage hermétique de marque, est souvent citée comme l'une des premières grandes campagnes nationales pour un produit de consommation courante.", "source": "src.fox" },
+      "confusions": [
+        { "a": "Annonce (informer de la disponibilité)", "b": "Publicité moderne (créer la demande, construire une marque)", "explication": "C'est le changement de fonction qui caractérise la période." }
+      ],
+      "verification": ["Pourquoi la production de masse rend-elle la publicité indispensable ?"],
+      "sources": ["src.fox", "src.marchand"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cva.naissance.agences",
+      "titre": "Les agences : Ayer, Lasker, Hopkins et le reason-why",
+      "niveau": "F",
+      "prerequis": ["cva.naissance.surproduction"],
+      "connexes": ["cva.age-or.television", "cva.mesure.etudes"],
+      "question": "Comment les agences de publicité se professionnalisent-elles entre 1870 et 1930 ?",
+      "definition": "Les premières agences sont des courtiers en espace publicitaire qui achètent des pages aux journaux pour les revendre aux annonceurs. N. W. Ayer & Son (Philadelphie, 1869) transforme le métier en proposant à l'annonceur un « contrat ouvert » (open contract) et une commission transparente, puis la conception des annonces : l'agence devient prestataire de services pour l'annonceur. À Chicago, chez Lord & Thomas, Albert Lasker adopte en 1904 la formule de John E. Kennedy, « salesmanship in print » (la publicité est la vente par écrit), et développe la copie « reason-why » : un texte argumenté qui donne au lecteur des raisons concrètes d'acheter. Claude Hopkins, rédacteur chez Lord & Thomas, systématise cette approche dans « Scientific Advertising » (1923) : mesurer l'efficacité par les coupons-réponses, tester les annonces, préférer les faits précis aux formules vagues. À l'opposé, l'école « atmosphérique » ou impressionniste (Theodore MacManus, annonce Cadillac « The Penalty of Leadership », 1915) mise sur l'image et l'émotion.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Approche", "Principe", "Figure"], "lignes": [
+          ["Courtage d'espace", "Acheter et revendre de l'espace", "Premières agences (milieu du XIXe s.)"],
+          ["Agence à services", "Contrat ouvert, commission, création", "N. W. Ayer & Son"],
+          ["Reason-why", "Argumenter, donner des raisons d'acheter", "Kennedy, Lasker, Hopkins"],
+          ["Atmosphère", "Suggérer par l'image et le prestige", "MacManus"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Agence de publicité", "en": "advertising agency", "es": "agencia de publicidad", "definition": "Entreprise qui conçoit et place les publicités pour le compte d'annonceurs." },
+        { "fr": "Annonceur", "en": "advertiser", "es": "anunciante", "definition": "Entreprise qui paie la publicité." },
+        { "fr": "Rédacteur publicitaire", "en": "copywriter", "es": "redactor publicitario", "definition": "Auteur des textes publicitaires." },
+        { "fr": "Texte publicitaire", "en": "copy", "es": "texto publicitario", "definition": "Partie rédigée d'une annonce." },
+        { "fr": "Publicité argumentée", "en": "reason-why advertising", "es": "publicidad argumentativa", "definition": "Annonce fondée sur des arguments concrets." }
+      ],
+      "exemple": { "fictif": false, "texte": "Claude Hopkins raconte avoir fait vendre la bière Schlitz en décrivant le lavage des bouteilles à la vapeur, procédé pourtant commun à tous les brasseurs : le premier à expliquer un fait le fait sien aux yeux du public.", "source": "src.hopkins" },
+      "confusions": [
+        { "a": "Reason-why (argument rationnel)", "b": "Atmosphère (suggestion, prestige)", "explication": "Deux écoles rivales qui se retrouveront plus tard dans l'opposition USP / creative revolution." }
+      ],
+      "verification": ["Que signifie « salesmanship in print » ?"],
+      "sources": ["src.fox", "src.hopkins"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cva.naissance.relations-publiques",
+      "titre": "Bernays et les relations publiques",
+      "niveau": "F",
+      "prerequis": ["cva.naissance.surproduction"],
+      "connexes": ["cva.mesure.etudes", "cva.regulation.ftc"],
+      "question": "En quoi les relations publiques diffèrent-elles de la publicité et quel rôle Edward Bernays a-t-il joué ?",
+      "definition": "Les relations publiques (public relations) cherchent à façonner l'opinion à l'égard d'une organisation ou d'une cause, souvent sans publicité payante visible : communiqués, événements, relais d'experts et de journalistes. Ivy Lee publie en 1906 une « Declaration of Principles » promettant une information exacte à la presse. Edward L. Bernays (1891-1995), neveu de Sigmund Freud, travaille pendant la Première Guerre mondiale au Committee on Public Information (commission Creel), chargé de la propagande américaine. Il théorise ensuite la profession dans « Crystallizing Public Opinion » (1923) et « Propaganda » (1928), où il soutient qu'une minorité éclairée doit organiser l'opinion des masses ; il parlera plus tard d'« engineering of consent » (1947). Pour l'American Tobacco Company, il organise en 1929 la présence de jeunes femmes fumant des cigarettes, présentées comme des « torches of freedom », lors du défilé de Pâques à New York, afin de briser le tabou du tabac féminin. Ses méthodes soulèvent des questions éthiques sur la manipulation de l'opinion.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "Publicité", "Relations publiques"], "lignes": [
+          ["Support", "Espace payant", "Presse, événements, leaders d'opinion"],
+          ["Émetteur visible", "Oui (annonceur identifié)", "Souvent indirect"],
+          ["Objectif", "Vendre un produit", "Image, opinion, légitimité"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Relations publiques", "en": "public relations (PR)", "es": "relaciones públicas", "definition": "Gestion de l'image et des rapports d'une organisation avec l'opinion." },
+        { "fr": "Propagande", "en": "propaganda", "es": "propaganda", "definition": "Diffusion organisée d'idées pour influencer l'opinion." },
+        { "fr": "Fabrique du consentement", "en": "engineering of consent", "es": "ingeniería del consentimiento", "definition": "Expression de Bernays pour l'organisation de l'adhésion du public." },
+        { "fr": "Leader d'opinion", "en": "opinion leader", "es": "líder de opinión", "definition": "Personne influente relayant un message." }
+      ],
+      "exemple": { "fictif": false, "texte": "En 1929, Bernays fait défiler des jeunes femmes fumant sur la Cinquième Avenue lors de la parade de Pâques, en présentant leurs cigarettes comme des « torches of freedom » ; l'opération, commandée par l'American Tobacco Company, est relayée par la presse comme un geste d'émancipation.", "source": "src.tye" },
+      "confusions": [
+        { "a": "Relations publiques", "b": "Publicité", "explication": "Les RP visent l'opinion par des canaux non payants et souvent indirects." }
+      ],
+      "verification": ["Pourquoi l'opération « torches of freedom » soulève-t-elle une question éthique ?"],
+      "sources": ["src.bernays", "src.tye"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cva.naissance.001", "notion": "cva.naissance.surproduction", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quel changement de fonction de la publicité accompagne la production de masse ?",
+      "choix": [
+        { "id": "a", "texte": "Elle doit créer la demande et attacher le consommateur à une marque", "correct": true, "explication": "Écouler une production qui dépasse la demande locale." },
+        { "id": "b", "texte": "Elle se limite à annoncer les arrivages", "correct": false, "explication": "C'est la fonction antérieure." },
+        { "id": "c", "texte": "Elle disparaît au profit des vendeurs ambulants", "correct": false, "explication": "Elle se développe au contraire." },
+        { "id": "d", "texte": "Elle est interdite par le Pure Food and Drug Act", "correct": false, "explication": "La loi de 1906 vise les produits dangereux ou mal étiquetés." }
+      ]
+    },
+    {
+      "id": "q.cva.naissance.002", "notion": "cva.naissance.surproduction", "format": "multiple", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quels facteurs favorisent l'essor de la publicité nationale à la fin du XIXe siècle ?",
+      "choix": [
+        { "id": "a", "texte": "Le réseau ferroviaire national", "correct": true, "explication": "Distribution à l'échelle du pays." },
+        { "id": "b", "texte": "Les magazines nationaux financés par la publicité", "correct": true, "explication": "Ladies' Home Journal, etc." },
+        { "id": "c", "texte": "Les marques emballées", "correct": true, "explication": "Le fabricant s'adresse au consommateur." },
+        { "id": "d", "texte": "La télévision", "correct": false, "explication": "Elle se diffuse après 1945." }
+      ]
+    },
+    {
+      "id": "q.cva.naissance.003", "notion": "cva.naissance.agences", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Que désigne la formule « salesmanship in print » ?",
+      "choix": [
+        { "id": "a", "texte": "L'idée que la publicité est l'art de vendre par écrit", "correct": true, "explication": "Formule de John E. Kennedy adoptée par Lasker (1904)." },
+        { "id": "b", "texte": "La vente de journaux", "correct": false, "explication": "Contresens." },
+        { "id": "c", "texte": "Un slogan de Coca-Cola", "correct": false, "explication": "Aucun rapport." },
+        { "id": "d", "texte": "La théorie des relations publiques", "correct": false, "explication": "Bernays relève d'une autre approche." }
+      ]
+    },
+    {
+      "id": "q.cva.naissance.004", "notion": "cva.naissance.agences", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quelle pratique Claude Hopkins préconise-t-il dans « Scientific Advertising » ?",
+      "choix": [
+        { "id": "a", "texte": "Tester les annonces et mesurer leurs résultats, par exemple avec des coupons", "correct": true, "explication": "Cœur de son approche « scientifique »." },
+        { "id": "b", "texte": "Privilégier l'humour et l'autodérision", "correct": false, "explication": "Plutôt la creative revolution des années 1960." },
+        { "id": "c", "texte": "Éviter tout chiffre précis", "correct": false, "explication": "Il recommande au contraire les faits précis." },
+        { "id": "d", "texte": "Ne jamais citer le prix", "correct": false, "explication": "Ce n'est pas un de ses principes." }
+      ]
+    },
+    {
+      "id": "q.cva.naissance.005", "notion": "cva.naissance.relations-publiques", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles affirmations sur Edward Bernays sont exactes ?",
+      "choix": [
+        { "id": "a", "texte": "Il a participé à la propagande américaine de la Première Guerre mondiale", "correct": true, "explication": "Committee on Public Information." },
+        { "id": "b", "texte": "Il a publié « Propaganda » en 1928", "correct": true, "explication": "Texte fondateur." },
+        { "id": "c", "texte": "Il a inventé l'Unique Selling Proposition", "correct": false, "explication": "C'est Rosser Reeves." },
+        { "id": "d", "texte": "Il a organisé l'opération « torches of freedom » en 1929", "correct": true, "explication": "Pour l'American Tobacco Company." }
+      ]
+    },
+    {
+      "id": "q.cva.naissance.006", "notion": "cva.naissance.relations-publiques", "format": "vrai-faux", "niveau": 1, "competence": "distinguer",
+      "enonce": "Les relations publiques reposent principalement sur l'achat d'espace publicitaire.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "Elles passent par la presse, les événements, les relais d'opinion." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "L'achat d'espace caractérise la publicité." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cva.naissance.001", "notions": ["cva.naissance.surproduction"],
+      "question": "Pourquoi la publicité moderne naît-elle aux États-Unis à la fin du XIXe siècle ?",
+      "reponse": "Production de masse supérieure à la demande locale ; marché national unifié (rail, poste, télégraphe) ; marques emballées (Ivory 1879, Coca-Cola 1886, Uneeda 1898) ; magazines nationaux financés par la publicité ; catalogues. La publicité passe de l'information à la création de la demande et de la fidélité à la marque. Excès des patent medicines → Pure Food and Drug Act (1906).",
+      "indispensables": ["Production de masse", "Marché national", "Marques", "Créer la demande"]
+    },
+    {
+      "id": "f.cva.naissance.002", "notions": ["cva.naissance.agences"],
+      "question": "Qui sont Ayer, Lasker et Hopkins ?",
+      "reponse": "N. W. Ayer & Son (1869) : agence au service de l'annonceur (open contract, commission, création). Albert Lasker (Lord & Thomas) : « salesmanship in print » (Kennedy, 1904), copie reason-why. Claude Hopkins : « Scientific Advertising » (1923), tests, coupons, faits précis. École opposée : atmosphère (MacManus, Cadillac 1915).",
+      "indispensables": ["Agence à services", "Reason-why", "Tests et mesure"]
+    },
+    {
+      "id": "f.cva.naissance.003", "notions": ["cva.naissance.relations-publiques"],
+      "question": "Définissez les relations publiques et le rôle de Bernays.",
+      "reponse": "RP : façonner l'opinion à l'égard d'une organisation par des canaux souvent non payants (presse, événements, experts). Ivy Lee (1906). Bernays : commission Creel (1917-1919), « Crystallizing Public Opinion » (1923), « Propaganda » (1928), « engineering of consent » (1947), « torches of freedom » (1929). Questions éthiques de manipulation.",
+      "indispensables": ["Différence RP / publicité", "Bernays et la propagande", "Torches of freedom"],
+      "relance": "Quel lien Bernays établit-il entre psychologie et opinion publique ?"
+    }
+  ]
+}
