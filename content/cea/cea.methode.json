@@ -1,0 +1,131 @@
+{
+  "chapitre": "cea.methode",
+  "notions": [
+    {
+      "id": "cea.methode.ecoute",
+      "titre": "Écoute globale puis ciblée",
+      "niveau": "F",
+      "prerequis": ["cea.oral.formes-faibles"],
+      "connexes": ["cea.methode.prise-notes", "aec.presse.lecture"],
+      "question": "Comment comprendre un document audio ou vidéo en anglais lors d'une épreuve ?",
+      "definition": "La compréhension orale procède par étapes. Avant l'écoute : lire la consigne et le titre, anticiper le thème et le vocabulaire probable. Première écoute globale : identifier la situation (qui parle, à qui, où, pourquoi), le type de document (interview, journal, conférence), le thème général et le ton. Écoutes suivantes ciblées : repérer les informations précises (chiffres, noms, dates, causes, conséquences, opinions), en s'appuyant sur les mots accentués, les mots transparents et les connecteurs (but, however, so, because). On tolère de ne pas tout comprendre : on reconstruit le sens à partir des éléments identifiés et du contexte.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Anticiper : consigne, titre, thème, vocabulaire",
+          "Écoute 1 : situation, locuteurs, thème, ton",
+          "Écoute 2 : idées principales, structure",
+          "Écoute 3 : détails (chiffres, noms, exemples, opinions)",
+          "Reconstruire le sens et vérifier la cohérence"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Compréhension de l'oral", "en": "listening comprehension", "es": "comprensión auditiva", "definition": "Capacité à comprendre un document sonore." },
+        { "fr": "Mot transparent", "en": "cognate", "es": "palabra transparente / cognado", "definition": "Mot proche dans les deux langues." },
+        { "fr": "Anticipation", "en": "prediction", "es": "anticipación", "definition": "Hypothèses sur le contenu avant l'écoute." }
+      ],
+      "exemple": { "fictif": true, "texte": "Document : interview radio de la directrice d'un port britannique. Écoute 1 : il s'agit des conséquences du Brexit sur le trafic. Écoute 2 : trois idées (contrôles plus longs, investissements, nouveaux services). Écoute 3 : chiffres (temps d'attente passé de 20 minutes à 2 heures, 50 millions de livres investis)." },
+      "confusions": [
+        { "a": "Tout comprendre mot à mot", "b": "Comprendre l'essentiel et les détails demandés", "explication": "L'objectif est le sens, pas la transcription intégrale." }
+      ],
+      "verification": ["Que faut-il repérer lors de la première écoute ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cea.methode.prise-notes",
+      "titre": "La prise de notes",
+      "niveau": "F",
+      "prerequis": ["cea.methode.ecoute"],
+      "connexes": ["cea.methode.restitution"],
+      "question": "Comment noter rapidement l'essentiel d'un document oral ?",
+      "definition": "La prise de notes efficace ne cherche pas à tout écrire : elle retient les idées clés, les chiffres et les liens logiques, à l'aide d'abréviations et de symboles (↑ hausse, ↓ baisse, → conséquence, ≠ opposition, = égal, + ajout, ∵ parce que), de mots-clés plutôt que de phrases, et d'une mise en page aérée (colonnes : thème / idées / détails ; ou carte mentale). On peut noter en anglais pour gagner du temps, puis reformuler en français si la restitution l'exige. Les chiffres et noms propres sont notés immédiatement.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Symbole / abréviation", "Sens"], "lignes": [
+          ["↑ / ↓", "hausse / baisse"],
+          ["→", "entraîne, donc"],
+          ["≠", "opposition, différent"],
+          ["b/c", "because"],
+          ["w/ ; w/o", "with ; without"],
+          ["govt, mkt, co.", "government, market, company"],
+          ["e.g. ; i.e.", "par exemple ; c'est-à-dire"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Prise de notes", "en": "note-taking", "es": "toma de apuntes", "definition": "Technique pour noter l'essentiel rapidement." },
+        { "fr": "Carte mentale", "en": "mind map", "es": "mapa mental", "definition": "Représentation arborescente des idées." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Port traffic ↓ 15% since 2021 b/c customs checks → waiting time 20 min → 2 h. Govt + port invest £50m (new lanes). Manager: optimistic, 2027. »" },
+      "confusions": [
+        { "a": "Notes", "b": "Transcription", "explication": "Écrire des phrases complètes fait perdre la suite du document." }
+      ],
+      "verification": ["Proposez cinq symboles utiles pour la prise de notes."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cea.methode.restitution",
+      "titre": "La restitution : le compte rendu",
+      "niveau": "F",
+      "prerequis": ["cea.methode.prise-notes"],
+      "connexes": ["aec.presse.synthese", "red.argumentation.paragraphe"],
+      "question": "Comment rendre compte d'un document oral de façon claire et fidèle ?",
+      "definition": "Le compte rendu restitue, en français ou en anglais selon la consigne, le contenu d'un document oral : présentation du document (nature, source, locuteurs, thème), puis les idées principales dans un ordre logique (pas forcément celui du document), avec les détails significatifs (chiffres, exemples) ; éventuellement le point de vue des locuteurs (attribué : « selon la directrice… »). Il est objectif, rédigé en phrases complètes, avec des connecteurs, et respecte la longueur demandée. On ne restitue que ce qui a été compris et entendu, sans inventer.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Phrase de présentation : type de document, source, locuteurs, thème",
+          "Idées principales regroupées logiquement",
+          "Détails significatifs (chiffres, exemples)",
+          "Points de vue attribués à leurs auteurs",
+          "Phrase de conclusion"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Compte rendu", "en": "report / account / summary", "es": "resumen / informe", "definition": "Restitution fidèle d'un document." },
+        { "fr": "Locuteur", "en": "speaker", "es": "hablante / interlocutor", "definition": "Personne qui parle." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Ce document est un extrait d'une interview diffusée par une radio britannique, dans laquelle la directrice du port de Douvres évoque les conséquences du Brexit. Elle explique que le trafic a baissé de 15 % depuis 2021 en raison des contrôles douaniers… »" },
+      "confusions": [
+        { "a": "Compte rendu", "b": "Commentaire personnel", "explication": "Le compte rendu reste fidèle au document ; l'avis personnel n'est donné que si la consigne le demande." }
+      ],
+      "verification": ["Que doit contenir la première phrase d'un compte rendu ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cea.methode.001", "notion": "cea.methode.ecoute", "format": "unique", "niveau": 1, "competence": "comprendre",
+      "enonce": "Que faut-il faire avant la première écoute ?",
+      "choix": [
+        { "id": "a", "texte": "Lire la consigne et anticiper le thème et le vocabulaire", "correct": true, "explication": "L'anticipation facilite la compréhension." },
+        { "id": "b", "texte": "Écrire tout ce qu'on entendra", "correct": false, "explication": "Impossible et inutile." },
+        { "id": "c", "texte": "Rédiger le compte rendu", "correct": false, "explication": "Il vient après l'écoute." },
+        { "id": "d", "texte": "Rien", "correct": false, "explication": "L'anticipation est une étape clé." }
+      ]
+    },
+    {
+      "id": "q.cea.methode.002", "notion": "cea.methode.prise-notes", "format": "multiple", "niveau": 1, "competence": "comprendre",
+      "enonce": "Quelles pratiques améliorent la prise de notes ?",
+      "choix": [
+        { "id": "a", "texte": "Utiliser des symboles (↑, ↓, →)", "correct": true, "explication": "Gain de temps." },
+        { "id": "b", "texte": "Noter les chiffres immédiatement", "correct": true, "explication": "Ils s'oublient vite." },
+        { "id": "c", "texte": "Écrire des phrases complètes", "correct": false, "explication": "Trop lent." },
+        { "id": "d", "texte": "Noter les mots-clés et les liens logiques", "correct": true, "explication": "Essentiel pour reconstruire le sens." }
+      ]
+    },
+    {
+      "id": "q.cea.methode.003", "notion": "cea.methode.restitution", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "enonce": "Vrai ou faux : dans un compte rendu, on peut compléter les passages non compris par ses propres connaissances, sans le signaler.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "On ne restitue que ce que dit le document." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "Inventer est une faute de fidélité." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cea.methode.001", "notions": ["cea.methode.ecoute", "cea.methode.prise-notes", "cea.methode.restitution"],
+      "question": "Décrivez la méthode complète de la compréhension orale : écoute, prise de notes, compte rendu.",
+      "reponse": "Écoute : anticiper (consigne, titre, vocabulaire), écoute globale (situation, locuteurs, thème, ton), écoutes ciblées (idées, chiffres, noms, opinions), reconstruction du sens. Notes : mots-clés, symboles (↑ ↓ → ≠), abréviations, chiffres notés aussitôt, mise en page en colonnes. Compte rendu : présentation du document, idées principales ordonnées, détails, points de vue attribués, phrases complètes, objectivité, longueur respectée.",
+      "indispensables": ["Étapes d'écoute", "Techniques de notes", "Structure du compte rendu", "Fidélité"],
+      "erreurs": ["Chercher à tout transcrire"]
+    }
+  ]
+}

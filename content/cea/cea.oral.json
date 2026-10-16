@@ -1,0 +1,142 @@
+{
+  "chapitre": "cea.oral",
+  "notions": [
+    {
+      "id": "cea.oral.formes-faibles",
+      "titre": "Les formes faibles",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["cea.oral.liaisons", "cea.methode.ecoute"],
+      "question": "Pourquoi certains mots anglais semblent-ils « disparaître » à l'oral ?",
+      "definition": "L'anglais est une langue accentuelle : les mots porteurs de sens (noms, verbes, adjectifs, adverbes) sont accentués, tandis que les mots grammaticaux (articles, prépositions, auxiliaires, pronoms, conjonctions) sont le plus souvent prononcés sous leur forme faible, avec une voyelle réduite au schwa /ə/. Ainsi « to » se prononce /tə/, « for » /fə/, « and » /ən/ ou /n/, « can » /kən/, « was » /wəz/, « of » /əv/. Repérer ces formes réduites aide à comprendre l'oral réel ; les produire rend l'anglais plus naturel. La forme pleine réapparaît en fin de phrase ou sous emphase (What are you looking for? — /fɔː/).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Mot", "Forme pleine", "Forme faible", "Exemple"], "lignes": [
+          ["to", "/tuː/", "/tə/", "I want to go /aɪ wɒnt tə ɡəʊ/"],
+          ["for", "/fɔː/", "/fə/", "a letter for you"],
+          ["and", "/ænd/", "/ən/, /n/", "fish and chips"],
+          ["can", "/kæn/", "/kən/", "We can ship it."],
+          ["of", "/ɒv/", "/əv/", "a lot of orders"],
+          ["was", "/wɒz/", "/wəz/", "It was late."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Forme faible", "en": "weak form", "es": "forma débil", "definition": "Prononciation réduite d'un mot grammatical." },
+        { "fr": "Schwa", "en": "schwa /ə/", "es": "schwa / vocal neutra", "definition": "Voyelle centrale réduite, la plus fréquente en anglais." },
+        { "fr": "Accent de phrase", "en": "sentence stress", "es": "acento de frase", "definition": "Mise en relief des mots porteurs de sens." }
+      ],
+      "exemple": { "fictif": true, "texte": "« We'd like to order two hundred units » se prononce à peu près /wiːd laɪk tə ˈɔːdə tuː ˈhʌndrəd ˈjuːnɪts/ : seuls like, order, two, hundred, units sont accentués." },
+      "confusions": [
+        { "a": "Can (forme faible /kən/, affirmatif)", "b": "Can't (/kɑːnt/ UK, /kænt/ US, toujours accentué)", "explication": "La différence affirmative / négative s'entend surtout par l'accent et la voyelle." }
+      ],
+      "verification": ["Quels mots sont accentués dans « I'm going to the bank to get some cash » ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cea.oral.liaisons",
+      "titre": "Liaisons et assimilations",
+      "niveau": "F",
+      "prerequis": ["cea.oral.formes-faibles"],
+      "connexes": ["cea.methode.ecoute"],
+      "question": "Pourquoi les mots s'enchaînent-ils au point de ne plus être reconnaissables ?",
+      "definition": "Dans l'anglais parlé, les mots s'enchaînent : une consonne finale se lie à la voyelle suivante (linking : turn_off → /tɜːnɒf/) ; un /r/ de liaison apparaît en anglais britannique entre deux voyelles (far_away → /fɑːrəweɪ/) ; des sons se modifient au contact (assimilation : did you → /dɪdʒuː/, would you → /wʊdʒuː/, don't you → /dəʊntʃuː/, ten pounds → /tem paʊndz/) ou disparaissent (élision : next day → /neks deɪ/, kind of → /kaɪnə/). Les formes familières gonna (going to), wanna (want to), gotta (got to) en sont des exemples, à reconnaître mais à éviter à l'écrit professionnel.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Phénomène", "Écrit", "Oral"], "lignes": [
+          ["Enchaînement", "pick it up", "/pɪkɪtʌp/"],
+          ["R de liaison (UK)", "for an hour", "/fərənaʊə/"],
+          ["Assimilation", "did you", "/dɪdʒuː/"],
+          ["Élision", "last week", "/lɑːs wiːk/"],
+          ["Contraction familière", "going to", "gonna"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Enchaînement / liaison", "en": "linking / connected speech", "es": "enlace / habla conectada", "definition": "Liaison entre les mots à l'oral." },
+        { "fr": "Assimilation", "en": "assimilation", "es": "asimilación", "definition": "Modification d'un son sous l'influence d'un son voisin." },
+        { "fr": "Élision", "en": "elision", "es": "elisión", "definition": "Disparition d'un son." }
+      ],
+      "exemple": { "fictif": true, "texte": "« What do you want to do? » se prononce souvent /wɒdʒə wɒnə duː/ : sans connaître ces phénomènes, on ne reconnaît aucun mot." },
+      "confusions": [
+        { "a": "Reconnaître gonna / wanna", "b": "Les écrire", "explication": "Formes de l'oral familier, à proscrire dans un écrit professionnel." }
+      ],
+      "verification": ["Comment se prononce souvent « would you » dans l'anglais courant ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cea.oral.accents",
+      "titre": "Les accents de l'anglais",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["cea.methode.ecoute", "mgi.management.equipes"],
+      "question": "Comment comprendre des interlocuteurs aux accents très différents ?",
+      "definition": "L'anglais présente une grande variété d'accents : britanniques (dont la Received Pronunciation et les accents régionaux d'Écosse, du Nord, de Londres), irlandais, américains (General American, accents du Sud), canadiens, australiens, ainsi que les anglais de locuteurs non natifs (Inde, Afrique, Europe, Asie), majoritaires dans les échanges commerciaux internationaux. Quelques différences fréquentes : prononciation du /r/ après voyelle (rhotique aux États-Unis, généralement pas en anglais britannique standard : car), voyelle de « bath, dance » (/ɑː/ UK, /æ/ US), « t » battu américain (water → /ˈwɑːɾər/). S'exposer régulièrement à des accents variés est la meilleure préparation.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Mot", "Anglais britannique (RP)", "Anglais américain"], "lignes": [
+          ["car", "/kɑː/", "/kɑːr/"],
+          ["schedule", "/ˈʃedjuːl/", "/ˈskedʒuːl/"],
+          ["water", "/ˈwɔːtə/", "/ˈwɑːɾər/"],
+          ["can't", "/kɑːnt/", "/kænt/"],
+          ["either", "/ˈaɪðə/ ou /ˈiːðə/", "/ˈiːðər/"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Accent", "en": "accent", "es": "acento", "definition": "Manière de prononcer propre à une région ou un groupe." },
+        { "fr": "Prononciation reçue", "en": "Received Pronunciation (RP)", "es": "pronunciación estándar británica (RP)", "definition": "Accent britannique de référence." },
+        { "fr": "Anglais international", "en": "English as a lingua franca", "es": "inglés como lengua franca", "definition": "Anglais utilisé entre locuteurs non natifs." }
+      ],
+      "exemple": { "fictif": true, "texte": "Lors d'une visioconférence avec un acheteur indien, un fournisseur écossais et une transitaire néerlandaise, l'assistante export reformule les décisions par écrit pour s'assurer que tous ont compris les mêmes délais." },
+      "confusions": [
+        { "a": "Accent", "b": "Niveau de langue", "explication": "Un accent marqué n'indique pas une mauvaise maîtrise de l'anglais." }
+      ],
+      "verification": ["Citez deux différences de prononciation entre anglais britannique et américain."],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cea.oral.001", "notion": "cea.oral.formes-faibles", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelle voyelle apparaît dans la plupart des formes faibles ?",
+      "choix": [
+        { "id": "a", "texte": "Le schwa /ə/", "correct": true, "explication": "Voyelle réduite la plus fréquente." },
+        { "id": "b", "texte": "Le /iː/ long", "correct": false, "explication": "Voyelle pleine." },
+        { "id": "c", "texte": "Le /ɔː/", "correct": false, "explication": "Forme pleine de « for »." },
+        { "id": "d", "texte": "Aucune voyelle", "correct": false, "explication": "Il reste souvent un schwa." }
+      ]
+    },
+    {
+      "id": "q.cea.oral.002", "notion": "cea.oral.formes-faibles", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Dans « We can deliver next week », comment distinguer à l'oral « can » de « can't » ?",
+      "choix": [
+        { "id": "a", "texte": "« can » est réduit (/kən/) et inaccentué, « can't » est accentué avec une voyelle pleine", "correct": true, "explication": "Le /t/ final est souvent peu audible : l'accent est l'indice principal." },
+        { "id": "b", "texte": "Par le /t/ final toujours très net", "correct": false, "explication": "Il est souvent à peine prononcé." },
+        { "id": "c", "texte": "Impossible à distinguer", "correct": false, "explication": "L'accent et la voyelle permettent de les distinguer." },
+        { "id": "d", "texte": "Par l'intonation montante", "correct": false, "explication": "Ce n'est pas le critère." }
+      ]
+    },
+    {
+      "id": "q.cea.oral.003", "notion": "cea.oral.liaisons", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "La prononciation /dɪdʒuː/ pour « did you » est un exemple :",
+      "choix": [
+        { "id": "a", "texte": "D'assimilation", "correct": true, "explication": "/d/ + /j/ → /dʒ/." },
+        { "id": "b", "texte": "D'élision", "correct": false, "explication": "Aucun son ne disparaît." },
+        { "id": "c", "texte": "De R de liaison", "correct": false, "explication": "Pas de /r/." },
+        { "id": "d", "texte": "De forme pleine", "correct": false, "explication": "C'est une forme réduite." }
+      ]
+    },
+    {
+      "id": "q.cea.oral.004", "notion": "cea.oral.accents", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "enonce": "Vrai ou faux : en anglais américain standard, le /r/ de « car » est prononcé.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "L'anglais américain est majoritairement rhotique." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "C'est la RP britannique qui ne le prononce pas." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cea.oral.001", "notions": ["cea.oral.formes-faibles", "cea.oral.liaisons", "cea.oral.accents"],
+      "question": "Expliquez pourquoi l'anglais oral est difficile à comprendre : formes faibles, enchaînements, accents.",
+      "reponse": "Langue accentuelle : mots lexicaux accentués, mots grammaticaux réduits (to /tə/, for /fə/, and /ən/, can /kən/, of /əv/). Enchaînements : linking (pick it up), R de liaison britannique, assimilation (did you /dɪdʒuː/), élision (last week), formes familières (gonna, wanna). Accents variés : britanniques, américains (rhotique, t battu, schedule /sk/), anglais international des non-natifs. S'y exposer régulièrement.",
+      "indispensables": ["Formes faibles et schwa", "Trois phénomènes d'enchaînement", "Différences UK / US"],
+      "erreurs": ["Écrire gonna dans un document professionnel"]
+    }
+  ]
+}
