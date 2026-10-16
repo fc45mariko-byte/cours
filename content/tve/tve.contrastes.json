@@ -1,0 +1,418 @@
+{
+  "chapitre": "tve.contrastes",
+  "notions": [
+    {
+      "id": "tve.contrastes.calque",
+      "titre": "Le calque et les gallicismes",
+      "niveau": "F",
+      "prerequis": ["tra.procedes.directs"],
+      "connexes": ["tve.lexico.falsos-amigos", "tve.metodo.tema"],
+      "question": "Pourquoi le mot-à-mot est-il si dangereux entre deux langues aussi proches que le français et l'espagnol ?",
+      "definition": "La proximité du français et de l'espagnol favorise les calques : on transpose une structure ou une expression française qui n'existe pas, ou pas avec ce sens, en espagnol (gallicisme). Exemples fréquents : « se rendre compte » → darse cuenta (et non *realizar) ; « il y a deux ans » → hace dos años ; « depuis trois ans » → desde hace tres años ; « devenir » → hacerse, ponerse, volverse, convertirse en selon le sens ; « c'est pour cela que » → por eso (plutôt que *es por eso que, construction calquée critiquée) ; « prendre une décision » → tomar una decisión. En version, le calque inverse produit un français maladroit (« realizar un proyecto » → « réaliser » est correct, mais « tener lugar » → « avoir lieu » aussi : il faut vérifier chaque cas).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Français", "Calque à éviter", "Espagnol correct"], "lignes": [
+          ["Je me suis rendu compte que…", "*Realicé que…", "Me di cuenta de que…"],
+          ["Il y a deux ans", "*Hay dos años", "Hace dos años"],
+          ["Depuis trois ans", "*Desde tres años", "Desde hace tres años"],
+          ["Il est devenu directeur", "*Devino director", "Llegó a ser director / Se convirtió en director"],
+          ["C'est pour cela que nous refusons", "*Es por eso que rechazamos (critiqué)", "Por eso rechazamos"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Gallicisme", "en": "gallicism", "es": "galicismo", "definition": "Calque fautif du français." },
+        { "fr": "Calque", "en": "calque", "es": "calco", "definition": "Traduction littérale d'une structure." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Nous travaillons avec ce distributeur depuis cinq ans » → « Trabajamos con este distribuidor desde hace cinco años » (ou « Llevamos cinco años trabajando con este distribuidor »)." },
+      "confusions": [
+        { "a": "Desde (point de départ : desde 2020)", "b": "Desde hace (durée : desde hace cinco años)", "explication": "« Depuis » se traduit différemment selon qu'il introduit une date ou une durée." }
+      ],
+      "verification": ["Traduisez : « Je me suis rendu compte de l'erreur il y a deux jours. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.ser-estar",
+      "titre": "Ser et estar",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tve.contrastes.perifrasis"],
+      "question": "Comment choisir entre ser et estar pour traduire « être » ?",
+      "definition": "Ser exprime l'identité et les caractéristiques essentielles : nature, profession, origine, nationalité, matière, possession, heure et date, lieu d'un événement (La reunión es en Madrid), et forme le passif d'action (El contrato fue firmado ayer). Estar exprime un état, une situation ou un résultat : localisation d'une personne ou d'un objet (La fábrica está en Toledo), état passager (El director está ocupado), résultat d'une action (El contrato está firmado), forme progressive (estar + gérondif : Estamos negociando). Certains adjectifs changent de sens : ser listo (être intelligent) / estar listo (être prêt) ; ser rico (riche) / estar rico (délicieux) ; ser malo (mauvais) / estar malo (malade).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Emploi", "Verbe", "Exemple"], "lignes": [
+          ["Profession, identité", "ser", "Es directora de exportación."],
+          ["Origine, nationalité", "ser", "La empresa es mexicana."],
+          ["Lieu d'un événement", "ser", "La feria es en Barcelona."],
+          ["Localisation d'un objet", "estar", "El almacén está en Valencia."],
+          ["État passager", "estar", "Los precios están altos este mes."],
+          ["Passif d'action / résultat", "ser / estar", "Fue firmado (action) / Está firmado (résultat)"],
+          ["Action en cours", "estar + gérondif", "Estamos preparando el pedido."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Être (essence)", "en": "to be (identity)", "es": "ser", "definition": "Identité, caractéristiques permanentes." },
+        { "fr": "Être (état, lieu)", "en": "to be (state, location)", "es": "estar", "definition": "État, localisation, résultat." }
+      ],
+      "exemple": { "fictif": true, "texte": "« La mercancía está en el puerto de Valencia ; el envío fue organizado por nuestro transitario y la documentación ya está lista. »" },
+      "confusions": [
+        { "a": "La reunión es en Madrid (événement)", "b": "La oficina está en Madrid (lieu d'un objet)", "explication": "Règle souvent oubliée par les francophones." }
+      ],
+      "verification": ["Complétez : « La conferencia ___ en el hotel » ; « El hotel ___ en el centro »."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.por-para",
+      "titre": "Por et para",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tve.contrastes.calque"],
+      "question": "Comment choisir entre por et para pour traduire « pour », « par » ?",
+      "definition": "Para exprime la finalité et l'orientation vers un but : objectif (para exportar), destination (salimos para México), destinataire (un regalo para el cliente), échéance (para el lunes), point de vue (para nosotros, es prioritario). Por exprime la cause et le parcours : cause, motif (por la crisis), moyen (por correo, por avión), lieu de passage (pasar por Madrid), échange ou prix (lo vendió por 500 euros), proportion (10 por ciento, por unidad), durée approximative ou moment vague (por la mañana), agent du passif (firmado por el director), « en faveur de / à la place de » (lo hago por ti).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Sens", "Préposition", "Exemple"], "lignes": [
+          ["But", "para", "Viajamos a México para firmar el contrato."],
+          ["Échéance", "para", "Necesitamos la mercancía para el 15 de mayo."],
+          ["Destinataire", "para", "Esta oferta es para usted."],
+          ["Cause", "por", "El pedido se retrasó por la huelga."],
+          ["Moyen", "por", "Les enviamos la factura por correo electrónico."],
+          ["Prix, échange", "por", "Compramos la máquina por 20 000 euros."],
+          ["Agent du passif", "por", "El contrato fue firmado por ambas partes."],
+          ["Proportion", "por", "un descuento del 5 por ciento"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Pour (but)", "en": "for / in order to", "es": "para", "definition": "Finalité." },
+        { "fr": "Par / à cause de", "en": "by / because of", "es": "por", "definition": "Cause, moyen, agent." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Por la subida de los costes de transporte, necesitamos su respuesta para el viernes para poder confirmar el pedido. »" },
+      "confusions": [
+        { "a": "Trabajo para una empresa española (employeur)", "b": "Trabajo por la empresa (pour son bien, à sa place)", "explication": "Le choix modifie le sens." }
+      ],
+      "verification": ["Complétez : « Gracias ___ su pedido » ; « Este informe es ___ el director »."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.subjuntivo",
+      "titre": "Le subjonctif",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tve.contrastes.concordancia", "eec.correspondencia.cortesia"],
+      "question": "Dans quels cas l'espagnol exige-t-il le subjonctif, parfois là où le français ne l'emploie pas ?",
+      "definition": "Le subjonctif s'emploie dans les subordonnées qui dépendent d'un verbe de volonté, demande, ordre, conseil (Queremos que nos envíen…), de sentiment (Nos alegra que…), de doute ou de négation de l'opinion (No creo que sea posible), après les expressions impersonnelles d'appréciation (Es necesario que, Es importante que), après certaines conjonctions (para que, antes de que, sin que, a menos que, con tal de que). Différence majeure avec le français : dans les subordonnées temporelles tournées vers le futur, l'espagnol emploie le subjonctif présent là où le français met le futur (Cuando llegue la mercancía, les avisaremos = Quand la marchandise arrivera…). L'hypothèse irréelle s'exprime par si + imparfait du subjonctif (Si tuviéramos stock, lo enviaríamos).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Contexte", "Exemple", "Français"], "lignes": [
+          ["Demande", "Les rogamos que paguen antes del día 30.", "Nous vous prions de payer…"],
+          ["Temporelle future", "Cuando reciban la factura, efectúen el pago.", "Quand vous recevrez la facture…"],
+          ["But", "Le enviamos muestras para que pueda comprobar la calidad.", "… pour que vous puissiez…"],
+          ["Doute", "No creo que lleguemos a tiempo.", "Je ne pense pas que nous arrivions…"],
+          ["Hypothèse irréelle", "Si bajaran el precio, haríamos el pedido.", "S'ils baissaient le prix, nous passerions commande."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Subjonctif présent", "en": "present subjunctive", "es": "presente de subjuntivo", "definition": "Mode de la subordonnée non assertée, au présent." },
+        { "fr": "Subjonctif imparfait", "en": "imperfect subjunctive", "es": "pretérito imperfecto de subjuntivo", "definition": "Formes en -ra / -se." }
+      ],
+      "exemple": { "fictif": true, "texte": "« En cuanto tengamos la confirmación del banco, enviaremos la mercancía » = « Dès que nous aurons la confirmation de la banque, nous enverrons la marchandise »." },
+      "confusions": [
+        { "a": "*Cuando llegará la mercancía (calque du futur)", "b": "Cuando llegue la mercancía", "explication": "Faute très fréquente des francophones." }
+      ],
+      "verification": ["Traduisez : « Quand vous aurez reçu les échantillons, appelez-nous. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.concordancia",
+      "titre": "La concordance des temps",
+      "niveau": "F",
+      "prerequis": ["tve.contrastes.subjuntivo"],
+      "connexes": ["aec.grammaire.conditionnels"],
+      "question": "Quel temps du subjonctif employer selon le temps du verbe principal ?",
+      "definition": "L'espagnol applique strictement la concordance des temps au subjonctif, alors que le français courant ne l'emploie plus à l'imparfait. Si le verbe principal est au présent, au futur, au passé composé ou à l'impératif, la subordonnée est au subjonctif présent (Les pido que envíen…). S'il est à un temps du passé (prétérit, imparfait, plus-que-parfait) ou au conditionnel, la subordonnée est au subjonctif imparfait (Les pedí que enviaran / enviasen… ; Me gustaría que vinieran). Le français « Je leur ai demandé d'envoyer » ou « qu'ils envoient » devient donc « Les pedí que enviaran ».",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Verbe principal", "Subordonnée", "Exemple"], "lignes": [
+          ["Présent", "Subjonctif présent", "Queremos que confirmen el pedido."],
+          ["Futur / impératif", "Subjonctif présent", "Pídales que confirmen el pedido."],
+          ["Prétérit", "Subjonctif imparfait", "Quisimos que confirmaran el pedido."],
+          ["Imparfait", "Subjonctif imparfait", "Queríamos que confirmaran el pedido."],
+          ["Conditionnel", "Subjonctif imparfait", "Nos gustaría que confirmaran el pedido."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Concordance des temps", "en": "sequence of tenses", "es": "concordancia de tiempos", "definition": "Accord du temps de la subordonnée avec celui de la principale." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Le directeur a exigé que nous réduisions les délais » → « El director exigió que redujéramos los plazos »." },
+      "confusions": [
+        { "a": "Subjonctif imparfait (obligatoire en espagnol)", "b": "Subjonctif présent (usuel en français oral)", "explication": "Le français courant dit « qu'ils viennent » ; l'espagnol exige « que vinieran »." }
+      ],
+      "verification": ["Traduisez : « Nous aimerions que vous nous envoyiez un échantillon. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.a-personal",
+      "titre": "La a personal",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tve.contrastes.pronombres"],
+      "question": "Pourquoi dit-on « Contratamos a un ingeniero » mais « Compramos una máquina » ?",
+      "definition": "En espagnol, le complément d'objet direct désignant une personne déterminée (ou un animal personnifié, une entité collective humaine) est introduit par la préposition « a » : Llamé al cliente ; Conocemos a la directora ; Visitaremos a nuestros distribuidores. Elle ne s'emploie pas devant un objet inanimé (Visitaremos la fábrica) ni, en général, devant une personne indéterminée (Buscamos un comercial bilingüe ; mais Buscamos a un comercial que conocimos en la feria). Après « tener », on ne met généralement pas de « a » (Tenemos tres clientes en Chile).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Complément", "A personal ?", "Exemple"], "lignes": [
+          ["Personne déterminée", "Oui", "Esperamos al transportista."],
+          ["Personne indéterminée", "En général non", "Necesitamos un traductor."],
+          ["Chose", "Non", "Esperamos el camión."],
+          ["Entité humaine collective", "Souvent oui", "Informaremos a la empresa."],
+          ["Avec tener", "Non", "Tenemos dos socios."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Complément d'objet direct", "en": "direct object", "es": "complemento directo", "definition": "Complément du verbe sans préposition en français." },
+        { "fr": "Préposition « a » personnelle", "en": "personal « a »", "es": "a personal", "definition": "Préposition devant un COD de personne." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Hemos contratado a una consultora para estudiar el mercado y visitaremos a los principales importadores la próxima semana. »" },
+      "confusions": [
+        { "a": "Busco a mi asistente (personne connue)", "b": "Busco un asistente (n'importe lequel)", "explication": "La préposition signale une personne précise." }
+      ],
+      "verification": ["Complétez : « Hemos llamado ___ cliente » ; « Hemos llamado ___ taxi »."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.gustar",
+      "titre": "Les verbes du type gustar",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tve.contrastes.pronombres"],
+      "question": "Pourquoi « Nos interesan sus productos » est-il au pluriel ?",
+      "definition": "Dans les verbes du type gustar, la personne qui ressent est le complément d'objet indirect (me, te, le, nos, os, les), et ce qui plaît est le sujet grammatical, avec lequel le verbe s'accorde : Me gusta el proyecto / Me gustan los proyectos. Le même schéma s'applique à interesar, encantar, convenir, importar, preocupar, faltar, hacer falta, quedar, parecer, apetecer. Le français « Nous sommes intéressés par vos produits » devient « Nos interesan sus productos » ; « Il nous manque deux documents » → « Nos faltan dos documentos » ; « Cette date vous convient-elle ? » → « ¿Le conviene esta fecha? ».",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Français", "Espagnol"], "lignes": [
+          ["Vos produits nous intéressent.", "Nos interesan sus productos."],
+          ["Il nous manque la facture.", "Nos falta la factura."],
+          ["Il nous manque deux factures.", "Nos faltan dos facturas."],
+          ["Cette solution leur convient.", "Les conviene esta solución."],
+          ["Nous avons besoin d'un transitaire.", "Nos hace falta un transitario."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Complément d'objet indirect", "en": "indirect object", "es": "complemento indirecto", "definition": "Complément introduit par « à » en français." },
+        { "fr": "Accord du verbe", "en": "subject-verb agreement", "es": "concordancia verbal", "definition": "Accord du verbe avec son sujet." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Nos interesan especialmente sus vajillas de cerámica y nos convendría recibir la mercancía antes de marzo. »" },
+      "confusions": [
+        { "a": "*Estamos interesados por sus productos (calque)", "b": "Nos interesan sus productos / Estamos interesados en sus productos", "explication": "La préposition est « en », et la tournure avec interesar est plus naturelle." }
+      ],
+      "verification": ["Traduisez : « Il nous manque trois palettes. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.on",
+      "titre": "Traduire « on »",
+      "niveau": "F",
+      "prerequis": ["tve.contrastes.gustar"],
+      "connexes": ["tra.contrastes.passif", "aec.grammaire.passif"],
+      "question": "Comment rendre le pronom « on » en espagnol, qui n'a pas d'équivalent direct ?",
+      "definition": "Le « on » français se traduit selon son sens. Valeur impersonnelle générale : se impersonnel (Se trabaja mucho en esta empresa) ou passive réfléchie, avec accord du verbe (Se venden pisos ; Se fabrican piezas). « On » = les gens, ils : 3e personne du pluriel (Dicen que la empresa va a cerrar). « On » = nous : 1re personne du pluriel (Hemos firmado el contrato). « On » incluant le locuteur dans une vérité générale : uno / una (Uno no puede saberlo todo). Le passif avec ser est possible mais moins fréquent qu'en français.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Sens de « on »", "Traduction", "Exemple"], "lignes": [
+          ["Impersonnel", "se + 3e personne", "Aquí se habla inglés."],
+          ["Passif (objet)", "se + verbe accordé", "Se exportan vinos a China."],
+          ["Les gens, ils", "3e personne du pluriel", "Dicen que habrá huelga."],
+          ["Nous", "1re personne du pluriel", "Hemos recibido su pedido."],
+          ["Vérité générale incluant le locuteur", "uno / una", "Uno nunca está seguro."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Se impersonnel", "en": "impersonal se", "es": "se impersonal", "definition": "Construction sans sujet déterminé." },
+        { "fr": "Passive réfléchie", "en": "pronominal passive", "es": "pasiva refleja", "definition": "Se + verbe accordé avec le sujet." }
+      ],
+      "exemple": { "fictif": true, "texte": "« On a envoyé les documents hier et on nous a dit qu'ils arriveraient lundi » → « Enviamos los documentos ayer y nos dijeron que llegarían el lunes »." },
+      "confusions": [
+        { "a": "*Se vende pisos (fautif en norme)", "b": "Se venden pisos", "explication": "En passive réfléchie, le verbe s'accorde avec le sujet pluriel." }
+      ],
+      "verification": ["Traduisez : « On fabrique ces pièces au Mexique. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.perifrasis",
+      "titre": "Les périphrases verbales",
+      "niveau": "A",
+      "prerequis": ["tve.contrastes.ser-estar"],
+      "connexes": ["tve.contrastes.calque"],
+      "question": "Comment exprimer « venir de », « continuer à », « recommencer », « depuis » avec les périphrases espagnoles ?",
+      "definition": "Les périphrases verbales (verbe auxiliaire + infinitif, gérondif ou participe) expriment l'aspect et la modalité de façon très idiomatique : ir a + infinitif (futur proche : Vamos a firmar) ; acabar de + infinitif (passé récent : Acabamos de recibir el pedido = Nous venons de recevoir) ; volver a + infinitif (répétition : Volvimos a llamar = Nous avons rappelé) ; seguir / continuar + gérondif (continuation : Seguimos esperando) ; llevar + durée + gérondif (durée jusqu'à maintenant : Llevamos tres meses negociando = Nous négocions depuis trois mois) ; estar a punto de + infinitif (être sur le point de) ; dejar de + infinitif (cesser de) ; tener que + infinitif (obligation) ; deber + infinitif (devoir) / deber de + infinitif (probabilité).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Périphrase", "Sens", "Exemple"], "lignes": [
+          ["acabar de + inf.", "venir de", "Acabamos de enviar la factura."],
+          ["volver a + inf.", "re-, de nouveau", "Volveremos a contactarles."],
+          ["seguir + gérondif", "continuer à", "Seguimos sin noticias."],
+          ["llevar + durée + gérondif", "depuis (durée)", "Llevamos dos años exportando a Chile."],
+          ["estar a punto de + inf.", "être sur le point de", "Estamos a punto de cerrar el acuerdo."],
+          ["dejar de + inf.", "cesser de", "Dejaron de pagar en marzo."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Périphrase verbale", "en": "verbal periphrasis", "es": "perífrasis verbal", "definition": "Construction auxiliaire + forme non personnelle." },
+        { "fr": "Gérondif (espagnol)", "en": "gerund (Spanish)", "es": "gerundio", "definition": "Forme en -ando / -iendo." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Nous venons d'apprendre que le client a cessé de payer ; nous le relançons depuis deux semaines » → « Acabamos de saber que el cliente ha dejado de pagar; llevamos dos semanas reclamándole »." },
+      "confusions": [
+        { "a": "Deber + inf. (obligation)", "b": "Deber de + inf. (probabilité : debe de estar en camino)", "explication": "Distinction normative recommandée par la RAE." }
+      ],
+      "verification": ["Traduisez : « Nous exportons au Pérou depuis cinq ans » avec llevar."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.contrastes.pronombres",
+      "titre": "Pronoms personnels et enclise",
+      "niveau": "F",
+      "prerequis": ["tve.contrastes.a-personal"],
+      "connexes": ["tve.contrastes.gustar"],
+      "question": "Où placer les pronoms compléments en espagnol, et comment les combiner ?",
+      "definition": "Les pronoms compléments (me, te, lo, la, le, nos, os, los, las, les, se) se placent devant le verbe conjugué (Se lo enviamos ayer), mais se soudent à la fin (enclise) de l'infinitif, du gérondif et de l'impératif affirmatif (Vamos a enviárselo / Se lo vamos a enviar ; Estamos preparándolo ; Envíenoslo cuanto antes). Lorsqu'un pronom COI de 3e personne (le, les) précède un COD (lo, la, los, las), il devient « se » : *le lo → se lo (Se lo mandamos = Nous le lui / leur avons envoyé). L'enclise peut exiger un accent écrit pour conserver l'accent tonique (enviar → enviárselo ; envíe → envíenoslo). L'impératif négatif reprend l'ordre normal (No nos lo envíen todavía).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Forme verbale", "Position", "Exemple"], "lignes": [
+          ["Verbe conjugué", "Avant", "Se la mandamos el lunes."],
+          ["Infinitif", "Après (soudé) ou avant l'auxiliaire", "Queremos enviársela / Se la queremos enviar."],
+          ["Gérondif", "Après (soudé) ou avant l'auxiliaire", "Estamos revisándolo / Lo estamos revisando."],
+          ["Impératif affirmatif", "Après (soudé)", "Confírmenoslo, por favor."],
+          ["Impératif négatif", "Avant", "No nos lo confirmen todavía."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Enclise", "en": "enclisis", "es": "enclisis", "definition": "Pronom soudé à la fin du verbe." },
+        { "fr": "Pronom complément", "en": "object pronoun", "es": "pronombre átono / complemento", "definition": "Pronom remplaçant un complément." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Nous vous enverrons la facture demain ; pourriez-vous nous la retourner signée ? » → « Le enviaremos la factura mañana; ¿podría devolvérnosla firmada? »" },
+      "confusions": [
+        { "a": "*Le lo enviamos", "b": "Se lo enviamos", "explication": "Le / les devient se devant lo, la, los, las." }
+      ],
+      "verification": ["Traduisez : « Envoyez-la-nous, s'il vous plaît » (usted)."],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.tve.contrastes.001", "notion": "tve.contrastes.calque", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Traduisez : « Je me suis rendu compte de l'erreur. »",
+      "choix": [
+        { "id": "a", "texte": "Me di cuenta del error.", "correct": true, "explication": "Darse cuenta de." },
+        { "id": "b", "texte": "Realicé el error.", "correct": false, "explication": "Gallicisme / anglicisme fautif." },
+        { "id": "c", "texte": "Me rendí cuenta del error.", "correct": false, "explication": "Calque de « se rendre »." },
+        { "id": "d", "texte": "Hice cuenta del error.", "correct": false, "explication": "Incorrect." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.002", "notion": "tve.contrastes.calque", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Traduisez : « Nous travaillons avec eux depuis trois ans. »",
+      "choix": [
+        { "id": "a", "texte": "Trabajamos con ellos desde hace tres años.", "correct": true, "explication": "Durée → desde hace." },
+        { "id": "b", "texte": "Trabajamos con ellos desde tres años.", "correct": false, "explication": "Calque." },
+        { "id": "c", "texte": "Trabajamos con ellos hay tres años.", "correct": false, "explication": "Calque de « il y a »." },
+        { "id": "d", "texte": "Hemos trabajado con ellos durante tres años atrás.", "correct": false, "explication": "Incorrect." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.003", "notion": "tve.contrastes.ser-estar", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Complétez : « La feria ___ en el recinto ferial de Madrid y nuestro stand ___ cerca de la entrada. »",
+      "choix": [
+        { "id": "a", "texte": "es / está", "correct": true, "explication": "Lieu d'un événement → ser ; localisation d'un objet → estar." },
+        { "id": "b", "texte": "está / está", "correct": false, "explication": "Un événement se localise avec ser." },
+        { "id": "c", "texte": "es / es", "correct": false, "explication": "Le stand est un objet localisé : estar." },
+        { "id": "d", "texte": "está / es", "correct": false, "explication": "Inversé." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.004", "notion": "tve.contrastes.por-para", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Complétez : « Gracias ___ su pedido. Lo prepararemos ___ el lunes. »",
+      "choix": [
+        { "id": "a", "texte": "por / para", "correct": true, "explication": "Gracias por (cause) ; para el lunes (échéance)." },
+        { "id": "b", "texte": "para / por", "correct": false, "explication": "Inversé." },
+        { "id": "c", "texte": "por / por", "correct": false, "explication": "L'échéance se marque avec para." },
+        { "id": "d", "texte": "para / para", "correct": false, "explication": "Gracias por." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.005", "notion": "tve.contrastes.subjuntivo", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Traduisez : « Quand la marchandise arrivera, nous vous préviendrons. »",
+      "choix": [
+        { "id": "a", "texte": "Cuando llegue la mercancía, les avisaremos.", "correct": true, "explication": "Cuando + subjonctif présent pour le futur." },
+        { "id": "b", "texte": "Cuando llegará la mercancía, les avisaremos.", "correct": false, "explication": "Calque du futur français." },
+        { "id": "c", "texte": "Cuando llega la mercancía, les avisaremos.", "correct": false, "explication": "Indicatif présent incorrect ici." },
+        { "id": "d", "texte": "Cuando llegara la mercancía, les avisaremos.", "correct": false, "explication": "Concordance incorrecte." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.006", "notion": "tve.contrastes.concordancia", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Traduisez : « Nous leur avons demandé de baisser le prix. »",
+      "choix": [
+        { "id": "a", "texte": "Les pedimos que bajaran el precio.", "correct": true, "explication": "Prétérit → subjonctif imparfait." },
+        { "id": "b", "texte": "Les pedimos que bajen el precio.", "correct": false, "explication": "Concordance non respectée." },
+        { "id": "c", "texte": "Les pedimos de bajar el precio.", "correct": false, "explication": "Calque de « demander de »." },
+        { "id": "d", "texte": "Les pedimos que bajaban el precio.", "correct": false, "explication": "Indicatif fautif." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.007", "notion": "tve.contrastes.a-personal", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Quelle phrase est correcte ?",
+      "choix": [
+        { "id": "a", "texte": "Visitaremos a nuestro distribuidor en Lima.", "correct": true, "explication": "Personne déterminée → a." },
+        { "id": "b", "texte": "Visitaremos nuestro distribuidor en Lima.", "correct": false, "explication": "Il manque la a personal." },
+        { "id": "c", "texte": "Visitaremos a la fábrica.", "correct": false, "explication": "Pas de a devant une chose." },
+        { "id": "d", "texte": "Tenemos a tres clientes.", "correct": false, "explication": "Pas de a après tener en général." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.008", "notion": "tve.contrastes.gustar", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Traduisez : « Vos nouveaux modèles nous intéressent. »",
+      "choix": [
+        { "id": "a", "texte": "Nos interesan sus nuevos modelos.", "correct": true, "explication": "Accord avec « modelos »." },
+        { "id": "b", "texte": "Nos interesa sus nuevos modelos.", "correct": false, "explication": "Accord fautif." },
+        { "id": "c", "texte": "Interesamos sus nuevos modelos.", "correct": false, "explication": "Contresens." },
+        { "id": "d", "texte": "Estamos interesados por sus nuevos modelos.", "correct": false, "explication": "Préposition fautive (en)." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.009", "notion": "tve.contrastes.on", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Traduisez : « On vend ces machines dans toute l'Amérique latine. »",
+      "choix": [
+        { "id": "a", "texte": "Estas máquinas se venden en toda América Latina.", "correct": true, "explication": "Passive réfléchie accordée." },
+        { "id": "b", "texte": "On vende estas máquinas…", "correct": false, "explication": "« On » n'existe pas en espagnol." },
+        { "id": "c", "texte": "Se vende estas máquinas…", "correct": false, "explication": "Accord fautif selon la norme." },
+        { "id": "d", "texte": "Uno vende estas máquinas…", "correct": false, "explication": "« Uno » inclut le locuteur : sens inadapté." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.010", "notion": "tve.contrastes.perifrasis", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Traduisez : « Nous venons de recevoir votre commande. »",
+      "choix": [
+        { "id": "a", "texte": "Acabamos de recibir su pedido.", "correct": true, "explication": "Acabar de = venir de." },
+        { "id": "b", "texte": "Venimos de recibir su pedido.", "correct": false, "explication": "Calque." },
+        { "id": "c", "texte": "Volvemos a recibir su pedido.", "correct": false, "explication": "Volver a = de nouveau." },
+        { "id": "d", "texte": "Vamos a recibir su pedido.", "correct": false, "explication": "Futur proche." }
+      ]
+    },
+    {
+      "id": "q.tve.contrastes.011", "notion": "tve.contrastes.pronombres", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Traduisez : « Nous la lui avons envoyée hier » (la factura, al cliente).",
+      "choix": [
+        { "id": "a", "texte": "Se la enviamos ayer.", "correct": true, "explication": "Le devient se devant la." },
+        { "id": "b", "texte": "Le la enviamos ayer.", "correct": false, "explication": "Combinaison interdite." },
+        { "id": "c", "texte": "La le enviamos ayer.", "correct": false, "explication": "Ordre et forme fautifs." },
+        { "id": "d", "texte": "Enviámossela ayer.", "correct": false, "explication": "Pas d'enclise avec un verbe conjugué à l'indicatif." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.tve.contrastes.001", "notions": ["tve.contrastes.ser-estar", "tve.contrastes.por-para", "tve.contrastes.a-personal", "tve.contrastes.gustar"],
+      "question": "Résumez les règles de ser / estar, por / para, la a personal et les verbes du type gustar.",
+      "reponse": "Ser : identité, profession, origine, matière, heure, lieu d'un événement, passif d'action. Estar : état, localisation, résultat, progressif. Para : but, destination, destinataire, échéance, point de vue ; por : cause, moyen, passage, prix, proportion, agent du passif, moment vague. A personal devant un COD de personne déterminée (pas devant une chose, rarement devant une personne indéterminée, pas après tener). Gustar, interesar, faltar, convenir… : la personne est COI, ce qui plaît est sujet et commande l'accord (Nos interesan sus productos).",
+      "indispensables": ["Ser vs estar (événement / lieu)", "Por vs para", "A personal", "Accord des verbes type gustar"],
+      "erreurs": ["La reunión está en Madrid", "Nos interesa sus productos"]
+    },
+    {
+      "id": "f.tve.contrastes.002", "notions": ["tve.contrastes.subjuntivo", "tve.contrastes.concordancia", "tve.contrastes.on", "tve.contrastes.perifrasis", "tve.contrastes.pronombres", "tve.contrastes.calque"],
+      "question": "Résumez les pièges grammaticaux du thème espagnol : subjonctif, concordance, « on », périphrases, pronoms, calques.",
+      "reponse": "Subjonctif après volonté, sentiment, doute, impersonnelles, para que, antes de que ; cuando + subjonctif présent pour le futur ; si + subjonctif imparfait pour l'hypothèse. Concordance : principale au passé ou au conditionnel → subjonctif imparfait. « On » : se impersonnel / passive réfléchie accordée, 3e pluriel, nosotros, uno. Périphrases : acabar de, volver a, seguir + gérondif, llevar + durée + gérondif, dejar de. Pronoms : enclise à l'infinitif, au gérondif, à l'impératif affirmatif ; le/les + lo → se lo. Calques : darse cuenta, hace dos años, desde hace.",
+      "indispensables": ["Cuando + subjonctif", "Concordance au passé", "Traductions de « on »", "Se lo", "Desde hace"],
+      "erreurs": ["Cuando llegará", "Le lo enviamos"]
+    }
+  ]
+}

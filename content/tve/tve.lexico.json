@@ -1,0 +1,107 @@
+{
+  "chapitre": "tve.lexico",
+  "notions": [
+    {
+      "id": "tve.lexico.falsos-amigos",
+      "titre": "Les faux amis en thème et version espagnols",
+      "niveau": "F",
+      "prerequis": ["eec.lexico.falsos-amigos"],
+      "connexes": ["tve.contrastes.calque", "tra.pratique.faux-amis"],
+      "question": "Quels faux amis piègent le plus souvent en traduction français-espagnol ?",
+      "definition": "Au-delà du vocabulaire des affaires, les épreuves de thème et de version comportent des faux amis de la langue générale : constipado (enrhumé), exquisito (délicieux, raffiné), largo (long), carpeta (classeur), rato (moment), ratón (souris), salir (sortir ; « salir » français = ensuciar), quitar (enlever), tirar (jeter ; tirer = disparar, sacar, tirar de), subir (monter ; subir = sufrir), burro (âne ; beurre = mantequilla), polvo (poussière), luego (ensuite, plus tard), presumir (se vanter), compromiso (engagement), sensible (sensible, émotif ; sensé = sensato). Certains sont des faux amis partiels selon le contexte.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Espagnol", "Sens", "Pour dire en espagnol…"], "lignes": [
+          ["constipado", "enrhumé", "constipé → estreñido"],
+          ["largo", "long", "large → ancho"],
+          ["subir", "monter, augmenter", "subir (un dommage) → sufrir"],
+          ["tirar", "jeter", "tirer → sacar, disparar, tirar de"],
+          ["luego", "ensuite, plus tard", "donc → luego (logique) / por lo tanto"],
+          ["presumir", "se vanter", "présumer → suponer"],
+          ["sensato", "sensé", "sensible → sensible (émotif)"],
+          ["rato", "moment", "raté → fracasado, fallido"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Faux ami partiel", "en": "partial false friend", "es": "falso amigo parcial", "definition": "Mot dont seul un sens est commun." },
+        { "fr": "Subir (des pertes)", "en": "to suffer losses", "es": "sufrir pérdidas", "definition": "Supporter un dommage." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Las ventas subieron un 5 % » = « Les ventes ont augmenté de 5 % » ; « La empresa sufrió pérdidas » = « L'entreprise a subi des pertes »." },
+      "confusions": [
+        { "a": "Subir (espagnol : monter)", "b": "Subir (français : endurer)", "explication": "Contresens fréquent en version sur des textes économiques." }
+      ],
+      "verification": ["Traduisez : « L'entreprise a subi une baisse de ses ventes. »"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.lexico.registro",
+      "titre": "Registre et variétés de l'espagnol",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["eec.correspondencia.cortesia", "tve.metodo.tema"],
+      "question": "Comment choisir le bon registre et tenir compte des variétés de l'espagnol en traduction ?",
+      "definition": "La traduction doit respecter le registre du texte source : soutenu (textes juridiques, institutionnels), courant (presse), familier (dialogues, publicité). En espagnol, le registre se marque notamment par le traitement (tú / usted), le lexique (coger, très courant en Espagne, est vulgaire dans plusieurs pays d'Amérique latine : on préfère tomar, agarrar), et la syntaxe. L'espagnol présente des variétés : en Espagne, vosotros pour le pluriel familier et le leísmo de personne toléré ; en Amérique latine, ustedes pour tout pluriel, voseo (vos en Argentine, Uruguay, Amérique centrale), et un lexique propre (carro / coche, computadora / ordenador, celular / móvil, manejar / conducir). Il faut rester cohérent dans une même traduction et adapter au destinataire.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Espagne", "Amérique latine (fréquent)", "Français"], "lignes": [
+          ["coche", "carro / auto", "voiture"],
+          ["ordenador", "computadora / computador", "ordinateur"],
+          ["móvil", "celular", "téléphone portable"],
+          ["conducir", "manejar", "conduire"],
+          ["vosotros", "ustedes", "vous (pluriel familier)"],
+          ["presupuesto", "cotización", "devis"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Registre", "en": "register", "es": "registro", "definition": "Niveau de langue." },
+        { "fr": "Voseo", "en": "voseo (use of « vos »)", "es": "voseo", "definition": "Emploi de vos pour tú dans certains pays." },
+        { "fr": "Variété linguistique", "en": "language variety", "es": "variedad lingüística", "definition": "Forme régionale d'une langue." }
+      ],
+      "exemple": { "fictif": true, "texte": "Pour un client mexicain : « Le enviaremos la cotización por correo; puede llamarnos a nuestro celular ». Pour un client madrilène : « Le enviaremos el presupuesto por correo; puede llamarnos al móvil »." },
+      "confusions": [
+        { "a": "Espagnol d'Espagne", "b": "Espagnol « correct » unique", "explication": "Toutes les variétés sont légitimes ; il faut être cohérent et adapté au destinataire." }
+      ],
+      "verification": ["Citez trois différences lexicales entre l'espagnol d'Espagne et celui du Mexique."],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.tve.lexico.001", "notion": "tve.lexico.falsos-amigos", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "« Los precios subieron un 3 % » se traduit par :",
+      "choix": [
+        { "id": "a", "texte": "Les prix ont augmenté de 3 %.", "correct": true, "explication": "Subir = monter." },
+        { "id": "b", "texte": "Les prix ont subi 3 %.", "correct": false, "explication": "Faux ami." },
+        { "id": "c", "texte": "Les prix ont baissé de 3 %.", "correct": false, "explication": "Contresens." },
+        { "id": "d", "texte": "Les prix sont soumis à 3 %.", "correct": false, "explication": "Non-sens." }
+      ]
+    },
+    {
+      "id": "q.tve.lexico.002", "notion": "tve.lexico.falsos-amigos", "format": "multiple", "niveau": 2, "competence": "detecter-erreur",
+      "enonce": "Quelles traductions sont fautives ?",
+      "choix": [
+        { "id": "a", "texte": "« un pasillo largo » → « un couloir large »", "correct": true, "explication": "Largo = long." },
+        { "id": "b", "texte": "« Estoy constipado » → « Je suis enrhumé »", "correct": false, "explication": "Correct." },
+        { "id": "c", "texte": "« Le gusta presumir » → « Il aime présumer »", "correct": true, "explication": "Presumir = se vanter." },
+        { "id": "d", "texte": "« Luego hablamos » → « On en parle plus tard »", "correct": false, "explication": "Correct." }
+      ]
+    },
+    {
+      "id": "q.tve.lexico.003", "notion": "tve.lexico.registro", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Pour un courriel à un client argentin, quel mot choisir pour « téléphone portable » ?",
+      "choix": [
+        { "id": "a", "texte": "celular", "correct": true, "explication": "Usage latino-américain." },
+        { "id": "b", "texte": "móvil", "correct": false, "explication": "Usage d'Espagne, compréhensible mais moins naturel." },
+        { "id": "c", "texte": "portable", "correct": false, "explication": "Mot français." },
+        { "id": "d", "texte": "teléfono llevable", "correct": false, "explication": "N'existe pas." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.tve.lexico.001", "notions": ["tve.lexico.falsos-amigos", "tve.lexico.registro"],
+      "question": "Citez cinq faux amis espagnol-français et expliquez comment gérer registre et variétés en traduction.",
+      "reponse": "Largo = long ; subir = monter ; tirar = jeter ; presumir = se vanter ; constipado = enrhumé ; luego = ensuite ; rato = moment. Registre : respecter celui du texte source (tú / usted, lexique, syntaxe). Variétés : Espagne (vosotros, coche, ordenador, móvil, conducir, presupuesto) / Amérique latine (ustedes, carro, computadora, celular, manejar, cotización, voseo) ; rester cohérent et adapté au destinataire.",
+      "indispensables": ["Cinq faux amis", "Registre", "Exemples de variation lexicale"],
+      "erreurs": ["Mélanger les variétés dans un même texte"]
+    }
+  ]
+}

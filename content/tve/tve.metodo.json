@@ -1,0 +1,151 @@
+{
+  "chapitre": "tve.metodo",
+  "notions": [
+    {
+      "id": "tve.metodo.tema",
+      "titre": "Le thème espagnol",
+      "niveau": "F",
+      "prerequis": ["tve.contrastes.subjuntivo", "tve.contrastes.ser-estar"],
+      "connexes": ["tve.metodo.diario-errores", "tra.pratique.theme"],
+      "question": "Comment réussir un thème (français → espagnol) ?",
+      "definition": "Le thème espagnol exige un espagnol correct et idiomatique, fidèle au sens et au registre du texte français. Méthode : lire le texte entier ; repérer les points de grammaire à risque (ser / estar, por / para, subjonctif et concordance, « on », périphrases, a personal, verbes du type gustar, pronoms) ; traduire en partant du sens, sans calquer ; vérifier les accords, les accents écrits (tilde), la ponctuation espagnole (¿…? ¡…!) et l'usage des majuscules (pas de majuscule aux mois, jours, nationalités) ; relire la traduction comme un texte espagnol autonome. Mieux vaut une structure simple et juste qu'une tournure ambitieuse fautive.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Lecture complète du texte français",
+          "Repérage des difficultés grammaticales et lexicales",
+          "Brouillon phrase par phrase, sens avant forme",
+          "Contrôle grammatical ciblé (ser / estar, por / para, subjonctif, concordance, pronoms)",
+          "Contrôle orthographique : accents, ¿ ¡, minuscules (mois, nationalités)",
+          "Relecture de l'espagnol seul"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Thème", "en": "translation into a foreign language", "es": "traducción inversa / tema", "definition": "Traduction vers la langue étrangère." },
+        { "fr": "Accent écrit", "en": "written accent", "es": "tilde", "definition": "Signe marquant l'accent tonique." }
+      ],
+      "exemple": { "fictif": true, "texte": "« Quand vous recevrez la marchandise, vérifiez-la et envoyez-nous le bon de livraison signé » → « Cuando reciban la mercancía, compruébenla y envíennos el albarán firmado »." },
+      "confusions": [
+        { "a": "Majuscules françaises (Français, Lundi en début de phrase)", "b": "Minuscules espagnoles (francés, lunes, octubre)", "explication": "En espagnol, nationalités, jours et mois prennent une minuscule." }
+      ],
+      "verification": ["Citez cinq points de grammaire à vérifier systématiquement en thème espagnol."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.metodo.version",
+      "titre": "La version espagnole",
+      "niveau": "F",
+      "prerequis": ["tve.lexico.falsos-amigos"],
+      "connexes": ["tra.pratique.version", "tve.metodo.diario-errores"],
+      "question": "Comment réussir une version (espagnol → français) ?",
+      "definition": "La version espagnole exige une compréhension exacte et un français soigné. Les pièges spécifiques : faux amis (subir, largo, presumir), temps (le pretérito indefinido se rend par le passé simple dans un récit littéraire, par le passé composé dans un texte de presse ou de dialogue ; le pretérito perfecto par le passé composé), subjonctifs à rendre par un futur ou un indicatif français (cuando llegue → quand il arrivera), périphrases (llevar + gérondif → depuis), « se » impersonnel (→ on), phrases longues et nominales à restructurer. On évite le calque des structures espagnoles (« Es en Madrid donde… » → « C'est à Madrid que… ») et on vérifie la concordance des temps en français.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Espagnol", "Piège", "Français"], "lignes": [
+          ["Cuando terminen las obras…", "Subjonctif → futur", "Quand les travaux seront terminés…"],
+          ["Llevan diez años exportando.", "Périphrase", "Ils exportent depuis dix ans."],
+          ["Se espera un aumento de la demanda.", "Se impersonnel", "On s'attend à une hausse de la demande."],
+          ["Acaba de abrir una filial.", "Périphrase", "Elle vient d'ouvrir une filiale."],
+          ["Las exportaciones subieron.", "Faux ami", "Les exportations ont augmenté."]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Version", "en": "translation into one's native language", "es": "traducción directa / versión", "definition": "Traduction vers la langue maternelle." },
+        { "fr": "Passé simple", "en": "simple past (literary)", "es": "pretérito indefinido (équivalent narratif)", "definition": "Temps du récit écrit en français." }
+      ],
+      "exemple": { "fictif": true, "texte": "« La empresa, que lleva tres décadas en el sector, acaba de anunciar que abrirá una planta en Monterrey cuando obtenga los permisos » → « L'entreprise, présente dans le secteur depuis trois décennies, vient d'annoncer qu'elle ouvrira une usine à Monterrey quand elle aura obtenu les autorisations »." },
+      "confusions": [
+        { "a": "Pretérito indefinido", "b": "Passé simple systématique", "explication": "Dans la presse, le passé composé français est souvent plus naturel." }
+      ],
+      "verification": ["Comment traduire « Llevamos dos años negociando » ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "tve.metodo.diario-errores",
+      "titre": "Le journal d'erreurs",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["tra.pratique.methode"],
+      "question": "Comment progresser durablement en traduction à partir de ses propres erreurs ?",
+      "definition": "Le journal d'erreurs est un document personnel où l'on consigne, après chaque correction, les fautes commises : la phrase fautive, la correction, la règle ou le mot en cause, et la catégorie (grammaire, lexique, faux ami, orthographe, registre). Relu régulièrement, il fait apparaître ses erreurs récurrentes et permet de construire une check-list personnelle de relecture. Dans cette application, l'historique des erreurs aux QCM et les flashcards remplissent une fonction comparable ; le journal d'erreurs de traduction se tient à part, idéalement classé par catégorie.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Erreur", "Correction", "Règle / catégorie"], "lignes": [
+          ["12/10", "Cuando llegará la mercancía", "Cuando llegue la mercancía", "Subjonctif temporel (grammaire)"],
+          ["12/10", "Nos interesa sus productos", "Nos interesan sus productos", "Accord gustar (grammaire)"],
+          ["19/10", "un billón de euros (pour un milliard)", "mil millones de euros", "Faux ami (lexique)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Journal d'erreurs", "en": "error log", "es": "diario de errores", "definition": "Registre personnel des fautes commises." },
+        { "fr": "Check-list de relecture", "en": "proofreading checklist", "es": "lista de comprobación", "definition": "Points à vérifier avant de rendre une copie." }
+      ],
+      "exemple": { "fictif": true, "texte": "Après trois thèmes, une étudiante constate que la moitié de ses fautes concernent le subjonctif et ser / estar : elle ajoute ces deux points en tête de sa check-list de relecture et révise les fiches correspondantes." },
+      "confusions": [
+        { "a": "Noter l'erreur seule", "b": "Noter l'erreur, la correction et la règle", "explication": "Sans la règle, l'erreur se répète." }
+      ],
+      "verification": ["Quelles colonnes prévoir dans un journal d'erreurs ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.tve.metodo.001", "notion": "tve.metodo.tema", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Comment écrit-on « le lundi 3 octobre » en espagnol ?",
+      "choix": [
+        { "id": "a", "texte": "el lunes 3 de octubre", "correct": true, "explication": "Minuscules pour les jours et les mois." },
+        { "id": "b", "texte": "el Lunes 3 de Octubre", "correct": false, "explication": "Majuscules fautives." },
+        { "id": "c", "texte": "el lunes 3 octubre", "correct": false, "explication": "Il manque « de »." },
+        { "id": "d", "texte": "lunes el 3 de octubre", "correct": false, "explication": "Ordre incorrect." }
+      ]
+    },
+    {
+      "id": "q.tve.metodo.002", "notion": "tve.metodo.version", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Version : « Cuando se firme el acuerdo, bajarán los aranceles. »",
+      "choix": [
+        { "id": "a", "texte": "Quand l'accord sera signé, les droits de douane baisseront.", "correct": true, "explication": "Subjonctif temporel → futur ; aranceles = droits de douane." },
+        { "id": "b", "texte": "Quand on signe l'accord, les arancels baissent.", "correct": false, "explication": "Temps et lexique fautifs." },
+        { "id": "c", "texte": "Quand l'accord se signe, les tarifs baisseraient.", "correct": false, "explication": "Temps incohérents." },
+        { "id": "d", "texte": "Lorsque l'accord soit signé, les droits baisseront.", "correct": false, "explication": "Subjonctif impossible en français ici." }
+      ]
+    },
+    {
+      "id": "q.tve.metodo.003", "notion": "tve.metodo.diario-errores", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "enonce": "Vrai ou faux : un journal d'erreurs efficace associe chaque erreur à la règle correspondante.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "C'est ce qui permet de ne pas la reproduire." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "Sans la règle, l'outil perd son intérêt." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.tve.metodo.001", "notions": ["tve.metodo.tema", "tve.metodo.version", "tve.metodo.diario-errores"],
+      "question": "Décrivez la méthode du thème et de la version espagnols et l'usage du journal d'erreurs.",
+      "reponse": "Thème : lecture complète, repérage des difficultés, brouillon sans calque, contrôle ciblé (ser / estar, por / para, subjonctif et concordance, on, pronoms, a personal, gustar), orthographe (tildes, ¿ ¡, minuscules aux mois et nationalités), relecture de l'espagnol seul. Version : faux amis, temps (indefinido → passé simple ou composé selon le texte), subjonctif → futur, périphrases (llevar → depuis), se → on, restructuration des phrases. Journal d'erreurs : erreur, correction, règle, catégorie ; relecture régulière et check-list personnelle.",
+      "indispensables": ["Étapes du thème", "Pièges de la version", "Structure du journal d'erreurs"],
+      "erreurs": ["Majuscule aux mois en espagnol"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.tve.metodo.01", "notions": ["tve.metodo.tema", "tve.contrastes.subjuntivo", "tve.contrastes.gustar", "tve.contrastes.por-para"], "type": "traduction", "niveau": 2, "fictif": true,
+      "titre": "Thème : un courriel à un fournisseur",
+      "enonce": "Traduisez en espagnol : « Vos nouveaux modèles nous intéressent beaucoup. Pourriez-vous nous envoyer des échantillons pour que nous puissions vérifier leur qualité ? Quand nous les aurons reçus, nous vous passerons une première commande. Nous avons besoin de la marchandise pour le 15 mars. »",
+      "questions": [
+        { "id": "1", "consigne": "Votre traduction.",
+          "reponse": { "type": "libre", "criteres": ["« Nos interesan mucho sus nuevos modelos » (accord)", "« ¿Podrían / Podría enviarnos…? » (conditionnel, usted)", "« para que podamos comprobar » (subjonctif après para que)", "« Cuando los hayamos recibido / Cuando los recibamos » (subjonctif)", "« para el 15 de marzo » (échéance, minuscule)", "« les haremos un primer pedido »"],
+            "corrige": "Nos interesan mucho sus nuevos modelos. ¿Podrían enviarnos unas muestras para que podamos comprobar su calidad? Cuando las hayamos recibido, les haremos un primer pedido. Necesitamos la mercancía para el 15 de marzo." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    },
+    {
+      "id": "e.tve.metodo.02", "notions": ["tve.metodo.version", "tve.contrastes.perifrasis", "tve.lexico.falsos-amigos"], "type": "traduction", "niveau": 2, "fictif": true,
+      "titre": "Version : un article économique",
+      "enonce": "Traduisez en français : « La cooperativa aceitera, que lleva más de veinte años exportando a Francia, acaba de anunciar que las ventas subieron un 12 % el año pasado. Se espera que la demanda siga creciendo cuando bajen los precios del transporte. »",
+      "questions": [
+        { "id": "1", "consigne": "Votre traduction.",
+          "reponse": { "type": "libre", "criteres": ["« lleva más de veinte años exportando » → exporte depuis plus de vingt ans", "« acaba de anunciar » → vient d'annoncer", "« subieron un 12 % » → ont augmenté de 12 %", "« Se espera que » → on s'attend à ce que", "« cuando bajen » → quand (lorsque) les prix… baisseront", "« siga creciendo » → continue de croître / à augmenter"],
+            "corrige": "La coopérative oléicole, qui exporte vers la France depuis plus de vingt ans, vient d'annoncer que ses ventes ont augmenté de 12 % l'an dernier. On s'attend à ce que la demande continue de croître lorsque les prix du transport baisseront." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}
