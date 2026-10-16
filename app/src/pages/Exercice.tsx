@@ -97,7 +97,7 @@ function SousQ({ ex, sq, numero }: { ex: Ex; sq: SousQuestion; numero: number })
           </label>
           {fini?.juste === null && (
             <div class="bloc plat" style={{ marginTop: 12 }}>
-              <strong>Corrigé type</strong><p><Texte t={r.corrige} /></p>
+              <strong>Corrigé type</strong><p style={{ whiteSpace: 'pre-line' }}><Texte t={r.corrige} /></p>
               <strong>Autoévaluation : cochez les éléments présents dans votre réponse</strong>
               <div class="criteres">{r.criteres.map((c, i) => (
                 <label key={i}><input type="checkbox" checked={!!coches[i]} onChange={() => { const v = [...coches]; v[i] = !v[i]; setCoches(v); }} />{c}</label>

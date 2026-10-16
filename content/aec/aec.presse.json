@@ -1,0 +1,106 @@
+{
+  "chapitre": "aec.presse",
+  "notions": [
+    {
+      "id": "aec.presse.lecture",
+      "titre": "Lire un article économique en anglais",
+      "niveau": "F",
+      "prerequis": ["aec.lexique.economie"],
+      "connexes": ["aec.presse.synthese", "tra.pratique.titres-presse"],
+      "question": "Comment comprendre rapidement et précisément un article de la presse économique anglophone ?",
+      "definition": "La lecture efficace combine plusieurs passes : survol (skimming) du titre, du chapeau (standfirst), des intertitres et de la première phrase des paragraphes pour saisir le sujet ; repérage ciblé (scanning) des chiffres, noms, dates ; puis lecture détaillée pour comprendre l'argumentation (thèse, arguments, exemples, opinions citées). Il faut identifier la source (journal, date, ligne éditoriale), distinguer faits et opinions, repérer les marqueurs logiques (however, therefore, whereas, despite) et les citations d'experts, et noter le vocabulaire nouveau dans son contexte.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Identifier la source, la date, le type d'article (news, analysis, op-ed)",
+          "Skimming : titre, chapeau, intertitres, premières phrases",
+          "Scanning : chiffres, acteurs, lieux, dates",
+          "Lecture détaillée : idée principale de chaque paragraphe, liens logiques",
+          "Distinguer faits, opinions de l'auteur et opinions citées",
+          "Résumer l'article en trois phrases"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Lecture en survol", "en": "skimming", "es": "lectura rápida / de exploración", "definition": "Lecture rapide pour saisir l'idée générale." },
+        { "fr": "Lecture de repérage", "en": "scanning", "es": "lectura de búsqueda", "definition": "Recherche d'informations précises." },
+        { "fr": "Chapeau", "en": "standfirst / lead", "es": "entradilla", "definition": "Paragraphe d'introduction sous le titre." },
+        { "fr": "Tribune", "en": "op-ed / opinion piece", "es": "artículo de opinión / tribuna", "definition": "Article exprimant l'opinion d'un auteur." }
+      ],
+      "exemple": { "fictif": true, "texte": "Titre : « Car makers brace for tariff hit ». Survol : les constructeurs se préparent à l'impact de nouveaux droits de douane. Repérage : 25 % de droits, entrée en vigueur en mars, trois constructeurs cités. Lecture détaillée : l'auteur oppose les arguments des industriels (hausse des prix) à ceux du gouvernement (relocalisation)." },
+      "confusions": [
+        { "a": "Fait rapporté", "b": "Opinion de l'auteur", "explication": "Les verbes « claim », « argue », « warn » signalent une opinion attribuée." }
+      ],
+      "verification": ["Quelle différence entre skimming et scanning ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "aec.presse.synthese",
+      "titre": "La synthèse écrite en anglais",
+      "niveau": "A",
+      "prerequis": ["aec.presse.lecture", "red.argumentation.note-synthese"],
+      "connexes": ["aec.lexique.chiffres"],
+      "question": "Comment rédiger en anglais une synthèse de plusieurs documents ?",
+      "definition": "La synthèse en anglais (summary / synthesis) rend compte de manière objective et organisée des idées d'un ou plusieurs documents, avec ses propres mots, dans une longueur imposée. On commence par une phrase d'introduction qui situe les documents et le thème (« The documents deal with… »), on organise les idées par thèmes en confrontant les sources (« Both articles point out that… whereas… »), on reformule plutôt que de copier, on utilise des verbes rapportant précis (state, argue, claim, point out, warn, highlight), et on conclut brièvement sans avis personnel, sauf consigne contraire.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Fonction", "Formules"], "lignes": [
+          ["Introduire", "The three documents deal with / focus on…"],
+          ["Rapporter", "According to…, the author argues / points out / warns that…"],
+          ["Comparer", "Both documents agree that… / Unlike document 1, document 2…"],
+          ["Opposer", "However, … / whereas… / on the other hand…"],
+          ["Conclure", "All in all, the documents show that…"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Synthèse", "en": "synthesis / summary", "es": "síntesis", "definition": "Restitution organisée de plusieurs documents." },
+        { "fr": "Verbe introducteur", "en": "reporting verb", "es": "verbo introductorio", "definition": "Verbe rapportant les propos d'autrui." },
+        { "fr": "Reformuler", "en": "to rephrase / paraphrase", "es": "reformular", "definition": "Exprimer avec d'autres mots." }
+      ],
+      "exemple": { "fictif": true, "texte": "« The two articles deal with the rise of nearshoring in Europe. Both point out that companies are moving production closer to home to secure supply chains. However, while the first article highlights job creation in Eastern Europe, the second warns that higher labour costs may reduce competitiveness. »" },
+      "confusions": [
+        { "a": "Synthèse", "b": "Copie de phrases des documents", "explication": "La reformulation est exigée." }
+      ],
+      "verification": ["Citez quatre reporting verbs et leur nuance."],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.aec.presse.001", "notion": "aec.presse.lecture", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Repérer rapidement tous les chiffres d'un article s'appelle :",
+      "choix": [
+        { "id": "a", "texte": "Scanning", "correct": true, "explication": "Recherche ciblée." },
+        { "id": "b", "texte": "Skimming", "correct": false, "explication": "Survol pour l'idée générale." },
+        { "id": "c", "texte": "Summarising", "correct": false, "explication": "Résumer." },
+        { "id": "d", "texte": "Proofreading", "correct": false, "explication": "Relire pour corriger." }
+      ]
+    },
+    {
+      "id": "q.aec.presse.002", "notion": "aec.presse.lecture", "format": "unique", "niveau": 2, "competence": "interpreter",
+      "enonce": "« The minister claimed that the reform would create 50,000 jobs. » Quelle information donne le verbe « claimed » ?",
+      "choix": [
+        { "id": "a", "texte": "Il s'agit d'une affirmation du ministre, que le journaliste ne reprend pas à son compte", "correct": true, "explication": "Claim marque une distance." },
+        { "id": "b", "texte": "Le fait est prouvé", "correct": false, "explication": "Rien ne l'indique." },
+        { "id": "c", "texte": "Le ministre a réclamé des emplois", "correct": false, "explication": "Faux ami partiel." },
+        { "id": "d", "texte": "Le ministre a démenti", "correct": false, "explication": "Ce serait « denied »." }
+      ]
+    },
+    {
+      "id": "q.aec.presse.003", "notion": "aec.presse.synthese", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles pratiques conviennent à une synthèse en anglais ?",
+      "choix": [
+        { "id": "a", "texte": "Confronter les documents par thème", "correct": true, "explication": "Structure attendue." },
+        { "id": "b", "texte": "Reformuler avec ses propres mots", "correct": true, "explication": "Pas de copie." },
+        { "id": "c", "texte": "Ajouter son opinion personnelle dans chaque paragraphe", "correct": false, "explication": "Objectivité, sauf consigne." },
+        { "id": "d", "texte": "Utiliser des reporting verbs variés", "correct": true, "explication": "Argue, point out, warn…" }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.aec.presse.001", "notions": ["aec.presse.lecture", "aec.presse.synthese"],
+      "question": "Décrivez la méthode de lecture d'un article économique en anglais et celle de la synthèse écrite.",
+      "reponse": "Lecture : source et type d'article, skimming (titre, chapeau, intertitres, premières phrases), scanning (chiffres, acteurs, dates), lecture détaillée (idées, liens logiques), distinction faits / opinions (claim, argue, warn). Synthèse : introduction situant les documents, plan thématique confrontant les sources (both… whereas… unlike…), reformulation, reporting verbs, conclusion brève, sans avis sauf consigne, longueur respectée.",
+      "indispensables": ["Skimming / scanning", "Faits vs opinions", "Plan thématique", "Reformulation"],
+      "erreurs": ["Résumer les documents l'un après l'autre"]
+    }
+  ]
+}
