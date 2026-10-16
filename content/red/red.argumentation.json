@@ -1,0 +1,231 @@
+{
+  "chapitre": "red.argumentation",
+  "notions": [
+    {
+      "id": "red.argumentation.problematique",
+      "titre": "Construire une problématique",
+      "niveau": "F",
+      "prerequis": ["red.sources.recherche"],
+      "connexes": ["stg.rapport.problematique", "red.argumentation.plan"],
+      "question": "Comment transformer un sujet en question qui organise tout le devoir ?",
+      "definition": "La problématique est la question centrale, issue de l'analyse du sujet, à laquelle le devoir répond de façon argumentée. Elle fait apparaître une tension, un paradoxe ou un enjeu (et non une simple description). Pour la construire : définir les termes du sujet, délimiter le champ (lieu, période, acteurs), repérer les enjeux et les débats, puis formuler une question ouverte, précise et traitable dans les limites du travail.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Définir chaque terme du sujet",
+          "Délimiter le champ (géographique, temporel, sectoriel)",
+          "Identifier un paradoxe, un débat ou un enjeu",
+          "Formuler une question ouverte (« Dans quelle mesure… ? », « En quoi… ? », « Comment… ? »)",
+          "Vérifier qu'elle commande un plan démonstratif"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Problématique", "en": "research question / central question", "es": "problemática / pregunta de investigación", "definition": "Question centrale structurant un travail." },
+        { "fr": "Enjeu", "en": "issue / what is at stake", "es": "reto / lo que está en juego", "definition": "Ce qui peut être gagné ou perdu, l'importance du sujet." }
+      ],
+      "exemple": { "fictif": true, "texte": "Sujet : « Le Mercosur ». Problématique possible : « Dans quelle mesure le Mercosur, malgré ses crises, reste-t-il un levier d'intégration pour ses membres et un partenaire stratégique pour l'Union européenne ? »" },
+      "confusions": [
+        { "a": "Problématique", "b": "Reformulation du sujet sous forme de question", "explication": "« Qu'est-ce que le Mercosur ? » appelle une description, pas une démonstration." }
+      ],
+      "verification": ["Transformez le sujet « l'euro » en problématique."],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "red.argumentation.plan",
+      "titre": "Construire un plan",
+      "niveau": "F",
+      "prerequis": ["red.argumentation.problematique"],
+      "connexes": ["red.argumentation.paragraphe", "stg.rapport.structure"],
+      "question": "Comment organiser ses idées pour répondre à la problématique de façon convaincante ?",
+      "definition": "Le plan est l'architecture logique du devoir : deux ou trois parties, elles-mêmes divisées en sous-parties, qui répondent progressivement à la problématique. Chaque partie défend une idée directrice formulée par un titre argumentatif (une phrase ou un groupe nominal qui affirme quelque chose), et non une simple rubrique. Plans usuels : analytique (constat, causes, conséquences ou solutions), dialectique (thèse, antithèse, dépassement), thématique (aspects du sujet hiérarchisés). Des transitions relient les parties.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Type de plan", "Structure", "Adapté à"], "lignes": [
+          ["Analytique", "I. Constat II. Causes III. Solutions", "Analyse d'un problème, rapport"],
+          ["Dialectique", "I. Oui… II. Mais… III. Dépassement", "Question qui appelle un débat"],
+          ["Thématique", "I. Aspect économique II. Aspect juridique…", "Sujet descriptif, à hiérarchiser"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Plan", "en": "outline / structure", "es": "plan / estructura", "definition": "Organisation logique des parties d'un texte." },
+        { "fr": "Transition", "en": "transition", "es": "transición", "definition": "Phrase reliant deux parties." },
+        { "fr": "Titre argumentatif", "en": "argumentative heading", "es": "título argumentativo", "definition": "Titre qui énonce une idée." }
+      ],
+      "exemple": { "fictif": true, "texte": "Problématique : « L'affacturage est-il une solution adaptée au financement des PME exportatrices ? » I. Un outil qui accélère la trésorerie et sécurise les créances export. II. Mais un coût et une dépendance qui en limitent l'intérêt. III. Une solution pertinente à condition d'être ciblée et comparée aux alternatives." },
+      "confusions": [
+        { "a": "Titre rubrique (« Les avantages »)", "b": "Titre argumentatif (« Un outil qui accélère la trésorerie »)", "explication": "Le second fait progresser la démonstration." }
+      ],
+      "verification": ["Quelle différence entre un plan thématique et un plan dialectique ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "red.argumentation.paragraphe",
+      "titre": "Le paragraphe argumentatif",
+      "niveau": "F",
+      "prerequis": ["red.argumentation.plan"],
+      "connexes": ["red.attribution.citation-paraphrase"],
+      "question": "Comment rédiger un paragraphe qui convainc ?",
+      "definition": "Le paragraphe argumentatif développe une seule idée. Il suit souvent la structure AEI (ou PEEL en anglais : Point, Evidence, Explanation, Link) : une affirmation (idée directrice), un exemple ou une donnée sourcée, une explication qui relie l'exemple à l'idée, puis une phrase de conclusion ou de liaison. Les connecteurs logiques (car, donc, cependant, en effet, ainsi, en revanche) explicitent les relations entre les idées.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Affirmation : énoncer l'idée en une phrase",
+          "Exemple : fait, chiffre, citation, cas, avec sa source",
+          "Interprétation : montrer en quoi l'exemple prouve l'idée",
+          "Liaison : conclure ou annoncer l'idée suivante"
+        ] },
+        { "type": "tableau", "entetes": ["Relation", "Connecteurs"], "lignes": [
+          ["Cause", "car, en effet, puisque, du fait de"],
+          ["Conséquence", "donc, ainsi, par conséquent, c'est pourquoi"],
+          ["Opposition", "cependant, toutefois, en revanche, néanmoins"],
+          ["Addition", "de plus, en outre, par ailleurs"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Connecteur logique", "en": "linking word / connective", "es": "conector", "definition": "Mot qui exprime une relation logique." },
+        { "fr": "Argument", "en": "argument", "es": "argumento", "definition": "Raison avancée pour soutenir une idée." }
+      ],
+      "exemple": { "fictif": true, "texte": "« L'affacturage améliore immédiatement la trésorerie. En effet, le factor verse jusqu'à 90 % du montant des factures dès leur cession [source]. Une PME qui accorde 60 jours à ses clients étrangers transforme ainsi ses créances en liquidités, ce qui réduit son besoin de découvert. Ce gain de trésorerie a toutefois un coût, examiné ci-après. »" },
+      "confusions": [
+        { "a": "Exemple seul", "b": "Exemple interprété", "explication": "Un exemple non relié à l'idée ne prouve rien." }
+      ],
+      "verification": ["Quelles sont les quatre étapes d'un paragraphe argumentatif ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "red.argumentation.intro-conclusion",
+      "titre": "L'introduction et la conclusion",
+      "niveau": "F",
+      "prerequis": ["red.argumentation.plan"],
+      "connexes": ["stg.rapport.structure"],
+      "question": "Que doivent contenir l'introduction et la conclusion d'un devoir universitaire ?",
+      "definition": "L'introduction suit généralement cinq temps : une amorce (accroche liée au sujet : fait, chiffre, citation), la présentation et la définition des termes du sujet, la délimitation et les enjeux, la problématique, l'annonce du plan. La conclusion répond explicitement à la problématique en synthétisant les étapes de la démonstration, sans idée nouvelle, puis propose une ouverture (prolongement, question connexe, perspective). Il est conseillé de rédiger l'introduction au propre après avoir construit le plan, et de soigner particulièrement ces deux parties, lues en premier.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Introduction", "Conclusion"], "lignes": [
+          ["Amorce", "Bilan de la démonstration"],
+          ["Définitions et délimitation", "Réponse claire à la problématique"],
+          ["Enjeux", "Ouverture"],
+          ["Problématique", "—"],
+          ["Annonce du plan", "—"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Accroche", "en": "hook / opening", "es": "gancho / entrada", "definition": "Phrase d'ouverture qui capte l'attention." },
+        { "fr": "Annonce du plan", "en": "outline statement / roadmap", "es": "anuncio del plan", "definition": "Présentation des parties à venir." },
+        { "fr": "Ouverture", "en": "broader perspective", "es": "apertura", "definition": "Prolongement de la réflexion en fin de conclusion." }
+      ],
+      "exemple": { "fictif": true, "texte": "Amorce : « En 2025, les PME réalisent une part croissante des exportations françaises… » (chiffre sourcé). Définitions : export, PME, financement. Problématique. Annonce : « Nous verrons d'abord…, puis… »." },
+      "confusions": [
+        { "a": "Ouverture", "b": "Nouvel argument", "explication": "L'ouverture élargit ; elle n'ajoute pas une preuve oubliée." }
+      ],
+      "verification": ["Quels sont les cinq temps d'une introduction ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "red.argumentation.note-synthese",
+      "titre": "La note de synthèse",
+      "niveau": "A",
+      "prerequis": ["red.argumentation.plan", "red.attribution.citation-paraphrase"],
+      "connexes": ["stg.rapport.note-synthese", "aec.presse.synthese"],
+      "question": "Comment rendre compte objectivement d'un dossier de plusieurs documents en un texte court et organisé ?",
+      "definition": "La note de synthèse présente de façon objective, ordonnée et concise l'essentiel d'un dossier de documents, pour un destinataire qui doit décider ou s'informer. Elle confronte les documents (convergences, divergences) au lieu de les résumer un par un, suit un plan thématique, ne contient aucune opinion personnelle ni information extérieure au dossier, et cite les documents (Doc. 1, Doc. 2…). Sa longueur est imposée (par exemple deux pages). La note de synthèse d'un rapport de stage, elle, résume le propre travail de l'auteur (problématique et résultats).",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Lire le dossier ; identifier le thème et les idées de chaque document",
+          "Construire un tableau de confrontation (idées × documents)",
+          "Dégager une problématique et un plan thématique en deux ou trois parties",
+          "Rédiger : courte introduction (contexte, problématique, plan), développement confrontant les documents, conclusion brève",
+          "Citer les documents entre parenthèses ; respecter la longueur"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Note de synthèse", "en": "summary note / synthesis", "es": "nota de síntesis", "definition": "Texte objectif et ordonné rendant compte d'un dossier." },
+        { "fr": "Tableau de confrontation", "en": "comparison grid", "es": "cuadro comparativo", "definition": "Grille croisant idées et documents." }
+      ],
+      "exemple": { "fictif": true, "texte": "Dossier de cinq documents sur le travail à distance dans les équipes export. Plan : I. Des gains reconnus (productivité : Doc. 1, 3 ; recrutement international : Doc. 4). II. Des risques de cohésion et de communication (Doc. 2, 5), que les entreprises tentent de réduire par des règles communes (Doc. 3)." },
+      "confusions": [
+        { "a": "Synthèse (confrontation thématique)", "b": "Résumé successif des documents", "explication": "La synthèse croise les documents dans chaque partie." }
+      ],
+      "verification": ["Pourquoi une note de synthèse ne doit-elle contenir aucune opinion personnelle ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.red.argumentation.001", "notion": "red.argumentation.problematique", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Laquelle de ces questions est une véritable problématique ?",
+      "choix": [
+        { "id": "a", "texte": "« Dans quelle mesure la dépréciation de l'euro favorise-t-elle réellement les exportations françaises ? »", "correct": true, "explication": "Question ouverte, débat, démonstration attendue." },
+        { "id": "b", "texte": "« Qu'est-ce que l'euro ? »", "correct": false, "explication": "Appelle une définition." },
+        { "id": "c", "texte": "« Quand l'euro a-t-il été créé ? »", "correct": false, "explication": "Question fermée et factuelle." },
+        { "id": "d", "texte": "« L'euro »", "correct": false, "explication": "C'est un thème." }
+      ]
+    },
+    {
+      "id": "q.red.argumentation.002", "notion": "red.argumentation.plan", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "« I. Les avantages du crédit documentaire ; II. Ses inconvénients. » De quel type de titres s'agit-il ?",
+      "choix": [
+        { "id": "a", "texte": "Des titres rubriques, peu argumentatifs", "correct": true, "explication": "Ils annoncent une catégorie, pas une idée." },
+        { "id": "b", "texte": "Des titres argumentatifs", "correct": false, "explication": "Ils n'affirment rien." },
+        { "id": "c", "texte": "Une problématique", "correct": false, "explication": "Ce sont des titres." },
+        { "id": "d", "texte": "Une ouverture", "correct": false, "explication": "Sans rapport." }
+      ]
+    },
+    {
+      "id": "q.red.argumentation.003", "notion": "red.argumentation.paragraphe", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quel connecteur exprime une opposition ?",
+      "choix": [
+        { "id": "a", "texte": "Toutefois", "correct": true, "explication": "Opposition, concession." },
+        { "id": "b", "texte": "Par conséquent", "correct": false, "explication": "Conséquence." },
+        { "id": "c", "texte": "En effet", "correct": false, "explication": "Cause, justification." },
+        { "id": "d", "texte": "De plus", "correct": false, "explication": "Addition." }
+      ]
+    },
+    {
+      "id": "q.red.argumentation.004", "notion": "red.argumentation.intro-conclusion", "format": "multiple", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quels éléments doivent figurer dans une introduction ?",
+      "choix": [
+        { "id": "a", "texte": "La problématique", "correct": true, "explication": "Élément central." },
+        { "id": "b", "texte": "L'annonce du plan", "correct": true, "explication": "Elle guide le lecteur." },
+        { "id": "c", "texte": "La réponse détaillée à la problématique", "correct": false, "explication": "Elle vient dans le développement et la conclusion." },
+        { "id": "d", "texte": "La définition des termes du sujet", "correct": true, "explication": "Elle délimite le sujet." }
+      ]
+    },
+    {
+      "id": "q.red.argumentation.005", "notion": "red.argumentation.note-synthese", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles règles s'appliquent à la note de synthèse d'un dossier ?",
+      "choix": [
+        { "id": "a", "texte": "Confronter les documents dans un plan thématique", "correct": true, "explication": "Pas de résumé document par document." },
+        { "id": "b", "texte": "Ajouter ses connaissances personnelles pour enrichir", "correct": false, "explication": "Seul le dossier est exploité." },
+        { "id": "c", "texte": "Citer les documents (Doc. 1, Doc. 2…)", "correct": true, "explication": "Le lecteur doit savoir d'où vient chaque idée." },
+        { "id": "d", "texte": "Donner son avis en conclusion", "correct": false, "explication": "La note reste objective." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.red.argumentation.001", "notions": ["red.argumentation.problematique", "red.argumentation.plan", "red.argumentation.paragraphe", "red.argumentation.intro-conclusion"],
+      "question": "Décrivez la méthode de la dissertation ou du dossier argumentatif : problématique, plan, paragraphe, introduction, conclusion.",
+      "reponse": "Problématique : définir les termes, délimiter, repérer un enjeu ou paradoxe, formuler une question ouverte. Plan : deux ou trois parties à titres argumentatifs (analytique, dialectique, thématique), transitions. Paragraphe : affirmation, exemple sourcé, interprétation, liaison, avec connecteurs logiques. Introduction : amorce, définitions, délimitation et enjeux, problématique, annonce du plan. Conclusion : bilan, réponse, ouverture, sans nouvel argument.",
+      "indispensables": ["Problématique ouverte", "Titres argumentatifs", "Structure du paragraphe", "Composantes de l'introduction et de la conclusion"],
+      "erreurs": ["Reformuler le sujet en question fermée"]
+    },
+    {
+      "id": "f.red.argumentation.002", "notions": ["red.argumentation.note-synthese"],
+      "question": "Expliquez la méthode de la note de synthèse sur dossier.",
+      "reponse": "Lecture et repérage des idées, tableau de confrontation idées × documents, problématique et plan thématique, rédaction objective et concise (introduction, développement croisant les documents, conclusion brève), références aux documents, longueur respectée ; aucune opinion ni information extérieure.",
+      "indispensables": ["Tableau de confrontation", "Plan thématique", "Objectivité", "Citation des documents"],
+      "erreurs": ["Résumer les documents l'un après l'autre"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.red.argumentation.01", "notions": ["red.argumentation.problematique", "red.argumentation.plan"], "type": "redaction", "niveau": 2, "fictif": true,
+      "titre": "Du sujet au plan",
+      "enonce": "Sujet : « Le libre-échange entre l'Union européenne et l'Amérique latine ».",
+      "questions": [
+        { "id": "1", "consigne": "Proposez une problématique et un plan détaillé en deux ou trois parties à titres argumentatifs.",
+          "reponse": { "type": "libre", "criteres": ["Termes définis et sujet délimité", "Problématique ouverte faisant apparaître un débat", "Parties à titres argumentatifs", "Progression logique répondant à la problématique"],
+            "corrige": "Problématique : « Les accords de libre-échange entre l'Union européenne et l'Amérique latine profitent-ils de manière équilibrée aux deux régions ? » I. Des accords qui ouvrent des marchés et diversifient les partenariats (baisse des droits, accès aux marchés publics, sécurisation des investissements). II. Mais des gains inégalement répartis et contestés (agriculture européenne, normes environnementales, industrialisation latino-américaine). III. Vers des accords de « nouvelle génération » qui conditionnent l'ouverture à des engagements durables." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "chapitre": "red.sources",
+  "notions": [
+    {
+      "id": "red.sources.typologie",
+      "titre": "Types de sources et évaluation de leur fiabilité",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["red.sources.recherche", "red.attribution.normes", "ici.information.sources"],
+      "question": "Toutes les sources se valent-elles pour un devoir ou un rapport universitaire ?",
+      "definition": "On distingue les sources primaires (données brutes, textes officiels, statistiques, entretiens, documents d'entreprise), secondaires (analyses, manuels, articles scientifiques qui interprètent les sources primaires) et tertiaires (encyclopédies, synthèses de vulgarisation). Leur fiabilité s'évalue selon plusieurs critères : auteur et compétence, éditeur ou institution, date et mise à jour, objectif (informer, convaincre, vendre), méthode et sources citées, relecture par les pairs, cohérence avec d'autres sources. Le livret de stage d'Orléans rappelle que les sources d'un rapport ne peuvent pas se limiter à des sites Internet.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Type", "Exemples", "Usage"], "lignes": [
+          ["Primaire", "Règlement de l'UE, statistiques douanières, rapport annuel d'une société, entretien", "Données et preuves"],
+          ["Secondaire", "Article de revue scientifique, manuel universitaire, étude sectorielle", "Analyse, cadre théorique"],
+          ["Tertiaire", "Encyclopédie, dictionnaire, site de vulgarisation", "Première approche, à dépasser"],
+          ["Presse", "Quotidien économique, magazine spécialisé", "Actualité, exemples ; vérifier les chiffres à la source"]
+        ] },
+        { "type": "liste", "items": [
+          "Qui ? auteur, compétence, institution",
+          "Quand ? date de publication, actualité des données",
+          "Pourquoi ? objectif, éventuel conflit d'intérêts",
+          "Comment ? méthode, sources citées, relecture",
+          "Confirmé ? recoupement avec d'autres sources"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Source primaire", "en": "primary source", "es": "fuente primaria", "definition": "Document original ou donnée brute." },
+        { "fr": "Source secondaire", "en": "secondary source", "es": "fuente secundaria", "definition": "Document qui analyse ou interprète des sources primaires." },
+        { "fr": "Évaluation par les pairs", "en": "peer review", "es": "revisión por pares", "definition": "Relecture critique par des spécialistes avant publication." }
+      ],
+      "exemple": { "fictif": true, "texte": "Pour un dossier sur les exportations de vin vers la Chine, une étudiante utilise les statistiques des douanes françaises (primaire), un article de revue d'économie agricole (secondaire) et un article de presse pour l'actualité ; elle écarte un blog anonyme dont les chiffres ne sont pas sourcés." },
+      "confusions": [
+        { "a": "Source citée par un site", "b": "Source consultée", "explication": "On ne cite comme consultée que la source qu'on a réellement lue ; sinon on indique « cité par »." }
+      ],
+      "verification": ["Citez quatre critères pour évaluer la fiabilité d'une source."],
+      "sources": ["src.orleans-stage"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "red.sources.recherche",
+      "titre": "La recherche documentaire",
+      "niveau": "F",
+      "prerequis": ["red.sources.typologie"],
+      "connexes": ["red.argumentation.problematique", "ici.information.etude-marche"],
+      "question": "Comment trouver efficacement des sources pertinentes sur un sujet ?",
+      "definition": "La recherche documentaire est une démarche organisée : définir le sujet et ses mots-clés (en français, anglais, espagnol, avec synonymes), choisir les outils adaptés (catalogue de la bibliothèque universitaire, bases de données d'articles, portails de revues, sites institutionnels, statistiques officielles, moteurs spécialisés), combiner les mots-clés avec des opérateurs (ET, OU, SAUF ; guillemets pour une expression exacte), trier les résultats, noter immédiatement la référence complète de chaque source et organiser ses notes. La bibliographie d'un bon ouvrage récent permet de remonter vers d'autres sources (méthode « boule de neige »).",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Délimiter le sujet ; établir une liste de mots-clés multilingues",
+          "Commencer par des ouvrages de synthèse pour comprendre le domaine",
+          "Interroger le catalogue de la bibliothèque et les bases de données universitaires",
+          "Utiliser les opérateurs booléens et les filtres (date, type de document, langue)",
+          "Évaluer chaque source retenue",
+          "Noter la référence complète et la date de consultation dès la lecture"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Mot-clé", "en": "keyword", "es": "palabra clave", "definition": "Terme utilisé pour interroger un outil de recherche." },
+        { "fr": "Opérateur booléen", "en": "Boolean operator", "es": "operador booleano", "definition": "ET, OU, SAUF pour combiner des termes." },
+        { "fr": "Base de données bibliographique", "en": "bibliographic database", "es": "base de datos bibliográfica", "definition": "Outil recensant des articles et ouvrages." }
+      ],
+      "exemple": { "fictif": true, "texte": "Requête : (« affacturage » OU « factoring ») ET PME ET export, limitée aux articles de moins de dix ans ; puis exploration de la bibliographie de l'article le plus cité." },
+      "confusions": [
+        { "a": "Moteur de recherche généraliste", "b": "Base de données universitaire", "explication": "La seconde donne accès à des documents évalués et à des références complètes." }
+      ],
+      "verification": ["Pourquoi faut-il noter la référence complète d'une source dès sa lecture ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.red.sources.001", "notion": "red.sources.typologie", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Le texte du règlement (UE) n° 952/2013 établissant le code des douanes de l'Union est une source :",
+      "choix": [
+        { "id": "a", "texte": "Primaire", "correct": true, "explication": "Texte officiel original." },
+        { "id": "b", "texte": "Secondaire", "correct": false, "explication": "Une source secondaire commenterait ce texte." },
+        { "id": "c", "texte": "Tertiaire", "correct": false, "explication": "Ce n'est pas une synthèse encyclopédique." },
+        { "id": "d", "texte": "Non fiable", "correct": false, "explication": "C'est la source de référence." }
+      ]
+    },
+    {
+      "id": "q.red.sources.002", "notion": "red.sources.typologie", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quels indices doivent inciter à la prudence face à une source en ligne ?",
+      "choix": [
+        { "id": "a", "texte": "Absence d'auteur identifiable", "correct": true, "explication": "Impossible d'évaluer la compétence." },
+        { "id": "b", "texte": "Chiffres sans indication de source", "correct": true, "explication": "Impossible de vérifier." },
+        { "id": "c", "texte": "Publication par un organisme statistique officiel", "correct": false, "explication": "Indice de fiabilité." },
+        { "id": "d", "texte": "Objectif commercial (vendre un produit)", "correct": true, "explication": "Risque de partialité." }
+      ]
+    },
+    {
+      "id": "q.red.sources.003", "notion": "red.sources.recherche", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Quelle requête trouve des documents sur l'Incoterm FCA en français ou en anglais ?",
+      "choix": [
+        { "id": "a", "texte": "FCA ET (Incoterm OU Incoterms)", "correct": true, "explication": "Le OU élargit, le ET restreint." },
+        { "id": "b", "texte": "FCA SAUF Incoterm", "correct": false, "explication": "Exclut précisément les bons documents." },
+        { "id": "c", "texte": "FCA OU Incoterm OU douane OU transport", "correct": false, "explication": "Beaucoup trop large." },
+        { "id": "d", "texte": "« FCA Incoterm douane transport Orléans »", "correct": false, "explication": "Expression exacte trop restrictive." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.red.sources.001", "notions": ["red.sources.typologie", "red.sources.recherche"],
+      "question": "Comment distinguer et évaluer les sources, et comment mener une recherche documentaire ?",
+      "reponse": "Sources primaires (textes, données, documents originaux), secondaires (analyses, articles, manuels), tertiaires (encyclopédies). Critères : auteur, éditeur, date, objectif, méthode, sources citées, relecture, recoupement. Recherche : mots-clés multilingues, synthèses puis bases universitaires, opérateurs booléens et filtres, évaluation, notation immédiate des références ; pas uniquement Internet.",
+      "indispensables": ["Trois types de sources", "Critères d'évaluation", "Étapes de recherche", "Référence notée immédiatement"],
+      "erreurs": ["Citer une source non lue"]
+    }
+  ]
+}

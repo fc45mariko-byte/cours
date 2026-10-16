@@ -411,5 +411,29 @@
     "url": "https://www.law.cornell.edu/ucc/2",
     "acces": "reference",
     "pertinence": "Droit américain de la vente"
+  },
+  {
+    "id": "src.iso690",
+    "titre": "Norme ISO 690:2021 — Information et documentation : principes directeurs pour la rédaction des références bibliographiques et des citations des ressources d'information",
+    "auteur": "Organisation internationale de normalisation",
+    "url": "https://www.iso.org",
+    "acces": "reference",
+    "pertinence": "Norme bibliographique internationale"
+  },
+  {
+    "id": "src.apa7",
+    "titre": "Publication Manual of the American Psychological Association, 7e édition, 2020",
+    "auteur": "American Psychological Association",
+    "url": "https://apastyle.apa.org",
+    "acces": "reference",
+    "pertinence": "Style auteur-date APA"
+  },
+  {
+    "id": "src.code-pi",
+    "titre": "Code de la propriété intellectuelle, art. L122-4 (reproduction sans consentement) et L122-5 (exception de courte citation), L335-2 (contrefaçon)",
+    "auteur": "République française (Légifrance)",
+    "url": "https://www.legifrance.gouv.fr",
+    "acces": "reference",
+    "pertinence": "Droit de citation et plagiat"
   }
 ]
