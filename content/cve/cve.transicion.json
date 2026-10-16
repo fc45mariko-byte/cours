@@ -1,0 +1,174 @@
+{
+  "chapitre": "cve.transicion",
+  "notions": [
+    {
+      "id": "cve.transicion.reforma",
+      "titre": "La Ley para la Reforma Política (1976)",
+      "niveau": "F",
+      "prerequis": ["cve.franquismo.herencia"],
+      "connexes": ["cve.transicion.elecciones-1977"],
+      "question": "Comment la démocratie a-t-elle pu naître des institutions franquistes elles-mêmes ?",
+      "definition": "Nommé président du gouvernement par le roi Juan Carlos en juillet 1976, Adolfo Suárez, issu de l'appareil franquiste, engage une réforme « de la loi à la loi » : passer de la dictature à la démocratie en utilisant la légalité franquiste. La Ley para la Reforma Política prévoit des Cortes bicamérales élues au suffrage universel. Adoptée en novembre 1976 par les Cortes franquistes elles-mêmes (on a parlé de « harakiri » du franquisme), elle est approuvée par référendum le 15 décembre 1976 par environ 94 % des votants. Elle ouvre la voie aux premières élections libres.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Juillet 1976 : Suárez remplace Arias Navarro",
+          "Novembre 1976 : vote de la loi par les Cortes franquistes",
+          "15 décembre 1976 : référendum (≈ 94 % de oui)",
+          "1977 : légalisation des partis et élections"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Transition démocratique", "en": "transition to democracy", "es": "Transición democrática", "definition": "Passage de la dictature à la démocratie (1975-1978/1982)." },
+        { "fr": "Réforme pactée", "en": "negotiated reform", "es": "reforma pactada", "definition": "Changement de régime négocié, sans rupture violente." },
+        { "fr": "Référendum", "en": "referendum", "es": "referéndum", "definition": "Consultation directe des citoyens." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un discours télévisé de Suárez appelant à voter « sí » en décembre 1976 peut être commenté comme l'expression de la stratégie de « réforme » contre la « rupture » demandée par l'opposition." },
+      "confusions": [
+        { "a": "Réforme (depuis les institutions franquistes)", "b": "Rupture (exigée par l'opposition)", "explication": "La Transition est le fruit d'une réforme négociée, entre ces deux options." }
+      ],
+      "verification": ["Pourquoi parle-t-on de « harakiri » des Cortes franquistes ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cve.transicion.elecciones-1977",
+      "titre": "Les élections de 1977 et la légalisation du PCE",
+      "niveau": "F",
+      "prerequis": ["cve.transicion.reforma"],
+      "connexes": ["cve.transicion.moncloa", "cve.transicion.constitucion"],
+      "question": "Comment se déroulent les premières élections libres depuis 1936 ?",
+      "definition": "Pour que les élections soient crédibles, tous les partis doivent être autorisés. Suárez légalise le Parti communiste d'Espagne (PCE) de Santiago Carrillo le Samedi saint, 9 avril 1977, décision risquée face à l'armée. Les élections générales du 15 juin 1977, les premières libres depuis 1936, donnent la victoire à l'Union de centre démocratique (UCD) de Suárez, devant le Parti socialiste ouvrier espagnol (PSOE) de Felipe González ; le PCE et l'Alliance populaire (AP, droite issue du franquisme) obtiennent des scores plus modestes. Les nouvelles Cortes deviennent constituantes.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Parti (1977)", "Positionnement", "Chef"], "lignes": [
+          ["UCD", "Centre droit, réformistes", "Adolfo Suárez"],
+          ["PSOE", "Socialiste", "Felipe González"],
+          ["PCE", "Communiste (eurocommunisme)", "Santiago Carrillo"],
+          ["AP", "Droite conservatrice", "Manuel Fraga"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Légalisation", "en": "legalisation", "es": "legalización", "definition": "Autorisation légale d'un parti." },
+        { "fr": "Cortes constituantes", "en": "constituent Cortes", "es": "Cortes constituyentes", "definition": "Parlement chargé de rédiger la Constitution." },
+        { "fr": "Eurocommunisme", "en": "Eurocommunism", "es": "eurocomunismo", "definition": "Communisme acceptant la démocratie parlementaire." }
+      ],
+      "exemple": { "fictif": true, "texte": "La une d'un quotidien du 10 avril 1977 annonçant la légalisation du PCE se commente en évoquant la colère d'une partie de l'armée et le pari de Suárez." },
+      "confusions": [
+        { "a": "Élections de 1977 (UCD gagne)", "b": "Élections de 1982 (PSOE gagne)", "explication": "L'alternance socialiste arrive en 1982." }
+      ],
+      "verification": ["Pourquoi la légalisation du PCE était-elle nécessaire et risquée ?"],
+      "sources": ["src.julia", "src.congreso"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cve.transicion.moncloa",
+      "titre": "Les Pactes de la Moncloa (1977)",
+      "niveau": "F",
+      "prerequis": ["cve.transicion.elecciones-1977"],
+      "connexes": ["eec.economia.espana-historia"],
+      "question": "Comment les partis ont-ils affronté ensemble la crise économique pendant la Transition ?",
+      "definition": "En octobre 1977, face à une grave crise (inflation autour de 25 %, chômage croissant, déficit extérieur), le gouvernement Suárez et les principales forces politiques signent les Pactes de la Moncloa, du nom du palais présidentiel. Le volet économique prévoit la modération salariale (hausses de salaires indexées sur l'inflation prévue et non passée), une politique monétaire restrictive, une réforme fiscale et la modernisation du système financier, en contrepartie de mesures sociales. Un volet politique engage des réformes des libertés publiques. Les syndicats y adhèrent ensuite. Ces pactes symbolisent la culture du consensus de la Transition.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Contexte : inflation proche de 25 %, choc pétrolier, chômage",
+          "Modération salariale fondée sur l'inflation prévue",
+          "Réforme fiscale et contrôle de la masse monétaire",
+          "Contreparties sociales et volet politique (libertés)",
+          "Symbole du consenso de la Transition"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Pacte social", "en": "social pact", "es": "pacto social", "definition": "Accord entre gouvernement, partis et partenaires sociaux." },
+        { "fr": "Modération salariale", "en": "wage restraint", "es": "moderación salarial", "definition": "Limitation des hausses de salaires." },
+        { "fr": "Consensus", "en": "consensus", "es": "consenso", "definition": "Accord entre forces politiques opposées." }
+      ],
+      "exemple": { "fictif": true, "texte": "La photographie de la signature au palais de la Moncloa, réunissant Suárez, González, Carrillo et Fraga, illustre la culture du consensus." },
+      "confusions": [
+        { "a": "Pactes de la Moncloa (économie et libertés, 1977)", "b": "Constitution (1978)", "explication": "Les pactes précèdent la Constitution et créent un climat de consensus." }
+      ],
+      "verification": ["Quelle innovation les Pactes de la Moncloa apportent-ils en matière salariale ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cve.transicion.constitucion",
+      "titre": "La Constitution de 1978",
+      "niveau": "F",
+      "prerequis": ["cve.transicion.elecciones-1977"],
+      "connexes": ["cve.autonomias.estado", "cve.consolidacion.23f"],
+      "question": "Quels sont les principes de la Constitution espagnole de 1978 ?",
+      "definition": "Rédigée par une commission de sept députés (les « pères de la Constitution ») représentant les principales forces politiques, la Constitution est approuvée par les Cortes puis par référendum le 6 décembre 1978 (environ 88 % de oui) et promulguée le 27 décembre 1978. Elle définit l'Espagne comme un « État social et démocratique de droit » (art. 1), dont la forme politique est la monarchie parlementaire ; la souveraineté nationale réside dans le peuple espagnol. Elle garantit droits et libertés, consacre la séparation des pouvoirs (Cortes Generales : Congrès des députés et Sénat ; gouvernement ; pouvoir judiciaire ; Tribunal constitutionnel), l'aconfessionnalité de l'État, et reconnaît « l'unité indissoluble de la Nation espagnole » ainsi que le droit à l'autonomie des « nationalités et régions » (art. 2), organisé par le titre VIII.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Article / titre", "Contenu"], "lignes": [
+          ["Art. 1", "État social et démocratique de droit ; monarchie parlementaire"],
+          ["Art. 2", "Unité de la Nation ; droit à l'autonomie des nationalités et régions"],
+          ["Art. 3", "Castillan langue officielle ; autres langues co-officielles dans leurs communautés"],
+          ["Art. 16", "Liberté religieuse ; aucune confession n'a de caractère étatique"],
+          ["Titre VIII", "Organisation territoriale : communautés autonomes"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Monarchie parlementaire", "en": "parliamentary monarchy", "es": "monarquía parlamentaria", "definition": "Monarchie où le gouvernement est responsable devant le Parlement." },
+        { "fr": "État de droit", "en": "rule of law", "es": "Estado de derecho", "definition": "État soumis au droit." },
+        { "fr": "Nationalités", "en": "nationalities", "es": "nacionalidades", "definition": "Terme constitutionnel visant les communautés à identité historique forte." }
+      ],
+      "exemple": { "fictif": false, "texte": "L'article 1.3 dispose : « La forma política del Estado español es la Monarquía parlamentaria ».", "source": "src.constitucion-1978" },
+      "confusions": [
+        { "a": "Nationalités (art. 2)", "b": "Nations souveraines", "explication": "La Constitution affirme l'unité de la Nation espagnole tout en reconnaissant des nationalités." }
+      ],
+      "verification": ["Que dit l'article 2 de la Constitution de 1978 ?"],
+      "sources": ["src.constitucion-1978"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cve.transicion.001", "notion": "cve.transicion.reforma", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Qui est nommé président du gouvernement en juillet 1976 et conduit la réforme politique ?",
+      "choix": [
+        { "id": "a", "texte": "Adolfo Suárez", "correct": true, "explication": "Nommé par le roi." },
+        { "id": "b", "texte": "Felipe González", "correct": false, "explication": "Chef du PSOE, au pouvoir en 1982." },
+        { "id": "c", "texte": "Carrero Blanco", "correct": false, "explication": "Assassiné en 1973." },
+        { "id": "d", "texte": "José María Aznar", "correct": false, "explication": "Président en 1996." }
+      ]
+    },
+    {
+      "id": "q.cve.transicion.002", "notion": "cve.transicion.elecciones-1977", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quel parti remporte les élections du 15 juin 1977 ?",
+      "choix": [
+        { "id": "a", "texte": "L'UCD d'Adolfo Suárez", "correct": true, "explication": "Devant le PSOE." },
+        { "id": "b", "texte": "Le PSOE", "correct": false, "explication": "Deuxième." },
+        { "id": "c", "texte": "Le PCE", "correct": false, "explication": "Score modeste." },
+        { "id": "d", "texte": "Le PP", "correct": false, "explication": "Créé en 1989 (héritier d'AP)." }
+      ]
+    },
+    {
+      "id": "q.cve.transicion.003", "notion": "cve.transicion.moncloa", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quel est l'objectif économique principal des Pactes de la Moncloa ?",
+      "choix": [
+        { "id": "a", "texte": "Combattre l'inflation, notamment par la modération salariale", "correct": true, "explication": "Inflation proche de 25 %." },
+        { "id": "b", "texte": "Préparer l'entrée dans l'euro", "correct": false, "explication": "Anachronisme." },
+        { "id": "c", "texte": "Nationaliser les banques", "correct": false, "explication": "Non." },
+        { "id": "d", "texte": "Créer les communautés autonomes", "correct": false, "explication": "Constitution et statuts." }
+      ]
+    },
+    {
+      "id": "q.cve.transicion.004", "notion": "cve.transicion.constitucion", "format": "multiple", "niveau": 2, "competence": "memoriser",
+      "enonce": "Quelles affirmations sur la Constitution de 1978 sont exactes ?",
+      "choix": [
+        { "id": "a", "texte": "Elle fait de l'Espagne une monarchie parlementaire", "correct": true, "explication": "Art. 1.3." },
+        { "id": "b", "texte": "Elle a été approuvée par référendum le 6 décembre 1978", "correct": true, "explication": "Environ 88 % de oui." },
+        { "id": "c", "texte": "Elle instaure un État fédéral", "correct": false, "explication": "État des autonomies, non fédéral." },
+        { "id": "d", "texte": "Elle reconnaît le droit à l'autonomie des nationalités et régions", "correct": true, "explication": "Art. 2." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cve.transicion.001", "notions": ["cve.transicion.reforma", "cve.transicion.elecciones-1977", "cve.transicion.moncloa", "cve.transicion.constitucion"],
+      "question": "Racontez la Transition espagnole de 1975 à 1978.",
+      "reponse": "Mort de Franco (20 novembre 1975), Juan Carlos roi. Juillet 1976 : Suárez président. Ley para la Reforma Política votée par les Cortes franquistes (novembre 1976), approuvée par référendum le 15 décembre 1976 (≈ 94 %). Légalisation du PCE (9 avril 1977). Élections du 15 juin 1977 : UCD devant PSOE. Pactes de la Moncloa (octobre 1977) : lutte contre l'inflation, modération salariale, réformes. Constitution approuvée par référendum le 6 décembre 1978 : monarchie parlementaire, État social et démocratique de droit, autonomies (art. 2, titre VIII).",
+      "indispensables": ["Réforme de la loi à la loi", "Dates clés 1976-1978", "Contenu des pactes", "Principes de la Constitution"],
+      "erreurs": ["Attribuer la victoire de 1977 au PSOE"]
+    }
+  ]
+}

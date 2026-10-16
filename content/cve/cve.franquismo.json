@@ -1,0 +1,68 @@
+{
+  "chapitre": "cve.franquismo",
+  "notions": [
+    {
+      "id": "cve.franquismo.herencia",
+      "titre": "L'héritage franquiste",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["cve.transicion.reforma", "eec.economia.espana-historia"],
+      "question": "Quel héritage la dictature de Franco laisse-t-elle à l'Espagne en 1975 ?",
+      "definition": "Issue de la victoire du général Franco dans la guerre civile (1936-1939), la dictature franquiste dure jusqu'à sa mort, le 20 novembre 1975. Régime autoritaire, sans partis (seul le Movimiento Nacional est autorisé), sans élections libres, avec une répression des opposants et des identités régionales (catalane, basque), il s'appuie sur l'armée, l'Église (nacionalcatolicismo) et les élites traditionnelles. Après une période d'autarcie, le Plan de stabilisation de 1959 ouvre la voie au « desarrollismo » des années 1960 : industrialisation, tourisme de masse, exode rural, émergence d'une classe moyenne. En 1969, Franco désigne Juan Carlos de Borbón comme successeur à titre de roi ; l'assassinat de l'amiral Carrero Blanco par ETA (1973) prive le régime de son principal continuateur. En 1975, l'Espagne est une société modernisée économiquement mais dotée d'institutions autoritaires, ce qui pose la question de la transition.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
+          ["1936-1939", "Guerre civile, victoire de Franco"],
+          ["1939-1959", "Autarcie, répression, isolement puis rapprochement avec les États-Unis (1953)"],
+          ["1959", "Plan de estabilización"],
+          ["Années 1960", "Desarrollismo, tourisme, exode rural"],
+          ["1969", "Juan Carlos désigné successeur"],
+          ["1973", "Assassinat de Carrero Blanco"],
+          ["20 novembre 1975", "Mort de Franco ; Juan Carlos proclamé roi le 22 novembre"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Franquisme", "en": "Francoism", "es": "franquismo", "definition": "Régime dictatorial de Franco (1939-1975)." },
+        { "fr": "National-catholicisme", "en": "National Catholicism", "es": "nacionalcatolicismo", "definition": "Alliance du régime et de l'Église catholique." },
+        { "fr": "Développementalisme", "en": "developmentalism", "es": "desarrollismo", "definition": "Croissance économique des années 1960 sous le franquisme." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une photographie de touristes sur la Costa del Sol en 1965 peut servir à commenter le contraste entre l'ouverture économique et la fermeture politique du régime." },
+      "confusions": [
+        { "a": "Modernisation économique", "b": "Démocratisation", "explication": "Le franquisme tardif s'est modernisé économiquement sans libéralisation politique." }
+      ],
+      "verification": ["Pourquoi la désignation de Juan Carlos en 1969 est-elle importante pour la suite ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cve.franquismo.001", "notion": "cve.franquismo.herencia", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quand Franco est-il mort ?",
+      "choix": [
+        { "id": "a", "texte": "Le 20 novembre 1975", "correct": true, "explication": "Juan Carlos est proclamé roi deux jours plus tard." },
+        { "id": "b", "texte": "En 1939", "correct": false, "explication": "Fin de la guerre civile." },
+        { "id": "c", "texte": "En 1969", "correct": false, "explication": "Désignation de Juan Carlos." },
+        { "id": "d", "texte": "En 1978", "correct": false, "explication": "Constitution." }
+      ]
+    },
+    {
+      "id": "q.cve.franquismo.002", "notion": "cve.franquismo.herencia", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles caractéristiques décrivent l'Espagne de 1975 ?",
+      "choix": [
+        { "id": "a", "texte": "Une économie modernisée par le desarrollismo", "correct": true, "explication": "Industrie et tourisme." },
+        { "id": "b", "texte": "Des institutions autoritaires sans partis libres", "correct": true, "explication": "Seul le Movimiento est autorisé." },
+        { "id": "c", "texte": "Une démocratie parlementaire établie", "correct": false, "explication": "Elle reste à construire." },
+        { "id": "d", "texte": "Une identité catalane et basque réprimée", "correct": true, "explication": "Répression des langues et institutions régionales." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cve.franquismo.001", "notions": ["cve.franquismo.herencia"],
+      "question": "Quel est l'héritage du franquisme en 1975 ?",
+      "reponse": "Dictature issue de la guerre civile (1936-1939), parti unique (Movimiento), répression, nacionalcatolicismo, centralisme hostile aux identités régionales. Économie : autarcie puis Plan de stabilisation (1959), desarrollismo des années 1960, tourisme, exode rural, classe moyenne. Succession : Juan Carlos désigné en 1969 ; assassinat de Carrero Blanco (1973) ; mort de Franco le 20 novembre 1975. Société modernisée, institutions autoritaires : enjeu de la Transition.",
+      "indispensables": ["Nature du régime", "1959 et desarrollismo", "1969 et 1975"],
+      "erreurs": ["Confondre modernisation économique et démocratisation"]
+    }
+  ]
+}

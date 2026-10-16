@@ -479,5 +479,28 @@
     "auteur": "Kenneth O. Morgan",
     "acces": "reference",
     "pertinence": "Histoire politique et sociale du Royaume-Uni depuis 1945"
+  },
+  {
+    "id": "src.constitucion-1978",
+    "titre": "Constitución Española, 27 de diciembre de 1978 (BOE n.º 311, 29 de diciembre de 1978)",
+    "auteur": "Cortes Generales",
+    "url": "https://www.boe.es",
+    "acces": "reference",
+    "pertinence": "Texte constitutionnel espagnol"
+  },
+  {
+    "id": "src.congreso",
+    "titre": "Congreso de los Diputados — histoire des législatures et des élections",
+    "auteur": "Congreso de los Diputados",
+    "url": "https://www.congreso.es",
+    "acces": "reference",
+    "pertinence": "Institutions et élections espagnoles"
+  },
+  {
+    "id": "src.julia",
+    "titre": "Transición. Historia de una política española (1937-2017), Galaxia Gutenberg, 2017",
+    "auteur": "Santos Juliá",
+    "acces": "reference",
+    "pertinence": "Histoire de la Transition"
   }
 ]
