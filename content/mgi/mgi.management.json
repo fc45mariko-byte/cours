@@ -1,0 +1,149 @@
+{
+  "chapitre": "mgi.management",
+  "notions": [
+    {
+      "id": "mgi.management.pratiques",
+      "titre": "Culture et pratiques managériales",
+      "niveau": "F",
+      "prerequis": ["mgi.grilles.hofstede"],
+      "connexes": ["mgi.management.equipes", "mgi.grilles.comparer"],
+      "question": "Une même méthode de management fonctionne-t-elle partout ?",
+      "definition": "Les pratiques managériales (mode de décision, délégation, évaluation, feedback, motivation, organisation des réunions, rapport aux procédures) sont imprégnées de culture. Une décision participative peut être perçue comme une preuve d'ouverture dans un contexte de faible distance hiérarchique et comme un signe de faiblesse du chef ailleurs ; un feedback négatif direct peut motiver ou humilier selon les normes de communication. Le manager interculturel adapte ses pratiques, explicite ses attentes et construit des règles communes avec l'équipe.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Pratique", "Variation culturelle possible"], "lignes": [
+          ["Prise de décision", "Consensus long puis exécution rapide, ou décision rapide du chef puis ajustements"],
+          ["Feedback", "Critique directe et explicite, ou indirecte et en privé"],
+          ["Réunions", "Lieu de décision, ou de validation de décisions déjà prises en amont"],
+          ["Motivation", "Reconnaissance individuelle, ou réussite du groupe"],
+          ["Procédures", "Règles écrites détaillées, ou souplesse et improvisation"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Style de management", "en": "management style", "es": "estilo de dirección", "definition": "Manière habituelle d'exercer l'autorité et d'animer une équipe." },
+        { "fr": "Retour d'information (feedback)", "en": "feedback", "es": "retroalimentación", "definition": "Appréciation donnée sur un travail ou un comportement." },
+        { "fr": "Délégation", "en": "delegation", "es": "delegación", "definition": "Transfert d'une partie de l'autorité à un collaborateur." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un manager suédois nommé dans la filiale espagnole d'un groupe organise des réunions où chacun est invité à critiquer le projet. Les cadres espagnols, habitués à ce que la direction tranche, attendent une décision ; certains interprètent l'invitation comme un manque d'assurance. Le manager clarifie alors la règle : discussion ouverte, puis décision explicite de sa part." },
+      "confusions": [
+        { "a": "Adapter ses pratiques", "b": "Abandonner les règles de l'entreprise", "explication": "Les valeurs et objectifs communs restent ; ce sont les modalités qui s'adaptent." }
+      ],
+      "verification": ["Donnez deux exemples de pratiques managériales influencées par la culture."],
+      "sources": ["src.meyer", "src.chevrier"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "mgi.management.equipes",
+      "titre": "Équipes multiculturelles et à distance",
+      "niveau": "F",
+      "prerequis": ["mgi.management.pratiques"],
+      "connexes": ["gdp.organisation.raci", "mgi.grilles.hall"],
+      "question": "Comment faire travailler ensemble des personnes de cultures différentes, souvent dispersées dans plusieurs pays ?",
+      "definition": "Une équipe multiculturelle peut être plus créative et mieux connaître ses marchés, mais elle risque davantage de malentendus, de conflits et de lenteurs. À distance, les difficultés augmentent : décalages horaires, communication écrite appauvrie (perte du non-verbal), langue de travail commune maîtrisée inégalement, sentiment d'isolement. Les leviers : clarifier objectifs et rôles, fixer des règles explicites (langue, délais de réponse, outils, horaires de réunion), créer des moments de relation, reformuler, alterner les horaires pénalisants et valoriser la diversité des points de vue.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Charte d'équipe : langue de travail, outils, délais de réponse, prise de décision",
+          "Réunions : ordre du jour envoyé à l'avance, tour de parole, compte rendu écrit",
+          "Langue commune (souvent l'anglais) : phrases simples, vérifier la compréhension, éviter l'humour et les expressions idiomatiques",
+          "Relation : temps informel, rencontres physiques au lancement si possible",
+          "Rotation des horaires de réunion pour partager l'effort des fuseaux"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Équipe virtuelle", "en": "virtual / remote team", "es": "equipo virtual / remoto", "definition": "Équipe dont les membres travaillent à distance." },
+        { "fr": "Langue de travail", "en": "working language / lingua franca", "es": "lengua de trabajo / lengua franca", "definition": "Langue commune utilisée par l'équipe." },
+        { "fr": "Fuseau horaire", "en": "time zone", "es": "huso horario", "definition": "Zone ayant la même heure légale." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une équipe export répartie entre Orléans, Mexico et Shanghai fixe une réunion hebdomadaire dont l'horaire tourne chaque mois, rédige ses comptes rendus en anglais simple et s'impose de répondre aux messages sous 24 heures ouvrées." },
+      "confusions": [
+        { "a": "Diversité de l'équipe", "b": "Performance automatique", "explication": "La diversité devient un atout seulement si elle est managée ; sinon elle peut nuire à la performance." }
+      ],
+      "verification": ["Citez trois règles utiles pour une équipe multiculturelle travaillant à distance."],
+      "sources": ["src.meyer"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "mgi.management.expatriation",
+      "titre": "Expatriation et choc culturel",
+      "niveau": "A",
+      "prerequis": ["mgi.fondements.culture"],
+      "connexes": ["mgi.management.pratiques", "ici.presence.filiale"],
+      "question": "Pourquoi tant d'expatriations échouent-elles, et comment les préparer ?",
+      "definition": "L'expatriation consiste à envoyer un salarié travailler durablement dans une filiale ou un établissement à l'étranger. Le choc culturel, décrit notamment par l'anthropologue Kalervo Oberg (1960), est la désorientation éprouvée lorsque les repères habituels disparaissent. On le représente souvent par une courbe en U : enthousiasme (lune de miel), crise (frustration, anxiété), ajustement progressif, adaptation. Le retour peut provoquer un choc culturel inversé (courbe en W). La réussite dépend de la sélection, de la préparation (formation interculturelle, langue), de l'accompagnement de la famille, d'un mentor sur place et de la préparation du retour.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Lune de miel : découverte, enthousiasme",
+          "Crise : frustration, incompréhensions, repli",
+          "Ajustement : apprentissage des codes, relativisation",
+          "Adaptation : fonctionnement efficace dans les deux cultures",
+          "Retour : risque de choc culturel inversé"
+        ] },
+        { "type": "liste", "items": [
+          "Causes d'échec fréquentes : difficultés d'adaptation du conjoint et de la famille, mauvaise préparation, isolement, mission floue",
+          "Statuts possibles : expatrié (contrat du pays d'origine, avantages) ou détaché, contrat local"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Expatriation", "en": "expatriation / international assignment", "es": "expatriación", "definition": "Affectation durable d'un salarié à l'étranger." },
+        { "fr": "Choc culturel", "en": "culture shock", "es": "choque cultural", "definition": "Désorientation liée à la perte des repères culturels." },
+        { "fr": "Choc culturel inversé", "en": "reverse culture shock", "es": "choque cultural inverso", "definition": "Difficultés de réadaptation au retour." },
+        { "fr": "Impatrié", "en": "inpatriate", "es": "impatriado", "definition": "Salarié étranger affecté au siège de l'entreprise." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un responsable logistique part trois ans à São Paulo. Les deux premiers mois, tout l'enchante ; au quatrième, la lenteur administrative et la difficulté à se faire comprendre le découragent. Grâce à des cours de portugais et à un mentor brésilien, il s'adapte. À son retour en France, il se sent sous-employé : l'entreprise n'avait pas préparé son poste." },
+      "confusions": [
+        { "a": "Choc culturel (phase normale du processus)", "b": "Échec de l'expatriation", "explication": "La crise est attendue ; c'est l'absence d'accompagnement qui conduit à l'échec." }
+      ],
+      "verification": ["Décrivez les phases de la courbe en U et proposez deux mesures pour faciliter l'adaptation."],
+      "sources": ["src.oberg"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.mgi.management.001", "notion": "mgi.management.pratiques", "format": "unique", "niveau": 2, "competence": "analyser-cas",
+      "enonce": "Un manager habitué au feedback très direct critique publiquement le travail d'un collaborateur issu d'une culture où l'on préserve la face. Quel risque principal ?",
+      "choix": [
+        { "id": "a", "texte": "Humilier le collaborateur et dégrader la relation", "correct": true, "explication": "Une critique publique peut être vécue comme une perte de face." },
+        { "id": "b", "texte": "Aucun : un bon feedback est universel", "correct": false, "explication": "Les normes de feedback varient selon les cultures." },
+        { "id": "c", "texte": "Améliorer automatiquement la performance", "correct": false, "explication": "L'effet dépend de la manière dont le message est reçu." },
+        { "id": "d", "texte": "Renforcer la distance hiérarchique", "correct": false, "explication": "Le problème principal n'est pas la hiérarchie." }
+      ]
+    },
+    {
+      "id": "q.mgi.management.002", "notion": "mgi.management.equipes", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles pratiques facilitent le travail d'une équipe multiculturelle à distance ?",
+      "choix": [
+        { "id": "a", "texte": "Fixer une langue de travail et vérifier la compréhension par la reformulation", "correct": true, "explication": "Réduit les malentendus." },
+        { "id": "b", "texte": "Faire alterner les horaires de réunion entre fuseaux", "correct": true, "explication": "Partage équitable de l'effort." },
+        { "id": "c", "texte": "Utiliser beaucoup d'expressions idiomatiques pour détendre l'atmosphère", "correct": false, "explication": "Elles sont souvent incomprises par les non-natifs." },
+        { "id": "d", "texte": "Rédiger des comptes rendus écrits des décisions", "correct": true, "explication": "Trace commune, utile en langue étrangère." }
+      ]
+    },
+    {
+      "id": "q.mgi.management.003", "notion": "mgi.management.expatriation", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Dans la courbe en U du choc culturel, quelle phase suit la « lune de miel » ?",
+      "choix": [
+        { "id": "a", "texte": "La crise (frustration, désorientation)", "correct": true, "explication": "Après l'enthousiasme initial viennent les difficultés." },
+        { "id": "b", "texte": "L'adaptation", "correct": false, "explication": "Elle vient en dernier." },
+        { "id": "c", "texte": "Le choc culturel inversé", "correct": false, "explication": "Il intervient au retour." },
+        { "id": "d", "texte": "L'ajustement", "correct": false, "explication": "Il suit la crise." }
+      ]
+    },
+    {
+      "id": "q.mgi.management.004", "notion": "mgi.management.expatriation", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : les difficultés d'adaptation de la famille de l'expatrié sont une cause fréquente d'échec de l'expatriation.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "D'où l'importance d'accompagner conjoint et enfants." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "C'est au contraire une cause souvent citée." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.mgi.management.001", "notions": ["mgi.management.pratiques", "mgi.management.equipes", "mgi.management.expatriation"],
+      "question": "Comment la culture influence-t-elle le management, et comment manager une équipe multiculturelle et préparer une expatriation ?",
+      "reponse": "La culture influence décision, feedback, réunions, motivation, rapport aux procédures : le manager adapte les modalités et explicite les règles. Équipe multiculturelle et à distance : charte (langue, outils, délais), réunions préparées et comptes rendus, langue simple, temps relationnel, rotation des horaires. Expatriation : choc culturel (lune de miel, crise, ajustement, adaptation ; choc inversé au retour, Oberg) ; préparation par la sélection, la formation, l'accompagnement de la famille, un mentor et la préparation du retour.",
+      "indispensables": ["Exemples de pratiques culturellement marquées", "Règles explicites pour l'équipe", "Phases du choc culturel", "Préparation et retour"],
+      "erreurs": ["Considérer qu'un style de management est universel"]
+    }
+  ]
+}

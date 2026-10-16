@@ -266,5 +266,54 @@
     "url": "https://scrumguides.org",
     "acces": "reference",
     "pertinence": "Rôles, événements et artefacts de Scrum"
+  },
+  {
+    "id": "src.hofstede",
+    "titre": "Cultures and Organizations: Software of the Mind, 3e éd., McGraw-Hill, 2010 (avec G. J. Hofstede et M. Minkov) ; Culture's Consequences, Sage, 1980 (2e éd. 2001)",
+    "auteur": "Geert Hofstede",
+    "acces": "reference",
+    "pertinence": "Dimensions culturelles nationales"
+  },
+  {
+    "id": "src.mcsweeney",
+    "titre": "« Hofstede's model of national cultural differences and their consequences: A triumph of faith — a failure of analysis », Human Relations, vol. 55, n° 1, 2002",
+    "auteur": "Brendan McSweeney",
+    "acces": "reference",
+    "pertinence": "Critique méthodologique de Hofstede"
+  },
+  {
+    "id": "src.hall",
+    "titre": "The Silent Language (1959) ; The Hidden Dimension (1966) ; Beyond Culture (1976), Doubleday",
+    "auteur": "Edward T. Hall",
+    "acces": "reference",
+    "pertinence": "Contexte, temps, espace"
+  },
+  {
+    "id": "src.trompenaars",
+    "titre": "Riding the Waves of Culture: Understanding Diversity in Global Business, 1993 (avec C. Hampden-Turner, éd. révisées 1997 et suivantes)",
+    "auteur": "Fons Trompenaars, Charles Hampden-Turner",
+    "acces": "reference",
+    "pertinence": "Sept dilemmes culturels"
+  },
+  {
+    "id": "src.fisher-ury",
+    "titre": "Getting to Yes: Negotiating Agreement Without Giving In, 1981 (trad. fr. « Comment réussir une négociation »)",
+    "auteur": "Roger Fisher, William Ury",
+    "acces": "reference",
+    "pertinence": "Négociation raisonnée, BATNA"
+  },
+  {
+    "id": "src.oberg",
+    "titre": "« Cultural Shock: Adjustment to New Cultural Environments », Practical Anthropology, vol. 7, 1960",
+    "auteur": "Kalervo Oberg",
+    "acces": "reference",
+    "pertinence": "Choc culturel"
+  },
+  {
+    "id": "src.meyer",
+    "titre": "The Culture Map: Breaking Through the Invisible Boundaries of Global Business, PublicAffairs, 2014",
+    "auteur": "Erin Meyer",
+    "acces": "reference",
+    "pertinence": "Échelles culturelles appliquées au management"
   }
 ]
