@@ -1,0 +1,176 @@
+{
+  "chapitre": "cvb.new-labour",
+  "notions": [
+    {
+      "id": "cvb.new-labour.major",
+      "titre": "Le gouvernement Major (1990-1997)",
+      "niveau": "F",
+      "prerequis": ["cvb.thatcher.poll-tax"],
+      "connexes": ["cvb.new-labour.third-way", "cvb.consensus.europe"],
+      "question": "Comment John Major a-t-il gouverné après Thatcher, et pourquoi a-t-il perdu en 1997 ?",
+      "definition": "John Major succède à Thatcher en novembre 1990. Il remplace la poll tax par la council tax, participe à la guerre du Golfe (1991) et remporte de justesse les élections de 1992. Le 16 septembre 1992 (« Black Wednesday »), la livre sterling, attaquée par la spéculation, doit quitter le mécanisme de change européen : la crédibilité économique des conservateurs s'effondre, même si la croissance revient ensuite. Le parti se déchire sur le traité de Maastricht (ratifié en 1993, avec des exemptions pour le Royaume-Uni sur la monnaie unique et le chapitre social), et le gouvernement est affaibli par des affaires (« sleaze »). Major poursuit les privatisations (charbon, chemins de fer) et engage le processus de paix en Irlande du Nord (Downing Street Declaration, 1993). Les travaillistes de Tony Blair l'emportent largement le 1er mai 1997.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
+          ["Novembre 1990", "Major Premier ministre"],
+          ["Avril 1992", "Victoire électorale des conservateurs"],
+          ["16 septembre 1992", "Black Wednesday : sortie du mécanisme de change européen"],
+          ["1993", "Ratification de Maastricht ; Downing Street Declaration ; council tax"],
+          ["1994-1997", "Privatisation des chemins de fer"],
+          ["1er mai 1997", "Victoire écrasante du New Labour"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Mercredi noir", "en": "Black Wednesday", "es": "Miércoles Negro", "definition": "16 septembre 1992 : sortie forcée de la livre du mécanisme de change européen." },
+        { "fr": "Exemption (clause de non-participation)", "en": "opt-out", "es": "cláusula de exención (opt-out)", "definition": "Dispense de participer à une politique européenne." },
+        { "fr": "Affaires, corruption", "en": "sleaze", "es": "escándalos / corrupción", "definition": "Scandales touchant des responsables politiques." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un graphique du cours de la livre en septembre 1992 permet de commenter Black Wednesday et la perte de crédibilité économique des conservateurs." },
+      "confusions": [
+        { "a": "Sortie du mécanisme de change (1992)", "b": "Sortie de l'UE (2020)", "explication": "Deux événements très différents." }
+      ],
+      "verification": ["Pourquoi Black Wednesday a-t-il affaibli les conservateurs ?"],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.new-labour.third-way",
+      "titre": "Le New Labour et la Third Way",
+      "niveau": "F",
+      "prerequis": ["cvb.new-labour.major"],
+      "connexes": ["cvb.new-labour.devolution", "cvb.thatcher.monetarisme"],
+      "question": "En quoi le New Labour de Tony Blair rompt-il avec le travaillisme traditionnel ?",
+      "definition": "Devenu chef du Labour en 1994, Tony Blair modernise le parti : réécriture de la clause IV en 1995 (abandon de l'objectif de propriété collective des moyens de production), image « New Labour », distance prise avec les syndicats. La « Third Way » (troisième voie), théorisée notamment par le sociologue Anthony Giddens, cherche à dépasser l'opposition entre socialisme d'État et néolibéralisme : accepter l'économie de marché et l'héritage thatchérien (pas de renationalisation), tout en investissant dans l'éducation, la santé et l'insertion (welfare to work). Après la victoire de 1997, le gouvernement accorde l'indépendance à la Banque d'Angleterre pour la politique monétaire (1997), crée un salaire minimum national (1998), adopte le Human Rights Act (1998) et engage la dévolution. Le bilan est terni par la guerre d'Irak (2003). Gordon Brown lui succède en 2007.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Mesure"], "lignes": [
+          ["1995", "Réécriture de la clause IV"],
+          ["Mai 1997", "Victoire ; indépendance de la Banque d'Angleterre"],
+          ["1998", "National Minimum Wage Act ; Human Rights Act ; accord du Vendredi saint"],
+          ["1999", "Parlement écossais et Assemblée galloise"],
+          ["2003", "Guerre d'Irak"],
+          ["2007", "Gordon Brown Premier ministre"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Troisième voie", "en": "Third Way", "es": "Tercera Vía", "definition": "Synthèse entre économie de marché et justice sociale." },
+        { "fr": "Salaire minimum", "en": "national minimum wage", "es": "salario mínimo nacional", "definition": "Rémunération horaire minimale légale." },
+        { "fr": "Du chômage à l'emploi", "en": "welfare to work", "es": "del subsidio al empleo", "definition": "Politique d'incitation au retour à l'emploi." }
+      ],
+      "exemple": { "fictif": true, "texte": "Le slogan « Tough on crime, tough on the causes of crime » se commente comme un exemple de la synthèse New Labour entre fermeté et action sociale." },
+      "confusions": [
+        { "a": "New Labour (marché + investissement social)", "b": "Old Labour (nationalisations, syndicats)", "explication": "Blair revendique la rupture avec l'ancienne doctrine." }
+      ],
+      "verification": ["Citez trois réformes emblématiques du gouvernement Blair en 1997-1998."],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.new-labour.devolution",
+      "titre": "La dévolution",
+      "niveau": "F",
+      "prerequis": ["cvb.new-labour.third-way"],
+      "connexes": ["cvb.new-labour.good-friday", "cvb.institutions.parlement"],
+      "question": "Comment le Royaume-Uni a-t-il transféré des pouvoirs à l'Écosse, au pays de Galles et à l'Irlande du Nord ?",
+      "definition": "La dévolution est le transfert de compétences du Parlement de Westminster à des institutions élues dans les nations constitutives, sans fédéralisme : Westminster reste souverain. Après les référendums de septembre 1997 (large « oui » en Écosse, « oui » de justesse au pays de Galles), le Scotland Act 1998 crée le Parlement écossais (Holyrood) doté de pouvoirs législatifs étendus (santé, éducation, justice) et de pouvoirs fiscaux ; le Government of Wales Act 1998 crée une Assemblée galloise, d'abord aux compétences limitées, élargies depuis (Senedd). Le Northern Ireland Act 1998 met en place une Assemblée de partage du pouvoir issue de l'accord du Vendredi saint. La dévolution soulève la « West Lothian question » (les députés écossais votent à Westminster sur des lois ne concernant que l'Angleterre) et n'a pas éteint le nationalisme écossais (référendum d'indépendance de 2014 : 55 % de « non »).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Nation", "Institution", "Création"], "lignes": [
+          ["Écosse", "Scottish Parliament (Holyrood)", "Scotland Act 1998, élu en 1999"],
+          ["Pays de Galles", "Assemblée, devenue Senedd", "Government of Wales Act 1998"],
+          ["Irlande du Nord", "Northern Ireland Assembly (partage du pouvoir)", "Northern Ireland Act 1998"],
+          ["Angleterre", "Pas de parlement propre (Westminster)", "—"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Dévolution", "en": "devolution", "es": "devolución (de competencias)", "definition": "Transfert de compétences à des institutions régionales." },
+        { "fr": "Question du West Lothian", "en": "West Lothian question", "es": "cuestión de West Lothian", "definition": "Vote des députés non anglais sur des sujets anglais." },
+        { "fr": "Référendum d'indépendance", "en": "independence referendum", "es": "referéndum de independencia", "definition": "Consultation sur la sécession." }
+      ],
+      "exemple": { "fictif": true, "texte": "La gratuité des frais universitaires pour les étudiants écossais en Écosse, différente du système anglais, illustre la capacité du Parlement écossais à mener ses propres politiques." },
+      "confusions": [
+        { "a": "Dévolution (Westminster reste souverain)", "b": "Fédéralisme (souveraineté partagée garantie)", "explication": "Le Royaume-Uni reste un État unitaire." }
+      ],
+      "verification": ["Qu'est-ce que la « West Lothian question » ?"],
+      "sources": ["src.morgan-britain", "src.uk-parliament"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.new-labour.good-friday",
+      "titre": "L'accord du Vendredi saint (1998)",
+      "niveau": "F",
+      "prerequis": ["cvb.new-labour.devolution"],
+      "connexes": ["dcl.juridictions.brexit"],
+      "question": "Comment l'accord du Vendredi saint a-t-il mis fin aux « Troubles » en Irlande du Nord ?",
+      "definition": "Le conflit nord-irlandais (« the Troubles », fin des années 1960 - 1998) oppose principalement républicains / nationalistes, majoritairement catholiques et favorables à l'unification avec l'Irlande, et unionistes / loyalistes, majoritairement protestants et attachés au Royaume-Uni ; il fait plus de 3 500 morts. L'accord du Vendredi saint (Good Friday Agreement, ou accord de Belfast), signé le 10 avril 1998 par les gouvernements britannique et irlandais et la plupart des partis nord-irlandais, est approuvé par référendum au Nord et en République d'Irlande le 22 mai 1998. Il prévoit : le principe du consentement (l'Irlande du Nord reste britannique tant qu'une majorité le souhaite), une Assemblée et un exécutif de partage du pouvoir entre communautés, des institutions de coopération Nord-Sud et Est-Ouest, la modification des articles 2 et 3 de la Constitution irlandaise, le désarmement des groupes paramilitaires et la libération anticipée de prisonniers. La question de la frontière irlandaise a été au cœur des négociations du Brexit.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Principe du consentement de la majorité de la population",
+          "Partage du pouvoir (power-sharing) entre unionistes et nationalistes",
+          "Institutions Nord-Sud et Conseil britannico-irlandais",
+          "Désarmement (decommissioning) et libération de prisonniers",
+          "Approbation par double référendum le 22 mai 1998"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Partage du pouvoir", "en": "power-sharing", "es": "reparto del poder", "definition": "Gouvernement associant les deux communautés." },
+        { "fr": "Unioniste", "en": "unionist", "es": "unionista", "definition": "Favorable au maintien dans le Royaume-Uni." },
+        { "fr": "Républicain / nationaliste", "en": "republican / nationalist", "es": "republicano / nacionalista", "definition": "Favorable à une Irlande unifiée." },
+        { "fr": "Désarmement", "en": "decommissioning", "es": "desarme / decomiso de armas", "definition": "Mise hors d'usage des armes des groupes armés." }
+      ],
+      "exemple": { "fictif": false, "texte": "L'accord a été signé le 10 avril 1998 et approuvé par référendum en Irlande du Nord et en République d'Irlande le 22 mai 1998.", "source": "src.belfast-agreement" },
+      "confusions": [
+        { "a": "Irlande du Nord (Royaume-Uni)", "b": "République d'Irlande (État indépendant, membre de l'UE)", "explication": "D'où l'enjeu de la frontière après le Brexit." }
+      ],
+      "verification": ["Quels sont les grands principes de l'accord du Vendredi saint ?"],
+      "sources": ["src.belfast-agreement", "src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cvb.new-labour.001", "notion": "cvb.new-labour.major", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Que s'est-il passé le 16 septembre 1992 (« Black Wednesday ») ?",
+      "choix": [
+        { "id": "a", "texte": "La livre a dû quitter le mécanisme de change européen", "correct": true, "explication": "Attaque spéculative contre la livre." },
+        { "id": "b", "texte": "Le Royaume-Uni a adopté l'euro", "correct": false, "explication": "Jamais." },
+        { "id": "c", "texte": "Thatcher a démissionné", "correct": false, "explication": "Novembre 1990." },
+        { "id": "d", "texte": "Le NHS a été créé", "correct": false, "explication": "1948." }
+      ]
+    },
+    {
+      "id": "q.cvb.new-labour.002", "notion": "cvb.new-labour.third-way", "format": "multiple", "niveau": 2, "competence": "memoriser",
+      "enonce": "Quelles mesures relèvent du gouvernement Blair ?",
+      "choix": [
+        { "id": "a", "texte": "Indépendance de la Banque d'Angleterre (1997)", "correct": true, "explication": "Décision prise dès mai 1997." },
+        { "id": "b", "texte": "Salaire minimum national (1998)", "correct": true, "explication": "National Minimum Wage Act." },
+        { "id": "c", "texte": "Renationalisation des chemins de fer", "correct": false, "explication": "Blair n'a pas renationalisé." },
+        { "id": "d", "texte": "Création du Parlement écossais", "correct": true, "explication": "Scotland Act 1998, élu en 1999." }
+      ]
+    },
+    {
+      "id": "q.cvb.new-labour.003", "notion": "cvb.new-labour.devolution", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : la dévolution a transformé le Royaume-Uni en État fédéral.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "Westminster reste souverain : le Royaume-Uni reste un État unitaire." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "Les compétences dévolues peuvent juridiquement être reprises par Westminster." }
+      ]
+    },
+    {
+      "id": "q.cvb.new-labour.004", "notion": "cvb.new-labour.good-friday", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quel principe de l'accord du Vendredi saint garantit que le statut de l'Irlande du Nord ne changera qu'avec l'accord de la majorité de sa population ?",
+      "choix": [
+        { "id": "a", "texte": "Le principe du consentement", "correct": true, "explication": "Clé de voûte de l'accord." },
+        { "id": "b", "texte": "La dévolution", "correct": false, "explication": "Transfert de compétences." },
+        { "id": "c", "texte": "Le désarmement", "correct": false, "explication": "Volet sécuritaire." },
+        { "id": "d", "texte": "La souveraineté parlementaire", "correct": false, "explication": "Principe général britannique." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cvb.new-labour.001", "notions": ["cvb.new-labour.major", "cvb.new-labour.third-way", "cvb.new-labour.devolution", "cvb.new-labour.good-friday"],
+      "question": "Retracez la période 1990-2007 : Major, New Labour, dévolution, accord du Vendredi saint.",
+      "reponse": "Major (1990-1997) : council tax, victoire de 1992, Black Wednesday (16 septembre 1992), divisions sur Maastricht, sleaze, privatisation du rail, Downing Street Declaration (1993). New Labour : clause IV réécrite (1995), Third Way (Giddens), victoire du 1er mai 1997, indépendance de la Banque d'Angleterre, salaire minimum et Human Rights Act (1998), Irak (2003), Brown (2007). Dévolution : référendums de 1997, Parlement écossais et Assemblée galloise (1999), État unitaire, West Lothian question, référendum écossais de 2014 (55 % non). Vendredi saint (10 avril 1998, référendums du 22 mai) : consentement, partage du pouvoir, institutions Nord-Sud, désarmement.",
+      "indispensables": ["Black Wednesday", "Réformes de 1997-1998", "Dévolution ≠ fédéralisme", "Principes de l'accord de 1998"],
+      "erreurs": ["Confondre Irlande du Nord et République d'Irlande"]
+    }
+  ]
+}

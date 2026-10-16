@@ -449,5 +449,35 @@
     "auteur": "Hélène Chuquet, Michel Paillard",
     "acces": "reference",
     "pertinence": "Contrastes anglais-français"
+  },
+  {
+    "id": "src.beveridge",
+    "titre": "Social Insurance and Allied Services (Cmd. 6404), 1942, dit « rapport Beveridge »",
+    "auteur": "William Beveridge",
+    "acces": "reference",
+    "pertinence": "Fondement du Welfare State britannique"
+  },
+  {
+    "id": "src.uk-parliament",
+    "titre": "Site officiel du Parlement britannique (fonctionnement des chambres, élections, histoire)",
+    "auteur": "UK Parliament",
+    "url": "https://www.parliament.uk",
+    "acces": "reference",
+    "pertinence": "Institutions britanniques"
+  },
+  {
+    "id": "src.belfast-agreement",
+    "titre": "The Belfast Agreement (Good Friday Agreement), 10 avril 1998",
+    "auteur": "Gouvernements britannique et irlandais, partis nord-irlandais",
+    "url": "https://www.gov.uk",
+    "acces": "reference",
+    "pertinence": "Processus de paix en Irlande du Nord"
+  },
+  {
+    "id": "src.morgan-britain",
+    "titre": "Britain since 1945: The People's Peace, Oxford University Press, 3e éd. 2001",
+    "auteur": "Kenneth O. Morgan",
+    "acces": "reference",
+    "pertinence": "Histoire politique et sociale du Royaume-Uni depuis 1945"
   }
 ]

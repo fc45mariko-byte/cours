@@ -1,0 +1,86 @@
+{
+  "chapitre": "cvb.methode",
+  "notions": [
+    {
+      "id": "cvb.methode.commentaire",
+      "titre": "Le commentaire de document de civilisation",
+      "niveau": "F",
+      "prerequis": ["red.argumentation.problematique"],
+      "connexes": ["cve.metodo.comentario", "cva.methode.analyse-publicite"],
+      "question": "Comment commenter un document historique ou politique (discours, article, affiche) en civilisation britannique ?",
+      "definition": "Le commentaire de document de civilisation (souvent rédigé en anglais) consiste à présenter, expliquer et interpréter un document en le replaçant dans son contexte historique, sans le paraphraser. Il comprend : une introduction présentant le document (nature, auteur, date, source, destinataire, contexte), sa problématique et son plan ; un développement thématique (pas linéaire) qui explique les idées du document en mobilisant des connaissances précises (dates, lois, acteurs) et en citant brièvement le texte ; une analyse de la portée et des limites (point de vue de l'auteur, intentions, ce qu'il omet) ; une conclusion qui répond à la problématique et ouvre sur la suite historique.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Identifier : nature (speech, editorial, poster, cartoon, statistics), auteur, date, source, public",
+          "Contextualiser : situation politique, économique, sociale au moment du document",
+          "Dégager les idées principales et les procédés (rhétorique, images, chiffres)",
+          "Formuler une problématique sur l'intérêt historique du document",
+          "Construire un plan thématique en deux ou trois parties",
+          "Rédiger : citations courtes, connaissances précises, regard critique, conclusion avec ouverture"
+        ] },
+        { "type": "tableau", "entetes": ["Fonction", "Expressions utiles (anglais)"], "lignes": [
+          ["Présenter", "This document is an extract from a speech delivered by… on…"],
+          ["Contextualiser", "At the time, Britain was facing…"],
+          ["Citer", "As the author puts it, « … » (l. 12)"],
+          ["Critiquer", "However, the author fails to mention… / This view should be qualified…"],
+          ["Conclure", "This document thus sheds light on… In the following years, …"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Commentaire de document", "en": "document analysis / commentary", "es": "comentario de documento", "definition": "Analyse critique et contextualisée d'un document." },
+        { "fr": "Paraphrase", "en": "paraphrase", "es": "paráfrasis", "definition": "Répétition du texte avec d'autres mots, à éviter." },
+        { "fr": "Portée", "en": "significance / impact", "es": "alcance", "definition": "Importance historique du document." }
+      ],
+      "exemple": { "fictif": true, "texte": "Document : extrait d'un discours de Margaret Thatcher au congrès conservateur de 1980. Problématique : en quoi ce discours affirme-t-il la rupture du thatchérisme avec le consensus d'après-guerre ? I. Une rupture économique assumée (monétarisme, refus du « U-turn ») ; II. Une vision politique et morale (responsabilité individuelle, rôle de l'État) ; III. Un discours de combat dans un contexte de récession (chômage, contestation)." },
+      "confusions": [
+        { "a": "Commentaire (analyse et contexte)", "b": "Résumé ou paraphrase", "explication": "Le correcteur attend des connaissances extérieures et un regard critique." }
+      ],
+      "verification": ["Quels éléments doit contenir la présentation d'un document ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cvb.methode.001", "notion": "cvb.methode.commentaire", "format": "multiple", "niveau": 1, "competence": "comprendre",
+      "enonce": "Quelles pratiques sont attendues dans un commentaire de document de civilisation ?",
+      "choix": [
+        { "id": "a", "texte": "Replacer le document dans son contexte historique", "correct": true, "explication": "Indispensable." },
+        { "id": "b", "texte": "Paraphraser le texte ligne à ligne", "correct": false, "explication": "À éviter." },
+        { "id": "c", "texte": "Analyser le point de vue et les intentions de l'auteur", "correct": true, "explication": "Regard critique." },
+        { "id": "d", "texte": "Mobiliser des connaissances précises (dates, lois, acteurs)", "correct": true, "explication": "Elles éclairent le document." }
+      ]
+    },
+    {
+      "id": "q.cvb.methode.002", "notion": "cvb.methode.commentaire", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quel plan convient le mieux à un commentaire ?",
+      "choix": [
+        { "id": "a", "texte": "Un plan thématique répondant à une problématique", "correct": true, "explication": "Il organise l'analyse." },
+        { "id": "b", "texte": "Un plan linéaire suivant l'ordre des paragraphes", "correct": false, "explication": "Il conduit à la paraphrase." },
+        { "id": "c", "texte": "Une biographie de l'auteur", "correct": false, "explication": "Hors sujet." },
+        { "id": "d", "texte": "Une liste d'opinions personnelles", "correct": false, "explication": "Manque d'analyse." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cvb.methode.001", "notions": ["cvb.methode.commentaire"],
+      "question": "Décrivez la méthode du commentaire de document de civilisation.",
+      "reponse": "Identifier (nature, auteur, date, source, public) ; contextualiser ; dégager idées et procédés ; problématique sur l'intérêt historique ; plan thématique en deux ou trois parties ; rédaction avec citations courtes, connaissances précises, analyse du point de vue et des omissions ; conclusion répondant à la problématique et ouvrant sur la suite. Éviter la paraphrase et le plan linéaire.",
+      "indispensables": ["Présentation du document", "Contexte", "Problématique et plan thématique", "Regard critique"],
+      "erreurs": ["Paraphraser"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.cvb.methode.01", "notions": ["cvb.methode.commentaire", "cvb.welfare.beveridge", "cvb.welfare.attlee"], "type": "analyse", "niveau": 2, "fictif": true,
+      "titre": "Préparer le commentaire d'un tract travailliste de 1945",
+      "enonce": "Document (fictif, inspiré des programmes de l'époque) : tract travailliste de juin 1945 promettant « jobs for all », « a national health service » et « homes for the people », et rappelant que « the Beveridge Report must be carried out in full ».",
+      "questions": [
+        { "id": "1", "consigne": "Rédigez l'introduction du commentaire (présentation, contexte, problématique, annonce du plan).",
+          "reponse": { "type": "libre", "criteres": ["Nature, émetteur, date, destinataires (électeurs de 1945)", "Contexte : fin de la guerre en Europe, élections de juillet 1945, rapport Beveridge (1942)", "Problématique sur les attentes de l'après-guerre et le projet travailliste", "Plan annoncé en deux ou trois parties"],
+            "corrige": "This document is an electoral leaflet issued by the Labour Party in June 1945, a few weeks before the general election of July 1945 and shortly after the end of the war in Europe. Addressed to voters who had endured six years of war, it promises full employment, a national health service and new housing, explicitly referring to the Beveridge Report of 1942, which had identified five « giants » to be defeated. How does this leaflet reflect the hopes of post-war Britain and announce the foundations of the Welfare State? We will first examine the social expectations it expresses, then the programme it puts forward, and finally its significance in the light of the Attlee governments' achievements (1945-1951)." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}

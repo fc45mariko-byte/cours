@@ -1,0 +1,179 @@
+{
+  "chapitre": "cvb.consensus",
+  "notions": [
+    {
+      "id": "cvb.consensus.butskellism",
+      "titre": "Le consensus d'après-guerre (« Butskellism »)",
+      "niveau": "F",
+      "prerequis": ["cvb.welfare.attlee"],
+      "connexes": ["cvb.consensus.declin", "cvb.thatcher.monetarisme"],
+      "question": "Pourquoi parle-t-on d'un « consensus » entre conservateurs et travaillistes de 1945 aux années 1970 ?",
+      "definition": "De retour au pouvoir en 1951, les conservateurs (Churchill, Eden, Macmillan) conservent l'essentiel de l'héritage travailliste. Les deux grands partis partagent alors, malgré leurs différences, un socle commun : maintien du Welfare State et du NHS, économie mixte, objectif de plein emploi par une politique keynésienne de gestion de la demande, rôle reconnu aux syndicats dans les négociations (corporatisme). Le terme « Butskellism », forgé en 1954 par l'hebdomadaire The Economist, fusionne les noms de Rab Butler (chancelier de l'Échiquier conservateur) et de Hugh Gaitskell (son prédécesseur travailliste), pour souligner la continuité de leurs politiques économiques. L'existence et l'ampleur de ce consensus sont discutées par les historiens.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Welfare State et NHS préservés",
+          "Économie mixte : les nationalisations sont en grande partie maintenues (sauf acier et transport routier)",
+          "Keynésianisme : plein emploi, gestion de la demande",
+          "Concertation avec les syndicats",
+          "Décolonisation progressive et relation spéciale avec les États-Unis"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Consensus d'après-guerre", "en": "post-war consensus", "es": "consenso de posguerra", "definition": "Accord tacite des grands partis sur les fondamentaux économiques et sociaux." },
+        { "fr": "Keynésianisme", "en": "Keynesianism", "es": "keynesianismo", "definition": "Politique de soutien de la demande pour le plein emploi." },
+        { "fr": "Chancelier de l'Échiquier", "en": "Chancellor of the Exchequer", "es": "Ministro de Hacienda británico", "definition": "Ministre des Finances britannique." }
+      ],
+      "exemple": { "fictif": true, "texte": "Dans un discours de 1957, un Premier ministre conservateur affirmant que les Britanniques « n'ont jamais connu une telle prospérité » illustre la confiance de l'époque du consensus dans la croissance et le plein emploi." },
+      "confusions": [
+        { "a": "Butskellism (Butler + Gaitskell)", "b": "Thatchérisme (rupture avec le consensus)", "explication": "Le thatchérisme se définit justement contre ce consensus." }
+      ],
+      "verification": ["D'où vient le terme « Butskellism » ?"],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.consensus.declin",
+      "titre": "Déclin relatif et « stop-go »",
+      "niveau": "A",
+      "prerequis": ["cvb.consensus.butskellism"],
+      "connexes": ["cvb.consensus.crise-1970", "eco.change.taux-change"],
+      "question": "Pourquoi le Royaume-Uni est-il décrit comme un pays en déclin dans les années 1960 et 1970 ?",
+      "definition": "Malgré une croissance réelle, le Royaume-Uni connaît après 1945 un déclin relatif : sa croissance et sa productivité sont inférieures à celles de l'Allemagne de l'Ouest, de la France ou du Japon, sa part du commerce mondial recule et l'Empire se défait. La politique économique alterne des phases de relance (go) et de freinage (stop) : la relance entraîne inflation et déficit de la balance des paiements, qui fragilisent la livre sterling et imposent un freinage (hausse des taux, restrictions de crédit). La livre est dévaluée en 1949 puis en 1967 (gouvernement Wilson). Les causes avancées : sous-investissement, relations sociales conflictuelles, retard technologique, poids des dépenses militaires et du rôle de la livre comme monnaie de réserve. L'expression « sick man of Europe » (l'homme malade de l'Europe) s'impose dans les années 1970.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Go : relance de la demande (baisse d'impôts, crédit)",
+          "Hausse des importations, inflation, déficit extérieur",
+          "Pression sur la livre sterling",
+          "Stop : freinage (hausse des taux, restrictions)",
+          "Ralentissement, chômage, puis nouvelle relance"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Déclin relatif", "en": "relative decline", "es": "declive relativo", "definition": "Recul par rapport aux autres pays, malgré une croissance absolue." },
+        { "fr": "Dévaluation", "en": "devaluation", "es": "devaluación", "definition": "Baisse officielle de la valeur d'une monnaie." },
+        { "fr": "Balance des paiements", "en": "balance of payments", "es": "balanza de pagos", "definition": "Compte des échanges avec l'étranger." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un graphique comparant les taux de croissance britannique, allemand et français de 1950 à 1973 permet d'illustrer le déclin relatif : le Royaume-Uni progresse, mais moins vite." },
+      "confusions": [
+        { "a": "Déclin relatif", "b": "Appauvrissement absolu", "explication": "Le niveau de vie britannique augmente, mais moins vite que celui de ses voisins." }
+      ],
+      "verification": ["Expliquez le mécanisme du « stop-go »."],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.consensus.europe",
+      "titre": "Le Royaume-Uni et l'Europe (1973, 1975)",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["cvb.new-labour.major", "dcl.juridictions.brexit"],
+      "question": "Pourquoi le Royaume-Uni est-il entré tardivement dans la Communauté européenne ?",
+      "definition": "Le Royaume-Uni refuse de participer à la CECA (1951) et à la CEE (1957), privilégiant le Commonwealth, la relation spéciale avec les États-Unis et sa souveraineté ; il fonde en 1960 l'Association européenne de libre-échange (AELE). Constatant le dynamisme de la CEE, il pose sa candidature en 1961 (Macmillan) puis en 1967 (Wilson), deux fois rejetée par le veto du général de Gaulle (1963 et 1967). Il adhère finalement le 1er janvier 1973, sous le gouvernement conservateur d'Edward Heath, avec l'Irlande et le Danemark. Les travaillistes, divisés, organisent en juin 1975 un référendum sur le maintien dans la Communauté : le « oui » l'emporte avec environ 67 % des voix. La relation restera ambivalente (rabais obtenu par Thatcher en 1984, opt-outs de Maastricht, référendum de 2016 et sortie en 2020).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
+          ["1951 / 1957", "Refus de la CECA et de la CEE"],
+          ["1960", "Création de l'AELE"],
+          ["1963 / 1967", "Vetos du général de Gaulle"],
+          ["1er janvier 1973", "Adhésion (Heath)"],
+          ["Juin 1975", "Référendum : environ 67 % pour le maintien (Wilson)"],
+          ["1984", "Rabais britannique obtenu par Thatcher (Fontainebleau)"],
+          ["2016 / 2020", "Référendum sur le Brexit / sortie effective"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Adhésion", "en": "accession / membership", "es": "adhesión", "definition": "Entrée dans une organisation." },
+        { "fr": "Eurosceptique", "en": "Eurosceptic", "es": "euroescéptico", "definition": "Hostile ou réservé envers l'intégration européenne." },
+        { "fr": "Relation spéciale", "en": "special relationship", "es": "relación especial", "definition": "Lien privilégié entre le Royaume-Uni et les États-Unis." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un tract de la campagne de 1975 appelant à voter « Yes » au nom de l'emploi et de la paix peut être comparé aux arguments de 2016 pour mesurer l'évolution du débat européen." },
+      "confusions": [
+        { "a": "Référendum de 1975 (maintien, oui)", "b": "Référendum de 2016 (sortie, Leave)", "explication": "Deux consultations aux résultats opposés." }
+      ],
+      "verification": ["Pourquoi les candidatures de 1961 et 1967 ont-elles échoué ?"],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.consensus.crise-1970",
+      "titre": "La crise des années 1970 et le Winter of Discontent",
+      "niveau": "F",
+      "prerequis": ["cvb.consensus.declin"],
+      "connexes": ["cvb.thatcher.monetarisme", "cvb.thatcher.syndicats"],
+      "question": "Comment la crise des années 1970 a-t-elle préparé l'arrivée de Margaret Thatcher ?",
+      "definition": "Les années 1970 voient la fin du consensus. Le gouvernement Heath (1970-1974) affronte les grèves des mineurs (1972, 1974), le premier choc pétrolier (1973) et impose la semaine de trois jours (début 1974) pour économiser l'énergie ; il perd les élections de février 1974 après avoir posé la question « Who governs Britain? ». Les travaillistes (Wilson puis Callaghan) affrontent la stagflation (inflation supérieure à 20 % en 1975, chômage croissant) et doivent solliciter en 1976 un prêt du FMI, assorti de coupes budgétaires. Leur politique des revenus échoue durant l'hiver 1978-1979, le « Winter of Discontent » (l'hiver du mécontentement) : grèves massives dans le secteur public (éboueurs, transports, hôpitaux). Le gouvernement Callaghan tombe sur une motion de censure en mars 1979 ; les conservateurs de Margaret Thatcher gagnent les élections de mai 1979.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
+          ["1972, 1974", "Grèves des mineurs"],
+          ["1973-1974", "Choc pétrolier ; semaine de trois jours"],
+          ["Février 1974", "Défaite de Heath (« Who governs Britain? »)"],
+          ["1976", "Prêt du FMI (Callaghan, Healey)"],
+          ["1978-1979", "Winter of Discontent"],
+          ["Mai 1979", "Victoire de Margaret Thatcher"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Stagflation", "en": "stagflation", "es": "estanflación", "definition": "Inflation combinée à la stagnation et au chômage." },
+        { "fr": "Hiver du mécontentement", "en": "Winter of Discontent", "es": "invierno del descontento", "definition": "Vague de grèves de l'hiver 1978-1979." },
+        { "fr": "Motion de censure", "en": "vote of no confidence", "es": "moción de censura", "definition": "Vote renversant le gouvernement." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une affiche conservatrice de 1978 montrant une file d'attente devant une agence pour l'emploi, avec le slogan « Labour isn't working », s'analyse comme un document de la campagne qui mène Thatcher au pouvoir." },
+      "confusions": [
+        { "a": "Winter of Discontent (1978-1979, Callaghan)", "b": "Grève des mineurs (1984-1985, Thatcher)", "explication": "Deux conflits sociaux majeurs distincts." }
+      ],
+      "verification": ["Pourquoi l'hiver 1978-1979 a-t-il discrédité les travaillistes ?"],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cvb.consensus.001", "notion": "cvb.consensus.butskellism", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Le terme « Butskellism » combine les noms de :",
+      "choix": [
+        { "id": "a", "texte": "Rab Butler et Hugh Gaitskell", "correct": true, "explication": "Chanceliers conservateur et travailliste." },
+        { "id": "b", "texte": "Butler et Churchill", "correct": false, "explication": "Non." },
+        { "id": "c", "texte": "Beveridge et Attlee", "correct": false, "explication": "Non." },
+        { "id": "d", "texte": "Bevan et Keynes", "correct": false, "explication": "Non." }
+      ]
+    },
+    {
+      "id": "q.cvb.consensus.002", "notion": "cvb.consensus.declin", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Dans le cycle « stop-go », qu'est-ce qui déclenche généralement la phase « stop » ?",
+      "choix": [
+        { "id": "a", "texte": "L'inflation et le déficit extérieur qui fragilisent la livre", "correct": true, "explication": "Le gouvernement freine pour défendre la monnaie." },
+        { "id": "b", "texte": "Un excédent commercial record", "correct": false, "explication": "Inverse." },
+        { "id": "c", "texte": "La baisse des prix", "correct": false, "explication": "Inverse." },
+        { "id": "d", "texte": "L'adhésion à la CEE", "correct": false, "explication": "Sans rapport direct." }
+      ]
+    },
+    {
+      "id": "q.cvb.consensus.003", "notion": "cvb.consensus.europe", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quand le Royaume-Uni est-il entré dans la CEE ?",
+      "choix": [
+        { "id": "a", "texte": "Le 1er janvier 1973", "correct": true, "explication": "Sous Edward Heath." },
+        { "id": "b", "texte": "En 1957", "correct": false, "explication": "Il refuse le traité de Rome." },
+        { "id": "c", "texte": "En 1975", "correct": false, "explication": "Année du référendum sur le maintien." },
+        { "id": "d", "texte": "En 1963", "correct": false, "explication": "Année du premier veto gaulliste." }
+      ]
+    },
+    {
+      "id": "q.cvb.consensus.004", "notion": "cvb.consensus.crise-1970", "format": "multiple", "niveau": 2, "competence": "memoriser",
+      "enonce": "Quels événements appartiennent à la crise britannique des années 1970 ?",
+      "choix": [
+        { "id": "a", "texte": "La semaine de trois jours (1974)", "correct": true, "explication": "Sous Heath." },
+        { "id": "b", "texte": "Le prêt du FMI (1976)", "correct": true, "explication": "Sous Callaghan." },
+        { "id": "c", "texte": "Le Winter of Discontent (1978-1979)", "correct": true, "explication": "Grèves du secteur public." },
+        { "id": "d", "texte": "Le Big Bang de la City", "correct": false, "explication": "1986." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cvb.consensus.001", "notions": ["cvb.consensus.butskellism", "cvb.consensus.declin", "cvb.consensus.europe", "cvb.consensus.crise-1970"],
+      "question": "Retracez l'évolution britannique de 1951 à 1979 : consensus, déclin, Europe, crise.",
+      "reponse": "Consensus (Butskellism, 1954 : Butler + Gaitskell) : Welfare State, économie mixte, keynésianisme, plein emploi, concertation syndicale. Déclin relatif : croissance plus faible que les voisins, stop-go, dévaluations de 1949 et 1967, « sick man of Europe ». Europe : refus de la CEE (1957), AELE (1960), vetos de De Gaulle (1963, 1967), adhésion le 1er janvier 1973 (Heath), référendum de 1975 (≈ 67 % oui). Crise : grèves des mineurs, choc pétrolier, semaine de trois jours (1974), FMI (1976), Winter of Discontent (1978-1979), victoire de Thatcher (mai 1979).",
+      "indispensables": ["Définition du consensus", "Stop-go", "1973 et 1975", "Winter of Discontent et 1979"],
+      "erreurs": ["Dater l'adhésion en 1975"]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "chapitre": "cvb.welfare",
+  "notions": [
+    {
+      "id": "cvb.welfare.beveridge",
+      "titre": "Le rapport Beveridge (1942)",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["cvb.welfare.attlee", "cvb.consensus.butskellism"],
+      "question": "Pourquoi un rapport administratif de 1942 est-il considéré comme l'acte fondateur du Welfare State britannique ?",
+      "definition": "Publié début décembre 1942, en pleine guerre, le rapport « Social Insurance and Allied Services » de l'économiste libéral William Beveridge propose un système de sécurité sociale universel pour combattre les « cinq géants » : Want (le besoin), Disease (la maladie), Ignorance (l'ignorance), Squalor (l'insalubrité) et Idleness (l'oisiveté, c'est-à-dire le chômage). Il prévoit une assurance sociale nationale unique financée par des cotisations forfaitaires, ouvrant des prestations forfaitaires « du berceau à la tombe », et suppose un service national de santé, des allocations familiales et une politique de plein emploi. Immensément populaire, il donne un projet à la reconstruction d'après-guerre.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["« Géant »", "Réponse envisagée"], "lignes": [
+          ["Want", "Assurance sociale nationale, prestations minimales"],
+          ["Disease", "Service national de santé gratuit"],
+          ["Ignorance", "Éducation (Education Act 1944)"],
+          ["Squalor", "Logement, urbanisme"],
+          ["Idleness", "Plein emploi (politique keynésienne)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "État-providence", "en": "Welfare State", "es": "Estado de bienestar", "definition": "État qui garantit une protection sociale étendue." },
+        { "fr": "Assurance sociale", "en": "social insurance", "es": "seguro social", "definition": "Système de protection financé par des cotisations." },
+        { "fr": "Universalité", "en": "universalism", "es": "universalidad", "definition": "Prestations pour tous, sans condition de ressources." }
+      ],
+      "exemple": { "fictif": false, "texte": "Le rapport, publié en décembre 1942 sous le titre Social Insurance and Allied Services (Cmd. 6404), se vendit à des centaines de milliers d'exemplaires et identifiait les « cinq géants » à vaincre.", "source": "src.beveridge" },
+      "confusions": [
+        { "a": "Beveridge (libéral, auteur du rapport)", "b": "Attlee (travailliste, mise en œuvre)", "explication": "Le rapport est l'œuvre d'un libéral sous un gouvernement de coalition ; sa mise en œuvre revient aux travaillistes." }
+      ],
+      "verification": ["Citez les cinq « géants » du rapport Beveridge."],
+      "sources": ["src.beveridge", "src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.welfare.attlee",
+      "titre": "Attlee et le Welfare State : le NHS",
+      "niveau": "F",
+      "prerequis": ["cvb.welfare.beveridge"],
+      "connexes": ["cvb.welfare.nationalisations", "cvb.consensus.butskellism"],
+      "question": "Comment les travaillistes ont-ils construit l'État-providence après 1945 ?",
+      "definition": "En juillet 1945, contre toute attente, les travaillistes de Clement Attlee battent largement les conservateurs de Churchill. Le gouvernement Attlee (1945-1951) met en œuvre les recommandations de Beveridge : National Insurance Act (1946) et allocations familiales, National Assistance Act (1948), et surtout le National Health Service, créé par le National Health Service Act 1946 et lancé le 5 juillet 1948 sous l'impulsion du ministre de la Santé Aneurin Bevan : des soins gratuits au point d'accès, financés par l'impôt, pour toute la population. S'y ajoutent les nationalisations et une politique de construction de logements. L'Education Act 1944 (Butler), adopté sous la coalition, avait déjà généralisé l'enseignement secondaire gratuit.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Mesure"], "lignes": [
+          ["1944", "Education Act (Butler) : enseignement secondaire gratuit"],
+          ["1945", "Victoire travailliste (juillet)"],
+          ["1946", "National Insurance Act ; National Health Service Act"],
+          ["5 juillet 1948", "Lancement du NHS (Aneurin Bevan)"],
+          ["1948", "National Assistance Act"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Service national de santé", "en": "National Health Service (NHS)", "es": "Servicio Nacional de Salud", "definition": "Système de santé public britannique gratuit au point d'accès." },
+        { "fr": "Gratuit au point d'accès", "en": "free at the point of use", "es": "gratuito en el punto de uso", "definition": "Pas de paiement direct du patient." },
+        { "fr": "Victoire écrasante", "en": "landslide victory", "es": "victoria aplastante", "definition": "Large victoire électorale." }
+      ],
+      "exemple": { "fictif": false, "texte": "Le NHS a été lancé le 5 juillet 1948, à la suite du National Health Service Act 1946 porté par Aneurin Bevan.", "source": "src.morgan-britain" },
+      "confusions": [
+        { "a": "NHS (financé par l'impôt)", "b": "Sécurité sociale française (fondée sur les cotisations)", "explication": "Modèle « beveridgien » fiscalisé contre modèle « bismarckien » contributif." }
+      ],
+      "verification": ["Qui est à l'origine du NHS et quand a-t-il été lancé ?"],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvb.welfare.nationalisations",
+      "titre": "Les nationalisations",
+      "niveau": "F",
+      "prerequis": ["cvb.welfare.attlee"],
+      "connexes": ["cvb.thatcher.privatisations"],
+      "question": "Quels secteurs l'État britannique a-t-il pris en charge après 1945, et pourquoi ?",
+      "definition": "Le gouvernement Attlee nationalise, conformément à la clause IV des statuts du Labour (propriété commune des moyens de production), les secteurs jugés stratégiques ou défaillants : la Banque d'Angleterre (1946), l'aviation civile (1946), le charbon (1947, National Coal Board), les transports intérieurs dont les chemins de fer (1948), l'électricité (1948), le gaz (1949), puis la sidérurgie (1951, dénationalisée par les conservateurs en 1953 et renationalisée en 1967). Environ un cinquième de l'économie passe sous contrôle public. Objectifs : moderniser des industries vieillies, garantir l'emploi, planifier la reconstruction. Ces entreprises publiques seront au cœur des débats sur l'efficacité et le déclin, avant les privatisations des années 1980.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Année", "Secteur"], "lignes": [
+          ["1946", "Banque d'Angleterre ; aviation civile"],
+          ["1947", "Charbon (National Coal Board)"],
+          ["1948", "Chemins de fer et transports ; électricité"],
+          ["1949", "Gaz"],
+          ["1951", "Sidérurgie (dénationalisée en 1953, renationalisée en 1967)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Nationalisation", "en": "nationalisation", "es": "nacionalización", "definition": "Transfert d'une entreprise au secteur public." },
+        { "fr": "Économie mixte", "en": "mixed economy", "es": "economía mixta", "definition": "Coexistence de secteurs public et privé." },
+        { "fr": "Clause IV", "en": "Clause IV", "es": "Cláusula IV", "definition": "Article des statuts travaillistes sur la propriété commune, réécrit en 1995." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un commentaire d'affiche de 1947 annonçant « Today the mines belong to the people » peut être relié à la nationalisation du charbon et à la clause IV." },
+      "confusions": [
+        { "a": "Nationalisation (transfert de propriété)", "b": "Régulation (encadrement d'entreprises privées)", "explication": "Après les privatisations, l'État régule plutôt qu'il ne possède." }
+      ],
+      "verification": ["Pourquoi la sidérurgie illustre-t-elle les alternances politiques britanniques ?"],
+      "sources": ["src.morgan-britain"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cvb.welfare.001", "notion": "cvb.welfare.beveridge", "format": "multiple", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quels sont des « géants » identifiés par le rapport Beveridge ?",
+      "choix": [
+        { "id": "a", "texte": "Want", "correct": true, "explication": "Le besoin." },
+        { "id": "b", "texte": "Disease", "correct": true, "explication": "La maladie." },
+        { "id": "c", "texte": "Idleness", "correct": true, "explication": "L'oisiveté (chômage)." },
+        { "id": "d", "texte": "Inflation", "correct": false, "explication": "Pas un des cinq géants." }
+      ]
+    },
+    {
+      "id": "q.cvb.welfare.002", "notion": "cvb.welfare.attlee", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quel ministre est associé à la création du NHS ?",
+      "choix": [
+        { "id": "a", "texte": "Aneurin Bevan", "correct": true, "explication": "Ministre de la Santé du gouvernement Attlee." },
+        { "id": "b", "texte": "William Beveridge", "correct": false, "explication": "Auteur du rapport de 1942, pas ministre." },
+        { "id": "c", "texte": "Winston Churchill", "correct": false, "explication": "Battu en 1945." },
+        { "id": "d", "texte": "Margaret Thatcher", "correct": false, "explication": "Anachronisme." }
+      ]
+    },
+    {
+      "id": "q.cvb.welfare.003", "notion": "cvb.welfare.nationalisations", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Sur quel fondement idéologique le Labour nationalise-t-il après 1945 ?",
+      "choix": [
+        { "id": "a", "texte": "La clause IV de ses statuts (propriété commune des moyens de production)", "correct": true, "explication": "Réécrite par Blair en 1995." },
+        { "id": "b", "texte": "Le monétarisme", "correct": false, "explication": "Doctrine des années 1980." },
+        { "id": "c", "texte": "La Third Way", "correct": false, "explication": "Doctrine du New Labour." },
+        { "id": "d", "texte": "Le Big Bang", "correct": false, "explication": "Dérégulation de 1986." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cvb.welfare.001", "notions": ["cvb.welfare.beveridge", "cvb.welfare.attlee", "cvb.welfare.nationalisations"],
+      "question": "Racontez la naissance du Welfare State britannique, de Beveridge à Attlee.",
+      "reponse": "1942 : rapport Beveridge (Social Insurance and Allied Services) contre les cinq géants (Want, Disease, Ignorance, Squalor, Idleness), protection universelle « du berceau à la tombe ». 1944 : Education Act (Butler). Juillet 1945 : victoire travailliste d'Attlee. 1946 : National Insurance Act, NHS Act ; 5 juillet 1948 : lancement du NHS (Bevan), gratuit et financé par l'impôt. Nationalisations : Banque d'Angleterre (1946), charbon (1947), rail et électricité (1948), gaz (1949), acier (1951) ; économie mixte au nom de la clause IV.",
+      "indispensables": ["Cinq géants", "1945 et Attlee", "NHS 1948 et Bevan", "Principales nationalisations"],
+      "erreurs": ["Attribuer le NHS à Beveridge ou à Churchill"]
+    }
+  ]
+}
