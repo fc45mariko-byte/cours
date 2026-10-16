@@ -1,0 +1,193 @@
+{
+  "chapitre": "cve.autonomias",
+  "notions": [
+    {
+      "id": "cve.autonomias.estado",
+      "titre": "L'État des autonomies",
+      "niveau": "F",
+      "prerequis": ["cve.transicion.constitucion"],
+      "connexes": ["cve.autonomias.cataluna", "cve.autonomias.pais-vasco"],
+      "question": "Comment l'Espagne est-elle organisée territorialement depuis la Constitution de 1978 ?",
+      "definition": "L'article 2 de la Constitution de 1978 affirme « l'unité indissoluble de la Nation espagnole » tout en reconnaissant et garantissant « le droit à l'autonomie des nationalités et des régions » qui la composent. Ce compromis donne naissance à l'« État des autonomies » (Estado de las autonomías), ni fédéral ni centralisé. Chaque communauté autonome (comunidad autónoma) dispose d'un statut d'autonomie (Estatuto de Autonomía), loi organique qui fixe ses institutions (parlement, gouvernement, président) et ses compétences. Deux voies d'accès ont été prévues : la voie rapide de l'article 151 (Pays basque, Catalogne, Galice, puis Andalousie après le référendum du 28 février 1980) et la voie lente de l'article 143 pour les autres. Entre 1979 et 1983, dix-sept communautés autonomes sont créées ; Ceuta et Melilla deviennent villes autonomes en 1995. Le Pays basque et la Navarre bénéficient d'un régime financier particulier hérité des fueros (concierto et convenio económico) : ils lèvent l'essentiel des impôts et versent une contribution à l'État (el cupo), alors que les autres communautés relèvent du régime commun de financement.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Élément", "Contenu"], "lignes": [
+          ["Fondement", "Art. 2 et titre VIII de la Constitution (art. 137 à 158)"],
+          ["Norme de base", "Statut d'autonomie (loi organique)"],
+          ["Voies d'accès", "Art. 151 (rapide, compétences larges d'emblée) / art. 143 (lente)"],
+          ["Nombre", "17 communautés autonomes + 2 villes autonomes (Ceuta, Melilla)"],
+          ["Financement", "Régime commun / régime foral (Pays basque, Navarre)"],
+          ["Arbitrage", "Tribunal constitutionnel pour les conflits de compétences"]
+        ] },
+        { "type": "attention", "texte": "« Nationalité » (nacionalidad) n'est pas défini dans la Constitution : le terme renvoie aux communautés à forte identité historique (Catalogne, Pays basque, Galice), ce qui nourrit les débats sur la reconnaissance nationale." }
+      ],
+      "termes": [
+        { "fr": "Communauté autonome", "en": "autonomous community", "es": "comunidad autónoma", "definition": "Collectivité territoriale dotée d'un parlement et d'un gouvernement propres." },
+        { "fr": "Statut d'autonomie", "en": "Statute of Autonomy", "es": "Estatuto de Autonomía", "definition": "Loi organique fondatrice d'une communauté autonome." },
+        { "fr": "Régime foral", "en": "foral regime", "es": "régimen foral", "definition": "Système hérité des fueros donnant une autonomie fiscale au Pays basque et à la Navarre." },
+        { "fr": "Décentralisation", "en": "devolution / decentralisation", "es": "descentralización", "definition": "Transfert de compétences de l'État vers les territoires." }
+      ],
+      "exemple": { "fictif": false, "texte": "L'article 2 de la Constitution espagnole proclame à la fois « la indisoluble unidad de la Nación española » et « el derecho a la autonomía de las nacionalidades y regiones que la integran ».", "source": "src.constitucion-1978" },
+      "contreExemple": "La France, État unitaire décentralisé, ne reconnaît pas de « nationalités » en son sein et ses régions n'ont pas de pouvoir législatif comparable à celui des communautés autonomes.",
+      "confusions": [
+        { "a": "État des autonomies (Espagne)", "b": "État fédéral (Allemagne, États-Unis)", "explication": "La Constitution espagnole n'emploie pas le mot « fédéral » et les autonomies n'ont pas participé à la création de l'État, même si le degré de décentralisation est comparable." },
+        { "a": "Art. 151 (voie rapide)", "b": "Art. 143 (voie lente)", "explication": "Différence de rythme d'accès aux compétences, largement estompée par les réformes ultérieures." }
+      ],
+      "verification": ["Pourquoi le Pays basque et la Navarre ont-ils un financement différent ?"],
+      "sources": ["src.constitucion-1978", "src.julia"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cve.autonomias.cataluna",
+      "titre": "La question catalane (2006-2017)",
+      "niveau": "A",
+      "prerequis": ["cve.autonomias.estado"],
+      "connexes": ["cve.actualidad.crisis-2008"],
+      "question": "Comment la Catalogne est-elle passée d'une demande de statut renforcé à une déclaration unilatérale d'indépendance ?",
+      "definition": "Un nouveau Statut d'autonomie de la Catalogne, qui qualifie la Catalogne de « nation » dans son préambule et étend ses compétences, est approuvé par les Cortes et par référendum en Catalogne le 18 juin 2006. Le PP dépose un recours ; le 28 juin 2010, le Tribunal constitutionnel (sentence 31/2010) annule ou réinterprète plusieurs articles et prive de valeur juridique la mention de « nation ». Une grande manifestation (« Som una nació. Nosaltres decidim ») suit en juillet 2010. Sur fond de crise économique et de débat sur le financement, le souverainisme progresse : grandes manifestations de la Diada (11 septembre) à partir de 2012, consultation non contraignante du 9 novembre 2014 (9-N), majorité indépendantiste au Parlement catalan en 2015. Le gouvernement de Carles Puigdemont organise le 1er octobre 2017 un référendum déclaré illégal par le Tribunal constitutionnel ; la journée est marquée par des interventions policières. Le 27 octobre 2017, le Parlement catalan vote une déclaration d'indépendance ; le même jour, le Sénat autorise l'application de l'article 155 de la Constitution (mise sous tutelle de la Généralité) et le gouvernement Rajoy convoque des élections pour le 21 décembre 2017. Plusieurs dirigeants sont jugés ; le Tribunal suprême les condamne en octobre 2019, notamment pour sédition. Le gouvernement Sánchez les gracie en 2021, puis une loi d'amnistie est adoptée en 2024 (loi organique 1/2024).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
+          ["18 juin 2006", "Référendum sur le nouveau Statut"],
+          ["28 juin 2010", "Sentence du Tribunal constitutionnel"],
+          ["11 septembre 2012", "Diada massive en faveur de l'indépendance"],
+          ["9 novembre 2014", "Consultation non contraignante (9-N)"],
+          ["1er octobre 2017", "Référendum illégal (1-O)"],
+          ["27 octobre 2017", "Déclaration d'indépendance ; article 155"],
+          ["14 octobre 2019", "Condamnation des dirigeants par le Tribunal suprême"],
+          ["2021 / 2024", "Grâces puis loi d'amnistie"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Indépendantisme", "en": "pro-independence movement / secessionism", "es": "independentismo / soberanismo", "definition": "Mouvement en faveur de la séparation d'un territoire." },
+        { "fr": "Généralité de Catalogne", "en": "Government of Catalonia (Generalitat)", "es": "Generalitat de Catalunya", "definition": "Ensemble des institutions d'autogouvernement catalanes." },
+        { "fr": "Déclaration unilatérale d'indépendance", "en": "unilateral declaration of independence", "es": "declaración unilateral de independencia (DUI)", "definition": "Proclamation d'indépendance sans accord de l'État." },
+        { "fr": "Amnistie", "en": "amnesty", "es": "amnistía", "definition": "Loi effaçant des infractions passées." },
+        { "fr": "Grâce", "en": "pardon", "es": "indulto", "definition": "Remise de peine individuelle accordée par le gouvernement." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un éditorial d'un quotidien madrilène du 28 octobre 2017 et celui d'un quotidien barcelonais du même jour peuvent être comparés pour montrer deux lectures opposées de l'article 155." },
+      "confusions": [
+        { "a": "9-N 2014 (consultation tolérée, non contraignante)", "b": "1-O 2017 (référendum interdit, présenté comme contraignant)", "explication": "Deux consultations différentes par leur statut et leurs conséquences." },
+        { "a": "Grâce (indulto, individuelle, 2021)", "b": "Amnistie (loi générale, 2024)", "explication": "La grâce supprime la peine ; l'amnistie efface l'infraction." }
+      ],
+      "verification": ["Pourquoi la sentence du Tribunal constitutionnel de 2010 est-elle souvent présentée comme un tournant ?"],
+      "sources": ["src.constitucion-1978", "src.boe"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Application de la loi d'amnistie et situation judiciaire des dirigeants indépendantistes : évolution en cours, à vérifier à la date d'étude."
+    },
+    {
+      "id": "cve.autonomias.pais-vasco",
+      "titre": "Le Pays basque et ETA",
+      "niveau": "A",
+      "prerequis": ["cve.autonomias.estado"],
+      "connexes": ["cve.consolidacion.11m", "cve.consolidacion.gonzalez"],
+      "question": "Comment le terrorisme d'ETA a-t-il marqué la démocratie espagnole et comment a-t-il pris fin ?",
+      "definition": "ETA (Euskadi Ta Askatasuna, « Pays basque et liberté ») naît en 1959 en opposition au franquisme et revendique l'indépendance d'un Pays basque englobant la Navarre et le Pays basque français. Sa première victime est un garde civil en 1968 ; en 1973, elle assassine l'amiral Carrero Blanco. Contrairement à l'attente de nombreux observateurs, la violence redouble après le retour de la démocratie : l'organisation fait environ 850 morts au total, dont l'attentat de l'Hipercor à Barcelone (1987, 21 morts). La lutte antiterroriste connaît une dérive avec les GAL (1983-1987), escadrons liés à l'appareil d'État. L'enlèvement et l'assassinat du conseiller municipal Miguel Ángel Blanco (juillet 1997) provoquent une mobilisation massive (« esprit d'Ermua »). La loi sur les partis (2002) permet l'interdiction de Batasuna (2003). Après l'échec de plusieurs trêves (dont l'attentat de l'aéroport de Barajas, décembre 2006), ETA annonce la « cessation définitive de son activité armée » le 20 octobre 2011, son désarmement en avril 2017 et sa dissolution en mai 2018. Parallèlement, le Pays basque dispose de l'une des autonomies les plus larges (police propre, concierto económico) ; le plan Ibarretxe de « libre association » a été rejeté par le Congrès en 2005.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
+          ["1959", "Fondation d'ETA"],
+          ["1973", "Assassinat de Carrero Blanco"],
+          ["1983-1987", "GAL"],
+          ["1997", "Assassinat de Miguel Ángel Blanco"],
+          ["2002-2003", "Loi sur les partis, interdiction de Batasuna"],
+          ["20 octobre 2011", "Fin définitive de la violence annoncée"],
+          ["Mai 2018", "Dissolution"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Terrorisme", "en": "terrorism", "es": "terrorismo", "definition": "Usage de la violence contre des civils à des fins politiques." },
+        { "fr": "Trêve", "en": "ceasefire / truce", "es": "tregua / alto el fuego", "definition": "Suspension temporaire des actions armées." },
+        { "fr": "Nationalisme basque", "en": "Basque nationalism", "es": "nacionalismo vasco", "definition": "Courant revendiquant la nation basque (PNV modéré, gauche abertzale indépendantiste)." },
+        { "fr": "Victime du terrorisme", "en": "victim of terrorism", "es": "víctima del terrorismo", "definition": "Personne tuée ou blessée lors d'un attentat ; les associations de victimes pèsent dans le débat public." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une photographie de la manifestation de juillet 1997 à Madrid, mains peintes en blanc, illustre le rejet populaire d'ETA après l'assassinat de Miguel Ángel Blanco." },
+      "confusions": [
+        { "a": "PNV (nationalisme modéré, institutionnel)", "b": "ETA et gauche abertzale radicale", "explication": "Le nationalisme basque n'est pas réductible à ETA ; le PNV gouverne la communauté autonome la plupart du temps." },
+        { "a": "GAL (contre-terrorisme illégal)", "b": "ETA", "explication": "Les GAL visaient des membres présumés d'ETA ; leur lien avec l'État a été un scandale majeur." }
+      ],
+      "verification": ["Pourquoi le terrorisme d'ETA s'est-il poursuivi après la démocratisation ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cve.autonomias.001", "notion": "cve.autonomias.estado", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Combien l'Espagne compte-t-elle de communautés autonomes ?",
+      "choix": [
+        { "id": "a", "texte": "17, plus les villes autonomes de Ceuta et Melilla", "correct": true, "explication": "Créées entre 1979 et 1983 ; villes autonomes en 1995." },
+        { "id": "b", "texte": "13", "correct": false, "explication": "Nombre de régions métropolitaines françaises." },
+        { "id": "c", "texte": "50", "correct": false, "explication": "Nombre de provinces espagnoles." },
+        { "id": "d", "texte": "3 (Catalogne, Pays basque, Galice)", "correct": false, "explication": "Ce sont les « nationalités historiques », pas toutes les communautés." }
+      ]
+    },
+    {
+      "id": "q.cve.autonomias.002", "notion": "cve.autonomias.estado", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles affirmations sur l'État des autonomies sont exactes ?",
+      "choix": [
+        { "id": "a", "texte": "Chaque communauté a un statut d'autonomie adopté par loi organique", "correct": true, "explication": "Norme institutionnelle de base." },
+        { "id": "b", "texte": "La Constitution qualifie l'Espagne d'État fédéral", "correct": false, "explication": "Le mot n'y figure pas." },
+        { "id": "c", "texte": "Le Pays basque et la Navarre bénéficient d'un régime fiscal foral", "correct": true, "explication": "Concierto / convenio económico." },
+        { "id": "d", "texte": "L'Andalousie a accédé à l'autonomie par la voie de l'article 151", "correct": true, "explication": "Après le référendum du 28 février 1980." }
+      ]
+    },
+    {
+      "id": "q.cve.autonomias.003", "notion": "cve.autonomias.cataluna", "format": "unique", "niveau": 2, "competence": "memoriser",
+      "enonce": "Que se passe-t-il le 27 octobre 2017 ?",
+      "choix": [
+        { "id": "a", "texte": "Le Parlement catalan vote une déclaration d'indépendance et le Sénat autorise l'article 155", "correct": true, "explication": "Le gouvernement convoque ensuite des élections pour le 21 décembre." },
+        { "id": "b", "texte": "Le référendum interdit a lieu", "correct": false, "explication": "C'est le 1er octobre 2017." },
+        { "id": "c", "texte": "Le Tribunal constitutionnel juge le Statut", "correct": false, "explication": "Sentence du 28 juin 2010." },
+        { "id": "d", "texte": "La loi d'amnistie est publiée", "correct": false, "explication": "En 2024." }
+      ]
+    },
+    {
+      "id": "q.cve.autonomias.004", "notion": "cve.autonomias.cataluna", "format": "unique", "niveau": 3, "competence": "distinguer",
+      "enonce": "Quelle différence existe-t-il entre les grâces de 2021 et l'amnistie de 2024 ?",
+      "choix": [
+        { "id": "a", "texte": "La grâce supprime la peine de personnes condamnées ; l'amnistie, votée par loi, efface les infractions elles-mêmes", "correct": true, "explication": "Indulto (gouvernement) / amnistía (Cortes)." },
+        { "id": "b", "texte": "Aucune, ce sont deux noms de la même mesure", "correct": false, "explication": "Leur nature juridique diffère." },
+        { "id": "c", "texte": "La grâce est votée par référendum", "correct": false, "explication": "Elle est décidée par le gouvernement." },
+        { "id": "d", "texte": "L'amnistie est décidée par le roi seul", "correct": false, "explication": "C'est une loi organique des Cortes." }
+      ]
+    },
+    {
+      "id": "q.cve.autonomias.005", "notion": "cve.autonomias.pais-vasco", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quand ETA annonce-t-elle la cessation définitive de son activité armée ?",
+      "choix": [
+        { "id": "a", "texte": "Le 20 octobre 2011", "correct": true, "explication": "Désarmement en 2017, dissolution en 2018." },
+        { "id": "b", "texte": "En 1978", "correct": false, "explication": "Au contraire, la violence augmente alors." },
+        { "id": "c", "texte": "En 2004", "correct": false, "explication": "Année du 11-M, commis par une cellule jihadiste." },
+        { "id": "d", "texte": "En 1997", "correct": false, "explication": "Assassinat de Miguel Ángel Blanco." }
+      ]
+    },
+    {
+      "id": "q.cve.autonomias.006", "notion": "cve.autonomias.pais-vasco", "format": "vrai-faux", "niveau": 2, "competence": "distinguer",
+      "enonce": "Le nationalisme basque se confond avec ETA.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": false, "explication": "Le PNV, nationaliste modéré, rejette la violence et gouverne souvent la communauté." },
+        { "id": "f", "texte": "Faux", "correct": true, "explication": "ETA n'est qu'une composante violente et minoritaire du nationalisme basque." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cve.autonomias.001", "notions": ["cve.autonomias.estado"],
+      "question": "Expliquez le fonctionnement de l'État des autonomies.",
+      "reponse": "Art. 2 : unité de la Nation et droit à l'autonomie des nationalités et régions. Titre VIII. Statuts d'autonomie (lois organiques). Voie rapide art. 151 (Pays basque, Catalogne, Galice, Andalousie) / lente art. 143. 17 communautés (1979-1983) + Ceuta et Melilla (1995). Régime foral (concierto / convenio) pour le Pays basque et la Navarre. Conflits tranchés par le Tribunal constitutionnel.",
+      "indispensables": ["Article 2", "Statut d'autonomie", "17 + 2", "Régime foral"],
+      "erreurs": ["Dire que l'Espagne est un État fédéral au sens constitutionnel"]
+    },
+    {
+      "id": "f.cve.autonomias.002", "notions": ["cve.autonomias.cataluna"],
+      "question": "Retracez la question catalane de 2006 à 2024.",
+      "reponse": "Statut de 2006 (référendum du 18 juin) ; sentence du TC du 28 juin 2010 ; Diadas massives dès 2012 ; consultation du 9-N 2014 ; référendum illégal du 1-O 2017 ; DUI et article 155 le 27 octobre 2017 ; élections du 21 décembre 2017 ; condamnations en octobre 2019 ; grâces en 2021 ; loi d'amnistie en 2024.",
+      "indispensables": ["2010", "1-O", "27 octobre 2017 et art. 155", "Grâces et amnistie"],
+      "relance": "Quel rôle la crise économique a-t-elle joué dans la progression de l'indépendantisme ?"
+    },
+    {
+      "id": "f.cve.autonomias.003", "notions": ["cve.autonomias.pais-vasco"],
+      "question": "Quelles sont les grandes étapes de l'histoire d'ETA ?",
+      "reponse": "Fondée en 1959 ; première victime en 1968 ; Carrero Blanco 1973 ; violence intensifiée sous la démocratie (≈ 850 morts au total, Hipercor 1987) ; GAL 1983-1987 ; Miguel Ángel Blanco 1997 ; loi des partis 2002 et Batasuna interdite 2003 ; Barajas 2006 ; fin de la violence 20 octobre 2011 ; désarmement 2017 ; dissolution 2018.",
+      "indispensables": ["1959", "≈ 850 victimes", "GAL", "2011 et 2018"]
+    }
+  ]
+}

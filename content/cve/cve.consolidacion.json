@@ -1,0 +1,241 @@
+{
+  "chapitre": "cve.consolidacion",
+  "notions": [
+    {
+      "id": "cve.consolidacion.23f",
+      "titre": "Le 23-F (1981)",
+      "niveau": "F",
+      "prerequis": ["cve.transicion.constitucion"],
+      "connexes": ["cve.consolidacion.gonzalez"],
+      "question": "Pourquoi la tentative de coup d'État du 23 février 1981 renforce-t-elle paradoxalement la démocratie ?",
+      "definition": "Le 23 février 1981, pendant le vote d'investiture de Leopoldo Calvo-Sotelo (successeur d'Adolfo Suárez, démissionnaire depuis fin janvier), le lieutenant-colonel de la Garde civile Antonio Tejero fait irruption au Congrès des députés avec des gardes civils armés et retient les députés et le gouvernement. À Valence, le capitaine général Jaime Milans del Bosch proclame l'état d'exception et fait sortir les chars ; le général Alfonso Armada est impliqué dans la conspiration. Dans la nuit, le roi Juan Carlos, en uniforme de capitaine général, intervient à la télévision pour ordonner le maintien de l'ordre constitutionnel. Le coup échoue et les députés sont libérés le 24 février. L'échec du « 23-F » montre l'isolement des putschistes, renforce la légitimité démocratique du roi et marque symboliquement la fin de la menace militaire, même si le climat (terrorisme d'ETA, crise économique, mécontentement d'une partie de l'armée) reste tendu.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "29 janvier 1981 : démission d'Adolfo Suárez",
+          "23 février, vers 18 h 20 : Tejero prend d'assaut le Congrès pendant le vote d'investiture",
+          "Soirée : état d'exception et chars à Valence (Milans del Bosch)",
+          "Nuit du 23 au 24 : message télévisé du roi en faveur de la Constitution",
+          "24 février : reddition de Tejero, libération des députés",
+          "1982 : procès et condamnation des principaux responsables (Tejero, Milans del Bosch, Armada)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Coup d'État", "en": "coup d'état / attempted coup", "es": "golpe de Estado / intentona golpista", "definition": "Prise illégale du pouvoir par la force." },
+        { "fr": "Putschiste", "en": "putschist / coup plotter", "es": "golpista", "definition": "Auteur ou partisan d'un coup d'État." },
+        { "fr": "Investiture", "en": "investiture vote", "es": "investidura", "definition": "Vote du Congrès accordant sa confiance au candidat à la présidence du gouvernement." }
+      ],
+      "exemple": { "fictif": false, "texte": "Les images du lieutenant-colonel Tejero, pistolet à la main, à la tribune du Congrès, enregistrées par la télévision publique, sont devenues l'un des symboles les plus connus de l'histoire démocratique espagnole.", "source": "src.julia" },
+      "confusions": [
+        { "a": "23-F (1981, tentative militaire)", "b": "11-M (2004, attentats terroristes)", "explication": "Deux dates abrégées de la même façon, mais deux événements sans rapport." }
+      ],
+      "verification": ["Quel rôle le roi a-t-il joué le 23-F et quelles en ont été les conséquences pour la monarchie ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cve.consolidacion.gonzalez",
+      "titre": "Les gouvernements González, l'entrée dans la CEE et 1992",
+      "niveau": "F",
+      "prerequis": ["cve.consolidacion.23f"],
+      "connexes": ["cve.consolidacion.aznar", "cve.autonomias.pais-vasco"],
+      "question": "Comment les socialistes au pouvoir (1982-1996) ancrent-ils l'Espagne dans l'Europe et la modernité ?",
+      "definition": "Aux élections du 28 octobre 1982, le PSOE de Felipe González obtient la majorité absolue (202 sièges sur 350) : c'est la première alternance depuis la guerre civile, souvent considérée comme la fin de la Transition. Les gouvernements González (1982-1996) mènent une reconversion industrielle douloureuse, développent l'État-providence (généralisation de la santé publique, éducation) et réforment l'armée. L'Espagne adhère à la CEE le 1er janvier 1986 (traité signé le 12 juin 1985, en même temps que le Portugal) ; le maintien dans l'OTAN, où le pays était entré en 1982, est approuvé par référendum le 12 mars 1986. 1992 symbolise la modernisation : Jeux olympiques de Barcelone, Exposition universelle de Séville, premier TGV (AVE) Madrid-Séville. La période connaît aussi la grève générale du 14 décembre 1988, des affaires de corruption et le scandale des GAL (groupes antiterroristes liés à l'appareil d'État, 1983-1987). Le PSOE perd les élections de mars 1996 face au PP.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
+          ["28 octobre 1982", "Victoire du PSOE (202 sièges)"],
+          ["1er janvier 1986", "Entrée dans la CEE"],
+          ["12 mars 1986", "Référendum sur le maintien dans l'OTAN (oui)"],
+          ["14 décembre 1988", "Grève générale (14-D)"],
+          ["1992", "JO de Barcelone, Expo de Séville, AVE"],
+          ["3 mars 1996", "Victoire du PP"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Alternance", "en": "transfer of power / alternation", "es": "alternancia", "definition": "Passage du pouvoir de la majorité à l'opposition par les élections." },
+        { "fr": "Reconversion industrielle", "en": "industrial restructuring", "es": "reconversión industrial", "definition": "Fermeture ou modernisation des industries en déclin (sidérurgie, chantiers navals)." },
+        { "fr": "Adhésion", "en": "accession", "es": "adhesión", "definition": "Entrée d'un État dans une organisation internationale." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une affiche officielle des JO de Barcelone 1992 peut être commentée comme la vitrine d'une Espagne démocratique, européenne et moderne, dix ans après l'arrivée des socialistes au pouvoir." },
+      "confusions": [
+        { "a": "Entrée dans l'OTAN (1982, gouvernement Calvo-Sotelo)", "b": "Référendum de 1986 (maintien, gouvernement González)", "explication": "Le PSOE, d'abord hostile, a fait approuver le maintien par référendum." }
+      ],
+      "verification": ["Pourquoi l'année 1992 est-elle symbolique ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cve.consolidacion.aznar",
+      "titre": "Les gouvernements Aznar et l'euro",
+      "niveau": "F",
+      "prerequis": ["cve.consolidacion.gonzalez"],
+      "connexes": ["cve.consolidacion.11m", "eec.economia.espana-historia"],
+      "question": "Quelles orientations le Parti populaire de José María Aznar donne-t-il à l'Espagne de 1996 à 2004 ?",
+      "definition": "Vainqueur des élections du 3 mars 1996 sans majorité absolue, José María Aznar (Partido Popular, centre droit) gouverne d'abord avec le soutien des nationalistes catalans (CiU), basques (PNV) et canariens (CC). Sa politique est libérale : privatisations (Telefónica, Repsol, Endesa, Argentaria), réduction du déficit pour respecter les critères de Maastricht. L'Espagne fait partie des pays fondateurs de l'euro (monnaie scripturale le 1er janvier 1999, pièces et billets le 1er janvier 2002). La croissance est forte, portée par la construction et le crédit, et le chômage recule nettement. En mars 2000, le PP obtient la majorité absolue (183 sièges). Le second mandat est marqué par un durcissement face au nationalisme basque, la marée noire du Prestige (2002) et l'alignement sur les États-Unis dans la guerre d'Irak (2003), très impopulaire. Aznar ne se représente pas en 2004 ; Mariano Rajoy est le candidat du PP.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "1996 : gouvernement minoritaire soutenu par CiU, PNV, CC",
+          "Privatisations et assainissement budgétaire",
+          "1999 / 2002 : l'euro remplace la peseta",
+          "2000 : majorité absolue du PP",
+          "2002 : Prestige ; 2003 : soutien à la guerre d'Irak"
+        ] },
+        { "type": "attention", "texte": "La croissance de cette période repose en grande partie sur l'immobilier et l'endettement, ce qui prépare la bulle qui éclatera en 2008." }
+      ],
+      "termes": [
+        { "fr": "Privatisation", "en": "privatisation", "es": "privatización", "definition": "Vente au secteur privé d'entreprises publiques." },
+        { "fr": "Critères de convergence", "en": "convergence criteria", "es": "criterios de convergencia", "definition": "Conditions de Maastricht pour adopter l'euro (déficit, dette, inflation, taux)." },
+        { "fr": "Marée noire", "en": "oil spill", "es": "marea negra", "definition": "Pollution par le pétrole (Prestige, Galice, 2002)." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un étudiant compare deux discours d'investiture d'Aznar (1996 et 2000) : le premier insiste sur le dialogue avec les nationalistes dont il a besoin, le second, fort de la majorité absolue, sur l'unité de l'Espagne." },
+      "confusions": [
+        { "a": "Entrée dans la CEE (1986, González)", "b": "Passage à l'euro (1999-2002, Aznar)", "explication": "Deux étapes européennes sous deux gouvernements différents." }
+      ],
+      "verification": ["Pourquoi le soutien à la guerre d'Irak pèse-t-il sur la fin du mandat Aznar ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cve.consolidacion.11m",
+      "titre": "Le 11-M (2004)",
+      "niveau": "F",
+      "prerequis": ["cve.consolidacion.aznar"],
+      "connexes": ["cve.autonomias.pais-vasco", "cve.actualidad.crisis-2008"],
+      "question": "Comment les attentats du 11 mars 2004 ont-ils pesé sur les élections trois jours plus tard ?",
+      "definition": "Le 11 mars 2004, trois jours avant les élections générales, dix bombes explosent dans quatre trains de banlieue (Cercanías) à Madrid (Atocha, El Pozo, Santa Eugenia) : environ 190 morts (192 selon le décompte le plus courant) et près de 2 000 blessés. C'est l'attentat le plus meurtrier de l'histoire de l'Espagne. Le gouvernement Aznar attribue d'abord l'attentat à ETA, alors que les indices désignent rapidement une cellule jihadiste. Cette gestion de l'information provoque des manifestations devant les sièges du PP. Le 14 mars, le PSOE de José Luis Rodríguez Zapatero remporte les élections ; le nouveau gouvernement retire les troupes espagnoles d'Irak. Le procès (2007) confirme la responsabilité d'une cellule islamiste et écarte ETA.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "11 mars 2004 : attentats dans les trains de banlieue de Madrid",
+          "11-13 mars : le gouvernement maintient la piste ETA ; manifestations",
+          "14 mars : victoire du PSOE (Zapatero)",
+          "Avril 2004 : retrait des troupes d'Irak",
+          "2007 : procès et condamnations (cellule jihadiste)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Attentat", "en": "terrorist attack / bombing", "es": "atentado", "definition": "Acte de violence visant à terroriser." },
+        { "fr": "Train de banlieue", "en": "commuter train", "es": "tren de Cercanías", "definition": "Réseau ferroviaire suburbain." },
+        { "fr": "Gestion de crise", "en": "crisis management", "es": "gestión de crisis", "definition": "Façon dont les autorités réagissent et communiquent pendant une crise." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un commentaire peut confronter la une d'un quotidien du 12 mars 2004 évoquant ETA et celle du 15 mars annonçant la victoire de Zapatero." },
+      "confusions": [
+        { "a": "Auteurs réels : cellule jihadiste", "b": "Attribution initiale par le gouvernement : ETA", "explication": "C'est ce décalage qui a nourri la controverse politique." }
+      ],
+      "verification": ["Pourquoi parle-t-on d'un impact électoral du 11-M ?"],
+      "sources": ["src.julia"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cve.consolidacion.001", "notion": "cve.consolidacion.23f", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Qui fait irruption au Congrès des députés le 23 février 1981 ?",
+      "choix": [
+        { "id": "a", "texte": "Le lieutenant-colonel Antonio Tejero", "correct": true, "explication": "À la tête de gardes civils armés." },
+        { "id": "b", "texte": "Le général Franco", "correct": false, "explication": "Mort en 1975." },
+        { "id": "c", "texte": "Adolfo Suárez", "correct": false, "explication": "Il était député et président démissionnaire, présent dans l'hémicycle." },
+        { "id": "d", "texte": "Un commando d'ETA", "correct": false, "explication": "Le 23-F est une tentative militaire." }
+      ]
+    },
+    {
+      "id": "q.cve.consolidacion.002", "notion": "cve.consolidacion.23f", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "L'échec du 23-F a renforcé la légitimité démocratique du roi Juan Carlos.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": true, "explication": "Son message télévisé en faveur de la Constitution a été décisif." },
+        { "id": "f", "texte": "Faux", "correct": false, "explication": "Le roi est sorti renforcé de l'épisode." }
+      ]
+    },
+    {
+      "id": "q.cve.consolidacion.003", "notion": "cve.consolidacion.gonzalez", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quand l'Espagne entre-t-elle dans la CEE ?",
+      "choix": [
+        { "id": "a", "texte": "Le 1er janvier 1986", "correct": true, "explication": "Avec le Portugal ; traité signé le 12 juin 1985." },
+        { "id": "b", "texte": "En 1978", "correct": false, "explication": "Année de la Constitution." },
+        { "id": "c", "texte": "En 1992", "correct": false, "explication": "Année des JO et de l'Expo." },
+        { "id": "d", "texte": "En 1999", "correct": false, "explication": "Lancement de l'euro." }
+      ]
+    },
+    {
+      "id": "q.cve.consolidacion.004", "notion": "cve.consolidacion.gonzalez", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quels événements appartiennent à la période González (1982-1996) ?",
+      "choix": [
+        { "id": "a", "texte": "Le référendum sur l'OTAN (1986)", "correct": true, "explication": "Maintien approuvé." },
+        { "id": "b", "texte": "La grève générale du 14 décembre 1988", "correct": true, "explication": "Contre la politique économique du gouvernement." },
+        { "id": "c", "texte": "Les JO de Barcelone et l'Expo de Séville (1992)", "correct": true, "explication": "Symboles de la modernisation." },
+        { "id": "d", "texte": "La marée noire du Prestige", "correct": false, "explication": "2002, sous Aznar." }
+      ]
+    },
+    {
+      "id": "q.cve.consolidacion.005", "notion": "cve.consolidacion.aznar", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "De qui le gouvernement Aznar dépend-il en 1996 ?",
+      "choix": [
+        { "id": "a", "texte": "Des nationalistes catalans, basques et canariens", "correct": true, "explication": "CiU, PNV et CC, faute de majorité absolue." },
+        { "id": "b", "texte": "Du PSOE", "correct": false, "explication": "Principal adversaire." },
+        { "id": "c", "texte": "D'aucun soutien : majorité absolue", "correct": false, "explication": "Elle n'arrive qu'en 2000." },
+        { "id": "d", "texte": "De Podemos", "correct": false, "explication": "Parti créé en 2014." }
+      ]
+    },
+    {
+      "id": "q.cve.consolidacion.006", "notion": "cve.consolidacion.aznar", "format": "vrai-faux", "niveau": 1, "competence": "memoriser",
+      "enonce": "Les pièces et billets en euros circulent en Espagne depuis le 1er janvier 2002.",
+      "choix": [
+        { "id": "v", "texte": "Vrai", "correct": true, "explication": "L'euro existe sous forme scripturale depuis le 1er janvier 1999." },
+        { "id": "f", "texte": "Faux", "correct": false, "explication": "C'est bien la date de mise en circulation fiduciaire." }
+      ]
+    },
+    {
+      "id": "q.cve.consolidacion.007", "notion": "cve.consolidacion.11m", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles affirmations sur le 11-M sont exactes ?",
+      "choix": [
+        { "id": "a", "texte": "Les bombes ont visé des trains de banlieue à Madrid", "correct": true, "explication": "Atocha, El Pozo, Santa Eugenia." },
+        { "id": "b", "texte": "Le gouvernement a d'abord accusé ETA", "correct": true, "explication": "Attribution démentie par l'enquête." },
+        { "id": "c", "texte": "Le PSOE a remporté les élections du 14 mars", "correct": true, "explication": "Zapatero devient président du gouvernement." },
+        { "id": "d", "texte": "Le procès a confirmé la responsabilité d'ETA", "correct": false, "explication": "Il a établi celle d'une cellule jihadiste." }
+      ]
+    },
+    {
+      "id": "q.cve.consolidacion.008", "notion": "cve.consolidacion.11m", "format": "unique", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "Pourquoi la gestion gouvernementale de l'information après le 11-M a-t-elle eu un effet politique ?",
+      "choix": [
+        { "id": "a", "texte": "Une partie des électeurs a jugé que le gouvernement privilégiait la piste ETA pour des raisons électorales", "correct": true, "explication": "Une piste jihadiste aurait été reliée au soutien à la guerre d'Irak." },
+        { "id": "b", "texte": "Les élections ont été annulées", "correct": false, "explication": "Elles ont eu lieu le 14 mars." },
+        { "id": "c", "texte": "Le gouvernement a immédiatement retiré les troupes d'Irak", "correct": false, "explication": "C'est le gouvernement Zapatero qui l'a fait." },
+        { "id": "d", "texte": "Le roi a dissous le Parlement", "correct": false, "explication": "Aucune dissolution exceptionnelle." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cve.consolidacion.001", "notions": ["cve.consolidacion.23f"],
+      "question": "Racontez le 23-F et expliquez sa portée.",
+      "reponse": "23 février 1981 : pendant l'investiture de Calvo-Sotelo, Tejero prend d'assaut le Congrès ; Milans del Bosch sort les chars à Valence ; Armada impliqué. Message télévisé du roi en faveur de la Constitution dans la nuit ; échec le 24. Portée : isolement des putschistes, légitimité accrue du roi, fin symbolique de la menace militaire.",
+      "indispensables": ["Date et acteurs", "Rôle du roi", "Consolidation démocratique"],
+      "erreurs": ["Confondre 23-F et 11-M"]
+    },
+    {
+      "id": "f.cve.consolidacion.002", "notions": ["cve.consolidacion.gonzalez"],
+      "question": "Quel est le bilan des années González (1982-1996) ?",
+      "reponse": "Victoire du 28 octobre 1982 (202 sièges), première alternance. Reconversion industrielle, État-providence, réforme de l'armée. CEE le 1er janvier 1986, référendum OTAN du 12 mars 1986. 1992 : JO de Barcelone, Expo de Séville, AVE. Ombres : grève générale du 14-D 1988, corruption, GAL. Défaite en 1996.",
+      "indispensables": ["1982", "CEE 1986", "1992", "GAL et corruption"],
+      "relance": "Pourquoi l'élection de 1982 est-elle souvent présentée comme la fin de la Transition ?"
+    },
+    {
+      "id": "f.cve.consolidacion.003", "notions": ["cve.consolidacion.aznar", "cve.consolidacion.11m"],
+      "question": "Résumez les années Aznar et le 11-M.",
+      "reponse": "1996 : PP minoritaire soutenu par CiU, PNV, CC ; privatisations, convergence vers l'euro (1999 / 2002), croissance tirée par la construction. 2000 : majorité absolue. 2002 : Prestige ; 2003 : soutien à la guerre d'Irak. 11 mars 2004 : attentats jihadistes dans les trains de Madrid (≈ 190 morts), attribués d'abord à ETA par le gouvernement ; 14 mars : victoire de Zapatero, retrait d'Irak.",
+      "indispensables": ["Euro", "Majorité absolue 2000", "Irak", "11-M et 14-M"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.cve.consolidacion.01", "notions": ["cve.consolidacion.23f", "cve.consolidacion.gonzalez", "cve.consolidacion.aznar", "cve.consolidacion.11m"], "type": "analyse", "niveau": 1, "fictif": false,
+      "titre": "Chronologie de la consolidation démocratique",
+      "enonce": "Associez chaque événement à sa date.",
+      "questions": [
+        { "id": "1", "consigne": "Le 23-F a lieu en :", "reponse": { "type": "choix", "options": ["1977", "1981", "1986", "2004"], "correcte": 1 }, "correction": ["23 février 1981."] },
+        { "id": "2", "consigne": "La première victoire électorale du PSOE a lieu en :", "reponse": { "type": "choix", "options": ["1977", "1982", "1996", "2004"], "correcte": 1 }, "correction": ["28 octobre 1982."] },
+        { "id": "3", "consigne": "Le PP obtient la majorité absolue en :", "reponse": { "type": "choix", "options": ["1996", "2000", "2004", "2011"], "correcte": 1 }, "correction": ["En 1996 il gouverne en minorité ; majorité absolue en 2000 (et de nouveau en 2011 avec Rajoy)."] },
+        { "id": "4", "consigne": "Combien de jours séparent les attentats du 11-M des élections générales ?", "reponse": { "type": "nombre", "valeur": 3, "tolerance": 0, "unite": "jours" }, "correction": ["11 mars → 14 mars 2004 : 3 jours."] }
+      ]
+    }
+  ]
+}

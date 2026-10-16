@@ -502,5 +502,21 @@
     "auteur": "Santos Juliá",
     "acces": "reference",
     "pertinence": "Histoire de la Transition"
+  },
+  {
+    "id": "src.boe",
+    "titre": "Boletín Oficial del Estado (BOE), textes consolidés (dont Ley Orgánica 1/2024 de amnistía)",
+    "auteur": "Agencia Estatal BOE",
+    "url": "https://www.boe.es/",
+    "acces": "reference",
+    "pertinence": "Textes législatifs espagnols"
+  },
+  {
+    "id": "src.ine",
+    "titre": "Encuesta de Población Activa (EPA) et statistiques économiques",
+    "auteur": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/",
+    "acces": "reference",
+    "pertinence": "Chômage et données économiques espagnoles"
   }
 ]
