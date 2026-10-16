@@ -610,5 +610,64 @@
     "auteur": "Roland Barthes",
     "acces": "reference",
     "pertinence": "Analyse sémiologique de l'image publicitaire"
+  },
+  {
+    "id": "src.onu-habitat",
+    "titre": "Estado de las ciudades de América Latina y el Caribe 2012. Rumbo a una nueva transición urbana, 2012",
+    "auteur": "ONU-Habitat",
+    "url": "https://unhabitat.org/",
+    "acces": "reference",
+    "pertinence": "Urbanisation, bidonvilles, ségrégation en Amérique latine"
+  },
+  {
+    "id": "src.davis-slums",
+    "titre": "Planet of Slums, Verso, 2006",
+    "auteur": "Mike Davis",
+    "acces": "reference",
+    "pertinence": "Bidonvilles et informalité urbaine"
+  },
+  {
+    "id": "src.de-soto",
+    "titre": "El otro sendero. La revolución informal, Instituto Libertad y Democracia / El Barranco, 1986",
+    "auteur": "Hernando de Soto",
+    "acces": "reference",
+    "pertinence": "Économie informelle (Pérou)"
+  },
+  {
+    "id": "src.caldeira",
+    "titre": "City of Walls: Crime, Segregation, and Citizenship in São Paulo, University of California Press, 2000",
+    "auteur": "Teresa P. R. Caldeira",
+    "acces": "reference",
+    "pertinence": "Enclaves fortifiés et ségrégation"
+  },
+  {
+    "id": "src.unodc-homicide",
+    "titre": "Global Study on Homicide 2019",
+    "auteur": "Office des Nations unies contre la drogue et le crime (UNODC)",
+    "url": "https://www.unodc.org/unodc/en/data-and-analysis/global-study-on-homicide.html",
+    "acces": "reference",
+    "pertinence": "Statistiques de la violence homicide"
+  },
+  {
+    "id": "src.oit-informalidad",
+    "titre": "Mujeres y hombres en la economía informal: un panorama estadístico, 3e éd., 2018",
+    "auteur": "Organisation internationale du travail (OIT)",
+    "url": "https://www.ilo.org/",
+    "acces": "reference",
+    "pertinence": "Mesure de l'emploi informel"
+  },
+  {
+    "id": "src.echeverri-orsini",
+    "titre": "« Informalidad y urbanismo social en Medellín », Sostenible?, n° 12, 2011, p. 11-24",
+    "auteur": "Alejandro Echeverri et Francesco M. Orsini",
+    "acces": "reference",
+    "pertinence": "Urbanisme social à Medellín"
+  },
+  {
+    "id": "src.rocha",
+    "titre": "« Uma estética da fome » (« Esthétique de la faim »), manifeste, 1965",
+    "auteur": "Glauber Rocha",
+    "acces": "reference",
+    "pertinence": "Cinéma latino-américain et représentation de la misère"
   }
 ]

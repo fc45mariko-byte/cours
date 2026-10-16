@@ -1,0 +1,147 @@
+{
+  "chapitre": "cvl.representaciones",
+  "notions": [
+    {
+      "id": "cvl.representaciones.cine",
+      "titre": "Le cinéma de la ville latino-américaine",
+      "niveau": "F",
+      "prerequis": ["cvl.informalidad.asentamientos"],
+      "connexes": ["cvl.representaciones.metodo-imagen", "cvl.fracturas.violencia"],
+      "question": "Comment le cinéma latino-américain représente-t-il la ville, la pauvreté et la violence ?",
+      "definition": "Dès 1950, « Los olvidados » de Luis Buñuel montre sans complaisance la misère des enfants des quartiers périphériques de Mexico. Au Brésil, « Rio, 40 graus » (Nelson Pereira dos Santos, 1955) filme la favela et annonce le Cinema Novo ; Glauber Rocha théorise en 1965 une « esthétique de la faim » : montrer la misère pour la dénoncer, contre le cinéma commercial. En Colombie, Víctor Gaviria tourne à Medellín avec des acteurs non professionnels des quartiers (« Rodrigo D. No futuro », 1990 ; « La vendedora de rosas », 1998) ; Luis Ospina et Carlos Mayolo dénoncent dès 1978, dans « Agarrando pueblo », la « pornomiseria », c'est-à-dire l'exploitation spectaculaire de la pauvreté pour les publics étrangers. « Cidade de Deus » (Fernando Meirelles et Kátia Lund, 2002), adapté du roman de Paulo Lins, connaît un succès mondial mais suscite le débat : la critique Ivana Bentes parle de « cosmétique de la faim » pour désigner une esthétisation de la violence. D'autres films explorent la ville fragmentée et ses classes sociales (« Amores perros », 2000 ; « Elefante blanco », 2012 ; « Roma », 2018).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Film", "Pays, année", "Intérêt"], "lignes": [
+          ["Los olvidados (Buñuel)", "Mexique, 1950", "Misère des enfants de la périphérie"],
+          ["Rio, 40 graus (Pereira dos Santos)", "Brésil, 1955", "Favela, prélude au Cinema Novo"],
+          ["Rodrigo D. No futuro (Gaviria)", "Colombie, 1990", "Jeunesse des comunas de Medellín"],
+          ["Cidade de Deus (Meirelles, Lund)", "Brésil, 2002", "Violence et trafic, débat sur l'esthétisation"],
+          ["Elefante blanco (Trapero)", "Argentine, 2012", "Villa de Buenos Aires, Église et État"]
+        ] },
+        { "type": "attention", "texte": "Un film de fiction n'est pas un document sociologique : il faut analyser le point de vue, le contexte de production et le public visé." }
+      ],
+      "termes": [
+        { "fr": "Esthétique de la faim", "en": "aesthetics of hunger", "es": "estética del hambre", "definition": "Manifeste de Glauber Rocha (1965) pour un cinéma montrant la misère afin de la dénoncer." },
+        { "fr": "Pornomisère", "en": "poverty porn", "es": "pornomiseria", "definition": "Exploitation spectaculaire de la pauvreté à l'écran." },
+        { "fr": "Acteur non professionnel", "en": "non-professional actor", "es": "actor natural", "definition": "Habitant interprétant un rôle proche de sa vie." },
+        { "fr": "Cinema Novo", "en": "Cinema Novo", "es": "Cinema Novo", "definition": "Mouvement cinématographique brésilien des années 1960." }
+      ],
+      "exemple": { "fictif": false, "texte": "Dans son manifeste de 1965, Glauber Rocha affirme que la faim est l'essence de la société latino-américaine et que le cinéma doit la montrer plutôt que la dissimuler.", "source": "src.rocha" },
+      "confusions": [
+        { "a": "Esthétique de la faim (Rocha, dénonciation)", "b": "Cosmétique de la faim (critique d'une misère esthétisée)", "explication": "Le second terme reprend le premier pour critiquer des films jugés spectaculaires." }
+      ],
+      "verification": ["Pourquoi « Cidade de Deus » a-t-il suscité un débat ?"],
+      "sources": ["src.rocha"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "cvl.representaciones.metodo-imagen",
+      "titre": "Analyser une image ou une séquence de film",
+      "niveau": "F",
+      "prerequis": ["cvl.representaciones.cine"],
+      "connexes": ["cve.metodo.comentario", "cva.methode.analyse-publicite"],
+      "question": "Comment analyser en espagnol une photographie ou une séquence de film sur la ville ?",
+      "definition": "L'analyse d'une image (fixe ou animée) suit trois temps : décrire, analyser les choix formels, interpréter. On présente d'abord le document (auteur, titre, date, nature, contexte). On décrit ensuite ce qui est montré : lieux, personnages, actions, plans (premier plan, arrière-plan). L'analyse porte sur les choix techniques : échelle des plans (plano general, plano medio, primer plano, primerísimo primer plano), angle de prise de vue (picado : vue plongeante qui écrase ; contrapicado : contre-plongée qui grandit), mouvements de caméra (travelling, panorámica, cámara en mano), lumière, couleurs, composition, montage et son pour un film, hors-champ (fuera de campo). L'interprétation relie ces choix au sens : quel regard sur la ville, la pauvreté, la violence ? Quel point de vue (intérieur ou extérieur au quartier) ? Quelle réception ?",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Notion", "Espagnol", "Effet possible"], "lignes": [
+          ["Plan d'ensemble", "plano general", "Situe le décor, l'échelle de la ville"],
+          ["Gros plan", "primer plano", "Émotion, intimité"],
+          ["Plongée", "picado", "Écrase, vulnérabilise le sujet"],
+          ["Contre-plongée", "contrapicado", "Grandit, donne du pouvoir"],
+          ["Caméra à l'épaule", "cámara en mano", "Effet documentaire, urgence"],
+          ["Hors-champ", "fuera de campo", "Suggère ce qui n'est pas montré"]
+        ] },
+        { "type": "etapes", "etapes": [
+          "Presentación del documento y contexto",
+          "Descripción (¿qué se ve?)",
+          "Análisis de los recursos (encuadre, ángulo, luz, montaje, sonido)",
+          "Interpretación (¿qué sentido? ¿qué mirada?)",
+          "Conclusión crítica"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Plan", "en": "shot", "es": "plano", "definition": "Unité de prise de vue continue." },
+        { "fr": "Cadrage", "en": "framing", "es": "encuadre", "definition": "Délimitation de ce qui apparaît dans l'image." },
+        { "fr": "Plongée / contre-plongée", "en": "high angle / low angle", "es": "picado / contrapicado", "definition": "Prise de vue d'en haut / d'en bas." },
+        { "fr": "Montage", "en": "editing", "es": "montaje", "definition": "Assemblage des plans." },
+        { "fr": "Hors-champ", "en": "off-screen space", "es": "fuera de campo", "definition": "Espace non visible mais suggéré." }
+      ],
+      "exemple": { "fictif": true, "texte": "Plano general en picado sobre las casas de ladrillo de una comuna, seguido de un primer plano de un adolescente : el montaje pasa de la escala de la ciudad a la del individuo y sugiere el peso del entorno sobre su destino." },
+      "confusions": [
+        { "a": "Picado (plongée)", "b": "Contrapicado (contre-plongée)", "explication": "Le picado regarde d'en haut, le contrapicado d'en bas." }
+      ],
+      "verification": ["Quel effet produit une contre-plongée sur un personnage ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cvl.representaciones.001", "notion": "cvl.representaciones.cine", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Qui a réalisé « Los olvidados » (1950) ?",
+      "choix": [
+        { "id": "a", "texte": "Luis Buñuel", "correct": true, "explication": "Tourné à Mexico." },
+        { "id": "b", "texte": "Glauber Rocha", "correct": false, "explication": "Cinema Novo brésilien." },
+        { "id": "c", "texte": "Víctor Gaviria", "correct": false, "explication": "Medellín, années 1990." },
+        { "id": "d", "texte": "Fernando Meirelles", "correct": false, "explication": "Cidade de Deus, 2002." }
+      ]
+    },
+    {
+      "id": "q.cvl.representaciones.002", "notion": "cvl.representaciones.cine", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Que dénonce le terme « pornomiseria » ?",
+      "choix": [
+        { "id": "a", "texte": "L'exploitation spectaculaire de la pauvreté à l'écran", "correct": true, "explication": "Critique formulée par Ospina et Mayolo (Agarrando pueblo, 1978)." },
+        { "id": "b", "texte": "La censure des films", "correct": false, "explication": "Sans rapport." },
+        { "id": "c", "texte": "Le cinéma pornographique", "correct": false, "explication": "Lecture littérale erronée." },
+        { "id": "d", "texte": "Le manque de financement du cinéma", "correct": false, "explication": "Sans rapport." }
+      ]
+    },
+    {
+      "id": "q.cvl.representaciones.003", "notion": "cvl.representaciones.metodo-imagen", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Comment dit-on « contre-plongée » en espagnol ?",
+      "choix": [
+        { "id": "a", "texte": "Contrapicado", "correct": true, "explication": "Caméra placée sous le sujet." },
+        { "id": "b", "texte": "Picado", "correct": false, "explication": "Plongée." },
+        { "id": "c", "texte": "Primer plano", "correct": false, "explication": "Gros plan." },
+        { "id": "d", "texte": "Fuera de campo", "correct": false, "explication": "Hors-champ." }
+      ]
+    },
+    {
+      "id": "q.cvl.representaciones.004", "notion": "cvl.representaciones.metodo-imagen", "format": "multiple", "niveau": 2, "competence": "interpreter",
+      "enonce": "Une séquence filmée caméra à l'épaule, en plans serrés, dans une ruelle de favela, peut produire quels effets ?",
+      "choix": [
+        { "id": "a", "texte": "Un effet de réalisme documentaire", "correct": true, "explication": "Instabilité de l'image." },
+        { "id": "b", "texte": "Un sentiment d'urgence ou d'oppression", "correct": true, "explication": "Espace resserré, mouvement." },
+        { "id": "c", "texte": "Une vision panoramique et distanciée de la ville", "correct": false, "explication": "Ce serait un plan général fixe." },
+        { "id": "d", "texte": "L'immersion du spectateur dans le point de vue des personnages", "correct": true, "explication": "Caméra subjective ou proche." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.cvl.representaciones.001", "notions": ["cvl.representaciones.cine"],
+      "question": "Citez des films clés sur la ville latino-américaine et les débats qu'ils soulèvent.",
+      "reponse": "Los olvidados (Buñuel, 1950) ; Rio, 40 graus (1955) ; esthétique de la faim (Rocha, 1965) ; Agarrando pueblo (1978) et la pornomiseria ; Rodrigo D. (1990) et La vendedora de rosas (1998) de Gaviria ; Cidade de Deus (2002) et la « cosmétique de la faim » ; Amores perros (2000), Elefante blanco (2012), Roma (2018). Débat : dénoncer ou esthétiser la misère.",
+      "indispensables": ["Buñuel", "Rocha", "Pornomiseria", "Cidade de Deus et sa critique"]
+    },
+    {
+      "id": "f.cvl.representaciones.002", "notions": ["cvl.representaciones.metodo-imagen"],
+      "question": "Quel vocabulaire espagnol utiliser pour analyser une image ?",
+      "reponse": "Plano general / medio / primer plano ; picado / contrapicado ; encuadre ; cámara en mano ; travelling, panorámica ; montaje ; fuera de campo ; luz, colores, composición. Méthode : presentación, descripción, análisis de los recursos, interpretación, conclusión.",
+      "indispensables": ["Plans", "Angles", "Méthode en cinq étapes"],
+      "erreurs": ["Confondre picado et contrapicado"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.cvl.representaciones.01", "notions": ["cvl.representaciones.metodo-imagen", "cvl.representaciones.cine", "cvl.informalidad.asentamientos"], "type": "analyse", "niveau": 2, "fictif": true,
+      "titre": "Analyser l'ouverture d'un film sur un barrio",
+      "enonce": "Séquence (fictive) : 1) plano general aérien sur une colline couverte de maisons de brique ; 2) travelling descendant vers une ruelle ; 3) cámara en mano suivant un adolescent qui court ; 4) primer plano de son visage essoufflé ; 5) bruit de sirène hors champ.",
+      "questions": [
+        { "id": "1", "consigne": "Quel plan situe l'espace urbain ?", "reponse": { "type": "choix", "options": ["Plan 1", "Plan 3", "Plan 4"], "correcte": 0 }, "correction": ["Le plano general aérien montre l'échelle du quartier."] },
+        { "id": "2", "consigne": "Rédigez en espagnol un paragraphe d'interprétation de la séquence.",
+          "reponse": { "type": "libre", "criteres": ["Passage du collectif à l'individuel", "Effet de la cámara en mano (urgence, réalisme)", "Rôle du fuera de campo (menace policière ou violence suggérée)", "Question du point de vue (extérieur / intérieur)"],
+            "corrige": "La secuencia pasa de un plano general aéreo, que presenta el barrio como una masa anónima de ladrillo, a la escala de un individuo. El travelling descendente nos introduce en el espacio, y la cámara en mano, inestable, crea un efecto de urgencia y de realismo documental. El primer plano del rostro sudado favorece la identificación con el adolescente, mientras que la sirena fuera de campo sugiere una amenaza sin mostrarla. Así, el director construye una mirada desde el interior del barrio, aunque la toma aérea inicial recuerda la visión exterior y distante que suele imponerse a estos espacios." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}
