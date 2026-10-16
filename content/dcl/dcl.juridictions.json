@@ -1,0 +1,142 @@
+{
+  "chapitre": "dcl.juridictions",
+  "notions": [
+    {
+      "id": "dcl.juridictions.angleterre",
+      "titre": "L'organisation judiciaire anglaise et britannique",
+      "niveau": "F",
+      "prerequis": ["dcl.systemes.precedent"],
+      "connexes": ["dcl.juridictions.usa", "dcl.juridictions.brexit"],
+      "question": "Devant quelle juridiction un litige commercial est-il porté en Angleterre, et qui juge en dernier ressort ?",
+      "definition": "Le Royaume-Uni comprend trois systèmes juridiques distincts : Angleterre et pays de Galles, Écosse (système mixte), Irlande du Nord. En Angleterre et au pays de Galles, en matière civile, les affaires de faible montant relèvent des County Courts ; les affaires importantes de la High Court, divisée en King's Bench Division (appelée Queen's Bench Division jusqu'en septembre 2022), Chancery Division et Family Division. Les litiges commerciaux complexes sont traités par les Business and Property Courts, dont la Commercial Court (rattachée à la King's Bench Division). Les appels vont à la Court of Appeal (Civil Division), puis, sur autorisation, à la Supreme Court of the United Kingdom, créée par le Constitutional Reform Act 2005 et opérationnelle depuis 2009 (elle a remplacé l'Appellate Committee de la House of Lords).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Niveau", "Juridiction civile (Angleterre et pays de Galles)"], "lignes": [
+          ["Suprême", "Supreme Court of the United Kingdom (depuis 2009)"],
+          ["Appel", "Court of Appeal (Civil Division)"],
+          ["Première instance (affaires importantes)", "High Court : King's Bench Division (dont Commercial Court), Chancery Division, Family Division"],
+          ["Première instance (affaires courantes)", "County Courts"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Cour suprême du Royaume-Uni", "en": "Supreme Court of the United Kingdom (UKSC)", "es": "Tribunal Supremo del Reino Unido", "definition": "Plus haute juridiction du Royaume-Uni depuis 2009." },
+        { "fr": "Cour d'appel", "en": "Court of Appeal", "es": "Tribunal de Apelación", "definition": "Juridiction d'appel en Angleterre et au pays de Galles." },
+        { "fr": "Haute Cour de justice", "en": "High Court of Justice", "es": "Tribunal Superior de Justicia", "definition": "Juridiction de première instance pour les affaires importantes." },
+        { "fr": "Juge", "en": "judge / justice", "es": "juez / magistrado", "definition": "Magistrat qui tranche les litiges." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un litige de 8 M£ entre un affréteur et un armateur sur l'interprétation d'une charte-partie est jugé en première instance par la Commercial Court ; l'appel est porté devant la Court of Appeal, puis, avec autorisation, devant la Supreme Court." },
+      "confusions": [
+        { "a": "House of Lords (avant 2009, fonction judiciaire)", "b": "Supreme Court (depuis 2009)", "explication": "La fonction juridictionnelle suprême a été transférée à une cour distincte du Parlement." }
+      ],
+      "verification": ["Quelle juridiction a remplacé la House of Lords dans sa fonction judiciaire, et depuis quand ?"],
+      "sources": ["src.harvey"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.juridictions.usa",
+      "titre": "L'organisation judiciaire américaine : fédéral et États",
+      "niveau": "F",
+      "prerequis": ["dcl.systemes.civil-common"],
+      "connexes": ["dcl.ucc.article2"],
+      "question": "Un litige contractuel avec une société américaine relève-t-il d'un tribunal fédéral ou d'un tribunal d'État ?",
+      "definition": "Les États-Unis connaissent une double organisation judiciaire. Les juridictions fédérales comprennent les District Courts (première instance, 94 districts), les Courts of Appeals (13 circuits) et la Supreme Court (neuf juges), qui choisit les affaires qu'elle examine. Chaque État a ses propres juridictions, dont une cour suprême d'État. Le droit des contrats relève principalement du droit de chaque État (common law de l'État et Uniform Commercial Code adopté par l'État). Les tribunaux fédéraux sont compétents notamment pour les questions de droit fédéral (federal question) et les litiges entre citoyens d'États différents ou impliquant un étranger, au-delà d'un certain montant (diversity jurisdiction) ; ils appliquent alors le droit de l'État concerné aux questions de contrat.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Niveau", "Fédéral", "État (ex. New York)"], "lignes": [
+          ["Suprême", "U.S. Supreme Court", "Court of Appeals (plus haute cour de l'État de New York)"],
+          ["Appel", "U.S. Courts of Appeals (circuits)", "Appellate Division"],
+          ["Première instance", "U.S. District Courts", "Supreme Court of New York (première instance, malgré son nom)"]
+        ] },
+        { "type": "attention", "texte": "Les noms varient d'un État à l'autre : dans l'État de New York, la « Supreme Court » est une juridiction de première instance." }
+      ],
+      "termes": [
+        { "fr": "Tribunal fédéral de district", "en": "U.S. District Court", "es": "tribunal federal de distrito", "definition": "Juridiction fédérale de première instance." },
+        { "fr": "Compétence fondée sur la diversité de citoyenneté", "en": "diversity jurisdiction", "es": "jurisdicción por diversidad de ciudadanía", "definition": "Compétence fédérale pour les litiges entre citoyens d'États différents ou avec un étranger." },
+        { "fr": "Fédéralisme", "en": "federalism", "es": "federalismo", "definition": "Partage des compétences entre l'État fédéral et les États." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une société française assigne un distributeur texan pour 2 M$ d'impayés : elle peut saisir le tribunal d'État au Texas ou, au titre de la diversity jurisdiction, la U.S. District Court du district concerné ; dans les deux cas, le droit du Texas (dont son UCC) s'appliquera au contrat, sauf clause de choix de loi." },
+      "confusions": [
+        { "a": "Droit fédéral", "b": "Droit des contrats", "explication": "Le droit des contrats est essentiellement un droit des États." }
+      ],
+      "verification": ["Pourquoi un même contrat peut-il être soumis à des règles différentes selon l'État américain ?"],
+      "sources": ["src.harvey", "src.ucc"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Seuil de montant de la diversity jurisdiction (75 000 $ selon 28 U.S.C. § 1332) : vérifier la valeur en vigueur."
+    },
+    {
+      "id": "dcl.juridictions.brexit",
+      "titre": "Conséquences du Brexit sur les litiges : CJUE, jugements, Conventions de La Haye",
+      "niveau": "A",
+      "prerequis": ["dcl.juridictions.angleterre", "dai.conflits.juridiction"],
+      "connexes": ["dai.litiges.exequatur", "dai.litiges.new-york"],
+      "question": "Qu'a changé le Brexit pour une entreprise française en litige avec un partenaire anglais ?",
+      "definition": "Depuis la fin de la période de transition, le 31 décembre 2020, le règlement Bruxelles I bis ne s'applique plus entre le Royaume-Uni et l'UE : les jugements anglais ne circulent plus automatiquement dans l'UE, et inversement. La demande d'adhésion du Royaume-Uni à la Convention de Lugano n'a pas été acceptée par l'UE. La Convention de La Haye du 30 juin 2005 sur les accords d'élection de for, à laquelle le Royaume-Uni a adhéré en son nom propre, permet la reconnaissance des jugements rendus sur le fondement d'une clause attributive de juridiction exclusive. La Convention de La Haye du 2 juillet 2019 sur les jugements, en vigueur pour l'UE depuis le 1er septembre 2023 et pour le Royaume-Uni depuis le 1er juillet 2025, facilite la circulation des jugements dans les procédures introduites après cette date. Les arrêts de la CJUE ne lient plus les juridictions britanniques. Le Royaume-Uni n'est pas partie à la CVIM. L'arbitrage, couvert par la Convention de New York, n'a pas été affecté.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Question", "Avant le 1er janvier 2021", "Depuis"], "lignes": [
+          ["Circulation des jugements UE ↔ Royaume-Uni", "Bruxelles I bis (sans exequatur)", "Conventions de La Haye 2005 / 2019 ou droit national"],
+          ["Loi applicable au contrat", "Rome I", "Rome I dans l'UE ; règles reprises en droit britannique"],
+          ["Sentences arbitrales", "Convention de New York", "Inchangé"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Accord d'élection de for", "en": "choice of court agreement", "es": "acuerdo de elección de foro", "definition": "Clause désignant le tribunal compétent." },
+        { "fr": "Période de transition", "en": "transition period", "es": "período transitorio", "definition": "Période (2020) pendant laquelle le droit de l'UE a continué de s'appliquer au Royaume-Uni." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un exportateur français signe en 2026 un contrat avec un distributeur de Manchester. Pour faciliter l'exécution d'une décision, il choisit soit une clause attributive exclusive au profit d'un tribunal de l'UE ou du Royaume-Uni (Convention de La Haye de 2005), soit un arbitrage (Convention de New York), qui reste la solution la plus prévisible." },
+      "confusions": [
+        { "a": "Brexit", "b": "Fin du droit anglais des contrats", "explication": "Le droit anglais reste très utilisé dans les contrats internationaux ; c'est la circulation des jugements avec l'UE qui a changé." }
+      ],
+      "verification": ["Pourquoi l'arbitrage est-il souvent recommandé dans les contrats franco-britanniques depuis le Brexit ?"],
+      "sources": ["src.la-haye", "src.bruxelles1bis", "src.new-york-1958"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Dates d'entrée en vigueur de la Convention de La Haye de 2019 pour le Royaume-Uni et règles transitoires : vérifier sur hcch.net."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dcl.juridictions.001", "notion": "dcl.juridictions.angleterre", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelle est la plus haute juridiction du Royaume-Uni depuis 2009 ?",
+      "choix": [
+        { "id": "a", "texte": "La Supreme Court of the United Kingdom", "correct": true, "explication": "Créée par le Constitutional Reform Act 2005." },
+        { "id": "b", "texte": "La House of Lords", "correct": false, "explication": "Sa fonction judiciaire a été transférée en 2009." },
+        { "id": "c", "texte": "La High Court", "correct": false, "explication": "Juridiction de première instance." },
+        { "id": "d", "texte": "La Court of Appeal", "correct": false, "explication": "Juridiction d'appel intermédiaire." }
+      ]
+    },
+    {
+      "id": "q.dcl.juridictions.002", "notion": "dcl.juridictions.angleterre", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Un litige complexe sur un contrat de vente internationale de grande valeur sera jugé en première instance, en Angleterre, par :",
+      "choix": [
+        { "id": "a", "texte": "La Commercial Court (King's Bench Division de la High Court)", "correct": true, "explication": "Juridiction spécialisée des litiges commerciaux." },
+        { "id": "b", "texte": "La Supreme Court", "correct": false, "explication": "Elle ne juge pas en première instance." },
+        { "id": "c", "texte": "Un Magistrates' court", "correct": false, "explication": "Compétent surtout en matière pénale mineure." },
+        { "id": "d", "texte": "La Court of Appeal", "correct": false, "explication": "Juridiction d'appel." }
+      ]
+    },
+    {
+      "id": "q.dcl.juridictions.003", "notion": "dcl.juridictions.usa", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : aux États-Unis, le droit des contrats est principalement un droit fédéral uniforme.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "Il relève principalement du droit de chaque État." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "Common law de l'État et UCC adopté par chaque État." }
+      ]
+    },
+    {
+      "id": "q.dcl.juridictions.004", "notion": "dcl.juridictions.brexit", "format": "multiple", "niveau": 3, "competence": "comprendre",
+      "enonce": "Quelles affirmations sur les conséquences du Brexit sont exactes ?",
+      "choix": [
+        { "id": "a", "texte": "Bruxelles I bis ne s'applique plus entre l'UE et le Royaume-Uni", "correct": true, "explication": "Depuis le 1er janvier 2021." },
+        { "id": "b", "texte": "Le Royaume-Uni est devenu partie à la Convention de Lugano", "correct": false, "explication": "L'UE n'a pas donné son accord." },
+        { "id": "c", "texte": "La Convention de New York continue de s'appliquer aux sentences arbitrales", "correct": true, "explication": "Le Royaume-Uni y est partie indépendamment de l'UE." },
+        { "id": "d", "texte": "Le Royaume-Uni applique la Convention de La Haye de 2005 sur les accords d'élection de for", "correct": true, "explication": "Il y a adhéré en son nom propre." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dcl.juridictions.001", "notions": ["dcl.juridictions.angleterre", "dcl.juridictions.usa", "dcl.juridictions.brexit"],
+      "question": "Décrivez l'organisation judiciaire civile anglaise et américaine, et les conséquences du Brexit pour les litiges avec l'UE.",
+      "reponse": "Angleterre et pays de Galles : County Courts ; High Court (King's Bench, dont Commercial Court ; Chancery ; Family) ; Court of Appeal ; Supreme Court du Royaume-Uni (depuis 2009). États-Unis : double système ; fédéral (District Courts, Courts of Appeals, Supreme Court) et États ; droit des contrats propre à chaque État ; compétence fédérale pour federal question et diversity. Brexit : fin de Bruxelles I bis depuis le 1er janvier 2021, pas de Lugano ; La Haye 2005 (clauses exclusives) et La Haye 2019 (en vigueur pour le Royaume-Uni depuis juillet 2025) ; arbitrage inchangé (New York) ; CJUE sans autorité au Royaume-Uni.",
+      "indispensables": ["Hiérarchie anglaise", "Double organisation américaine", "Fin de Bruxelles I bis", "Conventions de La Haye et arbitrage"],
+      "erreurs": ["Situer la House of Lords au sommet actuel"]
+    }
+  ]
+}

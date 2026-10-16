@@ -1,0 +1,184 @@
+{
+  "chapitre": "dcl.systemes",
+  "notions": [
+    {
+      "id": "dcl.systemes.civil-common",
+      "titre": "Civil law et common law",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["dcl.systemes.precedent", "dcl.systemes.statutes"],
+      "question": "Pourquoi un juriste français et un juriste anglais ne raisonnent-ils pas de la même façon ?",
+      "definition": "Les systèmes de tradition civiliste (civil law : France, Espagne, Allemagne, Amérique latine) reposent principalement sur des codes et des lois écrites, de portée générale, que le juge applique et interprète ; la doctrine y joue un rôle important. Les systèmes de common law (Angleterre et pays de Galles, États-Unis, Canada hors Québec, Australie, Inde…) se sont construits historiquement à partir des décisions des juges, qui forment des précédents obligatoires ; la loi (statute) y est abondante mais s'insère dans un ensemble jurisprudentiel. La procédure de common law est accusatoire (adversarial) : les parties mènent le procès devant un juge arbitre ; la procédure civiliste laisse traditionnellement au juge un rôle plus actif.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "Civil law", "Common law"], "lignes": [
+          ["Source principale", "Codes et lois", "Précédents judiciaires (case law) et lois (statutes)"],
+          ["Raisonnement", "Déductif : de la règle générale au cas", "Inductif et analogique : de cas en cas"],
+          ["Rôle du juge", "Applique la loi ; jurisprudence influente mais en principe non obligatoire", "Crée et fait évoluer le droit ; précédent obligatoire"],
+          ["Contrats", "Plus courts, renvoient au Code civil", "Longs et détaillés, définissent les termes"],
+          ["Procédure", "Plus inquisitoire", "Accusatoire (adversarial), rôle de la preuve et du contre-interrogatoire"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Common law", "en": "common law", "es": "common law / derecho anglosajón", "definition": "Système juridique fondé historiquement sur les précédents judiciaires." },
+        { "fr": "Tradition civiliste", "en": "civil law tradition", "es": "tradición romano-germánica / derecho civil", "definition": "Système fondé principalement sur des codes écrits." },
+        { "fr": "Jurisprudence (au sens de décisions)", "en": "case law", "es": "jurisprudencia", "definition": "Ensemble des décisions de justice." },
+        { "fr": "Procédure accusatoire", "en": "adversarial system", "es": "sistema adversarial / acusatorio", "definition": "Procédure conduite par les parties devant un juge arbitre." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un contrat de distribution soumis au droit français fait 12 pages et renvoie au Code civil pour ce qu'il ne prévoit pas. Le même contrat soumis au droit anglais fait 40 pages : il définit chaque terme (« Definitions »), prévoit chaque hypothèse et limite les obligations implicites, car il n'existe pas de code général des contrats." },
+      "confusions": [
+        { "a": "« Common law » (système juridique)", "b": "« Common law » (droit d'origine jurisprudentielle, par opposition à equity ou à statute)", "explication": "L'expression a plusieurs sens selon le contexte." }
+      ],
+      "verification": ["Citez trois différences entre civil law et common law."],
+      "sources": ["src.harvey"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.systemes.precedent",
+      "titre": "Stare decisis, ratio decidendi, obiter dictum",
+      "niveau": "F",
+      "prerequis": ["dcl.systemes.civil-common"],
+      "connexes": ["dcl.juridictions.angleterre", "dcl.systemes.statutes"],
+      "question": "Qu'est-ce qui, dans une décision de justice anglaise, s'impose aux juges des affaires suivantes ?",
+      "definition": "La règle du précédent (stare decisis, « s'en tenir à ce qui a été décidé ») oblige les juridictions à suivre les décisions des juridictions supérieures (précédent vertical) et, dans une certaine mesure, leurs propres décisions antérieures. Seule la ratio decidendi est obligatoire : le principe juridique nécessaire à la solution, au regard des faits essentiels. Les obiter dicta (remarques faites « en passant ») n'ont qu'une autorité persuasive. Le juge peut écarter un précédent en le distinguant (distinguishing : les faits essentiels sont différents) ; une juridiction supérieure peut l'infirmer (overruling). Depuis le Practice Statement de 1966, la plus haute juridiction (aujourd'hui la Supreme Court) peut s'écarter de ses propres précédents.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Notion", "Signification"], "lignes": [
+          ["Binding precedent", "Précédent obligatoire (juridiction supérieure, ratio decidendi)"],
+          ["Persuasive precedent", "Précédent influent mais non obligatoire (obiter dicta, juridictions étrangères ou inférieures)"],
+          ["Distinguishing", "Écarter un précédent car les faits essentiels diffèrent"],
+          ["Overruling", "Une juridiction supérieure renverse un précédent dans une autre affaire"],
+          ["Reversing", "La juridiction d'appel infirme la décision dans la même affaire"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Règle du précédent", "en": "doctrine of precedent / stare decisis", "es": "doctrina del precedente / stare decisis", "definition": "Obligation de suivre les décisions antérieures des juridictions supérieures." },
+        { "fr": "Ratio decidendi", "en": "ratio decidendi", "es": "ratio decidendi", "definition": "Motif juridique nécessaire à la décision, obligatoire." },
+        { "fr": "Obiter dictum", "en": "obiter dictum (pl. obiter dicta)", "es": "obiter dictum", "definition": "Remarque incidente, non obligatoire." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une Court of Appeal a jugé qu'une offre affichée en vitrine est une simple invitation à entrer en pourparlers. Un juge de la High Court saisi d'un cas comparable doit appliquer cette ratio ; il peut toutefois distinguer l'affaire si l'affichage comportait une promesse ferme (« les dix premiers clients obtiendront… »)." },
+      "confusions": [
+        { "a": "Overruling (autre affaire, précédent renversé)", "b": "Reversing (même affaire, décision infirmée en appel)", "explication": "Deux mécanismes distincts." }
+      ],
+      "verification": ["Pourquoi un obiter dictum n'est-il pas obligatoire ?"],
+      "sources": ["src.harvey"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.systemes.equity",
+      "titre": "L'equity et ses remèdes",
+      "niveau": "F",
+      "prerequis": ["dcl.systemes.civil-common"],
+      "connexes": ["dcl.inexecution.equitable", "dcl.formation.consideration"],
+      "question": "Qu'est-ce que l'equity, et pourquoi existe-t-elle à côté de la common law ?",
+      "definition": "Historiquement, la common law était appliquée par les cours royales selon des formes rigides et n'offrait guère d'autre remède que les dommages-intérêts. Pour corriger ses insuffisances, le Chancelier, puis la Court of Chancery, ont développé un ensemble de règles fondées sur la conscience et l'équité : l'equity. Les Judicature Acts de 1873-1875 ont fusionné l'administration des deux ordres, mais les règles d'equity subsistent et priment en cas de conflit. Les remèdes d'equity sont discrétionnaires : exécution forcée en nature (specific performance), injonction (injunction), rescision (rescission), rectification. Le juge les accorde selon des maximes comme « He who comes to equity must come with clean hands » ou « Delay defeats equity ». L'equity est aussi à l'origine du trust et de la promissory estoppel.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "Common law", "Equity"], "lignes": [
+          ["Remède principal", "Dommages-intérêts (damages), de droit", "Specific performance, injunction, rescission, rectification"],
+          ["Caractère", "Obtenu de plein droit si la faute est prouvée", "Discrétionnaire"],
+          ["Principe directeur", "Règle", "Conscience, équité, maximes"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Equity", "en": "equity", "es": "equity (equidad)", "definition": "Corps de règles complémentaires développé par la Court of Chancery." },
+        { "fr": "Remède discrétionnaire", "en": "discretionary remedy", "es": "remedio discrecional", "definition": "Remède que le juge peut refuser même si les conditions sont réunies." },
+        { "fr": "Maxime d'equity", "en": "maxim of equity", "es": "máxima de equidad", "definition": "Principe guidant le juge en equity." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un vendeur refuse de livrer un tableau unique promis à un collectionneur. Des dommages-intérêts ne permettraient pas d'acheter le même tableau ailleurs : le juge peut ordonner la specific performance. Mais si l'acheteur a lui-même agi de mauvaise foi, le juge peut la refuser (clean hands)." },
+      "confusions": [
+        { "a": "Equity (corps de règles anglais)", "b": "Équité (sens général de justice)", "explication": "L'equity est un ensemble technique de règles et de remèdes, pas un appel général à la justice." }
+      ],
+      "verification": ["Pourquoi les remèdes d'equity sont-ils qualifiés de discrétionnaires ?"],
+      "sources": ["src.harvey"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.systemes.statutes",
+      "titre": "Statute law et case law",
+      "niveau": "F",
+      "prerequis": ["dcl.systemes.precedent"],
+      "connexes": ["dcl.contenu.terms", "dcl.contenu.exclusion"],
+      "question": "Quelle place la loi écrite occupe-t-elle dans un système de common law ?",
+      "definition": "Le statute law désigne les lois adoptées par le Parlement (Acts of Parliament) et les textes pris en application (secondary legislation). En vertu de la souveraineté parlementaire, une loi prévaut sur la case law et peut l'écarter. En droit des contrats anglais, de nombreuses règles sont jurisprudentielles, mais des lois importantes s'y ajoutent : Sale of Goods Act 1979, Unfair Contract Terms Act 1977, Misrepresentation Act 1967, Contracts (Rights of Third Parties) Act 1999, Consumer Rights Act 2015. Pour interpréter les lois, les juges ont utilisé plusieurs méthodes : littérale (literal rule), golden rule (éviter une absurdité), mischief rule (rechercher le défaut que la loi voulait corriger), et aujourd'hui surtout l'approche téléologique (purposive approach).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Méthode d'interprétation", "Principe"], "lignes": [
+          ["Literal rule", "Sens ordinaire des mots"],
+          ["Golden rule", "S'écarter du sens littéral s'il conduit à une absurdité"],
+          ["Mischief rule", "Rechercher le problème que la loi voulait résoudre"],
+          ["Purposive approach", "Interpréter selon la finalité de la loi"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Loi (du Parlement)", "en": "statute / Act of Parliament", "es": "ley parlamentaria", "definition": "Texte adopté par le Parlement." },
+        { "fr": "Souveraineté parlementaire", "en": "parliamentary sovereignty", "es": "soberanía parlamentaria", "definition": "Principe selon lequel le Parlement peut faire ou défaire toute loi." },
+        { "fr": "Interprétation téléologique", "en": "purposive approach", "es": "interpretación teleológica", "definition": "Interprétation selon le but du texte." }
+      ],
+      "exemple": { "fictif": true, "texte": "Le droit anglais de la vente entre professionnels combine la case law (formation du contrat, remèdes) et le Sale of Goods Act 1979 qui impose des conditions implicites (titre, conformité à la description, qualité satisfaisante, adaptation à l'usage)." },
+      "confusions": [
+        { "a": "Statute (loi)", "b": "Code (au sens français)", "explication": "Les lois anglaises traitent des questions précises ; elles ne forment pas un code général des contrats." }
+      ],
+      "verification": ["Citez deux lois anglaises importantes en droit des contrats."],
+      "sources": ["src.uk-statutes", "src.harvey"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dcl.systemes.001", "notion": "dcl.systemes.civil-common", "format": "multiple", "niveau": 1, "competence": "distinguer",
+      "enonce": "Quelles caractéristiques sont typiques de la common law ?",
+      "choix": [
+        { "id": "a", "texte": "Le précédent judiciaire obligatoire", "correct": true, "explication": "Stare decisis." },
+        { "id": "b", "texte": "Un code civil général des contrats", "correct": false, "explication": "Caractéristique des systèmes civilistes." },
+        { "id": "c", "texte": "Une procédure accusatoire", "correct": true, "explication": "Les parties mènent le procès." },
+        { "id": "d", "texte": "Des contrats longs et détaillés", "correct": true, "explication": "Faute de code, les parties prévoient tout." }
+      ]
+    },
+    {
+      "id": "q.dcl.systemes.002", "notion": "dcl.systemes.precedent", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Quelle partie d'une décision constitue le précédent obligatoire ?",
+      "choix": [
+        { "id": "a", "texte": "La ratio decidendi", "correct": true, "explication": "Le principe juridique nécessaire à la solution." },
+        { "id": "b", "texte": "Les obiter dicta", "correct": false, "explication": "Ils ne sont que persuasifs." },
+        { "id": "c", "texte": "Le résumé des faits", "correct": false, "explication": "Les faits ne sont pas une règle." },
+        { "id": "d", "texte": "Les arguments des avocats", "correct": false, "explication": "Ils ne font pas partie de la décision." }
+      ]
+    },
+    {
+      "id": "q.dcl.systemes.003", "notion": "dcl.systemes.precedent", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Un juge refuse d'appliquer un précédent parce que les faits essentiels de l'affaire sont différents. Il pratique :",
+      "choix": [
+        { "id": "a", "texte": "Le distinguishing", "correct": true, "explication": "Il distingue l'affaire du précédent." },
+        { "id": "b", "texte": "L'overruling", "correct": false, "explication": "Réservé à une juridiction de rang suffisant qui renverse le précédent." },
+        { "id": "c", "texte": "Le reversing", "correct": false, "explication": "Infirmation en appel dans la même affaire." },
+        { "id": "d", "texte": "La golden rule", "correct": false, "explication": "Méthode d'interprétation des lois." }
+      ]
+    },
+    {
+      "id": "q.dcl.systemes.004", "notion": "dcl.systemes.equity", "format": "multiple", "niveau": 2, "competence": "memoriser",
+      "enonce": "Lesquels sont des remèdes d'equity ?",
+      "choix": [
+        { "id": "a", "texte": "Specific performance", "correct": true, "explication": "Exécution forcée en nature." },
+        { "id": "b", "texte": "Injunction", "correct": true, "explication": "Ordre de faire ou de ne pas faire." },
+        { "id": "c", "texte": "Damages", "correct": false, "explication": "Remède de common law." },
+        { "id": "d", "texte": "Rescission", "correct": true, "explication": "Anéantissement du contrat." }
+      ]
+    },
+    {
+      "id": "q.dcl.systemes.005", "notion": "dcl.systemes.statutes", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "En cas de contradiction entre une loi récente du Parlement et une règle jurisprudentielle, que retient le juge anglais ?",
+      "choix": [
+        { "id": "a", "texte": "La loi, en vertu de la souveraineté parlementaire", "correct": true, "explication": "Le statute prévaut sur la case law." },
+        { "id": "b", "texte": "La jurisprudence, qui est la source principale", "correct": false, "explication": "La loi l'emporte." },
+        { "id": "c", "texte": "Il choisit librement", "correct": false, "explication": "La hiérarchie est claire." },
+        { "id": "d", "texte": "Il saisit la Cour de justice de l'UE", "correct": false, "explication": "Le Royaume-Uni n'est plus soumis à la CJUE depuis le Brexit, sauf exceptions." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dcl.systemes.001", "notions": ["dcl.systemes.civil-common", "dcl.systemes.precedent", "dcl.systemes.equity", "dcl.systemes.statutes"],
+      "question": "Expliquez ce qui caractérise la common law : précédent, equity, place de la loi.",
+      "reponse": "Common law : droit construit par les décisions des juges, précédent obligatoire (stare decisis) ; seule la ratio decidendi lie, les obiter dicta sont persuasifs ; distinguishing et overruling permettent l'évolution ; la Supreme Court peut s'écarter de ses précédents (Practice Statement 1966). Equity : règles développées par la Court of Chancery pour corriger la rigidité de la common law ; remèdes discrétionnaires (specific performance, injunction, rescission, rectification) ; administration fusionnée en 1873-1875. Statutes : lois du Parlement, qui priment sur la case law (souveraineté parlementaire) ; interprétation littérale, golden rule, mischief rule, approche téléologique.",
+      "indispensables": ["Stare decisis et ratio decidendi", "Rôle et remèdes de l'equity", "Primauté de la loi", "Comparaison avec la civil law"],
+      "erreurs": ["Penser que la common law ignore la loi écrite"]
+    }
+  ]
+}
