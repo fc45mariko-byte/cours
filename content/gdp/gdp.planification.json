@@ -1,0 +1,300 @@
+{
+  "chapitre": "gdp.planification",
+  "notions": [
+    {
+      "id": "gdp.planification.anteriorites",
+      "titre": "Le tableau des antériorités et les niveaux",
+      "niveau": "F",
+      "prerequis": ["gdp.organisation.wbs"],
+      "connexes": ["gdp.planification.pert", "gdp.planification.mpm"],
+      "question": "Dans quel ordre les tâches doivent-elles s'enchaîner ?",
+      "definition": "Le tableau des antériorités liste, pour chaque tâche, sa durée et les tâches qui doivent être terminées avant qu'elle puisse commencer (antériorités ou prédécesseurs immédiats). On peut en déduire les niveaux : niveau 0 pour les tâches sans antériorité, niveau 1 pour celles qui ne dépendent que de tâches de niveau 0, etc. Ce tableau est la base de la construction du réseau PERT ou MPM.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Tâche", "Libellé", "Durée (jours)", "Antériorités"], "lignes": [
+          ["A", "Réserver l'emplacement du stand", "3", "—"],
+          ["B", "Faire traduire le catalogue", "4", "—"],
+          ["C", "Concevoir le stand", "2", "A"],
+          ["D", "Imprimer le catalogue", "5", "A, B"],
+          ["E", "Fabriquer le stand", "3", "C"],
+          ["F", "Expédier le matériel", "2", "D, E"]
+        ] },
+        { "type": "attention", "texte": "N'indiquer que les antériorités immédiates : si C dépend de A et D de C, inutile d'écrire A comme antériorité de D." }
+      ],
+      "termes": [
+        { "fr": "Antériorité", "en": "predecessor / dependency", "es": "predecesora / precedencia", "definition": "Tâche devant être achevée avant le début d'une autre." },
+        { "fr": "Tâche", "en": "task / activity", "es": "tarea / actividad", "definition": "Unité de travail ayant une durée." }
+      ],
+      "exemple": { "fictif": true, "texte": "Dans le tableau ci-dessus, A et B sont de niveau 0 ; C et D de niveau 1 ; E de niveau 2 ; F de niveau 3 (elle attend E)." },
+      "confusions": [
+        { "a": "Antériorité logique (technique)", "b": "Préférence d'organisation", "explication": "Seules les contraintes réelles (on ne peut pas imprimer avant de traduire) doivent figurer." }
+      ],
+      "verification": ["À quel niveau se trouve une tâche dont les antériorités sont de niveaux 0 et 2 ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.planification.pert",
+      "titre": "Le réseau PERT",
+      "niveau": "F",
+      "prerequis": ["gdp.planification.anteriorites"],
+      "connexes": ["gdp.planification.mpm", "gdp.planification.dates-marges"],
+      "question": "Comment représenter graphiquement l'enchaînement des tâches pour calculer la durée du projet ?",
+      "definition": "Le réseau PERT (Program Evaluation and Review Technique, développé à la fin des années 1950 pour la marine américaine) représente les tâches par des flèches et les étapes (début ou fin de tâches) par des nœuds numérotés. Une tâche part de l'étape qui marque la fin de ses antériorités. Lorsque deux tâches ont des antériorités partiellement communes, on introduit une tâche fictive (flèche en pointillés, durée nulle) pour respecter la logique.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Une seule étape de début et une seule étape de fin",
+          "Chaque tâche = une flèche portant son nom et sa durée",
+          "Les étapes portent la date au plus tôt et la date au plus tard",
+          "Tâche fictive : durée nulle, sert uniquement à exprimer une dépendance"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Réseau PERT", "en": "PERT network / activity-on-arrow diagram", "es": "red PERT", "definition": "Graphe où les tâches sont des flèches et les étapes des nœuds." },
+        { "fr": "Tâche fictive", "en": "dummy activity", "es": "actividad ficticia", "definition": "Flèche de durée nulle exprimant une dépendance." }
+      ],
+      "exemple": { "fictif": true, "texte": "Avec le tableau du salon : A (étape 1 → 2) et B (1 → 3) démarrent au début. C ne dépend que de A, mais D dépend de A et de B : on fait partir C de l'étape 2 et on relie l'étape 2 à l'étape 3 par une tâche fictive, d'où part D." },
+      "confusions": [
+        { "a": "PERT (tâches sur les flèches)", "b": "MPM (tâches sur les nœuds)", "explication": "Les deux méthodes donnent les mêmes dates ; seule la représentation change." }
+      ],
+      "verification": ["Dans quel cas a-t-on besoin d'une tâche fictive en PERT ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.planification.mpm",
+      "titre": "La méthode MPM (méthode des potentiels)",
+      "niveau": "A",
+      "prerequis": ["gdp.planification.anteriorites"],
+      "connexes": ["gdp.planification.pert", "gdp.planification.dates-marges"],
+      "question": "Existe-t-il une représentation plus simple que le PERT, sans tâches fictives ?",
+      "definition": "La méthode des potentiels Métra (MPM), mise au point en France par Bernard Roy à la fin des années 1950, représente chaque tâche par un nœud (rectangle) indiquant son nom, sa durée, sa date de début au plus tôt et au plus tard ; les flèches traduisent les liens d'antériorité et portent la durée de la tâche de départ. Elle n'a pas besoin de tâches fictives et s'adapte facilement aux modifications. On ajoute un nœud « Début » et un nœud « Fin ».",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Placer un nœud Début, puis les tâches par niveau, puis un nœud Fin",
+          "Relier chaque tâche à ses successeurs",
+          "Calculer de gauche à droite les dates au plus tôt (maximum des chemins entrants)",
+          "Calculer de droite à gauche les dates au plus tard (minimum des chemins sortants)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Méthode des potentiels (MPM)", "en": "precedence diagramming method / activity-on-node", "es": "método de los potenciales / diagrama de precedencias", "definition": "Graphe où les tâches sont des nœuds." }
+      ],
+      "exemple": { "fictif": true, "texte": "Pour le salon : nœud D (durée 5) reçoit deux flèches, de A (3) et de B (4) ; sa date au plus tôt est max(0 + 3 ; 0 + 4) = 4." },
+      "confusions": [
+        { "a": "Durée portée par la flèche (MPM)", "b": "Durée de la tâche d'arrivée", "explication": "En MPM, la flèche porte la durée de la tâche dont elle part." }
+      ],
+      "verification": ["Pourquoi la méthode MPM n'a-t-elle pas besoin de tâches fictives ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.planification.dates-marges",
+      "titre": "Dates au plus tôt, au plus tard, marges totale et libre",
+      "niveau": "A",
+      "prerequis": ["gdp.planification.mpm"],
+      "connexes": ["gdp.planification.chemin-critique", "gdp.planification.gantt"],
+      "question": "De combien une tâche peut-elle être retardée sans retarder le projet, ou sans gêner les tâches suivantes ?",
+      "definition": "La date au plus tôt d'une tâche est la date à laquelle elle peut commencer au plus tôt, toutes ses antériorités étant terminées (calcul de gauche à droite, en retenant le maximum). La date au plus tard est la date à laquelle elle doit commencer au plus tard pour ne pas retarder la fin du projet (calcul de droite à gauche, en retenant le minimum). La marge totale est le retard possible sans décaler la fin du projet ; la marge libre est le retard possible sans décaler la date au plus tôt d'aucune tâche suivante.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Marge totale = Date de début au plus tard − Date de début au plus tôt" },
+        { "type": "formule", "formule": "Marge libre = min (dates au plus tôt des successeurs) − (date au plus tôt + durée)" },
+        { "type": "tableau", "entetes": ["Tâche", "Durée", "Début au plus tôt", "Début au plus tard", "Marge totale", "Marge libre"], "lignes": [
+          ["A", "3", "0", "1", "1", "0"],
+          ["B", "4", "0", "0", "0", "0"],
+          ["C", "2", "3", "4", "1", "0"],
+          ["D", "5", "4", "4", "0", "0"],
+          ["E", "3", "5", "6", "1", "1"],
+          ["F", "2", "9", "9", "0", "0"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Date au plus tôt", "en": "earliest start (ES)", "es": "fecha más temprana", "definition": "Date de début la plus précoce possible." },
+        { "fr": "Date au plus tard", "en": "latest start (LS)", "es": "fecha más tardía", "definition": "Date de début la plus tardive sans retarder le projet." },
+        { "fr": "Marge totale", "en": "total float / total slack", "es": "holgura total", "definition": "Retard possible sans retarder le projet." },
+        { "fr": "Marge libre", "en": "free float / free slack", "es": "holgura libre", "definition": "Retard possible sans retarder les successeurs." }
+      ],
+      "exemple": { "fictif": true, "texte": "Dans le projet du salon (durée totale 11 jours), la tâche E (fabriquer le stand) a 1 jour de marge totale et 1 jour de marge libre ; A a 1 jour de marge totale mais 0 de marge libre : si A prend un jour de retard, C commence plus tard, sans retarder le projet." },
+      "confusions": [
+        { "a": "Marge totale", "b": "Marge libre", "explication": "La marge libre est toujours inférieure ou égale à la marge totale : consommer la marge totale peut réduire celle des successeurs." }
+      ],
+      "verification": ["Pourquoi la marge libre ne peut-elle pas dépasser la marge totale ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.planification.chemin-critique",
+      "titre": "Le chemin critique",
+      "niveau": "F",
+      "prerequis": ["gdp.planification.dates-marges"],
+      "connexes": ["gdp.planification.gantt", "gdp.pilotage.risques"],
+      "question": "Quelles tâches faut-il surveiller en priorité, parce que leur moindre retard retarde tout le projet ?",
+      "definition": "Le chemin critique est la suite de tâches dont la marge totale est nulle. Il correspond au plus long chemin du réseau, du début à la fin, et sa longueur est la durée minimale du projet. Tout retard d'une tâche critique se répercute sur la date de fin ; pour raccourcir le projet, il faut agir sur ces tâches. Un projet peut avoir plusieurs chemins critiques.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Calculer les dates au plus tôt et au plus tard",
+          "Repérer les tâches de marge totale nulle",
+          "Vérifier qu'elles forment un chemin continu du début à la fin",
+          "Contrôler que la somme de leurs durées égale la durée du projet"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Chemin critique", "en": "critical path", "es": "ruta crítica / camino crítico", "definition": "Suite de tâches à marge nulle déterminant la durée du projet." }
+      ],
+      "exemple": { "fictif": true, "texte": "Projet du salon : chemin critique B → D → F (4 + 5 + 2 = 11 jours). La traduction du catalogue (B) est critique : un jour de retard du traducteur retarde l'expédition et donc la présence au salon." },
+      "confusions": [
+        { "a": "Tâche critique", "b": "Tâche la plus longue", "explication": "Une tâche longue peut avoir de la marge ; une tâche courte peut être critique." }
+      ],
+      "verification": ["Si l'on réduit d'un jour une tâche non critique, la durée du projet diminue-t-elle ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.planification.gantt",
+      "titre": "Le diagramme de Gantt",
+      "niveau": "F",
+      "prerequis": ["gdp.planification.dates-marges"],
+      "connexes": ["gdp.pilotage.valeur-acquise"],
+      "question": "Comment visualiser le calendrier du projet et suivre son avancement ?",
+      "definition": "Le diagramme de Gantt (du nom d'Henry Gantt, au début du XXe siècle) représente les tâches en lignes et le temps en colonnes ; chaque tâche est une barre dont la longueur correspond à sa durée, placée à sa date de début (en général au plus tôt). On peut y faire figurer les marges, les jalons (losanges), les liens d'antériorité, les ressources et l'avancement réel. Très lisible, il est moins adapté que le PERT/MPM pour visualiser les dépendances d'un projet complexe.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Placer les tâches au plus tôt ; représenter la marge par un trait prolongeant la barre",
+          "Marquer les tâches critiques (couleur), les jalons (losanges)",
+          "Tracer la ligne « aujourd'hui » et l'avancement réel pour le suivi",
+          "Tenir compte du calendrier réel (week-ends, congés) et des ressources disponibles"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Diagramme de Gantt", "en": "Gantt chart", "es": "diagrama de Gantt", "definition": "Représentation calendaire des tâches en barres." }
+      ],
+      "exemple": { "fictif": true, "texte": "Gantt du salon : A (jours 0-3), B (0-4), C (3-5), D (4-9), E (5-8, marge 1), F (9-11). Un losange au jour 11 marque le jalon « matériel livré à Madrid »." },
+      "confusions": [
+        { "a": "Gantt (calendrier)", "b": "PERT/MPM (logique des dépendances)", "explication": "On calcule les dates avec le réseau, puis on les visualise sur le Gantt." }
+      ],
+      "verification": ["Quelle information le Gantt montre-t-il moins bien qu'un réseau PERT ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.planification.pert-probabiliste",
+      "titre": "Les durées PERT à trois estimations",
+      "niveau": "A",
+      "prerequis": ["gdp.planification.pert"],
+      "connexes": ["gdp.pilotage.risques"],
+      "question": "Comment estimer la durée d'une tâche incertaine ?",
+      "definition": "Le PERT probabiliste demande trois estimations pour chaque tâche : optimiste (a), la plus probable (m) et pessimiste (b). La durée espérée est une moyenne pondérée qui donne quatre fois plus de poids à l'estimation la plus probable ; l'écart type mesure l'incertitude. Sur le chemin critique, on additionne les durées espérées et les variances pour estimer la probabilité de tenir un délai.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Durée espérée te = (a + 4m + b) ÷ 6        Écart type σ = (b − a) ÷ 6        Variance = σ²" }
+      ],
+      "termes": [
+        { "fr": "Estimation à trois points", "en": "three-point estimate", "es": "estimación de tres valores", "definition": "Estimation optimiste, probable et pessimiste." },
+        { "fr": "Écart type", "en": "standard deviation", "es": "desviación típica / estándar", "definition": "Mesure de la dispersion autour de la moyenne." }
+      ],
+      "exemple": { "fictif": true, "texte": "Dédouanement d'un conteneur : optimiste 4 jours, probable 6, pessimiste 14. te = (4 + 24 + 14) ÷ 6 = 7 jours ; σ = 10 ÷ 6 ≈ 1,67 jour. On planifiera 7 jours plutôt que 6." },
+      "confusions": [
+        { "a": "Durée la plus probable (m)", "b": "Durée espérée (te)", "explication": "Si la distribution est asymétrique (fort risque de retard), te est supérieure à m." }
+      ],
+      "verification": ["Calculez te pour a = 2, m = 3, b = 10."],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.gdp.planification.001", "notion": "gdp.planification.anteriorites", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "A et B n'ont pas d'antériorité ; C dépend de A ; D dépend de B et C. À quel niveau se trouve D ?",
+      "choix": [
+        { "id": "a", "texte": "Niveau 2", "correct": true, "explication": "C est de niveau 1 ; D dépend d'une tâche de niveau 1, donc niveau 2." },
+        { "id": "b", "texte": "Niveau 1", "correct": false, "explication": "D dépend de C, elle-même de niveau 1." },
+        { "id": "c", "texte": "Niveau 0", "correct": false, "explication": "D a des antériorités." },
+        { "id": "d", "texte": "Niveau 3", "correct": false, "explication": "Il n'y a pas de tâche de niveau 2 avant D." }
+      ]
+    },
+    {
+      "id": "q.gdp.planification.002", "notion": "gdp.planification.pert", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Dans un réseau PERT, à quoi sert une tâche fictive ?",
+      "choix": [
+        { "id": "a", "texte": "À représenter une dépendance sans ajouter de durée", "correct": true, "explication": "Elle a une durée nulle." },
+        { "id": "b", "texte": "À représenter une tâche facultative", "correct": false, "explication": "Elle ne représente aucun travail." },
+        { "id": "c", "texte": "À ajouter une marge de sécurité", "correct": false, "explication": "Sa durée est nulle." },
+        { "id": "d", "texte": "À indiquer un jalon", "correct": false, "explication": "Le jalon est une étape, pas une flèche." }
+      ]
+    },
+    {
+      "id": "q.gdp.planification.003", "notion": "gdp.planification.mpm", "format": "vrai-faux", "niveau": 1, "competence": "memoriser",
+      "enonce": "Vrai ou faux : dans la méthode MPM, les tâches sont représentées par les nœuds.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "Les flèches traduisent les liens d'antériorité." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "C'est en PERT que les tâches sont sur les flèches." }
+      ]
+    },
+    {
+      "id": "q.gdp.planification.004", "notion": "gdp.planification.dates-marges", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Une tâche de durée 4 a une date de début au plus tôt de 6 et au plus tard de 9. Ses successeurs commencent au plus tôt à 11. Marge totale et marge libre ?",
+      "choix": [
+        { "id": "a", "texte": "Marge totale 3, marge libre 1", "correct": true, "explication": "MT = 9 − 6 = 3 ; ML = 11 − (6 + 4) = 1." },
+        { "id": "b", "texte": "Marge totale 1, marge libre 3", "correct": false, "explication": "Interversion des deux marges." },
+        { "id": "c", "texte": "Marge totale 3, marge libre 3", "correct": false, "explication": "La marge libre se calcule par rapport aux successeurs." },
+        { "id": "d", "texte": "Marge totale 5, marge libre 1", "correct": false, "explication": "MT = début au plus tard − début au plus tôt." }
+      ]
+    },
+    {
+      "id": "q.gdp.planification.005", "notion": "gdp.planification.chemin-critique", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles affirmations sur le chemin critique sont exactes ?",
+      "choix": [
+        { "id": "a", "texte": "Il est formé des tâches de marge totale nulle", "correct": true, "explication": "Définition." },
+        { "id": "b", "texte": "Sa longueur est la durée minimale du projet", "correct": true, "explication": "C'est le plus long chemin du réseau." },
+        { "id": "c", "texte": "Il comprend toujours la tâche la plus longue", "correct": false, "explication": "Pas nécessairement." },
+        { "id": "d", "texte": "Un projet peut avoir plusieurs chemins critiques", "correct": true, "explication": "Si plusieurs chemins ont la même longueur maximale." }
+      ]
+    },
+    {
+      "id": "q.gdp.planification.006", "notion": "gdp.planification.gantt", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Quel outil est le plus adapté pour présenter le calendrier du projet au commanditaire ?",
+      "choix": [
+        { "id": "a", "texte": "Le diagramme de Gantt", "correct": true, "explication": "Lisible, calé sur le calendrier." },
+        { "id": "b", "texte": "La matrice pouvoir / intérêt", "correct": false, "explication": "Elle analyse les parties prenantes." },
+        { "id": "c", "texte": "Le tableau des antériorités", "correct": false, "explication": "Document de travail, sans calendrier." },
+        { "id": "d", "texte": "La matrice RACI", "correct": false, "explication": "Elle répartit les responsabilités." }
+      ]
+    },
+    {
+      "id": "q.gdp.planification.007", "notion": "gdp.planification.pert-probabiliste", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Estimations : optimiste 3 jours, probable 5 jours, pessimiste 13 jours. Durée espérée ?",
+      "choix": [
+        { "id": "a", "texte": "6 jours", "correct": true, "explication": "(3 + 20 + 13) ÷ 6 = 36 ÷ 6 = 6." },
+        { "id": "b", "texte": "5 jours", "correct": false, "explication": "C'est la durée la plus probable." },
+        { "id": "c", "texte": "7 jours", "correct": false, "explication": "Moyenne simple (21 ÷ 3)." },
+        { "id": "d", "texte": "8 jours", "correct": false, "explication": "Aucun calcul correct ne donne ce résultat." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.gdp.planification.001", "notions": ["gdp.planification.dates-marges", "gdp.planification.chemin-critique"],
+      "question": "Expliquez le calcul des dates au plus tôt et au plus tard, des marges totale et libre, et l'identification du chemin critique.",
+      "reponse": "Dates au plus tôt : de gauche à droite, début = maximum des (début au plus tôt + durée) des antériorités. Dates au plus tard : de droite à gauche, début au plus tard = minimum des débuts au plus tard des successeurs − durée. Marge totale = début au plus tard − début au plus tôt ; marge libre = min des débuts au plus tôt des successeurs − fin au plus tôt. Chemin critique : tâches de marge totale nulle, plus long chemin, durée minimale du projet.",
+      "indispensables": ["Maximum à l'aller, minimum au retour", "Formule de la marge totale", "Formule de la marge libre", "Chemin critique = marge nulle"],
+      "erreurs": ["Prendre le minimum pour les dates au plus tôt"]
+    },
+    {
+      "id": "f.gdp.planification.002", "notions": ["gdp.planification.pert", "gdp.planification.mpm", "gdp.planification.gantt"],
+      "question": "Comparez PERT, MPM et Gantt.",
+      "reponse": "PERT : tâches sur les flèches, étapes sur les nœuds, tâches fictives parfois nécessaires. MPM (Bernard Roy) : tâches sur les nœuds, flèches pour les antériorités, pas de tâche fictive. Les deux calculent dates, marges et chemin critique. Gantt : barres sur un calendrier, très lisible pour communiquer et suivre l'avancement, mais montre moins bien les dépendances.",
+      "indispensables": ["Représentation de chaque méthode", "Tâche fictive propre au PERT", "Usage du Gantt"],
+      "erreurs": ["Penser que PERT et MPM donnent des résultats différents"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.gdp.planification.01", "notions": ["gdp.planification.dates-marges", "gdp.planification.chemin-critique"], "type": "calcul", "niveau": 3, "fictif": true,
+      "titre": "Planifier la participation à un salon",
+      "enonce": "Tâches (durée en jours, antériorités) : A Réserver l'emplacement (3, —) ; B Traduire le catalogue (4, —) ; C Concevoir le stand (2, A) ; D Imprimer le catalogue (5, A et B) ; E Fabriquer le stand (3, C) ; F Expédier le matériel (2, D et E).",
+      "questions": [
+        { "id": "1", "consigne": "Durée minimale du projet (jours) ?", "reponse": { "type": "nombre", "valeur": 11, "tolerance": 0, "unite": "jours" },
+          "correction": ["Débuts au plus tôt : A 0, B 0, C 3, D max(3 ; 4) = 4, E 5, F max(4 + 5 ; 5 + 3) = 9", "Fin : 9 + 2 = 11 jours"] },
+        { "id": "2", "consigne": "Date de début au plus tard de la tâche C ?", "reponse": { "type": "nombre", "valeur": 4, "tolerance": 0 },
+          "correction": ["F au plus tard : 9 ; E au plus tard : 9 − 3 = 6 ; C au plus tard : 6 − 2 = 4"] },
+        { "id": "3", "consigne": "Marge totale de la tâche A ?", "reponse": { "type": "nombre", "valeur": 1, "tolerance": 0, "unite": "jour" },
+          "correction": ["Fin au plus tard de A = min(début au plus tard de C = 4 ; de D = 4) = 4 ; début au plus tard 1", "Marge totale = 1 − 0 = 1"] },
+        { "id": "4", "consigne": "Marge libre de la tâche E ?", "reponse": { "type": "nombre", "valeur": 1, "tolerance": 0, "unite": "jour" },
+          "correction": ["Fin au plus tôt de E : 5 + 3 = 8 ; début au plus tôt de F : 9", "Marge libre = 9 − 8 = 1"] },
+        { "id": "5", "consigne": "Quel est le chemin critique ?", "reponse": { "type": "choix", "options": ["A → C → E → F", "B → D → F", "A → D → F", "B → D"], "correcte": 1 },
+          "correction": ["Marges totales nulles : B, D, F", "4 + 5 + 2 = 11 jours = durée du projet"] }
+      ]
+    }
+  ]
+}

@@ -242,5 +242,29 @@
     "url": "https://eur-lex.europa.eu",
     "acces": "reference",
     "pertinence": "Statut de l'agent commercial"
+  },
+  {
+    "id": "src.pmbok",
+    "titre": "A Guide to the Project Management Body of Knowledge (PMBOK® Guide), 7e édition, 2021",
+    "auteur": "Project Management Institute",
+    "url": "https://www.pmi.org",
+    "acces": "reference",
+    "pertinence": "Référentiel de gestion de projet (parties prenantes, risques, valeur acquise)"
+  },
+  {
+    "id": "src.manifeste-agile",
+    "titre": "Manifeste pour le développement agile de logiciels, 2001",
+    "auteur": "K. Beck et al.",
+    "url": "https://agilemanifesto.org",
+    "acces": "reference",
+    "pertinence": "Valeurs et principes agiles"
+  },
+  {
+    "id": "src.scrum-guide",
+    "titre": "The Scrum Guide, novembre 2020",
+    "auteur": "Ken Schwaber, Jeff Sutherland",
+    "url": "https://scrumguides.org",
+    "acces": "reference",
+    "pertinence": "Rôles, événements et artefacts de Scrum"
   }
 ]

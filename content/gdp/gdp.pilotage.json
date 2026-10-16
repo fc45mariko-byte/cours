@@ -1,0 +1,245 @@
+{
+  "chapitre": "gdp.pilotage",
+  "notions": [
+    {
+      "id": "gdp.pilotage.risques",
+      "titre": "La gestion des risques du projet",
+      "niveau": "F",
+      "prerequis": ["gdp.cadrage.charte"],
+      "connexes": ["gdp.planification.chemin-critique", "ici.risque.risque-pays"],
+      "question": "Comment anticiper ce qui pourrait faire échouer le projet ?",
+      "definition": "Un risque est un événement incertain qui, s'il survient, a un effet sur les objectifs du projet (délai, coût, qualité). La gestion des risques consiste à les identifier, à les évaluer (probabilité et impact, dont le produit donne la criticité), à choisir une réponse et à les suivre dans un registre des risques. Les quatre réponses classiques aux menaces sont : éviter (supprimer la cause, changer de plan), réduire (diminuer probabilité ou impact), transférer (assurance, sous-traitance, clause contractuelle) et accepter (avec éventuellement une réserve pour aléas).",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Criticité = Probabilité × Impact (par exemple sur des échelles de 1 à 4)" },
+        { "type": "tableau", "entetes": ["Réponse", "Exemple (salon à Madrid)"], "lignes": [
+          ["Éviter", "Expédier par la route plutôt que par un transporteur peu fiable"],
+          ["Réduire", "Envoyer le matériel une semaine plus tôt"],
+          ["Transférer", "Assurer les marchandises ; contrat avec pénalités de retard"],
+          ["Accepter", "Prévoir une réserve budgétaire de 5 % pour les imprévus"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Risque", "en": "risk", "es": "riesgo", "definition": "Événement incertain affectant les objectifs." },
+        { "fr": "Registre des risques", "en": "risk register", "es": "registro de riesgos", "definition": "Tableau de suivi des risques identifiés." },
+        { "fr": "Criticité", "en": "risk score / criticality", "es": "criticidad", "definition": "Probabilité × impact." },
+        { "fr": "Plan de contingence", "en": "contingency plan", "es": "plan de contingencia", "definition": "Actions prévues si le risque se réalise." }
+      ],
+      "exemple": { "fictif": true, "texte": "Risque « catalogue non livré à temps » : probabilité 2/4, impact 4/4, criticité 8 (élevée). Réponse : réduire (commande à l'imprimeur 10 jours plus tôt) et prévoir un plan de contingence (version numérique sur tablette)." },
+      "confusions": [
+        { "a": "Risque (incertain, futur)", "b": "Problème (déjà survenu)", "explication": "La gestion des risques agit avant ; la gestion des problèmes après." }
+      ],
+      "verification": ["Donnez un exemple de transfert de risque dans un projet export."],
+      "sources": ["src.pmbok"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.pilotage.budget",
+      "titre": "Le budget de projet",
+      "niveau": "F",
+      "prerequis": ["gdp.organisation.wbs"],
+      "connexes": ["gdp.pilotage.valeur-acquise", "odg.budget.budgets"],
+      "question": "Comment estimer et suivre ce que coûtera le projet ?",
+      "definition": "Le budget de projet est construit à partir du WBS : on estime le coût de chaque lot de travail (main-d'œuvre interne valorisée au coût horaire, achats, sous-traitance, déplacements, matériel), on les agrège, puis on ajoute une provision pour risques. Réparti dans le temps selon le planning, il donne la courbe des dépenses prévues (courbe en S). En cours de projet, on compare dépenses engagées, dépenses réelles et budget, et on estime le coût à terminaison.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Estimer le coût de chaque lot de travail (estimation analytique ou par analogie)",
+          "Additionner pour obtenir le coût de base",
+          "Ajouter une réserve pour aléas (risques identifiés) et éventuellement une réserve de gestion",
+          "Échelonner les coûts selon le planning",
+          "Suivre : budget, engagé, réalisé, reste à faire, coût estimé à terminaison"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Budget de projet", "en": "project budget", "es": "presupuesto del proyecto", "definition": "Coût prévu et échelonné du projet." },
+        { "fr": "Réserve pour aléas", "en": "contingency reserve", "es": "reserva para contingencias", "definition": "Montant prévu pour les risques identifiés." },
+        { "fr": "Coût à terminaison", "en": "estimate at completion (EAC)", "es": "estimación a la conclusión", "definition": "Coût total prévu en fin de projet, réévalué en cours de route." }
+      ],
+      "exemple": { "fictif": true, "texte": "Salon de Madrid : emplacement 8 000 €, stand 7 000 €, traduction et impression 3 000 €, transport 2 000 €, déplacements 3 800 €, temps interne 1 200 € ; total 25 000 € ; réserve 5 % : 1 250 € ; budget 26 250 €." },
+      "confusions": [
+        { "a": "Dépense engagée (commande passée)", "b": "Dépense réalisée (facture payée)", "explication": "Suivre seulement les factures payées sous-estime les coûts déjà décidés." }
+      ],
+      "verification": ["Pourquoi ajouter une réserve pour aléas au budget de base ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.pilotage.valeur-acquise",
+      "titre": "La méthode de la valeur acquise",
+      "niveau": "A",
+      "prerequis": ["gdp.pilotage.budget", "gdp.planification.gantt"],
+      "connexes": ["odg.budget.ecarts"],
+      "question": "Le projet est-il en retard et en dépassement de budget, et de combien ?",
+      "definition": "La méthode de la valeur acquise compare, à une date donnée, trois grandeurs : la valeur planifiée (PV, coût budgété du travail prévu à cette date), la valeur acquise (EV, coût budgété du travail réellement accompli) et le coût réel (AC, ce qu'a réellement coûté le travail accompli). Elle en déduit des écarts et des indices de performance de coût et de délai, puis une estimation du coût final.",
+      "fonctionnement": [
+        { "type": "formule", "formule": "Écart de coût CV = EV − AC        Écart de délai SV = EV − PV" },
+        { "type": "formule", "formule": "Indice de coût CPI = EV ÷ AC        Indice de délai SPI = EV ÷ PV        Coût estimé à terminaison EAC = BAC ÷ CPI" },
+        { "type": "attention", "texte": "Un écart négatif ou un indice inférieur à 1 est défavorable (dépassement ou retard)." }
+      ],
+      "termes": [
+        { "fr": "Valeur acquise", "en": "earned value (EV)", "es": "valor ganado", "definition": "Coût budgété du travail effectivement réalisé." },
+        { "fr": "Valeur planifiée", "en": "planned value (PV)", "es": "valor planificado", "definition": "Coût budgété du travail prévu à la date." },
+        { "fr": "Coût réel", "en": "actual cost (AC)", "es": "coste real", "definition": "Coût effectivement supporté pour le travail réalisé." },
+        { "fr": "Budget à terminaison", "en": "budget at completion (BAC)", "es": "presupuesto hasta la conclusión", "definition": "Budget total initial du projet." }
+      ],
+      "exemple": { "fictif": true, "texte": "BAC 100 000 €. À la fin du 4e mois : PV 50 000 €, EV 40 000 €, AC 45 000 €. CV = − 5 000 € (dépassement) ; SV = − 10 000 € (retard) ; CPI = 0,89 ; SPI = 0,80 ; EAC = 100 000 ÷ 0,889 = 112 500 €." },
+      "confusions": [
+        { "a": "Comparer le coût réel au budget prévu à la date (AC vs PV)", "b": "Comparer le coût réel à la valeur acquise (AC vs EV)", "explication": "Seule la seconde comparaison tient compte du travail réellement accompli." }
+      ],
+      "verification": ["Que signifie un SPI de 1,1 ?"],
+      "sources": ["src.pmbok"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.pilotage.agile",
+      "titre": "Les méthodes agiles",
+      "niveau": "A",
+      "prerequis": ["gdp.cadrage.projet"],
+      "connexes": ["gdp.planification.gantt", "gdp.pilotage.cloture"],
+      "question": "Comment mener un projet quand le besoin n'est pas entièrement connu au départ ?",
+      "definition": "Les méthodes agiles organisent le projet en cycles courts (itérations) produisant à chaque fois un résultat utilisable, avec une forte implication du client et une adaptation continue au changement. Le Manifeste agile (2001) privilégie les individus et leurs interactions, un produit opérationnel, la collaboration avec le client et l'adaptation au changement, plutôt que les processus, la documentation exhaustive, la négociation contractuelle et le suivi d'un plan. Scrum en est la méthode la plus diffusée : sprints de quelques semaines, rôles de Product Owner, Scrum Master et équipe de développement (« Developers » dans la version 2020 du guide), backlog de produit, mêlée quotidienne, revue et rétrospective.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["", "Approche prédictive (cycle en V, cascade)", "Approche agile"], "lignes": [
+          ["Besoin", "Défini en détail au départ", "Précisé au fil des itérations"],
+          ["Planification", "Globale, en amont", "Par itérations courtes"],
+          ["Livraison", "En fin de projet", "Incréments réguliers"],
+          ["Changement", "Coûteux, encadré", "Bienvenu"],
+          ["Adapté à", "Projets stables (construction, salon)", "Projets incertains (logiciel, site web, nouveau service)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Méthode agile", "en": "agile methodology", "es": "metodología ágil", "definition": "Approche itérative et adaptative de gestion de projet." },
+        { "fr": "Sprint", "en": "sprint", "es": "sprint", "definition": "Itération de durée fixe dans Scrum." },
+        { "fr": "Backlog de produit", "en": "product backlog", "es": "pila del producto / backlog", "definition": "Liste ordonnée des fonctionnalités à réaliser." },
+        { "fr": "Rétrospective", "en": "retrospective", "es": "retrospectiva", "definition": "Réunion d'amélioration en fin d'itération." }
+      ],
+      "exemple": { "fictif": true, "texte": "Pour créer une boutique en ligne en espagnol, l'équipe livre toutes les deux semaines une version utilisable (catalogue, puis panier, puis paiement) ; le directeur export, Product Owner, réordonne les priorités après chaque démonstration aux distributeurs." },
+      "confusions": [
+        { "a": "Agile", "b": "Absence de planification", "explication": "L'agilité planifie à court terme et en continu ; elle reste très structurée (rôles, rituels, artefacts)." }
+      ],
+      "verification": ["Pour quel type de projet une approche agile est-elle préférable ?"],
+      "sources": ["src.manifeste-agile", "src.scrum-guide"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.pilotage.cloture",
+      "titre": "La clôture du projet et le retour d'expérience",
+      "niveau": "F",
+      "prerequis": ["gdp.cadrage.charte"],
+      "connexes": ["stg.rapport.structure"],
+      "question": "Que faut-il faire quand le projet est terminé, pour en tirer profit à l'avenir ?",
+      "definition": "La clôture vérifie que les livrables ont été acceptés par le commanditaire, solde les contrats et le budget, libère les ressources, archive la documentation et dresse un bilan : objectifs atteints ou non, écarts de délai et de coût, satisfaction des parties prenantes. Le retour d'expérience (REX) recense ce qui a bien fonctionné et ce qui doit être amélioré, pour capitaliser les enseignements (lessons learned) au profit des projets suivants.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Réception et validation des livrables",
+          "Clôture administrative et financière (factures, contrats, budget final)",
+          "Bilan au regard des objectifs SMART",
+          "Réunion de retour d'expérience avec l'équipe",
+          "Archivage et diffusion des enseignements",
+          "Reconnaissance de l'équipe et réaffectation des ressources"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Clôture", "en": "project closure", "es": "cierre del proyecto", "definition": "Phase finale de validation, bilan et archivage." },
+        { "fr": "Retour d'expérience (REX)", "en": "lessons learned / post-mortem", "es": "lecciones aprendidas", "definition": "Analyse des enseignements d'un projet." }
+      ],
+      "exemple": { "fictif": true, "texte": "Après le salon : 112 contacts (objectif 100), 8 rendez-vous (objectif 10), budget 27 100 € (+ 3 %). REX : traduction lancée trop tard ; à l'avenir, réserver le traducteur dès l'inscription au salon." },
+      "confusions": [
+        { "a": "Bilan (mesure des résultats)", "b": "Retour d'expérience (apprentissage pour l'avenir)", "explication": "Le bilan constate ; le REX tire des leçons." }
+      ],
+      "verification": ["Pourquoi le retour d'expérience est-il souvent négligé, et pourquoi est-ce dommage ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.gdp.pilotage.001", "notion": "gdp.pilotage.risques", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Souscrire une assurance pour le transport des échantillons vers le salon est une stratégie de :",
+      "choix": [
+        { "id": "a", "texte": "Transfert", "correct": true, "explication": "Les conséquences financières sont transférées à l'assureur." },
+        { "id": "b", "texte": "Évitement", "correct": false, "explication": "Le risque de perte existe toujours." },
+        { "id": "c", "texte": "Réduction", "correct": false, "explication": "La probabilité de perte n'est pas modifiée." },
+        { "id": "d", "texte": "Acceptation", "correct": false, "explication": "On agit sur les conséquences financières." }
+      ]
+    },
+    {
+      "id": "q.gdp.pilotage.002", "notion": "gdp.pilotage.risques", "format": "unique", "niveau": 1, "competence": "appliquer",
+      "enonce": "Probabilité 3 sur 4, impact 2 sur 4. Criticité ?",
+      "choix": [
+        { "id": "a", "texte": "6", "correct": true, "explication": "3 × 2 = 6." },
+        { "id": "b", "texte": "5", "correct": false, "explication": "On a additionné." },
+        { "id": "c", "texte": "1,5", "correct": false, "explication": "On a divisé." },
+        { "id": "d", "texte": "8", "correct": false, "explication": "Aucun calcul correct ne donne ce résultat." }
+      ]
+    },
+    {
+      "id": "q.gdp.pilotage.003", "notion": "gdp.pilotage.budget", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
+      "enonce": "Vrai ou faux : le budget de projet se construit en estimant le coût de chaque lot de travail du WBS.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "Estimation analytique, puis agrégation et réserve." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "Le WBS est bien la base de l'estimation." }
+      ]
+    },
+    {
+      "id": "q.gdp.pilotage.004", "notion": "gdp.pilotage.valeur-acquise", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "PV = 80 000 € ; EV = 60 000 € ; AC = 75 000 €. Que conclure ?",
+      "choix": [
+        { "id": "a", "texte": "Le projet est en retard (SV = − 20 000) et en dépassement (CV = − 15 000)", "correct": true, "explication": "EV < PV et EV < AC." },
+        { "id": "b", "texte": "Le projet est en avance et sous le budget", "correct": false, "explication": "Les deux écarts sont négatifs." },
+        { "id": "c", "texte": "Le projet est sous le budget car AC < PV", "correct": false, "explication": "Il faut comparer AC à EV, pas à PV." },
+        { "id": "d", "texte": "Impossible à dire sans le BAC", "correct": false, "explication": "Écarts et indices se calculent sans le BAC." }
+      ]
+    },
+    {
+      "id": "q.gdp.pilotage.005", "notion": "gdp.pilotage.agile", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quelles caractéristiques correspondent à Scrum ?",
+      "choix": [
+        { "id": "a", "texte": "Des sprints de durée fixe", "correct": true, "explication": "Itérations courtes et régulières." },
+        { "id": "b", "texte": "Un Product Owner qui ordonne le backlog", "correct": true, "explication": "Il représente le client et maximise la valeur." },
+        { "id": "c", "texte": "Une spécification complète et figée avant tout développement", "correct": false, "explication": "C'est l'approche prédictive." },
+        { "id": "d", "texte": "Une rétrospective à la fin de chaque sprint", "correct": true, "explication": "Pour améliorer le fonctionnement de l'équipe." }
+      ]
+    },
+    {
+      "id": "q.gdp.pilotage.006", "notion": "gdp.pilotage.cloture", "format": "unique", "niveau": 1, "competence": "comprendre",
+      "enonce": "Quel est l'objectif principal du retour d'expérience ?",
+      "choix": [
+        { "id": "a", "texte": "Capitaliser les enseignements pour les projets suivants", "correct": true, "explication": "Le REX transforme l'expérience en connaissance réutilisable." },
+        { "id": "b", "texte": "Désigner un responsable des erreurs", "correct": false, "explication": "Un REX efficace évite la recherche de coupables." },
+        { "id": "c", "texte": "Rédiger la charte du projet", "correct": false, "explication": "Elle est rédigée au lancement." },
+        { "id": "d", "texte": "Payer les fournisseurs", "correct": false, "explication": "Cela relève de la clôture administrative." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.gdp.pilotage.001", "notions": ["gdp.pilotage.valeur-acquise"],
+      "question": "Définissez PV, EV, AC et les indicateurs CV, SV, CPI, SPI, EAC ; comment les interpréter ?",
+      "reponse": "PV : coût budgété du travail prévu à la date. EV : coût budgété du travail réellement accompli. AC : coût réel du travail accompli. CV = EV − AC (négatif = dépassement) ; SV = EV − PV (négatif = retard) ; CPI = EV ÷ AC et SPI = EV ÷ PV (inférieurs à 1 = défavorable) ; EAC = BAC ÷ CPI : coût final estimé si la performance de coût se maintient.",
+      "indispensables": ["Définitions de PV, EV, AC", "Formules des écarts", "Formules des indices", "EAC"],
+      "erreurs": ["Comparer AC à PV"]
+    },
+    {
+      "id": "f.gdp.pilotage.002", "notions": ["gdp.pilotage.risques", "gdp.pilotage.agile", "gdp.pilotage.cloture"],
+      "question": "Présentez la gestion des risques (évaluation, réponses), l'approche agile et la clôture d'un projet.",
+      "reponse": "Risques : identifier, évaluer (criticité = probabilité × impact), répondre (éviter, réduire, transférer, accepter), suivre dans un registre. Agile : itérations courtes, livraisons régulières, client impliqué, adaptation au changement (Manifeste 2001, Scrum : sprints, Product Owner, Scrum Master, backlog, rétrospective). Clôture : validation des livrables, clôture financière, bilan au regard des objectifs, retour d'expérience, archivage.",
+      "indispensables": ["Criticité", "Quatre réponses aux risques", "Principes agiles", "Étapes de clôture et REX"],
+      "erreurs": ["Assimiler agilité et absence de méthode"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.gdp.pilotage.01", "notions": ["gdp.pilotage.valeur-acquise"], "type": "calcul", "niveau": 3, "fictif": true,
+      "titre": "Suivre un projet de lancement de marque en Espagne",
+      "enonce": "Budget total (BAC) : 100 000 €. À la fin du 4e mois : valeur planifiée 50 000 € ; le travail accompli correspond à 40 % du projet ; coût réel 45 000 €.",
+      "questions": [
+        { "id": "1", "consigne": "Valeur acquise EV (€) ?", "reponse": { "type": "nombre", "valeur": 40000, "tolerance": 0.01, "unite": "€" },
+          "correction": ["40 % × 100 000 = 40 000 €"] },
+        { "id": "2", "consigne": "Écart de coût CV (€) ?", "reponse": { "type": "nombre", "valeur": -5000, "tolerance": 0.01, "unite": "€" },
+          "correction": ["40 000 − 45 000 = − 5 000 € : dépassement"] },
+        { "id": "3", "consigne": "Indice de délai SPI ?", "reponse": { "type": "nombre", "valeur": 0.8, "tolerance": 0.005 },
+          "correction": ["40 000 ÷ 50 000 = 0,80 : le projet avance à 80 % du rythme prévu"] },
+        { "id": "4", "consigne": "Coût estimé à terminaison EAC (€) ?", "reponse": { "type": "nombre", "valeur": 112500, "tolerance": 10, "unite": "€" },
+          "correction": ["CPI = 40 000 ÷ 45 000 = 0,889", "EAC = 100 000 ÷ 0,889 = 112 500 €"] }
+      ]
+    }
+  ]
+}

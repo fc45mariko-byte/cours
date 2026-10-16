@@ -1,0 +1,110 @@
+{
+  "chapitre": "gdp.organisation",
+  "notions": [
+    {
+      "id": "gdp.organisation.wbs",
+      "titre": "Le découpage du projet : WBS (organigramme des tâches)",
+      "niveau": "F",
+      "prerequis": ["gdp.cadrage.charte"],
+      "connexes": ["gdp.organisation.raci", "gdp.planification.anteriorites", "gdp.pilotage.budget"],
+      "question": "Comment passer d'un objectif global à une liste de tâches réalisables et chiffrables ?",
+      "definition": "Le WBS (work breakdown structure), ou organigramme des tâches du projet (OTP), décompose hiérarchiquement le travail à réaliser en sous-ensembles de plus en plus fins, jusqu'aux lots de travail (work packages), suffisamment petits pour être estimés en durée et en coût, attribués à un responsable et suivis. Il couvre tout le périmètre et seulement le périmètre (règle des 100 %).",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Niveau 1 : le projet",
+          "Niveau 2 : les grands livrables ou phases",
+          "Niveau 3 et suivants : les sous-livrables, jusqu'aux lots de travail",
+          "Codifier chaque élément (1, 1.1, 1.1.1…) pour le relier au planning et au budget",
+          "Vérifier que rien ne manque et que rien n'est hors périmètre"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Organigramme des tâches (OTP / WBS)", "en": "work breakdown structure (WBS)", "es": "estructura de desglose del trabajo (EDT)", "definition": "Décomposition hiérarchique du travail du projet." },
+        { "fr": "Lot de travail", "en": "work package", "es": "paquete de trabajo", "definition": "Élément de plus bas niveau du WBS, estimable et attribuable." }
+      ],
+      "exemple": { "fictif": true, "texte": "Projet « Salon de Madrid » : 1. Stand (1.1 réservation, 1.2 conception, 1.3 montage) ; 2. Supports (2.1 traduction du catalogue, 2.2 impression, 2.3 échantillons) ; 3. Logistique (3.1 transport, 3.2 hébergement) ; 4. Commercial (4.1 prise de rendez-vous, 4.2 suivi des contacts)." },
+      "confusions": [
+        { "a": "WBS (quoi faire, structure)", "b": "Gantt (quand le faire, calendrier)", "explication": "Le WBS précède la planification : il liste et structure le travail sans le dater." }
+      ],
+      "verification": ["Qu'est-ce que la règle des 100 % du WBS ?"],
+      "sources": ["src.pmbok"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "gdp.organisation.raci",
+      "titre": "La matrice RACI",
+      "niveau": "F",
+      "prerequis": ["gdp.organisation.wbs"],
+      "connexes": ["gdp.cadrage.parties-prenantes"],
+      "question": "Comment éviter que des tâches restent orphelines ou que tout le monde se croie responsable de tout ?",
+      "definition": "La matrice RACI croise les tâches (lignes) et les acteurs (colonnes) en attribuant à chaque case un rôle : R (Responsible, réalise la tâche), A (Accountable, rend compte du résultat et valide ; un seul A par tâche), C (Consulted, consulté avant la décision ou pendant la réalisation), I (Informed, informé du résultat). Elle clarifie les responsabilités et la circulation de l'information.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Tâche", "Directeur commercial", "Assistante export", "Graphiste", "Comptable"], "lignes": [
+          ["Traduire le catalogue", "I", "A", "C", ""],
+          ["Concevoir le stand", "A", "C", "R", ""],
+          ["Valider le budget", "A", "R", "", "C"],
+          ["Réserver le transport", "I", "A / R", "", "I"]
+        ] },
+        { "type": "attention", "texte": "Chaque tâche doit avoir exactement un A et au moins un R. Une même personne peut être A et R." }
+      ],
+      "termes": [
+        { "fr": "Matrice RACI", "en": "RACI matrix (responsible, accountable, consulted, informed)", "es": "matriz RACI", "definition": "Tableau des rôles de chaque acteur par tâche." }
+      ],
+      "exemple": { "fictif": true, "texte": "Dans un projet de lancement au Brésil, deux responsables croyaient chacun que l'autre validait les traductions en portugais : la matrice RACI désigne désormais un seul A (la responsable marketing) et une traductrice R." },
+      "confusions": [
+        { "a": "R (réalise)", "b": "A (répond du résultat, valide)", "explication": "Plusieurs personnes peuvent réaliser, mais une seule rend compte." }
+      ],
+      "verification": ["Pourquoi ne doit-il y avoir qu'un seul A par tâche ?"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.gdp.organisation.001", "notion": "gdp.organisation.wbs", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Comment appelle-t-on l'élément de plus bas niveau d'un WBS ?",
+      "choix": [
+        { "id": "a", "texte": "Le lot de travail (work package)", "correct": true, "explication": "Assez fin pour être estimé et confié à un responsable." },
+        { "id": "b", "texte": "Le jalon", "correct": false, "explication": "Le jalon est un événement du planning, sans durée." },
+        { "id": "c", "texte": "Le chemin critique", "correct": false, "explication": "Notion de planification." },
+        { "id": "d", "texte": "Le livrable final", "correct": false, "explication": "C'est le sommet de la décomposition." }
+      ]
+    },
+    {
+      "id": "q.gdp.organisation.002", "notion": "gdp.organisation.wbs", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : le WBS indique les dates de début et de fin de chaque tâche.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "Le WBS structure le travail ; les dates relèvent du planning (PERT, Gantt)." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "Il précède la planification." }
+      ]
+    },
+    {
+      "id": "q.gdp.organisation.003", "notion": "gdp.organisation.raci", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Dans une matrice RACI, que signifie le « A » ?",
+      "choix": [
+        { "id": "a", "texte": "Accountable : celui qui rend compte du résultat et valide", "correct": true, "explication": "Un seul A par tâche." },
+        { "id": "b", "texte": "Assistant : celui qui aide", "correct": false, "explication": "Ce n'est pas le sens du sigle." },
+        { "id": "c", "texte": "Approver : celui qui est informé", "correct": false, "explication": "L'information correspond au I." },
+        { "id": "d", "texte": "Actor : celui qui réalise", "correct": false, "explication": "La réalisation correspond au R." }
+      ]
+    },
+    {
+      "id": "q.gdp.organisation.004", "notion": "gdp.organisation.raci", "format": "unique", "niveau": 2, "competence": "detecter-erreur",
+      "enonce": "Dans une matrice, la tâche « valider le contrat du transitaire » a deux A et aucun R. Quel est le problème ?",
+      "choix": [
+        { "id": "a", "texte": "Personne ne réalise la tâche et la responsabilité du résultat est diluée", "correct": true, "explication": "Il faut au moins un R et un seul A." },
+        { "id": "b", "texte": "Aucun : plus il y a de A, mieux c'est", "correct": false, "explication": "Deux A créent des conflits ou des oublis." },
+        { "id": "c", "texte": "Il manque seulement un I", "correct": false, "explication": "Le problème principal est l'absence de R et le double A." },
+        { "id": "d", "texte": "Il faut supprimer la tâche", "correct": false, "explication": "La tâche est nécessaire ; il faut corriger les rôles." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.gdp.organisation.001", "notions": ["gdp.organisation.wbs", "gdp.organisation.raci"],
+      "question": "Expliquez le rôle du WBS et de la matrice RACI dans l'organisation d'un projet.",
+      "reponse": "Le WBS décompose hiérarchiquement tout le travail du projet (règle des 100 %) jusqu'aux lots de travail estimables et attribuables, codifiés pour le planning et le budget. La matrice RACI attribue pour chaque tâche les rôles : R réalise, A rend compte et valide (un seul), C est consulté, I est informé.",
+      "indispensables": ["Décomposition hiérarchique", "Lots de travail", "Signification de R, A, C, I", "Un seul A par tâche"],
+      "erreurs": ["Confondre WBS et Gantt"]
+    }
+  ]
+}
