@@ -1,0 +1,113 @@
+{
+  "chapitre": "dcl.vices",
+  "notions": [
+    {
+      "id": "dcl.vices.misrepresentation",
+      "titre": "Misrepresentation",
+      "niveau": "A",
+      "prerequis": ["dcl.contenu.terms"],
+      "connexes": ["dcl.vices.mistake-duress", "dcl.systemes.equity"],
+      "question": "Que peut faire une partie qui a contracté sur la foi d'une déclaration fausse de l'autre ?",
+      "definition": "Une misrepresentation est une déclaration fausse de fait (et non une simple opinion, Bisset v Wilkinson, 1927, ni une vantardise commerciale), faite par une partie à l'autre avant le contrat, et qui l'a incitée à contracter. Elle peut être frauduleuse (faite en connaissance de sa fausseté ou sans se soucier de sa vérité, Derry v Peek, 1889), négligente (Misrepresentation Act 1967, s. 2(1), ou responsabilité en tort selon Hedley Byrne v Heller, 1964) ou innocente. Le contrat est annulable : la victime peut obtenir la rescission (remède d'equity, perdu en cas de confirmation, de délai excessif, de droits acquis par des tiers ou d'impossibilité de restitution) et, selon le type, des dommages-intérêts. Le silence n'est en principe pas une misrepresentation, sauf demi-vérité, changement de circonstances ou contrats de bonne foi (assurance).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Type", "Remèdes"], "lignes": [
+          ["Frauduleuse", "Rescission + dommages-intérêts (tort of deceit), tous préjudices directs"],
+          ["Négligente (s. 2(1) MA 1967)", "Rescission + dommages-intérêts"],
+          ["Innocente", "Rescission ; le juge peut accorder des dommages à la place (s. 2(2))"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Déclaration inexacte", "en": "misrepresentation", "es": "declaración falsa / tergiversación", "definition": "Déclaration fausse de fait incitant à contracter." },
+        { "fr": "Annulation (rescision)", "en": "rescission", "es": "rescisión / anulación", "definition": "Anéantissement du contrat avec remise en l'état." },
+        { "fr": "Annulable", "en": "voidable", "es": "anulable", "definition": "Valable tant que la victime ne demande pas l'annulation." },
+        { "fr": "Dol (approx.)", "en": "fraudulent misrepresentation / deceit", "es": "dolo", "definition": "Tromperie intentionnelle." }
+      ],
+      "exemple": { "fictif": true, "texte": "Pour vendre son fonds, le gérant d'un pub déclare un chiffre d'affaires de 300 000 £ par an alors que les comptes, qu'il connaît, indiquent 180 000 £. L'acheteur peut obtenir la rescission et des dommages-intérêts pour fraude." },
+      "confusions": [
+        { "a": "Misrepresentation (avant le contrat)", "b": "Breach of term (violation d'une clause)", "explication": "Si la déclaration est devenue une clause du contrat, la victime peut agir pour breach." }
+      ],
+      "verification": ["Pourquoi une opinion sincère n'est-elle pas, en principe, une misrepresentation ?"],
+      "sources": ["src.uk-statutes", "src.azzouz"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dcl.vices.mistake-duress",
+      "titre": "Mistake, duress, undue influence",
+      "niveau": "A",
+      "prerequis": ["dcl.vices.misrepresentation"],
+      "connexes": ["dcl.systemes.equity"],
+      "question": "Dans quels autres cas le consentement est-il vicié en droit anglais ?",
+      "definition": "Mistake (erreur) : le droit anglais l'admet très restrictivement. La common mistake (erreur commune) ne rend le contrat nul que si elle porte sur l'existence de l'objet (res extincta, Couturier v Hastie, 1856) ou rend l'exécution essentiellement différente de ce qui était envisagé (Bell v Lever Bros, 1932 ; Great Peace Shipping, 2002). L'erreur sur l'identité du cocontractant peut annuler le contrat dans certains cas (Shogun Finance v Hudson, 2003). Duress (contrainte) : menace illégitime ayant contribué au consentement ; l'economic duress (pression économique illégitime) rend le contrat annulable (Atlas Express v Kafco, 1989 ; Times Travel v Pakistan International Airlines, 2021). Undue influence (abus d'influence), doctrine d'equity : exploitation d'une relation de confiance ou d'ascendant (Royal Bank of Scotland v Etridge (No 2), 2001) ; le contrat est annulable.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Vice", "Effet", "Affaire"], "lignes": [
+          ["Common mistake sur l'existence de l'objet", "Nullité (void)", "Couturier v Hastie (1856)"],
+          ["Erreur sur la qualité", "En principe sans effet", "Bell v Lever Bros [1932]"],
+          ["Economic duress", "Annulable", "Atlas Express v Kafco [1989]"],
+          ["Undue influence", "Annulable", "RBS v Etridge (No 2) [2001]"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Erreur", "en": "mistake", "es": "error", "definition": "Fausse représentation de la réalité au moment du contrat." },
+        { "fr": "Violence / contrainte", "en": "duress", "es": "intimidación / violencia", "definition": "Pression illégitime obtenant le consentement." },
+        { "fr": "Abus d'influence", "en": "undue influence", "es": "influencia indebida", "definition": "Exploitation d'une relation d'ascendant." },
+        { "fr": "Nul", "en": "void", "es": "nulo", "definition": "Sans effet dès l'origine." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un transporteur menace, la veille de la haute saison, de ne plus livrer un petit importateur s'il n'accepte pas de doubler ses tarifs ; l'importateur, sans alternative, signe. Il pourra invoquer l'economic duress pour faire annuler l'avenant, comme dans Atlas Express v Kafco." },
+      "confusions": [
+        { "a": "Void (nul)", "b": "Voidable (annulable)", "explication": "Le contrat nul n'a jamais existé ; le contrat annulable existe jusqu'à sa rescision, ce qui protège les tiers de bonne foi." }
+      ],
+      "verification": ["Pourquoi le droit anglais admet-il si peu l'erreur ?"],
+      "sources": ["src.azzouz"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dcl.vices.001", "notion": "dcl.vices.misrepresentation", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Un vendeur de terres agricoles, qui n'y a jamais élevé de moutons, déclare qu'elles « pourraient selon lui nourrir 2 000 moutons ». C'est faux. Y a-t-il misrepresentation ?",
+      "choix": [
+        { "id": "a", "texte": "Non : c'est l'expression d'une opinion honnête (Bisset v Wilkinson)", "correct": true, "explication": "Une opinion sincère n'est pas une déclaration de fait." },
+        { "id": "b", "texte": "Oui : toute déclaration fausse est une misrepresentation", "correct": false, "explication": "Il faut une déclaration de fait." },
+        { "id": "c", "texte": "Oui, frauduleuse", "correct": false, "explication": "Rien n'indique une connaissance de la fausseté." },
+        { "id": "d", "texte": "Non, car le contrat est oral", "correct": false, "explication": "La forme est sans incidence." }
+      ]
+    },
+    {
+      "id": "q.dcl.vices.002", "notion": "dcl.vices.misrepresentation", "format": "multiple", "niveau": 3, "competence": "comprendre",
+      "enonce": "Quels événements font perdre le droit à la rescission ?",
+      "choix": [
+        { "id": "a", "texte": "La confirmation du contrat après découverte de la vérité", "correct": true, "explication": "Affirmation." },
+        { "id": "b", "texte": "L'écoulement d'un délai excessif", "correct": true, "explication": "Lapse of time." },
+        { "id": "c", "texte": "L'acquisition de droits par un tiers de bonne foi", "correct": true, "explication": "Third party rights." },
+        { "id": "d", "texte": "Le fait que la déclaration était frauduleuse", "correct": false, "explication": "Au contraire, la fraude justifie la rescission." }
+      ]
+    },
+    {
+      "id": "q.dcl.vices.003", "notion": "dcl.vices.mistake-duress", "format": "unique", "niveau": 2, "competence": "distinguer",
+      "enonce": "Au moment de la vente, la cargaison vendue avait déjà péri, sans que les parties le sachent. Effet en droit anglais ?",
+      "choix": [
+        { "id": "a", "texte": "Le contrat est nul pour common mistake (res extincta)", "correct": true, "explication": "Couturier v Hastie (1856)." },
+        { "id": "b", "texte": "Le contrat est valable, l'acheteur doit payer", "correct": false, "explication": "L'objet n'existait plus." },
+        { "id": "c", "texte": "Il s'agit d'une economic duress", "correct": false, "explication": "Aucune pression." },
+        { "id": "d", "texte": "Il s'agit d'une misrepresentation frauduleuse", "correct": false, "explication": "Aucune partie ne savait." }
+      ]
+    },
+    {
+      "id": "q.dcl.vices.004", "notion": "dcl.vices.mistake-duress", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : une pression économique illégitime peut rendre un contrat annulable en droit anglais.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": true, "explication": "Economic duress (Atlas Express v Kafco ; Times Travel v PIA)." },
+        { "id": "b", "texte": "Faux", "correct": false, "explication": "La doctrine est admise." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dcl.vices.001", "notions": ["dcl.vices.misrepresentation", "dcl.vices.mistake-duress"],
+      "question": "Présentez les vices du consentement en droit anglais : misrepresentation, mistake, duress, undue influence.",
+      "reponse": "Misrepresentation : déclaration fausse de fait (pas une opinion, Bisset v Wilkinson) incitant à contracter ; frauduleuse (Derry v Peek), négligente (MA 1967 s. 2(1)), innocente ; contrat annulable, rescission (perdue par confirmation, délai, droits des tiers, impossibilité de restitution) et dommages selon le type. Mistake : admise étroitement (res extincta, Couturier v Hastie ; Bell v Lever Bros ; Great Peace) ; contrat nul. Duress, y compris economic duress (Atlas Express ; Times Travel) : annulable. Undue influence (equity, Etridge) : annulable.",
+      "indispensables": ["Définition de la misrepresentation", "Trois types et remèdes", "Étroitesse de la mistake", "Duress et undue influence"],
+      "erreurs": ["Confondre void et voidable"]
+    }
+  ]
+}
