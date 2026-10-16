@@ -1,0 +1,303 @@
+{
+  "chapitre": "dai.cvim",
+  "notions": [
+    {
+      "id": "dai.cvim.champ",
+      "titre": "La CVIM : champ d'application et exclusion",
+      "niveau": "F",
+      "prerequis": ["dai.normes.sources"],
+      "connexes": ["dai.cvim.formation", "dai.conflits.loi-applicable"],
+      "question": "Quand la Convention de Vienne sur la vente internationale de marchandises s'applique-t-elle ?",
+      "definition": "La Convention des Nations unies sur les contrats de vente internationale de marchandises (CVIM), signée à Vienne le 11 avril 1980 et en vigueur depuis le 1er janvier 1988, s'applique aux contrats de vente de marchandises entre des parties ayant leur établissement dans des États différents : lorsque ces États sont contractants (art. 1-1 a), ou lorsque les règles de droit international privé conduisent à l'application de la loi d'un État contractant (art. 1-1 b). Elle exclut notamment les ventes de marchandises achetées pour un usage personnel ou familial, les ventes aux enchères, sur saisie, les valeurs mobilières, les navires et aéronefs, l'électricité (art. 2). Elle ne régit ni la validité du contrat ni le transfert de propriété (art. 4). Les parties peuvent l'exclure ou déroger à ses dispositions (art. 6).",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Est-ce une vente de marchandises (biens mobiliers corporels) ?",
+          "Les parties ont-elles leur établissement dans des États différents ?",
+          "Ces États sont-ils contractants, ou la règle de conflit désigne-t-elle la loi d'un État contractant ?",
+          "L'opération relève-t-elle d'une exclusion (art. 2, art. 3 : contrat où la fourniture de main-d'œuvre ou de services est prépondérante) ?",
+          "Les parties ont-elles exclu la CVIM (art. 6) ?"
+        ] },
+        { "type": "attention", "texte": "Écrire « le contrat est soumis au droit français » ne suffit pas à exclure la CVIM : la France étant État contractant, la CVIM fait partie du droit français applicable aux ventes internationales. Pour l'exclure, il faut le dire expressément." }
+      ],
+      "termes": [
+        { "fr": "Convention de Vienne (CVIM)", "en": "United Nations Convention on Contracts for the International Sale of Goods (CISG)", "es": "Convención de Viena sobre compraventa internacional de mercaderías (CISG)", "definition": "Convention de 1980 sur la vente internationale de marchandises." },
+        { "fr": "Établissement", "en": "place of business", "es": "establecimiento", "definition": "Lieu d'activité de la partie retenu pour l'internationalité." },
+        { "fr": "Exclusion (opt-out)", "en": "exclusion / opting out", "es": "exclusión", "definition": "Décision des parties d'écarter la Convention." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une société de Bordeaux vend du vin à un importateur de Toronto pour ses restaurants : vente de marchandises, établissements dans deux États contractants (France et Canada) → CVIM applicable. Si le même importateur achetait pour sa consommation personnelle, la vente serait exclue (art. 2 a)." },
+      "contreExemple": "Le Royaume-Uni n'a pas ratifié la CVIM : pour une vente France–Royaume-Uni, elle ne s'applique que si la règle de conflit désigne la loi d'un État contractant (par exemple la loi française), et sous réserve des déclarations faites par certains États sur l'art. 1-1 b.",
+      "confusions": [
+        { "a": "CVIM (vente internationale)", "b": "Incoterms (répartition des frais et risques)", "explication": "Les deux se complètent : l'Incoterm précise le lieu de livraison et le transfert des risques dans un contrat régi par la CVIM." }
+      ],
+      "verification": ["Comment exclure la CVIM d'un contrat soumis au droit français ?"],
+      "sources": ["src.cvim"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Liste des États contractants : vérifier sur le site de la CNUDCI (uncitral.un.org) au moment de l'usage."
+    },
+    {
+      "id": "dai.cvim.formation",
+      "titre": "La formation du contrat : offre et acceptation",
+      "niveau": "A",
+      "prerequis": ["dai.cvim.champ"],
+      "connexes": ["dcl.formation.offer", "dcl.formation.acceptance", "dcl.ucc.article2"],
+      "question": "À quel moment un contrat de vente internationale est-il conclu, et que se passe-t-il si l'acceptation modifie l'offre ?",
+      "definition": "Selon la CVIM, une proposition est une offre si elle est suffisamment précise (désigne les marchandises et fixe, explicitement ou implicitement, la quantité et le prix ou les moyens de les déterminer) et indique la volonté de son auteur d'être lié en cas d'acceptation (art. 14). L'offre prend effet à sa réception (art. 15) et peut être révoquée tant que l'acceptation n'a pas été expédiée, sauf si elle est irrévocable (art. 16). L'acceptation prend effet au moment où elle parvient à l'auteur de l'offre (art. 18-2) ; le silence ne vaut pas, à lui seul, acceptation (art. 18-1). Une réponse qui modifie l'offre est une contre-offre, sauf si les modifications ne sont pas substantielles et que l'auteur de l'offre ne s'y oppose pas (art. 19). Le contrat est conclu au moment où l'acceptation prend effet (art. 23).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Élément", "Règle CVIM"], "lignes": [
+          ["Offre", "Précise + volonté d'être lié (art. 14) ; effet à réception (art. 15)"],
+          ["Révocation", "Possible avant l'expédition de l'acceptation, sauf offre irrévocable (art. 16)"],
+          ["Acceptation", "Effet à réception (théorie de la réception, art. 18-2) ; silence insuffisant"],
+          ["Modifications substantielles (art. 19-3)", "Prix, paiement, qualité, quantité, lieu et moment de la livraison, responsabilité, règlement des différends → contre-offre"],
+          ["Conclusion", "Au moment où l'acceptation prend effet (art. 23)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Offre", "en": "offer", "es": "oferta", "definition": "Proposition précise exprimant la volonté d'être lié." },
+        { "fr": "Acceptation", "en": "acceptance", "es": "aceptación", "definition": "Déclaration ou comportement indiquant l'acquiescement à l'offre." },
+        { "fr": "Contre-offre", "en": "counter-offer", "es": "contraoferta", "definition": "Réponse modifiant substantiellement l'offre, valant rejet et nouvelle offre." },
+        { "fr": "Bataille des formulaires", "en": "battle of the forms", "es": "batalla de los formularios", "definition": "Conflit entre conditions générales contradictoires de l'acheteur et du vendeur." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un vendeur français offre 500 vannes à 80 € pièce, livraison FCA Orléans. L'acheteur espagnol répond : « Accepté, mais paiement à 90 jours au lieu de 30. » La modification porte sur le paiement, élément substantiel : c'est une contre-offre ; le contrat n'est formé que si le vendeur l'accepte." },
+      "confusions": [
+        { "a": "Théorie de la réception (CVIM)", "b": "Postal rule (common law anglaise)", "explication": "En common law, l'acceptation postée prend en principe effet à l'envoi ; dans la CVIM, à la réception." }
+      ],
+      "verification": ["Une acceptation qui ajoute « livraison sur palettes standard » forme-t-elle le contrat ?"],
+      "sources": ["src.cvim"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dai.cvim.obligations",
+      "titre": "Les obligations du vendeur et de l'acheteur",
+      "niveau": "F",
+      "prerequis": ["dai.cvim.champ"],
+      "connexes": ["dai.cvim.contravention-essentielle", "dai.cvim.remedes", "tci.incoterms.transfert-risque"],
+      "question": "Que doit faire chacune des parties à un contrat de vente internationale ?",
+      "definition": "Le vendeur doit livrer les marchandises, remettre les documents qui s'y rapportent et transférer la propriété (art. 30), dans les conditions prévues au contrat. Il doit livrer des marchandises conformes, en quantité, qualité et type, et emballées comme prévu (art. 35) ; à défaut de stipulation, elles doivent être propres aux usages habituels et à tout usage spécial porté à sa connaissance. L'acheteur doit payer le prix et prendre livraison (art. 53). Il doit examiner les marchandises dans un délai aussi bref que possible (art. 38) et dénoncer le défaut de conformité dans un délai raisonnable, au plus tard deux ans après la remise, sauf garantie contractuelle plus longue (art. 39), sous peine de perdre le droit de s'en prévaloir.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Vendeur", "Acheteur"], "lignes": [
+          ["Livrer au lieu et à la date convenus (art. 31-34)", "Payer le prix au lieu et à la date convenus (art. 54-59)"],
+          ["Remettre les documents", "Prendre livraison (art. 60)"],
+          ["Livrer des marchandises conformes (art. 35)", "Examiner les marchandises (art. 38)"],
+          ["Garantir contre les droits des tiers (art. 41-42)", "Dénoncer les défauts à temps (art. 39)"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Conformité", "en": "conformity of the goods", "es": "conformidad de las mercaderías", "definition": "Correspondance des marchandises avec le contrat." },
+        { "fr": "Dénonciation du défaut", "en": "notice of non-conformity", "es": "denuncia de la falta de conformidad", "definition": "Avis donné au vendeur précisant la nature du défaut." },
+        { "fr": "Prendre livraison", "en": "take delivery", "es": "recibir la entrega", "definition": "Accomplir les actes permettant au vendeur de livrer et retirer les marchandises." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un importateur mexicain reçoit des pompes en mars, ne les examine qu'en novembre et découvre un défaut visible dès la livraison. Le vendeur pourra soutenir que la dénonciation n'a pas été faite dans un délai raisonnable (art. 39) : l'acheteur risque de perdre ses recours." },
+      "confusions": [
+        { "a": "Délai raisonnable de dénonciation", "b": "Délai butoir de deux ans", "explication": "Le défaut doit être dénoncé rapidement après sa découverte (ou le moment où il aurait dû l'être), et en tout cas dans les deux ans de la remise." }
+      ],
+      "verification": ["Quelles sont les trois obligations principales du vendeur selon l'article 30 ?"],
+      "sources": ["src.cvim"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dai.cvim.contravention-essentielle",
+      "titre": "La contravention essentielle et la résolution",
+      "niveau": "A",
+      "prerequis": ["dai.cvim.obligations"],
+      "connexes": ["dai.cvim.remedes", "dcl.contenu.classification"],
+      "question": "Quand une partie peut-elle mettre fin au contrat en raison de l'inexécution de l'autre ?",
+      "definition": "La résolution (anéantissement du contrat) est un remède grave, réservé en principe à la contravention essentielle : celle qui cause à l'autre partie un préjudice tel qu'elle la prive substantiellement de ce qu'elle était en droit d'attendre du contrat, à moins que la partie en défaut n'ait pas prévu et qu'une personne raisonnable de même qualité n'ait pas pu prévoir un tel résultat (art. 25). L'acheteur peut aussi déclarer le contrat résolu si le vendeur ne livre pas dans le délai supplémentaire qu'il lui a imparti (art. 47 et 49) ; symétriquement pour le vendeur en cas de non-paiement (art. 63 et 64). La résolution doit être déclarée par une notification (art. 26).",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Identifier le manquement (retard, défaut de conformité, non-paiement)",
+          "Apprécier s'il prive substantiellement l'autre partie de ce qu'elle attendait (art. 25)",
+          "À défaut, impartir un délai supplémentaire raisonnable (art. 47 / 63) ; si le délai n'est pas respecté pour une livraison ou un paiement, la résolution devient possible",
+          "Notifier la résolution à l'autre partie (art. 26)",
+          "Effets : libération des obligations, restitutions, dommages-intérêts (art. 81)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Contravention essentielle", "en": "fundamental breach", "es": "incumplimiento esencial", "definition": "Inexécution privant substantiellement l'autre partie de ce qu'elle attendait." },
+        { "fr": "Résolution du contrat", "en": "avoidance of the contract", "es": "resolución del contrato", "definition": "Anéantissement du contrat pour inexécution." },
+        { "fr": "Délai supplémentaire", "en": "additional period (Nachfrist)", "es": "plazo suplementario", "definition": "Délai accordé à la partie en défaut pour exécuter." }
+      ],
+      "exemple": { "fictif": true, "texte": "Des décorations de Noël devant arriver le 15 novembre sont livrées le 10 janvier : pour un détaillant, le retard prive substantiellement le contrat de son intérêt (contravention essentielle) ; la résolution est possible. Un retard de trois jours sur des pièces de rechange ordinaires ne le serait pas : l'acheteur obtiendrait seulement des dommages-intérêts." },
+      "confusions": [
+        { "a": "Résolution (CVIM)", "b": "Résiliation", "explication": "La résolution anéantit le contrat (avec restitutions) ; la résiliation y met fin pour l'avenir, notamment dans les contrats à exécution successive." }
+      ],
+      "verification": ["Pourquoi la CVIM limite-t-elle la résolution à la contravention essentielle ?"],
+      "sources": ["src.cvim"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dai.cvim.remedes",
+      "titre": "Les moyens dont disposent les parties et les dommages-intérêts",
+      "niveau": "A",
+      "prerequis": ["dai.cvim.contravention-essentielle"],
+      "connexes": ["dcl.inexecution.damages", "dai.cvim.exoneration"],
+      "question": "Que peut obtenir l'acheteur lorsque les marchandises ne sont pas conformes ?",
+      "definition": "En cas de contravention du vendeur, l'acheteur peut exiger l'exécution (art. 46) : livraison de marchandises de remplacement (seulement si le défaut constitue une contravention essentielle) ou réparation ; impartir un délai supplémentaire (art. 47) ; déclarer la résolution en cas de contravention essentielle (art. 49) ; réduire le prix proportionnellement à la moindre valeur (art. 50) ; et, dans tous les cas, demander des dommages-intérêts. Ceux-ci couvrent la perte subie et le gain manqué, dans la limite du préjudice que la partie en défaut avait prévu ou aurait dû prévoir lors de la conclusion du contrat (art. 74). En cas de résolution, la différence avec le prix d'un achat de remplacement ou le prix courant peut être réclamée (art. 75-76). La victime doit prendre des mesures raisonnables pour limiter sa perte (art. 77).",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Moyen", "Article", "Condition"], "lignes": [
+          ["Exécution / réparation", "46", "Demande raisonnable"],
+          ["Marchandises de remplacement", "46-2", "Contravention essentielle"],
+          ["Résolution", "49", "Contravention essentielle ou délai supplémentaire non respecté (non-livraison)"],
+          ["Réduction du prix", "50", "Défaut de conformité"],
+          ["Dommages-intérêts", "74 à 77", "Préjudice prévisible ; obligation de limiter la perte"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Dommages-intérêts", "en": "damages", "es": "daños y perjuicios / indemnización", "definition": "Somme réparant le préjudice causé par l'inexécution." },
+        { "fr": "Réduction du prix", "en": "price reduction", "es": "reducción del precio", "definition": "Diminution proportionnelle du prix en cas de défaut." },
+        { "fr": "Obligation de minimiser le dommage", "en": "duty to mitigate", "es": "deber de mitigar el daño", "definition": "Obligation de prendre des mesures raisonnables pour limiter la perte." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un acheteur reçoit 1 000 unités dont 200 défectueuses. Il peut exiger la réparation ou, si le défaut est essentiel, le remplacement ; ou réduire le prix ; et demander des dommages-intérêts pour le gain manqué sur des reventes prévues, si ce préjudice était prévisible. S'il laisse les marchandises se détériorer inutilement, l'indemnité sera réduite (art. 77)." },
+      "confusions": [
+        { "a": "Préjudice prévisible (art. 74)", "b": "Tout préjudice subi", "explication": "Seul le préjudice prévisible lors de la conclusion du contrat est réparé." }
+      ],
+      "verification": ["Quelle différence entre la réduction du prix et les dommages-intérêts ?"],
+      "sources": ["src.cvim"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dai.cvim.exoneration",
+      "titre": "L'exonération (article 79)",
+      "niveau": "A",
+      "prerequis": ["dai.cvim.remedes"],
+      "connexes": ["dai.contrat.clauses", "dcl.inexecution.breach"],
+      "question": "Une partie peut-elle échapper à sa responsabilité lorsqu'un événement extérieur l'empêche d'exécuter ?",
+      "definition": "Selon l'article 79 de la CVIM, une partie n'est pas responsable de l'inexécution de l'une de ses obligations si elle prouve que cette inexécution est due à un empêchement indépendant de sa volonté, qu'on ne pouvait raisonnablement attendre d'elle qu'elle le prenne en considération au moment de la conclusion du contrat, qu'elle le prévienne ou le surmonte, ou qu'elle en prévienne ou surmonte les conséquences. L'exonération ne vaut que pendant la durée de l'empêchement ; elle ne fait obstacle qu'aux dommages-intérêts, l'autre partie conservant ses autres moyens (résolution, réduction du prix). La partie empêchée doit avertir l'autre partie dans un délai raisonnable (art. 79-4).",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Empêchement indépendant de la volonté de la partie",
+          "Imprévisible lors de la conclusion du contrat",
+          "Irrésistible : ni évitable ni surmontable, ni dans ses conséquences",
+          "Lien de causalité avec l'inexécution",
+          "Notification à l'autre partie"
+        ] },
+        { "type": "attention", "texte": "Une simple hausse des coûts, même forte, n'est en principe pas un empêchement au sens de l'article 79 : elle relève plutôt d'une clause de hardship, que les parties ont intérêt à prévoir." }
+      ],
+      "termes": [
+        { "fr": "Empêchement", "en": "impediment", "es": "impedimento", "definition": "Événement rendant l'exécution impossible au sens de l'art. 79." },
+        { "fr": "Force majeure", "en": "force majeure", "es": "fuerza mayor", "definition": "Événement imprévisible et irrésistible libérant le débiteur." },
+        { "fr": "Exonération", "en": "exemption", "es": "exoneración", "definition": "Libération de la responsabilité pour inexécution." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un embargo soudain interdit l'exportation de composants vers le pays de l'acheteur : le vendeur, qui ne pouvait le prévoir ni le contourner, est exonéré des dommages-intérêts tant que l'embargo dure, s'il en informe l'acheteur ; celui-ci peut néanmoins résoudre le contrat si l'inexécution constitue une contravention essentielle." },
+      "confusions": [
+        { "a": "Exonération de l'article 79", "b": "Libération de toutes les conséquences de l'inexécution", "explication": "Seuls les dommages-intérêts sont écartés." }
+      ],
+      "verification": ["Quels sont les moyens qui restent à l'acheteur lorsque le vendeur est exonéré au titre de l'article 79 ?"],
+      "sources": ["src.cvim"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dai.cvim.001", "notion": "dai.cvim.champ", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Un contrat entre un vendeur français et un acheteur allemand stipule : « Le présent contrat est soumis au droit français. » La CVIM s'applique-t-elle ?",
+      "choix": [
+        { "id": "a", "texte": "Oui, car elle fait partie du droit français applicable aux ventes internationales ; il aurait fallu l'exclure expressément", "correct": true, "explication": "Le choix du droit d'un État contractant n'exclut pas, à lui seul, la CVIM." },
+        { "id": "b", "texte": "Non, le choix du droit français l'écarte automatiquement", "correct": false, "explication": "L'exclusion doit être claire (art. 6)." },
+        { "id": "c", "texte": "Non, la CVIM ne s'applique qu'aux ventes hors UE", "correct": false, "explication": "Elle s'applique entre États contractants, y compris dans l'UE." },
+        { "id": "d", "texte": "Seulement si le contrat est en anglais", "correct": false, "explication": "La langue est sans incidence." }
+      ]
+    },
+    {
+      "id": "q.dai.cvim.002", "notion": "dai.cvim.champ", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Quelles opérations sont exclues du champ de la CVIM ?",
+      "choix": [
+        { "id": "a", "texte": "La vente d'un yacht", "correct": true, "explication": "Navires et bateaux exclus (art. 2 e)." },
+        { "id": "b", "texte": "L'achat d'une montre par un touriste pour son usage personnel", "correct": true, "explication": "Vente aux consommateurs, en principe exclue (art. 2 a)." },
+        { "id": "c", "texte": "La vente de 10 tonnes de café entre deux sociétés de pays contractants", "correct": false, "explication": "Cas typique d'application." },
+        { "id": "d", "texte": "La vente d'actions", "correct": true, "explication": "Valeurs mobilières exclues (art. 2 d)." }
+      ]
+    },
+    {
+      "id": "q.dai.cvim.003", "notion": "dai.cvim.formation", "format": "unique", "niveau": 2, "competence": "appliquer",
+      "enonce": "Sous l'empire de la CVIM, à quel moment l'acceptation prend-elle effet ?",
+      "choix": [
+        { "id": "a", "texte": "Lorsqu'elle parvient à l'auteur de l'offre", "correct": true, "explication": "Art. 18-2 : théorie de la réception." },
+        { "id": "b", "texte": "Lorsqu'elle est postée", "correct": false, "explication": "C'est la postal rule de la common law." },
+        { "id": "c", "texte": "Lorsque les marchandises sont livrées", "correct": false, "explication": "La livraison est une exécution, postérieure à la formation." },
+        { "id": "d", "texte": "Lorsque le destinataire garde le silence pendant 8 jours", "correct": false, "explication": "Le silence ne vaut pas acceptation (art. 18-1)." }
+      ]
+    },
+    {
+      "id": "q.dai.cvim.004", "notion": "dai.cvim.formation", "format": "unique", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "L'acheteur répond à une offre : « Accepté ; merci d'indiquer notre numéro de commande sur la facture. » Le contrat est-il formé ?",
+      "choix": [
+        { "id": "a", "texte": "Oui, la modification n'est pas substantielle, sauf objection sans retard du vendeur", "correct": true, "explication": "Art. 19-2 : modification non substantielle." },
+        { "id": "b", "texte": "Non, toute modification est une contre-offre", "correct": false, "explication": "Seules les modifications substantielles le sont." },
+        { "id": "c", "texte": "Non, il faut un contrat écrit signé", "correct": false, "explication": "La CVIM n'exige pas de forme (art. 11), sauf réserve d'un État." },
+        { "id": "d", "texte": "Oui, mais seulement après livraison", "correct": false, "explication": "La formation ne dépend pas de la livraison." }
+      ]
+    },
+    {
+      "id": "q.dai.cvim.005", "notion": "dai.cvim.obligations", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Que risque l'acheteur qui dénonce un défaut de conformité trois ans après la remise des marchandises, sans garantie contractuelle ?",
+      "choix": [
+        { "id": "a", "texte": "Perdre le droit de se prévaloir du défaut", "correct": true, "explication": "Délai butoir de deux ans (art. 39-2)." },
+        { "id": "b", "texte": "Rien, aucun délai n'est prévu", "correct": false, "explication": "L'article 39 fixe des délais." },
+        { "id": "c", "texte": "Être obligé de payer une pénalité", "correct": false, "explication": "La sanction est la perte du recours." },
+        { "id": "d", "texte": "Devoir saisir l'OMC", "correct": false, "explication": "L'OMC ne traite pas les litiges entre entreprises." }
+      ]
+    },
+    {
+      "id": "q.dai.cvim.006", "notion": "dai.cvim.contravention-essentielle", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Selon l'article 25 de la CVIM, une contravention est essentielle lorsqu'elle :",
+      "choix": [
+        { "id": "a", "texte": "Prive substantiellement l'autre partie de ce qu'elle était en droit d'attendre du contrat, ce résultat étant prévisible", "correct": true, "explication": "Définition de l'art. 25." },
+        { "id": "b", "texte": "Porte sur une obligation écrite dans le contrat", "correct": false, "explication": "Le critère est la gravité de la privation, pas la forme." },
+        { "id": "c", "texte": "Dépasse 10 % du prix", "correct": false, "explication": "Aucun seuil chiffré." },
+        { "id": "d", "texte": "Est commise intentionnellement", "correct": false, "explication": "L'intention n'est pas un critère." }
+      ]
+    },
+    {
+      "id": "q.dai.cvim.007", "notion": "dai.cvim.remedes", "format": "multiple", "niveau": 3, "competence": "appliquer",
+      "enonce": "Les marchandises livrées présentent un défaut de conformité mineur (non essentiel). Quels moyens l'acheteur peut-il utiliser ?",
+      "choix": [
+        { "id": "a", "texte": "Exiger la réparation", "correct": true, "explication": "Art. 46-3, si la demande est raisonnable." },
+        { "id": "b", "texte": "Réduire le prix", "correct": true, "explication": "Art. 50." },
+        { "id": "c", "texte": "Demander des dommages-intérêts", "correct": true, "explication": "Toujours possibles (art. 45, 74)." },
+        { "id": "d", "texte": "Déclarer immédiatement le contrat résolu", "correct": false, "explication": "La résolution exige une contravention essentielle." },
+        { "id": "e", "texte": "Exiger des marchandises de remplacement", "correct": false, "explication": "Réservé à la contravention essentielle (art. 46-2)." }
+      ]
+    },
+    {
+      "id": "q.dai.cvim.008", "notion": "dai.cvim.exoneration", "format": "unique", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "Le prix de l'acier double après la signature : le vendeur invoque l'article 79 pour ne pas livrer au prix convenu. Que lui répondre ?",
+      "choix": [
+        { "id": "a", "texte": "Une hausse des coûts, même forte, n'est en principe pas un empêchement au sens de l'article 79 ; une clause de hardship aurait permis une renégociation", "correct": true, "explication": "L'exécution reste possible, seulement plus coûteuse." },
+        { "id": "b", "texte": "Il est automatiquement exonéré", "correct": false, "explication": "Les conditions de l'art. 79 ne sont pas réunies." },
+        { "id": "c", "texte": "Le contrat est nul", "correct": false, "explication": "La validité n'est pas en cause." },
+        { "id": "d", "texte": "Il doit saisir l'OMC", "correct": false, "explication": "Sans rapport." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dai.cvim.001", "notions": ["dai.cvim.champ", "dai.cvim.formation"],
+      "question": "Présentez le champ d'application de la CVIM et les règles de formation du contrat.",
+      "reponse": "CVIM (Vienne, 1980, en vigueur en 1988) : ventes de marchandises entre parties établies dans des États différents, contractants (art. 1-1 a) ou si la règle de conflit désigne la loi d'un État contractant (1-1 b). Exclusions (art. 2) : consommateurs, enchères, saisie, valeurs mobilières, navires, aéronefs, électricité ; ni validité ni propriété (art. 4) ; exclusion possible par les parties (art. 6). Formation : offre précise avec volonté d'être lié (art. 14), effet à réception ; acceptation à réception (art. 18), silence insuffisant ; modification substantielle = contre-offre (art. 19) ; contrat conclu quand l'acceptation prend effet (art. 23).",
+      "indispensables": ["Critères d'application", "Exclusions principales", "Exclusion expresse nécessaire", "Offre, acceptation à réception, contre-offre"],
+      "erreurs": ["Croire que choisir le droit français exclut la CVIM", "Appliquer la postal rule"]
+    },
+    {
+      "id": "f.dai.cvim.002", "notions": ["dai.cvim.obligations", "dai.cvim.contravention-essentielle", "dai.cvim.remedes", "dai.cvim.exoneration"],
+      "question": "Décrivez les obligations des parties, la contravention essentielle, les moyens de l'acheteur et l'exonération selon la CVIM.",
+      "reponse": "Vendeur : livrer, remettre les documents, transférer la propriété (art. 30), livrer conforme (art. 35). Acheteur : payer, prendre livraison (art. 53), examiner et dénoncer les défauts dans un délai raisonnable, au plus tard deux ans (art. 38-39). Contravention essentielle (art. 25) : privation substantielle prévisible ; ouvre la résolution (art. 49) et le remplacement. Moyens : exécution, réparation, délai supplémentaire, réduction du prix (art. 50), dommages-intérêts prévisibles (art. 74) avec obligation de limiter la perte (art. 77). Exonération (art. 79) : empêchement extérieur, imprévisible, insurmontable, notifié ; seuls les dommages-intérêts sont écartés.",
+      "indispensables": ["Obligations principales", "Définition de la contravention essentielle", "Liste des moyens", "Portée limitée de l'art. 79"],
+      "erreurs": ["Résoudre pour un défaut mineur", "Assimiler la hausse des coûts à un empêchement"]
+    }
+  ],
+  "exercices": [
+    {
+      "id": "e.dai.cvim.01", "notions": ["dai.cvim.champ", "dai.cvim.contravention-essentielle", "dai.cvim.remedes"], "type": "cas", "niveau": 3, "fictif": true,
+      "titre": "Des textiles non conformes livrés à Madrid",
+      "enonce": "La société Tissages de Touraine (France) vend 5 000 mètres de toile ignifugée à Decoraciones Castilla SL (Madrid) pour équiper un théâtre ; le contrat précise la norme anti-feu exigée et ne contient pas de clause de loi applicable ni d'exclusion de la CVIM. À la livraison, des tests montrent que 40 % de la toile ne respecte pas la norme. L'acheteur dénonce le défaut huit jours plus tard. L'inauguration du théâtre est dans trois mois ; un autre fournisseur peut livrer en six semaines.",
+      "questions": [
+        { "id": "1", "consigne": "La CVIM est-elle applicable ?", "reponse": { "type": "choix", "options": ["Oui : vente de marchandises entre parties établies dans deux États contractants, sans exclusion", "Non : il faut une clause la désignant", "Non : la vente est intra-européenne"], "correcte": 0 },
+          "correction": ["Art. 1-1 a : France et Espagne sont États contractants ; l'absence de clause ne l'écarte pas"] },
+        { "id": "2", "consigne": "Analysez la situation et indiquez les moyens dont dispose l'acheteur.",
+          "reponse": { "type": "libre", "criteres": ["Défaut de conformité au sens de l'art. 35 (norme stipulée)", "Dénonciation dans un délai raisonnable (art. 39)", "Discussion du caractère essentiel (sécurité d'un théâtre, 40 % de la toile, usage connu du vendeur)", "Moyens : remplacement (si essentiel), réparation, réduction du prix, résolution (si essentiel), dommages-intérêts prévisibles (art. 74) dont surcoût d'un achat de remplacement (art. 75)", "Obligation de limiter la perte (art. 77) : commander rapidement chez l'autre fournisseur"],
+            "corrige": "La toile ne répond pas à la norme stipulée : défaut de conformité (art. 35). L'acheteur a dénoncé le défaut huit jours après la livraison, délai raisonnable (art. 39). Le défaut paraît constituer une contravention essentielle (art. 25) : il porte sur 40 % de la marchandise, sur une caractéristique de sécurité indispensable à l'usage connu du vendeur (un théâtre). L'acheteur peut donc exiger des marchandises de remplacement (art. 46-2) ou déclarer la résolution, au moins partielle (art. 49, 51), et demander des dommages-intérêts couvrant notamment le surcoût d'un achat de remplacement (art. 75) et les autres préjudices prévisibles (art. 74). Il peut aussi préférer une réduction du prix pour la partie conservée (art. 50). Il doit limiter sa perte (art. 77) : commander sans tarder chez l'autre fournisseur pour tenir la date d'inauguration." },
+          "correction": ["Voir le corrigé et les critères"] }
+      ]
+    }
+  ]
+}

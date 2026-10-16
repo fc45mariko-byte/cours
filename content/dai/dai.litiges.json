@@ -1,0 +1,180 @@
+{
+  "chapitre": "dai.litiges",
+  "notions": [
+    {
+      "id": "dai.litiges.modes-amiables",
+      "titre": "Négociation, médiation, conciliation",
+      "niveau": "F",
+      "prerequis": [],
+      "connexes": ["dai.litiges.arbitrage", "mgi.negociation.phases"],
+      "question": "Comment régler un différend commercial international sans procès ?",
+      "definition": "Les modes amiables de règlement des différends cherchent une solution négociée, moins coûteuse, plus rapide et plus discrète qu'un procès, et qui préserve la relation commerciale. Dans la négociation, les parties discutent directement. Dans la médiation, un tiers neutre et indépendant (le médiateur) aide les parties à trouver elles-mêmes une solution, sans pouvoir de décision. La conciliation est proche ; le conciliateur peut proposer une solution, que les parties restent libres d'accepter. L'accord trouvé a la valeur d'un contrat (il peut, selon les droits, être homologué). Les contrats prévoient souvent une clause de règlement amiable préalable (avec un délai) avant tout recours au juge ou à l'arbitre.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Mode", "Rôle du tiers", "Issue"], "lignes": [
+          ["Négociation", "Aucun tiers", "Accord des parties"],
+          ["Médiation", "Facilite le dialogue, sans proposer de solution imposée", "Accord des parties"],
+          ["Conciliation", "Peut proposer une solution", "Accord des parties"],
+          ["Arbitrage (pour comparaison)", "Tranche le litige", "Sentence obligatoire"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Médiation", "en": "mediation", "es": "mediación", "definition": "Processus amiable assisté par un tiers sans pouvoir de décision." },
+        { "fr": "Modes alternatifs de règlement des différends", "en": "alternative dispute resolution (ADR)", "es": "métodos alternativos de solución de conflictos (MASC)", "definition": "Solutions de règlement autres que le procès étatique." },
+        { "fr": "Clause de médiation préalable", "en": "mediation clause / escalation clause", "es": "cláusula de mediación previa", "definition": "Obligation de tenter une médiation avant toute action." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un distributeur chilien conteste des retards de livraison. Le contrat impose une médiation sous l'égide d'un centre reconnu pendant 60 jours avant tout arbitrage. Le médiateur aide les parties à convenir d'un avoir et d'un nouveau calendrier : la relation se poursuit." },
+      "confusions": [
+        { "a": "Médiateur (aide à trouver un accord)", "b": "Arbitre (tranche)", "explication": "Seul l'arbitre rend une décision obligatoire." }
+      ],
+      "verification": ["Quels sont les avantages d'une médiation par rapport à un procès dans un litige international ?"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dai.litiges.arbitrage",
+      "titre": "L'arbitrage commercial international",
+      "niveau": "F",
+      "prerequis": ["dai.litiges.modes-amiables", "dai.conflits.distinction"],
+      "connexes": ["dai.litiges.new-york", "dai.contrat.unidroit"],
+      "question": "Pourquoi tant de contrats internationaux confient-ils leurs litiges à des arbitres plutôt qu'à des juges ?",
+      "definition": "L'arbitrage est un mode juridictionnel privé de règlement des litiges : les parties confient à un ou plusieurs arbitres qu'elles choisissent le pouvoir de trancher leur différend par une sentence obligatoire. Il repose sur une convention d'arbitrage : clause compromissoire (insérée dans le contrat, avant tout litige) ou compromis (conclu après la naissance du litige). L'arbitrage peut être institutionnel (organisé par une institution et son règlement : Cour internationale d'arbitrage de la CCI à Paris, LCIA à Londres, ICDR aux États-Unis, centres de Singapour ou Hong Kong) ou ad hoc (organisé par les parties, souvent selon le Règlement d'arbitrage de la CNUDCI). Avantages : neutralité, choix d'arbitres experts, confidentialité, procédure adaptable, exécution facilitée par la Convention de New York. Inconvénients : coût, absence ou limitation des voies de recours.",
+      "fonctionnement": [
+        { "type": "liste", "items": [
+          "Une bonne clause précise : institution et règlement, siège de l'arbitrage (ville), nombre d'arbitres, langue de la procédure, éventuellement loi applicable au fond",
+          "Le siège détermine le droit de la procédure et le juge du recours en annulation",
+          "La sentence n'est pas susceptible d'appel sur le fond en arbitrage international en France ; seul un recours en annulation pour des motifs limités est possible"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Arbitrage", "en": "arbitration", "es": "arbitraje", "definition": "Règlement d'un litige par des arbitres privés rendant une sentence obligatoire." },
+        { "fr": "Clause compromissoire", "en": "arbitration clause", "es": "cláusula compromisoria / convenio arbitral", "definition": "Clause soumettant à l'arbitrage les litiges futurs." },
+        { "fr": "Compromis d'arbitrage", "en": "submission agreement", "es": "compromiso arbitral", "definition": "Accord de recourir à l'arbitrage pour un litige déjà né." },
+        { "fr": "Sentence arbitrale", "en": "arbitral award", "es": "laudo arbitral", "definition": "Décision rendue par le tribunal arbitral." },
+        { "fr": "Siège de l'arbitrage", "en": "seat of arbitration", "es": "sede del arbitraje", "definition": "Rattachement juridique de la procédure arbitrale." }
+      ],
+      "exemple": { "fictif": true, "texte": "Clause : « Tous différends découlant du présent contrat seront tranchés définitivement suivant le Règlement d'arbitrage de la Chambre de commerce internationale par un arbitre unique. Le siège de l'arbitrage est Genève. La langue de l'arbitrage est l'anglais. » Ni la partie française ni la partie brésilienne ne plaide devant ses propres tribunaux." },
+      "confusions": [
+        { "a": "Clause compromissoire (avant le litige)", "b": "Compromis (après le litige)", "explication": "Deux formes de convention d'arbitrage, conclues à des moments différents." }
+      ],
+      "verification": ["Quels éléments doit préciser une clause compromissoire bien rédigée ?"],
+      "sources": ["src.new-york-1958"],
+      "verifieLe": "2026-10-15"
+    },
+    {
+      "id": "dai.litiges.new-york",
+      "titre": "La Convention de New York et l'exécution des sentences",
+      "niveau": "A",
+      "prerequis": ["dai.litiges.arbitrage"],
+      "connexes": ["dai.litiges.exequatur"],
+      "question": "Comment faire exécuter une sentence arbitrale dans le pays où le débiteur a ses biens ?",
+      "definition": "La Convention pour la reconnaissance et l'exécution des sentences arbitrales étrangères, signée à New York le 10 juin 1958, oblige les États parties (plus de 170) à reconnaître les conventions d'arbitrage et à reconnaître et exécuter les sentences rendues dans un autre État. La partie qui demande l'exécution produit la sentence et la convention d'arbitrage (art. IV). Le juge de l'exécution ne réexamine pas le fond : il ne peut refuser que pour des motifs limitativement énumérés (art. V), notamment l'invalidité de la convention d'arbitrage, la violation des droits de la défense, le dépassement de la mission des arbitres, l'irrégularité de la constitution du tribunal arbitral, une sentence annulée au siège, l'inarbitrabilité du litige ou la contrariété à l'ordre public de l'État d'exécution. C'est l'un des principaux atouts de l'arbitrage par rapport aux jugements étatiques.",
+      "fonctionnement": [
+        { "type": "etapes", "etapes": [
+          "Obtenir la sentence",
+          "Identifier le pays où le débiteur a des actifs",
+          "Saisir le juge compétent de ce pays avec la sentence et la convention d'arbitrage (et leurs traductions)",
+          "Le juge vérifie l'absence de motif de refus (art. V), sans réviser le fond",
+          "Exécution forcée selon les procédures locales (saisies)"
+        ] }
+      ],
+      "termes": [
+        { "fr": "Reconnaissance et exécution", "en": "recognition and enforcement", "es": "reconocimiento y ejecución", "definition": "Procédure donnant effet à une décision étrangère dans un État." },
+        { "fr": "Ordre public international", "en": "international public policy", "es": "orden público internacional", "definition": "Valeurs fondamentales qu'un État refuse de voir méconnues." }
+      ],
+      "exemple": { "fictif": true, "texte": "Une sentence CCI rendue à Paris condamne un acheteur indien à payer 2 M€. L'Inde étant partie à la Convention de New York, le vendeur saisit un tribunal indien qui vérifie seulement les motifs de l'article V ; il ne rejuge pas le litige." },
+      "confusions": [
+        { "a": "Convention de New York (sentences arbitrales)", "b": "Bruxelles I bis (jugements des États membres de l'UE)", "explication": "Deux régimes de circulation différents." }
+      ],
+      "verification": ["Le juge de l'exécution peut-il refuser une sentence parce qu'il estime que les arbitres ont mal apprécié les faits ?"],
+      "sources": ["src.new-york-1958"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Nombre exact d'États parties : vérifier sur uncitral.un.org."
+    },
+    {
+      "id": "dai.litiges.exequatur",
+      "titre": "L'exécution des jugements étrangers",
+      "niveau": "A",
+      "prerequis": ["dai.conflits.juridiction"],
+      "connexes": ["dai.litiges.new-york", "dcl.juridictions.brexit"],
+      "question": "Un jugement obtenu en France peut-il être exécuté contre un débiteur établi à l'étranger ?",
+      "definition": "Un jugement n'a en principe de force exécutoire que dans l'État où il a été rendu. Dans l'Union européenne, le règlement Bruxelles I bis supprime l'exequatur : un jugement rendu dans un État membre est exécutoire dans les autres sur présentation d'une copie et d'un certificat, le défendeur pouvant demander un refus pour des motifs limités. Hors de l'UE, il faut une procédure d'exequatur devant le juge de l'État où l'on veut exécuter, selon son droit national ou les conventions applicables (Convention de La Haye de 2005 sur les accords d'élection de for, Convention de La Haye de 2019 sur les jugements, conventions bilatérales). En France, le juge de l'exequatur vérifie la compétence indirecte du juge étranger, la conformité à l'ordre public international de fond et de procédure, et l'absence de fraude (jurisprudence Cornelissen, 2007), sans réviser le fond.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Situation", "Régime"], "lignes": [
+          ["Jugement d'un État membre de l'UE exécuté dans un autre", "Bruxelles I bis : pas d'exequatur"],
+          ["Jugement couvert par une clause d'élection de for exclusive entre États parties", "Convention de La Haye de 2005"],
+          ["Jugement entre États parties à la Convention de La Haye de 2019", "Reconnaissance selon cette convention"],
+          ["Autres cas", "Exequatur selon le droit de l'État d'exécution"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Exequatur", "en": "exequatur / enforcement order", "es": "exequátur", "definition": "Décision donnant force exécutoire à un jugement étranger." },
+        { "fr": "Force exécutoire", "en": "enforceability", "es": "fuerza ejecutiva", "definition": "Aptitude d'une décision à être exécutée par la contrainte." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un exportateur obtient du tribunal de commerce d'Orléans la condamnation d'un client argentin. Pour saisir les comptes du client en Argentine, il doit obtenir l'exequatur des tribunaux argentins selon leur droit, ce qui peut prendre du temps : une clause d'arbitrage aurait facilité l'exécution grâce à la Convention de New York." },
+      "confusions": [
+        { "a": "Reconnaissance (effet de chose jugée)", "b": "Exécution (contrainte sur les biens)", "explication": "Une décision peut être reconnue sans encore être exécutée." }
+      ],
+      "verification": ["Pourquoi l'arbitrage est-il souvent préféré lorsque le débiteur est établi hors de l'Union européenne ?"],
+      "sources": ["src.bruxelles1bis", "src.la-haye"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dai.litiges.001", "notion": "dai.litiges.modes-amiables", "format": "unique", "niveau": 1, "competence": "distinguer",
+      "enonce": "Quel tiers aide les parties à trouver elles-mêmes un accord, sans pouvoir de décision ?",
+      "choix": [
+        { "id": "a", "texte": "Le médiateur", "correct": true, "explication": "Il facilite le dialogue." },
+        { "id": "b", "texte": "L'arbitre", "correct": false, "explication": "Il tranche par une sentence obligatoire." },
+        { "id": "c", "texte": "Le juge", "correct": false, "explication": "Il tranche par un jugement." },
+        { "id": "d", "texte": "L'expert judiciaire", "correct": false, "explication": "Il éclaire le juge sur des questions techniques." }
+      ]
+    },
+    {
+      "id": "q.dai.litiges.002", "notion": "dai.litiges.arbitrage", "format": "unique", "niveau": 1, "competence": "memoriser",
+      "enonce": "Comment s'appelle la clause d'un contrat qui soumet à l'arbitrage les litiges futurs ?",
+      "choix": [
+        { "id": "a", "texte": "La clause compromissoire", "correct": true, "explication": "Convention d'arbitrage conclue avant tout litige." },
+        { "id": "b", "texte": "Le compromis", "correct": false, "explication": "Il est conclu après la naissance du litige." },
+        { "id": "c", "texte": "La clause attributive de juridiction", "correct": false, "explication": "Elle désigne un tribunal étatique." },
+        { "id": "d", "texte": "La clause de hardship", "correct": false, "explication": "Elle organise une renégociation." }
+      ]
+    },
+    {
+      "id": "q.dai.litiges.003", "notion": "dai.litiges.arbitrage", "format": "multiple", "niveau": 2, "competence": "comprendre",
+      "enonce": "Quels sont des avantages généralement reconnus de l'arbitrage international ?",
+      "choix": [
+        { "id": "a", "texte": "La neutralité du tribunal", "correct": true, "explication": "Aucune partie ne plaide devant ses propres juges." },
+        { "id": "b", "texte": "La confidentialité", "correct": true, "explication": "Les audiences ne sont pas publiques." },
+        { "id": "c", "texte": "Un coût toujours inférieur à celui d'un procès", "correct": false, "explication": "L'arbitrage peut être coûteux (honoraires des arbitres, frais de l'institution)." },
+        { "id": "d", "texte": "L'exécution facilitée par la Convention de New York", "correct": true, "explication": "Plus de 170 États parties." }
+      ]
+    },
+    {
+      "id": "q.dai.litiges.004", "notion": "dai.litiges.new-york", "format": "unique", "niveau": 2, "competence": "comprendre",
+      "enonce": "Saisi d'une demande d'exécution d'une sentence étrangère sur le fondement de la Convention de New York, le juge :",
+      "choix": [
+        { "id": "a", "texte": "Ne peut refuser que pour des motifs limités (art. V), sans réviser le fond", "correct": true, "explication": "Il ne rejuge pas le litige." },
+        { "id": "b", "texte": "Rejuge entièrement le litige", "correct": false, "explication": "La révision au fond est exclue." },
+        { "id": "c", "texte": "Doit renvoyer à la CCI", "correct": false, "explication": "La CCI n'intervient pas dans l'exécution." },
+        { "id": "d", "texte": "Peut refuser si la sentence est défavorable à une entreprise nationale", "correct": false, "explication": "Ce n'est pas un motif de refus." }
+      ]
+    },
+    {
+      "id": "q.dai.litiges.005", "notion": "dai.litiges.exequatur", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
+      "enonce": "Vrai ou faux : un jugement rendu en France contre une société espagnole doit faire l'objet d'une procédure d'exequatur en Espagne avant d'y être exécuté.",
+      "choix": [
+        { "id": "a", "texte": "Vrai", "correct": false, "explication": "Bruxelles I bis a supprimé l'exequatur entre États membres." },
+        { "id": "b", "texte": "Faux", "correct": true, "explication": "Il est exécutoire sur présentation d'une copie et d'un certificat." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dai.litiges.001", "notions": ["dai.litiges.modes-amiables", "dai.litiges.arbitrage", "dai.litiges.new-york", "dai.litiges.exequatur"],
+      "question": "Comparez les modes de règlement des litiges internationaux (amiable, arbitrage, juge) et les règles d'exécution des décisions.",
+      "reponse": "Amiable : négociation, médiation (tiers facilitateur), conciliation (tiers qui propose) ; accord contractuel, relation préservée. Arbitrage : arbitres choisis, sentence obligatoire, clause compromissoire ou compromis, institutionnel (CCI, LCIA…) ou ad hoc ; neutralité, confidentialité, expertise ; exécution via la Convention de New York (1958), refus seulement pour les motifs de l'art. V. Juge étatique : dans l'UE, jugements exécutoires sans exequatur (Bruxelles I bis) ; hors UE, exequatur selon le droit local ou conventions de La Haye (2005, 2019).",
+      "indispensables": ["Médiation vs arbitrage", "Clause compromissoire", "Convention de New York", "Absence d'exequatur dans l'UE"],
+      "erreurs": ["Penser que l'arbitre et le médiateur ont le même pouvoir"]
+    }
+  ]
+}

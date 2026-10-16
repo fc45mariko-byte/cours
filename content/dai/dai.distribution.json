@@ -1,0 +1,118 @@
+{
+  "chapitre": "dai.distribution",
+  "notions": [
+    {
+      "id": "dai.distribution.agent",
+      "titre": "Le statut de l'agent commercial (directive 86/653)",
+      "niveau": "A",
+      "prerequis": ["ici.presence.agent-commercial", "dai.normes.hard-law"],
+      "connexes": ["dai.distribution.concurrence", "dai.conflits.loi-applicable"],
+      "question": "Quelles protections le droit européen accorde-t-il à l'agent commercial, et peut-on y échapper en choisissant une autre loi ?",
+      "definition": "La directive 86/653/CEE du 18 décembre 1986 harmonise le statut des agents commerciaux indépendants dans l'UE. Elle impose des obligations de loyauté et d'information réciproques, encadre la rémunération (commission sur les opérations conclues grâce à l'agent, et sur celles de son secteur en cas d'exclusivité), fixe des préavis minimaux de résiliation pour les contrats à durée indéterminée (un mois la première année, deux la deuxième, trois à partir de la troisième, les États pouvant aller jusqu'à six mois) et garantit à l'agent, à la cessation du contrat, soit une indemnité (plafonnée à une année de commissions calculée sur la moyenne des cinq dernières années), soit la réparation du préjudice subi, selon le choix de l'État. La France a retenu la réparation (art. L134-12 du Code de commerce), que la jurisprudence évalue usuellement à deux années de commissions. La Cour de justice (arrêt Ingmar, 2000) a jugé ces règles impératives lorsque l'agent exerce son activité dans l'UE, même si le contrat désigne la loi d'un État tiers.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Point", "Règle"], "lignes": [
+          ["Préavis (contrat à durée indéterminée)", "1 mois / 2 mois / 3 mois selon l'ancienneté (minimum)"],
+          ["Fin de contrat", "Indemnité (max. 1 an de commissions) ou réparation du préjudice, selon l'État"],
+          ["Perte du droit", "Faute grave de l'agent, démission non justifiée, cession du contrat"],
+          ["Délai pour réclamer", "Un an après la cessation (l'agent doit notifier sa demande)"],
+          ["Caractère impératif", "Les parties ne peuvent pas déroger au détriment de l'agent avant l'échéance du contrat"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Indemnité de fin de contrat", "en": "goodwill indemnity / compensation on termination", "es": "indemnización por clientela", "definition": "Somme due à l'agent à la cessation du contrat." },
+        { "fr": "Préavis", "en": "notice period", "es": "preaviso", "definition": "Délai entre l'annonce de la résiliation et la fin du contrat." },
+        { "fr": "Faute grave", "en": "serious misconduct / gross breach", "es": "falta grave", "definition": "Manquement qui prive l'agent de son indemnité." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant français résilie, sans faute de l'agent, un contrat de six ans avec son agent en Italie. Il doit respecter un préavis d'au moins trois mois et versera l'indemnité prévue par le droit italien de transposition ou la réparation prévue par le droit français, selon la loi applicable. Choisir la loi d'un pays hors UE ne permettrait pas d'échapper à ces règles (jurisprudence Ingmar)." },
+      "confusions": [
+        { "a": "Indemnité de fin de contrat de l'agent", "b": "Rupture d'un contrat de distributeur", "explication": "Le distributeur n'a pas de statut harmonisé dans l'UE : son indemnisation dépend du droit national et du contrat." }
+      ],
+      "verification": ["Pourquoi la protection de l'agent commercial est-elle qualifiée d'impérative ?"],
+      "sources": ["src.directive-agents", "src.code-commerce"],
+      "verifieLe": "2026-10-15",
+      "aVerifier": "Évaluation usuelle « deux années de commissions » : usage jurisprudentiel français, non fixé par la loi ; vérifier l'état de la jurisprudence."
+    },
+    {
+      "id": "dai.distribution.concurrence",
+      "titre": "Droit de la concurrence de l'UE : ententes et restrictions verticales",
+      "niveau": "A",
+      "prerequis": ["ici.presence.distributeur", "dai.normes.hard-law"],
+      "connexes": ["dai.distribution.agent"],
+      "question": "Un fabricant peut-il interdire à son distributeur de vendre hors de son territoire ou lui imposer un prix de revente ?",
+      "definition": "L'article 101 du TFUE interdit les accords entre entreprises qui ont pour objet ou pour effet de restreindre la concurrence dans le marché intérieur ; l'article 102 interdit l'abus de position dominante. Les accords de distribution entre fabricant et distributeur (accords verticaux) peuvent bénéficier d'une exemption par catégorie (règlement (UE) 2022/720, applicable depuis le 1er juin 2022) si les parts de marché du fournisseur et de l'acheteur ne dépassent pas 30 % et si l'accord ne contient pas de restriction caractérisée. Sont notamment des restrictions caractérisées : l'imposition d'un prix de revente fixe ou minimal, et, sauf exceptions, l'interdiction faite au distributeur de répondre aux demandes spontanées de clients situés hors de son territoire (ventes passives). Les sanctions peuvent atteindre 10 % du chiffre d'affaires mondial de l'entreprise.",
+      "fonctionnement": [
+        { "type": "tableau", "entetes": ["Clause", "Appréciation de principe"], "lignes": [
+          ["Prix de revente conseillé ou maximal", "Admis"],
+          ["Prix de revente fixe ou minimal imposé", "Restriction caractérisée, interdite"],
+          ["Exclusivité territoriale avec interdiction des ventes actives dans le territoire d'un autre distributeur exclusif", "Admise sous conditions"],
+          ["Interdiction des ventes passives (demandes spontanées)", "Restriction caractérisée, sauf exceptions"],
+          ["Non-concurrence", "Admise jusqu'à 5 ans dans le cadre de l'exemption"]
+        ] }
+      ],
+      "termes": [
+        { "fr": "Entente", "en": "anticompetitive agreement / cartel", "es": "acuerdo colusorio / cártel", "definition": "Accord restreignant la concurrence." },
+        { "fr": "Restriction verticale", "en": "vertical restraint", "es": "restricción vertical", "definition": "Restriction dans un accord entre entreprises de niveaux différents de la chaîne." },
+        { "fr": "Abus de position dominante", "en": "abuse of a dominant position", "es": "abuso de posición dominante", "definition": "Exploitation abusive d'un fort pouvoir de marché." },
+        { "fr": "Ventes passives", "en": "passive sales", "es": "ventas pasivas", "definition": "Réponses à des demandes non sollicitées de clients." }
+      ],
+      "exemple": { "fictif": true, "texte": "Un fabricant de cosmétiques interdit à son distributeur belge de vendre à des clients français qui le contactent spontanément par Internet, et lui impose de ne jamais vendre sous 25 € : ces deux clauses constituent des restrictions caractérisées exposant le fabricant à des sanctions et rendant les clauses nulles." },
+      "confusions": [
+        { "a": "Prix conseillé (licite)", "b": "Prix imposé (illicite)", "explication": "Le fabricant peut recommander un prix, pas le rendre obligatoire par des pressions ou incitations." }
+      ],
+      "verification": ["Quelles sont les deux conditions principales pour bénéficier de l'exemption par catégorie des accords verticaux ?"],
+      "sources": ["src.tfue", "src.vber"],
+      "verifieLe": "2026-10-15"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.dai.distribution.001", "notion": "dai.distribution.agent", "format": "unique", "niveau": 2, "competence": "memoriser",
+      "enonce": "Quel préavis minimal la directive 86/653 impose-t-elle pour résilier un contrat d'agent à durée indéterminée en cours depuis plus de trois ans ?",
+      "choix": [
+        { "id": "a", "texte": "Trois mois", "correct": true, "explication": "Un, deux puis trois mois selon l'ancienneté." },
+        { "id": "b", "texte": "Un mois", "correct": false, "explication": "Valable pour la première année." },
+        { "id": "c", "texte": "Aucun préavis", "correct": false, "explication": "Un préavis minimal est imposé." },
+        { "id": "d", "texte": "Douze mois", "correct": false, "explication": "Ce n'est pas le minimum de la directive." }
+      ]
+    },
+    {
+      "id": "q.dai.distribution.002", "notion": "dai.distribution.agent", "format": "unique", "niveau": 3, "competence": "analyser-cas",
+      "enonce": "Un fabricant américain conclut avec un agent établi en France un contrat soumis au droit de Californie, sans indemnité de fin de contrat. L'agent est révoqué sans faute. Peut-il obtenir une indemnisation ?",
+      "choix": [
+        { "id": "a", "texte": "Oui : les règles protectrices de la directive s'imposent lorsque l'agent exerce dans l'UE (jurisprudence Ingmar)", "correct": true, "explication": "Elles sont impératives malgré le choix d'une loi étrangère." },
+        { "id": "b", "texte": "Non : le droit californien choisi s'applique entièrement", "correct": false, "explication": "Le choix de loi ne peut écarter ces règles impératives." },
+        { "id": "c", "texte": "Non : seuls les agents européens travaillant pour des mandants européens sont protégés", "correct": false, "explication": "Le critère est l'activité dans l'UE." },
+        { "id": "d", "texte": "Oui, mais uniquement s'il saisit l'OMC", "correct": false, "explication": "L'OMC ne traite pas ces litiges." }
+      ]
+    },
+    {
+      "id": "q.dai.distribution.003", "notion": "dai.distribution.concurrence", "format": "multiple", "niveau": 2, "competence": "distinguer",
+      "enonce": "Dans un contrat de distribution soumis au droit de la concurrence de l'UE, quelles clauses sont des restrictions caractérisées ?",
+      "choix": [
+        { "id": "a", "texte": "Imposer au distributeur un prix de revente minimal", "correct": true, "explication": "Prix imposé." },
+        { "id": "b", "texte": "Communiquer un prix de revente conseillé", "correct": false, "explication": "Admis s'il reste indicatif." },
+        { "id": "c", "texte": "Interdire de répondre aux commandes spontanées de clients d'autres pays de l'UE", "correct": true, "explication": "Restriction des ventes passives." },
+        { "id": "d", "texte": "Fixer un prix de revente maximal", "correct": false, "explication": "Admis dans le cadre de l'exemption." }
+      ]
+    },
+    {
+      "id": "q.dai.distribution.004", "notion": "dai.distribution.concurrence", "format": "unique", "niveau": 2, "competence": "memoriser",
+      "enonce": "Quel seuil de parts de marché conditionne l'exemption par catégorie des accords verticaux (règlement 2022/720) ?",
+      "choix": [
+        { "id": "a", "texte": "30 % pour le fournisseur et pour l'acheteur", "correct": true, "explication": "Seuil du règlement d'exemption." },
+        { "id": "b", "texte": "10 %", "correct": false, "explication": "Ce seuil se rapproche de la communication de minimis pour les accords entre concurrents." },
+        { "id": "c", "texte": "50 %", "correct": false, "explication": "Trop élevé." },
+        { "id": "d", "texte": "Aucun seuil", "correct": false, "explication": "L'exemption est plafonnée." }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f.dai.distribution.001", "notions": ["dai.distribution.agent", "dai.distribution.concurrence"],
+      "question": "Présentez la protection de l'agent commercial dans l'UE et les principales règles de concurrence applicables aux contrats de distribution.",
+      "reponse": "Agent (directive 86/653) : loyauté et information, commission, préavis minimal de 1, 2, 3 mois selon l'ancienneté, indemnité (max. un an de commissions) ou réparation (France : art. L134-12, usage de deux années de commissions), sauf faute grave ; règles impératives même si une loi étrangère est choisie (CJCE Ingmar, 2000). Distribution : art. 101 TFUE (ententes) et 102 (abus de position dominante) ; exemption des accords verticaux (règl. 2022/720) si parts de marché ≤ 30 % et sans restriction caractérisée (prix de revente imposé, interdiction des ventes passives) ; sanctions jusqu'à 10 % du CA mondial.",
+      "indispensables": ["Préavis et indemnité de l'agent", "Caractère impératif (Ingmar)", "Seuil de 30 %", "Restrictions caractérisées"],
+      "erreurs": ["Croire qu'un choix de loi étrangère écarte la protection de l'agent", "Confondre prix conseillé et imposé"]
+    }
+  ]
+}

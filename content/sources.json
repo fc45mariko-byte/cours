@@ -315,5 +315,101 @@
     "auteur": "Erin Meyer",
     "acces": "reference",
     "pertinence": "Échelles culturelles appliquées au management"
+  },
+  {
+    "id": "src.tfue",
+    "titre": "Traité sur le fonctionnement de l'Union européenne (TFUE), notamment art. 101, 102 et 288",
+    "auteur": "Union européenne",
+    "url": "https://eur-lex.europa.eu",
+    "acces": "reference",
+    "pertinence": "Actes de l'UE, droit de la concurrence"
+  },
+  {
+    "id": "src.rome1",
+    "titre": "Règlement (CE) n° 593/2008 du 17 juin 2008 sur la loi applicable aux obligations contractuelles (Rome I)",
+    "auteur": "Parlement européen et Conseil",
+    "url": "https://eur-lex.europa.eu",
+    "acces": "reference",
+    "pertinence": "Loi applicable au contrat"
+  },
+  {
+    "id": "src.bruxelles1bis",
+    "titre": "Règlement (UE) n° 1215/2012 du 12 décembre 2012 concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Bruxelles I bis)",
+    "auteur": "Parlement européen et Conseil",
+    "url": "https://eur-lex.europa.eu",
+    "acces": "reference",
+    "pertinence": "Juridiction compétente, circulation des jugements"
+  },
+  {
+    "id": "src.new-york-1958",
+    "titre": "Convention pour la reconnaissance et l'exécution des sentences arbitrales étrangères, New York, 10 juin 1958",
+    "auteur": "Nations unies (CNUDCI)",
+    "url": "https://uncitral.un.org",
+    "acces": "reference",
+    "pertinence": "Exécution des sentences arbitrales"
+  },
+  {
+    "id": "src.unidroit",
+    "titre": "Principes d'UNIDROIT relatifs aux contrats du commerce international, édition 2016",
+    "auteur": "Institut international pour l'unification du droit privé (UNIDROIT)",
+    "url": "https://www.unidroit.org",
+    "acces": "reference",
+    "pertinence": "Droit souple des contrats internationaux, hardship"
+  },
+  {
+    "id": "src.omc",
+    "titre": "Accord de Marrakech instituant l'OMC (1994) ; GATT de 1994, art. I (nation la plus favorisée) et III (traitement national) ; Mémorandum d'accord sur le règlement des différends",
+    "auteur": "Organisation mondiale du commerce",
+    "url": "https://www.wto.org",
+    "acces": "reference",
+    "pertinence": "Principes du commerce multilatéral, ORD"
+  },
+  {
+    "id": "src.vber",
+    "titre": "Règlement (UE) 2022/720 de la Commission du 10 mai 2022 (exemption par catégorie des accords verticaux) et lignes directrices associées",
+    "auteur": "Commission européenne",
+    "url": "https://eur-lex.europa.eu",
+    "acces": "reference",
+    "pertinence": "Restrictions verticales, distribution"
+  },
+  {
+    "id": "src.icc-fm-hardship",
+    "titre": "ICC Force Majeure and Hardship Clauses, mars 2020",
+    "auteur": "Chambre de commerce internationale",
+    "url": "https://iccwbo.org",
+    "acces": "reference",
+    "pertinence": "Clauses types de force majeure et de hardship"
+  },
+  {
+    "id": "src.code-civil",
+    "titre": "Code civil, notamment art. 1195 (imprévision) et art. 1218 (force majeure), issus de l'ordonnance n° 2016-131",
+    "auteur": "République française (Légifrance)",
+    "url": "https://www.legifrance.gouv.fr",
+    "acces": "reference",
+    "pertinence": "Droit français des contrats"
+  },
+  {
+    "id": "src.la-haye",
+    "titre": "Convention de La Haye du 30 juin 2005 sur les accords d'élection de for ; Convention du 2 juillet 2019 sur la reconnaissance et l'exécution des jugements étrangers",
+    "auteur": "Conférence de La Haye de droit international privé",
+    "url": "https://www.hcch.net",
+    "acces": "reference",
+    "pertinence": "Circulation des jugements hors UE, Brexit"
+  },
+  {
+    "id": "src.uk-statutes",
+    "titre": "Sale of Goods Act 1979 ; Unfair Contract Terms Act 1977 ; Misrepresentation Act 1967 ; Contracts (Rights of Third Parties) Act 1999 ; Consumer Rights Act 2015",
+    "auteur": "Parlement du Royaume-Uni",
+    "url": "https://www.legislation.gov.uk",
+    "acces": "reference",
+    "pertinence": "Lois anglaises du droit des contrats"
+  },
+  {
+    "id": "src.ucc",
+    "titre": "Uniform Commercial Code, Article 2 (Sales)",
+    "auteur": "Uniform Law Commission et American Law Institute",
+    "url": "https://www.law.cornell.edu/ucc/2",
+    "acces": "reference",
+    "pertinence": "Droit américain de la vente"
   }
 ]
