@@ -1,6 +1,6 @@
 # Inventaire des cours (COURSE_INVENTORY)
 
-Établi le 31 octobre 2026 sur la branche `claude/learning-journal` (point de départ : tag `avant-learning-journal`, commit `ba59873`).
+Établi le 31 octobre 2026 (mis à jour après la refonte) sur la branche `claude/learning-journal` (point de départ : tag `avant-learning-journal`, commit `ba59873`).
 Source : `content/catalogue.json` et les fichiers `content/<matière>/<chapitre>.json`. Les identifiants complets sont figés dans `tests/reference/inventaire-contenu.json`, contrôlé par `tests/unit/integrite.test.ts`.
 
 ## Synthèse
@@ -9,6 +9,7 @@ Source : `content/catalogue.json` et les fichiers `content/<matière>/<chapitre>
 |---|---|---|---|---|---|---|---|---|---|
 | tci | Techniques du commerce international | ORL | S5 + S6 | Isabelle Noël | 9 | 66 | 75 | 18 | 9 |
 | ici | Introduction au commerce international | ORL | S5 | Isabelle Noël | 6 | 24 | 29 | 9 | 3 |
+| tou | Introduction au tourisme international | ORL? | — | — | 0 | 0 | 0 | 0 | 0 |
 | dai | Droit des affaires internationales | ORL | S5 | Isabelle Noël | 6 | 21 | 31 | 8 | 2 |
 | dcl | Droit des contrats de la Common law | ORL | S6 | Isabelle Noël | 8 | 23 | 39 | 9 | 3 |
 | cpt | Comptabilité générale | ORL | S5 | Isabelle Noël | 9 | 32 | 63 | 15 | 15 |
@@ -29,11 +30,11 @@ Source : `content/catalogue.json` et les fichiers `content/<matière>/<chapitre>
 | stg | Stage et rapport de stage | ORL | S6 | Aline Henninger, Mayumi Shimosakai | 5 | 10 | 19 | 6 | 3 |
 | eco | Économie internationale | COMP | — | — | 4 | 10 | 23 | 9 | 3 |
 | mks | Marketing international et supply chain | COMP | — | — | 2 | 4 | 12 | 4 | 2 |
-| **Total** | 22 matières | | | | **111** | **394** | **577** | **169** | **74** |
+| **Total** | 23 matières | | | | **111** | **394** | **577** | **169** | **74** |
 
 Statuts : **ORL** Maquette d’Orléans ; **ORL?** Présence ou contenu à confirmer ; **COMP** Complément hors maquette.
 
-Toutes les notions du catalogue sont rédigées (394 / 394). **Aucune matière « Introduction au tourisme international » n'existe** : voir COURSE_COMPLETENESS_REPORT.md.
+Toutes les notions du catalogue sont rédigées (394 / 394). La matière « Introduction au tourisme international » figure au catalogue avec le statut **absente** (aucun chapitre, aucune source) : voir COURSE_COMPLETENESS_REPORT.md.
 
 ## Détail par matière, chapitre et notion
 
@@ -65,6 +66,13 @@ Maquette d’Orléans · S5 · Isabelle Noël · catégorie Commerce internation
 | `ici.presence` | Modes de présence à l'international | Export indirect · Export direct · Agent commercial · Distributeur et concessionnaire · Licence et franchise · Joint-venture · Filiale et succursale · Arbitrage contrôle / engagement / risque | 8 | 2 | 1 |
 | `ici.prospection` | Prospection | Salons, missions, VIE, prospection digitale · Plan de prospection | 3 | 1 | 0 |
 | `ici.mix` | Marketing mix international | Standardisation ou adaptation · Produit et normes · Prix export : escalade des prix · Canaux de distribution · Communication internationale | 6 | 2 | 1 |
+
+### tou — Introduction au tourisme international
+
+Présence ou contenu à confirmer · sans semestre · enseignant non renseigné · catégorie Commerce international
+
+| Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
+|---|---|---|---|---|---|
 
 ### dai — Droit des affaires internationales
 
@@ -173,10 +181,10 @@ Maquette d’Orléans · S5 + S6 · Alice Michel · catégorie Anglais
 
 | Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
 |---|---|---|---|---|---|
-| `aec.correspondance` | Correspondance commerciale | Business letter layout · Salutations et formules de clôture · Registre et atténuation · Enquiry · Offer et quotation · Order et acknowledgement · Complaint et reply · Payment reminders · Courriel professionnel | 9 | 2 | 1 |
-| `aec.lexique` | Lexique | L'entreprise · Finance et comptabilité · Commerce international · Marketing · Économie · Faux amis · Nombres et tendances | 8 | 2 | 1 |
-| `aec.presse` | Presse économique | Lire un article économique · Synthèse écrite | 3 | 1 | 0 |
-| `aec.grammaire` | Grammaire utile | Modaux · Passif · Conditionnels · Present perfect et prétérit | 5 | 1 | 0 |
+| `aec.correspondance` | Business correspondence | Business letter layout · Salutations and complimentary closes · Register and softening · Enquiry (request for information) · Offer and quotation · Order and acknowledgement · Complaint and reply · Payment reminders · Professional e-mail | 9 | 2 | 1 |
+| `aec.lexique` | Vocabulary | Company vocabulary · Finance and accounting in English · International trade vocabulary · Marketing vocabulary · Economics vocabulary · False friends in business English · Numbers and trends | 8 | 2 | 1 |
+| `aec.presse` | The business press | Reading a business article in English · Writing a synthesis in English | 3 | 1 | 0 |
+| `aec.grammaire` | Useful grammar | Modal verbs · The passive voice · Conditionals · Present perfect and simple past | 5 | 1 | 0 |
 
 ### tra — Traduction anglaise : thème et version
 
@@ -194,9 +202,9 @@ Maquette d’Orléans · S6 · Elodie Gallet · catégorie Anglais
 
 | Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
 |---|---|---|---|---|---|
-| `cea.oral` | L'anglais oral | Formes faibles · Liaisons et assimilations · Les accents | 4 | 1 | 0 |
-| `cea.methode` | Méthode d'écoute | Écoute globale puis ciblée · Prise de notes · Restitution : compte rendu | 3 | 1 | 0 |
-| `cea.expression` | Expression orale | Présentation orale · Interaction orale | 3 | 1 | 0 |
+| `cea.oral` | Spoken English | Weak forms · Linking and assimilation · Accents of English | 4 | 1 | 0 |
+| `cea.methode` | Listening method | Global then focused listening · Note-taking · Restitution: the report | 3 | 1 | 0 |
+| `cea.expression` | Speaking | Giving an oral presentation in English · Spoken interaction in English | 3 | 1 | 0 |
 
 ### eec — Espagnol économique et commercial
 
@@ -204,10 +212,10 @@ Maquette d’Orléans · S5 + S6 · Claire Decobert · catégorie Espagnol
 
 | Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
 |---|---|---|---|---|---|
-| `eec.correspondencia` | Correspondencia comercial | Structure de la carta comercial · Usted, subjonctif, conditionnel de courtoisie · Le cycle : consulta, presupuesto, pedido, albarán, factura · La reclamación · Courriel | 6 | 1 | 1 |
-| `eec.lexico` | Léxico | L'entreprise · Finances · Commerce extérieur · Faux amis | 4 | 1 | 0 |
-| `eec.economia` | Economía | Les secteurs de l'économie espagnole · Repères : plan de stabilisation de 1959, entrée dans la CEE en 1986, euro · Économies latino-américaines · Mercosur, Alliance du Pacifique, accords avec l'UE | 6 | 2 | 0 |
-| `eec.escritos` | Écrits professionnels | L'informe · CV en espagnol | 2 | 1 | 0 |
+| `eec.correspondencia` | Correspondencia comercial | La estructura de la carta comercial · Usted, subjuntivo y condicional de cortesía · El ciclo comercial: consulta, presupuesto, pedido, albarán, factura · La reclamación · El correo electrónico profesional en español | 6 | 1 | 1 |
+| `eec.lexico` | Léxico | El vocabulario de la empresa en español · Finanzas y contabilidad en español · El vocabulario del comercio exterior en español · Los falsos amigos francés-español en el ámbito profesional | 4 | 1 | 0 |
+| `eec.economia` | Economía | Los sectores de la economía española · Hitos: Plan de Estabilización de 1959, ingreso en la CEE en 1986, euro · Las economías latinoamericanas · Mercosur, Alianza del Pacífico y acuerdos con la UE | 6 | 2 | 0 |
+| `eec.escritos` | Escritos profesionales | El informe en español · El CV en español | 2 | 1 | 0 |
 
 ### tve — Thème et version espagnols
 
@@ -225,12 +233,12 @@ Maquette d’Orléans · S5 · Karine Rivière de Franco · catégorie Civilisat
 
 | Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
 |---|---|---|---|---|---|
-| `cvb.institutions` | Institutions | Parlement et gouvernement · Partis et système électoral | 2 | 1 | 0 |
-| `cvb.welfare` | Le Welfare State | Le rapport Beveridge · Attlee et le Welfare State, NHS · Les nationalisations | 3 | 1 | 0 |
-| `cvb.consensus` | Consensus et crise | Le consensus · Déclin et « stop-go » · Le Royaume-Uni et l'Europe (1973, 1975) · Crise des années 1970, Winter of Discontent | 4 | 1 | 0 |
-| `cvb.thatcher` | Le thatchérisme | Le monétarisme · Les privatisations · Les syndicats et la grève des mineurs · Le Big Bang · La poll tax et la chute de Thatcher | 5 | 1 | 0 |
-| `cvb.new-labour` | De Major au New Labour | Le gouvernement Major · La Third Way · La dévolution · L'accord du Vendredi saint | 4 | 1 | 0 |
-| `cvb.methode` | Méthode | Commentaire de document de civilisation | 2 | 1 | 1 |
+| `cvb.institutions` | Institutions | Parliament and government · Parties and the electoral system | 2 | 1 | 0 |
+| `cvb.welfare` | The Welfare State | The Beveridge Report (1942) · Attlee and the Welfare State: the NHS · Nationalisation | 3 | 1 | 0 |
+| `cvb.consensus` | Consensus and crisis | The post-war consensus ("Butskellism") · Relative decline and "stop-go" · The United Kingdom and Europe (1973, 1975) · The crisis of the 1970s and the Winter of Discontent | 4 | 1 | 0 |
+| `cvb.thatcher` | Thatcherism | Monetarism · Privatisation · The trade unions and the miners' strike · The Big Bang in the City (1986) · The poll tax and Thatcher's downfall | 5 | 1 | 0 |
+| `cvb.new-labour` | From Major to New Labour | The Major government (1990-1997) · New Labour and the Third Way · Devolution · The Good Friday Agreement (1998) | 4 | 1 | 0 |
+| `cvb.methode` | Method | The British civilisation document commentary | 2 | 1 | 1 |
 
 ### cve — Civilisation espagnole
 
@@ -238,12 +246,12 @@ Maquette d’Orléans · S5 · Claire Decobert · catégorie Civilisations
 
 | Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
 |---|---|---|---|---|---|
-| `cve.franquismo` | Le franquisme | L'héritage franquiste | 2 | 1 | 0 |
-| `cve.transicion` | La Transición | La Ley para la Reforma Política · Les élections de 1977 et la légalisation du PCE · Les Pactes de la Moncloa · La Constitution de 1978 | 4 | 1 | 0 |
-| `cve.consolidacion` | Consolidation démocratique | Le 23-F · Les gouvernements González, l'entrée dans la CEE, 1992 · Aznar et l'euro · Le 11-M | 8 | 3 | 1 |
-| `cve.autonomias` | L'État des autonomies | L'État des autonomies · La question catalane (2006-2017) · Le Pays basque et ETA | 6 | 3 | 0 |
-| `cve.actualidad` | L'Espagne depuis 2008 | Crise de 2008, 15-M, fin du bipartisme | 3 | 1 | 0 |
-| `cve.metodo` | Méthode | Commentaire de document | 2 | 1 | 1 |
+| `cve.franquismo` | El franquismo | La herencia franquista | 2 | 1 | 0 |
+| `cve.transicion` | La Transición | La Ley para la Reforma Política (1976) · Las elecciones de 1977 y la legalización del PCE · Los Pactos de la Moncloa (1977) · La Constitución de 1978 | 4 | 1 | 0 |
+| `cve.consolidacion` | La consolidación democrática | El 23-F (1981) · Los gobiernos de González, la entrada en la CEE y 1992 · Los gobiernos de Aznar y el euro · El 11-M (2004) | 8 | 3 | 1 |
+| `cve.autonomias` | El Estado de las autonomías | El Estado de las autonomías · La cuestión catalana (2006-2017) · El País Vasco y ETA | 6 | 3 | 0 |
+| `cve.actualidad` | España desde 2008 | La crisis de 2008 y el fin del bipartidismo | 3 | 1 | 0 |
+| `cve.metodo` | Método | El comentario de texto histórico | 2 | 1 | 1 |
 
 ### cva — Civilisation américaine : publicité et marketing
 
@@ -251,12 +259,12 @@ Maquette d’Orléans · S6 · Eric Tabuteau · catégorie Civilisations
 
 | Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
 |---|---|---|---|---|---|
-| `cva.naissance` | Naissance de la publicité | Production de masse et naissance de la publicité · Les agences : Lasker, Hopkins, reason-why · Bernays et les relations publiques | 6 | 3 | 0 |
-| `cva.mesure` | La mesure | Gallup, Nielsen, études de marché | 2 | 1 | 0 |
-| `cva.age-or` | L'âge d'or | Télévision et USP · La creative revolution | 4 | 2 | 0 |
-| `cva.regulation` | Régulation | Régulation : FTC, tabac | 3 | 1 | 0 |
-| `cva.contemporain` | Époque contemporaine | Segmentation · Publicité numérique et données | 4 | 2 | 0 |
-| `cva.methode` | Méthode | Analyser une publicité | 3 | 1 | 1 |
+| `cva.naissance` | The birth of advertising | Mass production and the birth of modern advertising · The agencies: Ayer, Lasker, Hopkins and reason-why · Bernays and public relations | 6 | 3 | 0 |
+| `cva.mesure` | Measurement | Gallup, Nielsen and market research | 2 | 1 | 0 |
+| `cva.age-or` | The golden age | Television and the Unique Selling Proposition · The creative revolution of the 1960s | 4 | 2 | 0 |
+| `cva.regulation` | Regulation | Regulating advertising: the FTC and tobacco | 3 | 1 | 0 |
+| `cva.contemporain` | The contemporary era | Audience segmentation · Digital advertising and personal data | 4 | 2 | 0 |
+| `cva.methode` | Method | Analyzing an advertisement | 3 | 1 | 1 |
 
 ### cvl — Civilisation latino-américaine
 
@@ -264,11 +272,11 @@ Présence ou contenu à confirmer · S6 · Marcos Eymar · catégorie Civilisati
 
 | Chapitre | Titre | Notions | QCM | Flashcards | Exercices |
 |---|---|---|---|---|---|
-| `cvl.urbanizacion` | Urbanisation | L'exode rural · Les métropoles | 4 | 2 | 0 |
-| `cvl.informalidad` | Informalité | Favelas, villas, barriadas · L'économie informelle | 4 | 2 | 0 |
-| `cvl.fracturas` | Fractures urbaines | Ségrégation, barrios cerrados · La violence urbaine | 4 | 2 | 0 |
-| `cvl.politicas` | Politiques urbaines | Medellín et l'urbanisme social · Autres cas : Bogotá, Curitiba | 4 | 2 | 0 |
-| `cvl.representaciones` | Représentations | Le cinéma de la ville · Analyser une image ou un film | 4 | 2 | 1 |
+| `cvl.urbanizacion` | Urbanización | El éxodo rural · Las metrópolis latinoamericanas | 4 | 2 | 0 |
+| `cvl.informalidad` | Informalidad | Favelas, villas, barriadas: los barrios informales · La economía informal | 4 | 2 | 0 |
+| `cvl.fracturas` | Fracturas urbanas | Segregación y barrios cerrados · La violencia urbana | 4 | 2 | 0 |
+| `cvl.politicas` | Políticas urbanas | Medellín y el urbanismo social · Otros casos: Bogotá y Curitiba | 4 | 2 | 0 |
+| `cvl.representaciones` | Representaciones | El cine de la ciudad latinoamericana · Analizar una imagen o una secuencia de película | 4 | 2 | 1 |
 
 ### stg — Stage et rapport de stage
 

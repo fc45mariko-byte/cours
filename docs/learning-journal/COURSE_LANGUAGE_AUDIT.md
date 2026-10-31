@@ -1,6 +1,6 @@
 # Audit linguistique des cours (COURSE_LANGUAGE_AUDIT)
 
-Établi le 31 octobre 2026.
+Établi le 31 octobre 2026, mis à jour après la réécriture des matières en anglais et en espagnol (phase de contenu de la refonte).
 
 ## Règle retenue
 
@@ -23,6 +23,7 @@ Pour chaque matière, comptage des mots-outils propres à chaque langue (article
 |---|---|---|---|---|---|
 | tci | Techniques du commerce international | français | 91 / 1 / 8 | 91 / 0 / 8 | Oui |
 | ici | Introduction au commerce international | français | 92 / 1 / 7 | 93 / 1 / 6 | Oui |
+| tou | Introduction au tourisme international | français | — | — | Sans contenu (matière absente) |
 | dai | Droit des affaires internationales | français | 92 / 1 / 8 | 95 / 0 / 5 | Oui |
 | dcl | Droit des contrats de la Common law | français | 84 / 6 / 9 | 89 / 3 / 8 | Oui |
 | cpt | Comptabilité générale | français | 91 / 2 / 7 | 91 / 3 / 6 | Oui |
@@ -31,28 +32,45 @@ Pour chaque matière, comptage des mots-outils propres à chaque langue (article
 | mgi | Management interculturel | français | 90 / 5 / 5 | 94 / 2 / 4 | Oui |
 | gdp | Gestion de projet | français | 89 / 3 / 8 | 93 / 1 / 6 | Oui |
 | red | Rédaction de documents universitaires | français | 89 / 0 / 11 | 93 / 0 / 7 | Oui |
-| aec | Anglais économique et commercial | anglais | 69 / 20 / 11 | 58 / 34 / 8 | **Non** |
+| aec | Anglais économique et commercial | anglais | 0 / 100 / 0 | 4 / 96 / 0 | Oui |
 | tra | Traduction anglaise : thème et version | français + anglais (traduction) | 71 / 18 / 11 | 70 / 26 / 4 | Oui (consignes en français ; à relire) |
-| cea | Compréhension et expression anglaises | anglais | 68 / 17 / 15 | 84 / 12 / 4 | **Non** |
-| eec | Espagnol économique et commercial | espagnol | 75 / 1 / 24 | 76 / 2 / 23 | **Non** |
+| cea | Compréhension et expression anglaises | anglais | 0 / 100 / 0 | 6 / 94 / 0 | Oui |
+| eec | Espagnol économique et commercial | espagnol | 21 / 0 / 79 | 24 / 0 / 76 | Oui |
 | tve | Thème et version espagnols | français + espagnol (traduction) | 65 / 3 / 31 | 49 / 4 / 47 | Oui (consignes en français ; à relire) |
-| cvb | Civilisation britannique : the UK since 1945 | anglais | 89 / 2 / 9 | 92 / 1 / 7 | **Non** |
-| cve | Civilisation espagnole | espagnol | 88 / 0 / 11 | 84 / 0 / 16 | **Non** |
-| cva | Civilisation américaine : publicité et marketing | anglais | 84 / 6 / 10 | 91 / 4 / 6 | **Non** |
-| cvl | Civilisation latino-américaine | espagnol | 89 / 1 / 10 | 87 / 3 / 10 | **Non** |
+| cvb | Civilisation britannique : the UK since 1945 | anglais | 0 / 100 / 0 | 0 / 100 / 0 | Oui |
+| cve | Civilisation espagnole | espagnol | 23 / 0 / 77 | 21 / 0 / 79 | Oui |
+| cva | Civilisation américaine : publicité et marketing | anglais | 0 / 100 / 0 | 0 / 100 / 0 | Oui |
+| cvl | Civilisation latino-américaine | espagnol | 22 / 0 / 78 | 28 / 0 / 72 | Oui |
 | stg | Stage et rapport de stage | français | 88 / 1 / 11 | 93 / 0 / 7 | Oui |
 | eco | Économie internationale | français | 89 / 2 / 9 | 89 / 0 / 11 | Oui |
 | mks | Marketing international et supply chain | français | 87 / 2 / 12 | 92 / 3 / 5 | Oui |
 
-## Écarts
+## Écarts et corrections
 
-**7 matières ne respectent pas la règle** : leur contenu est rédigé en français alors qu'il doit l'être en anglais (aec, cea, cvb, cva) ou en espagnol (eec, cve, cvl). Ce contenu n'est pas un support original de l'université : il a été rédigé pour cette application à partir des descriptifs officiels. Sa réécriture dans la langue cible n'est donc pas la traduction d'un cours original ; elle fait l'objet d'une phase de contenu dédiée (voir REFACTOR_PLAN.md), menée en conservant tous les identifiants.
+**Avant la refonte**, 7 matières étaient rédigées en français alors qu'elles sont enseignées en anglais (aec, cea, cvb, cva) ou en espagnol (eec, cve, cvl). Ce contenu n'était pas un support original de l'université : il avait été rédigé pour l'application à partir des descriptifs officiels.
+
+**Correction** : ces 7 matières ont été réécrites dans leur langue (environ 140 notions, avec leurs QCM, flashcards, exercices et corrigés). Les identifiants, bonnes réponses, niveaux, sources et exemples sont inchangés, contrôlés fichier par fichier. Les titres de chapitres et de notions ont été reportés dans le catalogue.
+
+**Exceptions voulues** (apprentissage des langues) :
+
+- les mots et phrases français étudiés (faux amis, équivalents à trouver, phrases à traduire) restent en français, entre guillemets, dans des explications rédigées dans la langue du cours ;
+- les QCM de tra et tve mettent deux langues en regard ;
+- les titres d'œuvres et les citations restent dans leur langue d'origine ;
+- le glossaire reste trilingue (FR, EN, ES) dans toutes les matières ;
+- le nom officiel des matières reste celui de la maquette d'Orléans (en français).
+
+Les matières espagnoles mesurées à environ 20 % de « français » le doivent à ces exceptions et aux mots-outils communs (« les » est aussi un pronom espagnol) ; un contrôle manuel des occurrences n'a trouvé que des cas voulus.
 
 Points à confirmer :
 
 - **dcl** (Droit des contrats de la Common law) : classé en français (EC rattachée au bloc gestion, enseignante Isabelle Noël, bibliographie en partie française). À confirmer si le cours est donné en anglais.
-- **cvb** et **cva** : classées en anglais, **cve** et **cvl** en espagnol, selon l'usage des civilisations en LEA. À confirmer par les supports de cours si disponibles.
-- **tra** et **tve** : les fiches de méthode restent en français ; les exemples sont bilingues.
+- **cvb** et **cva** en anglais, **cve** et **cvl** en espagnol : usage des civilisations en LEA, à confirmer par les supports de cours si disponibles.
+
+## Interface et contenu
+
+- L'interface (navigation, boutons, messages) est en français.
+- Les rubriques de leçon (« Learning objectives », « Objetivos de aprendizaje »…), les consignes et corrections des QCM, flashcards et exercices suivent la langue de la matière (`app/src/i18n.ts`).
+- Chaque bloc de contenu porte l'attribut `lang` de sa matière ; le fil propose un filtre Toutes les langues / Français / English / Español.
 
 ## Correspondance avec les intitulés du cahier des charges
 
@@ -68,6 +86,8 @@ Points à confirmer :
 | Civilisation espagnole | matière cve |
 | Vocabulario comercial | chapitre eec.lexico |
 
-## Contrôle prévu
+## Contrôle automatique
 
-Un champ `langue` sera ajouté à chaque matière (héritage par les chapitres et les contenus). Un test de construction mesurera la langue dominante de chaque fichier de chapitre et échouera si elle ne correspond pas à la langue déclarée (hors matières de traduction).
+- Champ `langue` obligatoire sur chaque matière (`content/catalogue.json`), vérifié par `scripts/build-index.mjs`.
+- `tests/unit/langue.test.ts` mesure, pour chacun des 111 chapitres, la langue des fiches, des QCM et des corrigés, et échoue si elle ne correspond pas à la langue déclarée (seuil adapté aux matières de traduction).
+- `tests/unit/journal.test.ts` vérifie que chaque publication du fil garde la langue de sa matière.

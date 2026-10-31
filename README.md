@@ -1,6 +1,6 @@
 # Cours L3 LEA — Commerce international
 
-Environnement d'apprentissage pour la L3 LEA anglais-espagnol, parcours Commerce international (programme de l'Université d'Orléans). Il propose des fiches par notion, des QCM corrigés, des flashcards ouvertes avec répétition espacée, des exercices corrigés pas à pas, un mode examen et un suivi de la maîtrise.
+**LEA — The Learning Journal** : environnement d'apprentissage pour la L3 LEA anglais-espagnol, parcours Commerce international (programme de l'Université d'Orléans). Un fil éditorial de publications tirées des cours (concepts, dossiers, schémas, chronologies, quiz, études de cas, sujets), une bibliothèque de chapitres à lire, un espace d'étude (sessions de révision, QCM, flashcards, exercices, examen blanc, atelier de dissertation), des articles « Monde et économie » datés et sourcés, et un suivi de progression (six statuts, XP, quêtes, badges, arbres de compétences). Chaque matière est présentée dans sa langue d'enseignement ; l'interface est en français.
 
 Site : https://fc45mariko-byte.github.io/cours/ (GitHub Pages, publié depuis la racine de la branche).
 
@@ -8,11 +8,11 @@ Site : https://fc45mariko-byte.github.io/cours/ (GitHub Pages, publié depuis la
 
 | Dossier | Contenu |
 |---|---|
-| `content/` | **Données pédagogiques** (JSON) : `catalogue.json` (matières, chapitres, notions), `sources.json`, un fichier par chapitre rédigé (`content/<matière>/<chapitre>.json`) |
+| `content/` | **Données pédagogiques** (JSON) : `catalogue.json` (matières avec langue, année, complétude ; chapitres ; notions), `sources.json`, un fichier par chapitre (`content/<matière>/<chapitre>.json`), articles hors cours (`content/publications/*.json`) |
 | `app/src/core/` | Logique testée : correction, maîtrise, répétition espacée, recherche, sauvegarde |
 | `app/src/pages`, `app/src/ui` | Interface (Preact) |
 | `app/src/styles/tokens.css` | **Système de design** : couleurs, typographie, espacements. Changer le design = modifier ce fichier |
-| `scripts/build-index.mjs` | Valide tout le contenu et génère l'index |
+| `scripts/build-index.mjs`, `scripts/feed.mjs` | Valident le contenu, génèrent l'index, le glossaire et le fil (publications par référence, sans copie du cours) |
 | `tests/` | Tests unitaires (Vitest) et de bout en bout (Playwright) |
 | `docs/refonte/` | Audit, recherche, cartographie, spécification, bilan |
 | `docs/learning-journal/` | Refonte « The Learning Journal » : audit, inventaire des cours, langue, complétude, plan |

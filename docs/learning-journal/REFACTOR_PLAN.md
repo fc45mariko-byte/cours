@@ -34,15 +34,15 @@ Chaque phase se termine par un rapport : changements, fichiers créés ou modifi
 | Phase | Contenu | Livrables vérifiables |
 |---|---|---|
 | **0. Point de départ** (faite) | Tag `avant-learning-journal`, branche `claude/learning-journal`, documents d'audit, test d'intégrité, correctif de la sauvegarde illisible | 42 tests unitaires verts |
-| **1. Modèle de données** | Métadonnées de langue, année et complétude ; migration de la progression vers la v2 avec copie de secours ; découpage de l'index ; test de langue par matière | Tests de migration (v1 → v2 sans perte), test de langue |
-| **2. Design system** | Jetons : ivoire, anthracite, bleu nuit, accents bleu, sauge, terre cuite, bordeaux par discipline ; serif éditoriale pour les titres et sans-serif pour le texte ; espacements, grille, points de rupture ; composants de base | Page de référence interne des composants |
-| **3. Structure** | Navigation à 5 destinations (Accueil, Fil, Bibliothèque, Étudier, Progrès), barre du bas sur mobile, barre latérale sur ordinateur, redirection des anciennes routes, pages Accueil et Bibliothèque (année → semestre → matière → chapitre) | Tests e2e : navigation, URL directes, anciennes routes |
-| **4. Fil** | Modèles visuels par type de publication, onglets Pour vous / Mes matières / Monde et économie, filtres matière, type, difficulté, langue ; enregistrer, compris, à revoir, ouvrir le chapitre, partager ; reprise de lecture ; chargement progressif | Tests e2e des interactions, persistance après rechargement |
-| **5. Lecteur de chapitre** | Compositions par discipline, blocs riches, schémas SVG | Les 111 chapitres s'affichent sans erreur (test exhaustif) |
-| **6. Étudier** | Outils actuels intégrés (QCM, exercices, flashcards, examen, erreurs), sessions de révision par matière, sujets de dissertation générés (marqués), espace de plan et de rédaction | Tests e2e, aucune fonction actuelle perdue |
-| **7. Monde et économie** | Articles curatés, datés et sourcés, faits et analyse séparés, liens vers les notions ; aucune actualité en direct simulée | Validation : date et source obligatoires |
-| **8. Progrès et gamification** | Statuts, analyses, XP non cumulable sur une même action, niveaux, quêtes quotidiennes et hebdomadaires tirées du contenu, arbres de compétences, badges, régularité non punitive, réduction des animations | Tests unitaires anti-doublon, persistance |
-| **9. Recette** | Préservation des cours, navigation mobile et bureau, fil, chapitres, recherche, persistance, rechargement, URL directes, chemins Pages, construction et déploiement | CI verte, rapport final |
+| **1. Modèle de données** (faite) | Métadonnées de langue, année et complétude ; migration de la progression vers la v2 avec copie de secours ; découpage de l'index ; test de langue par matière | Tests de migration (v1 → v2 sans perte), test de langue |
+| **2. Design system** (faite) | Jetons : ivoire, anthracite, bleu nuit, accents bleu, sauge, terre cuite, bordeaux par discipline ; serif éditoriale pour les titres et sans-serif pour le texte ; espacements, grille, points de rupture ; composants de base | Page de référence interne des composants |
+| **3. Structure** (faite) | Navigation à 5 destinations (Accueil, Fil, Bibliothèque, Étudier, Progrès), barre du bas sur mobile, barre latérale sur ordinateur, redirection des anciennes routes, pages Accueil et Bibliothèque (année → semestre → matière → chapitre) | Tests e2e : navigation, URL directes, anciennes routes |
+| **4. Fil** (faite) | Modèles visuels par type de publication, onglets Pour vous / Mes matières / Monde et économie, filtres matière, type, difficulté, langue ; enregistrer, compris, à revoir, ouvrir le chapitre, partager ; reprise de lecture ; chargement progressif | Tests e2e des interactions, persistance après rechargement |
+| **5. Lecteur de chapitre** (faite) | Compositions par discipline, blocs riches, schémas SVG | Les 111 chapitres s'affichent sans erreur (test exhaustif) |
+| **6. Étudier** (faite) | Outils actuels intégrés (QCM, exercices, flashcards, examen, erreurs), sessions de révision par matière, sujets de dissertation générés (marqués), espace de plan et de rédaction | Tests e2e, aucune fonction actuelle perdue |
+| **7. Monde et économie** (faite) | Articles curatés, datés et sourcés, faits et analyse séparés, liens vers les notions ; aucune actualité en direct simulée | Validation : date et source obligatoires |
+| **8. Progrès et gamification** (faite) | Statuts, analyses, XP non cumulable sur une même action, niveaux, quêtes quotidiennes et hebdomadaires tirées du contenu, arbres de compétences, badges, régularité non punitive, réduction des animations | Tests unitaires anti-doublon, persistance |
+| **9. Recette** (faite) | Préservation des cours, navigation mobile et bureau, fil, chapitres, recherche, persistance, rechargement, URL directes, chemins Pages, construction et déploiement | CI verte, rapport final |
 
 ## Chantiers de contenu (séparés du code)
 
@@ -53,10 +53,13 @@ Chaque phase se termine par un rapport : changements, fichiers créés ou modifi
 | Introduction au tourisme international | **Document source à fournir** | Rien n'est rédigé sans source ; la matière est affichée « absente : source attendue » |
 | Exercices manquants (cea : aucun ; red, eec, cvb, cva, cvl : un seul) | — | Exercices nouveaux marqués « créés pour l'application » |
 
+## État
+
+Toutes les phases sont réalisées ; le détail, les tests et les points non résolus sont dans RAPPORT_PHASES.md.
+
 ## Décisions en attente
 
 1. Document source de la matière tourisme international.
-2. Confirmation de la langue d'enseignement de dcl (proposé : français), cvb et cva (proposé : anglais), cve et cvl (proposé : espagnol).
-3. Bascule de GitHub Pages vers la branche `claude/learning-journal` en fin de refonte (réglage du dépôt, à faire par le propriétaire).
-4. Visuels : schémas SVG seulement, ou aussi photographies libres de droits (Wikimedia Commons) avec attribution.
-5. Monde et économie : articles curatés et datés, sans service d'actualités (accès réseau limité dans l'environnement de travail).
+2. Confirmation de la langue d'enseignement de dcl (retenu : français), cvb et cva (retenu : anglais), cve et cvl (retenu : espagnol).
+3. Visuels : seuls des schémas et motifs dessinés à partir des données sont utilisés ; l'ajout de photographies libres de droits (avec attribution) reste possible.
+4. Monde et économie : articles curatés et datés, sans service d'actualités.

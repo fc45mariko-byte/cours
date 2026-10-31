@@ -18,7 +18,7 @@ Recherches effectuées (mot-clé « touris », toutes casses) :
 | Dossiers de l'ordinateur connectables à la session | Aucun dossier partagé |
 | `docs/refonte/phase-2-recherche.md`, ligne 72 | Seule trace : la maquette 2025-26 mentionnerait, « d'après un extrait peu fiable », un enseignement de tourisme international. Non vérifié. |
 
-**Conséquence** : la matière n'est pas créée. Aucun contenu générique de remplacement ne sera rédigé.
+**Conséquence** : la matière figure au catalogue avec le statut « absente » et une explication, sans aucun chapitre. Aucun contenu générique de remplacement n'a été rédigé.
 
 **Document nécessaire** : le syllabus, le plan de cours ou les supports de l'EC « Introduction au tourisme international » (intitulé exact, semestre, enseignant, liste et ordre des chapitres, contenu). À réception, la matière sera ajoutée au catalogue dans l'ordre et la terminologie d'origine, avec la mention de la source.
 
@@ -38,15 +38,15 @@ Toutes les notions cartographiées sont rédigées. La cartographie elle-même r
 | mgi | Management interculturel | 13 / 13 | 2 | — |
 | gdp | Gestion de projet | 18 / 18 | 2 | Aucun descriptif officiel trouvé |
 | red | Rédaction de documents universitaires | 10 / 10 | 1 | Aucun descriptif officiel trouvé |
-| aec | Anglais économique et commercial | 22 / 22 | 2 | Langue non conforme |
+| aec | Anglais économique et commercial | 22 / 22 | 2 | Réécrite en anglais |
 | tra | Traduction anglaise | 15 / 15 | 2 | — |
-| cea | Compréhension et expression anglaises | 8 / 8 | **0** | Langue non conforme ; aucun exercice |
-| eec | Espagnol économique et commercial | 15 / 15 | 1 | Langue non conforme |
+| cea | Compréhension et expression anglaises | 8 / 8 | **0** | Réécrite en anglais ; aucun exercice |
+| eec | Espagnol économique et commercial | 15 / 15 | 1 | Réécrite en espagnol |
 | tve | Thème et version espagnols | 15 / 15 | 2 | — |
-| cvb | Civilisation britannique | 19 / 19 | 1 | Langue non conforme ; présence en S5 dans la maquette 2025-26 non confirmée |
-| cve | Civilisation espagnole | 14 / 14 | 2 | Langue non conforme |
-| cva | Civilisation américaine | 10 / 10 | 1 | Langue non conforme |
-| cvl | Civilisation latino-américaine | 10 / 10 | 1 | Langue non conforme ; **présence dans la maquette non confirmée (ORL?)** |
+| cvb | Civilisation britannique | 19 / 19 | 1 | Réécrite en anglais ; présence en S5 dans la maquette 2025-26 non confirmée |
+| cve | Civilisation espagnole | 14 / 14 | 2 | Réécrite en espagnol |
+| cva | Civilisation américaine | 10 / 10 | 1 | Réécrite en anglais |
+| cvl | Civilisation latino-américaine | 10 / 10 | 1 | Réécrite en espagnol ; **présence dans la maquette non confirmée (ORL?)** |
 | stg | Stage et rapport de stage | 10 / 10 | 3 | Règles issues du livret 2021-2022 ; livret en vigueur non consulté |
 | eco | Économie internationale | 10 / 10 | 3 | Complément hors maquette |
 | mks | Marketing international et supply chain | 4 / 4 | 2 | Complément hors maquette |
@@ -56,4 +56,5 @@ Toutes les notions cartographiées sont rédigées. La cartographie elle-même r
 ## 3. Contrôle automatique
 
 - `tests/unit/integrite.test.ts` compare le contenu à `tests/reference/inventaire-contenu.json` (22 matières, 111 chapitres, 394 notions, 577 QCM, 169 flashcards, 292 exercices et sous-questions). Toute disparition ou tout renommage fait échouer les tests et la CI. Un ajout est accepté ; la référence se met à jour avec `node scripts/inventaire.mjs --ecrire`, uniquement après un ajout volontaire.
-- Prévu en phase 1 : un champ de complétude par matière (`complete`, `incomplete`, `absente`) affiché dans la bibliothèque, pour que la matière tourisme apparaisse comme « absente : source attendue » au lieu d'être omise.
+- Chaque matière porte un champ `completude` (`complete`, `incomplete`, `absente`), contrôlé au build : une matière sans chapitre doit être déclarée absente et expliquée.
+- La matière tourisme apparaît dans la bibliothèque sous « À compléter », avec la mention « Source attendue », et sa page indique qu'aucun chapitre n'a été inventé (test de bout en bout `matière absente`).
