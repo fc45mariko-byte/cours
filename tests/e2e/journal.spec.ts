@@ -154,10 +154,12 @@ test('dissertation : sujet généré, plan enregistré automatiquement', async (
   await page.goto('/#/etudier/dissertation?c=eco.politique');
   await expect(page.getByText('Sujet généré', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Travailler ce sujet' }).click();
-  await page.getByLabel('Rédaction').fill('Introduction de test');
+  const redaction = page.getByRole('textbox', { name: 'Rédaction', exact: true });
+  await expect(redaction).toBeVisible();
+  await redaction.fill('Introduction de test');
   await page.waitForTimeout(900);
   await page.reload();
-  await expect(page.getByLabel('Rédaction')).toHaveValue('Introduction de test');
+  await expect(page.getByRole('textbox', { name: 'Rédaction', exact: true })).toHaveValue('Introduction de test');
 });
 
 test('session de révision : questions, corrections, recommandation', async ({ page }) => {
