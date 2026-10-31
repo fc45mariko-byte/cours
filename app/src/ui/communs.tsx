@@ -2,6 +2,7 @@ import type { ComponentChildren } from 'preact';
 import { LIBELLE_ETAT, type Maitrise } from '../core/maitrise';
 import { index } from '../data';
 import type { Chargement } from '../hooks';
+import { LIBELLE_STATUT, type Statut } from '../core/statut';
 
 export function EtatMaitrise({ m }: { m: Maitrise }) {
   return <span class={`etat etat-${m.etat}`}>{LIBELLE_ETAT[m.etat]}{m.etat !== 'nouvelle' ? ` · ${m.score} %` : ''}</span>;
@@ -50,3 +51,20 @@ export function Texte({ t }: { t: string }) {
   const parties = t.split(/(\*\*[^*]+\*\*)/g);
   return <>{parties.map((p, i) => (p.startsWith('**') ? <strong key={i}>{p.slice(2, -2)}</strong> : p))}</>;
 }
+
+export function StatutPastille({ s }: { s: Statut }) {
+  return <span class={`statut statut-${s}`}>{LIBELLE_STATUT[s]}</span>;
+}
+
+/** Durée relative courte (« il y a 3 jours »). */
+export function ilYa(t: number, maintenant = Date.now()) {
+  const m = Math.round((maintenant - t) / 60000);
+  if (m < 1) return 'à l’instant';
+  if (m < 60) return `il y a ${m} min`;
+  const h = Math.round(m / 60);
+  if (h < 24) return `il y a ${h} h`;
+  const j = Math.round(h / 24);
+  return j === 1 ? 'hier' : `il y a ${j} jours`;
+}
+
+export const dateLongue = (iso: string) => new Date(iso + (iso.length === 10 ? 'T12:00:00' : '')).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });

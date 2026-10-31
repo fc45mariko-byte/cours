@@ -1,106 +1,104 @@
-/* Système de design — tous les choix visuels sont ici.
-   Changer l'identité visuelle = modifier ce fichier, sans toucher au contenu ni à la logique.
-   Inspiré de la maquette fournie : fond crème, cartes pastel, puces arrondies, police DM Sans. */
+/* Système de design « The Learning Journal ».
+   Tous les choix visuels sont ici : couleurs, typographie, espacements, points de rupture.
+   Direction : publication éditoriale (ivoire, encre anthracite et bleu nuit, accents sourds par discipline).
+
+   Points de rupture (les propriétés personnalisées ne sont pas utilisables dans les media queries,
+   ils sont donc écrits en dur dans app.css) :
+     mobile   < 700 px  : une colonne, barre de navigation en bas
+     tablette 700-1099 px : deux colonnes éditoriales quand c'est utile
+     bureau   ≥ 1100 px : barre latérale, fil large, bibliothèque en plusieurs colonnes */
 :root {
-  --font: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  /* Typographie */
+  --serif: 'Newsreader', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
-  --bg-page: #f7f3ee;
-  --bg-panel: #efe9e3;
-  --surface: #ffffff;
-  --surface-2: #faf8f5;
-  --ink: #1c1c1e;
-  --ink-inverse: #ffffff;
-  --muted: #6e6a66;
-  --line: #e4ddd5;
-  --focus: #3b5bdb;
+  --t-display: clamp(2.5rem, 7.5vw, 5rem);
+  --t-h1: clamp(2rem, 5vw, 3.3rem);
+  --t-h2: clamp(1.45rem, 3vw, 2.05rem);
+  --t-h3: clamp(1.15rem, 2vw, 1.35rem);
+  --t-chapeau: clamp(1.12rem, 2.1vw, 1.35rem);
+  --t-corps: 1.0625rem;
+  --t-petit: 0.875rem;
+  --t-meta: 0.72rem;
+  --interligne: 1.62;
+  --mesure: 68ch;
 
-  --pastel-pink: #f5c9c9;
-  --pastel-peach: #f9dcbf;
-  --pastel-lilac: #d7d3fa;
-  --pastel-mint: #c4ebd8;
-  --pastel-sky: #cfe6f7;
-  --pastel-butter: #f6ebb5;
+  /* Couleurs : fonds */
+  --papier: #f5f0e6;
+  --papier-2: #ece5d6;
+  --surface: #fbf8f1;
+  --surface-2: #f3eee3;
+  --nuit: #1c2a3d;
+  --nuit-2: #263851;
 
-  /* Teintes plus soutenues pour graphiques et accents (contraste suffisant sur blanc). */
-  --accent-pink: #c2566b;
-  --accent-peach: #c26b1e;
-  --accent-lilac: #6553c9;
-  --accent-mint: #2f8a5f;
-  --accent-sky: #2f74a8;
-  --accent-butter: #9a7b12;
+  /* Couleurs : encres */
+  --encre: #1e2124;
+  --encre-2: #3a3d40;
+  --encre-inverse: #f7f2e8;
+  --discret: #686258;
+  --filet: #d6cdbc;
+  --filet-fort: #1e2124;
+  --focus: #2b5c8a;
 
-  --ok: #2f8a5f;
-  --ok-bg: #e2f4ea;
-  --ko: #b3261e;
-  --ko-bg: #fbe4e2;
-  --warn: #8a5a00;
-  --warn-bg: #fdf0d2;
+  /* Accents par discipline (identité éditoriale, jamais seuls porteurs d'information) */
+  --bleu: #3d5a73;      --bleu-pale: #dde5ea;
+  --sauge: #5f7556;     --sauge-pale: #e1e7d9;
+  --terre: #a85a37;     --terre-pale: #f1dfd3;
+  --bordeaux: #7b2d3b;  --bordeaux-pale: #efdcdc;
+  --ocre: #8f6c22;      --ocre-pale: #f1e6cc;
+  --prune: #5a4a6a;     --prune-pale: #e6e0ea;
 
-  --radius-card: 22px;
-  --radius-md: 14px;
-  --radius-sm: 10px;
-  --radius-pill: 999px;
-  --shadow: 0 1px 2px rgba(28, 28, 30, 0.04), 0 6px 18px rgba(28, 28, 30, 0.05);
+  /* États */
+  --ok: #2f6844;   --ok-fond: #e1ecdf;
+  --ko: #9b2f2f;   --ko-fond: #f5e0dc;
+  --alerte: #7c5612; --alerte-fond: #f4e8cc;
 
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 24px;
-  --space-6: 32px;
-  --space-7: 48px;
+  /* Données (graphiques à une série : une seule teinte) */
+  --donnee: #1c2a3d;
+  --donnee-fond: #e3ddd0;
 
-  --title-size: clamp(2.1rem, 4.6vw, 3.5rem);
-  --h2-size: clamp(1.35rem, 2.4vw, 1.75rem);
-  --text-size: 1rem;
-  --small-size: 0.82rem;
-  --line-height: 1.6;
+  /* Espacements */
+  --e1: 4px; --e2: 8px; --e3: 12px; --e4: 16px; --e5: 24px; --e6: 32px; --e7: 48px; --e8: 64px; --e9: 96px;
 
-  --sidebar-w: 84px;
-  --panel-w: 320px;
-  --content-max: 860px;
+  /* Formes */
+  --r: 3px;
+  --r-lg: 6px;
+  --barre-laterale: 236px;
+  --contenu-max: 1120px;
+  --lecture-max: 720px;
+  --nav-mobile: 64px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg-page: #17161a;
-    --bg-panel: #201f24;
-    --surface: #2a2930;
-    --surface-2: #232228;
-    --ink: #f2efea;
-    --ink-inverse: #17161a;
-    --muted: #aaa4a0;
-    --line: #3a3840;
-    --focus: #9db1ff;
-    --pastel-pink: #4a2e33;
-    --pastel-peach: #4a3826;
-    --pastel-lilac: #34305a;
-    --pastel-mint: #24433a;
-    --pastel-sky: #243c50;
-    --pastel-butter: #46401f;
-    --accent-pink: #f0a3b1;
-    --accent-peach: #f2b77d;
-    --accent-lilac: #b6abff;
-    --accent-mint: #86d6ae;
-    --accent-sky: #8cc3ec;
-    --accent-butter: #e6cf6c;
-    --ok: #86d6ae;
-    --ok-bg: #1f3a2d;
-    --ko: #f2a39c;
-    --ko-bg: #46241f;
-    --warn: #f0c770;
-    --warn-bg: #3f3218;
-    --shadow: none;
+    --papier: #15130f; --papier-2: #1e1b16; --surface: #1b1914; --surface-2: #24211b;
+    --nuit: #0f1724; --nuit-2: #18243a;
+    --encre: #ece6da; --encre-2: #cfc8bb; --encre-inverse: #15130f; --discret: #a59d8f;
+    --filet: #3a352c; --filet-fort: #ece6da; --focus: #8fb6dc;
+    --bleu: #8fb0c9; --bleu-pale: #1f2a33; --sauge: #a3b896; --sauge-pale: #232b1f;
+    --terre: #d99674; --terre-pale: #33241b; --bordeaux: #d58e99; --bordeaux-pale: #33201f;
+    --ocre: #d4b26a; --ocre-pale: #302816; --prune: #b8a6cc; --prune-pale: #2a2431;
+    --ok: #9ccdaa; --ok-fond: #1e2e22; --ko: #eba59b; --ko-fond: #3a201c; --alerte: #e4c27a; --alerte-fond: #33291a;
+    --donnee: #d9d2c4; --donnee-fond: #2c2820;
   }
 }
 :root[data-theme='dark'] {
-  --bg-page: #17161a; --bg-panel: #201f24; --surface: #2a2930; --surface-2: #232228;
-  --ink: #f2efea; --ink-inverse: #17161a; --muted: #aaa4a0; --line: #3a3840; --focus: #9db1ff;
-  --pastel-pink: #4a2e33; --pastel-peach: #4a3826; --pastel-lilac: #34305a; --pastel-mint: #24433a;
-  --pastel-sky: #243c50; --pastel-butter: #46401f;
-  --accent-pink: #f0a3b1; --accent-peach: #f2b77d; --accent-lilac: #b6abff; --accent-mint: #86d6ae;
-  --accent-sky: #8cc3ec; --accent-butter: #e6cf6c;
-  --ok: #86d6ae; --ok-bg: #1f3a2d; --ko: #f2a39c; --ko-bg: #46241f; --warn: #f0c770; --warn-bg: #3f3218;
-  --shadow: none;
+  --papier: #15130f; --papier-2: #1e1b16; --surface: #1b1914; --surface-2: #24211b;
+  --nuit: #0f1724; --nuit-2: #18243a;
+  --encre: #ece6da; --encre-2: #cfc8bb; --encre-inverse: #15130f; --discret: #a59d8f;
+  --filet: #3a352c; --filet-fort: #ece6da; --focus: #8fb6dc;
+  --bleu: #8fb0c9; --bleu-pale: #1f2a33; --sauge: #a3b896; --sauge-pale: #232b1f;
+  --terre: #d99674; --terre-pale: #33241b; --bordeaux: #d58e99; --bordeaux-pale: #33201f;
+  --ocre: #d4b26a; --ocre-pale: #302816; --prune: #b8a6cc; --prune-pale: #2a2431;
+  --ok: #9ccdaa; --ok-fond: #1e2e22; --ko: #eba59b; --ko-fond: #3a201c; --alerte: #e4c27a; --alerte-fond: #33291a;
+  --donnee: #d9d2c4; --donnee-fond: #2c2820;
 }
+
+/* Teinte d'une discipline : la classe ton-<couleur> fixe --ton et --ton-pale pour tout le bloc. */
+.ton-sky { --ton: var(--bleu); --ton-pale: var(--bleu-pale); }
+.ton-mint { --ton: var(--sauge); --ton-pale: var(--sauge-pale); }
+.ton-peach { --ton: var(--terre); --ton-pale: var(--terre-pale); }
+.ton-pink { --ton: var(--bordeaux); --ton-pale: var(--bordeaux-pale); }
+.ton-butter { --ton: var(--ocre); --ton-pale: var(--ocre-pale); }
+.ton-lilac { --ton: var(--prune); --ton-pale: var(--prune-pale); }

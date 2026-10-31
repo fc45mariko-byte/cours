@@ -26,6 +26,15 @@ const P: Record<string, string> = {
   fleche: 'M5 12h14M13 6l6 6-6 6',
   retour: 'M19 12H5M11 6l-6 6 6 6',
   etoile: 'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z',
+  fil: 'M5 4h14v6H5zM5 14h14M5 18h9',
+  bibliotheque: 'M4 4h3v16H4zM9 4h3v16H9zM14.5 4.6l2.9-.8 3.6 15.6-2.9.7z',
+  etudier: 'M3 8l9-4 9 4-9 4zM7 10v5c0 1.7 2.2 3 5 3s5-1.3 5-3v-5M21 8v6',
+  progres: 'M4 20h16M6 16l4-5 3 3 5-7M15 7h3v3',
+  enregistrer: 'M6 3h12v18l-6-4-6 4z',
+  compris: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM8 12l3 3 5-6',
+  partager: 'M12 15V3M8 7l4-4 4 4M5 12v8h14v-8',
+  chapitre: 'M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h10',
+  monde: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3.5 9h17M3.5 15h17M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18',
 };
 
 export function Icone({ nom, taille = 20 }: { nom: string; taille?: number }) {

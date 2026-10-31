@@ -3,6 +3,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { publicationsDuChapitre, publicationEditoriale } from './feed.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
@@ -23,8 +24,14 @@ export function construireIndex() {
 
   const notions = {};
   const chapitreDeNotion = {};
+  const chapitresCat = {};
   for (const m of catalogue.matieres) {
+    if (!['fr', 'en', 'es'].includes(m.langue)) err(m.id, `langue invalide ${m.langue} (fr, en ou es)`);
+    if (!['complete', 'incomplete', 'absente'].includes(m.completude)) err(m.id, `complétude invalide ${m.completude}`);
+    if (m.completude === 'absente' && !m.noteCompletude) err(m.id, 'matière absente sans explication (noteCompletude)');
+    if (m.completude !== 'absente' && !m.chapitres.length) err(m.id, 'matière sans chapitre non signalée comme absente');
     for (const c of m.chapitres) {
+      chapitresCat[c.id] = { matiere: m, chapitre: c };
       if (!c.id.startsWith(m.id + '.')) err(c.id, `chapitre hors de la matière ${m.id}`);
       for (const n of c.notions) {
         if (!n.id.startsWith(c.id + '.')) err(n.id, `notion hors du chapitre ${c.id}`);
@@ -45,7 +52,8 @@ export function construireIndex() {
   const flashcards = [], exercices = [], questions = [], glossaire = [];
   const liens = [];
 
-  const dossiers = readdirSync(CONTENT).filter((d) => statSync(join(CONTENT, d)).isDirectory());
+  const fil = [];
+  const dossiers = readdirSync(CONTENT).filter((d) => d !== 'publications' && statSync(join(CONTENT, d)).isDirectory());
   for (const d of dossiers) {
     for (const f of readdirSync(join(CONTENT, d)).filter((x) => x.endsWith('.json'))) {
       const chemin = `content/${d}/${f}`;
@@ -54,6 +62,7 @@ export function construireIndex() {
       const chap = data.chapitre;
       if (!Object.values(chapitreDeNotion).includes(chap)) { err(chemin, `chapitre inconnu ${chap}`); continue; }
       if (f !== `${chap}.json`) err(chemin, `le fichier doit s'appeler ${chap}.json`);
+      const { matiere: matCat, chapitre: chapCat } = chapitresCat[chap];
 
       for (const n of data.notions ?? []) {
         unique(n.id, chemin);
@@ -70,7 +79,7 @@ export function construireIndex() {
         if (n.niveau && n.niveau !== idx.niveau) err(n.id, `niveau ${n.niveau} différent du catalogue (${idx.niveau})`);
         idx.prerequis = n.prerequis ?? [];
         idx.connexes = n.connexes ?? [];
-        idx.definition = n.definition ?? n.explication?.slice(0, 220);
+        idx.definition = (n.definition ?? n.explication ?? '').slice(0, 160);
         for (const p of idx.prerequis) liens.push([n.id, p, 'prérequis']);
         for (const p of idx.connexes) liens.push([n.id, p, 'connexe']);
         for (const t of n.termes ?? []) {
@@ -127,10 +136,29 @@ export function construireIndex() {
         }
         exercices.push({ id: ex.id, notions: ex.notions, chapitre: chap, titre: ex.titre, niveau: ex.niveau, type: ex.type });
       }
+      fil.push(...publicationsDuChapitre(matCat, chapCat, data));
     }
   }
 
   for (const [de, vers, type] of liens) if (!notions[vers]) err(de, `${type} inconnu ${vers}`);
+
+  // Articles éditoriaux (hors cours) : content/publications/*.json, un tableau d'articles par fichier.
+  const articles = [];
+  const dirPub = join(CONTENT, 'publications');
+  let fichiersPub = [];
+  try { fichiersPub = readdirSync(dirPub).filter((x) => x.endsWith('.json')); } catch { /* aucun article */ }
+  for (const f of fichiersPub) {
+    const chemin = `content/publications/${f}`;
+    const liste = lire(join(dirPub, f));
+    if (!Array.isArray(liste)) { if (liste) err(chemin, 'le fichier doit contenir un tableau d\'articles'); continue; }
+    for (const a of liste) {
+      unique(`ed:${a.id}`, chemin);
+      fil.push(publicationEditoriale(a, { err, notions, sourceIds, chemin }));
+      articles.push(a);
+    }
+  }
+  const idsFil = new Set();
+  for (const p of fil) { if (idsFil.has(p.id)) err(p.id, 'publication en double'); idsFil.add(p.id); }
 
   glossaire.sort((a, b) => a.fr.localeCompare(b.fr, 'fr'));
   return {
@@ -139,19 +167,23 @@ export function construireIndex() {
       // Date déterministe (dernière vérification de contenu) pour un build reproductible.
       genereLe: Object.values(notionsVerifiees).sort().at(-1) ?? '',
       matieres: catalogue.matieres, notions, questionsParNotion,
-      flashcards, exercices, questions, glossaire, sources,
+      flashcards, exercices, questions, sources,
     },
+    glossaire, fil, articles,
   };
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  const { erreurs: e, index } = construireIndex();
+  const { erreurs: e, index, glossaire, fil, articles } = construireIndex();
   if (e.length) {
     console.error(`✗ ${e.length} erreur(s) dans le contenu :\n  ` + e.join('\n  '));
     process.exit(1);
   }
   mkdirSync(OUT, { recursive: true });
   writeFileSync(join(OUT, 'index.json'), JSON.stringify(index));
+  writeFileSync(join(OUT, 'glossaire.json'), JSON.stringify(glossaire));
+  writeFileSync(join(OUT, 'fil.json'), JSON.stringify(fil));
+  writeFileSync(join(OUT, 'articles.json'), JSON.stringify(articles));
   const red = Object.values(index.notions).filter((n) => n.redigee).length;
-  console.log(`✓ contenu valide : ${red}/${Object.keys(index.notions).length} notions rédigées, ${index.questions.length} QCM, ${index.flashcards.length} flashcards, ${index.exercices.length} exercices, ${index.glossaire.length} termes`);
+  console.log(`✓ contenu valide : ${red}/${Object.keys(index.notions).length} notions rédigées, ${index.questions.length} QCM, ${index.flashcards.length} flashcards, ${index.exercices.length} exercices, ${glossaire.length} termes, ${fil.length} publications (${articles.length} articles éditoriaux)`);
 }

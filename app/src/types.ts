@@ -5,9 +5,13 @@ export type Couleur = 'pink' | 'peach' | 'lilac' | 'mint' | 'sky' | 'butter';
 
 export interface NotionStub { id: string; titre: string; niveau: Niveau }
 export interface ChapitreCatalogue { id: string; titre: string; notions: NotionStub[] }
+export type Langue = 'fr' | 'en' | 'es';
 export interface MatiereCatalogue {
-  id: string; titre: string; statut: 'ORL' | 'ORL?' | 'COMP';
+  id: string; titre: string; langue: Langue; annee: string; statut: 'ORL' | 'ORL?' | 'COMP';
   semestres: string[]; enseignant: string; couleur: Couleur; categorie: string;
+  completude: 'complete' | 'incomplete' | 'absente'; noteCompletude?: string;
+  /** Matières de traduction : langues mises en regard (consignes en français). */
+  languesEtudiees?: Langue[];
   chapitres: ChapitreCatalogue[];
 }
 
@@ -105,6 +109,29 @@ export interface IndexGenere {
   flashcards: { id: string; notions: string[]; chapitre: string }[];
   exercices: { id: string; notions: string[]; chapitre: string; titre: string; niveau: number; type: string }[];
   questions: { id: string; notion: string; chapitre: string; niveau: number; competence: string }[];
-  glossaire: IndexGlossaire[];
   sources: Source[];
+}
+
+/** Publication du fil (générée au build par scripts/feed.mjs). Le contenu est lu dans le chapitre référencé. */
+export type TypePublication =
+  | 'concept' | 'dossier' | 'infographie' | 'cas' | 'monde' | 'langue' | 'frise' | 'quiz'
+  | 'debat' | 'sujet' | 'comparaison' | 'donnees' | 'exercice';
+export interface Publication {
+  id: string; type: TypePublication;
+  m: string; c?: string; n?: string; l: Langue;
+  t: string; x: string; min: number; niv: number;
+  b?: number; q?: string[]; e?: string;
+  fictif?: boolean; genere?: boolean; edito?: boolean; date?: string; portee?: 'historique' | 'actuel' | 'permanent';
+}
+
+/** Article éditorial hors cours (content/publications). */
+export interface Article {
+  id: string; type: TypePublication; titre: string; chapeau: string; langue?: Langue; niveau?: number;
+  publieLe: string; portee: 'historique' | 'actuel' | 'permanent';
+  faits: string[]; analyse?: string[];
+  sections?: { titre: string; texte: string }[];
+  arguments?: { pour: { titre: string; points: string[] }; contre: { titre: string; points: string[] } };
+  chronologie?: { date: string; evenement: string }[];
+  donnees?: { titre: string; unite: string; series: { label: string; valeur: number }[]; source: string; fictif: boolean; note?: string };
+  sources: string[]; notions: string[]; aVerifier?: string;
 }

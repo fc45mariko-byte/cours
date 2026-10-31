@@ -23,6 +23,13 @@ export function melanger<T>(items: readonly T[], graine: number): T[] {
 
 /** Mélange les choix d'un QCM en laissant à la fin les choix du type « Aucune de ces réponses ». */
 export function melangerChoix<T extends { texte: string }>(choix: readonly T[], graine: number): T[] {
-  const fixes = choix.filter((c) => /^(aucune|toutes) (de|des) ces/i.test(c.texte));
+  const fixes = choix.filter((c) => /^((aucune|toutes) (de|des) ces|(none|all) of (the|these)|(ninguna|todas) (de )?(las|estas))/i.test(c.texte));
   return [...melanger(choix.filter((c) => !fixes.includes(c)), graine), ...fixes];
+}
+
+/** Empreinte numérique stable d'une chaîne (FNV-1a), pour des choix reproductibles (quête du jour…). */
+export function hacher(s: string): number {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  return h >>> 0;
 }

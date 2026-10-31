@@ -1,12 +1,12 @@
 // Accès aux données : index léger chargé au démarrage, chapitres chargés à la demande.
 import indexBrut from './generated/index.json';
-import type { FichierChapitre, IndexGenere, Question, Flashcard, Exercice, MatiereCatalogue } from './types';
+import type { FichierChapitre, IndexGenere, Question, Flashcard, Exercice, MatiereCatalogue, Publication, Article, IndexGlossaire, Langue } from './types';
 import { calculerMaitrise, type Maitrise } from './core/maitrise';
 import type { Progression } from './core/store';
 
 export const index = indexBrut as unknown as IndexGenere;
 
-const fichiers = import.meta.glob<FichierChapitre>('../../content/*/*.json', { import: 'default' });
+const fichiers = import.meta.glob<FichierChapitre>(['../../content/*/*.json', '!../../content/publications/*.json'], { import: 'default' });
 const cache = new Map<string, Promise<FichierChapitre>>();
 
 export function chapitreExiste(chapitre: string): boolean {
@@ -62,13 +62,20 @@ export function notionsDuPerimetre(perimetre: string[]): string[] {
   return Object.keys(index.notions).filter((n) => perimetre.some((p) => n === p || n.startsWith(p + '.')));
 }
 
+// Tables de correspondance calculées une fois (évite des recherches linéaires répétées).
+export const niveauQuestion = new Map(index.questions.map((q) => [q.id, q.niveau]));
+const exercicesParNotion = new Map<string, IndexGenere['exercices']>();
+for (const e of index.exercices) for (const n of e.notions) { const l = exercicesParNotion.get(n) ?? []; l.push(e); exercicesParNotion.set(n, l); }
+const cartesParNotion = new Map<string, string[]>();
+for (const f of index.flashcards) for (const n of f.notions) { const l = cartesParNotion.get(n) ?? []; l.push(f.id); cartesParNotion.set(n, l); }
+export const exerciceDeCle = (cle: string) => index.exercices.find((e) => e.id === cle.split('/')[0]);
+
 export function maitriseNotion(notion: string, p: Progression, maintenant = Date.now()): Maitrise {
-  const qcm = (index.questionsParNotion[notion] ?? []).map((id) => ({
-    niveau: index.questions.find((q) => q.id === id)?.niveau ?? 1, tentatives: p.qcm[id] ?? [],
-  }));
-  const exercices = index.exercices.filter((e) => e.notions.includes(notion)).flatMap((e) =>
-    Object.entries(p.exercices).filter(([k]) => k.startsWith(e.id + '/')).map(([, t]) => ({ niveau: e.niveau, tentatives: t })));
-  const cartes = index.flashcards.filter((f) => f.notions.includes(notion)).map((f) => p.cartes[f.id]);
+  const qcm = (index.questionsParNotion[notion] ?? []).map((id) => ({ niveau: niveauQuestion.get(id) ?? 1, tentatives: p.qcm[id] ?? [] }));
+  const cles = Object.keys(p.exercices);
+  const exercices = (exercicesParNotion.get(notion) ?? []).flatMap((e) =>
+    cles.filter((k) => k.startsWith(e.id + '/')).map((k) => ({ niveau: e.niveau, tentatives: p.exercices[k] })));
+  const cartes = (cartesParNotion.get(notion) ?? []).map((id) => p.cartes[id]);
   return calculerMaitrise({ qcm, exercices, cartes }, maintenant);
 }
 
@@ -87,3 +94,16 @@ export function maitrisePerimetre(perimetre: string, p: Progression) {
 }
 
 export const CATEGORIES = [...new Set(index.matieres.map((m) => m.categorie))];
+
+// ---------- Données chargées à la demande (fil, articles, glossaire) ----------
+let filP: Promise<Publication[]> | null = null;
+export const chargerFil = () => (filP ??= import('./generated/fil.json').then((m) => m.default as unknown as Publication[]));
+let artP: Promise<Article[]> | null = null;
+export const chargerArticles = () => (artP ??= import('./generated/articles.json').then((m) => m.default as unknown as Article[]));
+let gloP: Promise<IndexGlossaire[]> | null = null;
+export const chargerGlossaire = () => (gloP ??= import('./generated/glossaire.json').then((m) => m.default as unknown as IndexGlossaire[]));
+
+/** Langue du contenu d'une matière, d'un chapitre ou d'une notion (héritée de la matière). */
+export const langueDe = (id: string): Langue => matiereDe(id)?.langue ?? 'fr';
+export const LIBELLE_LANGUE: Record<Langue, string> = { fr: 'Français', en: 'English', es: 'Español' };
+export const matieresDisponibles = () => index.matieres.filter((m) => m.completude !== 'absente');
