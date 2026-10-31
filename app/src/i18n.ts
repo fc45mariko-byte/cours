@@ -29,6 +29,12 @@ const fr = {
   sujetGenere: 'Sujet généré automatiquement à partir des fiches : il ne fait pas partie du cours.',
   problematiqueModele: (a: string, b: string) => `Dans quelle mesure la notion de « ${b} » éclaire-t-elle « ${a} », et où s’arrête sa portée ?`,
   planModele: (a: string, b: string) => [`${a} : définition, mécanismes et enjeux`, `${b} : ce que cette notion apporte au raisonnement`, 'Limites, confusions à éviter et nuances'],
+  exAReprendre: 'À revoir', corrige: 'Corrigé', erreursFrequentes: 'Erreurs fréquentes', votreReponseCourte: 'Votre réponse',
+  saisieIllisible: 'Votre saisie n’est pas un nombre lisible.', reponseAttendue: 'Réponse attendue :', ecritureDeseq: 'Votre écriture n’est pas équilibrée : total des débits ≠ total des crédits.',
+  lignesManquantes: 'Lignes attendues non trouvées :', lignesEnTrop: 'Lignes en trop ou erronées :', ajouterLigne: '+ Ajouter une ligne',
+  corrigeType: 'Corrigé type', autoEval: 'Autoévaluation : cochez les éléments présents dans votre réponse', enregistrerAutoEval: 'Enregistrer mon autoévaluation',
+  voirCorrige: 'Voir le corrigé', criteresOk: 'Tous les critères sont présents.', criteresKo: 'Un ou plusieurs critères manquent : reprenez le corrigé.',
+  reponseLibre: 'Votre réponse (facultatif : elle n’est pas analysée automatiquement)', situationFictive: 'situation fictive', notionsLabel: 'Notions',
   etape: 'Étape', avant: 'à', comparaison: 'Comparaison', mots: 'Lexique', lireFiche: 'Lire la fiche complète',
 };
 type Libelles = typeof fr;
@@ -59,6 +65,12 @@ const en: Libelles = {
   sujetGenere: 'Topic generated automatically from the concept sheets: it is not part of the course.',
   problematiqueModele: (a, b) => `To what extent does the concept of “${b}” shed light on “${a}”, and where do its limits lie?`,
   planModele: (a, b) => [`${a}: definition, mechanisms and stakes`, `${b}: what this concept adds to the argument`, 'Limits, confusions to avoid and nuances'],
+  exAReprendre: 'Review this', corrige: 'Answer key', erreursFrequentes: 'Common mistakes', votreReponseCourte: 'Your answer',
+  saisieIllisible: 'Your entry is not a readable number.', reponseAttendue: 'Expected answer:', ecritureDeseq: 'Your entry is not balanced: total debits ≠ total credits.',
+  lignesManquantes: 'Expected lines not found:', lignesEnTrop: 'Extra or incorrect lines:', ajouterLigne: '+ Add a line',
+  corrigeType: 'Model answer', autoEval: 'Self-assessment: tick the points your answer contains', enregistrerAutoEval: 'Save my self-assessment',
+  voirCorrige: 'Show the answer key', criteresOk: 'All criteria are met.', criteresKo: 'One or more criteria are missing: go back over the model answer.',
+  reponseLibre: 'Your answer (optional: it is not marked automatically)', situationFictive: 'fictional situation', notionsLabel: 'Concepts',
   etape: 'Step', avant: 'to', comparaison: 'Comparison', mots: 'Vocabulary', lireFiche: 'Read the full sheet',
 };
 
@@ -88,6 +100,12 @@ const es: Libelles = {
   sujetGenere: 'Tema generado automáticamente a partir de las fichas: no forma parte del curso.',
   problematiqueModele: (a, b) => `¿En qué medida la noción de «${b}» permite comprender «${a}», y dónde están sus límites?`,
   planModele: (a, b) => [`${a}: definición, mecanismos y retos`, `${b}: lo que esta noción aporta al razonamiento`, 'Límites, confusiones que evitar y matices'],
+  exAReprendre: 'Repasar', corrige: 'Corrección', erreursFrequentes: 'Errores frecuentes', votreReponseCourte: 'Tu respuesta',
+  saisieIllisible: 'Lo que has escrito no es un número legible.', reponseAttendue: 'Respuesta esperada:', ecritureDeseq: 'El asiento no está equilibrado: total debe ≠ total haber.',
+  lignesManquantes: 'Líneas esperadas no encontradas:', lignesEnTrop: 'Líneas de más o erróneas:', ajouterLigne: '+ Añadir una línea',
+  corrigeType: 'Respuesta modelo', autoEval: 'Autoevaluación: marca los elementos presentes en tu respuesta', enregistrerAutoEval: 'Guardar mi autoevaluación',
+  voirCorrige: 'Ver la corrección', criteresOk: 'Se cumplen todos los criterios.', criteresKo: 'Falta uno o varios criterios: revisa la respuesta modelo.',
+  reponseLibre: 'Tu respuesta (opcional: no se corrige automáticamente)', situationFictive: 'situación ficticia', notionsLabel: 'Nociones',
   etape: 'Paso', avant: 'a', comparaison: 'Comparación', mots: 'Léxico', lireFiche: 'Leer la ficha completa',
 };
 

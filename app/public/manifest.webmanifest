@@ -1,0 +1,15 @@
+{
+  "name": "LEA — The Learning Journal",
+  "short_name": "LEA Journal",
+  "description": "Cours, fil éditorial et révisions pour la L3 LEA anglais-espagnol, commerce international.",
+  "lang": "fr",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f0e6",
+  "theme_color": "#1c2a3d",
+  "icons": [
+    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icone-masque.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

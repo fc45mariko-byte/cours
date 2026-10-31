@@ -778,5 +778,52 @@
     "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
     "acces": "reference",
     "pertinence": "Données personnelles et marketing digital"
+  },
+  {
+    "id": "src.bce",
+    "titre": "La stratégie de politique monétaire de la BCE (revue stratégique de 2021) et pages « Taux directeurs »",
+    "auteur": "Banque centrale européenne",
+    "url": "https://www.ecb.europa.eu/",
+    "acces": "reference",
+    "pertinence": "Mandat, objectif d'inflation et instruments de la BCE"
+  },
+  {
+    "id": "src.cnuced-transport",
+    "titre": "Review of Maritime Transport 2024",
+    "auteur": "CNUCED (UNCTAD)",
+    "url": "https://unctad.org/topic/transport-and-trade-logistics/review-of-maritime-transport",
+    "acces": "reference",
+    "pertinence": "Perturbations du transport maritime (canal de Suez, mer Rouge)"
+  },
+  {
+    "id": "src.inditex",
+    "titre": "Rapports annuels du groupe Inditex",
+    "auteur": "Inditex",
+    "url": "https://www.inditex.com/",
+    "acces": "reference",
+    "pertinence": "Organisation et chaîne logistique du groupe Inditex (Zara)"
+  },
+  {
+    "id": "src.ghemawat-zara",
+    "titre": "« ZARA: Fast Fashion », étude de cas 9-703-497, Harvard Business School, 2003",
+    "auteur": "Pankaj Ghemawat et José Luis Nueno",
+    "acces": "reference",
+    "pertinence": "Étude de cas sur le modèle de Zara"
+  },
+  {
+    "id": "src.ue-vehicules-chine",
+    "titre": "Règlement d'exécution de la Commission instituant un droit compensateur définitif sur les importations de véhicules électriques à batterie neufs conçus pour le transport de personnes originaires de la République populaire de Chine (octobre 2024)",
+    "auteur": "Commission européenne",
+    "url": "https://eur-lex.europa.eu/",
+    "acces": "reference",
+    "pertinence": "Défense commerciale de l'UE face aux véhicules électriques chinois"
+  },
+  {
+    "id": "src.ue-acc",
+    "titre": "Accord de commerce et de coopération entre l'Union européenne et la Communauté européenne de l'énergie atomique, d'une part, et le Royaume-Uni de Grande-Bretagne et d'Irlande du Nord, d'autre part (JO UE L 149, 30 avril 2021)",
+    "auteur": "Union européenne et Royaume-Uni",
+    "url": "https://eur-lex.europa.eu/",
+    "acces": "reference",
+    "pertinence": "Relations commerciales UE-Royaume-Uni après le Brexit"
   }
 ]

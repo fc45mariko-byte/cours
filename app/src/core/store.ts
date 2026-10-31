@@ -127,6 +127,10 @@ export class Store {
       } catch { this.ecritureBloquee = true; this.persistant = false; }
     }
     this.etat = migrer(lu);
+    // La copie de l'ancienne version étant faite, on enregistre tout de suite au nouveau format.
+    if (version < VERSION && !this.ecritureBloquee) {
+      try { stockage.setItem(CLE, JSON.stringify(this.etat)); } catch { this.persistant = false; }
+    }
   }
   abonner(f: Ecouteur) { this.ecouteurs.add(f); return () => { this.ecouteurs.delete(f); }; }
   private enregistrer() {

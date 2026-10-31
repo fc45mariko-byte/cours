@@ -9,3 +9,8 @@ try {
 } catch { /* stockage indisponible : thème automatique */ }
 
 render(<App />, document.getElementById('app')!);
+
+// Lecture hors ligne : le service worker n'est enregistré que sur le site construit.
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(() => { /* hors ligne indisponible */ }); });
+}

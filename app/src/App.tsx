@@ -1,10 +1,17 @@
 import { useEffect } from 'preact/hooks';
 import { useRoute } from './hooks';
 import { Layout } from './ui/Layout';
-import { Panneau } from './ui/Panneau';
+import { Gains } from './ui/Gains';
+import { PagePublication } from './ui/Publication';
 import { Accueil } from './pages/Accueil';
+import { Fil } from './pages/Fil';
+import { Bibliotheque } from './pages/Bibliotheque';
 import { Matiere } from './pages/Matiere';
+import { Chapitre } from './pages/Chapitre';
 import { Notion } from './pages/Notion';
+import { Etudier, Session, Vocabulaire } from './pages/Etudier';
+import { Dissertation } from './pages/Dissertation';
+import { Progres, Arbre } from './pages/Progres';
 import { Entrainer, SerieQcm } from './pages/Entrainer';
 import { Exercice } from './pages/Exercice';
 import { Flashcards } from './pages/Flashcards';
@@ -13,43 +20,51 @@ import { Reviser } from './pages/Reviser';
 import { Approfondir } from './pages/Approfondir';
 import { Explorer, Glossaire } from './pages/Explorer';
 import { Reglages } from './pages/Reglages';
-import { index } from './data';
+import { index, chapitreCatalogue } from './data';
 
-export function App() {
+function Page() {
   const { chemin, params } = useRoute();
-  const [, racine, arg] = chemin.split('/');
+  const [, racine, arg, arg2] = chemin.split('/');
+  const id = arg ? decodeURIComponent(arg) : '';
 
   useEffect(() => {
-    const titre = racine === 'notion' ? index.notions[arg]?.titre : racine === 'matiere' ? index.matieres.find((m) => m.id === arg)?.titre : '';
-    document.title = titre ? `${titre} · L3 LEA` : 'L3 LEA Commerce international';
+    const titre = racine === 'notion' ? index.notions[id]?.titre : racine === 'matiere' ? index.matieres.find((m) => m.id === id)?.titre
+      : racine === 'chapitre' ? chapitreCatalogue(id)?.titre : '';
+    document.title = titre ? `${titre} · LEA, The Learning Journal` : 'LEA, The Learning Journal';
   }, [chemin]);
 
   switch (racine) {
-    case '':
-      return <Layout section="accueil" panneau={<Panneau />}><Accueil /></Layout>;
-    case 'matiere':
-      return <Layout section="accueil" panneau={<Panneau />}><Matiere id={arg} key={arg} /></Layout>;
-    case 'notion':
-      return <Layout section="accueil"><Notion id={arg} key={arg} /></Layout>;
+    case '': return <Layout section="accueil"><Accueil /></Layout>;
+    case 'fil': return <Layout section="fil"><Fil params={params} /></Layout>;
+    case 'monde': return <Layout section="fil"><Fil params={new URLSearchParams('onglet=monde')} /></Layout>;
+    case 'pub': return <Layout section="fil" lecture><PagePublication id={id} key={id} /></Layout>;
+    case 'bibliotheque': return <Layout section="bibliotheque"><Bibliotheque /></Layout>;
+    case 'matiere': return <Layout section="bibliotheque"><Matiere id={id} key={id} /></Layout>;
+    case 'chapitre': return <Layout section="bibliotheque" lecture><Chapitre id={id} key={id} params={params} /></Layout>;
+    case 'notion': return <Layout section="bibliotheque" lecture><Notion id={id} key={id} /></Layout>;
+    case 'etudier':
+      if (id === 'session') return <Layout section="etudier"><Session params={params} key={params.toString()} /></Layout>;
+      if (id === 'dissertation') return <Layout section="etudier"><Dissertation params={params} key={params.toString()} /></Layout>;
+      if (id === 'vocabulaire') return <Layout section="etudier"><Vocabulaire params={params} key={params.toString()} /></Layout>;
+      return <Layout section="etudier"><Etudier /></Layout>;
     case 'entrainer':
-      return <Layout section="entrainer">{arg === 'qcm' ? <SerieQcm key={params.toString()} params={params} /> : <Entrainer key={params.toString()} params={params} />}</Layout>;
-    case 'exercice':
-      return <Layout section="entrainer"><Exercice id={arg} key={arg} /></Layout>;
-    case 'flashcards':
-      return <Layout section="flashcards"><Flashcards key={params.toString()} params={params} /></Layout>;
-    case 'examen':
-      return <Layout section="examen">{arg === 'session' ? <ExamenSession /> : <ExamenConfig params={params} />}</Layout>;
-    case 'reviser':
-      return <Layout section="reviser" panneau={<Panneau />}><Reviser /></Layout>;
-    case 'approfondir':
-      return <Layout section="approfondir"><Approfondir params={params} /></Layout>;
-    case 'explorer':
-      return <Layout section="explorer"><Explorer params={params} /></Layout>;
-    case 'glossaire':
-      return <Layout section="explorer"><Glossaire /></Layout>;
-    case 'reglages':
-      return <Layout section="reglages"><Reglages /></Layout>;
+      return <Layout section="etudier">{id === 'qcm' ? <SerieQcm key={params.toString()} params={params} /> : <Entrainer key={params.toString()} params={params} />}</Layout>;
+    case 'exercice': return <Layout section="etudier" lecture><Exercice id={id} key={id} /></Layout>;
+    case 'flashcards': return <Layout section="etudier"><Flashcards key={params.toString()} params={params} /></Layout>;
+    case 'examen': return <Layout section="etudier">{id === 'session' ? <ExamenSession /> : <ExamenConfig params={params} />}</Layout>;
+    case 'reviser': return <Layout section="etudier"><Reviser /></Layout>;
+    case 'approfondir': return <Layout section="etudier"><Approfondir params={params} /></Layout>;
+    case 'progres':
+      if (id === 'arbre' && arg2) return <Layout section="progres"><Arbre id={arg2} key={arg2} /></Layout>;
+      return <Layout section="progres"><Progres /></Layout>;
+    case 'recherche': case 'explorer': return <Layout section="recherche"><Explorer params={params} key={params.get('q') ?? ''} /></Layout>;
+    case 'glossaire': return <Layout section="glossaire"><Glossaire /></Layout>;
+    case 'reglages': return <Layout section="reglages"><Reglages /></Layout>;
     default:
-      return <Layout section=""><div class="vide"><h1 class="titre-page">Page introuvable</h1><a class="btn" href="#/">Retour à l'accueil</a></div></Layout>;
+      return <Layout section=""><div class="vide"><h1 class="titre-page">Page introuvable</h1><a class="btn" href="#/">Retour à l’accueil</a></div></Layout>;
   }
+}
+
+export function App() {
+  return <><Page /><Gains /></>;
 }

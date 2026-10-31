@@ -6,6 +6,8 @@ import { store } from '../core/store';
 import { Charge, LienNotion, Texte } from '../ui/communs';
 import { SelecteurPerimetre } from './Entrainer';
 import type { Flashcard } from '../types';
+import { lib } from '../i18n';
+import { langueDe } from '../data';
 
 const NOTES: { note: Note; label: string; aide: string }[] = [
   { note: 'revoir', label: 'À revoir', aide: 'Je ne savais pas ou j’ai fait une erreur de fond' },
@@ -14,34 +16,36 @@ const NOTES: { note: Note; label: string; aide: string }[] = [
   { note: 'facile', label: 'Facile', aide: 'Réponse complète et immédiate' },
 ];
 
-function Carte({ f, onNote }: { f: Flashcard; onNote: (n: Note) => void }) {
+export function Carte({ f, onNote }: { f: Flashcard; onNote: (n: Note) => void }) {
   const [reponse, setReponse] = useState('');
   const [vue, setVue] = useState(false);
   const [coches, setCoches] = useState<boolean[]>([]);
   const manque = vue && coches.filter(Boolean).length < f.indispensables.length;
+  const langue = langueDe(f.notions[0]);
+  const L = lib(langue);
   return (
-    <div class="bloc carte-flash">
-      <div class="small muted">Notion{f.notions.length > 1 ? 's' : ''} : {f.notions.map((n) => <LienNotion key={n} id={n} />)}</div>
+    <div class="bloc carte-flash" lang={langue}>
+      <div class="small muted">{L.notionsLabel} : {f.notions.map((n) => <LienNotion key={n} id={n} />)}</div>
       <h2 style={{ marginTop: 12 }}>{f.question}</h2>
-      <label class="champ">Votre réponse (facultatif, non analysée automatiquement)
-        <textarea value={reponse} disabled={vue} onInput={(e) => setReponse((e.target as HTMLTextAreaElement).value)} placeholder="Rédigez ou formulez mentalement votre réponse, puis comparez." />
+      <label class="champ">{L.votreReponse}
+        <textarea value={reponse} disabled={vue} onInput={(e) => setReponse((e.target as HTMLTextAreaElement).value)} placeholder={L.votreReponseAide} />
       </label>
-      {!vue && <button class="btn" style={{ marginTop: 12 }} onClick={() => setVue(true)}>Voir la réponse de référence</button>}
+      {!vue && <button class="btn" style={{ marginTop: 12 }} onClick={() => setVue(true)}>{L.voirReponse}</button>}
       {vue && (
         <div aria-live="polite">
-          <h3>Réponse de référence</h3>
+          <h3>{L.reponseReference}</h3>
           <p><Texte t={f.reponse} /></p>
           <div class="bloc plat" style={{ padding: 16 }}>
-            <strong>Éléments indispensables — cochez ceux que contenait votre réponse</strong>
+            <strong>{L.indispensables}</strong>
             <div class="criteres">{f.indispensables.map((c, i) => (
               <label key={i}><input type="checkbox" checked={!!coches[i]} onChange={() => { const v = [...coches]; v[i] = !v[i]; setCoches(v); }} />{c}</label>
             ))}</div>
-            {f.complementaires?.length ? <><strong class="small">Éléments complémentaires (bonus)</strong><ul class="small">{f.complementaires.map((c, i) => <li key={i}>{c}</li>)}</ul></> : null}
-            {f.erreurs?.length ? <><strong class="small">Erreurs conceptuelles à éviter</strong><ul class="small">{f.erreurs.map((c, i) => <li key={i}>{c}</li>)}</ul></> : null}
+            {f.complementaires?.length ? <><strong class="small">{L.complementaires}</strong><ul class="small">{f.complementaires.map((c, i) => <li key={i}>{c}</li>)}</ul></> : null}
+            {f.erreurs?.length ? <><strong class="small">{L.erreursEviter}</strong><ul class="small">{f.erreurs.map((c, i) => <li key={i}>{c}</li>)}</ul></> : null}
           </div>
-          {manque && f.relance && <div class="encadre attention"><strong>Question de relance :</strong> {f.relance}</div>}
-          <p class="small muted" style={{ marginTop: 12 }}>Évaluez-vous honnêtement : la date de la prochaine révision en dépend.</p>
-          <div class="notes-carte">
+          {manque && f.relance && <div class="encadre attention"><strong>{L.relance}</strong> {f.relance}</div>}
+          <p class="small muted" lang="fr" style={{ marginTop: 12 }}>Évaluez-vous honnêtement : la date de la prochaine révision en dépend.</p>
+          <div class="notes-carte" lang="fr">
             {NOTES.map((n) => (
               <button key={n.note} class={`btn ${n.note === 'revoir' ? 'secondaire' : n.note === 'facile' ? '' : 'discret'}`} title={n.aide} onClick={() => onNote(n.note)}
                 disabled={n.note === 'facile' && manque}>

@@ -1,10 +1,10 @@
 import { useState } from 'preact/hooks';
 import { store } from '../core/store';
 import { useProgression } from '../hooks';
-import { index } from '../data';
+import { index, LIBELLE_LANGUE, matieresDisponibles } from '../data';
 
 export function Reglages() {
-  useProgression();
+  const p = useProgression();
   const [message, setMessage] = useState('');
   const [theme, setTheme] = useState(() => { try { return localStorage.getItem('cours-l3-lea:theme') ?? 'auto'; } catch { return 'auto'; } });
 
@@ -38,6 +38,7 @@ export function Reglages() {
         <p>{store.persistant
           ? 'Votre progression est enregistrée automatiquement dans ce navigateur, sur cet appareil.'
           : '⚠️ Le stockage du navigateur est indisponible (navigation privée ou réglages) : la progression sera perdue à la fermeture. Exportez-la régulièrement.'}</p>
+        {store.copieAvantMigration && <p class="small muted">Votre ancienne sauvegarde a été conservée telle quelle avant la mise à niveau, sous la clé <code>{store.copieAvantMigration}</code>.</p>}
         {store.sauvegardeIllisible && <p class="small">⚠️ Une sauvegarde illisible a été trouvée au démarrage. Elle n'a pas été effacée : elle est conservée dans ce navigateur sous la clé <code>{store.sauvegardeIllisible}</code>.</p>}
         <p class="small muted">Elle n'est envoyée nulle part. Pour la transférer sur un autre appareil ou la mettre à l'abri, exportez-la puis importez le fichier.</p>
         <div class="ligne">
@@ -48,16 +49,31 @@ export function Reglages() {
         <p role="status" aria-live="polite" class="small" style={{ marginTop: 10 }}>{message}</p>
       </div>
       <div class="bloc">
+        <h2 style={{ marginTop: 0 }}>Mes matières</h2>
+        <p class="small muted">Elles alimentent l’onglet « Mes matières » du fil et les recommandations. Sans choix, l’application se fonde sur votre activité.</p>
+        <div class="grille" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 4 }}>
+          {matieresDisponibles().map((m) => (
+            <label key={m.id} class="criteres"><span style={{ display: 'flex', gap: 10 }}>
+              <input type="checkbox" checked={p.preferences.mesMatieres.includes(m.id)} onChange={() => store.preferences((pr) => {
+                pr.mesMatieres = pr.mesMatieres.includes(m.id) ? pr.mesMatieres.filter((x) => x !== m.id) : [...pr.mesMatieres, m.id];
+              })} />{m.titre}{m.langue !== 'fr' ? ` (${LIBELLE_LANGUE[m.langue]})` : ''}</span></label>
+          ))}
+        </div>
+      </div>
+      <div class="bloc">
         <h2 style={{ marginTop: 0 }}>Apparence</h2>
         <div class="puces" role="radiogroup" aria-label="Thème">
           {[['auto', 'Automatique'], ['light', 'Clair'], ['dark', 'Sombre']].map(([v, l]) => (
             <button key={v} class="puce simple" role="radio" aria-checked={theme === v} aria-pressed={theme === v} onClick={() => changerTheme(v)}>{l}</button>
           ))}
         </div>
+        <label class="criteres" style={{ marginTop: 12 }}><span style={{ display: 'flex', gap: 10 }}>
+          <input type="checkbox" checked={p.preferences.animations} onChange={() => store.preferences((pr) => { pr.animations = !pr.animations; })} />
+          Animations discrètes (gains d’XP, badges). Elles sont aussi désactivées si votre système demande moins de mouvement.</span></label>
       </div>
       <div class="bloc">
         <h2 style={{ marginTop: 0 }}>À propos du contenu</h2>
-        <p class="small">Programme cartographié d'après la maquette de la L3 LEA anglais-espagnol, parcours Commerce international, de l'Université d'Orléans. Les fiches indiquent leurs sources et leur date de vérification. Les exemples inventés sont signalés « exemple fictif ».</p>
+        <p class="small">Programme cartographié d'après la maquette de la L3 LEA anglais-espagnol, parcours Commerce international, de l'Université d'Orléans. Les fiches indiquent leurs sources et leur date de vérification. Les exemples inventés sont signalés « exemple fictif ». Chaque matière est présentée dans sa langue d’enseignement ; l’interface reste en français. Les sujets de dissertation générés et les articles « Monde et économie » sont signalés comme hors cours.</p>
         <p class="small muted">Dernière vérification de contenu : {index.genereLe}.</p>
       </div>
     </>

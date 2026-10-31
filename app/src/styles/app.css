@@ -425,3 +425,20 @@ tr:last-child td, tr:last-child th { border-bottom: 0; }
 .atelier { display: grid; grid-template-columns: 1fr; gap: var(--e4); }
 .atelier .partie { border-top: 1px solid var(--filet); padding-top: var(--e3); }
 .compteur { font-size: var(--t-meta); color: var(--discret); text-align: right; }
+
+/* Ajustements */
+.pub--dossier { position: relative; overflow: hidden; }
+.pub--dossier .motif { position: absolute; right: 0; top: 0; width: 48%; height: 100%; color: #f7f2e8; opacity: .14; pointer-events: none; }
+.pub--dossier > *:not(.motif) { position: relative; }
+.pub--dossier .surtitre .ton-trait { color: #e9c7a4; }
+.lecteur h4, .pub h4 { font-family: var(--serif); font-size: 1.12rem; font-weight: 600; margin: var(--e4) 0 var(--e2); }
+@media (max-width: 699px) {
+  .une .visuel { min-height: 150px; }
+  .niveau-carte { grid-template-columns: 1fr; justify-items: start; }
+}
+@media (max-width: 699px) {
+  .section-titre { flex-wrap: wrap; }
+  .section-titre a, .section-titre .meta { white-space: normal; }
+}
+main { overflow-wrap: break-word; }
+main a[href^="http"] { overflow-wrap: anywhere; }

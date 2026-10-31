@@ -1,9 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
 
-// Une notion encore non rédigée, quel que soit l'avancement du contenu.
 const index = JSON.parse(readFileSync(new URL('../../app/src/generated/index.json', import.meta.url), 'utf8'));
-const nonRedigee = Object.keys(index.notions).find((id) => !index.notions[id].redigee);
 
 const erreursConsole = (page: Page) => {
   const e: string[] = [];
@@ -17,24 +15,23 @@ test.beforeEach(async ({ page }) => {
   await page.evaluate(() => localStorage.clear());
 });
 
-test('accueil : matières et filtres', async ({ page }) => {
+test('bibliothèque : toutes les matières, y compris celle signalée absente', async ({ page }) => {
   const e = erreursConsole(page);
-  await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Réussir sa L3 LEA');
-  await expect(page.locator('a.carte[href^="#/matiere/"]')).toHaveCount(22);
-  await page.getByRole('button', { name: 'Gestion', exact: true }).click();
-  await expect(page.locator('a.carte[href^="#/matiere/"]')).toHaveCount(3);
+  await page.goto('/#/bibliotheque');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Bibliothèque');
+  const ids = await page.locator('a.couverture').evaluateAll((els) => [...new Set(els.map((a) => a.getAttribute('href')))]);
+  expect(ids).toHaveLength(index.matieres.length);
+  await page.getByRole('button', { name: 'English', exact: true }).click();
+  const anglais = await page.locator('a.couverture').evaluateAll((els) => [...new Set(els.map((a) => a.getAttribute('href')))]);
+  expect(anglais).toHaveLength(index.matieres.filter((m: { langue: string }) => m.langue === 'en').length);
   expect(e).toEqual([]);
 });
 
-test('fiche : rubriques, prérequis et notion non rédigée', async ({ page }) => {
+test('fiche : rubriques et exemple signalé fictif', async ({ page }) => {
   await page.goto('/#/notion/tci.incoterms.transfert-risque');
   await expect(page.getByRole('heading', { level: 1, name: 'Le point de transfert des risques' })).toBeVisible();
   await expect(page.getByRole('heading', { name: /Définition/ })).toBeVisible();
   await expect(page.getByText('exemple fictif')).toBeVisible();
-  test.skip(!nonRedigee, 'toutes les notions sont rédigées');
-  await page.goto(`/#/notion/${nonRedigee}`);
-  await expect(page.getByText('en cours de rédaction')).toBeVisible();
 });
 
 test('QCM : aucune correction avant validation, explication après, erreur enregistrée', async ({ page }) => {
@@ -105,9 +102,10 @@ test('examen : sans correction, reprise après rechargement, bilan', async ({ pa
 
 test('recherche : insensible aux accents, termes anglais', async ({ page }) => {
   await page.goto('/#/explorer');
-  await page.getByLabel('Rechercher').fill('fret');
+  const champ = page.getByRole('searchbox', { name: 'Rechercher' });
+  await champ.fill('fret');
   await expect(page.getByRole('link', { name: /Fret/ }).first()).toBeVisible();
-  await page.getByLabel('Rechercher').fill('shipment contract');
+  await champ.fill('shipment contract');
   await expect(page.getByRole('link', { name: /Vente au départ/ })).toBeVisible();
 });
 
@@ -121,9 +119,9 @@ test('réglages : export et import de la progression', async ({ page }) => {
 });
 
 test('pas de défilement horizontal', async ({ page }) => {
-  for (const r of ['/', '/#/notion/tci.incoterms.transfert-risque', '/#/exercice/e.tci.incoterms.01', '/#/examen']) {
+  for (const r of ['/', '/#/fil', '/#/bibliotheque', '/#/etudier', '/#/progres', '/#/chapitre/tci.incoterms', '/#/notion/tci.incoterms.transfert-risque', '/#/exercice/e.tci.incoterms.01', '/#/examen', '/#/progres/arbre/cvb']) {
     await page.goto(r);
-    await page.waitForTimeout(200);
+    await page.waitForTimeout(250);
     const debord = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(debord, r).toBeLessThanOrEqual(1);
   }
