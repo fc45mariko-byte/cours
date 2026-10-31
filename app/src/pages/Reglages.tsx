@@ -38,6 +38,7 @@ export function Reglages() {
         <p>{store.persistant
           ? 'Votre progression est enregistrée automatiquement dans ce navigateur, sur cet appareil.'
           : '⚠️ Le stockage du navigateur est indisponible (navigation privée ou réglages) : la progression sera perdue à la fermeture. Exportez-la régulièrement.'}</p>
+        {store.sauvegardeIllisible && <p class="small">⚠️ Une sauvegarde illisible a été trouvée au démarrage. Elle n'a pas été effacée : elle est conservée dans ce navigateur sous la clé <code>{store.sauvegardeIllisible}</code>.</p>}
         <p class="small muted">Elle n'est envoyée nulle part. Pour la transférer sur un autre appareil ou la mettre à l'abri, exportez-la puis importez le fichier.</p>
         <div class="ligne">
           <button class="btn" onClick={exporter}>Exporter (fichier JSON)</button>

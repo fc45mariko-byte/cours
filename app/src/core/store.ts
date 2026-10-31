@@ -54,20 +54,29 @@ type Ecouteur = () => void;
 export class Store {
   etat: Progression;
   persistant = true;
+  /** Clé où la sauvegarde illisible trouvée au démarrage a été mise à l'abri (null si aucune). */
+  sauvegardeIllisible: string | null = null;
+  /** Vrai si une sauvegarde illisible n'a pas pu être mise à l'abri : on n'écrit alors plus rien par-dessus. */
+  private ecritureBloquee = false;
   private ecouteurs = new Set<Ecouteur>();
   constructor(private stockage: Pick<Storage, 'getItem' | 'setItem'> | null) {
     this.etat = progressionVide();
+    if (!stockage) { this.persistant = false; return; }
+    let brut: string | null = null;
+    try { brut = stockage.getItem(CLE); } catch { this.persistant = false; return; }
+    if (!brut) return;
     try {
-      const brut = stockage?.getItem(CLE);
-      if (brut) this.etat = migrer(JSON.parse(brut));
-      if (!stockage) this.persistant = false;
+      this.etat = migrer(JSON.parse(brut));
     } catch {
-      this.persistant = false;
+      // Sauvegarde illisible : on la copie sous une autre clé avant toute écriture, pour ne jamais l'écraser.
+      const secours = `${CLE}:illisible:${Date.now()}`;
+      try { stockage.setItem(secours, brut); this.sauvegardeIllisible = secours; }
+      catch { this.ecritureBloquee = true; this.persistant = false; }
     }
   }
   abonner(f: Ecouteur) { this.ecouteurs.add(f); return () => { this.ecouteurs.delete(f); }; }
   private enregistrer() {
-    if (this.stockage) {
+    if (this.stockage && !this.ecritureBloquee) {
       try { this.stockage.setItem(CLE, JSON.stringify(this.etat)); this.persistant = true; }
       catch { this.persistant = false; }
     }

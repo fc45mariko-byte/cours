@@ -158,6 +158,22 @@ describe('sauvegarde de la progression', () => {
     expect(a.etat.qcm.q1.length).toBe(1);
     expect(a.persistant).toBe(false);
   });
+  it('met à l’abri une sauvegarde illisible au lieu de l’écraser', () => {
+    const m = new Map<string, string>([['cours-l3-lea:progression', '{"version":1,"qcm":{"q1"']]);
+    const s = { getItem: (k: string) => m.get(k) ?? null, setItem: (k: string, v: string) => { m.set(k, v); } };
+    const a = new Store(s);
+    expect(a.sauvegardeIllisible).toMatch(/^cours-l3-lea:progression:illisible:/);
+    a.repondreQcm('q2', 'n', 'tci', true);
+    expect(m.get(a.sauvegardeIllisible!)).toBe('{"version":1,"qcm":{"q1"');
+  });
+  it('n’écrit rien si la sauvegarde illisible ne peut pas être mise à l’abri', () => {
+    const ecrites: string[] = [];
+    const s = { getItem: () => '{illisible', setItem: (k: string) => { ecrites.push(k); throw new Error('plein'); } };
+    const a = new Store(s);
+    a.repondreQcm('q2', 'n', 'tci', true);
+    expect(ecrites.filter((k) => k === 'cours-l3-lea:progression')).toEqual([]);
+    expect(a.persistant).toBe(false);
+  });
   it('répare des données corrompues et refuse un fichier inconnu', () => {
     expect(migrer({ version: 1, qcm: 'x', examensPasses: 3 }).qcm).toEqual({});
     const a = new Store(memoire());

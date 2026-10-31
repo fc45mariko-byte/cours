@@ -15,6 +15,7 @@ Site : https://fc45mariko-byte.github.io/cours/ (GitHub Pages, publié depuis la
 | `scripts/build-index.mjs` | Valide tout le contenu et génère l'index |
 | `tests/` | Tests unitaires (Vitest) et de bout en bout (Playwright) |
 | `docs/refonte/` | Audit, recherche, cartographie, spécification, bilan |
+| `docs/learning-journal/` | Refonte « The Learning Journal » : audit, inventaire des cours, langue, complétude, plan |
 | `archive/ancien-site/` | Ancien site, conservé tel quel |
 | `index.html`, `assets/` | Site construit, publié par GitHub Pages (ne pas modifier à la main) |
 
@@ -26,6 +27,7 @@ npm run dev        # serveur de développement
 npm run check      # validation du contenu, types, tests unitaires
 npm run build      # construit et publie le site à la racine (à committer)
 npm run test:e2e   # tests de bout en bout (après npm run build)
+node scripts/inventaire.mjs   # inventaire des identifiants de contenu (--ecrire : met à jour la référence)
 ```
 
 ## Ajouter du contenu
