@@ -3,125 +3,125 @@
   "notions": [
     {
       "id": "cva.contemporain.segmentation",
-      "titre": "La segmentation des publics",
+      "titre": "Audience segmentation",
       "niveau": "F",
       "prerequis": ["cva.mesure.etudes"],
       "connexes": ["mks.marketing.segmentation", "cva.contemporain.numerique"],
-      "question": "Pourquoi la publicité américaine passe-t-elle du marché de masse aux segments ?",
-      "definition": "Dans un article de 1956, Wendell R. Smith oppose deux stratégies : la différenciation du produit, qui cherche à attirer l'ensemble du marché, et la segmentation du marché, qui adapte l'offre à des groupes de consommateurs aux besoins distincts. À partir des années 1950-1960, la publicité américaine cible de plus en plus des segments : les jeunes (« Pepsi Generation », 1963), les femmes actives, le marché afro-américain puis hispanique, les catégories définies par le mode de vie (typologie VALS, Values and Lifestyles, 1978). L'historienne Lizabeth Cohen montre que cette segmentation fragmente la « république des consommateurs » de l'après-guerre en marchés distincts. Le câble (MTV, 1981) et les médias spécialisés facilitent ce ciblage, que le numérique pousse ensuite à l'échelle individuelle.",
+      "question": "Why did American advertising move from the mass market to segments?",
+      "definition": "In a 1956 article, Wendell R. Smith contrasted two strategies: product differentiation, which seeks to attract the whole market, and market segmentation, which adapts the offering to groups of consumers with distinct needs. From the 1950s-1960s on, American advertising increasingly targeted segments: young people (\"Pepsi Generation,\" 1963), working women, the African American and then the Hispanic market, categories defined by lifestyle (the VALS typology, Values and Lifestyles, 1978). The historian Lizabeth Cohen shows that this segmentation fragmented the postwar \"consumers' republic\" into separate markets. Cable (MTV, 1981) and specialized media made this targeting easier, and digital media later pushed it down to the individual level.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Critère", "Exemples"], "lignes": [
-          ["Démographique", "Âge, sexe, revenu, origine"],
-          ["Géographique", "Région, urbain / rural"],
-          ["Psychographique", "Valeurs, mode de vie (VALS)"],
-          ["Comportemental", "Fréquence d'achat, fidélité"]
+        { "type": "tableau", "entetes": ["Criterion", "Examples"], "lignes": [
+          ["Demographic", "Age, gender, income, ethnic origin"],
+          ["Geographic", "Region, urban / rural"],
+          ["Psychographic", "Values, lifestyle (VALS)"],
+          ["Behavioral", "Purchase frequency, loyalty"]
         ] }
       ],
       "termes": [
-        { "fr": "Segmentation", "en": "market segmentation", "es": "segmentación de mercado", "definition": "Découpage du marché en groupes homogènes." },
-        { "fr": "Cible", "en": "target audience", "es": "público objetivo", "definition": "Segment visé par une campagne." },
-        { "fr": "Marché de masse", "en": "mass market", "es": "mercado de masas", "definition": "Marché traité comme un ensemble indifférencié." },
-        { "fr": "Marketing ethnique", "en": "ethnic / multicultural marketing", "es": "marketing étnico / multicultural", "definition": "Communication ciblant une communauté culturelle." }
+        { "fr": "Segmentation", "en": "market segmentation", "es": "segmentación de mercado", "definition": "Division of the market into homogeneous groups." },
+        { "fr": "Cible", "en": "target audience", "es": "público objetivo", "definition": "Segment targeted by a campaign." },
+        { "fr": "Marché de masse", "en": "mass market", "es": "mercado de masas", "definition": "Market treated as an undifferentiated whole." },
+        { "fr": "Marketing ethnique", "en": "ethnic / multicultural marketing", "es": "marketing étnico / multicultural", "definition": "Communication targeting a cultural community." }
       ],
-      "exemple": { "fictif": false, "texte": "Dans « A Consumers' Republic » (2003), Lizabeth Cohen décrit le passage d'un marché de masse unifié à des marchés segmentés selon l'âge, le genre, l'origine et le mode de vie à partir des années 1960.", "source": "src.cohen-consumers" },
+      "exemple": { "fictif": false, "texte": "In \"A Consumers' Republic\" (2003), Lizabeth Cohen describes the shift, from the 1960s on, from a unified mass market to markets segmented by age, gender, ethnic origin and lifestyle.", "source": "src.cohen-consumers" },
       "confusions": [
-        { "a": "Différenciation du produit", "b": "Segmentation du marché", "explication": "Distinction posée par Wendell Smith (1956)." }
+        { "a": "Product differentiation", "b": "Market segmentation", "explication": "The distinction drawn by Wendell Smith (1956)." }
       ],
-      "verification": ["Quels critères permettent de segmenter un marché ?"],
+      "verification": ["Which criteria can be used to segment a market?"],
       "sources": ["src.wendell-smith", "src.cohen-consumers"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cva.contemporain.numerique",
-      "titre": "Publicité numérique et données personnelles",
+      "titre": "Digital advertising and personal data",
       "niveau": "F",
       "prerequis": ["cva.contemporain.segmentation"],
       "connexes": ["mks.marketing.digital", "cva.regulation.ftc"],
-      "question": "Comment le numérique a-t-il transformé la publicité américaine ?",
-      "definition": "La première bannière publicitaire est généralement datée d'octobre 1994, sur le site HotWired (annonce AT&T). Google lance en 2000 son programme AdWords : l'annonceur paie au clic (pay-per-click) et cible selon les mots-clés recherchés. Les réseaux sociaux (publicité Facebook à partir de 2007) permettent un ciblage selon le profil, les centres d'intérêt et le comportement de l'internaute, suivi grâce aux cookies et aux traceurs ; la publicité programmatique achète les espaces automatiquement aux enchères, en temps réel. Le marketing d'influence fait de créateurs de contenu des relais publicitaires ; la FTC impose que les partenariats rémunérés soient signalés (Endorsement Guides). Ce modèle, que Shoshana Zuboff qualifie de « capitalisme de surveillance », soulève des questions de vie privée (scandale Cambridge Analytica, 2018). Aux États-Unis, il n'existe pas de loi fédérale générale sur la protection des données comparable au RGPD européen ; des lois sectorielles (COPPA, 1998, pour les enfants de moins de 13 ans) et des lois d'États (Californie) encadrent la collecte.",
+      "question": "How has digital technology transformed American advertising?",
+      "definition": "The first banner ad is generally dated to October 1994, on the HotWired website (an AT&T ad). In 2000 Google launched its AdWords program: the advertiser pays per click (pay-per-click) and targets according to the keywords searched. Social networks (Facebook advertising from 2007) allow targeting based on the user's profile, interests and behavior, tracked through cookies and trackers; programmatic advertising buys space automatically through real-time auctions. Influencer marketing turns content creators into advertising relays; the FTC requires paid partnerships to be disclosed (Endorsement Guides). This model, which Shoshana Zuboff calls \"surveillance capitalism,\" raises privacy issues (Cambridge Analytica scandal, 2018). In the United States, there is no general federal data protection law comparable to the European GDPR; sector-specific laws (COPPA, 1998, for children under 13) and state laws (California) regulate data collection.",
       "fonctionnement": [
         { "type": "etapes", "etapes": [
-          "Collecte de données (navigation, recherches, profil, localisation)",
-          "Constitution de profils et de segments d'audience",
-          "Enchères automatiques sur chaque espace (programmatique)",
-          "Affichage ciblé, mesure des clics et conversions",
-          "Optimisation continue des campagnes"
+          "Data collection (browsing, searches, profile, location)",
+          "Building profiles and audience segments",
+          "Automated auctions for each ad slot (programmatic)",
+          "Targeted display, measurement of clicks and conversions",
+          "Continuous campaign optimization"
         ] },
-        { "type": "attention", "texte": "Paiement au clic (CPC) ou aux mille impressions (CPM) : le numérique permet une mesure fine, mais aussi la fraude au clic et la dépendance à quelques plateformes." }
+        { "type": "attention", "texte": "Payment per click (CPC) or per thousand impressions (CPM): digital advertising allows fine-grained measurement, but also click fraud and dependence on a handful of platforms." }
       ],
       "termes": [
-        { "fr": "Bannière", "en": "banner ad", "es": "banner / anuncio gráfico", "definition": "Publicité graphique sur une page web." },
-        { "fr": "Coût par clic", "en": "pay-per-click / cost per click (CPC)", "es": "pago por clic / coste por clic", "definition": "L'annonceur paie lorsqu'un internaute clique." },
-        { "fr": "Publicité programmatique", "en": "programmatic advertising", "es": "publicidad programática", "definition": "Achat automatisé d'espaces aux enchères." },
-        { "fr": "Marketing d'influence", "en": "influencer marketing", "es": "marketing de influencers", "definition": "Promotion par des créateurs de contenu suivis en ligne." },
-        { "fr": "Vie privée", "en": "privacy", "es": "privacidad", "definition": "Protection des informations personnelles." }
+        { "fr": "Bannière", "en": "banner ad", "es": "banner / anuncio gráfico", "definition": "Graphic advertisement on a web page." },
+        { "fr": "Coût par clic", "en": "pay-per-click / cost per click (CPC)", "es": "pago por clic / coste por clic", "definition": "The advertiser pays when a user clicks." },
+        { "fr": "Publicité programmatique", "en": "programmatic advertising", "es": "publicidad programática", "definition": "Automated purchase of ad space through auctions." },
+        { "fr": "Marketing d'influence", "en": "influencer marketing", "es": "marketing de influencers", "definition": "Promotion by content creators with an online following." },
+        { "fr": "Vie privée", "en": "privacy", "es": "privacidad", "definition": "Protection of personal information." }
       ],
-      "exemple": { "fictif": true, "texte": "Une marque fictive de chaussures de course paie 0,40 $ par clic les annonces affichées aux internautes ayant recherché « marathon training » ; sur 10 000 clics, 300 achats, soit un taux de conversion de 3 %." },
+      "exemple": { "fictif": true, "texte": "A fictional running-shoe brand pays $0.40 per click for ads shown to users who have searched for \"marathon training\"; out of 10,000 clicks, there are 300 purchases, a conversion rate of 3%." },
       "confusions": [
-        { "a": "Cookie (traceur technique)", "b": "Données personnelles (informations sur une personne)", "explication": "Le cookie est un moyen de collecte ; la question juridique porte sur les données recueillies." },
-        { "a": "Cadre américain (lois sectorielles et d'États)", "b": "RGPD européen (règlement général)", "explication": "Les États-Unis n'ont pas de loi fédérale générale équivalente." }
+        { "a": "Cookie (technical tracker)", "b": "Personal data (information about a person)", "explication": "The cookie is a means of collection; the legal issue concerns the data collected." },
+        { "a": "U.S. framework (sector-specific and state laws)", "b": "European GDPR (general regulation)", "explication": "The United States has no equivalent general federal law." }
       ],
-      "verification": ["Pourquoi Zuboff parle-t-elle de « capitalisme de surveillance » ?"],
+      "verification": ["Why does Zuboff speak of \"surveillance capitalism\"?"],
       "sources": ["src.zuboff", "src.ftc-act"],
       "verifieLe": "2026-10-15",
-      "aVerifier": "Législation américaine sur les données personnelles en évolution (lois d'États, projets fédéraux) : vérifier l'état du droit à la date d'étude."
+      "aVerifier": "U.S. personal data legislation is evolving (state laws, federal bills): check the state of the law as of the date you study this."
     }
   ],
   "questions": [
     {
       "id": "q.cva.contemporain.001", "notion": "cva.contemporain.segmentation", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Qui a distingué en 1956 différenciation du produit et segmentation du marché ?",
+      "enonce": "Who distinguished product differentiation from market segmentation in 1956?",
       "choix": [
         { "id": "a", "texte": "Wendell R. Smith", "correct": true, "explication": "Journal of Marketing, 1956." },
         { "id": "b", "texte": "Rosser Reeves", "correct": false, "explication": "USP." },
-        { "id": "c", "texte": "Edward Bernays", "correct": false, "explication": "Relations publiques." },
-        { "id": "d", "texte": "Thomas Frank", "correct": false, "explication": "Historien de la creative revolution." }
+        { "id": "c", "texte": "Edward Bernays", "correct": false, "explication": "Public relations." },
+        { "id": "d", "texte": "Thomas Frank", "correct": false, "explication": "Historian of the creative revolution." }
       ]
     },
     {
       "id": "q.cva.contemporain.002", "notion": "cva.contemporain.segmentation", "format": "unique", "niveau": 2, "competence": "distinguer",
-      "enonce": "Cibler les consommateurs selon leurs valeurs et leur mode de vie relève de la segmentation :",
+      "enonce": "Targeting consumers according to their values and lifestyle is an example of which type of segmentation?",
       "choix": [
-        { "id": "a", "texte": "Psychographique", "correct": true, "explication": "Exemple : typologie VALS." },
-        { "id": "b", "texte": "Géographique", "correct": false, "explication": "Région, ville." },
-        { "id": "c", "texte": "Démographique", "correct": false, "explication": "Âge, sexe, revenu." },
-        { "id": "d", "texte": "Comportementale", "correct": false, "explication": "Habitudes d'achat." }
+        { "id": "a", "texte": "Psychographic", "correct": true, "explication": "Example: the VALS typology." },
+        { "id": "b", "texte": "Geographic", "correct": false, "explication": "Region, city." },
+        { "id": "c", "texte": "Demographic", "correct": false, "explication": "Age, gender, income." },
+        { "id": "d", "texte": "Behavioral", "correct": false, "explication": "Purchasing habits." }
       ]
     },
     {
       "id": "q.cva.contemporain.003", "notion": "cva.contemporain.numerique", "format": "multiple", "niveau": 2, "competence": "comprendre",
-      "enonce": "Quelles affirmations sur la publicité numérique aux États-Unis sont exactes ?",
+      "enonce": "Which statements about digital advertising in the United States are accurate?",
       "choix": [
-        { "id": "a", "texte": "La FTC exige le signalement des partenariats rémunérés des influenceurs", "correct": true, "explication": "Endorsement Guides." },
-        { "id": "b", "texte": "Une loi fédérale générale équivalente au RGPD s'applique", "correct": false, "explication": "Il n'existe que des lois sectorielles et d'États." },
-        { "id": "c", "texte": "La publicité programmatique achète les espaces aux enchères en temps réel", "correct": true, "explication": "Achat automatisé." },
-        { "id": "d", "texte": "COPPA protège les données des enfants de moins de 13 ans", "correct": true, "explication": "Loi de 1998." }
+        { "id": "a", "texte": "The FTC requires influencers to disclose paid partnerships", "correct": true, "explication": "Endorsement Guides." },
+        { "id": "b", "texte": "A general federal law equivalent to the GDPR applies", "correct": false, "explication": "There are only sector-specific and state laws." },
+        { "id": "c", "texte": "Programmatic advertising buys space through real-time auctions", "correct": true, "explication": "Automated buying." },
+        { "id": "d", "texte": "COPPA protects the data of children under 13", "correct": true, "explication": "A 1998 law." }
       ]
     },
     {
       "id": "q.cva.contemporain.004", "notion": "cva.contemporain.numerique", "format": "unique", "niveau": 2, "competence": "appliquer",
-      "enonce": "Une campagne obtient 10 000 clics et 300 achats. Quel est le taux de conversion ?",
-      "support": "Taux de conversion = achats / clics × 100",
+      "enonce": "A campaign generates 10,000 clicks and 300 purchases. What is the conversion rate?",
+      "support": "Conversion rate = purchases / clicks × 100",
       "choix": [
-        { "id": "a", "texte": "3 %", "correct": true, "explication": "300 / 10 000 = 0,03." },
-        { "id": "b", "texte": "30 %", "correct": false, "explication": "Erreur d'un facteur 10." },
-        { "id": "c", "texte": "0,3 %", "correct": false, "explication": "Erreur d'un facteur 10." },
-        { "id": "d", "texte": "33 %", "correct": false, "explication": "Rapport inversé mal calculé." }
+        { "id": "a", "texte": "3%", "correct": true, "explication": "300 / 10,000 = 0.03." },
+        { "id": "b", "texte": "30%", "correct": false, "explication": "Off by a factor of 10." },
+        { "id": "c", "texte": "0.3%", "correct": false, "explication": "Off by a factor of 10." },
+        { "id": "d", "texte": "33%", "correct": false, "explication": "Inverted ratio, miscalculated." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cva.contemporain.001", "notions": ["cva.contemporain.segmentation"],
-      "question": "Qu'est-ce que la segmentation et comment s'impose-t-elle dans la publicité américaine ?",
-      "reponse": "Wendell Smith (1956) : différenciation du produit vs segmentation du marché. Critères : démographiques, géographiques, psychographiques (VALS, 1978), comportementaux. Cibles : jeunes (Pepsi Generation, 1963), femmes, marchés afro-américain et hispanique. Cohen : fragmentation de la république des consommateurs. Câble (MTV 1981) puis numérique.",
-      "indispensables": ["Wendell Smith", "Critères", "Exemples de cibles"]
+      "question": "What is segmentation, and how did it become established in American advertising?",
+      "reponse": "Wendell Smith (1956): product differentiation vs. market segmentation. Criteria: demographic, geographic, psychographic (VALS, 1978), behavioral. Targets: young people (Pepsi Generation, 1963), women, African American and Hispanic markets. Cohen: fragmentation of the consumers' republic. Cable (MTV 1981), then digital.",
+      "indispensables": ["Wendell Smith", "Criteria", "Examples of targets"]
     },
     {
       "id": "f.cva.contemporain.002", "notions": ["cva.contemporain.numerique"],
-      "question": "Décrivez les étapes et les enjeux de la publicité numérique.",
-      "reponse": "Bannière (1994), AdWords et paiement au clic (2000), publicité sociale (2007), programmatique, influence. Données : cookies, profils, ciblage comportemental. Enjeux : vie privée (Cambridge Analytica 2018), capitalisme de surveillance (Zuboff), cadre américain fragmenté (COPPA 1998, lois d'États), signalement des partenariats exigé par la FTC.",
-      "indispensables": ["Paiement au clic", "Ciblage par les données", "Vie privée et régulation"]
+      "question": "Describe the stages and the issues of digital advertising.",
+      "reponse": "Banner (1994), AdWords and pay-per-click (2000), social media advertising (2007), programmatic, influencers. Data: cookies, profiles, behavioral targeting. Issues: privacy (Cambridge Analytica 2018), surveillance capitalism (Zuboff), fragmented U.S. framework (COPPA 1998, state laws), disclosure of partnerships required by the FTC.",
+      "indispensables": ["Pay-per-click", "Data-driven targeting", "Privacy and regulation"]
     }
   ]
 }

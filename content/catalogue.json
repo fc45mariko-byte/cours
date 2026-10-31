@@ -3,6 +3,8 @@
   {
    "id": "tci",
    "titre": "Techniques du commerce international",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5",
@@ -11,6 +13,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "peach",
    "categorie": "Commerce international",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "tci.operation",
@@ -401,6 +404,8 @@
   {
    "id": "ici",
    "titre": "Introduction au commerce international",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -408,6 +413,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "peach",
    "categorie": "Commerce international",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "ici.diagnostic",
@@ -568,8 +574,24 @@
    ]
   },
   {
+   "id": "tou",
+   "titre": "Introduction au tourisme international",
+   "langue": "fr",
+   "annee": "L3",
+   "statut": "ORL?",
+   "semestres": [],
+   "enseignant": "",
+   "couleur": "mint",
+   "categorie": "Commerce international",
+   "completude": "absente",
+   "noteCompletude": "Matière signalée dans le cahier des charges, absente du dépôt : aucun syllabus ni support de cours n'a été trouvé. Elle sera rédigée à partir du document source dès qu'il sera fourni.",
+   "chapitres": []
+  },
+  {
    "id": "dai",
    "titre": "Droit des affaires internationales",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -577,6 +599,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "lilac",
    "categorie": "Droit",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "dai.normes",
@@ -724,6 +747,8 @@
   {
    "id": "dcl",
    "titre": "Droit des contrats de la Common law",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S6"
@@ -731,6 +756,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "lilac",
    "categorie": "Droit",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "dcl.systemes",
@@ -900,6 +926,8 @@
   {
    "id": "cpt",
    "titre": "Comptabilité générale",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -907,6 +935,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "mint",
    "categorie": "Gestion",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "cpt.cadre",
@@ -1127,6 +1156,8 @@
   {
    "id": "gfi",
    "titre": "Gestion financière",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S6"
@@ -1134,6 +1165,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "mint",
    "categorie": "Gestion",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "gfi.bilan-fonctionnel",
@@ -1266,6 +1298,8 @@
   {
    "id": "odg",
    "titre": "Outils de gestion",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S6"
@@ -1273,6 +1307,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "mint",
    "categorie": "Gestion",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "odg.couts",
@@ -1394,6 +1429,8 @@
   {
    "id": "mgi",
    "titre": "Management interculturel",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S6"
@@ -1401,6 +1438,7 @@
    "enseignant": "Isabelle Noël",
    "couleur": "butter",
    "categorie": "Management",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "mgi.fondements",
@@ -1496,6 +1534,8 @@
   {
    "id": "gdp",
    "titre": "Gestion de projet",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -1503,6 +1543,7 @@
    "enseignant": "Sonia Tesson",
    "couleur": "butter",
    "categorie": "Management",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "gdp.cadrage",
@@ -1623,6 +1664,8 @@
   {
    "id": "red",
    "titre": "Rédaction de documents universitaires",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -1630,6 +1673,7 @@
    "enseignant": "Sonia Tesson",
    "couleur": "sky",
    "categorie": "Méthodologie",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "red.sources",
@@ -1704,6 +1748,8 @@
   {
    "id": "aec",
    "titre": "Anglais économique et commercial",
+   "langue": "en",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5",
@@ -1712,10 +1758,11 @@
    "enseignant": "Alice Michel",
    "couleur": "pink",
    "categorie": "Anglais",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "aec.correspondance",
-     "titre": "Correspondance commerciale",
+     "titre": "Business correspondence",
      "notions": [
       {
        "id": "aec.correspondance.layout",
@@ -1724,32 +1771,32 @@
       },
       {
        "id": "aec.correspondance.salutations",
-       "titre": "Salutations et formules de clôture",
+       "titre": "Salutations and complimentary closes",
        "niveau": "F"
       },
       {
        "id": "aec.correspondance.registre",
-       "titre": "Registre et atténuation",
+       "titre": "Register and softening",
        "niveau": "F"
       },
       {
        "id": "aec.correspondance.enquiry",
-       "titre": "Enquiry",
+       "titre": "Enquiry (request for information)",
        "niveau": "F"
       },
       {
        "id": "aec.correspondance.offer",
-       "titre": "Offer et quotation",
+       "titre": "Offer and quotation",
        "niveau": "F"
       },
       {
        "id": "aec.correspondance.order",
-       "titre": "Order et acknowledgement",
+       "titre": "Order and acknowledgement",
        "niveau": "F"
       },
       {
        "id": "aec.correspondance.complaint",
-       "titre": "Complaint et reply",
+       "titre": "Complaint and reply",
        "niveau": "F"
       },
       {
@@ -1759,90 +1806,90 @@
       },
       {
        "id": "aec.correspondance.email",
-       "titre": "Courriel professionnel",
+       "titre": "Professional e-mail",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "aec.lexique",
-     "titre": "Lexique",
+     "titre": "Vocabulary",
      "notions": [
       {
        "id": "aec.lexique.entreprise",
-       "titre": "L'entreprise",
+       "titre": "Company vocabulary",
        "niveau": "F"
       },
       {
        "id": "aec.lexique.finance",
-       "titre": "Finance et comptabilité",
+       "titre": "Finance and accounting in English",
        "niveau": "F"
       },
       {
        "id": "aec.lexique.commerce-international",
-       "titre": "Commerce international",
+       "titre": "International trade vocabulary",
        "niveau": "F"
       },
       {
        "id": "aec.lexique.marketing",
-       "titre": "Marketing",
+       "titre": "Marketing vocabulary",
        "niveau": "F"
       },
       {
        "id": "aec.lexique.economie",
-       "titre": "Économie",
+       "titre": "Economics vocabulary",
        "niveau": "F"
       },
       {
        "id": "aec.lexique.faux-amis",
-       "titre": "Faux amis",
+       "titre": "False friends in business English",
        "niveau": "F"
       },
       {
        "id": "aec.lexique.chiffres",
-       "titre": "Nombres et tendances",
+       "titre": "Numbers and trends",
        "niveau": "A"
       }
      ]
     },
     {
      "id": "aec.presse",
-     "titre": "Presse économique",
+     "titre": "The business press",
      "notions": [
       {
        "id": "aec.presse.lecture",
-       "titre": "Lire un article économique",
+       "titre": "Reading a business article in English",
        "niveau": "F"
       },
       {
        "id": "aec.presse.synthese",
-       "titre": "Synthèse écrite",
+       "titre": "Writing a synthesis in English",
        "niveau": "A"
       }
      ]
     },
     {
      "id": "aec.grammaire",
-     "titre": "Grammaire utile",
+     "titre": "Useful grammar",
      "notions": [
       {
        "id": "aec.grammaire.modaux",
-       "titre": "Modaux",
+       "titre": "Modal verbs",
        "niveau": "P"
       },
       {
        "id": "aec.grammaire.passif",
-       "titre": "Passif",
+       "titre": "The passive voice",
        "niveau": "P"
       },
       {
        "id": "aec.grammaire.conditionnels",
-       "titre": "Conditionnels",
+       "titre": "Conditionals",
        "niveau": "P"
       },
       {
        "id": "aec.grammaire.temps",
-       "titre": "Present perfect et prétérit",
+       "titre": "Present perfect and simple past",
        "niveau": "P"
       }
      ]
@@ -1852,6 +1899,8 @@
   {
    "id": "tra",
    "titre": "Traduction anglaise : thème et version",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -1859,6 +1908,7 @@
    "enseignant": "Alice Michel",
    "couleur": "pink",
    "categorie": "Anglais",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "tra.procedes",
@@ -1953,11 +2003,17 @@
       }
      ]
     }
+   ],
+   "languesEtudiees": [
+    "fr",
+    "en"
    ]
   },
   {
    "id": "cea",
    "titre": "Compréhension et expression anglaises",
+   "langue": "en",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S6"
@@ -1965,61 +2021,62 @@
    "enseignant": "Elodie Gallet",
    "couleur": "pink",
    "categorie": "Anglais",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "cea.oral",
-     "titre": "L'anglais oral",
+     "titre": "Spoken English",
      "notions": [
       {
        "id": "cea.oral.formes-faibles",
-       "titre": "Formes faibles",
+       "titre": "Weak forms",
        "niveau": "F"
       },
       {
        "id": "cea.oral.liaisons",
-       "titre": "Liaisons et assimilations",
+       "titre": "Linking and assimilation",
        "niveau": "F"
       },
       {
        "id": "cea.oral.accents",
-       "titre": "Les accents",
+       "titre": "Accents of English",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cea.methode",
-     "titre": "Méthode d'écoute",
+     "titre": "Listening method",
      "notions": [
       {
        "id": "cea.methode.ecoute",
-       "titre": "Écoute globale puis ciblée",
+       "titre": "Global then focused listening",
        "niveau": "F"
       },
       {
        "id": "cea.methode.prise-notes",
-       "titre": "Prise de notes",
+       "titre": "Note-taking",
        "niveau": "F"
       },
       {
        "id": "cea.methode.restitution",
-       "titre": "Restitution : compte rendu",
+       "titre": "Restitution: the report",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cea.expression",
-     "titre": "Expression orale",
+     "titre": "Speaking",
      "notions": [
       {
        "id": "cea.expression.presentation",
-       "titre": "Présentation orale",
+       "titre": "Giving an oral presentation in English",
        "niveau": "A"
       },
       {
        "id": "cea.expression.interaction",
-       "titre": "Interaction orale",
+       "titre": "Spoken interaction in English",
        "niveau": "A"
       }
      ]
@@ -2029,6 +2086,8 @@
   {
    "id": "eec",
    "titre": "Espagnol économique et commercial",
+   "langue": "es",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5",
@@ -2037,6 +2096,7 @@
    "enseignant": "Claire Decobert",
    "couleur": "pink",
    "categorie": "Espagnol",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "eec.correspondencia",
@@ -2044,17 +2104,17 @@
      "notions": [
       {
        "id": "eec.correspondencia.estructura",
-       "titre": "Structure de la carta comercial",
+       "titre": "La estructura de la carta comercial",
        "niveau": "F"
       },
       {
        "id": "eec.correspondencia.cortesia",
-       "titre": "Usted, subjonctif, conditionnel de courtoisie",
+       "titre": "Usted, subjuntivo y condicional de cortesía",
        "niveau": "F"
       },
       {
        "id": "eec.correspondencia.ciclo",
-       "titre": "Le cycle : consulta, presupuesto, pedido, albarán, factura",
+       "titre": "El ciclo comercial: consulta, presupuesto, pedido, albarán, factura",
        "niveau": "F"
       },
       {
@@ -2064,7 +2124,7 @@
       },
       {
        "id": "eec.correspondencia.email",
-       "titre": "Courriel",
+       "titre": "El correo electrónico profesional en español",
        "niveau": "F"
       }
      ]
@@ -2075,22 +2135,22 @@
      "notions": [
       {
        "id": "eec.lexico.empresa",
-       "titre": "L'entreprise",
+       "titre": "El vocabulario de la empresa en español",
        "niveau": "F"
       },
       {
        "id": "eec.lexico.finanzas",
-       "titre": "Finances",
+       "titre": "Finanzas y contabilidad en español",
        "niveau": "F"
       },
       {
        "id": "eec.lexico.comercio-exterior",
-       "titre": "Commerce extérieur",
+       "titre": "El vocabulario del comercio exterior en español",
        "niveau": "F"
       },
       {
        "id": "eec.lexico.falsos-amigos",
-       "titre": "Faux amis",
+       "titre": "Los falsos amigos francés-español en el ámbito profesional",
        "niveau": "F"
       }
      ]
@@ -2101,38 +2161,38 @@
      "notions": [
       {
        "id": "eec.economia.espana-sectores",
-       "titre": "Les secteurs de l'économie espagnole",
+       "titre": "Los sectores de la economía española",
        "niveau": "F"
       },
       {
        "id": "eec.economia.espana-historia",
-       "titre": "Repères : plan de stabilisation de 1959, entrée dans la CEE en 1986, euro",
+       "titre": "Hitos: Plan de Estabilización de 1959, ingreso en la CEE en 1986, euro",
        "niveau": "F"
       },
       {
        "id": "eec.economia.latam",
-       "titre": "Économies latino-américaines",
+       "titre": "Las economías latinoamericanas",
        "niveau": "F"
       },
       {
        "id": "eec.economia.bloques",
-       "titre": "Mercosur, Alliance du Pacifique, accords avec l'UE",
+       "titre": "Mercosur, Alianza del Pacífico y acuerdos con la UE",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "eec.escritos",
-     "titre": "Écrits professionnels",
+     "titre": "Escritos profesionales",
      "notions": [
       {
        "id": "eec.escritos.informe",
-       "titre": "L'informe",
+       "titre": "El informe en español",
        "niveau": "A"
       },
       {
        "id": "eec.escritos.cv",
-       "titre": "CV en espagnol",
+       "titre": "El CV en español",
        "niveau": "F"
       }
      ]
@@ -2142,6 +2202,8 @@
   {
    "id": "tve",
    "titre": "Thème et version espagnols",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5",
@@ -2150,6 +2212,7 @@
    "enseignant": "Annie Baccon, Sylvie Fournié-Chaboche",
    "couleur": "pink",
    "categorie": "Espagnol",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "tve.contrastes",
@@ -2244,11 +2307,17 @@
       }
      ]
     }
+   ],
+   "languesEtudiees": [
+    "fr",
+    "es"
    ]
   },
   {
    "id": "cvb",
    "titre": "Civilisation britannique : the UK since 1945",
+   "langue": "en",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -2256,6 +2325,7 @@
    "enseignant": "Karine Rivière de Franco",
    "couleur": "sky",
    "categorie": "Civilisations",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "cvb.institutions",
@@ -2263,127 +2333,127 @@
      "notions": [
       {
        "id": "cvb.institutions.parlement",
-       "titre": "Parlement et gouvernement",
+       "titre": "Parliament and government",
        "niveau": "P"
       },
       {
        "id": "cvb.institutions.partis",
-       "titre": "Partis et système électoral",
+       "titre": "Parties and the electoral system",
        "niveau": "P"
       }
      ]
     },
     {
      "id": "cvb.welfare",
-     "titre": "Le Welfare State",
+     "titre": "The Welfare State",
      "notions": [
       {
        "id": "cvb.welfare.beveridge",
-       "titre": "Le rapport Beveridge",
+       "titre": "The Beveridge Report (1942)",
        "niveau": "F"
       },
       {
        "id": "cvb.welfare.attlee",
-       "titre": "Attlee et le Welfare State, NHS",
+       "titre": "Attlee and the Welfare State: the NHS",
        "niveau": "F"
       },
       {
        "id": "cvb.welfare.nationalisations",
-       "titre": "Les nationalisations",
+       "titre": "Nationalisation",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cvb.consensus",
-     "titre": "Consensus et crise",
+     "titre": "Consensus and crisis",
      "notions": [
       {
        "id": "cvb.consensus.butskellism",
-       "titre": "Le consensus",
+       "titre": "The post-war consensus (\"Butskellism\")",
        "niveau": "F"
       },
       {
        "id": "cvb.consensus.declin",
-       "titre": "Déclin et « stop-go »",
+       "titre": "Relative decline and \"stop-go\"",
        "niveau": "A"
       },
       {
        "id": "cvb.consensus.europe",
-       "titre": "Le Royaume-Uni et l'Europe (1973, 1975)",
+       "titre": "The United Kingdom and Europe (1973, 1975)",
        "niveau": "F"
       },
       {
        "id": "cvb.consensus.crise-1970",
-       "titre": "Crise des années 1970, Winter of Discontent",
+       "titre": "The crisis of the 1970s and the Winter of Discontent",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cvb.thatcher",
-     "titre": "Le thatchérisme",
+     "titre": "Thatcherism",
      "notions": [
       {
        "id": "cvb.thatcher.monetarisme",
-       "titre": "Le monétarisme",
+       "titre": "Monetarism",
        "niveau": "F"
       },
       {
        "id": "cvb.thatcher.privatisations",
-       "titre": "Les privatisations",
+       "titre": "Privatisation",
        "niveau": "F"
       },
       {
        "id": "cvb.thatcher.syndicats",
-       "titre": "Les syndicats et la grève des mineurs",
+       "titre": "The trade unions and the miners' strike",
        "niveau": "F"
       },
       {
        "id": "cvb.thatcher.big-bang",
-       "titre": "Le Big Bang",
+       "titre": "The Big Bang in the City (1986)",
        "niveau": "F"
       },
       {
        "id": "cvb.thatcher.poll-tax",
-       "titre": "La poll tax et la chute de Thatcher",
+       "titre": "The poll tax and Thatcher's downfall",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cvb.new-labour",
-     "titre": "De Major au New Labour",
+     "titre": "From Major to New Labour",
      "notions": [
       {
        "id": "cvb.new-labour.major",
-       "titre": "Le gouvernement Major",
+       "titre": "The Major government (1990-1997)",
        "niveau": "F"
       },
       {
        "id": "cvb.new-labour.third-way",
-       "titre": "La Third Way",
+       "titre": "New Labour and the Third Way",
        "niveau": "F"
       },
       {
        "id": "cvb.new-labour.devolution",
-       "titre": "La dévolution",
+       "titre": "Devolution",
        "niveau": "F"
       },
       {
        "id": "cvb.new-labour.good-friday",
-       "titre": "L'accord du Vendredi saint",
+       "titre": "The Good Friday Agreement (1998)",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cvb.methode",
-     "titre": "Méthode",
+     "titre": "Method",
      "notions": [
       {
        "id": "cvb.methode.commentaire",
-       "titre": "Commentaire de document de civilisation",
+       "titre": "The British civilisation document commentary",
        "niveau": "F"
       }
      ]
@@ -2393,6 +2463,8 @@
   {
    "id": "cve",
    "titre": "Civilisation espagnole",
+   "langue": "es",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S5"
@@ -2400,14 +2472,15 @@
    "enseignant": "Claire Decobert",
    "couleur": "sky",
    "categorie": "Civilisations",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "cve.franquismo",
-     "titre": "Le franquisme",
+     "titre": "El franquismo",
      "notions": [
       {
        "id": "cve.franquismo.herencia",
-       "titre": "L'héritage franquiste",
+       "titre": "La herencia franquista",
        "niveau": "F"
       }
      ]
@@ -2418,91 +2491,91 @@
      "notions": [
       {
        "id": "cve.transicion.reforma",
-       "titre": "La Ley para la Reforma Política",
+       "titre": "La Ley para la Reforma Política (1976)",
        "niveau": "F"
       },
       {
        "id": "cve.transicion.elecciones-1977",
-       "titre": "Les élections de 1977 et la légalisation du PCE",
+       "titre": "Las elecciones de 1977 y la legalización del PCE",
        "niveau": "F"
       },
       {
        "id": "cve.transicion.moncloa",
-       "titre": "Les Pactes de la Moncloa",
+       "titre": "Los Pactos de la Moncloa (1977)",
        "niveau": "F"
       },
       {
        "id": "cve.transicion.constitucion",
-       "titre": "La Constitution de 1978",
+       "titre": "La Constitución de 1978",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cve.consolidacion",
-     "titre": "Consolidation démocratique",
+     "titre": "La consolidación democrática",
      "notions": [
       {
        "id": "cve.consolidacion.23f",
-       "titre": "Le 23-F",
+       "titre": "El 23-F (1981)",
        "niveau": "F"
       },
       {
        "id": "cve.consolidacion.gonzalez",
-       "titre": "Les gouvernements González, l'entrée dans la CEE, 1992",
+       "titre": "Los gobiernos de González, la entrada en la CEE y 1992",
        "niveau": "F"
       },
       {
        "id": "cve.consolidacion.aznar",
-       "titre": "Aznar et l'euro",
+       "titre": "Los gobiernos de Aznar y el euro",
        "niveau": "F"
       },
       {
        "id": "cve.consolidacion.11m",
-       "titre": "Le 11-M",
+       "titre": "El 11-M (2004)",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cve.autonomias",
-     "titre": "L'État des autonomies",
+     "titre": "El Estado de las autonomías",
      "notions": [
       {
        "id": "cve.autonomias.estado",
-       "titre": "L'État des autonomies",
+       "titre": "El Estado de las autonomías",
        "niveau": "F"
       },
       {
        "id": "cve.autonomias.cataluna",
-       "titre": "La question catalane (2006-2017)",
+       "titre": "La cuestión catalana (2006-2017)",
        "niveau": "A"
       },
       {
        "id": "cve.autonomias.pais-vasco",
-       "titre": "Le Pays basque et ETA",
+       "titre": "El País Vasco y ETA",
        "niveau": "A"
       }
      ]
     },
     {
      "id": "cve.actualidad",
-     "titre": "L'Espagne depuis 2008",
+     "titre": "España desde 2008",
      "notions": [
       {
        "id": "cve.actualidad.crisis-2008",
-       "titre": "Crise de 2008, 15-M, fin du bipartisme",
+       "titre": "La crisis de 2008 y el fin del bipartidismo",
        "niveau": "A"
       }
      ]
     },
     {
      "id": "cve.metodo",
-     "titre": "Méthode",
+     "titre": "Método",
      "notions": [
       {
        "id": "cve.metodo.comentario",
-       "titre": "Commentaire de document",
+       "titre": "El comentario de texto histórico",
        "niveau": "F"
       }
      ]
@@ -2512,6 +2585,8 @@
   {
    "id": "cva",
    "titre": "Civilisation américaine : publicité et marketing",
+   "langue": "en",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S6"
@@ -2519,89 +2594,90 @@
    "enseignant": "Eric Tabuteau",
    "couleur": "sky",
    "categorie": "Civilisations",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "cva.naissance",
-     "titre": "Naissance de la publicité",
+     "titre": "The birth of advertising",
      "notions": [
       {
        "id": "cva.naissance.surproduction",
-       "titre": "Production de masse et naissance de la publicité",
+       "titre": "Mass production and the birth of modern advertising",
        "niveau": "F"
       },
       {
        "id": "cva.naissance.agences",
-       "titre": "Les agences : Lasker, Hopkins, reason-why",
+       "titre": "The agencies: Ayer, Lasker, Hopkins and reason-why",
        "niveau": "F"
       },
       {
        "id": "cva.naissance.relations-publiques",
-       "titre": "Bernays et les relations publiques",
+       "titre": "Bernays and public relations",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cva.mesure",
-     "titre": "La mesure",
+     "titre": "Measurement",
      "notions": [
       {
        "id": "cva.mesure.etudes",
-       "titre": "Gallup, Nielsen, études de marché",
+       "titre": "Gallup, Nielsen and market research",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cva.age-or",
-     "titre": "L'âge d'or",
+     "titre": "The golden age",
      "notions": [
       {
        "id": "cva.age-or.television",
-       "titre": "Télévision et USP",
+       "titre": "Television and the Unique Selling Proposition",
        "niveau": "F"
       },
       {
        "id": "cva.age-or.creative-revolution",
-       "titre": "La creative revolution",
+       "titre": "The creative revolution of the 1960s",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cva.regulation",
-     "titre": "Régulation",
+     "titre": "Regulation",
      "notions": [
       {
        "id": "cva.regulation.ftc",
-       "titre": "Régulation : FTC, tabac",
+       "titre": "Regulating advertising: the FTC and tobacco",
        "niveau": "A"
       }
      ]
     },
     {
      "id": "cva.contemporain",
-     "titre": "Époque contemporaine",
+     "titre": "The contemporary era",
      "notions": [
       {
        "id": "cva.contemporain.segmentation",
-       "titre": "Segmentation",
+       "titre": "Audience segmentation",
        "niveau": "F"
       },
       {
        "id": "cva.contemporain.numerique",
-       "titre": "Publicité numérique et données",
+       "titre": "Digital advertising and personal data",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cva.methode",
-     "titre": "Méthode",
+     "titre": "Method",
      "notions": [
       {
        "id": "cva.methode.analyse-publicite",
-       "titre": "Analyser une publicité",
+       "titre": "Analyzing an advertisement",
        "niveau": "F"
       }
      ]
@@ -2611,6 +2687,8 @@
   {
    "id": "cvl",
    "titre": "Civilisation latino-américaine",
+   "langue": "es",
+   "annee": "L3",
    "statut": "ORL?",
    "semestres": [
     "S6"
@@ -2618,83 +2696,84 @@
    "enseignant": "Marcos Eymar",
    "couleur": "sky",
    "categorie": "Civilisations",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "cvl.urbanizacion",
-     "titre": "Urbanisation",
+     "titre": "Urbanización",
      "notions": [
       {
        "id": "cvl.urbanizacion.exodo",
-       "titre": "L'exode rural",
+       "titre": "El éxodo rural",
        "niveau": "F"
       },
       {
        "id": "cvl.urbanizacion.metropolis",
-       "titre": "Les métropoles",
+       "titre": "Las metrópolis latinoamericanas",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cvl.informalidad",
-     "titre": "Informalité",
+     "titre": "Informalidad",
      "notions": [
       {
        "id": "cvl.informalidad.asentamientos",
-       "titre": "Favelas, villas, barriadas",
+       "titre": "Favelas, villas, barriadas: los barrios informales",
        "niveau": "F"
       },
       {
        "id": "cvl.informalidad.economia",
-       "titre": "L'économie informelle",
+       "titre": "La economía informal",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cvl.fracturas",
-     "titre": "Fractures urbaines",
+     "titre": "Fracturas urbanas",
      "notions": [
       {
        "id": "cvl.fracturas.segregacion",
-       "titre": "Ségrégation, barrios cerrados",
+       "titre": "Segregación y barrios cerrados",
        "niveau": "F"
       },
       {
        "id": "cvl.fracturas.violencia",
-       "titre": "La violence urbaine",
+       "titre": "La violencia urbana",
        "niveau": "F"
       }
      ]
     },
     {
      "id": "cvl.politicas",
-     "titre": "Politiques urbaines",
+     "titre": "Políticas urbanas",
      "notions": [
       {
        "id": "cvl.politicas.medellin",
-       "titre": "Medellín et l'urbanisme social",
+       "titre": "Medellín y el urbanismo social",
        "niveau": "F"
       },
       {
        "id": "cvl.politicas.otros",
-       "titre": "Autres cas : Bogotá, Curitiba",
+       "titre": "Otros casos: Bogotá y Curitiba",
        "niveau": "A"
       }
      ]
     },
     {
      "id": "cvl.representaciones",
-     "titre": "Représentations",
+     "titre": "Representaciones",
      "notions": [
       {
        "id": "cvl.representaciones.cine",
-       "titre": "Le cinéma de la ville",
+       "titre": "El cine de la ciudad latinoamericana",
        "niveau": "F"
       },
       {
        "id": "cvl.representaciones.metodo-imagen",
-       "titre": "Analyser une image ou un film",
+       "titre": "Analizar una imagen o una secuencia de película",
        "niveau": "F"
       }
      ]
@@ -2704,6 +2783,8 @@
   {
    "id": "stg",
    "titre": "Stage et rapport de stage",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "ORL",
    "semestres": [
     "S6"
@@ -2711,6 +2792,7 @@
    "enseignant": "Aline Henninger, Mayumi Shimosakai",
    "couleur": "butter",
    "categorie": "Méthodologie",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "stg.cadre",
@@ -2797,11 +2879,14 @@
   {
    "id": "eco",
    "titre": "Économie internationale",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "COMP",
    "semestres": [],
    "enseignant": "",
    "couleur": "lilac",
    "categorie": "Compléments",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "eco.theories",
@@ -2882,11 +2967,14 @@
   {
    "id": "mks",
    "titre": "Marketing international et supply chain",
+   "langue": "fr",
+   "annee": "L3",
    "statut": "COMP",
    "semestres": [],
    "enseignant": "",
    "couleur": "peach",
    "categorie": "Compléments",
+   "completude": "complete",
    "chapitres": [
     {
      "id": "mks.marketing",

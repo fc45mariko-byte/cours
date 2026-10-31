@@ -3,14 +3,14 @@
   "notions": [
     {
       "id": "eec.escritos.informe",
-      "titre": "L'informe (rapport) en espagnol",
+      "titre": "El informe en español",
       "niveau": "A",
       "prerequis": ["eec.correspondencia.cortesia", "red.argumentation.plan"],
       "connexes": ["stg.rapport.structure", "aec.presse.synthese"],
-      "question": "Comment rédiger un rapport professionnel en espagnol ?",
-      "definition": "L'informe est un document professionnel qui expose une situation, l'analyse et propose des recommandations à un destinataire qui doit décider. Structure usuelle : título ; datos (destinatario, autor, fecha, asunto) ; introducción (objeto del informe, contexto, metodología) ; desarrollo (análisis organisé en parties avec intertitres, données chiffrées, tableaux) ; conclusiones ; recomendaciones ; anexos. Le style est objectif et impersonnel (se analiza, se observa que, cabe destacar que, conviene, es preciso), précis et concis. Connecteurs utiles : en primer lugar, por otra parte, sin embargo, por consiguiente, en definitiva.",
+      "question": "¿Cómo se redacta un informe profesional en español?",
+      "definition": "El informe es un documento profesional que expone una situación, la analiza y propone recomendaciones a un destinatario que debe tomar una decisión. Estructura habitual: título; datos (destinatario, autor, fecha, asunto); introducción (objeto del informe, contexto, metodología); desarrollo (análisis organizado en apartados con epígrafes, datos cuantitativos, tablas); conclusiones; recomendaciones; anexos. El estilo es objetivo e impersonal (se analiza, se observa que, cabe destacar que, conviene, es preciso), preciso y conciso. Conectores útiles: en primer lugar, por otra parte, sin embargo, por consiguiente, en definitiva.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Partie", "Formules"], "lignes": [
+        { "type": "tableau", "entetes": ["Parte", "Fórmulas"], "lignes": [
           ["Introducción", "El presente informe tiene por objeto analizar…"],
           ["Metodología", "Para ello, se han consultado… / se ha realizado una encuesta a…"],
           ["Análisis", "Se observa que… / Cabe destacar que… / Según los datos de…"],
@@ -19,27 +19,27 @@
         ] }
       ],
       "termes": [
-        { "fr": "Rapport", "en": "report", "es": "informe", "definition": "Document d'analyse et de recommandation." },
-        { "fr": "Recommandation", "en": "recommendation", "es": "recomendación", "definition": "Proposition d'action." },
-        { "fr": "Il convient de souligner", "en": "it should be noted", "es": "cabe destacar", "definition": "Formule de mise en relief." }
+        { "fr": "Rapport", "en": "report", "es": "informe", "definition": "Documento de análisis y recomendación." },
+        { "fr": "Recommandation", "en": "recommendation", "es": "recomendación", "definition": "Propuesta de actuación." },
+        { "fr": "Il convient de souligner", "en": "it should be noted", "es": "cabe destacar", "definition": "Fórmula para poner de relieve un dato." }
       ],
-      "exemple": { "fictif": true, "texte": "« El presente informe tiene por objeto evaluar la viabilidad de la apertura de una filial comercial en México. Para ello, se han analizado los datos de exportación de los últimos cinco años… Se recomienda iniciar la actividad con un distribuidor antes de crear una filial. »" },
+      "exemple": { "fictif": true, "texte": "«El presente informe tiene por objeto evaluar la viabilidad de la apertura de una filial comercial en México. Para ello, se han analizado los datos de exportación de los últimos cinco años… Se recomienda iniciar la actividad con un distribuidor antes de crear una filial.»" },
       "confusions": [
-        { "a": "Informe (rapport)", "b": "Información (information)", "explication": "Deux mots différents." }
+        { "a": "Informe («rapport»)", "b": "Información («information»)", "explication": "Son dos palabras diferentes." }
       ],
-      "verification": ["Citez les parties d'un informe et deux tournures impersonnelles."],
+      "verification": ["Cite las partes de un informe y dos construcciones impersonales."],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "eec.escritos.cv",
-      "titre": "Le CV en espagnol",
+      "titre": "El CV en español",
       "niveau": "F",
       "prerequis": ["stg.recherche.candidature"],
       "connexes": ["stg.recherche.candidature"],
-      "question": "Comment adapter son CV et sa lettre de motivation pour une entreprise hispanophone ?",
-      "definition": "Le currículum vítae (CV) en espagnol reprend les rubriques usuelles : datos personales, perfil profesional (résumé de quelques lignes), formación académica, experiencia profesional (prácticas = stages), idiomas (avec le niveau du Cadre européen : B2, C1, ou certification), informática, otros datos (permis, mobilité, centres d'intérêt). On traduit les diplômes en les expliquant (« Licenciatura (Grado) en Lenguas Extranjeras Aplicadas – Comercio Internacional, Universidad de Orleans ») plutôt qu'en cherchant un équivalent exact. La carta de presentación accompagne le CV. Les usages (photo, données personnelles) varient selon les pays et la réglementation.",
+      "question": "¿Cómo se adaptan el CV y la carta de presentación para una empresa hispanohablante?",
+      "definition": "El currículum vítae (CV) en español retoma los apartados habituales: datos personales, perfil profesional (resumen de unas líneas), formación académica, experiencia profesional (prácticas = «stages»), idiomas (con el nivel del Marco Común Europeo de Referencia: B2, C1, o una certificación), informática, otros datos (carné de conducir, movilidad, aficiones). Los títulos se traducen explicándolos («Licenciatura (Grado) en Lenguas Extranjeras Aplicadas – Comercio Internacional, Universidad de Orleans») en lugar de buscar un equivalente exacto. La carta de presentación acompaña al CV. Los usos (foto, datos personales) varían según los países y la normativa.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Rubrique", "Exemple"], "lignes": [
+        { "type": "tableau", "entetes": ["Apartado", "Ejemplo"], "lignes": [
           ["Perfil", "Estudiante de tercer año de LEA, especializada en comercio internacional, con dominio del inglés y del español."],
           ["Formación", "2023-2026: Grado en Lenguas Extranjeras Aplicadas (inglés-español), Universidad de Orleans (Francia)"],
           ["Experiencia", "Prácticas (6 semanas) – Departamento de Exportación, Loire Valves S.A."],
@@ -48,48 +48,48 @@
         ] }
       ],
       "termes": [
-        { "fr": "Stage", "en": "internship", "es": "prácticas", "definition": "Période de formation en entreprise." },
-        { "fr": "Lettre de motivation", "en": "cover letter", "es": "carta de presentación", "definition": "Lettre accompagnant le CV." },
-        { "fr": "Langue maternelle", "en": "native language", "es": "lengua materna", "definition": "Première langue apprise." },
-        { "fr": "Licence (diplôme)", "en": "bachelor's degree", "es": "grado / licenciatura", "definition": "Diplôme universitaire de premier cycle." }
+        { "fr": "Stage", "en": "internship", "es": "prácticas", "definition": "Periodo de formación en una empresa." },
+        { "fr": "Lettre de motivation", "en": "cover letter", "es": "carta de presentación", "definition": "Carta que acompaña al CV." },
+        { "fr": "Langue maternelle", "en": "native language", "es": "lengua materna", "definition": "Primera lengua aprendida." },
+        { "fr": "Licence (diplôme)", "en": "bachelor's degree", "es": "grado / licenciatura", "definition": "Título universitario de primer ciclo." }
       ],
-      "exemple": { "fictif": true, "texte": "« Experiencia profesional – Julio de 2025: Prácticas en el Departamento de Exportación de Loire Valves S.A. (Orleans). Preparación de documentos de exportación, seguimiento de pedidos con clientes de México y Colombia. »" },
+      "exemple": { "fictif": true, "texte": "«Experiencia profesional – Julio de 2025: Prácticas en el Departamento de Exportación de Loire Valves S.A. (Orleans). Preparación de documentos de exportación, seguimiento de pedidos con clientes de México y Colombia.»" },
       "confusions": [
-        { "a": "Prácticas (stage)", "b": "Práctica (pratique)", "explication": "Au pluriel, « prácticas » désigne le stage." }
+        { "a": "Prácticas («stage»)", "b": "Práctica («pratique»)", "explication": "En plural, «prácticas» designa el periodo de formación en empresa («stage»)." }
       ],
-      "verification": ["Comment présenter ses langues dans un CV en espagnol ?"],
+      "verification": ["¿Cómo se presentan los idiomas en un CV en español?"],
       "verifieLe": "2026-10-15"
     }
   ],
   "questions": [
     {
       "id": "q.eec.escritos.001", "notion": "eec.escritos.informe", "format": "unique", "niveau": 2, "competence": "distinguer",
-      "enonce": "Quelle phrase convient à la partie « Recomendaciones » d'un informe ?",
+      "enonce": "¿Qué frase corresponde al apartado «Recomendaciones» de un informe?",
       "choix": [
-        { "id": "a", "texte": "« Se recomienda iniciar la actividad con un distribuidor local. »", "correct": true, "explication": "Recommandation impersonnelle." },
-        { "id": "b", "texte": "« El presente informe tiene por objeto… »", "correct": false, "explication": "Introduction." },
-        { "id": "c", "texte": "« Estimado señor: »", "correct": false, "explication": "Formule de lettre." },
-        { "id": "d", "texte": "« Yo creo que es genial. »", "correct": false, "explication": "Trop personnel et familier." }
+        { "id": "a", "texte": "«Se recomienda iniciar la actividad con un distribuidor local.»", "correct": true, "explication": "Recomendación impersonal." },
+        { "id": "b", "texte": "«El presente informe tiene por objeto…»", "correct": false, "explication": "Introducción." },
+        { "id": "c", "texte": "«Estimado señor:»", "correct": false, "explication": "Fórmula propia de una carta." },
+        { "id": "d", "texte": "«Yo creo que es genial.»", "correct": false, "explication": "Demasiado personal y familiar." }
       ]
     },
     {
       "id": "q.eec.escritos.002", "notion": "eec.escritos.cv", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Comment dit-on « stage » dans un CV en espagnol ?",
+      "enonce": "¿Cómo se dice «stage» en un CV en español?",
       "choix": [
-        { "id": "a", "texte": "Prácticas", "correct": true, "explication": "« Prácticas en empresa »." },
-        { "id": "b", "texte": "Estage", "correct": false, "explication": "N'existe pas." },
-        { "id": "c", "texte": "Etapa", "correct": false, "explication": "Étape." },
-        { "id": "d", "texte": "Pasantía", "correct": false, "explication": "Usité dans certains pays d'Amérique latine, mais « prácticas » est le terme espagnol standard." }
+        { "id": "a", "texte": "Prácticas", "correct": true, "explication": "«Prácticas en empresa»." },
+        { "id": "b", "texte": "Estage", "correct": false, "explication": "No existe." },
+        { "id": "c", "texte": "Etapa", "correct": false, "explication": "Significa «étape»." },
+        { "id": "d", "texte": "Pasantía", "correct": false, "explication": "Se usa en algunos países de Latinoamérica, pero «prácticas» es el término estándar en España." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.eec.escritos.001", "notions": ["eec.escritos.informe", "eec.escritos.cv"],
-      "question": "Présentez la structure d'un informe et d'un CV en espagnol.",
-      "reponse": "Informe : título, datos, introducción (objeto, contexto, metodología), desarrollo avec intertitres et données, conclusiones, recomendaciones, anexos ; style impersonnel (se observa, cabe destacar, se recomienda), connecteurs (en primer lugar, sin embargo, por consiguiente). CV : datos personales, perfil, formación académica (diplôme expliqué), experiencia profesional (prácticas), idiomas (niveau MCER, certifications), informática, otros datos ; carta de presentación.",
-      "indispensables": ["Parties de l'informe", "Style impersonnel", "Rubriques du CV", "Prácticas"],
-      "erreurs": ["Traduire littéralement le nom du diplôme sans l'expliquer"]
+      "question": "Presente la estructura de un informe y de un CV en español.",
+      "reponse": "Informe: título, datos, introducción (objeto, contexto, metodología), desarrollo con epígrafes y datos, conclusiones, recomendaciones, anexos; estilo impersonal (se observa, cabe destacar, se recomienda), conectores (en primer lugar, sin embargo, por consiguiente). CV: datos personales, perfil, formación académica (título explicado), experiencia profesional (prácticas), idiomas (nivel MCER, certificaciones), informática, otros datos; carta de presentación.",
+      "indispensables": ["Partes del informe", "Estilo impersonal", "Apartados del CV", "Prácticas"],
+      "erreurs": ["Traducir literalmente el nombre del título sin explicarlo"]
     }
   ]
 }

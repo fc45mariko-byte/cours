@@ -3,66 +3,66 @@
   "notions": [
     {
       "id": "cva.age-or.television",
-      "titre": "La télévision et l'Unique Selling Proposition",
+      "titre": "Television and the Unique Selling Proposition",
       "niveau": "F",
       "prerequis": ["cva.naissance.agences"],
       "connexes": ["cva.age-or.creative-revolution", "cva.mesure.etudes"],
-      "question": "Comment la télévision transforme-t-elle la publicité américaine des années 1950 ?",
-      "definition": "La télévision se diffuse très rapidement dans les foyers américains : moins de 10 % en sont équipés en 1950, près de 90 % en 1960. Elle devient le premier média de la consommation de masse de l'après-guerre. Au départ, un annonceur unique parraine une émission entière qui porte souvent son nom (sponsorship) ; après les scandales des jeux télévisés truqués (quiz show scandals, 1958-1959), les chaînes reprennent le contrôle des programmes et vendent des écrans publicitaires à plusieurs annonceurs (spots). Rosser Reeves, de l'agence Ted Bates, formalise l'« Unique Selling Proposition » (USP) dans « Reality in Advertising » (1961) : chaque publicité doit faire une proposition précise, que la concurrence ne fait pas, et assez forte pour attirer de nouveaux clients, répétée inlassablement (exemple : M&M's, « melts in your mouth, not in your hand »). Reeves conçoit aussi en 1952 les spots « Eisenhower Answers America », marquant l'entrée de la publicité télévisée dans les campagnes présidentielles.",
+      "question": "How did television transform American advertising in the 1950s?",
+      "definition": "Television spread very rapidly through American households: fewer than 10% owned a set in 1950, nearly 90% in 1960. It became the leading medium of postwar mass consumption. At first, a single advertiser sponsored an entire program, which often bore its name (sponsorship); after the quiz show scandals (1958-1959), the networks took back control of programming and sold commercial slots to several advertisers (spots). Rosser Reeves, of the Ted Bates agency, formalized the \"Unique Selling Proposition\" (USP) in \"Reality in Advertising\" (1961): each ad must make a specific proposition, one that the competition does not make, and one strong enough to attract new customers, repeated relentlessly (example: M&M's, \"melts in your mouth, not in your hand\"). In 1952 Reeves also created the \"Eisenhower Answers America\" spots, marking the entry of television advertising into presidential campaigns.",
       "fonctionnement": [
         { "type": "liste", "items": [
-          "Proposition : un bénéfice concret pour le consommateur",
-          "Unique : la concurrence ne l'avance pas (ou ne peut pas l'avancer)",
-          "Forte : capable de faire changer de marque",
-          "Répétition : même message, longtemps, à forte fréquence"
+          "Proposition: a concrete benefit for the consumer",
+          "Unique: the competition does not (or cannot) put it forward",
+          "Strong: able to make people switch brands",
+          "Repetition: the same message, over a long period, at high frequency"
         ] },
-        { "type": "tableau", "entetes": ["Modèle", "Principe", "Période"], "lignes": [
-          ["Parrainage", "Un annonceur finance et contrôle une émission", "Années 1950"],
-          ["Spots", "La chaîne vend des écrans à plusieurs annonceurs", "À partir de la fin des années 1950"]
+        { "type": "tableau", "entetes": ["Model", "Principle", "Period"], "lignes": [
+          ["Sponsorship", "One advertiser finances and controls a program", "1950s"],
+          ["Spots", "The network sells slots to several advertisers", "From the late 1950s"]
         ] }
       ],
       "termes": [
-        { "fr": "Proposition unique de vente", "en": "Unique Selling Proposition (USP)", "es": "propuesta única de venta", "definition": "Bénéfice distinctif mis en avant de façon répétée." },
-        { "fr": "Spot publicitaire", "en": "TV commercial / spot", "es": "anuncio televisivo / spot", "definition": "Message publicitaire audiovisuel court." },
-        { "fr": "Parrainage", "en": "sponsorship", "es": "patrocinio", "definition": "Financement d'une émission par un annonceur." },
-        { "fr": "Heure de grande écoute", "en": "prime time", "es": "horario de máxima audiencia", "definition": "Tranche horaire où l'audience est la plus forte." }
+        { "fr": "Proposition unique de vente", "en": "Unique Selling Proposition (USP)", "es": "propuesta única de venta", "definition": "Distinctive benefit highlighted repeatedly." },
+        { "fr": "Spot publicitaire", "en": "TV commercial / spot", "es": "anuncio televisivo / spot", "definition": "Short audiovisual advertising message." },
+        { "fr": "Parrainage", "en": "sponsorship", "es": "patrocinio", "definition": "Financing of a program by an advertiser." },
+        { "fr": "Heure de grande écoute", "en": "prime time", "es": "horario de máxima audiencia", "definition": "Time slot with the largest audience." }
       ],
-      "exemple": { "fictif": false, "texte": "Le slogan de Rosser Reeves pour M&M's, « melts in your mouth, not in your hand », illustre l'USP : un bénéfice concret, propre au produit, répété pendant des années.", "source": "src.reeves" },
+      "exemple": { "fictif": false, "texte": "Rosser Reeves's slogan for M&M's, \"melts in your mouth, not in your hand,\" illustrates the USP: a concrete benefit, specific to the product, repeated for years.", "source": "src.reeves" },
       "confusions": [
-        { "a": "USP (un argument unique et répété)", "b": "Slogan quelconque", "explication": "L'USP doit énoncer un bénéfice distinctif, pas seulement une formule frappante." }
+        { "a": "USP (a single, repeated argument)", "b": "Any slogan", "explication": "The USP must state a distinctive benefit, not just a catchy phrase." }
       ],
-      "verification": ["Quelles sont les trois conditions de l'USP selon Reeves ?"],
+      "verification": ["What are Reeves's three conditions for a USP?"],
       "sources": ["src.reeves", "src.fox", "src.cohen-consumers"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cva.age-or.creative-revolution",
-      "titre": "La creative revolution des années 1960",
+      "titre": "The creative revolution of the 1960s",
       "niveau": "F",
       "prerequis": ["cva.age-or.television"],
       "connexes": ["cva.contemporain.segmentation", "cva.methode.analyse-publicite"],
-      "question": "Qu'est-ce que la « creative revolution » et en quoi rompt-elle avec la publicité des années 1950 ?",
-      "definition": "Dans les années 1960, une nouvelle génération de publicitaires new-yorkais rejette la répétition martelée de l'USP et la publicité jugée condescendante des années 1950. Bill Bernbach (agence Doyle Dane Bernbach, DDB, fondée en 1949) fait travailler ensemble rédacteur et directeur artistique, mise sur l'humour, l'honnêteté apparente et l'intelligence du lecteur. Sa campagne pour Volkswagen (« Think Small », 1959) présente une petite voiture allemande comme un choix malin face aux grosses voitures américaines ; celle pour Avis (« We try harder », 1962) fait de la deuxième place un argument. David Ogilvy (Ogilvy & Mather) associe élégance, recherche et image de marque (l'homme à l'œil bandé de Hathaway, 1951 ; Rolls-Royce, 1958) ; Leo Burnett, à Chicago, crée des personnages iconiques (Marlboro Man, 1955). Selon l'historien Thomas Frank, cette révolution créative récupère les codes de la contre-culture (anticonformisme, ironie) pour vendre : le « hip consumerism ».",
+      "question": "What was the \"creative revolution,\" and how did it break with the advertising of the 1950s?",
+      "definition": "In the 1960s, a new generation of New York advertising people rejected the hammering repetition of the USP and what they saw as the condescending advertising of the 1950s. Bill Bernbach (Doyle Dane Bernbach agency, DDB, founded in 1949) had copywriters and art directors work together, and relied on humor, apparent honesty and the reader's intelligence. His campaign for Volkswagen (\"Think Small,\" 1959) presented a small German car as a smart choice compared with big American cars; his campaign for Avis (\"We try harder,\" 1962) turned second place into a selling point. David Ogilvy (Ogilvy & Mather) combined elegance, research and brand image (the Hathaway man with the eye patch, 1951; Rolls-Royce, 1958); Leo Burnett, in Chicago, created iconic characters (the Marlboro Man, 1955). According to the historian Thomas Frank, this creative revolution co-opted the codes of the counterculture (nonconformism, irony) in order to sell: \"hip consumerism.\"",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["", "Années 1950 (USP)", "Creative revolution"], "lignes": [
-          ["Ton", "Sérieux, répétitif, insistant", "Humour, ironie, autodérision"],
-          ["Lecteur", "À convaincre par la répétition", "Intelligent, complice"],
-          ["Organisation", "Rédacteur et graphiste séparés", "Équipe créative rédacteur + directeur artistique"],
-          ["Exemple", "M&M's, Anacin", "Volkswagen, Avis"]
+        { "type": "tableau", "entetes": ["", "1950s (USP)", "Creative revolution"], "lignes": [
+          ["Tone", "Serious, repetitive, insistent", "Humor, irony, self-deprecation"],
+          ["Reader", "To be convinced through repetition", "Intelligent, complicit"],
+          ["Organization", "Copywriter and designer working separately", "Creative team: copywriter + art director"],
+          ["Example", "M&M's, Anacin", "Volkswagen, Avis"]
         ] }
       ],
       "termes": [
-        { "fr": "Directeur artistique", "en": "art director", "es": "director de arte", "definition": "Responsable de la conception visuelle." },
-        { "fr": "Équipe créative", "en": "creative team", "es": "equipo creativo", "definition": "Binôme rédacteur et directeur artistique." },
-        { "fr": "Autodérision", "en": "self-deprecation", "es": "autocrítica humorística", "definition": "Fait de se moquer de soi-même, ici de son produit." },
-        { "fr": "Image de marque", "en": "brand image", "es": "imagen de marca", "definition": "Représentation de la marque dans l'esprit du public." },
-        { "fr": "Contre-culture", "en": "counterculture", "es": "contracultura", "definition": "Mouvements contestant les normes dominantes (années 1960)." }
+        { "fr": "Directeur artistique", "en": "art director", "es": "director de arte", "definition": "Person responsible for visual design." },
+        { "fr": "Équipe créative", "en": "creative team", "es": "equipo creativo", "definition": "Pair made up of a copywriter and an art director." },
+        { "fr": "Autodérision", "en": "self-deprecation", "es": "autocrítica humorística", "definition": "Making fun of oneself, here of one's own product." },
+        { "fr": "Image de marque", "en": "brand image", "es": "imagen de marca", "definition": "How the brand is represented in the public's mind." },
+        { "fr": "Contre-culture", "en": "counterculture", "es": "contracultura", "definition": "Movements challenging dominant norms (1960s)." }
       ],
-      "exemple": { "fictif": false, "texte": "L'annonce « Think Small » de DDB pour la Volkswagen Coccinelle (1959) montre une minuscule voiture dans un grand espace blanc et un texte ironique : elle est devenue l'emblème de la creative revolution.", "source": "src.frank-cool" },
+      "exemple": { "fictif": false, "texte": "DDB's \"Think Small\" ad for the Volkswagen Beetle (1959) shows a tiny car in a large white space with ironic copy: it became the emblem of the creative revolution.", "source": "src.frank-cool" },
       "confusions": [
-        { "a": "Creative revolution (style publicitaire)", "b": "Contre-culture (mouvement social)", "explication": "Selon Frank, la publicité s'approprie les codes de la contre-culture plutôt qu'elle n'en fait partie." }
+        { "a": "Creative revolution (advertising style)", "b": "Counterculture (social movement)", "explication": "According to Frank, advertising appropriated the codes of the counterculture rather than being part of it." }
       ],
-      "verification": ["Pourquoi « Think Small » est-il un contre-pied aux publicités automobiles de l'époque ?"],
+      "verification": ["Why is \"Think Small\" a reversal of the car ads of the time?"],
       "sources": ["src.frank-cool", "src.fox", "src.ogilvy"],
       "verifieLe": "2026-10-15"
     }
@@ -70,58 +70,58 @@
   "questions": [
     {
       "id": "q.cva.age-or.001", "notion": "cva.age-or.television", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Qui a formalisé l'Unique Selling Proposition ?",
+      "enonce": "Who formalized the Unique Selling Proposition?",
       "choix": [
         { "id": "a", "texte": "Rosser Reeves (Ted Bates)", "correct": true, "explication": "Reality in Advertising, 1961." },
-        { "id": "b", "texte": "Bill Bernbach", "correct": false, "explication": "Figure de la creative revolution." },
-        { "id": "c", "texte": "Edward Bernays", "correct": false, "explication": "Relations publiques." },
-        { "id": "d", "texte": "George Gallup", "correct": false, "explication": "Sondages." }
+        { "id": "b", "texte": "Bill Bernbach", "correct": false, "explication": "A figure of the creative revolution." },
+        { "id": "c", "texte": "Edward Bernays", "correct": false, "explication": "Public relations." },
+        { "id": "d", "texte": "George Gallup", "correct": false, "explication": "Polling." }
       ]
     },
     {
       "id": "q.cva.age-or.002", "notion": "cva.age-or.television", "format": "unique", "niveau": 2, "competence": "comprendre",
-      "enonce": "Pourquoi les chaînes passent-elles du parrainage aux spots à la fin des années 1950 ?",
+      "enonce": "Why did the networks move from sponsorship to spots at the end of the 1950s?",
       "choix": [
-        { "id": "a", "texte": "Les scandales des jeux truqués discréditent le contrôle des programmes par les annonceurs", "correct": true, "explication": "Les chaînes reprennent la maîtrise des programmes." },
-        { "id": "b", "texte": "La télévision disparaît", "correct": false, "explication": "Elle est alors en pleine expansion." },
-        { "id": "c", "texte": "Une loi interdit toute publicité", "correct": false, "explication": "Aucune interdiction générale." },
-        { "id": "d", "texte": "Les annonceurs préfèrent la radio", "correct": false, "explication": "La TV devient le premier média." }
+        { "id": "a", "texte": "The rigged quiz show scandals discredited advertisers' control of programs", "correct": true, "explication": "The networks regained control of programming." },
+        { "id": "b", "texte": "Television disappeared", "correct": false, "explication": "It was then expanding rapidly." },
+        { "id": "c", "texte": "A law banned all advertising", "correct": false, "explication": "There was no general ban." },
+        { "id": "d", "texte": "Advertisers preferred radio", "correct": false, "explication": "TV became the leading medium." }
       ]
     },
     {
       "id": "q.cva.age-or.003", "notion": "cva.age-or.creative-revolution", "format": "multiple", "niveau": 2, "competence": "distinguer",
-      "enonce": "Quelles caractéristiques relèvent de la creative revolution ?",
+      "enonce": "Which characteristics belong to the creative revolution?",
       "choix": [
-        { "id": "a", "texte": "L'humour et l'autodérision", "correct": true, "explication": "Volkswagen, Avis." },
-        { "id": "b", "texte": "Le binôme rédacteur et directeur artistique", "correct": true, "explication": "Innovation de Bernbach." },
-        { "id": "c", "texte": "La répétition martelée d'un même argument", "correct": false, "explication": "Caractéristique de l'USP." },
-        { "id": "d", "texte": "La récupération des codes de la contre-culture", "correct": true, "explication": "Analyse de Thomas Frank." }
+        { "id": "a", "texte": "Humor and self-deprecation", "correct": true, "explication": "Volkswagen, Avis." },
+        { "id": "b", "texte": "The copywriter–art director pair", "correct": true, "explication": "Bernbach's innovation." },
+        { "id": "c", "texte": "Hammering repetition of a single argument", "correct": false, "explication": "A characteristic of the USP." },
+        { "id": "d", "texte": "Co-opting the codes of the counterculture", "correct": true, "explication": "Thomas Frank's analysis." }
       ]
     },
     {
       "id": "q.cva.age-or.004", "notion": "cva.age-or.creative-revolution", "format": "unique", "niveau": 3, "competence": "interpreter",
-      "enonce": "Que signifie l'expression « hip consumerism » chez Thomas Frank ?",
+      "enonce": "What does Thomas Frank mean by \"hip consumerism\"?",
       "choix": [
-        { "id": "a", "texte": "Une consommation présentée comme anticonformiste et rebelle", "correct": true, "explication": "La publicité vend la rébellion comme style de vie." },
-        { "id": "b", "texte": "Le refus de consommer", "correct": false, "explication": "Contresens." },
-        { "id": "c", "texte": "La consommation de produits de luxe uniquement", "correct": false, "explication": "Ce n'est pas le sens." },
-        { "id": "d", "texte": "La publicité destinée aux personnes âgées", "correct": false, "explication": "Sans rapport." }
+        { "id": "a", "texte": "Consumption presented as nonconformist and rebellious", "correct": true, "explication": "Advertising sells rebellion as a lifestyle." },
+        { "id": "b", "texte": "Refusing to consume", "correct": false, "explication": "Misinterpretation." },
+        { "id": "c", "texte": "Consuming only luxury products", "correct": false, "explication": "That is not the meaning." },
+        { "id": "d", "texte": "Advertising aimed at older people", "correct": false, "explication": "Unrelated." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cva.age-or.001", "notions": ["cva.age-or.television"],
-      "question": "Expliquez l'essor de la publicité télévisée et l'USP.",
-      "reponse": "Équipement des foyers : < 10 % en 1950, ≈ 90 % en 1960. Parrainage d'émissions puis spots après les quiz show scandals (1958-1959). USP (Reeves, Ted Bates, 1961) : proposition concrète, unique, assez forte pour faire changer de marque, répétée (M&M's). Spots « Eisenhower Answers America » (1952).",
-      "indispensables": ["Diffusion de la TV", "Parrainage / spots", "Trois critères de l'USP"]
+      "question": "Explain the rise of television advertising and the USP.",
+      "reponse": "Household ownership: < 10% in 1950, ≈ 90% in 1960. Program sponsorship, then spots after the quiz show scandals (1958-1959). USP (Reeves, Ted Bates, 1961): a concrete, unique proposition, strong enough to make people switch brands, repeated (M&M's). \"Eisenhower Answers America\" spots (1952).",
+      "indispensables": ["Spread of TV", "Sponsorship / spots", "Three criteria of the USP"]
     },
     {
       "id": "f.cva.age-or.002", "notions": ["cva.age-or.creative-revolution"],
-      "question": "Qu'est-ce que la creative revolution ?",
-      "reponse": "Années 1960 : rejet de la répétition et du ton condescendant. Bernbach (DDB) : équipe rédacteur + DA, humour, honnêteté apparente (VW « Think Small » 1959, Avis « We try harder » 1962). Ogilvy : image de marque (Hathaway, Rolls-Royce). Burnett : Marlboro Man. Thomas Frank : récupération de la contre-culture, « hip consumerism ».",
+      "question": "What was the creative revolution?",
+      "reponse": "1960s: rejection of repetition and of a condescending tone. Bernbach (DDB): copywriter + art director team, humor, apparent honesty (VW \"Think Small\" 1959, Avis \"We try harder\" 1962). Ogilvy: brand image (Hathaway, Rolls-Royce). Burnett: the Marlboro Man. Thomas Frank: co-opting of the counterculture, \"hip consumerism.\"",
       "indispensables": ["Bernbach", "Think Small", "Hip consumerism"],
-      "relance": "En quoi Avis transforme-t-il une faiblesse en argument ?"
+      "relance": "How does Avis turn a weakness into a selling point?"
     }
   ]
 }

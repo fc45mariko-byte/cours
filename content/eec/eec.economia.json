@@ -3,201 +3,201 @@
   "notions": [
     {
       "id": "eec.economia.espana-sectores",
-      "titre": "Les secteurs de l'économie espagnole",
+      "titre": "Los sectores de la economía española",
       "niveau": "F",
       "prerequis": [],
       "connexes": ["eec.economia.espana-historia", "ici.diagnostic.selection-marches"],
-      "question": "Sur quels secteurs repose l'économie espagnole ?",
-      "definition": "L'Espagne est la quatrième économie de la zone euro. Son économie est dominée par les services, en particulier le tourisme, l'un des premiers mondiaux par le nombre de visiteurs internationaux et une contribution importante au PIB et à l'emploi. L'industrie comprend notamment l'automobile (l'Espagne est l'un des premiers producteurs de véhicules en Europe, grâce aux usines de constructeurs étrangers), l'agroalimentaire (fruits et légumes, huile d'olive dont elle est le premier producteur mondial, vin, porc), la chimie et la pharmacie, le textile-habillement (avec de grands groupes de distribution de mode). Les énergies renouvelables (éolien, solaire), la banque, les infrastructures et la construction complètent le tableau. Faiblesses structurelles : chômage élevé par rapport à la moyenne européenne, forte proportion de contrats temporaires (réduite par la réforme du travail de 2021), productivité, disparités régionales.",
+      "question": "¿En qué sectores se apoya la economía española?",
+      "definition": "España es la cuarta economía de la zona euro. Su economía está dominada por los servicios, en particular el turismo, uno de los primeros del mundo por número de visitantes internacionales y con una contribución importante al PIB y al empleo. La industria comprende sobre todo la automoción (España es uno de los primeros productores de vehículos de Europa gracias a las fábricas de fabricantes extranjeros), la agroalimentación (frutas y hortalizas, aceite de oliva, del que es el primer productor mundial, vino, porcino), la química y la farmacia, y el textil-confección (con grandes grupos de distribución de moda). Las energías renovables (eólica, solar), la banca, las infraestructuras y la construcción completan el panorama. Debilidades estructurales: paro elevado en comparación con la media europea, alta proporción de contratos temporales (reducida por la reforma laboral de 2021), productividad, desigualdades regionales.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Secteur", "Points clés"], "lignes": [
-          ["Tourisme", "Un des premiers pays récepteurs au monde ; poids important dans le PIB et l'emploi"],
-          ["Automobile", "Parmi les premiers producteurs européens ; usines de groupes étrangers ; forte exportation"],
-          ["Agroalimentaire", "Fruits et légumes, huile d'olive (1er producteur mondial), vin, porc"],
-          ["Énergie", "Développement important de l'éolien et du solaire"],
-          ["Textile-distribution", "Grands groupes mondiaux de la mode"],
-          ["Banque, BTP, infrastructures", "Groupes très internationalisés, notamment en Amérique latine"]
+        { "type": "tableau", "entetes": ["Sector", "Puntos clave"], "lignes": [
+          ["Turismo", "Uno de los primeros países receptores del mundo; peso importante en el PIB y el empleo"],
+          ["Automoción", "Entre los primeros productores europeos; fábricas de grupos extranjeros; fuerte exportación"],
+          ["Agroalimentación", "Frutas y hortalizas, aceite de oliva (1.er productor mundial), vino, porcino"],
+          ["Energía", "Desarrollo importante de la eólica y la solar"],
+          ["Textil-distribución", "Grandes grupos mundiales de la moda"],
+          ["Banca, construcción, infraestructuras", "Grupos muy internacionalizados, sobre todo en Latinoamérica"]
         ] }
       ],
       "termes": [
-        { "fr": "Secteur tertiaire", "en": "service sector", "es": "sector servicios / terciario", "definition": "Activités de services." },
-        { "fr": "Taux de chômage", "en": "unemployment rate", "es": "tasa de paro (ES) / tasa de desempleo", "definition": "Part des chômeurs dans la population active." },
-        { "fr": "Contrat temporaire", "en": "temporary contract", "es": "contrato temporal", "definition": "Contrat à durée déterminée." },
-        { "fr": "Huile d'olive", "en": "olive oil", "es": "aceite de oliva", "definition": "Produit agricole emblématique de l'Espagne." }
+        { "fr": "Secteur tertiaire", "en": "service sector", "es": "sector servicios / terciario", "definition": "Actividades de servicios." },
+        { "fr": "Taux de chômage", "en": "unemployment rate", "es": "tasa de paro (ES) / tasa de desempleo", "definition": "Proporción de parados en la población activa." },
+        { "fr": "Contrat temporaire", "en": "temporary contract", "es": "contrato temporal", "definition": "Contrato de duración determinada." },
+        { "fr": "Huile d'olive", "en": "olive oil", "es": "aceite de oliva", "definition": "Producto agrícola emblemático de España." }
       ],
-      "exemple": { "fictif": true, "texte": "Une PME française de pièces automobiles vise l'Espagne : la présence d'usines d'assemblage de plusieurs constructeurs étrangers en fait un marché naturel pour la sous-traitance, à proximité de la France." },
+      "exemple": { "fictif": true, "texte": "Una pyme francesa de componentes de automoción se dirige a España: la presencia de plantas de montaje de varios fabricantes extranjeros lo convierte en un mercado natural para la subcontratación, cerca de Francia." },
       "confusions": [
-        { "a": "Paro (Espagne : chômage)", "b": "Desempleo (terme général, Amérique latine)", "explication": "Les deux désignent le chômage ; « paro » est typiquement espagnol." }
+        { "a": "Paro (España)", "b": "Desempleo (término general, Latinoamérica)", "explication": "Ambos designan el «chômage»; «paro» es típicamente español." }
       ],
-      "verification": ["Citez quatre secteurs majeurs de l'économie espagnole."],
+      "verification": ["Cite cuatro sectores principales de la economía española."],
       "verifieLe": "2026-10-15",
-      "aVerifier": "Chiffres actuels (part du tourisme dans le PIB, rang automobile, taux de chômage) : consulter l'INE (ine.es) et Eurostat avant de les citer."
+      "aVerifier": "Cifras actuales (peso del turismo en el PIB, posición en automoción, tasa de paro): consultar el INE (ine.es) y Eurostat antes de citarlas."
     },
     {
       "id": "eec.economia.espana-historia",
-      "titre": "Repères : plan de stabilisation de 1959, entrée dans la CEE en 1986, euro",
+      "titre": "Hitos: Plan de Estabilización de 1959, ingreso en la CEE en 1986, euro",
       "niveau": "F",
       "prerequis": [],
       "connexes": ["eec.economia.espana-sectores", "dai.normes.hard-law"],
-      "question": "Quelles grandes étapes expliquent l'économie espagnole actuelle ?",
-      "definition": "Après une période d'autarcie sous le franquisme, le Plan de estabilización de 1959 ouvre l'économie, libéralise les échanges et attire les capitaux étrangers ; il est suivi d'une forte croissance dans les années 1960 (« milagro económico »), portée par l'industrialisation, le tourisme et les envois de fonds des émigrés. Après la mort de Franco (1975), les Pactos de la Moncloa (1977) accompagnent la transition démocratique face à la crise. L'Espagne entre dans la Communauté économique européenne le 1er janvier 1986, ce qui stimule investissements, fonds structurels et modernisation des infrastructures. Elle adopte l'euro dès 1999 (pièces et billets en 2002). La croissance des années 2000, fondée en partie sur une bulle immobilière, s'effondre avec la crise de 2008 ; le chômage explose et le secteur bancaire est assaini en 2012 avec une aide européenne. La reprise s'appuie ensuite sur les exportations et le tourisme.",
+      "question": "¿Qué grandes etapas explican la economía española actual?",
+      "definition": "Tras un periodo de autarquía durante el franquismo, el Plan de Estabilización de 1959 abre la economía, liberaliza los intercambios y atrae capitales extranjeros; le sigue un fuerte crecimiento en los años sesenta («milagro económico»), impulsado por la industrialización, el turismo y las remesas de los emigrantes. Tras la muerte de Franco (1975), los Pactos de la Moncloa (1977) acompañan la transición democrática frente a la crisis. España ingresa en la Comunidad Económica Europea el 1 de enero de 1986, lo que estimula las inversiones, los fondos estructurales y la modernización de las infraestructuras. Adopta el euro desde 1999 (monedas y billetes en 2002). El crecimiento de los años 2000, basado en parte en una burbuja inmobiliaria, se hunde con la crisis de 2008; el paro se dispara y el sector bancario se sanea en 2012 con ayuda europea. La recuperación se apoya después en las exportaciones y el turismo.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
-          ["1959", "Plan de estabilización : fin de l'autarcie"],
-          ["Années 1960", "« Milagro económico » : forte croissance"],
+        { "type": "tableau", "entetes": ["Fecha", "Acontecimiento"], "lignes": [
+          ["1959", "Plan de Estabilización: fin de la autarquía"],
+          ["Años sesenta", "«Milagro económico»: fuerte crecimiento"],
           ["1977", "Pactos de la Moncloa"],
-          ["1986", "Entrée dans la CEE (avec le Portugal)"],
-          ["1999 / 2002", "Euro (monnaie scripturale / fiduciaire)"],
-          ["2008-2013", "Crise : éclatement de la bulle immobilière, chômage, assainissement bancaire (2012)"]
+          ["1986", "Ingreso en la CEE (junto con Portugal)"],
+          ["1999 / 2002", "Euro (dinero bancario / monedas y billetes)"],
+          ["2008-2013", "Crisis: estallido de la burbuja inmobiliaria, paro, saneamiento bancario (2012)"]
         ] }
       ],
       "termes": [
-        { "fr": "Autarcie", "en": "autarky / self-sufficiency", "es": "autarquía", "definition": "Économie fermée cherchant à se suffire à elle-même." },
-        { "fr": "Bulle immobilière", "en": "housing bubble", "es": "burbuja inmobiliaria", "definition": "Hausse excessive et spéculative des prix immobiliers." },
-        { "fr": "Fonds structurels", "en": "structural funds", "es": "fondos estructurales", "definition": "Aides européennes au développement régional." }
+        { "fr": "Autarcie", "en": "autarky / self-sufficiency", "es": "autarquía", "definition": "Economía cerrada que pretende bastarse a sí misma." },
+        { "fr": "Bulle immobilière", "en": "housing bubble", "es": "burbuja inmobiliaria", "definition": "Subida excesiva y especulativa de los precios de la vivienda." },
+        { "fr": "Fonds structurels", "en": "structural funds", "es": "fondos estructurales", "definition": "Ayudas europeas al desarrollo regional." }
       ],
-      "exemple": { "fictif": true, "texte": "Un exposé sur l'Espagne européenne peut s'organiser ainsi : de l'ouverture (1959) à l'intégration (1986, 1999), puis l'épreuve de la crise (2008) et la reprise par l'exportation." },
+      "exemple": { "fictif": true, "texte": "Una exposición sobre la España europea puede organizarse así: de la apertura (1959) a la integración (1986, 1999), y luego la prueba de la crisis (2008) y la recuperación gracias a la exportación." },
       "confusions": [
-        { "a": "Entrée dans la CEE (1986)", "b": "Adhésion à l'OTAN (1982)", "explication": "Deux étapes distinctes de l'ouverture internationale de l'Espagne." }
+        { "a": "Ingreso en la CEE (1986)", "b": "Adhesión a la OTAN (1982)", "explication": "Dos etapas distintas de la apertura internacional de España." }
       ],
-      "verification": ["Pourquoi le plan de stabilisation de 1959 est-il un tournant ?"],
+      "verification": ["¿Por qué el Plan de Estabilización de 1959 supone un punto de inflexión?"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "eec.economia.latam",
-      "titre": "Les économies latino-américaines",
+      "titre": "Las economías latinoamericanas",
       "niveau": "F",
       "prerequis": [],
       "connexes": ["eec.economia.bloques", "ici.risque.risque-pays"],
-      "question": "Quels sont les grands traits et les principales économies de l'Amérique latine ?",
-      "definition": "L'Amérique latine est dominée par le Brésil et le Mexique, les deux premières économies de la région, suivis notamment de l'Argentine, de la Colombie et du Chili. Traits communs : forte dépendance aux exportations de matières premières (soja, minerais, pétrole, cuivre, lithium) et donc aux cycles des prix mondiaux ; inégalités sociales élevées ; importance du secteur informel ; épisodes d'inflation et de crises de change (l'Argentine en est l'exemple récurrent) ; instabilité politique variable selon les pays. Le Mexique, intégré à l'Amérique du Nord par l'accord T-MEC (USMCA, en vigueur depuis 2020), bénéficie du « nearshoring » (relocalisation de production près des États-Unis). Le Chili est réputé pour sa stabilité macroéconomique ; la Colombie et le Pérou ont connu une croissance soutenue au cours des années 2000 et 2010.",
+      "question": "¿Cuáles son los grandes rasgos y las principales economías de Latinoamérica?",
+      "definition": "Latinoamérica está dominada por Brasil y México, las dos primeras economías de la región, seguidas sobre todo de Argentina, Colombia y Chile. Rasgos comunes: fuerte dependencia de las exportaciones de materias primas (soja, minerales, petróleo, cobre, litio) y, por tanto, de los ciclos de los precios mundiales; desigualdades sociales elevadas; peso del sector informal; episodios de inflación y de crisis cambiarias (Argentina es el ejemplo recurrente); inestabilidad política variable según los países. México, integrado en Norteamérica mediante el T-MEC (USMCA, en vigor desde 2020), se beneficia del «nearshoring» (relocalización de la producción cerca de Estados Unidos). Chile es conocido por su estabilidad macroeconómica; Colombia y Perú registraron un crecimiento sostenido durante los años 2000 y 2010.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Pays", "Atouts", "Points de vigilance"], "lignes": [
-          ["Brésil", "Marché intérieur très vaste, agro-industrie, énergie", "Complexité fiscale, protectionnisme"],
-          ["Mexique", "Industrie manufacturière, T-MEC, nearshoring", "Sécurité, dépendance aux États-Unis"],
-          ["Argentine", "Agriculture, ressources (lithium, gaz)", "Inflation, contrôle des changes récurrents"],
-          ["Chili", "Stabilité, cuivre, lithium, nombreux accords commerciaux", "Dépendance au cuivre"],
-          ["Colombie / Pérou", "Croissance, ressources minières et énergétiques", "Inégalités, instabilité politique"]
+        { "type": "tableau", "entetes": ["País", "Ventajas", "Puntos de atención"], "lignes": [
+          ["Brasil", "Mercado interior muy amplio, agroindustria, energía", "Complejidad fiscal, proteccionismo"],
+          ["México", "Industria manufacturera, T-MEC, nearshoring", "Seguridad, dependencia de Estados Unidos"],
+          ["Argentina", "Agricultura, recursos (litio, gas)", "Inflación, controles de cambio recurrentes"],
+          ["Chile", "Estabilidad, cobre, litio, numerosos acuerdos comerciales", "Dependencia del cobre"],
+          ["Colombia / Perú", "Crecimiento, recursos mineros y energéticos", "Desigualdades, inestabilidad política"]
         ] }
       ],
       "termes": [
-        { "fr": "Matières premières", "en": "commodities", "es": "materias primas", "definition": "Produits de base (minerais, agricoles, énergie)." },
-        { "fr": "Économie informelle", "en": "informal economy", "es": "economía informal / sumergida", "definition": "Activité non déclarée." },
-        { "fr": "Relocalisation de proximité", "en": "nearshoring", "es": "relocalización cercana (nearshoring)", "definition": "Déplacement de production vers un pays proche du marché." }
+        { "fr": "Matières premières", "en": "commodities", "es": "materias primas", "definition": "Productos básicos (minerales, agrícolas, energía)." },
+        { "fr": "Économie informelle", "en": "informal economy", "es": "economía informal / sumergida", "definition": "Actividad no declarada." },
+        { "fr": "Relocalisation de proximité", "en": "nearshoring", "es": "relocalización cercana (nearshoring)", "definition": "Traslado de la producción a un país cercano al mercado." }
       ],
-      "exemple": { "fictif": true, "texte": "Un équipementier français installe une usine à Querétaro (Mexique) pour fournir des constructeurs américains en bénéficiant du T-MEC, plutôt que d'exporter depuis l'Europe." },
+      "exemple": { "fictif": true, "texte": "Un fabricante francés de equipos para automoción instala una fábrica en Querétaro (México) para abastecer a fabricantes estadounidenses aprovechando el T-MEC, en lugar de exportar desde Europa." },
       "confusions": [
-        { "a": "Amérique latine", "b": "Bloc homogène", "explication": "Les situations macroéconomiques et le risque pays diffèrent fortement d'un pays à l'autre." }
+        { "a": "Latinoamérica", "b": "Bloque homogéneo", "explication": "Las situaciones macroeconómicas y el riesgo país difieren mucho de un país a otro." }
       ],
-      "verification": ["Pourquoi les économies latino-américaines sont-elles sensibles aux prix mondiaux des matières premières ?"],
+      "verification": ["¿Por qué las economías latinoamericanas son sensibles a los precios mundiales de las materias primas?"],
       "verifieLe": "2026-10-15",
-      "aVerifier": "Classement des économies et indicateurs récents (PIB, inflation) : vérifier auprès de la CEPAL, du FMI ou de la Banque mondiale."
+      "aVerifier": "Clasificación de las economías e indicadores recientes (PIB, inflación): comprobar en la CEPAL, el FMI o el Banco Mundial."
     },
     {
       "id": "eec.economia.bloques",
-      "titre": "Mercosur, Alliance du Pacifique et accords avec l'UE",
+      "titre": "Mercosur, Alianza del Pacífico y acuerdos con la UE",
       "niveau": "F",
       "prerequis": ["eec.economia.latam"],
       "connexes": ["dai.normes.omc", "tci.douane.origine"],
-      "question": "Quelles organisations d'intégration régionale structurent les échanges latino-américains, et quels accords les lient à l'Union européenne ?",
-      "definition": "Le Mercosur (Mercado Común del Sur), créé par le traité d'Asunción en 1991 par l'Argentine, le Brésil, le Paraguay et l'Uruguay, est une union douanière (imparfaite) dotée d'un tarif extérieur commun ; le Venezuela en est suspendu depuis 2016 et la Bolivie est devenue membre de plein droit en 2024. L'Alliance du Pacifique (créée en 2011-2012 par le Chili, la Colombie, le Mexique et le Pérou) vise la libre circulation des biens, des services, des capitaux et des personnes, avec une orientation vers l'Asie-Pacifique. La Communauté andine regroupe la Bolivie, la Colombie, l'Équateur et le Pérou. L'UE a conclu des accords avec le Mexique (accord global de 2000, en cours de modernisation), le Chili (accord d'association de 2002-2003, modernisé), la Colombie, le Pérou et l'Équateur (accord commercial multipartite), l'Amérique centrale ; l'accord UE-Mercosur, dont les négociations ont été conclues en décembre 2024, fait l'objet d'une procédure de signature et de ratification controversée.",
+      "question": "¿Qué organizaciones de integración regional estructuran los intercambios latinoamericanos y qué acuerdos las vinculan con la Unión Europea?",
+      "definition": "El Mercosur (Mercado Común del Sur), creado por el Tratado de Asunción en 1991 por Argentina, Brasil, Paraguay y Uruguay, es una unión aduanera (imperfecta) dotada de un arancel externo común; Venezuela está suspendida desde 2016 y Bolivia se convirtió en miembro de pleno derecho en 2024. La Alianza del Pacífico (creada en 2011-2012 por Chile, Colombia, México y Perú) persigue la libre circulación de bienes, servicios, capitales y personas, con una orientación hacia Asia-Pacífico. La Comunidad Andina agrupa a Bolivia, Colombia, Ecuador y Perú. La UE ha celebrado acuerdos con México (acuerdo global de 2000, en proceso de modernización), Chile (acuerdo de asociación de 2002-2003, modernizado), Colombia, Perú y Ecuador (acuerdo comercial multipartito) y Centroamérica; el acuerdo UE-Mercosur, cuyas negociaciones concluyeron en diciembre de 2024, está sujeto a un procedimiento de firma y ratificación controvertido.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Bloc", "Membres", "Nature"], "lignes": [
-          ["Mercosur (1991)", "Argentine, Brésil, Paraguay, Uruguay, Bolivie (2024) ; Venezuela suspendu", "Union douanière, tarif extérieur commun"],
-          ["Alliance du Pacifique (2011-2012)", "Chili, Colombie, Mexique, Pérou", "Zone de libre-échange approfondie"],
-          ["Communauté andine (1969)", "Bolivie, Colombie, Équateur, Pérou", "Intégration régionale"],
-          ["T-MEC / USMCA (2020)", "Mexique, États-Unis, Canada", "Zone de libre-échange"]
+        { "type": "tableau", "entetes": ["Bloque", "Miembros", "Naturaleza"], "lignes": [
+          ["Mercosur (1991)", "Argentina, Brasil, Paraguay, Uruguay, Bolivia (2024); Venezuela suspendida", "Unión aduanera, arancel externo común"],
+          ["Alianza del Pacífico (2011-2012)", "Chile, Colombia, México, Perú", "Zona de libre comercio profundizada"],
+          ["Comunidad Andina (1969)", "Bolivia, Colombia, Ecuador, Perú", "Integración regional"],
+          ["T-MEC / USMCA (2020)", "México, Estados Unidos, Canadá", "Zona de libre comercio"]
         ] }
       ],
       "termes": [
-        { "fr": "Union douanière", "en": "customs union", "es": "unión aduanera", "definition": "Libre-échange interne + tarif extérieur commun." },
-        { "fr": "Zone de libre-échange", "en": "free trade area", "es": "zona de libre comercio", "definition": "Suppression des droits entre membres, sans tarif commun." },
-        { "fr": "Tarif extérieur commun", "en": "common external tariff", "es": "arancel externo común", "definition": "Droits identiques appliqués aux pays tiers." }
+        { "fr": "Union douanière", "en": "customs union", "es": "unión aduanera", "definition": "Libre comercio interno + arancel externo común." },
+        { "fr": "Zone de libre-échange", "en": "free trade area", "es": "zona de libre comercio", "definition": "Supresión de los aranceles entre los miembros, sin arancel común." },
+        { "fr": "Tarif extérieur commun", "en": "common external tariff", "es": "arancel externo común", "definition": "Aranceles idénticos aplicados a terceros países." }
       ],
-      "exemple": { "fictif": true, "texte": "Un fabricant français de machines agricoles suit de près la ratification de l'accord UE-Mercosur : la baisse des droits de douane brésiliens et argentins rendrait ses machines plus compétitives face aux concurrents locaux." },
+      "exemple": { "fictif": true, "texte": "Un fabricante francés de maquinaria agrícola sigue de cerca la ratificación del acuerdo UE-Mercosur: la rebaja de los aranceles brasileños y argentinos haría sus máquinas más competitivas frente a los competidores locales." },
       "confusions": [
-        { "a": "Mercosur (union douanière)", "b": "Alliance du Pacifique (libre-échange orienté vers l'Asie)", "explication": "Niveaux et orientations d'intégration différents." }
+        { "a": "Mercosur (unión aduanera)", "b": "Alianza del Pacífico (libre comercio orientado hacia Asia)", "explication": "Niveles y orientaciones de integración diferentes." }
       ],
-      "verification": ["Quelle différence entre une union douanière et une zone de libre-échange ?"],
+      "verification": ["¿Qué diferencia hay entre una unión aduanera y una zona de libre comercio?"],
       "sources": ["src.omc"],
       "verifieLe": "2026-10-15",
-      "aVerifier": "État d'avancement des accords UE-Mercosur, UE-Mexique et UE-Chili (signature, ratification, entrée en vigueur) : vérifier sur le site de la Commission européenne (DG Commerce)."
+      "aVerifier": "Estado de los acuerdos UE-Mercosur, UE-México y UE-Chile (firma, ratificación, entrada en vigor): comprobar en el sitio web de la Comisión Europea (DG Comercio)."
     }
   ],
   "questions": [
     {
       "id": "q.eec.economia.001", "notion": "eec.economia.espana-sectores", "format": "multiple", "niveau": 1, "competence": "memoriser",
-      "enonce": "Quels secteurs sont des points forts de l'économie espagnole ?",
+      "enonce": "¿Qué sectores son puntos fuertes de la economía española?",
       "choix": [
-        { "id": "a", "texte": "Le tourisme", "correct": true, "explication": "Un des premiers pays récepteurs au monde." },
-        { "id": "b", "texte": "L'automobile", "correct": true, "explication": "Parmi les premiers producteurs européens." },
-        { "id": "c", "texte": "L'huile d'olive", "correct": true, "explication": "Premier producteur mondial." },
-        { "id": "d", "texte": "Le pétrole extrait sur son territoire", "correct": false, "explication": "L'Espagne est très dépendante des importations d'hydrocarbures." }
+        { "id": "a", "texte": "El turismo", "correct": true, "explication": "Uno de los primeros países receptores del mundo." },
+        { "id": "b", "texte": "La automoción", "correct": true, "explication": "Entre los primeros productores europeos." },
+        { "id": "c", "texte": "El aceite de oliva", "correct": true, "explication": "Primer productor mundial." },
+        { "id": "d", "texte": "El petróleo extraído en su territorio", "correct": false, "explication": "España depende mucho de las importaciones de hidrocarburos." }
       ]
     },
     {
       "id": "q.eec.economia.002", "notion": "eec.economia.espana-historia", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "En quelle année l'Espagne est-elle entrée dans la CEE ?",
+      "enonce": "¿En qué año ingresó España en la CEE?",
       "choix": [
-        { "id": "a", "texte": "1986", "correct": true, "explication": "Le 1er janvier 1986, avec le Portugal." },
-        { "id": "b", "texte": "1959", "correct": false, "explication": "Plan de stabilisation." },
-        { "id": "c", "texte": "1977", "correct": false, "explication": "Pactes de la Moncloa." },
-        { "id": "d", "texte": "1999", "correct": false, "explication": "Adoption de l'euro." }
+        { "id": "a", "texte": "1986", "correct": true, "explication": "El 1 de enero de 1986, junto con Portugal." },
+        { "id": "b", "texte": "1959", "correct": false, "explication": "Plan de Estabilización." },
+        { "id": "c", "texte": "1977", "correct": false, "explication": "Pactos de la Moncloa." },
+        { "id": "d", "texte": "1999", "correct": false, "explication": "Adopción del euro." }
       ]
     },
     {
       "id": "q.eec.economia.003", "notion": "eec.economia.espana-historia", "format": "unique", "niveau": 2, "competence": "comprendre",
-      "enonce": "Quel est l'apport principal du Plan de estabilización de 1959 ?",
+      "enonce": "¿Cuál es la aportación principal del Plan de Estabilización de 1959?",
       "choix": [
-        { "id": "a", "texte": "Il met fin à l'autarcie et ouvre l'économie aux échanges et aux capitaux étrangers", "correct": true, "explication": "Point de départ du « miracle économique »." },
-        { "id": "b", "texte": "Il fait entrer l'Espagne dans l'euro", "correct": false, "explication": "1999." },
-        { "id": "c", "texte": "Il crée le Mercosur", "correct": false, "explication": "Sans rapport." },
-        { "id": "d", "texte": "Il nationalise les banques", "correct": false, "explication": "Contresens." }
+        { "id": "a", "texte": "Pone fin a la autarquía y abre la economía a los intercambios y a los capitales extranjeros", "correct": true, "explication": "Punto de partida del «milagro económico»." },
+        { "id": "b", "texte": "Hace entrar a España en el euro", "correct": false, "explication": "1999." },
+        { "id": "c", "texte": "Crea el Mercosur", "correct": false, "explication": "No tiene relación." },
+        { "id": "d", "texte": "Nacionaliza los bancos", "correct": false, "explication": "Interpretación errónea." }
       ]
     },
     {
       "id": "q.eec.economia.004", "notion": "eec.economia.latam", "format": "unique", "niveau": 2, "competence": "comprendre",
-      "enonce": "Pourquoi le Mexique profite-t-il du « nearshoring » ?",
+      "enonce": "¿Por qué se beneficia México del «nearshoring»?",
       "choix": [
-        { "id": "a", "texte": "Sa proximité des États-Unis et l'accord T-MEC attirent des usines servant le marché nord-américain", "correct": true, "explication": "Relocalisation de proximité." },
-        { "id": "b", "texte": "Il est membre du Mercosur", "correct": false, "explication": "Le Mexique n'en est pas membre." },
-        { "id": "c", "texte": "Il utilise l'euro", "correct": false, "explication": "Il utilise le peso." },
-        { "id": "d", "texte": "Il n'a aucun accord commercial", "correct": false, "explication": "Il en a de nombreux." }
+        { "id": "a", "texte": "Su proximidad a Estados Unidos y el T-MEC atraen fábricas que abastecen al mercado norteamericano", "correct": true, "explication": "Relocalización cercana." },
+        { "id": "b", "texte": "Es miembro del Mercosur", "correct": false, "explication": "México no es miembro." },
+        { "id": "c", "texte": "Utiliza el euro", "correct": false, "explication": "Utiliza el peso." },
+        { "id": "d", "texte": "No tiene ningún acuerdo comercial", "correct": false, "explication": "Tiene numerosos acuerdos." }
       ]
     },
     {
       "id": "q.eec.economia.005", "notion": "eec.economia.bloques", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Quels pays ont fondé le Mercosur en 1991 ?",
+      "enonce": "¿Qué países fundaron el Mercosur en 1991?",
       "choix": [
-        { "id": "a", "texte": "Argentine, Brésil, Paraguay, Uruguay", "correct": true, "explication": "Traité d'Asunción." },
-        { "id": "b", "texte": "Chili, Colombie, Mexique, Pérou", "correct": false, "explication": "Alliance du Pacifique." },
-        { "id": "c", "texte": "Mexique, États-Unis, Canada", "correct": false, "explication": "T-MEC." },
-        { "id": "d", "texte": "Bolivie, Colombie, Équateur, Pérou", "correct": false, "explication": "Communauté andine." }
+        { "id": "a", "texte": "Argentina, Brasil, Paraguay, Uruguay", "correct": true, "explication": "Tratado de Asunción." },
+        { "id": "b", "texte": "Chile, Colombia, México, Perú", "correct": false, "explication": "Alianza del Pacífico." },
+        { "id": "c", "texte": "México, Estados Unidos, Canadá", "correct": false, "explication": "T-MEC." },
+        { "id": "d", "texte": "Bolivia, Colombia, Ecuador, Perú", "correct": false, "explication": "Comunidad Andina." }
       ]
     },
     {
       "id": "q.eec.economia.006", "notion": "eec.economia.bloques", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
-      "enonce": "Vrai ou faux : le Mercosur applique un tarif extérieur commun aux importations provenant de pays tiers.",
+      "enonce": "Verdadero o falso: el Mercosur aplica un arancel externo común a las importaciones procedentes de terceros países.",
       "choix": [
-        { "id": "a", "texte": "Vrai", "correct": true, "explication": "C'est une union douanière, même imparfaite (exceptions nationales)." },
-        { "id": "b", "texte": "Faux", "correct": false, "explication": "Le tarif extérieur commun le distingue d'une simple zone de libre-échange." }
+        { "id": "a", "texte": "Verdadero", "correct": true, "explication": "Es una unión aduanera, aunque imperfecta (excepciones nacionales)." },
+        { "id": "b", "texte": "Falso", "correct": false, "explication": "El arancel externo común lo distingue de una simple zona de libre comercio." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.eec.economia.001", "notions": ["eec.economia.espana-sectores", "eec.economia.espana-historia"],
-      "question": "Présentez l'économie espagnole : grands repères historiques et secteurs clés.",
-      "reponse": "Repères : autarcie franquiste puis Plan de estabilización (1959) et « milagro económico » des années 1960 ; Pactos de la Moncloa (1977) ; entrée dans la CEE (1986) ; euro (1999 / 2002) ; bulle immobilière et crise de 2008, assainissement bancaire en 2012, reprise tirée par les exportations et le tourisme. Secteurs : tourisme, automobile (usines de constructeurs étrangers), agroalimentaire (huile d'olive, fruits et légumes, vin), énergies renouvelables, textile-distribution, banque et BTP internationalisés. Faiblesses : chômage élevé, temporalité de l'emploi, disparités régionales.",
-      "indispensables": ["Quatre dates clés", "Quatre secteurs", "Faiblesses structurelles"],
-      "erreurs": ["Dater l'entrée dans la CEE en 1981 ou 1992"]
+      "question": "Presente la economía española: grandes hitos históricos y sectores clave.",
+      "reponse": "Hitos: autarquía franquista y después Plan de Estabilización (1959) y «milagro económico» de los años sesenta; Pactos de la Moncloa (1977); ingreso en la CEE (1986); euro (1999 / 2002); burbuja inmobiliaria y crisis de 2008, saneamiento bancario en 2012, recuperación impulsada por las exportaciones y el turismo. Sectores: turismo, automoción (fábricas de fabricantes extranjeros), agroalimentación (aceite de oliva, frutas y hortalizas, vino), energías renovables, textil-distribución, banca y construcción internacionalizadas. Debilidades: paro elevado, temporalidad del empleo, desigualdades regionales.",
+      "indispensables": ["Cuatro fechas clave", "Cuatro sectores", "Debilidades estructurales"],
+      "erreurs": ["Situar el ingreso en la CEE en 1981 o 1992"]
     },
     {
       "id": "f.eec.economia.002", "notions": ["eec.economia.latam", "eec.economia.bloques"],
-      "question": "Présentez les principales économies latino-américaines et les blocs régionaux.",
-      "reponse": "Brésil et Mexique en tête, puis Argentine, Colombie, Chili ; dépendance aux matières premières, inégalités, économie informelle, inflation (Argentine), nearshoring au Mexique (T-MEC, 2020). Blocs : Mercosur (1991, Argentine, Brésil, Paraguay, Uruguay, Bolivie depuis 2024 ; Venezuela suspendu ; union douanière) ; Alliance du Pacifique (Chili, Colombie, Mexique, Pérou ; libre-échange tourné vers l'Asie) ; Communauté andine. Accords UE : Mexique, Chili, Colombie-Pérou-Équateur, Amérique centrale ; UE-Mercosur conclu politiquement en 2024, ratification en cours.",
-      "indispensables": ["Deux premières économies", "Membres du Mercosur", "Membres de l'Alliance du Pacifique", "Accords avec l'UE"],
-      "erreurs": ["Placer le Mexique dans le Mercosur"]
+      "question": "Presente las principales economías latinoamericanas y los bloques regionales.",
+      "reponse": "Brasil y México a la cabeza, seguidos de Argentina, Colombia, Chile; dependencia de las materias primas, desigualdades, economía informal, inflación (Argentina), nearshoring en México (T-MEC, 2020). Bloques: Mercosur (1991, Argentina, Brasil, Paraguay, Uruguay, Bolivia desde 2024; Venezuela suspendida; unión aduanera); Alianza del Pacífico (Chile, Colombia, México, Perú; libre comercio orientado hacia Asia); Comunidad Andina. Acuerdos con la UE: México, Chile, Colombia-Perú-Ecuador, Centroamérica; UE-Mercosur concluido políticamente en 2024, ratificación en curso.",
+      "indispensables": ["Las dos primeras economías", "Miembros del Mercosur", "Miembros de la Alianza del Pacífico", "Acuerdos con la UE"],
+      "erreurs": ["Situar a México en el Mercosur"]
     }
   ]
 }

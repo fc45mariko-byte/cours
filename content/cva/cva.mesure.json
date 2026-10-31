@@ -3,32 +3,32 @@
   "notions": [
     {
       "id": "cva.mesure.etudes",
-      "titre": "Gallup, Nielsen et les études de marché",
+      "titre": "Gallup, Nielsen and market research",
       "niveau": "F",
       "prerequis": ["cva.naissance.agences"],
       "connexes": ["cva.age-or.television", "cva.contemporain.segmentation"],
-      "question": "Comment la publicité américaine a-t-elle cherché à mesurer le public et son efficacité ?",
-      "definition": "Dès les années 1920, annonceurs et agences veulent connaître leur public et vérifier l'efficacité des dépenses. George Gallup, recruté par l'agence Young & Rubicam en 1932, applique l'enquête par échantillon (sampling) à la lecture des annonces, puis fonde en 1935 l'American Institute of Public Opinion ; en 1936, son sondage sur échantillon représentatif prévoit la réélection de Roosevelt alors que la vaste enquête postale du Literary Digest annonçait sa défaite. Arthur C. Nielsen fonde sa société en 1923 et mesure l'audience de la radio puis de la télévision (Nielsen ratings) à l'aide d'un appareil enregistrant les stations écoutées (Audimeter) : ces mesures fixent le prix de l'espace publicitaire. Dans les années 1950, la « recherche de motivation » (motivation research) d'Ernest Dichter applique la psychanalyse à la consommation ; Vance Packard la dénonce dans « The Hidden Persuaders » (1957). Les études de marché combinent désormais données quantitatives (sondages, audiences) et qualitatives (entretiens, groupes).",
+      "question": "How did American advertising try to measure its audience and its effectiveness?",
+      "definition": "From the 1920s on, advertisers and agencies wanted to know their audience and check whether their spending was effective. George Gallup, hired by the Young & Rubicam agency in 1932, applied the sample survey (sampling) to ad readership, then founded the American Institute of Public Opinion in 1935; in 1936, his poll based on a representative sample predicted Roosevelt's reelection, whereas the Literary Digest's huge mail survey had forecast his defeat. Arthur C. Nielsen founded his company in 1923 and measured radio and then television audiences (Nielsen ratings) using a device that recorded the stations tuned in (the Audimeter): these measurements set the price of advertising space. In the 1950s, Ernest Dichter's \"motivation research\" applied psychoanalysis to consumption; Vance Packard denounced it in \"The Hidden Persuaders\" (1957). Market research now combines quantitative data (polls, ratings) and qualitative data (interviews, groups).",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Outil", "Ce qu'il mesure", "Figure"], "lignes": [
-          ["Sondage par échantillon", "Opinions, lecture des annonces", "Gallup"],
-          ["Mesure d'audience", "Nombre de foyers à l'écoute", "Nielsen"],
-          ["Recherche de motivation", "Désirs et freins inconscients", "Dichter"],
-          ["Tests et coupons", "Réponses directes à une annonce", "Hopkins"]
+        { "type": "tableau", "entetes": ["Tool", "What it measures", "Figure"], "lignes": [
+          ["Sample survey", "Opinions, ad readership", "Gallup"],
+          ["Audience measurement", "Number of households tuned in", "Nielsen"],
+          ["Motivation research", "Unconscious desires and inhibitions", "Dichter"],
+          ["Tests and coupons", "Direct responses to an ad", "Hopkins"]
         ] },
-        { "type": "attention", "texte": "La taille d'un échantillon ne garantit pas sa fiabilité : c'est sa représentativité qui compte (leçon de 1936)." }
+        { "type": "attention", "texte": "The size of a sample does not guarantee its reliability: what counts is how representative it is (the lesson of 1936)." }
       ],
       "termes": [
-        { "fr": "Étude de marché", "en": "market research", "es": "estudio de mercado", "definition": "Collecte et analyse d'informations sur un marché et ses consommateurs." },
-        { "fr": "Échantillon représentatif", "en": "representative sample", "es": "muestra representativa", "definition": "Sous-groupe reproduisant les caractéristiques de la population." },
-        { "fr": "Audience", "en": "ratings / audience share", "es": "audiencia / índice de audiencia", "definition": "Nombre ou part de personnes exposées à un programme." },
-        { "fr": "Sondage d'opinion", "en": "opinion poll", "es": "sondeo / encuesta de opinión", "definition": "Enquête sur les opinions d'un échantillon." }
+        { "fr": "Étude de marché", "en": "market research", "es": "estudio de mercado", "definition": "Collection and analysis of information about a market and its consumers." },
+        { "fr": "Échantillon représentatif", "en": "representative sample", "es": "muestra representativa", "definition": "Subgroup that reproduces the characteristics of the population." },
+        { "fr": "Audience", "en": "ratings / audience share", "es": "audiencia / índice de audiencia", "definition": "Number or share of people exposed to a program." },
+        { "fr": "Sondage d'opinion", "en": "opinion poll", "es": "sondeo / encuesta de opinión", "definition": "Survey of the opinions of a sample." }
       ],
-      "exemple": { "fictif": true, "texte": "Une chaîne de télévision fictive facture 20 % plus cher l'écran publicitaire d'un programme dont la mesure d'audience a progressé de 20 % : la mesure du public devient la monnaie du marché publicitaire." },
+      "exemple": { "fictif": true, "texte": "A fictional television network charges 20% more for a commercial slot in a program whose measured audience has grown by 20%: audience measurement becomes the currency of the advertising market." },
       "confusions": [
-        { "a": "Grande taille d'échantillon (Literary Digest, 1936)", "b": "Échantillon représentatif (Gallup)", "explication": "Le Digest interrogeait surtout des foyers aisés ; Gallup, avec moins de réponses, avait un échantillon plus représentatif." }
+        { "a": "Large sample size (Literary Digest, 1936)", "b": "Representative sample (Gallup)", "explication": "The Digest mainly surveyed well-off households; Gallup, with fewer responses, had a more representative sample." }
       ],
-      "verification": ["Pourquoi la mesure d'audience est-elle indispensable au financement de la radio et de la télévision ?"],
+      "verification": ["Why is audience measurement essential to the financing of radio and television?"],
       "sources": ["src.fox"],
       "verifieLe": "2026-10-15"
     }
@@ -36,31 +36,31 @@
   "questions": [
     {
       "id": "q.cva.mesure.001", "notion": "cva.mesure.etudes", "format": "unique", "niveau": 2, "competence": "comprendre",
-      "enonce": "Pourquoi Gallup a-t-il mieux prévu l'élection de 1936 que le Literary Digest ?",
+      "enonce": "Why did Gallup predict the 1936 election better than the Literary Digest?",
       "choix": [
-        { "id": "a", "texte": "Son échantillon, plus petit, était plus représentatif", "correct": true, "explication": "La représentativité prime sur la taille." },
-        { "id": "b", "texte": "Il avait interrogé plus de personnes", "correct": false, "explication": "Le Digest avait reçu bien plus de réponses." },
-        { "id": "c", "texte": "Il connaissait personnellement Roosevelt", "correct": false, "explication": "Sans rapport." },
-        { "id": "d", "texte": "Il utilisait la télévision", "correct": false, "explication": "Anachronisme." }
+        { "id": "a", "texte": "His sample, though smaller, was more representative", "correct": true, "explication": "Representativeness matters more than size." },
+        { "id": "b", "texte": "He had surveyed more people", "correct": false, "explication": "The Digest had received far more responses." },
+        { "id": "c", "texte": "He knew Roosevelt personally", "correct": false, "explication": "Irrelevant." },
+        { "id": "d", "texte": "He used television", "correct": false, "explication": "Anachronism." }
       ]
     },
     {
       "id": "q.cva.mesure.002", "notion": "cva.mesure.etudes", "format": "multiple", "niveau": 1, "competence": "memoriser",
-      "enonce": "Associez correctement les figures et les outils.",
+      "enonce": "Match the figures with the right tools.",
       "choix": [
-        { "id": "a", "texte": "Nielsen : mesure d'audience radio et télévision", "correct": true, "explication": "Nielsen ratings." },
-        { "id": "b", "texte": "Dichter : recherche de motivation", "correct": true, "explication": "Années 1950." },
-        { "id": "c", "texte": "Packard : critique de la persuasion cachée", "correct": true, "explication": "The Hidden Persuaders, 1957." },
-        { "id": "d", "texte": "Gallup : invention de la télévision", "correct": false, "explication": "Gallup est un pionnier des sondages." }
+        { "id": "a", "texte": "Nielsen: radio and television audience measurement", "correct": true, "explication": "Nielsen ratings." },
+        { "id": "b", "texte": "Dichter: motivation research", "correct": true, "explication": "The 1950s." },
+        { "id": "c", "texte": "Packard: critique of hidden persuasion", "correct": true, "explication": "The Hidden Persuaders, 1957." },
+        { "id": "d", "texte": "Gallup: invention of television", "correct": false, "explication": "Gallup was a pioneer of polling." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cva.mesure.001", "notions": ["cva.mesure.etudes"],
-      "question": "Comment la publicité américaine mesure-t-elle son public ?",
-      "reponse": "Gallup : sondages par échantillon (Young & Rubicam 1932, AIPO 1935, prévision juste de 1936 contre le Literary Digest). Nielsen (1923) : mesure d'audience radio puis TV, qui fixe le prix de l'espace. Dichter : motivation research (années 1950), critiquée par Packard (1957). Hopkins : tests et coupons.",
-      "indispensables": ["Échantillon représentatif", "Audience et prix de l'espace", "Motivation research"]
+      "question": "How does American advertising measure its audience?",
+      "reponse": "Gallup: sample surveys (Young & Rubicam 1932, AIPO 1935, accurate 1936 forecast against the Literary Digest). Nielsen (1923): radio then TV audience measurement, which sets the price of space. Dichter: motivation research (1950s), criticized by Packard (1957). Hopkins: tests and coupons.",
+      "indispensables": ["Representative sample", "Audience and price of space", "Motivation research"]
     }
   ]
 }

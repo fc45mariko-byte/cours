@@ -3,97 +3,97 @@
   "notions": [
     {
       "id": "cvb.institutions.parlement",
-      "titre": "Parlement et gouvernement",
+      "titre": "Parliament and government",
       "niveau": "P",
       "prerequis": [],
       "connexes": ["cvb.institutions.partis", "dcl.systemes.statutes"],
-      "question": "Comment fonctionnent les institutions britanniques, sans constitution écrite unique ?",
-      "definition": "Le Royaume-Uni est une monarchie constitutionnelle et un régime parlementaire. Sa constitution n'est pas codifiée en un seul texte : elle repose sur des lois (statutes), des décisions de justice, des conventions constitutionnelles et des textes historiques. Le Parlement de Westminster comprend le monarque, la Chambre des communes (House of Commons), élue au suffrage universel (650 sièges), et la Chambre des lords (House of Lords), non élue (pairs à vie nommés, pairs héréditaires en nombre limité, évêques de l'Église d'Angleterre). Selon le principe de souveraineté parlementaire, le Parlement peut adopter ou abroger toute loi. Le Premier ministre est le chef du parti qui dispose de la majorité aux Communes ; il forme le gouvernement et le cabinet, collectivement responsables devant les Communes. Le monarque règne mais ne gouverne pas.",
+      "question": "How do British institutions work without a single written constitution?",
+      "definition": "The United Kingdom is a constitutional monarchy and a parliamentary system. Its constitution is not codified in a single text: it rests on Acts of Parliament (statutes), court decisions, constitutional conventions and historical documents. The Westminster Parliament comprises the monarch, the House of Commons, elected by universal suffrage (650 seats), and the House of Lords, which is unelected (appointed life peers, a limited number of hereditary peers, bishops of the Church of England). Under the principle of parliamentary sovereignty, Parliament can pass or repeal any law. The Prime Minister is the leader of the party that holds a majority in the Commons; he or she forms the government and the Cabinet, which are collectively responsible to the Commons. The monarch reigns but does not rule.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Institution", "Rôle"], "lignes": [
-          ["Monarque", "Chef de l'État ; rôle symbolique et cérémoniel (sanction royale des lois, discours du Trône)"],
-          ["House of Commons", "650 députés (MPs) élus ; vote les lois et le budget ; contrôle le gouvernement"],
-          ["House of Lords", "Chambre non élue ; examine et amende les textes ; pouvoir de retarder limité par les Parliament Acts (1911, 1949)"],
-          ["Prime Minister et Cabinet", "Gouvernement issu de la majorité aux Communes, responsabilité collective"],
-          ["Opposition officielle", "Second parti aux Communes, « shadow cabinet »"]
+        { "type": "tableau", "entetes": ["Institution", "Role"], "lignes": [
+          ["Monarch", "Head of State; symbolic and ceremonial role (Royal Assent to bills, King's/Queen's Speech)"],
+          ["House of Commons", "650 elected Members of Parliament (MPs); passes laws and the budget; scrutinises the government"],
+          ["House of Lords", "Unelected chamber; examines and amends bills; power of delay limited by the Parliament Acts (1911, 1949)"],
+          ["Prime Minister and Cabinet", "Government drawn from the majority in the Commons, collective responsibility"],
+          ["Official Opposition", "Second-largest party in the Commons, \"shadow cabinet\""]
         ] }
       ],
       "termes": [
-        { "fr": "Monarchie constitutionnelle", "en": "constitutional monarchy", "es": "monarquía constitucional", "definition": "Monarchie dont les pouvoirs sont encadrés par la constitution." },
-        { "fr": "Chambre des communes", "en": "House of Commons", "es": "Cámara de los Comunes", "definition": "Chambre basse élue." },
-        { "fr": "Souveraineté parlementaire", "en": "parliamentary sovereignty", "es": "soberanía parlamentaria", "definition": "Supériorité de la loi du Parlement." },
-        { "fr": "Cabinet fantôme", "en": "shadow cabinet", "es": "gabinete en la sombra", "definition": "Équipe de l'opposition face aux ministres." }
+        { "fr": "Monarchie constitutionnelle", "en": "constitutional monarchy", "es": "monarquía constitucional", "definition": "A monarchy whose powers are limited by the constitution." },
+        { "fr": "Chambre des communes", "en": "House of Commons", "es": "Cámara de los Comunes", "definition": "The elected lower house." },
+        { "fr": "Souveraineté parlementaire", "en": "parliamentary sovereignty", "es": "soberanía parlamentaria", "definition": "The supremacy of Acts of Parliament." },
+        { "fr": "Cabinet fantôme", "en": "shadow cabinet", "es": "gabinete en la sombra", "definition": "The Opposition team that mirrors the ministers." }
       ],
-      "exemple": { "fictif": true, "texte": "Dans un commentaire, on rappellera qu'un Premier ministre britannique peut changer en cours de législature sans élection générale, lorsque son parti change de chef : c'est la majorité aux Communes, et non un vote populaire direct, qui fonde son pouvoir." },
+      "exemple": { "fictif": true, "texte": "In a commentary, one would point out that a British Prime Minister can change in the middle of a Parliament without a general election, when his or her party changes leader: it is the majority in the Commons, not a direct popular vote, that underpins the Prime Minister's power." },
       "confusions": [
-        { "a": "Constitution non codifiée", "b": "Absence de constitution", "explication": "Le Royaume-Uni a une constitution, mais dispersée entre lois, conventions et jurisprudence." }
+        { "a": "Uncodified constitution", "b": "No constitution", "explication": "The United Kingdom does have a constitution, but it is spread across statutes, conventions and case law." }
       ],
-      "verification": ["Sur quoi repose le pouvoir du Premier ministre britannique ?"],
+      "verification": ["What is the British Prime Minister's power based on?"],
       "sources": ["src.uk-parliament"],
       "verifieLe": "2026-10-15",
-      "aVerifier": "Composition de la Chambre des lords (réforme des pairs héréditaires engagée en 2024-2025) : vérifier sur parliament.uk."
+      "aVerifier": "Composition of the House of Lords (reform of hereditary peers launched in 2024-2025): check on parliament.uk."
     },
     {
       "id": "cvb.institutions.partis",
-      "titre": "Partis et système électoral",
+      "titre": "Parties and the electoral system",
       "niveau": "P",
       "prerequis": ["cvb.institutions.parlement"],
       "connexes": ["cvb.new-labour.third-way", "cvb.thatcher.monetarisme"],
-      "question": "Pourquoi deux partis dominent-ils la vie politique britannique ?",
-      "definition": "Les élections générales à la Chambre des communes se déroulent au scrutin uninominal majoritaire à un tour (first past the post) : dans chacune des 650 circonscriptions, le candidat arrivé en tête est élu, même sans majorité absolue. Ce système favorise les deux grands partis, le Parti conservateur (Conservative Party, « Tories ») et le Parti travailliste (Labour Party), et désavantage les partis dont les voix sont dispersées (Libéraux-démocrates, Reform UK, Verts), tout en permettant aux partis régionalement concentrés (Scottish National Party) d'obtenir de nombreux sièges. Il produit souvent des majorités nettes avec une minorité des voix. Un référendum de 2011 a rejeté le passage au vote alternatif. Les élections de juillet 2024 ont ramené les travaillistes au pouvoir avec une large majorité.",
+      "question": "Why do two parties dominate British political life?",
+      "definition": "General elections to the House of Commons use the single-member plurality system (first past the post): in each of the 650 constituencies, the candidate who comes first is elected, even without an absolute majority. This system favours the two main parties, the Conservative Party (\"Tories\") and the Labour Party, and disadvantages parties whose votes are spread thinly (Liberal Democrats, Reform UK, Greens), while allowing regionally concentrated parties (Scottish National Party) to win many seats. It often produces clear majorities on a minority of the vote. A 2011 referendum rejected a switch to the Alternative Vote. The July 2024 general election returned Labour to power with a large majority.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Parti", "Positionnement (simplifié)"], "lignes": [
-          ["Conservative Party", "Droite ; libre marché, souveraineté nationale"],
-          ["Labour Party", "Gauche modérée ; services publics, syndicats historiquement"],
-          ["Liberal Democrats", "Centre ; libertés, pro-européens"],
-          ["Scottish National Party", "Indépendance de l'Écosse"],
-          ["Reform UK", "Droite populiste, anti-immigration"]
+        { "type": "tableau", "entetes": ["Party", "Position (simplified)"], "lignes": [
+          ["Conservative Party", "Right; free market, national sovereignty"],
+          ["Labour Party", "Moderate left; public services, historically the trade unions"],
+          ["Liberal Democrats", "Centre; civil liberties, pro-European"],
+          ["Scottish National Party", "Scottish independence"],
+          ["Reform UK", "Populist right, anti-immigration"]
         ] }
       ],
       "termes": [
-        { "fr": "Scrutin majoritaire à un tour", "en": "first past the post (FPTP)", "es": "sistema mayoritario uninominal a una vuelta", "definition": "Le candidat en tête est élu." },
-        { "fr": "Circonscription", "en": "constituency", "es": "circunscripción", "definition": "Territoire élisant un député." },
-        { "fr": "Bipartisme", "en": "two-party system", "es": "bipartidismo", "definition": "Domination de deux partis." }
+        { "fr": "Scrutin majoritaire à un tour", "en": "first past the post (FPTP)", "es": "sistema mayoritario uninominal a una vuelta", "definition": "The candidate who comes first is elected." },
+        { "fr": "Circonscription", "en": "constituency", "es": "circunscripción", "definition": "An area that elects one MP." },
+        { "fr": "Bipartisme", "en": "two-party system", "es": "bipartidismo", "definition": "Domination by two parties." }
       ],
-      "exemple": { "fictif": true, "texte": "Avec 35 % des voix réparties uniformément, un parti peut obtenir plus de la moitié des sièges ; avec 15 % dispersés, un autre peut n'en obtenir que quelques-uns : c'est l'effet amplificateur du scrutin majoritaire." },
+      "exemple": { "fictif": true, "texte": "With 35% of the vote spread evenly, one party can win more than half the seats; with 15% spread thinly, another may win only a handful: this is the amplifying effect of the plurality system." },
       "confusions": [
-        { "a": "Tories (conservateurs)", "b": "Whigs (ancêtres des libéraux)", "explication": "Termes historiques ; « Tory » désigne encore couramment un conservateur." }
+        { "a": "Tories (Conservatives)", "b": "Whigs (forerunners of the Liberals)", "explication": "Historical terms; \"Tory\" is still commonly used to mean a Conservative." }
       ],
-      "verification": ["Pourquoi le scrutin majoritaire à un tour favorise-t-il le bipartisme ?"],
+      "verification": ["Why does first past the post favour a two-party system?"],
       "sources": ["src.uk-parliament"],
       "verifieLe": "2026-10-15",
-      "aVerifier": "Rapports de force partisans récents (sondages, élections partielles) : vérifier l'actualité."
+      "aVerifier": "Recent balance of power between the parties (opinion polls, by-elections): check current affairs."
     }
   ],
   "questions": [
     {
       "id": "q.cvb.institutions.001", "notion": "cvb.institutions.parlement", "format": "multiple", "niveau": 1, "competence": "memoriser",
-      "enonce": "Quelles affirmations sur les institutions britanniques sont exactes ?",
+      "enonce": "Which statements about British institutions are correct?",
       "choix": [
-        { "id": "a", "texte": "La constitution n'est pas codifiée dans un texte unique", "correct": true, "explication": "Lois, conventions, jurisprudence." },
-        { "id": "b", "texte": "La Chambre des lords est élue au suffrage universel", "correct": false, "explication": "Elle n'est pas élue." },
-        { "id": "c", "texte": "Le Premier ministre est le chef du parti majoritaire aux Communes", "correct": true, "explication": "Fondement de son pouvoir." },
-        { "id": "d", "texte": "Le monarque gouverne et préside le Conseil des ministres", "correct": false, "explication": "Il règne mais ne gouverne pas." }
+        { "id": "a", "texte": "The constitution is not codified in a single text", "correct": true, "explication": "Statutes, conventions, case law." },
+        { "id": "b", "texte": "The House of Lords is elected by universal suffrage", "correct": false, "explication": "It is not elected." },
+        { "id": "c", "texte": "The Prime Minister is the leader of the majority party in the Commons", "correct": true, "explication": "This is the basis of his or her power." },
+        { "id": "d", "texte": "The monarch governs and chairs Cabinet meetings", "correct": false, "explication": "The monarch reigns but does not rule." }
       ]
     },
     {
       "id": "q.cvb.institutions.002", "notion": "cvb.institutions.partis", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Quel mode de scrutin est utilisé pour élire la Chambre des communes ?",
+      "enonce": "Which electoral system is used to elect the House of Commons?",
       "choix": [
-        { "id": "a", "texte": "Le scrutin uninominal majoritaire à un tour (first past the post)", "correct": true, "explication": "Le candidat arrivé en tête l'emporte." },
-        { "id": "b", "texte": "La proportionnelle intégrale", "correct": false, "explication": "Non." },
-        { "id": "c", "texte": "Le scrutin majoritaire à deux tours", "correct": false, "explication": "Système français." },
-        { "id": "d", "texte": "Le vote alternatif", "correct": false, "explication": "Rejeté par référendum en 2011." }
+        { "id": "a", "texte": "Single-member plurality (first past the post)", "correct": true, "explication": "The candidate who comes first wins." },
+        { "id": "b", "texte": "Full proportional representation", "correct": false, "explication": "No." },
+        { "id": "c", "texte": "Two-round majority voting", "correct": false, "explication": "That is the French system." },
+        { "id": "d", "texte": "The Alternative Vote", "correct": false, "explication": "Rejected by referendum in 2011." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cvb.institutions.001", "notions": ["cvb.institutions.parlement", "cvb.institutions.partis"],
-      "question": "Présentez les institutions britanniques et le système électoral.",
-      "reponse": "Monarchie constitutionnelle, régime parlementaire, constitution non codifiée (lois, conventions, jurisprudence), souveraineté parlementaire. Parlement : monarque, House of Commons (650 MPs élus), House of Lords (non élue, pouvoir de retarder limité). Premier ministre = chef du parti majoritaire aux Communes ; cabinet collectivement responsable ; opposition et shadow cabinet. Scrutin first past the post → bipartisme Conservateurs / Travaillistes, majorités nettes, partis dispersés désavantagés, SNP favorisé par sa concentration.",
-      "indispensables": ["Constitution non codifiée", "Deux chambres", "Origine du pouvoir du PM", "FPTP et effets"],
-      "erreurs": ["Dire que le Royaume-Uni n'a pas de constitution"]
+      "question": "Outline British institutions and the electoral system.",
+      "reponse": "Constitutional monarchy, parliamentary system, uncodified constitution (statutes, conventions, case law), parliamentary sovereignty. Parliament: monarch, House of Commons (650 elected MPs), House of Lords (unelected, limited power of delay). Prime Minister = leader of the majority party in the Commons; Cabinet collectively responsible; Opposition and shadow cabinet. First past the post → two-party system Conservatives / Labour, clear majorities, thinly spread parties disadvantaged, SNP favoured by its concentration.",
+      "indispensables": ["Uncodified constitution", "Two chambers", "Source of the PM's power", "FPTP and its effects"],
+      "erreurs": ["Saying that the United Kingdom has no constitution"]
     }
   ]
 }

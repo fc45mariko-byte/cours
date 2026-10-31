@@ -3,124 +3,124 @@
   "notions": [
     {
       "id": "cve.consolidacion.23f",
-      "titre": "Le 23-F (1981)",
+      "titre": "El 23-F (1981)",
       "niveau": "F",
       "prerequis": ["cve.transicion.constitucion"],
       "connexes": ["cve.consolidacion.gonzalez"],
-      "question": "Pourquoi la tentative de coup d'État du 23 février 1981 renforce-t-elle paradoxalement la démocratie ?",
-      "definition": "Le 23 février 1981, pendant le vote d'investiture de Leopoldo Calvo-Sotelo (successeur d'Adolfo Suárez, démissionnaire depuis fin janvier), le lieutenant-colonel de la Garde civile Antonio Tejero fait irruption au Congrès des députés avec des gardes civils armés et retient les députés et le gouvernement. À Valence, le capitaine général Jaime Milans del Bosch proclame l'état d'exception et fait sortir les chars ; le général Alfonso Armada est impliqué dans la conspiration. Dans la nuit, le roi Juan Carlos, en uniforme de capitaine général, intervient à la télévision pour ordonner le maintien de l'ordre constitutionnel. Le coup échoue et les députés sont libérés le 24 février. L'échec du « 23-F » montre l'isolement des putschistes, renforce la légitimité démocratique du roi et marque symboliquement la fin de la menace militaire, même si le climat (terrorisme d'ETA, crise économique, mécontentement d'une partie de l'armée) reste tendu.",
+      "question": "¿Por qué el intento de golpe de Estado del 23 de febrero de 1981 refuerza, paradójicamente, la democracia?",
+      "definition": "El 23 de febrero de 1981, durante la votación de investidura de Leopoldo Calvo-Sotelo (sucesor de Adolfo Suárez, dimisionario desde finales de enero), el teniente coronel de la Guardia Civil Antonio Tejero irrumpe en el Congreso de los Diputados con guardias civiles armados y retiene a los diputados y al Gobierno. En Valencia, el capitán general Jaime Milans del Bosch proclama el estado de excepción y saca los tanques a la calle; el general Alfonso Armada está implicado en la conspiración. Durante la noche, el rey Juan Carlos, con uniforme de capitán general, interviene en televisión para ordenar el mantenimiento del orden constitucional. El golpe fracasa y los diputados son liberados el 24 de febrero. El fracaso del «23-F» muestra el aislamiento de los golpistas, refuerza la legitimidad democrática del rey y marca simbólicamente el final de la amenaza militar, aunque el clima (terrorismo de ETA, crisis económica, descontento de una parte del ejército) sigue siendo tenso.",
       "fonctionnement": [
         { "type": "etapes", "etapes": [
-          "29 janvier 1981 : démission d'Adolfo Suárez",
-          "23 février, vers 18 h 20 : Tejero prend d'assaut le Congrès pendant le vote d'investiture",
-          "Soirée : état d'exception et chars à Valence (Milans del Bosch)",
-          "Nuit du 23 au 24 : message télévisé du roi en faveur de la Constitution",
-          "24 février : reddition de Tejero, libération des députés",
-          "1982 : procès et condamnation des principaux responsables (Tejero, Milans del Bosch, Armada)"
+          "29 de enero de 1981: dimisión de Adolfo Suárez",
+          "23 de febrero, hacia las 18:20: Tejero asalta el Congreso durante la votación de investidura",
+          "Por la tarde-noche: estado de excepción y tanques en Valencia (Milans del Bosch)",
+          "Noche del 23 al 24: mensaje televisado del rey a favor de la Constitución",
+          "24 de febrero: rendición de Tejero, liberación de los diputados",
+          "1982: juicio y condena de los principales responsables (Tejero, Milans del Bosch, Armada)"
         ] }
       ],
       "termes": [
-        { "fr": "Coup d'État", "en": "coup d'état / attempted coup", "es": "golpe de Estado / intentona golpista", "definition": "Prise illégale du pouvoir par la force." },
-        { "fr": "Putschiste", "en": "putschist / coup plotter", "es": "golpista", "definition": "Auteur ou partisan d'un coup d'État." },
-        { "fr": "Investiture", "en": "investiture vote", "es": "investidura", "definition": "Vote du Congrès accordant sa confiance au candidat à la présidence du gouvernement." }
+        { "fr": "Coup d'État", "en": "coup d'état / attempted coup", "es": "golpe de Estado / intentona golpista", "definition": "Toma ilegal del poder por la fuerza." },
+        { "fr": "Putschiste", "en": "putschist / coup plotter", "es": "golpista", "definition": "Autor o partidario de un golpe de Estado." },
+        { "fr": "Investiture", "en": "investiture vote", "es": "investidura", "definition": "Votación del Congreso que otorga su confianza al candidato a la presidencia del Gobierno." }
       ],
-      "exemple": { "fictif": false, "texte": "Les images du lieutenant-colonel Tejero, pistolet à la main, à la tribune du Congrès, enregistrées par la télévision publique, sont devenues l'un des symboles les plus connus de l'histoire démocratique espagnole.", "source": "src.julia" },
+      "exemple": { "fictif": false, "texte": "Las imágenes del teniente coronel Tejero, pistola en mano, en la tribuna del Congreso, grabadas por la televisión pública, se han convertido en uno de los símbolos más conocidos de la historia democrática española.", "source": "src.julia" },
       "confusions": [
-        { "a": "23-F (1981, tentative militaire)", "b": "11-M (2004, attentats terroristes)", "explication": "Deux dates abrégées de la même façon, mais deux événements sans rapport." }
+        { "a": "23-F (1981, intentona militar)", "b": "11-M (2004, atentados terroristas)", "explication": "Dos fechas abreviadas de la misma manera, pero dos acontecimientos sin relación." }
       ],
-      "verification": ["Quel rôle le roi a-t-il joué le 23-F et quelles en ont été les conséquences pour la monarchie ?"],
+      "verification": ["¿Qué papel desempeñó el rey el 23-F y qué consecuencias tuvo para la monarquía?"],
       "sources": ["src.julia"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cve.consolidacion.gonzalez",
-      "titre": "Les gouvernements González, l'entrée dans la CEE et 1992",
+      "titre": "Los gobiernos de González, la entrada en la CEE y 1992",
       "niveau": "F",
       "prerequis": ["cve.consolidacion.23f"],
       "connexes": ["cve.consolidacion.aznar", "cve.autonomias.pais-vasco"],
-      "question": "Comment les socialistes au pouvoir (1982-1996) ancrent-ils l'Espagne dans l'Europe et la modernité ?",
-      "definition": "Aux élections du 28 octobre 1982, le PSOE de Felipe González obtient la majorité absolue (202 sièges sur 350) : c'est la première alternance depuis la guerre civile, souvent considérée comme la fin de la Transition. Les gouvernements González (1982-1996) mènent une reconversion industrielle douloureuse, développent l'État-providence (généralisation de la santé publique, éducation) et réforment l'armée. L'Espagne adhère à la CEE le 1er janvier 1986 (traité signé le 12 juin 1985, en même temps que le Portugal) ; le maintien dans l'OTAN, où le pays était entré en 1982, est approuvé par référendum le 12 mars 1986. 1992 symbolise la modernisation : Jeux olympiques de Barcelone, Exposition universelle de Séville, premier TGV (AVE) Madrid-Séville. La période connaît aussi la grève générale du 14 décembre 1988, des affaires de corruption et le scandale des GAL (groupes antiterroristes liés à l'appareil d'État, 1983-1987). Le PSOE perd les élections de mars 1996 face au PP.",
+      "question": "¿Cómo anclan los socialistas en el poder (1982-1996) a España en Europa y en la modernidad?",
+      "definition": "En las elecciones del 28 de octubre de 1982, el PSOE de Felipe González obtiene la mayoría absoluta (202 escaños de 350): es la primera alternancia desde la guerra civil, a menudo considerada el final de la Transición. Los gobiernos de González (1982-1996) llevan a cabo una dolorosa reconversión industrial, desarrollan el Estado del bienestar (universalización de la sanidad pública, educación) y reforman el ejército. España se adhiere a la CEE el 1 de enero de 1986 (tratado firmado el 12 de junio de 1985, al mismo tiempo que Portugal); la permanencia en la OTAN, en la que el país había entrado en 1982, se aprueba en referéndum el 12 de marzo de 1986. 1992 simboliza la modernización: Juegos Olímpicos de Barcelona, Exposición Universal de Sevilla, primer tren de alta velocidad (AVE) Madrid-Sevilla. El periodo conoce también la huelga general del 14 de diciembre de 1988, casos de corrupción y el escándalo de los GAL (grupos antiterroristas vinculados al aparato del Estado, 1983-1987). El PSOE pierde las elecciones de marzo de 1996 frente al PP.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Date", "Événement"], "lignes": [
-          ["28 octobre 1982", "Victoire du PSOE (202 sièges)"],
-          ["1er janvier 1986", "Entrée dans la CEE"],
-          ["12 mars 1986", "Référendum sur le maintien dans l'OTAN (oui)"],
-          ["14 décembre 1988", "Grève générale (14-D)"],
-          ["1992", "JO de Barcelone, Expo de Séville, AVE"],
-          ["3 mars 1996", "Victoire du PP"]
+        { "type": "tableau", "entetes": ["Fecha", "Acontecimiento"], "lignes": [
+          ["28 de octubre de 1982", "Victoria del PSOE (202 escaños)"],
+          ["1 de enero de 1986", "Entrada en la CEE"],
+          ["12 de marzo de 1986", "Referéndum sobre la permanencia en la OTAN (sí)"],
+          ["14 de diciembre de 1988", "Huelga general (14-D)"],
+          ["1992", "JJ. OO. de Barcelona, Expo de Sevilla, AVE"],
+          ["3 de marzo de 1996", "Victoria del PP"]
         ] }
       ],
       "termes": [
-        { "fr": "Alternance", "en": "transfer of power / alternation", "es": "alternancia", "definition": "Passage du pouvoir de la majorité à l'opposition par les élections." },
-        { "fr": "Reconversion industrielle", "en": "industrial restructuring", "es": "reconversión industrial", "definition": "Fermeture ou modernisation des industries en déclin (sidérurgie, chantiers navals)." },
-        { "fr": "Adhésion", "en": "accession", "es": "adhesión", "definition": "Entrée d'un État dans une organisation internationale." }
+        { "fr": "Alternance", "en": "transfer of power / alternation", "es": "alternancia", "definition": "Paso del poder de la mayoría a la oposición mediante elecciones." },
+        { "fr": "Reconversion industrielle", "en": "industrial restructuring", "es": "reconversión industrial", "definition": "Cierre o modernización de las industrias en declive (siderurgia, astilleros)." },
+        { "fr": "Adhésion", "en": "accession", "es": "adhesión", "definition": "Entrada de un Estado en una organización internacional." }
       ],
-      "exemple": { "fictif": true, "texte": "Une affiche officielle des JO de Barcelone 1992 peut être commentée comme la vitrine d'une Espagne démocratique, européenne et moderne, dix ans après l'arrivée des socialistes au pouvoir." },
+      "exemple": { "fictif": true, "texte": "Un cartel oficial de los JJ. OO. de Barcelona 1992 puede comentarse como el escaparate de una España democrática, europea y moderna, diez años después de la llegada de los socialistas al poder." },
       "confusions": [
-        { "a": "Entrée dans l'OTAN (1982, gouvernement Calvo-Sotelo)", "b": "Référendum de 1986 (maintien, gouvernement González)", "explication": "Le PSOE, d'abord hostile, a fait approuver le maintien par référendum." }
+        { "a": "Entrada en la OTAN (1982, Gobierno de Calvo-Sotelo)", "b": "Referéndum de 1986 (permanencia, Gobierno de González)", "explication": "El PSOE, al principio contrario, hizo aprobar la permanencia en referéndum." }
       ],
-      "verification": ["Pourquoi l'année 1992 est-elle symbolique ?"],
+      "verification": ["¿Por qué el año 1992 es simbólico?"],
       "sources": ["src.julia"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cve.consolidacion.aznar",
-      "titre": "Les gouvernements Aznar et l'euro",
+      "titre": "Los gobiernos de Aznar y el euro",
       "niveau": "F",
       "prerequis": ["cve.consolidacion.gonzalez"],
       "connexes": ["cve.consolidacion.11m", "eec.economia.espana-historia"],
-      "question": "Quelles orientations le Parti populaire de José María Aznar donne-t-il à l'Espagne de 1996 à 2004 ?",
-      "definition": "Vainqueur des élections du 3 mars 1996 sans majorité absolue, José María Aznar (Partido Popular, centre droit) gouverne d'abord avec le soutien des nationalistes catalans (CiU), basques (PNV) et canariens (CC). Sa politique est libérale : privatisations (Telefónica, Repsol, Endesa, Argentaria), réduction du déficit pour respecter les critères de Maastricht. L'Espagne fait partie des pays fondateurs de l'euro (monnaie scripturale le 1er janvier 1999, pièces et billets le 1er janvier 2002). La croissance est forte, portée par la construction et le crédit, et le chômage recule nettement. En mars 2000, le PP obtient la majorité absolue (183 sièges). Le second mandat est marqué par un durcissement face au nationalisme basque, la marée noire du Prestige (2002) et l'alignement sur les États-Unis dans la guerre d'Irak (2003), très impopulaire. Aznar ne se représente pas en 2004 ; Mariano Rajoy est le candidat du PP.",
+      "question": "¿Qué orientaciones da el Partido Popular de José María Aznar a España de 1996 a 2004?",
+      "definition": "Vencedor de las elecciones del 3 de marzo de 1996 sin mayoría absoluta, José María Aznar (Partido Popular, centroderecha) gobierna primero con el apoyo de los nacionalistas catalanes (CiU), vascos (PNV) y canarios (CC). Su política es liberal: privatizaciones (Telefónica, Repsol, Endesa, Argentaria), reducción del déficit para cumplir los criterios de Maastricht. España forma parte de los países fundadores del euro (moneda escritural el 1 de enero de 1999, monedas y billetes el 1 de enero de 2002). El crecimiento es fuerte, impulsado por la construcción y el crédito, y el paro baja claramente. En marzo de 2000, el PP obtiene la mayoría absoluta (183 escaños). El segundo mandato está marcado por un endurecimiento frente al nacionalismo vasco, la marea negra del Prestige (2002) y el alineamiento con Estados Unidos en la guerra de Irak (2003), muy impopular. Aznar no se vuelve a presentar en 2004; Mariano Rajoy es el candidato del PP.",
       "fonctionnement": [
         { "type": "liste", "items": [
-          "1996 : gouvernement minoritaire soutenu par CiU, PNV, CC",
-          "Privatisations et assainissement budgétaire",
-          "1999 / 2002 : l'euro remplace la peseta",
-          "2000 : majorité absolue du PP",
-          "2002 : Prestige ; 2003 : soutien à la guerre d'Irak"
+          "1996: gobierno en minoría apoyado por CiU, PNV y CC",
+          "Privatizaciones y saneamiento presupuestario",
+          "1999 / 2002: el euro sustituye a la peseta",
+          "2000: mayoría absoluta del PP",
+          "2002: Prestige; 2003: apoyo a la guerra de Irak"
         ] },
-        { "type": "attention", "texte": "La croissance de cette période repose en grande partie sur l'immobilier et l'endettement, ce qui prépare la bulle qui éclatera en 2008." }
+        { "type": "attention", "texte": "El crecimiento de este periodo se basa en gran parte en el sector inmobiliario y el endeudamiento, lo que prepara la burbuja que estallará en 2008." }
       ],
       "termes": [
-        { "fr": "Privatisation", "en": "privatisation", "es": "privatización", "definition": "Vente au secteur privé d'entreprises publiques." },
-        { "fr": "Critères de convergence", "en": "convergence criteria", "es": "criterios de convergencia", "definition": "Conditions de Maastricht pour adopter l'euro (déficit, dette, inflation, taux)." },
-        { "fr": "Marée noire", "en": "oil spill", "es": "marea negra", "definition": "Pollution par le pétrole (Prestige, Galice, 2002)." }
+        { "fr": "Privatisation", "en": "privatisation", "es": "privatización", "definition": "Venta al sector privado de empresas públicas." },
+        { "fr": "Critères de convergence", "en": "convergence criteria", "es": "criterios de convergencia", "definition": "Condiciones de Maastricht para adoptar el euro (déficit, deuda, inflación, tipos de interés)." },
+        { "fr": "Marée noire", "en": "oil spill", "es": "marea negra", "definition": "Contaminación por petróleo (Prestige, Galicia, 2002)." }
       ],
-      "exemple": { "fictif": true, "texte": "Un étudiant compare deux discours d'investiture d'Aznar (1996 et 2000) : le premier insiste sur le dialogue avec les nationalistes dont il a besoin, le second, fort de la majorité absolue, sur l'unité de l'Espagne." },
+      "exemple": { "fictif": true, "texte": "Un estudiante compara dos discursos de investidura de Aznar (1996 y 2000): el primero insiste en el diálogo con los nacionalistas, a quienes necesita; el segundo, con la fuerza de la mayoría absoluta, en la unidad de España." },
       "confusions": [
-        { "a": "Entrée dans la CEE (1986, González)", "b": "Passage à l'euro (1999-2002, Aznar)", "explication": "Deux étapes européennes sous deux gouvernements différents." }
+        { "a": "Entrada en la CEE (1986, González)", "b": "Paso al euro (1999-2002, Aznar)", "explication": "Dos etapas europeas bajo dos gobiernos distintos." }
       ],
-      "verification": ["Pourquoi le soutien à la guerre d'Irak pèse-t-il sur la fin du mandat Aznar ?"],
+      "verification": ["¿Por qué el apoyo a la guerra de Irak pesa sobre el final del mandato de Aznar?"],
       "sources": ["src.julia"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cve.consolidacion.11m",
-      "titre": "Le 11-M (2004)",
+      "titre": "El 11-M (2004)",
       "niveau": "F",
       "prerequis": ["cve.consolidacion.aznar"],
       "connexes": ["cve.autonomias.pais-vasco", "cve.actualidad.crisis-2008"],
-      "question": "Comment les attentats du 11 mars 2004 ont-ils pesé sur les élections trois jours plus tard ?",
-      "definition": "Le 11 mars 2004, trois jours avant les élections générales, dix bombes explosent dans quatre trains de banlieue (Cercanías) à Madrid (Atocha, El Pozo, Santa Eugenia) : environ 190 morts (192 selon le décompte le plus courant) et près de 2 000 blessés. C'est l'attentat le plus meurtrier de l'histoire de l'Espagne. Le gouvernement Aznar attribue d'abord l'attentat à ETA, alors que les indices désignent rapidement une cellule jihadiste. Cette gestion de l'information provoque des manifestations devant les sièges du PP. Le 14 mars, le PSOE de José Luis Rodríguez Zapatero remporte les élections ; le nouveau gouvernement retire les troupes espagnoles d'Irak. Le procès (2007) confirme la responsabilité d'une cellule islamiste et écarte ETA.",
+      "question": "¿Cómo influyeron los atentados del 11 de marzo de 2004 en las elecciones celebradas tres días después?",
+      "definition": "El 11 de marzo de 2004, tres días antes de las elecciones generales, diez bombas estallan en cuatro trenes de Cercanías en Madrid (Atocha, El Pozo, Santa Eugenia): unos 190 muertos (192 según el recuento más habitual) y cerca de 2000 heridos. Es el atentado más mortífero de la historia de España. El Gobierno de Aznar atribuye primero el atentado a ETA, aunque los indicios apuntan rápidamente a una célula yihadista. Esta gestión de la información provoca manifestaciones ante las sedes del PP. El 14 de marzo, el PSOE de José Luis Rodríguez Zapatero gana las elecciones; el nuevo Gobierno retira las tropas españolas de Irak. El juicio (2007) confirma la responsabilidad de una célula islamista y descarta a ETA.",
       "fonctionnement": [
         { "type": "etapes", "etapes": [
-          "11 mars 2004 : attentats dans les trains de banlieue de Madrid",
-          "11-13 mars : le gouvernement maintient la piste ETA ; manifestations",
-          "14 mars : victoire du PSOE (Zapatero)",
-          "Avril 2004 : retrait des troupes d'Irak",
-          "2007 : procès et condamnations (cellule jihadiste)"
+          "11 de marzo de 2004: atentados en los trenes de Cercanías de Madrid",
+          "11-13 de marzo: el Gobierno mantiene la pista de ETA; manifestaciones",
+          "14 de marzo: victoria del PSOE (Zapatero)",
+          "Abril de 2004: retirada de las tropas de Irak",
+          "2007: juicio y condenas (célula yihadista)"
         ] }
       ],
       "termes": [
-        { "fr": "Attentat", "en": "terrorist attack / bombing", "es": "atentado", "definition": "Acte de violence visant à terroriser." },
-        { "fr": "Train de banlieue", "en": "commuter train", "es": "tren de Cercanías", "definition": "Réseau ferroviaire suburbain." },
-        { "fr": "Gestion de crise", "en": "crisis management", "es": "gestión de crisis", "definition": "Façon dont les autorités réagissent et communiquent pendant une crise." }
+        { "fr": "Attentat", "en": "terrorist attack / bombing", "es": "atentado", "definition": "Acto violento destinado a aterrorizar." },
+        { "fr": "Train de banlieue", "en": "commuter train", "es": "tren de Cercanías", "definition": "Red ferroviaria suburbana." },
+        { "fr": "Gestion de crise", "en": "crisis management", "es": "gestión de crisis", "definition": "Manera en que las autoridades reaccionan y comunican durante una crisis." }
       ],
-      "exemple": { "fictif": true, "texte": "Un commentaire peut confronter la une d'un quotidien du 12 mars 2004 évoquant ETA et celle du 15 mars annonçant la victoire de Zapatero." },
+      "exemple": { "fictif": true, "texte": "Un comentario puede confrontar la portada de un diario del 12 de marzo de 2004 que alude a ETA y la del 15 de marzo que anuncia la victoria de Zapatero." },
       "confusions": [
-        { "a": "Auteurs réels : cellule jihadiste", "b": "Attribution initiale par le gouvernement : ETA", "explication": "C'est ce décalage qui a nourri la controverse politique." }
+        { "a": "Autores reales: célula yihadista", "b": "Atribución inicial del Gobierno: ETA", "explication": "Este desfase es lo que alimentó la controversia política." }
       ],
-      "verification": ["Pourquoi parle-t-on d'un impact électoral du 11-M ?"],
+      "verification": ["¿Por qué se habla de un impacto electoral del 11-M?"],
       "sources": ["src.julia"],
       "verifieLe": "2026-10-15"
     }
@@ -128,113 +128,113 @@
   "questions": [
     {
       "id": "q.cve.consolidacion.001", "notion": "cve.consolidacion.23f", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Qui fait irruption au Congrès des députés le 23 février 1981 ?",
+      "enonce": "¿Quién irrumpe en el Congreso de los Diputados el 23 de febrero de 1981?",
       "choix": [
-        { "id": "a", "texte": "Le lieutenant-colonel Antonio Tejero", "correct": true, "explication": "À la tête de gardes civils armés." },
-        { "id": "b", "texte": "Le général Franco", "correct": false, "explication": "Mort en 1975." },
-        { "id": "c", "texte": "Adolfo Suárez", "correct": false, "explication": "Il était député et président démissionnaire, présent dans l'hémicycle." },
-        { "id": "d", "texte": "Un commando d'ETA", "correct": false, "explication": "Le 23-F est une tentative militaire." }
+        { "id": "a", "texte": "El teniente coronel Antonio Tejero", "correct": true, "explication": "Al frente de guardias civiles armados." },
+        { "id": "b", "texte": "El general Franco", "correct": false, "explication": "Murió en 1975." },
+        { "id": "c", "texte": "Adolfo Suárez", "correct": false, "explication": "Era diputado y presidente dimisionario, presente en el hemiciclo." },
+        { "id": "d", "texte": "Un comando de ETA", "correct": false, "explication": "El 23-F es una intentona militar." }
       ]
     },
     {
       "id": "q.cve.consolidacion.002", "notion": "cve.consolidacion.23f", "format": "vrai-faux", "niveau": 2, "competence": "comprendre",
-      "enonce": "L'échec du 23-F a renforcé la légitimité démocratique du roi Juan Carlos.",
+      "enonce": "El fracaso del 23-F reforzó la legitimidad democrática del rey Juan Carlos.",
       "choix": [
-        { "id": "v", "texte": "Vrai", "correct": true, "explication": "Son message télévisé en faveur de la Constitution a été décisif." },
-        { "id": "f", "texte": "Faux", "correct": false, "explication": "Le roi est sorti renforcé de l'épisode." }
+        { "id": "v", "texte": "Verdadero", "correct": true, "explication": "Su mensaje televisado a favor de la Constitución fue decisivo." },
+        { "id": "f", "texte": "Falso", "correct": false, "explication": "El rey salió reforzado del episodio." }
       ]
     },
     {
       "id": "q.cve.consolidacion.003", "notion": "cve.consolidacion.gonzalez", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Quand l'Espagne entre-t-elle dans la CEE ?",
+      "enonce": "¿Cuándo entra España en la CEE?",
       "choix": [
-        { "id": "a", "texte": "Le 1er janvier 1986", "correct": true, "explication": "Avec le Portugal ; traité signé le 12 juin 1985." },
-        { "id": "b", "texte": "En 1978", "correct": false, "explication": "Année de la Constitution." },
-        { "id": "c", "texte": "En 1992", "correct": false, "explication": "Année des JO et de l'Expo." },
-        { "id": "d", "texte": "En 1999", "correct": false, "explication": "Lancement de l'euro." }
+        { "id": "a", "texte": "El 1 de enero de 1986", "correct": true, "explication": "Junto con Portugal; tratado firmado el 12 de junio de 1985." },
+        { "id": "b", "texte": "En 1978", "correct": false, "explication": "Año de la Constitución." },
+        { "id": "c", "texte": "En 1992", "correct": false, "explication": "Año de los JJ. OO. y de la Expo." },
+        { "id": "d", "texte": "En 1999", "correct": false, "explication": "Lanzamiento del euro." }
       ]
     },
     {
       "id": "q.cve.consolidacion.004", "notion": "cve.consolidacion.gonzalez", "format": "multiple", "niveau": 2, "competence": "comprendre",
-      "enonce": "Quels événements appartiennent à la période González (1982-1996) ?",
+      "enonce": "¿Qué acontecimientos pertenecen al periodo de González (1982-1996)?",
       "choix": [
-        { "id": "a", "texte": "Le référendum sur l'OTAN (1986)", "correct": true, "explication": "Maintien approuvé." },
-        { "id": "b", "texte": "La grève générale du 14 décembre 1988", "correct": true, "explication": "Contre la politique économique du gouvernement." },
-        { "id": "c", "texte": "Les JO de Barcelone et l'Expo de Séville (1992)", "correct": true, "explication": "Symboles de la modernisation." },
-        { "id": "d", "texte": "La marée noire du Prestige", "correct": false, "explication": "2002, sous Aznar." }
+        { "id": "a", "texte": "El referéndum sobre la OTAN (1986)", "correct": true, "explication": "Se aprueba la permanencia." },
+        { "id": "b", "texte": "La huelga general del 14 de diciembre de 1988", "correct": true, "explication": "Contra la política económica del Gobierno." },
+        { "id": "c", "texte": "Los JJ. OO. de Barcelona y la Expo de Sevilla (1992)", "correct": true, "explication": "Símbolos de la modernización." },
+        { "id": "d", "texte": "La marea negra del Prestige", "correct": false, "explication": "2002, con Aznar." }
       ]
     },
     {
       "id": "q.cve.consolidacion.005", "notion": "cve.consolidacion.aznar", "format": "unique", "niveau": 2, "competence": "distinguer",
-      "enonce": "De qui le gouvernement Aznar dépend-il en 1996 ?",
+      "enonce": "¿De quién depende el Gobierno de Aznar en 1996?",
       "choix": [
-        { "id": "a", "texte": "Des nationalistes catalans, basques et canariens", "correct": true, "explication": "CiU, PNV et CC, faute de majorité absolue." },
-        { "id": "b", "texte": "Du PSOE", "correct": false, "explication": "Principal adversaire." },
-        { "id": "c", "texte": "D'aucun soutien : majorité absolue", "correct": false, "explication": "Elle n'arrive qu'en 2000." },
-        { "id": "d", "texte": "De Podemos", "correct": false, "explication": "Parti créé en 2014." }
+        { "id": "a", "texte": "De los nacionalistas catalanes, vascos y canarios", "correct": true, "explication": "CiU, PNV y CC, a falta de mayoría absoluta." },
+        { "id": "b", "texte": "Del PSOE", "correct": false, "explication": "Principal adversario." },
+        { "id": "c", "texte": "De ningún apoyo: mayoría absoluta", "correct": false, "explication": "No llega hasta 2000." },
+        { "id": "d", "texte": "De Podemos", "correct": false, "explication": "Partido creado en 2014." }
       ]
     },
     {
       "id": "q.cve.consolidacion.006", "notion": "cve.consolidacion.aznar", "format": "vrai-faux", "niveau": 1, "competence": "memoriser",
-      "enonce": "Les pièces et billets en euros circulent en Espagne depuis le 1er janvier 2002.",
+      "enonce": "Las monedas y billetes en euros circulan en España desde el 1 de enero de 2002.",
       "choix": [
-        { "id": "v", "texte": "Vrai", "correct": true, "explication": "L'euro existe sous forme scripturale depuis le 1er janvier 1999." },
-        { "id": "f", "texte": "Faux", "correct": false, "explication": "C'est bien la date de mise en circulation fiduciaire." }
+        { "id": "v", "texte": "Verdadero", "correct": true, "explication": "El euro existe en forma escritural desde el 1 de enero de 1999." },
+        { "id": "f", "texte": "Falso", "correct": false, "explication": "Es en efecto la fecha de puesta en circulación del efectivo." }
       ]
     },
     {
       "id": "q.cve.consolidacion.007", "notion": "cve.consolidacion.11m", "format": "multiple", "niveau": 2, "competence": "comprendre",
-      "enonce": "Quelles affirmations sur le 11-M sont exactes ?",
+      "enonce": "¿Qué afirmaciones sobre el 11-M son correctas?",
       "choix": [
-        { "id": "a", "texte": "Les bombes ont visé des trains de banlieue à Madrid", "correct": true, "explication": "Atocha, El Pozo, Santa Eugenia." },
-        { "id": "b", "texte": "Le gouvernement a d'abord accusé ETA", "correct": true, "explication": "Attribution démentie par l'enquête." },
-        { "id": "c", "texte": "Le PSOE a remporté les élections du 14 mars", "correct": true, "explication": "Zapatero devient président du gouvernement." },
-        { "id": "d", "texte": "Le procès a confirmé la responsabilité d'ETA", "correct": false, "explication": "Il a établi celle d'une cellule jihadiste." }
+        { "id": "a", "texte": "Las bombas tuvieron como objetivo trenes de Cercanías en Madrid", "correct": true, "explication": "Atocha, El Pozo, Santa Eugenia." },
+        { "id": "b", "texte": "El Gobierno acusó primero a ETA", "correct": true, "explication": "Atribución desmentida por la investigación." },
+        { "id": "c", "texte": "El PSOE ganó las elecciones del 14 de marzo", "correct": true, "explication": "Zapatero se convierte en presidente del Gobierno." },
+        { "id": "d", "texte": "El juicio confirmó la responsabilidad de ETA", "correct": false, "explication": "Estableció la de una célula yihadista." }
       ]
     },
     {
       "id": "q.cve.consolidacion.008", "notion": "cve.consolidacion.11m", "format": "unique", "niveau": 3, "competence": "analyser-cas",
-      "enonce": "Pourquoi la gestion gouvernementale de l'information après le 11-M a-t-elle eu un effet politique ?",
+      "enonce": "¿Por qué la gestión gubernamental de la información tras el 11-M tuvo un efecto político?",
       "choix": [
-        { "id": "a", "texte": "Une partie des électeurs a jugé que le gouvernement privilégiait la piste ETA pour des raisons électorales", "correct": true, "explication": "Une piste jihadiste aurait été reliée au soutien à la guerre d'Irak." },
-        { "id": "b", "texte": "Les élections ont été annulées", "correct": false, "explication": "Elles ont eu lieu le 14 mars." },
-        { "id": "c", "texte": "Le gouvernement a immédiatement retiré les troupes d'Irak", "correct": false, "explication": "C'est le gouvernement Zapatero qui l'a fait." },
-        { "id": "d", "texte": "Le roi a dissous le Parlement", "correct": false, "explication": "Aucune dissolution exceptionnelle." }
+        { "id": "a", "texte": "Una parte de los electores consideró que el Gobierno privilegiaba la pista de ETA por motivos electorales", "correct": true, "explication": "Una pista yihadista se habría relacionado con el apoyo a la guerra de Irak." },
+        { "id": "b", "texte": "Las elecciones fueron anuladas", "correct": false, "explication": "Se celebraron el 14 de marzo." },
+        { "id": "c", "texte": "El Gobierno retiró inmediatamente las tropas de Irak", "correct": false, "explication": "Fue el Gobierno de Zapatero quien lo hizo." },
+        { "id": "d", "texte": "El rey disolvió el Parlamento", "correct": false, "explication": "No hubo ninguna disolución excepcional." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cve.consolidacion.001", "notions": ["cve.consolidacion.23f"],
-      "question": "Racontez le 23-F et expliquez sa portée.",
-      "reponse": "23 février 1981 : pendant l'investiture de Calvo-Sotelo, Tejero prend d'assaut le Congrès ; Milans del Bosch sort les chars à Valence ; Armada impliqué. Message télévisé du roi en faveur de la Constitution dans la nuit ; échec le 24. Portée : isolement des putschistes, légitimité accrue du roi, fin symbolique de la menace militaire.",
-      "indispensables": ["Date et acteurs", "Rôle du roi", "Consolidation démocratique"],
-      "erreurs": ["Confondre 23-F et 11-M"]
+      "question": "Relate el 23-F y explique su alcance.",
+      "reponse": "23 de febrero de 1981: durante la investidura de Calvo-Sotelo, Tejero asalta el Congreso; Milans del Bosch saca los tanques en Valencia; Armada implicado. Mensaje televisado del rey a favor de la Constitución durante la noche; fracaso el 24. Alcance: aislamiento de los golpistas, mayor legitimidad del rey, fin simbólico de la amenaza militar.",
+      "indispensables": ["Fecha y actores", "Papel del rey", "Consolidación democrática"],
+      "erreurs": ["Confundir el 23-F y el 11-M"]
     },
     {
       "id": "f.cve.consolidacion.002", "notions": ["cve.consolidacion.gonzalez"],
-      "question": "Quel est le bilan des années González (1982-1996) ?",
-      "reponse": "Victoire du 28 octobre 1982 (202 sièges), première alternance. Reconversion industrielle, État-providence, réforme de l'armée. CEE le 1er janvier 1986, référendum OTAN du 12 mars 1986. 1992 : JO de Barcelone, Expo de Séville, AVE. Ombres : grève générale du 14-D 1988, corruption, GAL. Défaite en 1996.",
-      "indispensables": ["1982", "CEE 1986", "1992", "GAL et corruption"],
-      "relance": "Pourquoi l'élection de 1982 est-elle souvent présentée comme la fin de la Transition ?"
+      "question": "¿Cuál es el balance de los años de González (1982-1996)?",
+      "reponse": "Victoria del 28 de octubre de 1982 (202 escaños), primera alternancia. Reconversión industrial, Estado del bienestar, reforma del ejército. CEE el 1 de enero de 1986, referéndum de la OTAN el 12 de marzo de 1986. 1992: JJ. OO. de Barcelona, Expo de Sevilla, AVE. Sombras: huelga general del 14-D de 1988, corrupción, GAL. Derrota en 1996.",
+      "indispensables": ["1982", "CEE 1986", "1992", "GAL y corrupción"],
+      "relance": "¿Por qué la elección de 1982 se presenta a menudo como el final de la Transición?"
     },
     {
       "id": "f.cve.consolidacion.003", "notions": ["cve.consolidacion.aznar", "cve.consolidacion.11m"],
-      "question": "Résumez les années Aznar et le 11-M.",
-      "reponse": "1996 : PP minoritaire soutenu par CiU, PNV, CC ; privatisations, convergence vers l'euro (1999 / 2002), croissance tirée par la construction. 2000 : majorité absolue. 2002 : Prestige ; 2003 : soutien à la guerre d'Irak. 11 mars 2004 : attentats jihadistes dans les trains de Madrid (≈ 190 morts), attribués d'abord à ETA par le gouvernement ; 14 mars : victoire de Zapatero, retrait d'Irak.",
-      "indispensables": ["Euro", "Majorité absolue 2000", "Irak", "11-M et 14-M"]
+      "question": "Resuma los años de Aznar y el 11-M.",
+      "reponse": "1996: PP en minoría apoyado por CiU, PNV y CC; privatizaciones, convergencia hacia el euro (1999 / 2002), crecimiento impulsado por la construcción. 2000: mayoría absoluta. 2002: Prestige; 2003: apoyo a la guerra de Irak. 11 de marzo de 2004: atentados yihadistas en los trenes de Madrid (≈ 190 muertos), atribuidos primero a ETA por el Gobierno; 14 de marzo: victoria de Zapatero, retirada de Irak.",
+      "indispensables": ["Euro", "Mayoría absoluta de 2000", "Irak", "11-M y 14-M"]
     }
   ],
   "exercices": [
     {
       "id": "e.cve.consolidacion.01", "notions": ["cve.consolidacion.23f", "cve.consolidacion.gonzalez", "cve.consolidacion.aznar", "cve.consolidacion.11m"], "type": "analyse", "niveau": 1, "fictif": false,
-      "titre": "Chronologie de la consolidation démocratique",
-      "enonce": "Associez chaque événement à sa date.",
+      "titre": "Cronología de la consolidación democrática",
+      "enonce": "Asocie cada acontecimiento con su fecha.",
       "questions": [
-        { "id": "1", "consigne": "Le 23-F a lieu en :", "reponse": { "type": "choix", "options": ["1977", "1981", "1986", "2004"], "correcte": 1 }, "correction": ["23 février 1981."] },
-        { "id": "2", "consigne": "La première victoire électorale du PSOE a lieu en :", "reponse": { "type": "choix", "options": ["1977", "1982", "1996", "2004"], "correcte": 1 }, "correction": ["28 octobre 1982."] },
-        { "id": "3", "consigne": "Le PP obtient la majorité absolue en :", "reponse": { "type": "choix", "options": ["1996", "2000", "2004", "2011"], "correcte": 1 }, "correction": ["En 1996 il gouverne en minorité ; majorité absolue en 2000 (et de nouveau en 2011 avec Rajoy)."] },
-        { "id": "4", "consigne": "Combien de jours séparent les attentats du 11-M des élections générales ?", "reponse": { "type": "nombre", "valeur": 3, "tolerance": 0, "unite": "jours" }, "correction": ["11 mars → 14 mars 2004 : 3 jours."] }
+        { "id": "1", "consigne": "El 23-F tiene lugar en:", "reponse": { "type": "choix", "options": ["1977", "1981", "1986", "2004"], "correcte": 1 }, "correction": ["23 de febrero de 1981."] },
+        { "id": "2", "consigne": "La primera victoria electoral del PSOE tiene lugar en:", "reponse": { "type": "choix", "options": ["1977", "1982", "1996", "2004"], "correcte": 1 }, "correction": ["28 de octubre de 1982."] },
+        { "id": "3", "consigne": "El PP obtiene la mayoría absoluta en:", "reponse": { "type": "choix", "options": ["1996", "2000", "2004", "2011"], "correcte": 1 }, "correction": ["En 1996 gobierna en minoría; mayoría absoluta en 2000 (y de nuevo en 2011 con Rajoy)."] },
+        { "id": "4", "consigne": "¿Cuántos días separan los atentados del 11-M de las elecciones generales?", "reponse": { "type": "nombre", "valeur": 3, "tolerance": 0, "unite": "días" }, "correction": ["11 de marzo → 14 de marzo de 2004: 3 días."] }
       ]
     }
   ]

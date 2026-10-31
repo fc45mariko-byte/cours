@@ -3,129 +3,129 @@
   "notions": [
     {
       "id": "cea.methode.ecoute",
-      "titre": "Écoute globale puis ciblée",
+      "titre": "Global then focused listening",
       "niveau": "F",
       "prerequis": ["cea.oral.formes-faibles"],
       "connexes": ["cea.methode.prise-notes", "aec.presse.lecture"],
-      "question": "Comment comprendre un document audio ou vidéo en anglais lors d'une épreuve ?",
-      "definition": "La compréhension orale procède par étapes. Avant l'écoute : lire la consigne et le titre, anticiper le thème et le vocabulaire probable. Première écoute globale : identifier la situation (qui parle, à qui, où, pourquoi), le type de document (interview, journal, conférence), le thème général et le ton. Écoutes suivantes ciblées : repérer les informations précises (chiffres, noms, dates, causes, conséquences, opinions), en s'appuyant sur les mots accentués, les mots transparents et les connecteurs (but, however, so, because). On tolère de ne pas tout comprendre : on reconstruit le sens à partir des éléments identifiés et du contexte.",
+      "question": "How do you understand an audio or video document in English during an exam?",
+      "definition": "Listening comprehension works in stages. Before listening: read the instructions and the title, predict the topic and the likely vocabulary. First, global listening: identify the situation (who is speaking, to whom, where, why), the type of document (interview, news bulletin, lecture), the general topic and the tone. Following, focused listenings: pick out specific information (figures, names, dates, causes, consequences, opinions), relying on stressed words, cognates and connectors (but, however, so, because). You accept that you will not understand everything: you rebuild the meaning from the elements you have identified and from the context.",
       "fonctionnement": [
         { "type": "etapes", "etapes": [
-          "Anticiper : consigne, titre, thème, vocabulaire",
-          "Écoute 1 : situation, locuteurs, thème, ton",
-          "Écoute 2 : idées principales, structure",
-          "Écoute 3 : détails (chiffres, noms, exemples, opinions)",
-          "Reconstruire le sens et vérifier la cohérence"
+          "Predict: instructions, title, topic, vocabulary",
+          "Listening 1: situation, speakers, topic, tone",
+          "Listening 2: main ideas, structure",
+          "Listening 3: details (figures, names, examples, opinions)",
+          "Rebuild the meaning and check that it is coherent"
         ] }
       ],
       "termes": [
-        { "fr": "Compréhension de l'oral", "en": "listening comprehension", "es": "comprensión auditiva", "definition": "Capacité à comprendre un document sonore." },
-        { "fr": "Mot transparent", "en": "cognate", "es": "palabra transparente / cognado", "definition": "Mot proche dans les deux langues." },
-        { "fr": "Anticipation", "en": "prediction", "es": "anticipación", "definition": "Hypothèses sur le contenu avant l'écoute." }
+        { "fr": "Compréhension de l'oral", "en": "listening comprehension", "es": "comprensión auditiva", "definition": "Ability to understand a sound document." },
+        { "fr": "Mot transparent", "en": "cognate", "es": "palabra transparente / cognado", "definition": "Word that is similar in both languages." },
+        { "fr": "Anticipation", "en": "prediction", "es": "anticipación", "definition": "Hypotheses about the content made before listening." }
       ],
-      "exemple": { "fictif": true, "texte": "Document : interview radio de la directrice d'un port britannique. Écoute 1 : il s'agit des conséquences du Brexit sur le trafic. Écoute 2 : trois idées (contrôles plus longs, investissements, nouveaux services). Écoute 3 : chiffres (temps d'attente passé de 20 minutes à 2 heures, 50 millions de livres investis)." },
+      "exemple": { "fictif": true, "texte": "Document: radio interview with the director of a British port. Listening 1: the topic is the consequences of Brexit on traffic. Listening 2: three ideas (longer checks, investment, new services). Listening 3: figures (waiting time up from 20 minutes to 2 hours, 50 million pounds invested)." },
       "confusions": [
-        { "a": "Tout comprendre mot à mot", "b": "Comprendre l'essentiel et les détails demandés", "explication": "L'objectif est le sens, pas la transcription intégrale." }
+        { "a": "Understanding everything word for word", "b": "Understanding the gist and the details required", "explication": "The goal is meaning, not a full transcription." }
       ],
-      "verification": ["Que faut-il repérer lors de la première écoute ?"],
+      "verification": ["What should you identify during the first listening?"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cea.methode.prise-notes",
-      "titre": "La prise de notes",
+      "titre": "Note-taking",
       "niveau": "F",
       "prerequis": ["cea.methode.ecoute"],
       "connexes": ["cea.methode.restitution"],
-      "question": "Comment noter rapidement l'essentiel d'un document oral ?",
-      "definition": "La prise de notes efficace ne cherche pas à tout écrire : elle retient les idées clés, les chiffres et les liens logiques, à l'aide d'abréviations et de symboles (↑ hausse, ↓ baisse, → conséquence, ≠ opposition, = égal, + ajout, ∵ parce que), de mots-clés plutôt que de phrases, et d'une mise en page aérée (colonnes : thème / idées / détails ; ou carte mentale). On peut noter en anglais pour gagner du temps, puis reformuler en français si la restitution l'exige. Les chiffres et noms propres sont notés immédiatement.",
+      "question": "How do you quickly note down the essentials of an oral document?",
+      "definition": "Effective note-taking does not try to write everything down: it captures key ideas, figures and logical links, using abbreviations and symbols (↑ increase, ↓ decrease, → consequence, ≠ contrast, = equal, + addition, ∵ because), keywords rather than sentences, and an uncluttered layout (columns: topic / ideas / details; or a mind map). You can take notes in English to save time, then rephrase in French if the restitution requires it. Figures and proper nouns are noted immediately.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Symbole / abréviation", "Sens"], "lignes": [
-          ["↑ / ↓", "hausse / baisse"],
-          ["→", "entraîne, donc"],
-          ["≠", "opposition, différent"],
+        { "type": "tableau", "entetes": ["Symbol / abbreviation", "Meaning"], "lignes": [
+          ["↑ / ↓", "increase / decrease"],
+          ["→", "leads to, therefore"],
+          ["≠", "contrast, different"],
           ["b/c", "because"],
           ["w/ ; w/o", "with ; without"],
           ["govt, mkt, co.", "government, market, company"],
-          ["e.g. ; i.e.", "par exemple ; c'est-à-dire"]
+          ["e.g. ; i.e.", "for example ; that is"]
         ] }
       ],
       "termes": [
-        { "fr": "Prise de notes", "en": "note-taking", "es": "toma de apuntes", "definition": "Technique pour noter l'essentiel rapidement." },
-        { "fr": "Carte mentale", "en": "mind map", "es": "mapa mental", "definition": "Représentation arborescente des idées." }
+        { "fr": "Prise de notes", "en": "note-taking", "es": "toma de apuntes", "definition": "Technique for noting down the essentials quickly." },
+        { "fr": "Carte mentale", "en": "mind map", "es": "mapa mental", "definition": "Tree-like representation of ideas." }
       ],
-      "exemple": { "fictif": true, "texte": "« Port traffic ↓ 15% since 2021 b/c customs checks → waiting time 20 min → 2 h. Govt + port invest £50m (new lanes). Manager: optimistic, 2027. »" },
+      "exemple": { "fictif": true, "texte": "\"Port traffic ↓ 15% since 2021 b/c customs checks → waiting time 20 min → 2 h. Govt + port invest £50m (new lanes). Manager: optimistic, 2027.\"" },
       "confusions": [
-        { "a": "Notes", "b": "Transcription", "explication": "Écrire des phrases complètes fait perdre la suite du document." }
+        { "a": "Notes", "b": "Transcription", "explication": "Writing full sentences makes you miss the rest of the document." }
       ],
-      "verification": ["Proposez cinq symboles utiles pour la prise de notes."],
+      "verification": ["Suggest five useful symbols for note-taking."],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cea.methode.restitution",
-      "titre": "La restitution : le compte rendu",
+      "titre": "Restitution: the report",
       "niveau": "F",
       "prerequis": ["cea.methode.prise-notes"],
       "connexes": ["aec.presse.synthese", "red.argumentation.paragraphe"],
-      "question": "Comment rendre compte d'un document oral de façon claire et fidèle ?",
-      "definition": "Le compte rendu restitue, en français ou en anglais selon la consigne, le contenu d'un document oral : présentation du document (nature, source, locuteurs, thème), puis les idées principales dans un ordre logique (pas forcément celui du document), avec les détails significatifs (chiffres, exemples) ; éventuellement le point de vue des locuteurs (attribué : « selon la directrice… »). Il est objectif, rédigé en phrases complètes, avec des connecteurs, et respecte la longueur demandée. On ne restitue que ce qui a été compris et entendu, sans inventer.",
+      "question": "How do you report on an oral document clearly and faithfully?",
+      "definition": "The report renders, in French or in English depending on the instructions, the content of an oral document: a presentation of the document (type, source, speakers, topic), then the main ideas in a logical order (not necessarily that of the document), with the significant details (figures, examples); where relevant, the speakers' points of view (attributed: \"according to the director…\"). It is objective, written in full sentences with connectors, and respects the required length. You only report what you have understood and heard, without inventing anything.",
       "fonctionnement": [
         { "type": "etapes", "etapes": [
-          "Phrase de présentation : type de document, source, locuteurs, thème",
-          "Idées principales regroupées logiquement",
-          "Détails significatifs (chiffres, exemples)",
-          "Points de vue attribués à leurs auteurs",
-          "Phrase de conclusion"
+          "Introductory sentence: type of document, source, speakers, topic",
+          "Main ideas grouped logically",
+          "Significant details (figures, examples)",
+          "Points of view attributed to their authors",
+          "Concluding sentence"
         ] }
       ],
       "termes": [
-        { "fr": "Compte rendu", "en": "report / account / summary", "es": "resumen / informe", "definition": "Restitution fidèle d'un document." },
-        { "fr": "Locuteur", "en": "speaker", "es": "hablante / interlocutor", "definition": "Personne qui parle." }
+        { "fr": "Compte rendu", "en": "report / account / summary", "es": "resumen / informe", "definition": "Faithful rendering of a document." },
+        { "fr": "Locuteur", "en": "speaker", "es": "hablante / interlocutor", "definition": "Person who is speaking." }
       ],
-      "exemple": { "fictif": true, "texte": "« Ce document est un extrait d'une interview diffusée par une radio britannique, dans laquelle la directrice du port de Douvres évoque les conséquences du Brexit. Elle explique que le trafic a baissé de 15 % depuis 2021 en raison des contrôles douaniers… »" },
+      "exemple": { "fictif": true, "texte": "\"This document is an excerpt from an interview broadcast by a British radio station, in which the director of the port of Dover discusses the consequences of Brexit. She explains that traffic has fallen by 15% since 2021 because of customs checks…\"" },
       "confusions": [
-        { "a": "Compte rendu", "b": "Commentaire personnel", "explication": "Le compte rendu reste fidèle au document ; l'avis personnel n'est donné que si la consigne le demande." }
+        { "a": "Report", "b": "Personal commentary", "explication": "The report stays faithful to the document; a personal opinion is given only if the instructions ask for it." }
       ],
-      "verification": ["Que doit contenir la première phrase d'un compte rendu ?"],
+      "verification": ["What should the first sentence of a report contain?"],
       "verifieLe": "2026-10-15"
     }
   ],
   "questions": [
     {
       "id": "q.cea.methode.001", "notion": "cea.methode.ecoute", "format": "unique", "niveau": 1, "competence": "comprendre",
-      "enonce": "Que faut-il faire avant la première écoute ?",
+      "enonce": "What should you do before the first listening?",
       "choix": [
-        { "id": "a", "texte": "Lire la consigne et anticiper le thème et le vocabulaire", "correct": true, "explication": "L'anticipation facilite la compréhension." },
-        { "id": "b", "texte": "Écrire tout ce qu'on entendra", "correct": false, "explication": "Impossible et inutile." },
-        { "id": "c", "texte": "Rédiger le compte rendu", "correct": false, "explication": "Il vient après l'écoute." },
-        { "id": "d", "texte": "Rien", "correct": false, "explication": "L'anticipation est une étape clé." }
+        { "id": "a", "texte": "Read the instructions and predict the topic and vocabulary", "correct": true, "explication": "Prediction makes comprehension easier." },
+        { "id": "b", "texte": "Write down everything you will hear", "correct": false, "explication": "Impossible and pointless." },
+        { "id": "c", "texte": "Write the report", "correct": false, "explication": "That comes after listening." },
+        { "id": "d", "texte": "Nothing", "correct": false, "explication": "Prediction is a key step." }
       ]
     },
     {
       "id": "q.cea.methode.002", "notion": "cea.methode.prise-notes", "format": "multiple", "niveau": 1, "competence": "comprendre",
-      "enonce": "Quelles pratiques améliorent la prise de notes ?",
+      "enonce": "Which practices improve note-taking?",
       "choix": [
-        { "id": "a", "texte": "Utiliser des symboles (↑, ↓, →)", "correct": true, "explication": "Gain de temps." },
-        { "id": "b", "texte": "Noter les chiffres immédiatement", "correct": true, "explication": "Ils s'oublient vite." },
-        { "id": "c", "texte": "Écrire des phrases complètes", "correct": false, "explication": "Trop lent." },
-        { "id": "d", "texte": "Noter les mots-clés et les liens logiques", "correct": true, "explication": "Essentiel pour reconstruire le sens." }
+        { "id": "a", "texte": "Using symbols (↑, ↓, →)", "correct": true, "explication": "Saves time." },
+        { "id": "b", "texte": "Noting figures immediately", "correct": true, "explication": "They are quickly forgotten." },
+        { "id": "c", "texte": "Writing full sentences", "correct": false, "explication": "Too slow." },
+        { "id": "d", "texte": "Noting keywords and logical links", "correct": true, "explication": "Essential for rebuilding the meaning." }
       ]
     },
     {
       "id": "q.cea.methode.003", "notion": "cea.methode.restitution", "format": "vrai-faux", "niveau": 1, "competence": "comprendre",
-      "enonce": "Vrai ou faux : dans un compte rendu, on peut compléter les passages non compris par ses propres connaissances, sans le signaler.",
+      "enonce": "True or false: in a report, you may fill in passages you did not understand with your own knowledge, without saying so.",
       "choix": [
-        { "id": "a", "texte": "Vrai", "correct": false, "explication": "On ne restitue que ce que dit le document." },
-        { "id": "b", "texte": "Faux", "correct": true, "explication": "Inventer est une faute de fidélité." }
+        { "id": "a", "texte": "True", "correct": false, "explication": "You only report what the document says." },
+        { "id": "b", "texte": "False", "correct": true, "explication": "Inventing content is a failure of faithfulness." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cea.methode.001", "notions": ["cea.methode.ecoute", "cea.methode.prise-notes", "cea.methode.restitution"],
-      "question": "Décrivez la méthode complète de la compréhension orale : écoute, prise de notes, compte rendu.",
-      "reponse": "Écoute : anticiper (consigne, titre, vocabulaire), écoute globale (situation, locuteurs, thème, ton), écoutes ciblées (idées, chiffres, noms, opinions), reconstruction du sens. Notes : mots-clés, symboles (↑ ↓ → ≠), abréviations, chiffres notés aussitôt, mise en page en colonnes. Compte rendu : présentation du document, idées principales ordonnées, détails, points de vue attribués, phrases complètes, objectivité, longueur respectée.",
-      "indispensables": ["Étapes d'écoute", "Techniques de notes", "Structure du compte rendu", "Fidélité"],
-      "erreurs": ["Chercher à tout transcrire"]
+      "question": "Describe the complete method for listening comprehension: listening, note-taking, report.",
+      "reponse": "Listening: predict (instructions, title, vocabulary), global listening (situation, speakers, topic, tone), focused listenings (ideas, figures, names, opinions), rebuilding the meaning. Notes: keywords, symbols (↑ ↓ → ≠), abbreviations, figures noted at once, column layout. Report: presentation of the document, main ideas in order, details, attributed points of view, full sentences, objectivity, required length respected.",
+      "indispensables": ["Listening stages", "Note-taking techniques", "Structure of the report", "Faithfulness"],
+      "erreurs": ["Trying to transcribe everything"]
     }
   ]
 }

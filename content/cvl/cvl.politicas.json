@@ -3,63 +3,63 @@
   "notions": [
     {
       "id": "cvl.politicas.medellin",
-      "titre": "Medellín et l'urbanisme social",
+      "titre": "Medellín y el urbanismo social",
       "niveau": "F",
       "prerequis": ["cvl.fracturas.violencia"],
       "connexes": ["cvl.politicas.otros", "cvl.informalidad.asentamientos"],
-      "question": "Comment Medellín est-elle devenue un modèle d'« urbanisme social » ?",
-      "definition": "Au début des années 1990, Medellín, marquée par le cartel de Pablo Escobar (tué en décembre 1993), les milices et les groupes paramilitaires, a l'un des taux d'homicide les plus élevés au monde (plus de 350 pour 100 000 habitants en 1991). Dans les années 2000, la municipalité, notamment sous le maire Sergio Fajardo (2004-2007), met en œuvre un « urbanisme social » : concentrer les investissements publics de qualité dans les quartiers informels les plus pauvres des collines (comunas). Les Proyectos Urbanos Integrales (PUI) combinent transport, espaces publics, équipements éducatifs et participation des habitants. Le Metrocable, téléphérique relié au métro (première ligne en 2004), désenclave les comunas du nord-est ; les bibliotecas parque (Biblioteca España, 2007), les écoles et les escaliers mécaniques de la Comuna 13 (2011) deviennent des symboles. La violence a fortement reculé, mais les causes en sont débattues : action publique, recomposition des groupes armés (démobilisation des paramilitaires, contrôle criminel des quartiers), opération militaire Orión en Comuna 13 (2002). Des critiques portent aussi sur la touristification de certains quartiers et la persistance des inégalités.",
+      "question": "¿Cómo se convirtió Medellín en un modelo de «urbanismo social»?",
+      "definition": "A principios de los años noventa, Medellín, marcada por el cártel de Pablo Escobar (abatido en diciembre de 1993), las milicias y los grupos paramilitares, tiene una de las tasas de homicidios más altas del mundo (más de 350 por cada 100 000 habitantes en 1991). En los años 2000, el municipio, sobre todo bajo el alcalde Sergio Fajardo (2004-2007), pone en marcha un «urbanismo social»: concentrar las inversiones públicas de calidad en los barrios informales más pobres de las laderas (comunas). Los Proyectos Urbanos Integrales (PUI) combinan transporte, espacios públicos, equipamientos educativos y participación de los habitantes. El Metrocable, teleférico conectado al metro (primera línea en 2004), saca del aislamiento a las comunas del nororiente; los parques biblioteca (Biblioteca España, 2007), las escuelas y las escaleras eléctricas de la Comuna 13 (2011) se convierten en símbolos. La violencia ha disminuido mucho, pero sus causas se debaten: acción pública, recomposición de los grupos armados (desmovilización de los paramilitares, control criminal de los barrios), operación militar Orión en la Comuna 13 (2002). Las críticas apuntan también a la turistificación de algunos barrios y a la persistencia de las desigualdades.",
       "fonctionnement": [
         { "type": "etapes", "etapes": [
-          "Diagnostic : quartiers informels enclavés, violence, absence de l'État",
-          "Investissement public prioritaire dans les zones les plus pauvres",
-          "Transport : Metrocable relié au métro",
-          "Équipements de qualité : bibliotecas parque, écoles, espaces publics",
-          "Participation des habitants (budget participatif)",
-          "Évaluation : baisse de la violence, débats sur ses causes"
+          "Diagnóstico: barrios informales aislados, violencia, ausencia del Estado",
+          "Inversión pública prioritaria en las zonas más pobres",
+          "Transporte: Metrocable conectado al metro",
+          "Equipamientos de calidad: parques biblioteca, escuelas, espacios públicos",
+          "Participación de los habitantes (presupuesto participativo)",
+          "Evaluación: descenso de la violencia, debates sobre sus causas"
         ] }
       ],
       "termes": [
-        { "fr": "Urbanisme social", "en": "social urbanism", "es": "urbanismo social", "definition": "Investissement urbain de qualité ciblé sur les quartiers pauvres pour réduire les inégalités." },
-        { "fr": "Téléphérique urbain", "en": "urban cable car", "es": "metrocable / teleférico urbano", "definition": "Transport par câble desservant des quartiers en pente." },
-        { "fr": "Bibliothèque-parc", "en": "library park", "es": "biblioteca parque", "definition": "Équipement culturel associé à un espace public dans un quartier populaire." },
-        { "fr": "Budget participatif", "en": "participatory budgeting", "es": "presupuesto participativo", "definition": "Décision par les habitants d'une partie des investissements publics." }
+        { "fr": "Urbanisme social", "en": "social urbanism", "es": "urbanismo social", "definition": "Inversión urbana de calidad dirigida a los barrios pobres para reducir las desigualdades." },
+        { "fr": "Téléphérique urbain", "en": "urban cable car", "es": "metrocable / teleférico urbano", "definition": "Transporte por cable que da servicio a barrios en pendiente." },
+        { "fr": "Bibliothèque-parc", "en": "library park", "es": "biblioteca parque", "definition": "Equipamiento cultural asociado a un espacio público en un barrio popular." },
+        { "fr": "Budget participatif", "en": "participatory budgeting", "es": "presupuesto participativo", "definition": "Decisión por parte de los habitantes sobre una parte de las inversiones públicas." }
       ],
-      "exemple": { "fictif": false, "texte": "Alejandro Echeverri, directeur des projets urbains de Medellín sous Sergio Fajardo, décrit avec Francesco Orsini l'urbanisme social comme une stratégie consistant à intervenir d'abord dans les zones informelles les plus défavorisées.", "source": "src.echeverri-orsini" },
+      "exemple": { "fictif": false, "texte": "Alejandro Echeverri, director de proyectos urbanos de Medellín con Sergio Fajardo, describe junto con Francesco Orsini el urbanismo social como una estrategia que consiste en intervenir primero en las zonas informales más desfavorecidas.", "source": "src.echeverri-orsini" },
       "confusions": [
-        { "a": "Baisse de la violence attribuée à l'urbanisme", "b": "Baisse liée à la recomposition des groupes armés", "explication": "Les deux explications coexistent ; il faut nuancer le récit du « miracle »." }
+        { "a": "Descenso de la violencia atribuido al urbanismo", "b": "Descenso vinculado a la recomposición de los grupos armados", "explication": "Ambas explicaciones coexisten; hay que matizar el relato del «milagro»." }
       ],
-      "verification": ["Pourquoi le Metrocable est-il un symbole de l'urbanisme social ?"],
+      "verification": ["¿Por qué el Metrocable es un símbolo del urbanismo social?"],
       "sources": ["src.echeverri-orsini"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cvl.politicas.otros",
-      "titre": "Autres cas : Bogotá et Curitiba",
+      "titre": "Otros casos: Bogotá y Curitiba",
       "niveau": "A",
       "prerequis": ["cvl.urbanizacion.metropolis"],
       "connexes": ["cvl.politicas.medellin"],
-      "question": "Quelles autres politiques urbaines latino-américaines ont servi de modèle ?",
-      "definition": "Curitiba (Brésil), sous l'impulsion de l'architecte-urbaniste Jaime Lerner (maire à plusieurs reprises à partir de 1971), invente dans les années 1970 un réseau de bus à haut niveau de service (BRT, bus rapid transit) sur voies réservées, avec des stations-tubes où l'on paie avant de monter, et piétonnise une rue commerçante du centre (1972). Ce modèle peu coûteux par rapport au métro a été copié dans le monde entier. À Bogotá, deux maires aux styles opposés marquent les années 1995-2003 : Antanas Mockus mise sur la « cultura ciudadana » (campagnes pédagogiques, mimes réglant la circulation, appel au civisme), tandis qu'Enrique Peñalosa lance le TransMilenio (BRT inauguré en décembre 2000), des pistes cyclables, des parcs et des bibliothèques. La ciclovía dominicale, qui ferme des axes aux voitures depuis les années 1970, a été largement imitée. Ces expériences montrent qu'une politique de transport et d'espace public peut améliorer la ville, mais elles connaissent aussi des limites (saturation du TransMilenio, étalement de Curitiba).",
+      "question": "¿Qué otras políticas urbanas latinoamericanas han servido de modelo?",
+      "definition": "Curitiba (Brasil), por impulso del arquitecto y urbanista Jaime Lerner (alcalde en varias ocasiones a partir de 1971), inventa en los años setenta una red de autobuses de tránsito rápido (BRT, bus rapid transit) en carriles exclusivos, con estaciones tubo donde se paga antes de subir, y peatonaliza una calle comercial del centro (1972). Este modelo, poco costoso en comparación con el metro, ha sido copiado en todo el mundo. En Bogotá, dos alcaldes de estilos opuestos marcan los años 1995-2003: Antanas Mockus apuesta por la «cultura ciudadana» (campañas pedagógicas, mimos que regulan el tráfico, llamamiento al civismo), mientras que Enrique Peñalosa lanza el TransMilenio (BRT inaugurado en diciembre de 2000), ciclorrutas, parques y bibliotecas. La ciclovía dominical, que cierra vías a los coches desde los años setenta, ha sido ampliamente imitada. Estas experiencias muestran que una política de transporte y espacio público puede mejorar la ciudad, pero también tienen límites (saturación del TransMilenio, expansión urbana de Curitiba).",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Ville", "Acteur", "Politique"], "lignes": [
-          ["Curitiba", "Jaime Lerner", "BRT (1974), stations-tubes, rue piétonne (1972)"],
+        { "type": "tableau", "entetes": ["Ciudad", "Actor", "Política"], "lignes": [
+          ["Curitiba", "Jaime Lerner", "BRT (1974), estaciones tubo, calle peatonal (1972)"],
           ["Bogotá", "Antanas Mockus", "Cultura ciudadana"],
-          ["Bogotá", "Enrique Peñalosa", "TransMilenio (2000), pistes cyclables, parcs"],
-          ["Medellín", "Sergio Fajardo", "Urbanisme social, Metrocable"]
+          ["Bogotá", "Enrique Peñalosa", "TransMilenio (2000), ciclorrutas, parques"],
+          ["Medellín", "Sergio Fajardo", "Urbanismo social, Metrocable"]
         ] }
       ],
       "termes": [
-        { "fr": "Bus à haut niveau de service", "en": "bus rapid transit (BRT)", "es": "bus de tránsito rápido (BRT)", "definition": "Bus sur voies réservées avec stations et fréquences proches d'un métro." },
-        { "fr": "Culture citoyenne", "en": "civic culture", "es": "cultura ciudadana", "definition": "Politique visant à modifier les comportements par la pédagogie et la norme sociale." },
-        { "fr": "Piétonnisation", "en": "pedestrianisation", "es": "peatonalización", "definition": "Réservation d'une rue aux piétons." },
-        { "fr": "Piste cyclable", "en": "cycle lane", "es": "ciclorruta / ciclovía", "definition": "Voie réservée aux vélos." }
+        { "fr": "Bus à haut niveau de service", "en": "bus rapid transit (BRT)", "es": "bus de tránsito rápido (BRT)", "definition": "Autobús en carriles exclusivos con estaciones y frecuencias cercanas a las de un metro." },
+        { "fr": "Culture citoyenne", "en": "civic culture", "es": "cultura ciudadana", "definition": "Política que busca modificar los comportamientos mediante la pedagogía y la norma social." },
+        { "fr": "Piétonnisation", "en": "pedestrianisation", "es": "peatonalización", "definition": "Reserva de una calle para los peatones." },
+        { "fr": "Piste cyclable", "en": "cycle lane", "es": "ciclorruta / ciclovía", "definition": "Vía reservada a las bicicletas." }
       ],
-      "exemple": { "fictif": true, "texte": "Une note de synthèse compare le coût d'un kilomètre de BRT et d'un kilomètre de métro pour une ville moyenne fictive, en s'appuyant sur les exemples de Curitiba et de Bogotá." },
+      "exemple": { "fictif": true, "texte": "Una nota de síntesis compara el coste de un kilómetro de BRT y de un kilómetro de metro para una ciudad intermedia ficticia, apoyándose en los ejemplos de Curitiba y Bogotá." },
       "confusions": [
-        { "a": "Ciclovía (fermeture dominicale des rues aux voitures)", "b": "Ciclorruta (piste cyclable permanente)", "explication": "Deux dispositifs distincts à Bogotá." }
+        { "a": "Ciclovía (cierre dominical de las calles a los coches)", "b": "Ciclorruta (carril bici permanente)", "explication": "Dos dispositivos distintos en Bogotá." }
       ],
-      "verification": ["Pourquoi le BRT a-t-il été autant imité ?"],
+      "verification": ["¿Por qué el BRT ha sido tan imitado?"],
       "sources": ["src.onu-habitat"],
       "verifieLe": "2026-10-15"
     }
@@ -67,54 +67,54 @@
   "questions": [
     {
       "id": "q.cvl.politicas.001", "notion": "cvl.politicas.medellin", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Quel équipement de transport symbolise l'urbanisme social de Medellín ?",
+      "enonce": "¿Qué equipamiento de transporte simboliza el urbanismo social de Medellín?",
       "choix": [
-        { "id": "a", "texte": "Le Metrocable, téléphérique relié au métro", "correct": true, "explication": "Première ligne en 2004." },
-        { "id": "b", "texte": "Le TransMilenio", "correct": false, "explication": "BRT de Bogotá." },
-        { "id": "c", "texte": "Le BRT de Curitiba", "correct": false, "explication": "Brésil." },
-        { "id": "d", "texte": "Un aéroport international", "correct": false, "explication": "Sans rapport." }
+        { "id": "a", "texte": "El Metrocable, teleférico conectado al metro", "correct": true, "explication": "Primera línea en 2004." },
+        { "id": "b", "texte": "El TransMilenio", "correct": false, "explication": "BRT de Bogotá." },
+        { "id": "c", "texte": "El BRT de Curitiba", "correct": false, "explication": "Brasil." },
+        { "id": "d", "texte": "Un aeropuerto internacional", "correct": false, "explication": "Sin relación." }
       ]
     },
     {
       "id": "q.cvl.politicas.002", "notion": "cvl.politicas.medellin", "format": "multiple", "niveau": 3, "competence": "analyser-cas",
-      "enonce": "Quels éléments faut-il mentionner pour nuancer le « miracle » de Medellín ?",
+      "enonce": "¿Qué elementos hay que mencionar para matizar el «milagro» de Medellín?",
       "choix": [
-        { "id": "a", "texte": "La recomposition des groupes armés a aussi contribué à la baisse de la violence", "correct": true, "explication": "Démobilisation, contrôle criminel." },
-        { "id": "b", "texte": "La touristification de certains quartiers", "correct": true, "explication": "Comuna 13." },
-        { "id": "c", "texte": "La persistance des inégalités", "correct": true, "explication": "Les quartiers restent pauvres." },
-        { "id": "d", "texte": "L'absence totale d'investissement public", "correct": false, "explication": "L'investissement a été massif." }
+        { "id": "a", "texte": "La recomposición de los grupos armados también contribuyó al descenso de la violencia", "correct": true, "explication": "Desmovilización, control criminal." },
+        { "id": "b", "texte": "La turistificación de algunos barrios", "correct": true, "explication": "Comuna 13." },
+        { "id": "c", "texte": "La persistencia de las desigualdades", "correct": true, "explication": "Los barrios siguen siendo pobres." },
+        { "id": "d", "texte": "La ausencia total de inversión pública", "correct": false, "explication": "La inversión fue masiva." }
       ]
     },
     {
       "id": "q.cvl.politicas.003", "notion": "cvl.politicas.otros", "format": "unique", "niveau": 2, "competence": "distinguer",
-      "enonce": "Quelle politique est associée à Antanas Mockus ?",
+      "enonce": "¿Qué política se asocia a Antanas Mockus?",
       "choix": [
-        { "id": "a", "texte": "La cultura ciudadana", "correct": true, "explication": "Pédagogie du civisme (mimes, campagnes)." },
-        { "id": "b", "texte": "Le Metrocable", "correct": false, "explication": "Medellín." },
-        { "id": "c", "texte": "L'invention du BRT", "correct": false, "explication": "Curitiba, Jaime Lerner." },
-        { "id": "d", "texte": "La construction de quartiers fermés", "correct": false, "explication": "Initiative privée, non une politique publique." }
+        { "id": "a", "texte": "La cultura ciudadana", "correct": true, "explication": "Pedagogía del civismo (mimos, campañas)." },
+        { "id": "b", "texte": "El Metrocable", "correct": false, "explication": "Medellín." },
+        { "id": "c", "texte": "La invención del BRT", "correct": false, "explication": "Curitiba, Jaime Lerner." },
+        { "id": "d", "texte": "La construcción de barrios cerrados", "correct": false, "explication": "Iniciativa privada, no una política pública." }
       ]
     },
     {
       "id": "q.cvl.politicas.004", "notion": "cvl.politicas.otros", "format": "vrai-faux", "niveau": 1, "competence": "memoriser",
-      "enonce": "Le premier grand réseau de bus à haut niveau de service (BRT) a été développé à Curitiba dans les années 1970.",
+      "enonce": "La primera gran red de autobuses de tránsito rápido (BRT) se desarrolló en Curitiba en los años setenta.",
       "choix": [
-        { "id": "v", "texte": "Vrai", "correct": true, "explication": "Sous l'impulsion de Jaime Lerner." },
-        { "id": "f", "texte": "Faux", "correct": false, "explication": "Curitiba est bien la ville pionnière." }
+        { "id": "v", "texte": "Verdadero", "correct": true, "explication": "Por impulso de Jaime Lerner." },
+        { "id": "f", "texte": "Falso", "correct": false, "explication": "Curitiba es efectivamente la ciudad pionera." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cvl.politicas.001", "notions": ["cvl.politicas.medellin"],
-      "question": "Qu'est-ce que l'urbanisme social de Medellín ? Quelles limites ?",
-      "reponse": "Contexte : violence extrême (> 350 homicides / 100 000 hab. en 1991). Fajardo (2004-2007) : investir en priorité dans les comunas pauvres ; PUI ; Metrocable (2004) ; bibliotecas parque (España 2007) ; escaliers mécaniques Comuna 13 (2011) ; participation. Limites : rôle de la recomposition des groupes armés, opération Orión (2002), touristification, inégalités persistantes.",
-      "indispensables": ["Principe", "Metrocable et bibliothèques", "Nuances"]
+      "question": "¿Qué es el urbanismo social de Medellín? ¿Qué límites tiene?",
+      "reponse": "Contexto: violencia extrema (> 350 homicidios / 100 000 hab. en 1991). Fajardo (2004-2007): invertir prioritariamente en las comunas pobres; PUI; Metrocable (2004); parques biblioteca (España 2007); escaleras eléctricas de la Comuna 13 (2011); participación. Límites: papel de la recomposición de los grupos armados, operación Orión (2002), turistificación, desigualdades persistentes.",
+      "indispensables": ["Principio", "Metrocable y bibliotecas", "Matices"]
     },
     {
       "id": "f.cvl.politicas.002", "notions": ["cvl.politicas.otros"],
-      "question": "Que retenir de Curitiba et de Bogotá ?",
-      "reponse": "Curitiba : Jaime Lerner, BRT (1974), stations-tubes, rue piétonne (1972). Bogotá : Mockus et la cultura ciudadana ; Peñalosa, TransMilenio (2000), pistes cyclables, parcs ; ciclovía dominicale. Limites : saturation du TransMilenio, étalement urbain.",
+      "question": "¿Qué hay que retener de Curitiba y Bogotá?",
+      "reponse": "Curitiba: Jaime Lerner, BRT (1974), estaciones tubo, calle peatonal (1972). Bogotá: Mockus y la cultura ciudadana; Peñalosa, TransMilenio (2000), ciclorrutas, parques; ciclovía dominical. Límites: saturación del TransMilenio, expansión urbana.",
       "indispensables": ["BRT", "Cultura ciudadana", "TransMilenio"]
     }
   ]

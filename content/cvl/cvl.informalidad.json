@@ -3,130 +3,130 @@
   "notions": [
     {
       "id": "cvl.informalidad.asentamientos",
-      "titre": "Favelas, villas, barriadas : les quartiers informels",
+      "titre": "Favelas, villas, barriadas: los barrios informales",
       "niveau": "F",
       "prerequis": ["cvl.urbanizacion.exodo"],
       "connexes": ["cvl.informalidad.economia", "cvl.politicas.medellin"],
-      "question": "Comment se forment les quartiers informels latino-américains et comment les nommer ?",
-      "definition": "Faute de logements accessibles, les migrants et les pauvres urbains construisent eux-mêmes leur habitat (autoconstrucción) sur des terrains occupés sans titre (invasiones, tomas de tierra) ou achetés dans des lotissements illégaux, souvent sur des pentes, des zones inondables ou en lointaine périphérie. Ces quartiers portent des noms différents selon les pays : favelas au Brésil, villas miseria en Argentine, barriadas puis pueblos jóvenes au Pérou, colonias populares au Mexique, ranchos ou barrios au Venezuela, campamentos (anciennement poblaciones callampa) au Chili, comunas ou barrios de invasión en Colombie. Ils se caractérisent par l'insécurité foncière, le manque de services (eau, assainissement, voirie) et la densité, mais ils se consolident avec le temps : maisons en dur, étages ajoutés, raccordements, commerces, organisations de quartier. Les politiques ont oscillé entre éradication (expulsions, notamment sous les dictatures), tolérance, régularisation foncière et amélioration sur place (Favela-Bairro à Rio dans les années 1990).",
+      "question": "¿Cómo se forman los barrios informales latinoamericanos y cómo se denominan?",
+      "definition": "A falta de viviendas asequibles, los migrantes y los pobres urbanos construyen ellos mismos su hábitat (autoconstrucción) en terrenos ocupados sin título (invasiones, tomas de tierra) o comprados en loteos ilegales, a menudo en laderas, zonas inundables o en la periferia lejana. Estos barrios reciben nombres distintos según el país: favelas en Brasil, villas miseria en Argentina, barriadas y luego pueblos jóvenes en Perú, colonias populares en México, ranchos o barrios en Venezuela, campamentos (antes poblaciones callampa) en Chile, comunas o barrios de invasión en Colombia. Se caracterizan por la inseguridad en la tenencia del suelo, la falta de servicios (agua, saneamiento, vialidad) y la densidad, pero se consolidan con el tiempo: casas de material, pisos añadidos, conexiones, comercios, organizaciones vecinales. Las políticas han oscilado entre la erradicación (desalojos, sobre todo bajo las dictaduras), la tolerancia, la regularización de la tenencia y el mejoramiento in situ (Favela-Bairro en Río en los años noventa).",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["Pays", "Terme"], "lignes": [
-          ["Brésil", "favela"],
-          ["Argentine", "villa miseria / villa"],
-          ["Pérou", "barriada / pueblo joven / asentamiento humano"],
-          ["Mexique", "colonia popular"],
+        { "type": "tableau", "entetes": ["País", "Término"], "lignes": [
+          ["Brasil", "favela"],
+          ["Argentina", "villa miseria / villa"],
+          ["Perú", "barriada / pueblo joven / asentamiento humano"],
+          ["México", "colonia popular"],
           ["Venezuela", "rancho / barrio"],
-          ["Chili", "campamento / población callampa"],
-          ["Colombie", "barrio de invasión / asentamiento informal"]
+          ["Chile", "campamento / población callampa"],
+          ["Colombia", "barrio de invasión / asentamiento informal"]
         ] },
         { "type": "etapes", "etapes": [
-          "Occupation du terrain ou achat dans un lotissement illégal",
-          "Habitat précaire (bois, tôle)",
-          "Consolidation progressive (briques, étages)",
-          "Revendication de services et de titres de propriété",
-          "Régularisation ou amélioration sur place, parfois expulsion"
+          "Ocupación del terreno o compra en un loteo ilegal",
+          "Vivienda precaria (madera, chapa)",
+          "Consolidación progresiva (ladrillos, pisos)",
+          "Reivindicación de servicios y de títulos de propiedad",
+          "Regularización o mejoramiento in situ, a veces desalojo"
         ] }
       ],
       "termes": [
-        { "fr": "Quartier informel", "en": "informal settlement / slum", "es": "asentamiento informal", "definition": "Quartier construit hors des règles d'urbanisme et de propriété." },
-        { "fr": "Autoconstruction", "en": "self-built housing", "es": "autoconstrucción", "definition": "Construction du logement par ses habitants." },
-        { "fr": "Occupation illégale", "en": "land invasion / squatting", "es": "invasión / toma de tierras", "definition": "Installation sur un terrain sans titre." },
-        { "fr": "Régularisation foncière", "en": "land titling / regularisation", "es": "regularización / titulación de tierras", "definition": "Attribution de titres de propriété aux occupants." }
+        { "fr": "Quartier informel", "en": "informal settlement / slum", "es": "asentamiento informal", "definition": "Barrio construido al margen de las normas urbanísticas y de propiedad." },
+        { "fr": "Autoconstruction", "en": "self-built housing", "es": "autoconstrucción", "definition": "Construcción de la vivienda por sus propios habitantes." },
+        { "fr": "Occupation illégale", "en": "land invasion / squatting", "es": "invasión / toma de tierras", "definition": "Instalación en un terreno sin título." },
+        { "fr": "Régularisation foncière", "en": "land titling / regularisation", "es": "regularización / titulación de tierras", "definition": "Concesión de títulos de propiedad a los ocupantes." }
       ],
-      "exemple": { "fictif": false, "texte": "Mike Davis, dans « Planet of Slums » (2006), place les grandes villes latino-américaines dans un mouvement mondial d'urbanisation de la pauvreté, en soulignant la diversité des statuts fonciers des quartiers informels.", "source": "src.davis-slums" },
-      "contreExemple": "Un grand ensemble de logements sociaux construit par l'État (par exemple les conjuntos habitacionales) n'est pas un quartier informel, même s'il est pauvre.",
+      "exemple": { "fictif": false, "texte": "Mike Davis, en «Planet of Slums» (2006), sitúa las grandes ciudades latinoamericanas dentro de un movimiento mundial de urbanización de la pobreza, subrayando la diversidad de situaciones de tenencia del suelo en los barrios informales.", "source": "src.davis-slums" },
+      "contreExemple": "Un gran conjunto de vivienda social construido por el Estado (por ejemplo, los conjuntos habitacionales) no es un barrio informal, aunque sea pobre.",
       "confusions": [
-        { "a": "Quartier informel (statut juridique et mode de production)", "b": "Quartier pauvre", "explication": "Tous les quartiers pauvres ne sont pas informels, et certains quartiers informels consolidés accueillent des classes moyennes." }
+        { "a": "Barrio informal (estatus jurídico y modo de producción)", "b": "Barrio pobre", "explication": "No todos los barrios pobres son informales, y algunos barrios informales consolidados acogen a clases medias." }
       ],
-      "verification": ["Pourquoi parle-t-on de « consolidation » des quartiers informels ?"],
+      "verification": ["¿Por qué se habla de «consolidación» de los barrios informales?"],
       "sources": ["src.onu-habitat", "src.davis-slums"],
       "verifieLe": "2026-10-15"
     },
     {
       "id": "cvl.informalidad.economia",
-      "titre": "L'économie informelle",
+      "titre": "La economía informal",
       "niveau": "F",
       "prerequis": ["cvl.urbanizacion.exodo"],
       "connexes": ["cvl.informalidad.asentamientos", "cvl.fracturas.segregacion"],
-      "question": "Qu'est-ce que l'économie informelle et pourquoi pèse-t-elle autant en Amérique latine ?",
-      "definition": "L'économie informelle regroupe les activités et emplois qui échappent, en tout ou partie, à l'enregistrement, à la fiscalité et à la protection sociale : vendeurs de rue (vendedores ambulantes), petits ateliers, transport informel, travail domestique non déclaré, recycleurs (cartoneros, catadores). Selon l'OIT, environ la moitié des travailleurs d'Amérique latine et des Caraïbes occupent un emploi informel, avec de fortes différences entre pays. Deux lectures s'opposent : pour Hernando de Soto (« El otro sendero », 1986), l'informalité est une réponse rationnelle à des règles bureaucratiques trop coûteuses, et il faut simplifier les procédures et titrer la propriété ; d'autres analyses y voient d'abord le produit d'une économie qui ne crée pas assez d'emplois formels et d'une exclusion sociale. L'informalité offre une survie et une flexibilité, mais prive les travailleurs de protection (santé, retraite) et l'État de recettes fiscales.",
+      "question": "¿Qué es la economía informal y por qué tiene tanto peso en América Latina?",
+      "definition": "La economía informal reúne las actividades y empleos que escapan, total o parcialmente, al registro, a la fiscalidad y a la protección social: vendedores ambulantes, pequeños talleres, transporte informal, trabajo doméstico no declarado, recicladores (cartoneros, catadores). Según la OIT, alrededor de la mitad de los trabajadores de América Latina y el Caribe tienen un empleo informal, con fuertes diferencias entre países. Se oponen dos lecturas: para Hernando de Soto («El otro sendero», 1986), la informalidad es una respuesta racional a unas normas burocráticas demasiado costosas, y hay que simplificar los trámites y titular la propiedad; otros análisis ven en ella ante todo el producto de una economía que no crea suficiente empleo formal y de una exclusión social. La informalidad ofrece supervivencia y flexibilidad, pero priva a los trabajadores de protección (salud, jubilación) y al Estado de ingresos fiscales.",
       "fonctionnement": [
-        { "type": "tableau", "entetes": ["", "Formel", "Informel"], "lignes": [
-          ["Enregistrement", "Entreprise et contrat déclarés", "Absents ou partiels"],
-          ["Protection sociale", "Oui", "Non"],
-          ["Impôts", "Payés", "Évités"],
-          ["Exemples", "Salarié d'une entreprise déclarée", "Vendeur ambulant, employée domestique non déclarée"]
+        { "type": "tableau", "entetes": ["", "Formal", "Informal"], "lignes": [
+          ["Registro", "Empresa y contrato declarados", "Ausentes o parciales"],
+          ["Protección social", "Sí", "No"],
+          ["Impuestos", "Pagados", "Evadidos"],
+          ["Ejemplos", "Asalariado de una empresa declarada", "Vendedor ambulante, empleada doméstica no declarada"]
         ] }
       ],
       "termes": [
-        { "fr": "Économie informelle", "en": "informal economy", "es": "economía informal", "definition": "Activités échappant à la réglementation, à l'impôt et à la protection sociale." },
-        { "fr": "Vendeur ambulant", "en": "street vendor", "es": "vendedor ambulante", "definition": "Commerçant de rue." },
-        { "fr": "Emploi informel", "en": "informal employment", "es": "empleo informal", "definition": "Emploi sans contrat ni protection sociale." },
-        { "fr": "Recycleur informel", "en": "waste picker", "es": "cartonero / reciclador", "definition": "Personne vivant de la collecte de déchets recyclables." }
+        { "fr": "Économie informelle", "en": "informal economy", "es": "economía informal", "definition": "Actividades que escapan a la regulación, al impuesto y a la protección social." },
+        { "fr": "Vendeur ambulant", "en": "street vendor", "es": "vendedor ambulante", "definition": "Comerciante callejero." },
+        { "fr": "Emploi informel", "en": "informal employment", "es": "empleo informal", "definition": "Empleo sin contrato ni protección social." },
+        { "fr": "Recycleur informel", "en": "waste picker", "es": "cartonero / reciclador", "definition": "Persona que vive de la recogida de residuos reciclables." }
       ],
-      "exemple": { "fictif": false, "texte": "Dans « El otro sendero » (1986), Hernando de Soto montre, à partir de Lima, le temps et le coût nécessaires pour créer légalement une petite entreprise, afin d'expliquer le recours massif à l'informalité.", "source": "src.de-soto" },
+      "exemple": { "fictif": false, "texte": "En «El otro sendero» (1986), Hernando de Soto muestra, a partir de Lima, el tiempo y el coste necesarios para crear legalmente una pequeña empresa, con el fin de explicar el recurso masivo a la informalidad.", "source": "src.de-soto" },
       "confusions": [
-        { "a": "Économie informelle (activités licites non déclarées)", "b": "Économie criminelle (activités illégales : drogue)", "explication": "L'OIT distingue les activités licites non enregistrées des activités criminelles." }
+        { "a": "Economía informal (actividades lícitas no declaradas)", "b": "Economía criminal (actividades ilegales: droga)", "explication": "La OIT distingue las actividades lícitas no registradas de las actividades criminales." }
       ],
-      "verification": ["Quelles sont les deux grandes interprétations de l'informalité ?"],
+      "verification": ["¿Cuáles son las dos grandes interpretaciones de la informalidad?"],
       "sources": ["src.oit-informalidad", "src.de-soto"],
       "verifieLe": "2026-10-15",
-      "aVerifier": "Taux d'emploi informel par pays : se reporter aux dernières données de l'OIT (ILOSTAT)."
+      "aVerifier": "Tasa de empleo informal por país: consultar los últimos datos de la OIT (ILOSTAT)."
     }
   ],
   "questions": [
     {
       "id": "q.cvl.informalidad.001", "notion": "cvl.informalidad.asentamientos", "format": "unique", "niveau": 1, "competence": "memoriser",
-      "enonce": "Comment appelle-t-on un quartier informel en Argentine ?",
+      "enonce": "¿Cómo se llama un barrio informal en Argentina?",
       "choix": [
-        { "id": "a", "texte": "Villa miseria", "correct": true, "explication": "Souvent abrégé « villa »." },
-        { "id": "b", "texte": "Favela", "correct": false, "explication": "Brésil." },
-        { "id": "c", "texte": "Pueblo joven", "correct": false, "explication": "Pérou." },
-        { "id": "d", "texte": "Colonia popular", "correct": false, "explication": "Mexique." }
+        { "id": "a", "texte": "Villa miseria", "correct": true, "explication": "A menudo abreviado «villa»." },
+        { "id": "b", "texte": "Favela", "correct": false, "explication": "Brasil." },
+        { "id": "c", "texte": "Pueblo joven", "correct": false, "explication": "Perú." },
+        { "id": "d", "texte": "Colonia popular", "correct": false, "explication": "México." }
       ]
     },
     {
       "id": "q.cvl.informalidad.002", "notion": "cvl.informalidad.asentamientos", "format": "vrai-faux", "niveau": 2, "competence": "distinguer",
-      "enonce": "Un quartier informel reste toujours un ensemble de cabanes précaires.",
+      "enonce": "Un barrio informal sigue siendo siempre un conjunto de chabolas precarias.",
       "choix": [
-        { "id": "v", "texte": "Vrai", "correct": false, "explication": "Les quartiers se consolident : maisons en dur, étages, services." },
-        { "id": "f", "texte": "Faux", "correct": true, "explication": "La consolidation progressive est caractéristique." }
+        { "id": "v", "texte": "Verdadero", "correct": false, "explication": "Los barrios se consolidan: casas de material, pisos, servicios." },
+        { "id": "f", "texte": "Falso", "correct": true, "explication": "La consolidación progresiva es característica." }
       ]
     },
     {
       "id": "q.cvl.informalidad.003", "notion": "cvl.informalidad.economia", "format": "unique", "niveau": 2, "competence": "comprendre",
-      "enonce": "Selon Hernando de Soto, l'informalité s'explique surtout par :",
+      "enonce": "Según Hernando de Soto, la informalidad se explica sobre todo por:",
       "choix": [
-        { "id": "a", "texte": "Le coût et la complexité des démarches légales", "correct": true, "explication": "Thèse d'« El otro sendero »." },
-        { "id": "b", "texte": "La paresse des travailleurs", "correct": false, "explication": "Thèse qu'il rejette." },
-        { "id": "c", "texte": "L'excès d'emplois industriels", "correct": false, "explication": "Contresens." },
-        { "id": "d", "texte": "La criminalité organisée", "correct": false, "explication": "Distincte de l'économie informelle." }
+        { "id": "a", "texte": "El coste y la complejidad de los trámites legales", "correct": true, "explication": "Tesis de «El otro sendero»." },
+        { "id": "b", "texte": "La pereza de los trabajadores", "correct": false, "explication": "Tesis que él rechaza." },
+        { "id": "c", "texte": "El exceso de empleos industriales", "correct": false, "explication": "Contrasentido." },
+        { "id": "d", "texte": "La criminalidad organizada", "correct": false, "explication": "Distinta de la economía informal." }
       ]
     },
     {
       "id": "q.cvl.informalidad.004", "notion": "cvl.informalidad.economia", "format": "multiple", "niveau": 2, "competence": "comprendre",
-      "enonce": "Quelles sont les conséquences de l'informalité ?",
+      "enonce": "¿Cuáles son las consecuencias de la informalidad?",
       "choix": [
-        { "id": "a", "texte": "Absence de protection sociale pour les travailleurs", "correct": true, "explication": "Ni retraite ni assurance maladie." },
-        { "id": "b", "texte": "Moindres recettes fiscales pour l'État", "correct": true, "explication": "Activités non déclarées." },
-        { "id": "c", "texte": "Revenu de survie pour une partie de la population", "correct": true, "explication": "Rôle d'amortisseur." },
-        { "id": "d", "texte": "Garantie d'un salaire minimum", "correct": false, "explication": "Non applicable en pratique." }
+        { "id": "a", "texte": "Ausencia de protección social para los trabajadores", "correct": true, "explication": "Ni jubilación ni seguro de enfermedad." },
+        { "id": "b", "texte": "Menores ingresos fiscales para el Estado", "correct": true, "explication": "Actividades no declaradas." },
+        { "id": "c", "texte": "Ingreso de supervivencia para una parte de la población", "correct": true, "explication": "Papel de amortiguador." },
+        { "id": "d", "texte": "Garantía de un salario mínimo", "correct": false, "explication": "No se aplica en la práctica." }
       ]
     }
   ],
   "flashcards": [
     {
       "id": "f.cvl.informalidad.001", "notions": ["cvl.informalidad.asentamientos"],
-      "question": "Définissez les quartiers informels et donnez leurs noms selon les pays.",
-      "reponse": "Habitat autoconstruit sur terrains occupés ou lotissements illégaux ; insécurité foncière, manque de services ; consolidation progressive. Noms : favela (Brésil), villa miseria (Argentine), barriada / pueblo joven (Pérou), colonia popular (Mexique), rancho (Venezuela), campamento (Chili). Politiques : éradication, régularisation, amélioration sur place (Favela-Bairro).",
-      "indispensables": ["Autoconstruction", "Insécurité foncière", "Noms par pays", "Consolidation"]
+      "question": "Defina los barrios informales e indique sus nombres según el país.",
+      "reponse": "Hábitat autoconstruido en terrenos ocupados o loteos ilegales; inseguridad en la tenencia del suelo, falta de servicios; consolidación progresiva. Nombres: favela (Brasil), villa miseria (Argentina), barriada / pueblo joven (Perú), colonia popular (México), rancho (Venezuela), campamento (Chile). Políticas: erradicación, regularización, mejoramiento in situ (Favela-Bairro).",
+      "indispensables": ["Autoconstrucción", "Inseguridad en la tenencia", "Nombres por país", "Consolidación"]
     },
     {
       "id": "f.cvl.informalidad.002", "notions": ["cvl.informalidad.economia"],
-      "question": "Qu'est-ce que l'économie informelle ? Quelles interprétations ?",
-      "reponse": "Activités licites échappant à l'enregistrement, à l'impôt et à la protection sociale (vendeurs ambulants, travail domestique, recycleurs). Environ la moitié des emplois en Amérique latine (OIT). De Soto : réponse rationnelle à une bureaucratie coûteuse → simplifier, titrer. Autres : manque d'emplois formels, exclusion. Conséquences : survie mais pas de protection, pertes fiscales.",
-      "indispensables": ["Définition", "≈ 50 %", "De Soto vs exclusion"],
-      "erreurs": ["Confondre informel et criminel"]
+      "question": "¿Qué es la economía informal? ¿Qué interpretaciones existen?",
+      "reponse": "Actividades lícitas que escapan al registro, al impuesto y a la protección social (vendedores ambulantes, trabajo doméstico, recicladores). Alrededor de la mitad de los empleos en América Latina (OIT). De Soto: respuesta racional a una burocracia costosa → simplificar, titular. Otros: falta de empleo formal, exclusión. Consecuencias: supervivencia pero sin protección, pérdidas fiscales.",
+      "indispensables": ["Definición", "≈ 50 %", "De Soto frente a exclusión"],
+      "erreurs": ["Confundir lo informal con lo criminal"]
     }
   ]
 }
