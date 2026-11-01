@@ -217,7 +217,7 @@ function Corps({ pub, complet }: { pub: Publication; complet: boolean }) {
 // ---------- Carte du fil ----------
 const LARGES: TypePublication[] = ['dossier', 'monde', 'donnees', 'infographie', 'frise', 'debat'];
 
-export function CartePublication({ pub, complet = false }: { pub: Publication; complet?: boolean }) {
+export function CartePublication({ pub, complet = false, raison }: { pub: Publication; complet?: boolean; raison?: string }) {
   const p = useProgression();
   const m = matiere(pub.m);
   const L = lib(pub.l);
@@ -246,6 +246,7 @@ export function CartePublication({ pub, complet = false }: { pub: Publication; c
       <Corps pub={pub} complet={complet} />
       {!complet && !['quiz'].includes(pub.type) && <a class="lire" lang="fr" href={`#/pub/${encodeURIComponent(pub.id)}`}>{pub.type === 'dossier' ? 'Ouvrir le dossier' : 'Lire'} · {L.minutes(pub.min).replace(/^\d+ /, `${pub.min} `)}</a>}
       {statut && !complet && <div style={{ marginTop: 10 }} lang="fr"><StatutPastille s={statut} /></div>}
+      {raison && !complet && <p class="pourquoi" lang="fr">Pourquoi ici : {raison}</p>}
       <div lang="fr"><ActionsPublication id={pub.id} titre={pub.t} chapitre={pub.c} notion={pub.n} matiere={pub.m} /></div>
     </article>
   );

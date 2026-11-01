@@ -442,3 +442,5 @@ tr:last-child td, tr:last-child th { border-bottom: 0; }
 }
 main { overflow-wrap: break-word; }
 main a[href^="http"] { overflow-wrap: anywhere; }
+.edition { display: flex; justify-content: space-between; align-items: center; gap: var(--e3); flex-wrap: wrap; margin: var(--e2) 0 var(--e4); }
+.pourquoi { font-size: var(--t-meta); letter-spacing: .04em; color: var(--discret); margin: 8px 0 0; font-style: italic; }

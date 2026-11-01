@@ -73,3 +73,19 @@ function diversifier(liste: Publication[]): Publication[] {
   }
   return out;
 }
+
+/** Onglets dont l'ordre est calculé par le moteur de recommandation (voir recommandation.ts). */
+export const ONGLETS_DYNAMIQUES: Onglet[] = ['pour-vous', 'mes-matieres', 'monde'];
+
+/** Publications candidates d'un onglet dynamique ; « entete » : articles datés affichés d'abord (Monde et économie). */
+export function candidatsOnglet(liste: Publication[], onglet: Onglet, p: Progression): { entete: Publication[]; pool: Publication[] } {
+  if (onglet === 'monde') {
+    const entete = liste.filter((x) => x.edito).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
+    return { entete, pool: liste.filter((x) => !x.edito && MATIERES_MONDE.has(x.m)) };
+  }
+  if (onglet === 'mes-matieres') {
+    const suivies = new Set(matieresSuivies(p));
+    return { entete: [], pool: suivies.size ? liste.filter((x) => suivies.has(x.m)) : liste };
+  }
+  return { entete: [], pool: liste };
+}

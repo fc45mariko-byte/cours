@@ -44,6 +44,8 @@ export interface Progression {
   badges: Record<string, number>;
   dissertations: Record<string, Dissertation>;
   preferences: { mesMatieres: string[]; animations: boolean };
+  /** Fil : actualisations demandées, ordre affiché par onglet et par édition, publications déjà montrées. */
+  fil: { actualise: number; ordre: Record<string, { edition: string; ids: string[] }>; impressions: Record<string, { n: number; t: number }> };
   [cle: string]: unknown;
 }
 
@@ -52,6 +54,7 @@ export const progressionVide = (): Progression => ({
   examen: null, examensPasses: [], vues: {}, activite: {},
   marques: {}, enregistres: {}, historique: [], lecture: { fil: {}, chapitres: {} }, chapitres: {},
   xp: {}, badges: {}, dissertations: {}, preferences: { mesMatieres: [], animations: true },
+  fil: { actualise: 0, ordre: {}, impressions: {} },
 });
 
 /** Vérifie et complète un objet de progression (import, ancienne version, données corrompues). */
@@ -62,6 +65,7 @@ export function migrer(brut: unknown): Progression {
   const objet = <T,>(v: unknown, d: T): T => (v && typeof v === 'object' && !Array.isArray(v) ? (v as T) : d);
   const lecture = objet(p.lecture, base.lecture);
   const prefs = objet(p.preferences, base.preferences);
+  const fil = objet(p.fil, base.fil);
   return {
     ...(brut as object), // champs inconnus (versions futures) conservés
     version: VERSION,
@@ -84,6 +88,11 @@ export function migrer(brut: unknown): Progression {
     preferences: {
       mesMatieres: Array.isArray(prefs.mesMatieres) ? prefs.mesMatieres : [],
       animations: typeof prefs.animations === 'boolean' ? prefs.animations : true,
+    },
+    fil: {
+      actualise: typeof fil.actualise === 'number' ? fil.actualise : 0,
+      ordre: objet(fil.ordre, {}),
+      impressions: objet(fil.impressions, {}),
     },
   };
 }
@@ -250,6 +259,30 @@ export class Store {
   supprimerDissertation(id: string) {
     this.modifier((p) => { delete p.dissertations[id]; });
   }
+  // ---------- Fil : édition, ordre affiché, impressions ----------
+  actualiserFil() {
+    this.modifier((p) => { p.fil.actualise += 1; p.fil.ordre = {}; });
+  }
+  memoriserOrdre(onglet: string, edition: string, ids: string[]) {
+    const o = this.etat.fil.ordre[onglet];
+    if (o && o.edition === edition && o.ids.length === ids.length && o.ids.every((x, i) => x === ids[i])) return;
+    this.modifier((p) => { p.fil.ordre[onglet] = { edition, ids: ids.slice(0, 300) }; });
+  }
+  /** Publications réellement montrées à l'écran ; on garde les 800 plus récentes. */
+  noterImpressions(ids: string[], t = Date.now()) {
+    if (!ids.length) return;
+    this.modifier((p) => {
+      for (const id of ids) {
+        const i = p.fil.impressions[id];
+        // Une même publication n'est comptée qu'une fois par heure.
+        if (i && t - i.t < 3_600_000) continue;
+        p.fil.impressions[id] = { n: (i?.n ?? 0) + 1, t };
+      }
+      const entrees = Object.entries(p.fil.impressions);
+      if (entrees.length > 800) p.fil.impressions = Object.fromEntries(entrees.sort((a, b) => b[1].t - a[1].t).slice(0, 800));
+    });
+  }
+
   preferences(f: (pr: Progression['preferences']) => void) {
     this.modifier((p) => f(p.preferences));
   }

@@ -5,7 +5,8 @@ import { aller, useAsync, useProgression } from '../hooks';
 import { store } from '../core/store';
 import { Charge } from '../ui/communs';
 import { CartePublication, LIBELLE_TYPE } from '../ui/Publication';
-import { classer, filtrer, FILTRES_VIDES, matieresSuivies, type Filtres, type Onglet } from '../classement';
+import { candidatsOnglet, classer, filtrer, FILTRES_VIDES, matieresSuivies, ONGLETS_DYNAMIQUES, type Filtres, type Onglet } from '../classement';
+import { DUREE_EDITION, edition, LIBELLE_RAISON, prochaineEdition, recommander, type Raison } from '../recommandation';
 import type { Publication, TypePublication } from '../types';
 import { BADGES, quetes } from '../jeu';
 import { Jauge } from '../ui/communs';
@@ -19,6 +20,9 @@ const PAS = 10;
 
 export function Fil({ params }: { params: URLSearchParams }) {
   const c = useAsync(() => chargerFil(), []);
+  // La liste n'est recalculée que sur demande (« Actualiser ») ; le passage à une nouvelle édition
+  // pendant la lecture est seulement signalé, pour ne rien déplacer sous les yeux de l'étudiante.
+  const p = useProgression();
   const onglet = (ONGLETS.find((o) => o.id === params.get('onglet'))?.id ?? 'pour-vous') as Onglet;
   const filtres: Filtres = { matiere: params.get('m') ?? '', type: params.get('type') ?? '', niveau: params.get('niv') ?? '', langue: params.get('l') ?? '' };
   const lien = (o: Onglet, f: Filtres = filtres) => `#/fil?onglet=${o}${f.matiere ? `&m=${f.matiere}` : ''}${f.type ? `&type=${f.type}` : ''}${f.niveau ? `&niv=${f.niveau}` : ''}${f.langue ? `&l=${f.langue}` : ''}`;
@@ -54,76 +58,137 @@ export function Fil({ params }: { params: URLSearchParams }) {
         </div>
         {actifs > 0 && <a class="small" href={lien(onglet, FILTRES_VIDES)}>Effacer les filtres</a>}
       </details>
-      <Charge c={c}>{(fil) => <ListeFil key={lien(onglet)} fil={fil} onglet={onglet} filtres={filtres} />}</Charge>
+      <Charge c={c}>{(fil) => <ListeFil key={`${lien(onglet)}|${p.fil.actualise}`} fil={fil} onglet={onglet} filtres={filtres} />}</Charge>
     </>
   );
 }
 
 function ListeFil({ fil, onglet, filtres }: { fil: Publication[]; onglet: Onglet; filtres: Filtres }) {
-  const p = useProgression();
-  // Ordre figé à l'ouverture : on ne réordonne pas pendant la lecture.
+  const dynamique = ONGLETS_DYNAMIQUES.includes(onglet);
+  return dynamique ? <ListeDynamique fil={fil} onglet={onglet} filtres={filtres} /> : <ListeStatique fil={fil} onglet={onglet} filtres={filtres} />;
+}
+
+/** Enregistrés et déjà lus : ordre chronologique. */
+function ListeStatique({ fil, onglet, filtres }: { fil: Publication[]; onglet: Onglet; filtres: Filtres }) {
   const liste = useMemo(() => classer(filtrer(fil, filtres), onglet, store.etat), [fil]);
-  const position = store.etat.lecture.fil[onglet];
   const [n, setN] = useState(PAS);
+  if (!liste.length) {
+    return <div class="vide">{onglet === 'enregistres' ? 'Rien d’enregistré pour l’instant. Utilisez « Enregistrer » sous une publication pour la retrouver ici.' : 'Aucune publication ouverte pour l’instant.'}</div>;
+  }
+  return (
+    <>
+      <p class="small muted">{liste.length} publication{liste.length > 1 ? 's' : ''}</p>
+      <div class="fil-publications">{liste.slice(0, n).map((x) => <CartePublication key={x.id} pub={x} />)}</div>
+      {n < liste.length && <div style={{ textAlign: 'center', margin: '24px 0' }}><button class="btn secondaire" onClick={() => setN(n + PAS)}>Afficher la suite</button></div>}
+    </>
+  );
+}
+
+type Affichee = { pub: Publication; raison?: Raison };
+
+/**
+ * Fil calculé par le moteur de recommandation.
+ * - L'ordre déjà affiché est mémorisé pour l'édition en cours : on le retrouve en revenant.
+ * - Chaque nouveau lot est recalculé avec la progression du moment (ce qui vient d'être lu, compris, raté).
+ * - Une nouvelle édition (toutes les 3 heures, ou « Actualiser ») renouvelle le fil.
+ */
+function ListeDynamique({ fil, onglet, filtres }: { fil: Publication[]; onglet: Onglet; filtres: Filtres }) {
+  const p = useProgression();
+  const cle = `${onglet}|${filtres.matiere}|${filtres.type}|${filtres.niveau}|${filtres.langue}`;
+  const ed = edition(store.etat);
+  const graine = `${ed}|${cle}`;
+  const { entete, pool } = useMemo(() => candidatsOnglet(filtrer(fil, filtres), onglet, store.etat), [fil]);
+  const parId = useMemo(() => new Map(fil.map((x) => [x.id, x])), [fil]);
+  const total = entete.length + pool.length;
+
+  const [affichees, setAffichees] = useState<Affichee[]>(() => {
+    const memo = store.etat.fil.ordre[cle];
+    if (memo && memo.edition === ed) {
+      const restaurees: Affichee[] = [];
+      for (const e of memo.ids) {
+        const [id, raison] = e.split('|');
+        const pub = parId.get(id);
+        if (pub) restaurees.push({ pub, raison: (raison || undefined) as Raison | undefined });
+      }
+      if (restaurees.length) return restaurees;
+    }
+    const tete = entete.map((pub) => ({ pub, raison: 'actualite' as Raison }));
+    return [...tete, ...recommander(pool, store.etat, { graine, deja: entete, nombre: PAS })];
+  });
   const sentinelle = useRef<HTMLDivElement>(null);
   const conteneur = useRef<HTMLDivElement>(null);
-  const indexPosition = position ? liste.findIndex((x) => x.id === position.id) : -1;
+  const vues = useRef(new Set<string>());
+
+  // Lot suivant, recalculé avec la progression actuelle.
+  const suite = () => setAffichees((a) => a.length >= total ? a : [...a, ...recommander(pool, store.etat, { graine, deja: a.map((x) => x.pub), nombre: PAS })]);
+
+  useEffect(() => { store.memoriserOrdre(cle, ed, affichees.map((x) => `${x.pub.id}|${x.raison ?? ''}`)); }, [affichees.length]);
 
   useEffect(() => {
     const el = sentinelle.current;
     if (!el || !('IntersectionObserver' in window)) return;
-    const o = new IntersectionObserver((e) => { if (e[0].isIntersecting) setN((v) => Math.min(liste.length, v + PAS)); }, { rootMargin: '600px' });
+    const o = new IntersectionObserver((e) => { if (e[0].isIntersecting) suite(); }, { rootMargin: '600px' });
     o.observe(el);
     return () => o.disconnect();
-  }, [liste.length]);
+  }, [affichees.length]);
 
-  // Position de lecture : la publication la plus haute visible à l'écran.
+  // Impressions (publication visible à plus de 50 %) et position de lecture.
   useEffect(() => {
     const el = conteneur.current;
     if (!el || !('IntersectionObserver' in window)) return;
     let minuterie: ReturnType<typeof setTimeout> | undefined;
     const o = new IntersectionObserver((entrees) => {
-      const visibles = entrees.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-      const id = visibles[0]?.target.getAttribute('data-pub');
-      if (!id) return;
+      const visibles = entrees.filter((e) => e.isIntersecting);
+      for (const e of visibles) { const id = e.target.getAttribute('data-pub'); if (id) vues.current.add(id); }
+      const haut = visibles.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]?.target.getAttribute('data-pub');
+      if (!haut) return;
       clearTimeout(minuterie);
-      minuterie = setTimeout(() => store.positionFil(onglet, id), 800);
-    }, { threshold: 0.4 });
+      minuterie = setTimeout(() => store.positionFil(onglet, haut), 800);
+    }, { threshold: 0.5 });
     el.querySelectorAll('[data-pub]').forEach((x) => o.observe(x));
     return () => { o.disconnect(); clearTimeout(minuterie); };
-  }, [n]);
+  }, [affichees.length]);
+  useEffect(() => {
+    const vider = () => { const ids = [...vues.current]; vues.current.clear(); store.noterImpressions(ids); };
+    const t = setInterval(vider, 5000);
+    return () => { clearInterval(t); vider(); };
+  }, []);
 
-  const reprendre = () => {
-    setN(Math.max(n, indexPosition + PAS));
-    setTimeout(() => document.querySelector(`[data-pub="${CSS.escape(position!.id)}"]`)?.scrollIntoView({ block: 'start' }), 60);
-  };
+  // Une nouvelle édition est signalée sans bouleverser ce qui est en cours de lecture.
+  const [nouvelle, setNouvelle] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setNouvelle(true), Math.max(1000, prochaineEdition() - Date.now()));
+    return () => clearTimeout(t);
+  }, [ed]);
+  const actualiser = () => { store.actualiserFil(); window.scrollTo(0, 0); };
 
-  if (!liste.length) {
-    return (
-      <div class="vide">
-        {onglet === 'enregistres' ? 'Rien d’enregistré pour l’instant. Utilisez « Enregistrer » sous une publication pour la retrouver ici.'
-          : onglet === 'historique' ? 'Aucune publication ouverte pour l’instant.'
-            : 'Aucune publication ne correspond à ces filtres.'}
-      </div>
-    );
-  }
+  const position = store.etat.lecture.fil[onglet];
+  const indexPosition = position ? affichees.findIndex((x) => x.pub.id === position.id) : -1;
+  const reprendre = () => document.querySelector(`[data-pub="${CSS.escape(position!.id)}"]`)?.scrollIntoView({ block: 'start' });
+  const heure = (t: number) => new Date(t).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+
+  if (!total) return <div class="vide">Aucune publication ne correspond à ces filtres.</div>;
   return (
     <>
       {onglet === 'mes-matieres' && !p.preferences.mesMatieres.length && (
         <p class="encadre small">{matieresSuivies(p).length ? 'Matières déduites de votre activité.' : 'Toutes les matières sont affichées.'} <a href="#/reglages">Choisir mes matières</a></p>
       )}
+      <div class="edition">
+        <span class="small muted">Édition de {heure(prochaineEdition() - DUREE_EDITION)} · renouvelée à {heure(prochaineEdition())} · {total} publications</span>
+        <button class="btn petit discret" onClick={actualiser}>Actualiser le fil</button>
+      </div>
+      {nouvelle && <div class="reprise" role="status"><span>Une nouvelle édition du fil est prête.</span><button class="btn petit" onClick={actualiser}>L’afficher</button></div>}
       {indexPosition > 2 && (
-        <div class="reprise"><span>Vous vous étiez arrêté à « {liste[indexPosition].t} ».</span><button class="btn petit" onClick={reprendre}>Reprendre la lecture</button></div>
+        <div class="reprise"><span>Vous vous étiez arrêté à « {affichees[indexPosition].pub.t} ».</span><button class="btn petit" onClick={reprendre}>Reprendre la lecture</button></div>
       )}
-      <p class="small muted">{liste.length} publication{liste.length > 1 ? 's' : ''}</p>
       <div class="fil-publications" ref={conteneur}>
-        {liste.slice(0, n).map((x, i) => (
-          <Fragment key={x.id}>{onglet === 'pour-vous' && i > 0 && i % 12 === 0 && <CarteJeu rang={i / 12} />}<CartePublication pub={x} /></Fragment>
+        {affichees.map((x, i) => (
+          <Fragment key={x.pub.id}>{onglet === 'pour-vous' && i > 0 && i % 12 === 0 && <CarteJeu rang={i / 12} />}<CartePublication pub={x.pub} raison={x.raison ? LIBELLE_RAISON[x.raison] : undefined} /></Fragment>
         ))}
       </div>
       <div ref={sentinelle} aria-hidden="true" style={{ height: 1 }} />
-      {n < liste.length && <div style={{ textAlign: 'center', margin: '24px 0' }}><button class="btn secondaire" onClick={() => setN(n + PAS)}>Afficher la suite</button></div>}
-      {n >= liste.length && <p class="vide small">Fin du fil · {Object.keys(index.notions).length} notions de cours alimentent ces publications.</p>}
+      {affichees.length < total && <div style={{ textAlign: 'center', margin: '24px 0' }}><button class="btn secondaire" onClick={suite}>Afficher la suite</button></div>}
+      {affichees.length >= total && <p class="vide small">Fin du fil · {Object.keys(index.notions).length} notions de cours alimentent ces publications.</p>}
     </>
   );
 }

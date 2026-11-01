@@ -175,3 +175,21 @@ test('session de révision : questions, corrections, recommandation', async ({ p
   await expect(page.getByRole('heading', { name: /Bilan/ })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Recommandation' })).toBeVisible();
 });
+
+test('fil dynamique : ordre conservé dans l’édition, renouvelé à l’actualisation, raisons affichées', async ({ page }) => {
+  await page.goto('/#/fil');
+  await expect(page.locator('article.pub').first()).toBeVisible();
+  const ordre = () => page.locator('article.pub').evaluateAll((els) => els.slice(0, 8).map((x) => x.getAttribute('data-pub')));
+  const avant = await ordre();
+  await expect(page.locator('.pourquoi').first()).toContainText('Pourquoi ici');
+  await page.waitForTimeout(5500); // les impressions sont enregistrées toutes les 5 secondes
+  await page.reload();
+  await expect(page.locator('article.pub').first()).toBeVisible();
+  expect(await ordre()).toEqual(avant);
+  const p = await progression(page);
+  expect(Object.keys(p.fil.impressions).length).toBeGreaterThan(0);
+  await page.getByRole('button', { name: 'Actualiser le fil' }).click();
+  await expect(page.locator('article.pub').first()).toBeVisible();
+  const apres = await ordre();
+  expect(apres).not.toEqual(avant);
+});
