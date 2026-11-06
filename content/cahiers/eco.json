@@ -1,0 +1,606 @@
+{
+  "matiere": "eco",
+  "titre": "Cahier d'exercices d'économie internationale",
+  "introduction": "Ce cahier suit les quatre chapitres du cours d'économie internationale : théories du commerce, mesure des échanges, change, politiques commerciales. Pour chaque section, relisez d'abord le rappel de cours, qui résume les définitions, les auteurs et les formules utiles. Faites ensuite les exercices dans l'ordre (bases, application, approfondissement) en suivant la méthode guidée, et écrivez vos calculs et vos raisonnements sur papier. Vérifiez seulement après avec le corrigé, qui explique chaque étape et le pourquoi du résultat, puis lisez les erreurs à éviter. Les pays, entreprises et montants des exercices sont fictifs ; les auteurs et les faits historiques cités sont ceux du cours.",
+  "sections": [
+    {
+      "id": "eco-s1",
+      "titre": "Pourquoi les pays échangent-ils ? Les théories du commerce international",
+      "chapitre": "eco.theories",
+      "notions": [
+        "eco.theories.avantage-absolu",
+        "eco.theories.avantage-comparatif",
+        "eco.theories.hos",
+        "eco.theories.nouvelles"
+      ],
+      "rappel": [
+        "Adam Smith (1776) : un pays a un avantage absolu dans un bien s'il le produit avec moins de travail que l'autre pays ; chacun se spécialise dans le bien où il a un avantage absolu. Limite : un pays sans aucun avantage absolu semble exclu de l'échange.",
+        "David Ricardo (1817) : ce qui compte est le coût relatif (coût d'opportunité). Coût d'opportunité du bien X = coût de X ÷ coût de Y (en heures). Chaque pays se spécialise là où son coût d'opportunité est le plus faible, même s'il est moins productif partout.",
+        "Heckscher, Ohlin et Samuelson (HOS) : un pays exporte le bien qui utilise intensivement le facteur dont il est relativement abondamment doté. Stolper-Samuelson : l'ouverture augmente la rémunération du facteur abondant et diminue celle du facteur rare.",
+        "Nouvelles théories (Krugman) : le commerce intrabranche (voitures contre voitures) entre pays comparables s'explique par les rendements d'échelle croissants et le goût pour la variété. Melitz (2003) : seules les entreprises les plus productives exportent."
+      ],
+      "exercices": [
+        {
+          "id": "eco-1",
+          "niveau": "bases",
+          "titre": "Avantage absolu et gain de la spécialisation",
+          "objectif": "Identifier un avantage absolu et montrer par le calcul que la spécialisation augmente la production mondiale.",
+          "enonce": "Deux pays fictifs, Fromagie et Tisserande, produisent du fromage et du tissu avec un seul facteur, le travail. Chacun dispose de 240 heures de travail. Le tableau indique le nombre d'heures nécessaires pour produire une unité de chaque bien. En autarcie, chaque pays consacre la moitié de ses heures à chaque bien.",
+          "donnees": {
+            "entetes": [
+              "Pays",
+              "Heures pour 1 unité de fromage",
+              "Heures pour 1 unité de tissu"
+            ],
+            "lignes": [
+              [
+                "Fromagie",
+                "4",
+                "8"
+              ],
+              [
+                "Tisserande",
+                "6",
+                "3"
+              ]
+            ]
+          },
+          "methode": [
+            "Comparez les heures bien par bien, d'un pays à l'autre : le pays qui a besoin de moins d'heures a l'avantage absolu.",
+            "Autarcie : production d'un bien = heures consacrées ÷ heures par unité.",
+            "Spécialisation complète : chaque pays consacre ses 240 heures au bien où il a l'avantage absolu.",
+            "Comparez la production mondiale (somme des deux pays) avant et après."
+          ],
+          "questions": [
+            "1. Quel pays a un avantage absolu dans chaque bien ?",
+            "2. Calculez la production de chaque pays et la production mondiale en autarcie.",
+            "3. Calculez la production mondiale après spécialisation complète.",
+            "4. Expliquez en deux phrases pourquoi Smith critique le mercantilisme."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Fromage : Fromagie (4 h contre 6 h). Tissu : Tisserande (3 h contre 8 h). Chaque pays a un avantage absolu dans un bien différent.",
+            "2. Autarcie : Fromagie, 120 h ÷ 4 = 30 fromages et 120 h ÷ 8 = 15 tissus ; Tisserande, 120 ÷ 6 = 20 fromages et 120 ÷ 3 = 40 tissus. Production mondiale : 50 fromages et 55 tissus.",
+            "3. Spécialisation : Fromagie produit 240 ÷ 4 = 60 fromages ; Tisserande 240 ÷ 3 = 80 tissus. Production mondiale : 60 fromages et 80 tissus, soit 10 fromages et 25 tissus de plus qu'en autarcie, avec le même travail. Par l'échange, les deux pays peuvent consommer davantage.",
+            "4. Pour les mercantilistes, la richesse consiste à accumuler des métaux précieux grâce à un excédent commercial. Pour Smith, la richesse vient du travail et de sa productivité, accrue par la division du travail : l'échange n'est pas un jeu où l'un gagne ce que l'autre perd, il augmente la production de tous."
+          ],
+          "erreurs": [
+            "Comparer les deux biens à l'intérieur d'un même pays pour l'avantage absolu : on compare les pays entre eux, bien par bien.",
+            "Croire qu'un pays perd en important : l'échange permet de consommer plus que ce qu'il produirait seul."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "eco-2",
+          "niveau": "application",
+          "titre": "Avantage comparatif : l'échange quand un pays est meilleur partout",
+          "objectif": "Calculer des coûts d'opportunité, déterminer les spécialisations selon Ricardo et montrer que les deux pays gagnent.",
+          "enonce": "Deux pays fictifs, Nordia et Sudia, produisent des lots de composants électroniques et des lots de vêtements. Le tableau indique le nombre d'heures de travail pour produire un lot. Comme dans l'exemple de Ricardo, chaque pays produit en autarcie un lot de chaque bien et dispose donc du nombre total d'heures correspondant.",
+          "donnees": {
+            "entetes": [
+              "Pays",
+              "Composants (h par lot)",
+              "Vêtements (h par lot)",
+              "Total des heures disponibles"
+            ],
+            "lignes": [
+              [
+                "Nordia",
+                "8",
+                "10",
+                "18"
+              ],
+              [
+                "Sudia",
+                "30",
+                "12",
+                "42"
+              ]
+            ]
+          },
+          "methode": [
+            "Vérifiez d'abord les avantages absolus : qui a besoin de moins d'heures pour chaque bien ?",
+            "Coût d'opportunité d'un lot de composants, en vêtements = heures pour les composants ÷ heures pour les vêtements. Faites de même pour les vêtements en composants.",
+            "Le pays dont le coût d'opportunité est le plus faible pour un bien y a l'avantage comparatif.",
+            "Spécialisation : chaque pays consacre toutes ses heures à son bien ; comparez la production mondiale à celle de l'autarcie (2 lots de chaque bien).",
+            "Pour l'échange, choisissez un prix compris entre les deux coûts d'opportunité et vérifiez que chacun consomme plus qu'en autarcie."
+          ],
+          "questions": [
+            "1. Quel pays a un avantage absolu dans chaque bien ?",
+            "2. Calculez les coûts d'opportunité et déterminez les avantages comparatifs.",
+            "3. Calculez la production mondiale après spécialisation.",
+            "4. Les pays échangent au prix de 1 lot de composants contre 1,5 lot de vêtements ; Nordia échange 1 lot de composants. Calculez la consommation de chaque pays et concluez.",
+            "5. Citez deux hypothèses fortes du modèle de Ricardo."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Nordia a un avantage absolu dans les deux biens (8 h < 30 h et 10 h < 12 h). Selon Smith, Sudia serait exclue de l'échange.",
+            "2. Composants en vêtements : Nordia 8 ÷ 10 = 0,8 ; Sudia 30 ÷ 12 = 2,5. Nordia renonce à moins de vêtements pour produire des composants : avantage comparatif de Nordia dans les composants. Vêtements en composants : Nordia 10 ÷ 8 = 1,25 ; Sudia 12 ÷ 30 = 0,4 : avantage comparatif de Sudia dans les vêtements. Nordia est 3,75 fois plus productive en composants (30 ÷ 8) mais seulement 1,2 fois en vêtements (12 ÷ 10) : son avantage est le plus marqué dans les composants, le désavantage de Sudia est le plus faible dans les vêtements.",
+            "3. Nordia : 18 ÷ 8 = 2,25 lots de composants. Sudia : 42 ÷ 12 = 3,5 lots de vêtements. Production mondiale : 2,25 lots de composants et 3,5 lots de vêtements, contre 2 et 2 en autarcie : il y a plus des deux biens avec le même travail.",
+            "4. Nordia garde 2,25 − 1 = 1,25 lot de composants et reçoit 1,5 lot de vêtements (contre 1 et 1 en autarcie). Sudia reçoit 1 lot de composants et garde 3,5 − 1,5 = 2 lots de vêtements (contre 1 et 1). Les deux pays consomment plus qu'en autarcie : l'échange est mutuellement avantageux, même pour le pays le moins productif. Le prix de 1,5 convient car il est compris entre 0,8 et 2,5.",
+            "5. Un seul facteur, le travail, immobile entre pays ; coûts constants ; plein-emploi. Le modèle ne dit rien de la répartition des gains à l'intérieur de chaque pays : certains secteurs ou travailleurs peuvent perdre."
+          ],
+          "erreurs": [
+            "Conclure que Nordia doit tout produire elle-même parce qu'elle est meilleure partout.",
+            "Inverser le rapport du coût d'opportunité (diviser par le coût du bien étudié).",
+            "Choisir un prix d'échange hors de l'intervalle des coûts d'opportunité : l'un des pays n'aurait plus intérêt à échanger."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "eco-3",
+          "niveau": "approfondissement",
+          "titre": "HOS, commerce intrabranche : quelle théorie explique quel échange ?",
+          "objectif": "Raisonner avec le modèle HOS et le théorème Stolper-Samuelson, et reconnaître les échanges expliqués par les nouvelles théories.",
+          "enonce": "Partie A : le pays fictif Capitalia est abondamment doté en capital et en travail qualifié ; le pays fictif Manuelia est très peuplé, abondamment doté en travail peu qualifié et peu doté en capital. Ils s'ouvrent au commerce. Partie B : voici quatre échanges fictifs ou tirés du cours : (a) Manuelia exporte des vêtements assemblés à la main et importe des machines-outils ; (b) la France exporte des berlines vers l'Allemagne et importe des berlines allemandes ; (c) un pays tropical exporte du café et importe des tracteurs ; (d) dans un secteur, seules les quelques entreprises les plus productives d'un pays exportent.",
+          "methode": [
+            "Pour HOS, suivez les quatre étapes du cours : facteur abondant, biens intensifs en ce facteur, exportations et importations, conséquence sur les rémunérations.",
+            "Pour Stolper-Samuelson, demandez-vous quel facteur devient plus demandé (celui des exportations) et lequel subit la concurrence des importations.",
+            "Pour la partie B, demandez-vous d'abord si l'échange porte sur des biens différents (interbranche) ou similaires (intrabranche), puis quelle explication il appelle : productivité, dotations, rendements croissants et variété, hétérogénéité des entreprises."
+          ],
+          "questions": [
+            "1. Selon HOS, que va exporter et importer chaque pays ? Justifiez.",
+            "2. Selon Stolper-Samuelson, qui gagne et qui perd dans chaque pays ?",
+            "3. Classez les échanges (a) à (d) : interbranche ou intrabranche, et théorie explicative.",
+            "4. Qu'a montré le paradoxe de Leontief et comment le modèle a-t-il été affiné ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Capitalia exporte des biens intensifs en capital et en travail qualifié (machines, équipements) et importe des biens intensifs en travail peu qualifié (textile, assemblage). Manuelia fait l'inverse. Chaque pays exporte le bien qui utilise son facteur abondant, donc relativement bon marché.",
+            "2. Dans Manuelia, la demande de travail peu qualifié augmente : les salaires peu qualifiés montent, la rémunération du capital (rare) baisse. Dans Capitalia, le capital et le travail qualifié gagnent, tandis que les travailleurs peu qualifiés, concurrencés par les importations, peuvent perdre. L'ouverture crée un gain national, mais elle redistribue les revenus à l'intérieur des pays.",
+            "3. (a) Interbranche, HOS (dotations factorielles : travail peu qualifié contre capital). (b) Intrabranche, nouvelles théories de Krugman : rendements d'échelle croissants et goût pour la variété ; chaque constructeur produit à grande échelle et les consommateurs gagnent en choix. (c) Interbranche, HOS (dotation en terre et climat) ou différences de productivité. (d) Nouvelle nouvelle théorie de Melitz (2003) : hétérogénéité des entreprises.",
+            "4. Leontief (1953) a montré que les exportations américaines étaient moins intensives en capital que leurs importations, contrairement à ce que prévoit HOS pour un pays riche en capital. Le modèle a été affiné en tenant compte de la qualification du travail et de la technologie."
+          ],
+          "erreurs": [
+            "Confondre la source de l'avantage chez Ricardo (technologie, productivité) et chez HOS (dotations, technologie identique).",
+            "Expliquer le commerce de voitures contre voitures par les avantages comparatifs traditionnels."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "eco-s2",
+      "titre": "Mesurer les échanges : balance des paiements, termes de l'échange",
+      "chapitre": "eco.mesure",
+      "notions": [
+        "eco.mesure.balance-paiements",
+        "eco.mesure.termes-echange"
+      ],
+      "rappel": [
+        "La balance des paiements recense les opérations entre résidents et non-résidents sur une période. Selon le MBP6 du FMI : compte des transactions courantes (biens, services, revenus primaires, revenus secondaires), compte de capital, compte financier.",
+        "Revenus primaires : revenus du travail et des investissements (salaires transfrontaliers, dividendes, intérêts). Revenus secondaires : transferts courants sans contrepartie (envois de fonds des migrants, aide internationale courante).",
+        "Compte financier : investissements directs (au moins 10 % des droits de vote), de portefeuille (moins de 10 %), dérivés, autres investissements (prêts, dépôts), avoirs de réserve.",
+        "Équilibre comptable : solde des transactions courantes + solde du compte de capital − solde du compte financier + erreurs et omissions = 0. Un déficit courant est financé par une entrée nette de capitaux.",
+        "Termes de l'échange = indice des prix des exportations ÷ indice des prix des importations × 100. Taux de couverture = exportations ÷ importations × 100. Le premier compare des prix, le second des valeurs."
+      ],
+      "exercices": [
+        {
+          "id": "eco-4",
+          "niveau": "bases",
+          "titre": "Classer les opérations dans la balance des paiements",
+          "objectif": "Savoir dans quel compte et quelle rubrique de la balance des paiements se range une opération.",
+          "enonce": "Les opérations suivantes concernent la France (pays de résidence) et des non-résidents. Indiquez pour chacune le compte et la rubrique.",
+          "donnees": {
+            "entetes": [
+              "N°",
+              "Opération",
+              "Compte et rubrique (à compléter)"
+            ],
+            "lignes": [
+              [
+                "1",
+                "Une PME française vend des machines à un client mexicain.",
+                ""
+              ],
+              [
+                "2",
+                "Des touristes espagnols séjournent à l'hôtel à Orléans.",
+                ""
+              ],
+              [
+                "3",
+                "Une filiale française verse des dividendes à sa maison mère américaine.",
+                ""
+              ],
+              [
+                "4",
+                "Un travailleur immigré résidant en France envoie de l'argent à sa famille au Maroc.",
+                ""
+              ],
+              [
+                "5",
+                "Une entreprise française achète 35 % du capital d'une société chilienne.",
+                ""
+              ],
+              [
+                "6",
+                "Un fonds de pension canadien achète 0,5 % des actions d'une société française cotée.",
+                ""
+              ],
+              [
+                "7",
+                "Une entreprise française cède un brevet à une société allemande.",
+                ""
+              ],
+              [
+                "8",
+                "Une entreprise française rémunère un transporteur maritime étranger.",
+                ""
+              ]
+            ]
+          },
+          "methode": [
+            "Demandez-vous d'abord s'il y a une contrepartie : biens, services ou revenus (transactions courantes), ou simple transfert (revenus secondaires, ou compte de capital pour un transfert en capital).",
+            "Distinguez les revenus primaires (rémunération du travail ou du capital) des revenus secondaires (sans contrepartie).",
+            "Pour une prise de participation, appliquez le seuil de 10 % des droits de vote.",
+            "Un brevet est un actif non financier non produit : il relève du compte de capital."
+          ],
+          "questions": [
+            "1. Complétez le tableau.",
+            "2. Expliquez la différence entre les opérations 5 et 6.",
+            "3. Expliquez pourquoi un pays peut avoir un déficit commercial et un excédent courant."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (1) Transactions courantes, biens (exportation). (2) Transactions courantes, services (voyages : exportation de services, car le non-résident consomme en France). (3) Transactions courantes, revenus primaires (versement de revenus d'investissement). (4) Transactions courantes, revenus secondaires (transfert sans contrepartie). (5) Compte financier, investissement direct. (6) Compte financier, investissement de portefeuille. (7) Compte de capital (cession d'un actif non financier non produit). (8) Transactions courantes, services (importation de services de transport).",
+            "2. Le critère est le seuil de 10 % des droits de vote retenu par le MBP6 : 35 % traduit une influence durable sur la gestion (investissement direct) ; 0,5 % est un simple placement (investissement de portefeuille).",
+            "3. La balance commerciale ne retrace que les biens. Le solde courant inclut aussi les services et les revenus primaires et secondaires : un excédent de services (tourisme, transport) ou de revenus d'investissement peut compenser un déficit sur les biens."
+          ],
+          "erreurs": [
+            "Classer le tourisme des étrangers en importation : c'est une exportation de services.",
+            "Ranger des dividendes dans le compte financier : ce sont des revenus primaires (le placement initial, lui, est au compte financier)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "eco-5",
+          "niveau": "application",
+          "titre": "Construire la balance des paiements de la Valdorie",
+          "objectif": "Calculer les soldes de la balance des paiements, vérifier son équilibre comptable et interpréter un déficit courant.",
+          "enonce": "Voici les opérations de l'année d'un pays fictif, la Valdorie (en millions d'euros). Pour le compte financier, le solde est calculé comme l'acquisition nette d'avoirs à l'étranger moins l'accroissement net des engagements envers l'étranger : un solde négatif signifie une entrée nette de capitaux.",
+          "donnees": {
+            "entetes": [
+              "Rubrique",
+              "Crédits / acquisitions",
+              "Débits / engagements"
+            ],
+            "lignes": [
+              [
+                "Biens (exportations / importations)",
+                "520",
+                "580"
+              ],
+              [
+                "Services",
+                "210",
+                "150"
+              ],
+              [
+                "Revenus primaires (reçus / versés)",
+                "90",
+                "70"
+              ],
+              [
+                "Revenus secondaires (reçus / versés)",
+                "15",
+                "45"
+              ],
+              [
+                "Compte de capital (solde)",
+                "2",
+                ""
+              ],
+              [
+                "Investissements directs (avoirs acquis / engagements)",
+                "30",
+                "45"
+              ],
+              [
+                "Investissements de portefeuille (solde)",
+                "10",
+                ""
+              ],
+              [
+                "Autres investissements (solde)",
+                "− 8",
+                ""
+              ],
+              [
+                "Avoirs de réserve (variation)",
+                "2",
+                ""
+              ]
+            ]
+          },
+          "methode": [
+            "Calculez chaque solde courant : crédits − débits, puis additionnez-les pour obtenir le solde des transactions courantes.",
+            "Calculez le solde des investissements directs (acquis − engagements), puis le solde du compte financier en additionnant toutes ses rubriques.",
+            "Appliquez l'équation du cours pour trouver les erreurs et omissions.",
+            "Calculez le taux de couverture des biens et interprétez l'ensemble."
+          ],
+          "questions": [
+            "1. Calculez la balance commerciale, les soldes des services et des revenus, et le solde des transactions courantes.",
+            "2. Calculez le solde du compte financier.",
+            "3. Déduisez le montant des erreurs et omissions.",
+            "4. Calculez le taux de couverture des biens.",
+            "5. Comment le déficit courant de la Valdorie est-il financé ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Biens : 520 − 580 = − 60 (déficit commercial). Services : 210 − 150 = + 60. Revenus primaires : 90 − 70 = + 20. Revenus secondaires : 15 − 45 = − 30. Transactions courantes : − 60 + 60 + 20 − 30 = − 10 millions d'euros.",
+            "2. Investissements directs : 30 − 45 = − 15. Compte financier : − 15 + 10 − 8 + 2 = − 11 millions d'euros : les engagements envers l'étranger ont augmenté plus que les avoirs, il y a une entrée nette de capitaux de 11 millions.",
+            "3. − 10 + 2 − (− 11) + erreurs et omissions = 0, soit 3 + erreurs et omissions = 0 : erreurs et omissions = − 3 millions d'euros. Cette ligne corrige l'écart statistique entre les différentes sources.",
+            "4. Taux de couverture = 520 ÷ 580 × 100 ≈ 89,7 % : les exportations de biens ne couvrent que 89,7 % des importations.",
+            "5. Le déficit courant (− 10) est presque compensé par l'excédent du compte de capital (+ 2) ; le besoin restant de 8 millions est financé par une entrée nette de capitaux (compte financier − 11), notamment des investissements directs étrangers et des prêts, l'écart de 3 millions étant statistique. Un déficit courant signifie donc que le pays s'endette ou cède des actifs à l'étranger."
+          ],
+          "erreurs": [
+            "Réduire le solde courant à la balance commerciale.",
+            "Se tromper de signe dans l'équation : on retranche le solde du compte financier.",
+            "Croire qu'une balance des paiements peut être globalement déséquilibrée : elle est équilibrée par construction."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "eco-6",
+          "niveau": "application",
+          "titre": "Termes de l'échange et taux de couverture",
+          "objectif": "Calculer et distinguer termes de l'échange (prix) et taux de couverture (valeurs), et nuancer leur interprétation.",
+          "enonce": "Le pays fictif Andalinda exporte surtout du cuivre et importe des biens manufacturés. Les indices de prix ont pour base 100 l'année 0. Les échanges en valeur sont donnés en milliards d'euros.",
+          "donnees": {
+            "entetes": [
+              "Année",
+              "Indice des prix des exportations",
+              "Indice des prix des importations",
+              "Exportations",
+              "Importations"
+            ],
+            "lignes": [
+              [
+                "0",
+                "100",
+                "100",
+                "40",
+                "40"
+              ],
+              [
+                "1",
+                "104",
+                "110",
+                "45",
+                "50"
+              ],
+              [
+                "2",
+                "108",
+                "102",
+                "54",
+                "48"
+              ]
+            ]
+          },
+          "methode": [
+            "Termes de l'échange = indice des prix des exportations ÷ indice des prix des importations × 100.",
+            "Taux de couverture = exportations ÷ importations × 100.",
+            "Interprétez : au-dessus de 100, les termes de l'échange se sont améliorés (une même quantité d'exportations permet d'acheter plus d'importations) ; un taux de couverture supérieur à 100 % indique un excédent.",
+            "Demandez-vous enfin pourquoi la hausse des prix à l'exportation n'est pas toujours une bonne nouvelle."
+          ],
+          "questions": [
+            "1. Calculez les termes de l'échange des années 1 et 2.",
+            "2. Calculez les taux de couverture des années 0, 1 et 2.",
+            "3. Interprétez l'évolution.",
+            "4. Résumez la thèse de Prebisch et Singer et la politique qu'elle a justifiée.",
+            "5. Pourquoi une amélioration des termes de l'échange due à une appréciation de la monnaie peut-elle être défavorable ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Année 1 : 104 ÷ 110 × 100 ≈ 94,5 : dégradation (les prix des importations ont augmenté plus vite). Année 2 : 108 ÷ 102 × 100 ≈ 105,9 : amélioration par rapport à l'année 0.",
+            "2. Année 0 : 40 ÷ 40 × 100 = 100 % (équilibre). Année 1 : 45 ÷ 50 × 100 = 90 % (déficit). Année 2 : 54 ÷ 48 × 100 = 112,5 % (excédent).",
+            "3. En année 1, Andalinda doit exporter plus de cuivre pour acheter la même quantité de biens manufacturés, et son commerce devient déficitaire. En année 2, la hausse des prix à l'exportation améliore à la fois ses termes de l'échange et son solde. Les deux indicateurs ne mesurent pas la même chose : le premier compare des prix, le second des valeurs, qui dépendent aussi des volumes.",
+            "4. Dans les années 1950, Raúl Prebisch (CEPAL) et Hans Singer soutiennent que les termes de l'échange des pays exportateurs de produits primaires tendent à se dégrader face aux produits manufacturés. Cette thèse a justifié les politiques d'industrialisation par substitution aux importations en Amérique latine.",
+            "5. Si les prix à l'exportation (exprimés en monnaie étrangère) montent parce que la monnaie s'apprécie, les produits deviennent moins compétitifs : les volumes exportés peuvent baisser, et le solde commercial se dégrader malgré de meilleurs termes de l'échange."
+          ],
+          "erreurs": [
+            "Confondre termes de l'échange (prix) et taux de couverture (valeurs).",
+            "Inverser le rapport : c'est l'indice des prix des exportations qui est au numérateur."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "eco-s3",
+      "titre": "Le change : taux, conversions et régimes",
+      "chapitre": "eco.change",
+      "notions": [
+        "eco.change.taux-change"
+      ],
+      "rappel": [
+        "Le taux de change est le prix d'une monnaie dans une autre. EUR/USD = 1,0850 signifie 1 € = 1,0850 $ : la première devise citée est l'unité de base. Montant en euros = montant en dollars ÷ cours EUR/USD.",
+        "Change flottant : le taux résulte de l'offre et de la demande (appréciation, dépréciation). Change fixe : la banque centrale défend une parité (réévaluation, dévaluation). Régimes intermédiaires et formes extrêmes : caisse d'émission, union monétaire, dollarisation.",
+        "Dépréciation de l'euro : favorable aux exportateurs de la zone euro (prix plus compétitifs), défavorable aux importateurs (factures en dollars plus chères en euros). Appréciation : l'inverse.",
+        "Le franc CFA est arrimé à l'euro : 1 € = 655,957 F CFA. Bretton Woods (1944) : parités fixes autour du dollar convertible en or ; convertibilité suspendue le 15 août 1971 ; flottement généralisé en 1973.",
+        "Triangle d'incompatibilité (Mundell) : un pays ne peut avoir à la fois change fixe, libre circulation des capitaux et politique monétaire autonome."
+      ],
+      "exercices": [
+        {
+          "id": "eco-7",
+          "niveau": "bases",
+          "titre": "Lire une cotation et convertir",
+          "objectif": "Lire correctement une cotation, convertir dans les deux sens et employer le bon vocabulaire selon le régime de change.",
+          "enonce": "Le cours est EUR/USD = 1,0850. Par ailleurs, la parité fixe du franc CFA est 1 € = 655,957 F CFA.",
+          "methode": [
+            "Écrivez d'abord ce que signifie la cotation en une égalité : 1 € = 1,0850 $.",
+            "Pour passer des euros aux dollars, multipliez par le cours ; pour passer des dollars aux euros, divisez.",
+            "Contrôle de bon sens : un dollar vaut moins qu'un euro à ce cours, donc un montant en dollars donne moins d'euros.",
+            "Pour le vocabulaire, demandez-vous si le taux change par le marché ou par une décision officielle."
+          ],
+          "questions": [
+            "1. Combien valent 20 000 € en dollars ?",
+            "2. Combien valent 50 000 $ en euros (au centime près) ?",
+            "3. Combien vaut 1 $ en euros ?",
+            "4. Combien valent 2 000 000 F CFA en euros ?",
+            "5. Complétez par appréciation, dépréciation, réévaluation ou dévaluation : (a) l'EUR/USD passe de 1,0850 à 1,1200 sur le marché ; (b) une banque centrale décide officiellement de réduire la valeur de sa monnaie face à sa monnaie d'ancrage."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. 20 000 × 1,0850 = 21 700 $.",
+            "2. 50 000 ÷ 1,0850 ≈ 46 082,95 €. On divise, car il faut moins d'euros que de dollars pour la même valeur.",
+            "3. 1 ÷ 1,0850 ≈ 0,9217 €. Attention : la cotation EUR/USD = 1,0850 ne veut pas dire 1 $ = 1,0850 €.",
+            "4. 2 000 000 ÷ 655,957 ≈ 3 048,98 €.",
+            "5. (a) Appréciation de l'euro : avec un euro, on obtient plus de dollars, et le taux est fixé par le marché (change flottant). (b) Dévaluation : décision officielle dans un régime de change fixe. Le résultat est proche de celui d'une dépréciation, mais le mécanisme diffère."
+          ],
+          "erreurs": [
+            "Multiplier des dollars par le cours EUR/USD pour obtenir des euros.",
+            "Employer « dévaluation » pour une baisse de marché dans un régime flottant."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "eco-8",
+          "niveau": "application",
+          "titre": "Qui gagne et qui perd quand l'euro s'apprécie ?",
+          "objectif": "Chiffrer l'effet d'une variation du change sur un exportateur, un importateur et la compétitivité-prix, puis raisonner avec le triangle d'incompatibilité.",
+          "enonce": "Au moment de la signature des contrats, EUR/USD = 1,10. Au moment du paiement, trois mois plus tard, EUR/USD = 1,25. (a) La PME française fictive Loire Machines a vendu une machine facturée 100 000 $. (b) L'importateur français fictif Cafés de l'Atlantique a acheté du café facturé 60 000 $. (c) Un fabricant français vend un sac 40 € et le prix en dollars suit le change.",
+          "methode": [
+            "Interprétez d'abord le mouvement : passer de 1,10 à 1,25, est-ce une appréciation ou une dépréciation de l'euro ?",
+            "Convertissez chaque montant en dollars en euros aux deux dates (division par le cours), puis faites la différence.",
+            "Pour le sac, convertissez le prix en euros en dollars (multiplication) aux deux dates.",
+            "Pour le triangle, listez les trois objectifs et cherchez lequel un pays doit abandonner."
+          ],
+          "questions": [
+            "1. L'euro s'est-il apprécié ou déprécié ?",
+            "2. Calculez la recette en euros de Loire Machines aux deux dates et la perte de change.",
+            "3. Calculez le coût en euros du café aux deux dates et le gain de change.",
+            "4. Calculez le prix du sac en dollars aux deux dates. Conclusion sur la compétitivité-prix ?",
+            "5. Un pays fixe sa monnaie à l'euro et laisse les capitaux circuler librement. Que perd-il selon le triangle d'incompatibilité ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Un euro vaut désormais 1,25 $ au lieu de 1,10 $ : l'euro s'est apprécié.",
+            "2. À la signature : 100 000 ÷ 1,10 ≈ 90 909,09 €. Au paiement : 100 000 ÷ 1,25 = 80 000 €. Perte de change : 90 909,09 − 80 000 = 10 909,09 €. L'exportateur reçoit autant de dollars, mais ces dollars valent moins d'euros.",
+            "3. À la signature : 60 000 ÷ 1,10 ≈ 54 545,45 €. Au paiement : 60 000 ÷ 1,25 = 48 000 €. Gain de change : 6 545,45 €. L'importateur paie sa facture en dollars avec moins d'euros.",
+            "4. 40 × 1,10 = 44 $ ; 40 × 1,25 = 50 $. Pour un client américain, le sac est 13,6 % plus cher (50 ÷ 44 − 1) sans que le fabricant ait changé son prix : l'appréciation de l'euro réduit la compétitivité-prix des exportateurs de la zone euro.",
+            "5. Il ne peut pas avoir en plus une politique monétaire autonome : sa banque centrale doit utiliser ses taux d'intérêt pour défendre la parité, sinon les capitaux sortiraient ou entreraient massivement. C'est le triangle d'incompatibilité de Mundell."
+          ],
+          "erreurs": [
+            "Croire qu'un EUR/USD qui monte signifie que l'euro baisse.",
+            "Oublier que l'exportateur payé en dollars supporte le risque de change, pas son client."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "eco-s4",
+      "titre": "Politiques commerciales, intégration régionale et chaînes de valeur",
+      "chapitre": "eco.politique",
+      "notions": [
+        "eco.politique.protectionnisme",
+        "eco.politique.integration-regionale",
+        "eco.politique.chaines-valeur"
+      ],
+      "rappel": [
+        "Instruments tarifaires : droits de douane ad valorem (pourcentage de la valeur) ou spécifiques (montant par unité). Instruments non tarifaires : contingents, normes techniques et sanitaires, licences, subventions, préférences dans les marchés publics. Défense commerciale : antidumping, antisubventions, sauvegardes.",
+        "GATT (1947) puis OMC (1er janvier 1995) : nation la plus favorisée, traitement national, consolidation des droits, règlement des différends. List (1841) : protectionnisme éducateur, temporaire, pour les industries naissantes.",
+        "Balassa (1961) : zone de libre-échange, union douanière (+ tarif extérieur commun), marché commun (+ libre circulation des facteurs), union économique (et monétaire), intégration totale. Dans une zone de libre-échange, les règles d'origine sont indispensables.",
+        "Viner (1950) : création de commerce (on importe d'un partenaire plus efficace que le producteur national) et détournement de commerce (on importe d'un partenaire moins efficace qu'un pays tiers pénalisé par le tarif commun).",
+        "Chaînes de valeur mondiales : les pays se spécialisent dans des tâches. Les statistiques en valeur brute attribuent toute la valeur au pays exportateur final ; le commerce en valeur ajoutée (TiVA) mesure la contribution réelle de chaque pays. Courbe du sourire : la valeur se concentre en conception et en services, peu en assemblage."
+      ],
+      "exercices": [
+        {
+          "id": "eco-9",
+          "niveau": "bases",
+          "titre": "Les instruments du protectionnisme",
+          "objectif": "Reconnaître les instruments de protection et comparer par le calcul un droit ad valorem et un droit spécifique.",
+          "enonce": "Partie A : classez les mesures suivantes : (a) une taxe de 12 % de la valeur en douane sur des vélos importés ; (b) une taxe de 50 € par tonne d'acier importé ; (c) un plafond de 100 000 tonnes de sucre importé par an ; (d) l'interdiction d'un additif alimentaire ; (e) une aide publique aux producteurs nationaux de panneaux solaires ; (f) une taxe sur un produit étranger vendu en dessous de son prix normal ; (g) la TVA appliquée aux produits importés. Partie B : un pays importe 2 000 tonnes d'un produit. On compare un droit ad valorem de 12 % et un droit spécifique de 50 € par tonne, pour un prix mondial de 800 € puis de 400 € la tonne.",
+          "methode": [
+            "Pour chaque mesure, demandez-vous : s'agit-il d'une taxe (tarifaire), d'une autre restriction ou aide (non tarifaire), ou d'une réponse à une pratique jugée déloyale (défense commerciale) ?",
+            "Droit ad valorem = taux × valeur importée ; droit spécifique = montant par unité × quantité.",
+            "Comparez ce qui se passe quand le prix mondial baisse."
+          ],
+          "questions": [
+            "1. Classez les mesures (a) à (g).",
+            "2. Calculez le montant des deux droits pour les deux prix.",
+            "3. Lequel protège le plus les producteurs nationaux quand le prix mondial baisse ? Pourquoi ?",
+            "4. Donnez un argument en faveur et deux arguments contre le protectionnisme."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. (a) Tarifaire, droit ad valorem. (b) Tarifaire, droit spécifique. (c) Non tarifaire, contingent. (d) Non tarifaire, norme sanitaire. (e) Non tarifaire, subvention. (f) Défense commerciale, droit antidumping. (g) Pas une mesure protectionniste en soi : la TVA s'applique aussi aux produits nationaux.",
+            "2. À 800 €/t : valeur 2 000 × 800 = 1 600 000 € ; ad valorem 12 % = 192 000 € ; spécifique 2 000 × 50 = 100 000 €. À 400 €/t : valeur 800 000 € ; ad valorem 96 000 € ; spécifique toujours 100 000 €.",
+            "3. Quand le prix mondial baisse, le droit ad valorem diminue avec la valeur, alors que le droit spécifique reste fixe : il représente 6,25 % de la valeur à 800 € (50 ÷ 800) et 12,5 % à 400 € (50 ÷ 400). Le droit spécifique protège donc davantage lorsque les prix baissent.",
+            "4. Pour : protéger temporairement une industrie naissante (List), ou l'emploi et des secteurs stratégiques. Contre : hausse des prix pour les consommateurs et les entreprises importatrices ; risque de rétorsion des partenaires ; perte d'efficacité. Le tarif Smoot-Hawley (1930) a contribué à l'effondrement du commerce mondial pendant la crise."
+          ],
+          "erreurs": [
+            "Considérer la TVA à l'importation comme un droit de douane.",
+            "Croire qu'un droit ad valorem et un droit spécifique ont toujours le même effet."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "eco-10",
+          "niveau": "application",
+          "titre": "Stades d'intégration et effets d'une union douanière",
+          "objectif": "Situer un accord dans les stades de Balassa et distinguer par le calcul création et détournement de commerce.",
+          "enonce": "Partie A : trois accords fictifs. Accord 1 : les membres suppriment les droits entre eux, chacun garde ses droits face au reste du monde. Accord 2 : en plus, ils adoptent un tarif extérieur commun. Accord 3 : en plus, travailleurs et capitaux circulent librement. Partie B : le pays A importe des vélos. Coût de production d'un vélo : producteur national de A 150 € ; pays B (futur partenaire) 130 € ; pays tiers T 110 €. A forme une union douanière avec B et maintient son droit sur T. On étudie deux cas : droit de douane initial de 50 % (cas 1) ou de 20 % (cas 2), appliqué à toutes les importations avant l'union.",
+          "methode": [
+            "Partie A : identifiez le critère qui fait passer d'un stade au suivant (tarif extérieur commun, libre circulation des facteurs).",
+            "Partie B : avant l'union, calculez le prix de chaque source dans A (coût × (1 + droit) pour les importations) ; les acheteurs choisissent la moins chère.",
+            "Après l'union, B entre sans droit, T paie toujours le droit. Refaites la comparaison.",
+            "Création de commerce si la nouvelle source est plus efficace que l'ancienne ; détournement si l'on abandonne un producteur plus efficace (T) pour un partenaire moins efficace."
+          ],
+          "questions": [
+            "1. Nommez le stade de chaque accord de la partie A et expliquez le rôle des règles d'origine dans l'accord 1.",
+            "2. Cas 1 : d'où A importe-t-il avant et après l'union ? Création ou détournement ?",
+            "3. Cas 2 : même question. Que perd l'État de A ?",
+            "4. À quelle condition une union douanière est-elle bénéfique selon Viner ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Accord 1 : zone de libre-échange. Accord 2 : union douanière. Accord 3 : marché commun. Dans une zone de libre-échange, sans règles d'origine, un produit d'un pays tiers entrerait par le membre au tarif le plus bas puis circulerait librement vers les autres : les règles d'origine réservent la franchise aux produits réellement originaires des membres.",
+            "2. Avant : T coûte 110 × 1,5 = 165 €, B 130 × 1,5 = 195 €, le producteur national 150 € : A achète national à 150 €. Après : B 130 € (sans droit), T toujours 165 €, national 150 € : A importe de B à 130 €. On remplace un producteur national moins efficace (150) par un partenaire plus efficace (130) : création de commerce. Les consommateurs gagnent 20 € par vélo.",
+            "3. Avant : T coûte 110 × 1,2 = 132 €, B 156 €, national 150 € : A importe de T à 132 € et l'État perçoit 22 € de droit par vélo. Après : B 130 € sans droit, T 132 € : A importe de B. C'est un détournement de commerce : on abandonne T, le producteur le plus efficace (110), pour B, moins efficace (130). Le consommateur gagne seulement 2 € par vélo, l'État perd 22 € de recette douanière par vélo ; globalement, la collectivité perd 20 € par vélo, soit le surcoût de production de B par rapport à T.",
+            "4. L'union n'est bénéfique que si les effets de création de commerce l'emportent sur les effets de détournement."
+          ],
+          "erreurs": [
+            "Confondre zone de libre-échange et union douanière : le critère décisif est le tarif extérieur commun.",
+            "Juger l'union seulement sur la baisse du prix pour le consommateur, sans tenir compte de la recette douanière perdue et de l'efficacité du producteur."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "eco-11",
+          "niveau": "approfondissement",
+          "titre": "Valeur brute ou valeur ajoutée : la trottinette assemblée en Xandrie",
+          "objectif": "Comprendre, par un calcul simple, pourquoi un déficit bilatéral en valeur brute diffère du déficit en valeur ajoutée dans une chaîne de valeur mondiale.",
+          "enonce": "Une trottinette électrique est assemblée dans le pays fictif Xandrie et exportée vers le pays fictif Zélande au prix de 300 $ l'unité. Sa valeur se décompose ainsi : batterie importée du pays K, 110 $ ; moteur importé du pays J, 70 $ ; cadre et pièces importés de Zélande, 40 $ ; autres composants fabriqués en Xandrie, 50 $ ; assemblage en Xandrie, 30 $. La Zélande importe 10 000 trottinettes par an.",
+          "methode": [
+            "Vérifiez d'abord que la décomposition donne bien 300 $.",
+            "Valeur brute : la statistique classique attribue toute la valeur exportée au pays exportateur final.",
+            "Valeur ajoutée : identifiez ce que chaque pays a réellement apporté à la trottinette.",
+            "Pour le solde bilatéral de la Zélande avec la Xandrie, tenez compte des cadres que la Zélande a elle-même exportés vers la Xandrie."
+          ],
+          "questions": [
+            "1. Calculez la valeur ajoutée de la Xandrie par trottinette et sa part dans le prix.",
+            "2. Calculez le solde bilatéral de la Zélande avec la Xandrie sur ce produit en valeur brute.",
+            "3. Calculez ce solde en valeur ajoutée. Où est passée la différence ?",
+            "4. Reliez ces résultats à la courbe du sourire et citez deux stratégies d'entreprise face aux risques des chaînes de valeur."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Contrôle : 110 + 70 + 40 + 50 + 30 = 300 $. Valeur ajoutée de la Xandrie : 50 + 30 = 80 $ par trottinette, soit 80 ÷ 300 ≈ 26,7 % du prix. L'assemblage seul ne représente que 30 ÷ 300 = 10 %.",
+            "2. Importations de la Zélande en provenance de la Xandrie : 10 000 × 300 = 3 000 000 $. Exportations de cadres vers la Xandrie : 10 000 × 40 = 400 000 $. Solde en valeur brute : 400 000 − 3 000 000 = − 2 600 000 $.",
+            "3. En valeur ajoutée, la Zélande n'absorbe que la valeur ajoutée xandrienne : 10 000 × 80 = 800 000 $ ; ses propres cadres lui reviennent dans le produit fini. Solde en valeur ajoutée avec la Xandrie : − 800 000 $. La différence (1 800 000 $) correspond à la valeur ajoutée des pays K (10 000 × 110 = 1 100 000 $) et J (10 000 × 70 = 700 000 $) : en valeur ajoutée, le déficit de la Zélande est en réalité avec K et J. Contrôle : 800 000 + 1 100 000 + 700 000 = 2 600 000 $.",
+            "4. La courbe du sourire montre que la valeur se concentre aux extrémités (conception, marque, R&D ; marketing, services) et que l'assemblage capte peu de valeur, ce que confirme la faible part de l'assemblage xandrien. Face aux chocs (pandémie de 2020, blocage du canal de Suez en 2021, tensions géopolitiques), les entreprises diversifient leurs fournisseurs, relocalisent (reshoring) ou rapprochent leur production (nearshoring, friend-shoring)."
+          ],
+          "erreurs": [
+            "Attribuer toute la valeur de la trottinette au pays d'assemblage.",
+            "Confondre chaîne de valeur mondiale (répartition de la valeur entre pays) et chaîne logistique (flux d'un produit)."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

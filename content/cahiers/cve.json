@@ -1,0 +1,668 @@
+{
+  "matiere": "cve",
+  "titre": "Cuaderno de ejercicios de civilización española: del franquismo a la España actual",
+  "introduction": "Este cuaderno recorre el curso capítulo por capítulo, del franquismo a la España de después de 2008, y termina con el método del comentario de texto histórico. Para cada sección, lea primero el recordatorio: contiene las fechas, definiciones y distinciones que necesitará. Luego haga los ejercicios por escrito, en papel, siguiendo los pasos del método sin mirar el corregido. Por último, compare su respuesta con el corregido: explica no solo la respuesta correcta, sino también por qué lo es, y señala las trampas más frecuentes. Los ejercicios van de lo básico (fechas, definiciones, cronologías) a la aplicación (análisis de un documento, cadenas de causas y consecuencias) y a la profundización (planes de comentario o de disertación).",
+  "sections": [
+    {
+      "id": "cve-s1",
+      "titre": "El franquismo y su herencia en 1975",
+      "chapitre": "cve.franquismo",
+      "notions": ["cve.franquismo.herencia"],
+      "rappel": [
+        "La dictadura de Franco nace de la victoria en la guerra civil (1936-1939) y dura hasta su muerte, el 20 de noviembre de 1975.",
+        "Régimen autoritario: sin partidos (solo el Movimiento Nacional), sin elecciones libres, represión de los opositores y de las identidades regionales (catalana, vasca); se apoya en el ejército, la Iglesia (nacionalcatolicismo) y las élites tradicionales.",
+        "Economía: autarquía (1939-1959) y después Plan de Estabilización de 1959, que abre el «desarrollismo» de los años sesenta: industrialización, turismo de masas, éxodo rural, clase media.",
+        "Sucesión: Juan Carlos de Borbón designado sucesor a título de rey en 1969; asesinato del almirante Carrero Blanco por ETA en 1973; Juan Carlos proclamado rey el 22 de noviembre de 1975.",
+        "Idea clave: en 1975 España es una sociedad modernizada económicamente pero con instituciones autoritarias. Modernización económica no significa democratización."
+      ],
+      "exercices": [
+        {
+          "id": "cve-1",
+          "niveau": "bases",
+          "titre": "Reconstruir la cronología del franquismo",
+          "objectif": "Situar en orden los grandes hitos del franquismo y distinguir lo político de lo económico.",
+          "enonce": "Los acontecimientos siguientes están desordenados. Reconstruya la cronología del régimen y clasifique cada acontecimiento según su naturaleza.",
+          "donnees": {
+            "entetes": ["Letra", "Acontecimiento"],
+            "lignes": [
+              ["A", "Asesinato del almirante Carrero Blanco por ETA"],
+              ["B", "Plan de Estabilización"],
+              ["C", "Guerra civil y victoria de Franco"],
+              ["D", "Muerte de Franco"],
+              ["E", "Juan Carlos designado sucesor a título de rey"],
+              ["F", "Desarrollismo: industrialización, turismo, éxodo rural"],
+              ["G", "Autarquía y aislamiento, luego acercamiento a Estados Unidos (1953)"]
+            ]
+          },
+          "methode": [
+            "Empiece por los dos extremos que conoce con seguridad: el origen del régimen (la guerra civil) y su fin (la muerte del dictador).",
+            "Coloque después las dos grandes fases económicas: primero la economía cerrada, luego la apertura y el crecimiento. Pregúntese qué medida marca el paso de una a otra.",
+            "Termine con la cuestión de la sucesión: ¿quién es designado y cuándo? ¿Qué acontecimiento debilita la continuidad del régimen poco antes de 1975?",
+            "Para clasificar, pregúntese: ¿el acontecimiento cambia las instituciones o el poder (político) o cambia la producción, el comercio, la sociedad (económico y social)?"
+          ],
+          "questions": [
+            "1. Ordene las letras de la más antigua a la más reciente y escriba la fecha de cada acontecimiento.",
+            "2. Clasifique cada acontecimiento en «político» o «económico y social».",
+            "3. En una frase, explique por qué el Plan de Estabilización es una bisagra en la historia del régimen."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Orden: C (1936-1939, guerra civil) → G (1939-1959, autarquía, con acercamiento a Estados Unidos en 1953) → B (1959, Plan de Estabilización) → F (años sesenta, desarrollismo) → E (1969, Juan Carlos sucesor) → A (1973, Carrero Blanco) → D (20 de noviembre de 1975, muerte de Franco). La lógica es: nacimiento del régimen, dos fases económicas, preparación de la sucesión, fin.",
+            "2. Político: C, E, A, D (origen del poder, sucesión, desaparición del principal continuador, fin del dictador). Económico y social: G, B, F (organización de la economía y efectos en la sociedad). G tiene también una dimensión política (aislamiento internacional), pero se cita sobre todo como fase económica.",
+            "3. El Plan de Estabilización de 1959 pone fin a la autarquía y abre el camino al desarrollismo: separa una España cerrada y aislada de una España que crece, se industrializa y recibe turistas.",
+            "Resultado: la cronología muestra dos ritmos distintos. La economía cambia mucho a partir de 1959, mientras que las instituciones políticas siguen siendo autoritarias hasta 1975."
+          ],
+          "erreurs": [
+            "Confundir la designación de Juan Carlos como sucesor (1969) con su proclamación como rey (22 de noviembre de 1975).",
+            "Pensar que el desarrollismo trae la democracia: la modernización económica se hace sin liberalización política."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cve-2",
+          "niveau": "application",
+          "titre": "Analizar un documento: turistas en la Costa del Sol en 1965",
+          "objectif": "Utilizar los conocimientos del curso para explicar lo que un documento muestra y lo que no muestra.",
+          "enonce": "Documento (descripción ficticia): fotografía tomada en 1965 en una playa de la Costa del Sol. Se ven turistas extranjeros en traje de baño, hoteles nuevos en construcción y, en primer plano, un camarero andaluz que sirve bebidas. El pie de foto dice: «El turismo, motor de la nueva España».",
+          "methode": [
+            "Presente el documento: naturaleza (fotografía), fecha, lugar, tema.",
+            "Relacione cada elemento visible con una noción del curso: ¿a qué fase económica corresponde 1965? ¿Qué fenómenos sociales acompañan esta fase?",
+            "Pregúntese ahora qué no se ve: ¿cómo funciona el poder político en 1965? Un documento no lo dice todo; el comentario debe completar con el contexto.",
+            "Formule una pregunta que oponga lo visible (apertura) y lo invisible (cierre político)."
+          ],
+          "questions": [
+            "1. Presente el documento en dos o tres frases.",
+            "2. Explique, con dos nociones del curso, por qué el turismo crece en estos años.",
+            "3. ¿Qué aspecto del régimen no aparece en la fotografía? Justifique con tres rasgos políticos del franquismo.",
+            "4. Proponga una problemática para comentar este documento."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Se trata de una fotografía tomada en 1965 en la Costa del Sol, que muestra turistas extranjeros, hoteles en construcción y un camarero local. El pie de foto presenta el turismo como «motor de la nueva España»: es una imagen optimista del crecimiento.",
+            "2. El turismo crece porque el Plan de Estabilización de 1959 abre la economía tras la autarquía, y porque los años sesenta son los del desarrollismo: industrialización, turismo de masas, éxodo rural hacia las ciudades y las costas, aparición de una clase media. El camarero andaluz puede ilustrar ese empleo nuevo en los servicios.",
+            "3. No aparece el cierre político: en 1965 España sigue siendo una dictadura sin partidos (solo el Movimiento Nacional), sin elecciones libres y con represión de los opositores y de las identidades regionales. La imagen de apertura convive con un régimen autoritario apoyado en el ejército y la Iglesia.",
+            "4. Problemática posible: ¿En qué medida esta imagen de una España abierta y moderna oculta la permanencia de un régimen político cerrado? Esta pregunta funciona porque obliga a analizar a la vez lo que el documento muestra (modernización) y sus límites (ausencia de democratización).",
+            "Resultado: el documento ilustra la contradicción central de la herencia franquista: una sociedad modernizada económicamente con instituciones autoritarias."
+          ],
+          "erreurs": [
+            "Describir la foto sin movilizar conocimientos: eso es paráfrasis, no análisis.",
+            "Concluir que el régimen se liberaliza porque llegan turistas."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "cve-s2",
+      "titre": "La Transición (1975-1978)",
+      "chapitre": "cve.transicion",
+      "notions": ["cve.transicion.reforma", "cve.transicion.elecciones-1977", "cve.transicion.moncloa", "cve.transicion.constitucion"],
+      "rappel": [
+        "Julio de 1976: el rey nombra a Adolfo Suárez presidente del Gobierno. Estrategia de reforma «de la ley a la ley»: pasar a la democracia usando la legalidad franquista. Opción opuesta: la ruptura que pedía la oposición.",
+        "Ley para la Reforma Política: votada por las Cortes franquistas en noviembre de 1976 («harakiri» del franquismo), aprobada en referéndum el 15 de diciembre de 1976 (cerca del 94 % de síes).",
+        "Legalización del PCE de Santiago Carrillo el 9 de abril de 1977 (Sábado Santo); elecciones del 15 de junio de 1977, las primeras libres desde 1936: gana la UCD de Suárez, por delante del PSOE de Felipe González; PCE y AP (Manuel Fraga) más modestos. Las Cortes se vuelven constituyentes.",
+        "Pactos de la Moncloa (octubre de 1977): frente a una inflación cercana al 25 %, moderación salarial según la inflación prevista, política monetaria restrictiva, reforma fiscal, contrapartidas sociales y parte política. Símbolo del consenso.",
+        "Constitución: aprobada en referéndum el 6 de diciembre de 1978 (cerca del 88 %), promulgada el 27 de diciembre. Art. 1: Estado social y democrático de Derecho, monarquía parlamentaria. Art. 2: unidad de la Nación y derecho a la autonomía de nacionalidades y regiones. Art. 3: castellano oficial, otras lenguas cooficiales. Art. 16: ninguna confesión estatal. Título VIII: comunidades autónomas."
+      ],
+      "exercices": [
+        {
+          "id": "cve-3",
+          "niveau": "bases",
+          "titre": "Reforma o ruptura: las etapas de la Ley para la Reforma Política",
+          "objectif": "Comprender cómo la democracia pudo nacer de las propias instituciones franquistas.",
+          "enonce": "Complete la tabla de etapas y responda a las preguntas sobre la estrategia de Adolfo Suárez.",
+          "donnees": {
+            "entetes": ["Fecha", "Acontecimiento", "Actor principal"],
+            "lignes": [
+              ["Julio de 1976", "…", "El rey Juan Carlos"],
+              ["Noviembre de 1976", "…", "…"],
+              ["15 de diciembre de 1976", "…", "Los ciudadanos"],
+              ["9 de abril de 1977", "…", "Adolfo Suárez"],
+              ["15 de junio de 1977", "…", "Los electores"]
+            ]
+          },
+          "methode": [
+            "Recuerde la fórmula «de la ley a la ley»: el cambio se hace respetando formalmente las reglas del régimen anterior. Pregúntese entonces quién debe votar la ley en primer lugar.",
+            "Distinga dos votos diferentes: el de una asamblea (las Cortes) y el del pueblo (referéndum).",
+            "Para la última fila, piense en lo que hace falta para que unas elecciones sean creíbles: ¿pueden excluirse partidos?",
+            "Defina luego «reforma» y «ruptura» a partir de quién conduce el cambio y con qué instrumentos."
+          ],
+          "questions": [
+            "1. Complete las casillas vacías de la tabla.",
+            "2. ¿Por qué se habló del «harakiri» de las Cortes franquistas?",
+            "3. Defina «reforma» y «ruptura» y diga cuál de las dos opciones describe mejor la Transición.",
+            "4. ¿Por qué la legalización del PCE era necesaria y, a la vez, arriesgada?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Julio de 1976: Suárez nombrado presidente del Gobierno (sustituye a Arias Navarro). Noviembre de 1976: las Cortes franquistas votan la Ley para la Reforma Política (actor: las Cortes franquistas). 15 de diciembre de 1976: referéndum, cerca del 94 % de síes. 9 de abril de 1977: legalización del PCE de Santiago Carrillo. 15 de junio de 1977: primeras elecciones libres desde 1936, victoria de la UCD.",
+            "2. Porque los diputados del régimen votan una ley que pone fin a su propia institución: crean unas Cortes bicamerales elegidas por sufragio universal que las sustituirán. El régimen se desmonta a sí mismo, de ahí la imagen del suicidio ritual.",
+            "3. Reforma: cambio conducido desde las instituciones existentes, con su legalidad. Ruptura: cambio exigido por la oposición, que quería romper con esas instituciones. La Transición es una reforma negociada, «pactada», situada entre las dos opciones: la conduce un hombre del aparato franquista, pero con el acuerdo progresivo de la oposición.",
+            "4. Necesaria: sin todos los partidos, las elecciones no serían creíbles. Arriesgada: una parte del ejército la rechazaba, por eso Suárez la decidió en un momento tranquilo, el Sábado Santo.",
+            "Resultado: en menos de un año (julio de 1976 - junio de 1977) se pasa de las instituciones franquistas a unas Cortes elegidas libremente, que se convierten en constituyentes."
+          ],
+          "erreurs": [
+            "Creer que la oposición impuso la Ley para la Reforma Política: fue votada por las Cortes franquistas.",
+            "Confundir el referéndum de 1976 (reforma política, cerca del 94 %) con el de 1978 (Constitución, cerca del 88 %)."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cve-4",
+          "niveau": "application",
+          "titre": "La Constitución de 1978: qué dice cada artículo",
+          "objectif": "Asociar los principales artículos de la Constitución a su contenido y explicar las nociones clave.",
+          "enonce": "Un compañero ha preparado fichas sobre la Constitución, pero ha mezclado los contenidos. Asocie cada artículo con su contenido y explique las nociones subrayadas.",
+          "donnees": {
+            "entetes": ["Artículo / título", "Contenido propuesto (desordenado)"],
+            "lignes": [
+              ["Art. 1", "a) Ninguna confesión tiene carácter estatal"],
+              ["Art. 2", "b) Organización territorial: comunidades autónomas"],
+              ["Art. 3", "c) Estado social y democrático de Derecho; monarquía parlamentaria"],
+              ["Art. 16", "d) Castellano lengua oficial; las demás lenguas cooficiales en sus comunidades"],
+              ["Título VIII", "e) Unidad de la Nación española; derecho a la autonomía de nacionalidades y regiones"]
+            ]
+          },
+          "methode": [
+            "Empiece por los artículos que definen el Estado mismo (forma política, tipo de Estado): suelen estar al principio de una constitución.",
+            "Busque después lo que se refiere al territorio y a las lenguas: son dos cuestiones ligadas a las identidades regionales reprimidas bajo el franquismo.",
+            "Para cada noción, defínala y luego diga en qué rompe con el régimen anterior.",
+            "Para «nacionalidades», compare con la expresión «indisoluble unidad de la Nación española»: el artículo combina dos ideas."
+          ],
+          "questions": [
+            "1. Asocie cada artículo con su contenido (a-e).",
+            "2. Explique «monarquía parlamentaria» y «Estado de Derecho».",
+            "3. ¿Por qué el artículo 16 marca una ruptura con el nacionalcatolicismo?",
+            "4. El artículo 2 reconoce «nacionalidades». ¿Significa que reconoce naciones soberanas? Justifique.",
+            "5. ¿Quién redactó el texto y cómo se aprobó?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Art. 1 → c; Art. 2 → e; Art. 3 → d; Art. 16 → a; Título VIII → b.",
+            "2. Monarquía parlamentaria: el rey es jefe del Estado, pero el Gobierno es responsable ante el Parlamento (las Cortes Generales: Congreso de los Diputados y Senado). Estado de Derecho: el Estado está sometido al derecho; se garantizan derechos y libertades y la separación de poderes (Cortes, Gobierno, poder judicial, Tribunal Constitucional). La soberanía nacional reside en el pueblo español.",
+            "3. El franquismo se apoyaba en la Iglesia (nacionalcatolicismo). El artículo 16 garantiza la libertad religiosa y establece que ninguna confesión tiene carácter estatal: el Estado se vuelve aconfesional.",
+            "4. No. El artículo 2 afirma a la vez «la indisoluble unidad de la Nación española» y el derecho a la autonomía de las «nacionalidades y regiones» que la integran. «Nacionalidad» designa comunidades con fuerte identidad histórica, pero la soberanía pertenece al pueblo español en su conjunto. Esta ambigüedad es un compromiso, y alimentará debates posteriores.",
+            "5. Una ponencia de siete diputados de las principales fuerzas políticas (los «padres de la Constitución»); aprobada por las Cortes y luego en referéndum el 6 de diciembre de 1978 (cerca del 88 % de síes); promulgada el 27 de diciembre de 1978.",
+            "Resultado: la Constitución transforma punto por punto la herencia franquista: partido único → pluralismo y Estado de Derecho; Estado confesional → aconfesionalidad; centralismo y represión regional → autonomías y lenguas cooficiales."
+          ],
+          "erreurs": [
+            "Escribir que la Constitución crea un Estado federal: no emplea esta palabra.",
+            "Confundir la fecha del referéndum (6 de diciembre) con la de la promulgación (27 de diciembre)."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cve-5",
+          "niveau": "approfondissement",
+          "titre": "Cadena de causas y consecuencias, y plan de disertación sobre el consenso",
+          "objectif": "Relacionar los acontecimientos de la Transición entre sí y construir un plan argumentado.",
+          "enonce": "Tema de disertación corta: «La Transición española, ¿una democracia nacida del consenso?» Antes de hacer el plan, reconstruya las relaciones de causa y consecuencia.",
+          "donnees": {
+            "entetes": ["Causa", "Consecuencia a encontrar"],
+            "lignes": [
+              ["Muerte de Franco y llegada de un rey designado en 1969", "…"],
+              ["Necesidad de elecciones creíbles", "…"],
+              ["Victoria de la UCD el 15 de junio de 1977", "…"],
+              ["Inflación cercana al 25 %, paro, déficit exterior", "…"],
+              ["Cultura del consenso entre fuerzas opuestas", "…"]
+            ]
+          },
+          "methode": [
+            "Para cada fila, pregúntese: ¿qué decisión o qué acontecimiento se explica por esta situación? Use una fórmula del tipo «por eso…», «lo que provoca…».",
+            "Para el plan, defina primero los términos del tema: ¿qué es el consenso? (acuerdo entre fuerzas políticas opuestas).",
+            "Busque dos o tres ideas que respondan a la pregunta, cada una apoyada en hechos precisos del curso. Un buen plan matiza: ¿todo fue consenso?",
+            "No añada hechos que no conozca con precisión: es mejor un plan corto y exacto."
+          ],
+          "questions": [
+            "1. Complete la columna de consecuencias.",
+            "2. Defina la problemática del tema en una pregunta.",
+            "3. Proponga un plan en dos o tres partes, con dos argumentos o ejemplos por parte."
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Muerte de Franco → el rey nombra a Suárez (julio de 1976), que emprende la reforma desde dentro. Elecciones creíbles → legalización de todos los partidos, incluido el PCE (9 de abril de 1977). Victoria de la UCD → las nuevas Cortes se convierten en constituyentes y Suárez sigue gobernando. Crisis económica → Pactos de la Moncloa (octubre de 1977): moderación salarial, política monetaria restrictiva, reforma fiscal, contrapartidas sociales. Cultura del consenso → Constitución redactada por siete diputados de diferentes fuerzas y aprobada en referéndum (6 de diciembre de 1978).",
+            "2. Problemática posible: ¿En qué medida el paso a la democracia entre 1976 y 1978 se basó en acuerdos entre fuerzas opuestas más que en una ruptura?",
+            "3. Plan posible. I. Una reforma negociada desde las instituciones franquistas: Ley para la Reforma Política votada por las Cortes franquistas y aprobada en referéndum; elecciones de 1977 con todos los partidos legalizados. II. El consenso como método: Pactos de la Moncloa firmados por el Gobierno y las principales fuerzas (la foto reúne a Suárez, González, Carrillo y Fraga); Constitución redactada por una ponencia plural. III. Los límites del consenso: decisiones arriesgadas frente al ejército (legalización del PCE), compromisos ambiguos (nacionalidades y unidad de la Nación en el art. 2), que dejan cuestiones abiertas.",
+            "Por qué este plan funciona: cada parte responde a la pregunta y la tercera matiza, lo que evita una respuesta simplemente afirmativa. Todos los ejemplos proceden del curso."
+          ],
+          "erreurs": [
+            "Hacer un plan cronológico que solo relata (1976, luego 1977, luego 1978) sin responder a la pregunta.",
+            "Situar los Pactos de la Moncloa después de la Constitución: los preceden (1977) y crean el clima de consenso."
+          ],
+          "fictif": false
+        }
+      ]
+    },
+    {
+      "id": "cve-s3",
+      "titre": "La consolidación democrática (1981-2004)",
+      "chapitre": "cve.consolidacion",
+      "notions": ["cve.consolidacion.23f", "cve.consolidacion.gonzalez", "cve.consolidacion.aznar", "cve.consolidacion.11m"],
+      "rappel": [
+        "23-F (23 de febrero de 1981): durante la investidura de Calvo-Sotelo, Tejero asalta el Congreso; Milans del Bosch saca los tanques en Valencia; Armada implicado. Mensaje televisado del rey a favor de la Constitución; fracaso el 24. Alcance: aislamiento de los golpistas, legitimidad del rey, fin simbólico de la amenaza militar.",
+        "Felipe González (1982-1996): mayoría absoluta del PSOE el 28 de octubre de 1982 (202 escaños de 350), primera alternancia. Reconversión industrial, Estado del bienestar, reforma del ejército. CEE el 1 de enero de 1986; referéndum de permanencia en la OTAN el 12 de marzo de 1986. 1992: JJ. OO. de Barcelona, Expo de Sevilla, AVE. Sombras: huelga general del 14-D (1988), corrupción, GAL.",
+        "José María Aznar (1996-2004): gobierno en minoría con apoyo de CiU, PNV y CC; privatizaciones; criterios de Maastricht; euro (1999 moneda escritural, 2002 monedas y billetes); mayoría absoluta en 2000 (183 escaños); Prestige (2002); apoyo a la guerra de Irak (2003). Crecimiento basado en la construcción y el crédito.",
+        "11-M (11 de marzo de 2004): atentados en trenes de Cercanías de Madrid (unos 190 muertos), atribuidos primero a ETA por el Gobierno; autores: célula yihadista. 14 de marzo: victoria del PSOE de Zapatero, retirada de Irak.",
+        "No confundir: OTAN (entrada en 1982 con Calvo-Sotelo / referéndum de permanencia en 1986 con González); CEE (1986, González) / euro (1999-2002, Aznar); 23-F (golpe militar, 1981) / 11-M (terrorismo, 2004)."
+      ],
+      "exercices": [
+        {
+          "id": "cve-6",
+          "niveau": "bases",
+          "titre": "Cronología con trampas: 1981-2004",
+          "objectif": "Fijar las fechas de la consolidación y evitar las confusiones más frecuentes.",
+          "enonce": "Diga si cada afirmación es verdadera o falsa y corrija las falsas.",
+          "donnees": {
+            "entetes": ["N.º", "Afirmación"],
+            "lignes": [
+              ["a", "El 23-F tuvo lugar durante la investidura de Leopoldo Calvo-Sotelo."],
+              ["b", "España entró en la OTAN en 1986 gracias a un referéndum."],
+              ["c", "La primera victoria del PSOE data de las elecciones de 1977."],
+              ["d", "España entró en la CEE el 1 de enero de 1986, al mismo tiempo que Portugal."],
+              ["e", "El euro fue introducido bajo los gobiernos de Felipe González."],
+              ["f", "En 1996, el PP de Aznar obtuvo la mayoría absoluta."],
+              ["g", "El 11-M fue obra de ETA, según el juicio de 2007."]
+            ]
+          },
+          "methode": [
+            "Para cada afirmación, identifique la palabra o la cifra sospechosa (una fecha, un nombre, un verbo como «entró» o «permaneció»).",
+            "Compruebe con el recordatorio quién gobernaba en esa fecha: muchas trampas mezclan gobiernos.",
+            "Para corregir, no se limite a escribir «falso»: reescriba la frase con el dato correcto."
+          ],
+          "questions": [
+            "1. Verdadero o falso para cada afirmación (a-g).",
+            "2. Reescriba correctamente las afirmaciones falsas."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "a) Verdadero: Suárez había dimitido el 29 de enero de 1981 y se votaba la investidura de su sucesor, Calvo-Sotelo.",
+            "b) Falso: España entró en la OTAN en 1982 (Gobierno de Calvo-Sotelo); el referéndum del 12 de marzo de 1986 aprobó la permanencia. El PSOE, al principio contrario, hizo aprobar la permanencia.",
+            "c) Falso: en 1977 ganó la UCD. La primera victoria del PSOE es la del 28 de octubre de 1982 (mayoría absoluta, 202 escaños), primera alternancia.",
+            "d) Verdadero: tratado firmado el 12 de junio de 1985, entrada el 1 de enero de 1986, junto con Portugal.",
+            "e) Falso: el euro llega bajo Aznar (moneda escritural en 1999, monedas y billetes en 2002). Bajo González se produce la entrada en la CEE.",
+            "f) Falso: en 1996 Aznar gana sin mayoría absoluta y gobierna con el apoyo de CiU, PNV y CC; la mayoría absoluta llega en 2000 (183 escaños).",
+            "g) Falso: el Gobierno de Aznar atribuyó primero el atentado a ETA, pero el juicio de 2007 confirmó la responsabilidad de una célula yihadista y descartó a ETA.",
+            "Resultado: 2 verdaderas (a, d) y 5 falsas. Las trampas mezclan casi siempre dos gobiernos o dos acontecimientos parecidos."
+          ],
+          "erreurs": [
+            "Atribuir a un mismo gobierno las dos grandes etapas europeas (CEE y euro).",
+            "Confundir «entrada» y «permanencia» en la OTAN."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cve-7",
+          "niveau": "application",
+          "titre": "El 23-F: reconstruir los hechos y medir su alcance",
+          "objectif": "Ordenar una secuencia de acontecimientos y explicar por qué el fracaso de un golpe consolida la democracia.",
+          "enonce": "Las etapas del 23-F aparecen desordenadas. Reconstrúyalas y analice el papel del rey.",
+          "donnees": {
+            "entetes": ["Letra", "Etapa"],
+            "lignes": [
+              ["A", "Mensaje televisado del rey con uniforme de capitán general a favor del orden constitucional"],
+              ["B", "Dimisión de Adolfo Suárez"],
+              ["C", "Juicio y condena de Tejero, Milans del Bosch y Armada"],
+              ["D", "Asalto de Tejero al Congreso durante la votación de investidura"],
+              ["E", "Rendición de Tejero y liberación de los diputados"],
+              ["F", "Estado de excepción y tanques en las calles de Valencia"]
+            ]
+          },
+          "methode": [
+            "Busque primero la causa de la votación de investidura: ¿por qué había que elegir a un nuevo presidente?",
+            "Luego siga la noche del 23 al 24 de febrero hora por hora: asalto, extensión del golpe fuera de Madrid, respuesta del jefe del Estado, desenlace.",
+            "Para el alcance, distinga tres niveles: los golpistas, el rey, la democracia en su conjunto. Y no olvide los límites: ¿el clima se calma del todo?"
+          ],
+          "questions": [
+            "1. Ordene las etapas y feche las que pueda.",
+            "2. ¿Por qué la intervención del rey es decisiva?",
+            "3. Indique tres consecuencias del fracaso del golpe y un límite."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. B (29 de enero de 1981) → D (23 de febrero, hacia las 18:20) → F (tarde-noche del 23) → A (noche del 23 al 24) → E (24 de febrero) → C (1982).",
+            "2. El rey es jefe del Estado y de las Fuerzas Armadas. Al aparecer en televisión con uniforme de capitán general y ordenar el mantenimiento del orden constitucional, priva a los golpistas del apoyo que buscaban y muestra a los militares dudosos de qué lado está la máxima autoridad.",
+            "3. Consecuencias: aislamiento de los golpistas; refuerzo de la legitimidad democrática del rey; fin simbólico de la amenaza militar (con el juicio de los responsables en 1982). Límite: el clima sigue tenso por el terrorismo de ETA, la crisis económica y el descontento de una parte del ejército.",
+            "Resultado: un intento de destruir la democracia termina reforzándola, porque su fracaso demuestra que las instituciones de 1978 resisten."
+          ],
+          "erreurs": [
+            "Decir que el golpe se produjo durante la investidura de Suárez: se trataba de la de Calvo-Sotelo.",
+            "Olvidar la dimensión fuera de Madrid (Valencia, Milans del Bosch)."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cve-8",
+          "niveau": "approfondissement",
+          "titre": "Luces y sombras: comparar los años González y los años Aznar",
+          "objectif": "Construir un balance matizado de dos periodos de gobierno a partir de hechos precisos.",
+          "enonce": "Complete el cuadro comparativo y redacte el plan de un párrafo argumentado: «De 1982 a 2004, España se europeíza y se moderniza, pero no sin tensiones».",
+          "donnees": {
+            "entetes": ["Criterio", "González (1982-1996)", "Aznar (1996-2004)"],
+            "lignes": [
+              ["Llegada al poder", "…", "…"],
+              ["Hito europeo", "…", "…"],
+              ["Política económica", "…", "…"],
+              ["Símbolo de modernización o de éxito", "…", "…"],
+              ["Sombras", "…", "…"],
+              ["Fin del periodo", "…", "…"]
+            ]
+          },
+          "methode": [
+            "Rellene el cuadro línea por línea, buscando en el recordatorio un hecho preciso con fecha para cada casilla.",
+            "Para el balance, separe lo positivo (luces) de lo negativo (sombras) para cada periodo.",
+            "Para el párrafo, organice la idea en tres tiempos: modernización y europeización; tensiones; conclusión que relaciona el crecimiento de los años Aznar con lo que viene después (2008)."
+          ],
+          "questions": [
+            "1. Complete el cuadro.",
+            "2. Escriba el plan del párrafo (tres ideas con un ejemplo cada una)."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Llegada: González, mayoría absoluta el 28 de octubre de 1982 (202 escaños), primera alternancia / Aznar, victoria del 3 de marzo de 1996 sin mayoría absoluta, apoyo de CiU, PNV y CC. Hito europeo: CEE el 1 de enero de 1986 / euro (1999 y 2002). Política económica: reconversión industrial dolorosa, Estado del bienestar / privatizaciones (Telefónica, Repsol, Endesa, Argentaria) y reducción del déficit para Maastricht. Símbolo: 1992 (JJ. OO. de Barcelona, Expo de Sevilla, AVE) / fuerte crecimiento y bajada del paro, mayoría absoluta en 2000. Sombras: huelga general del 14-D de 1988, corrupción, GAL / Prestige (2002), guerra de Irak (2003), crecimiento basado en la construcción y el crédito. Fin: derrota en marzo de 1996 frente al PP / Aznar no se presenta; 11-M y victoria de Zapatero el 14 de marzo de 2004.",
+            "2. Plan: (1) Una España que se europeíza: CEE en 1986, euro en 1999-2002, dos etapas bajo dos gobiernos distintos. (2) Una modernización visible pero costosa: 1992 como escaparate, pero reconversión industrial y huelga general de 1988; privatizaciones y crecimiento con Aznar. (3) Tensiones y fragilidades: GAL y corrupción, guerra de Irak muy impopular, y un crecimiento basado en el sector inmobiliario y el endeudamiento que prepara la burbuja de 2008.",
+            "Por qué es un buen balance: compara con los mismos criterios, cita hechos fechados y termina con una apertura que relaciona el periodo con la crisis siguiente."
+          ],
+          "erreurs": [
+            "Hacer un balance solo positivo o solo negativo.",
+            "Olvidar que el gobierno de Aznar de 1996 dependía de partidos nacionalistas."
+          ],
+          "fictif": false
+        }
+      ]
+    },
+    {
+      "id": "cve-s4",
+      "titre": "El Estado de las autonomías, Cataluña y el País Vasco",
+      "chapitre": "cve.autonomias",
+      "notions": ["cve.autonomias.estado", "cve.autonomias.cataluna", "cve.autonomias.pais-vasco"],
+      "rappel": [
+        "Fundamento: art. 2 (unidad de la Nación y derecho a la autonomía de nacionalidades y regiones) y título VIII (arts. 137 a 158). Ni Estado federal ni centralizado.",
+        "Cada comunidad tiene un Estatuto de Autonomía (ley orgánica) que fija sus instituciones (parlamento, gobierno, presidente) y competencias. Vía rápida del art. 151 (País Vasco, Cataluña, Galicia, Andalucía tras el referéndum del 28 de febrero de 1980); vía lenta del art. 143 para las demás.",
+        "17 comunidades autónomas creadas entre 1979 y 1983 + Ceuta y Melilla, ciudades autónomas en 1995. Régimen foral (concierto y convenio) para el País Vasco y Navarra: recaudan la mayor parte de los impuestos y pagan el cupo; las demás, régimen común. Conflictos de competencias: Tribunal Constitucional.",
+        "Cataluña: Estatuto de 2006 (referéndum del 18 de junio), sentencia del TC del 28 de junio de 2010, Diadas desde 2012, consulta del 9-N (2014), referéndum ilegal del 1-O (2017), declaración de independencia y art. 155 el 27 de octubre de 2017, condenas en 2019, indultos en 2021, ley de amnistía en 2024.",
+        "ETA: fundada en 1959; Carrero Blanco (1973); violencia redoblada en democracia (unos 850 muertos en total; Hipercor 1987); GAL (1983-1987); Miguel Ángel Blanco (1997); Ley de Partidos (2002), ilegalización de Batasuna (2003); fin de la violencia el 20 de octubre de 2011; desarme en 2017; disolución en 2018. El PNV, nacionalismo moderado, no debe confundirse con ETA."
+      ],
+      "exercices": [
+        {
+          "id": "cve-9",
+          "niveau": "bases",
+          "titre": "¿Quién hace qué en el Estado de las autonomías?",
+          "objectif": "Entender las piezas del sistema autonómico y el papel de cada una.",
+          "enonce": "Asocie cada pieza del sistema con su función y responda a las preguntas.",
+          "donnees": {
+            "entetes": ["Pieza del sistema", "Función (desordenada)"],
+            "lignes": [
+              ["Artículo 2 de la Constitución", "1) Arbitra los conflictos de competencias entre el Estado y las comunidades"],
+              ["Título VIII", "2) Ley orgánica que fija las instituciones y competencias de una comunidad"],
+              ["Estatuto de Autonomía", "3) Proclama la unidad de la Nación y el derecho a la autonomía"],
+              ["Tribunal Constitucional", "4) Organiza la estructura territorial (arts. 137 a 158)"],
+              ["Concierto y convenio económico", "5) Permiten al País Vasco y a Navarra recaudar la mayor parte de sus impuestos y pagar el cupo"]
+            ]
+          },
+          "methode": [
+            "Distinga los niveles: el principio (Constitución), las reglas generales (título VIII), la norma propia de cada comunidad (Estatuto), el árbitro (un tribunal), las excepciones financieras.",
+            "Para la pregunta sobre las vías, piense en el ritmo de acceso a las competencias: ¿quién las obtiene amplias desde el principio?",
+            "Para la comparación con un Estado federal, apóyese en dos criterios: el vocabulario de la Constitución y el origen del Estado."
+          ],
+          "questions": [
+            "1. Asocie cada pieza con su función.",
+            "2. Explique la diferencia entre la vía del art. 151 y la del art. 143, con ejemplos.",
+            "3. ¿Por qué no se dice que España es un Estado federal?",
+            "4. ¿Cuántas comunidades y ciudades autónomas hay y cuándo se crearon?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Art. 2 → 3; Título VIII → 4; Estatuto → 2; Tribunal Constitucional → 1; Concierto y convenio → 5.",
+            "2. Art. 151: vía rápida, competencias amplias desde el inicio; la siguieron el País Vasco, Cataluña, Galicia y Andalucía (tras el referéndum del 28 de febrero de 1980). Art. 143: vía lenta, para las demás comunidades. La diferencia de ritmo se ha difuminado en gran parte con las reformas posteriores.",
+            "3. Porque la Constitución no emplea la palabra «federal» y porque las autonomías no participaron en la creación del Estado: es el Estado ya existente el que transfiere competencias (descentralización). El grado de descentralización, sin embargo, es comparable al de un Estado federal.",
+            "4. 17 comunidades autónomas, creadas entre 1979 y 1983, y 2 ciudades autónomas (Ceuta y Melilla) desde 1995.",
+            "Resultado: el Estado de las autonomías es un compromiso entre unidad y autonomía, con normas propias para cada comunidad y un árbitro común."
+          ],
+          "erreurs": [
+            "Creer que todas las comunidades tienen el mismo sistema de financiación: el País Vasco y Navarra tienen un régimen foral.",
+            "Confundir Estatuto de Autonomía (norma de una comunidad) y Constitución (norma de todo el Estado)."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cve-10",
+          "niveau": "application",
+          "titre": "La cuestión catalana: cronología razonada y distinciones",
+          "objectif": "Reconstruir la escalada de 2006 a 2017 y distinguir nociones jurídicas parecidas.",
+          "enonce": "Un diario ficticio publica una cronología con huecos. Complétela y explique la lógica de la escalada.",
+          "donnees": {
+            "entetes": ["Fecha", "Acontecimiento"],
+            "lignes": [
+              ["18 de junio de 2006", "…"],
+              ["28 de junio de 2010", "…"],
+              ["11 de septiembre de 2012", "…"],
+              ["9 de noviembre de 2014", "…"],
+              ["1 de octubre de 2017", "…"],
+              ["27 de octubre de 2017", "…"],
+              ["21 de diciembre de 2017", "…"]
+            ]
+          },
+          "methode": [
+            "Reconstruya la secuencia en tres tiempos: un Estatuto ambicioso, su recorte por el Tribunal Constitucional, la reacción soberanista.",
+            "Para cada etapa, pregúntese: ¿quién actúa (Parlamento catalán, Tribunal, Gobierno central, Senado, ciudadanos)?",
+            "Para las distinciones, busque el criterio que las separa: estatus jurídico (vinculante o no, legal o no), alcance (individual o general)."
+          ],
+          "questions": [
+            "1. Complete la cronología.",
+            "2. ¿Por qué la sentencia de 2010 es un punto de inflexión?",
+            "3. Distinga el 9-N y el 1-O.",
+            "4. Distinga indulto y amnistía, con su fecha.",
+            "5. ¿Qué es la aplicación del artículo 155 y quién la autoriza?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. 2006: referéndum sobre el nuevo Estatuto, que califica a Cataluña de «nación» en su preámbulo. 2010: sentencia del Tribunal Constitucional (31/2010) que anula o reinterpreta varios artículos y quita valor jurídico a la mención de «nación». 2012: Diada masiva a favor de la independencia. 2014: consulta no vinculante (9-N). 1 de octubre de 2017: referéndum declarado ilegal, con intervenciones policiales. 27 de octubre de 2017: declaración de independencia del Parlamento catalán y autorización del art. 155 por el Senado. 21 de diciembre de 2017: elecciones convocadas por el Gobierno de Rajoy.",
+            "2. Porque un Estatuto aprobado por las Cortes y en referéndum en Cataluña es recortado tras un recurso del PP: se vive como un rechazo del reconocimiento nacional (manifestación «Som una nació. Nosaltres decidim» en julio de 2010). En un contexto de crisis y de debate sobre la financiación, el soberanismo avanza.",
+            "3. 9-N (2014): consulta tolerada y no vinculante. 1-O (2017): referéndum prohibido por el Tribunal Constitucional y presentado como vinculante. Diferencia de estatus y de consecuencias.",
+            "4. Indulto (2021, Gobierno de Sánchez): remisión individual de la pena; la infracción sigue existiendo. Amnistía (ley de 2024, Ley Orgánica 1/2024): ley general que borra la infracción.",
+            "5. Es la intervención de la Generalitat por el Estado, prevista por la Constitución; la autoriza el Senado (27 de octubre de 2017), y el Gobierno de Rajoy convoca elecciones.",
+            "Resultado: la escalada sigue una lógica de acción y reacción entre instituciones catalanas e instituciones del Estado, arbitrada por los tribunales."
+          ],
+          "erreurs": [
+            "Confundir el Tribunal Constitucional (sentencia de 2010, ilegalidad del 1-O) con el Tribunal Supremo (condena de los dirigentes en 2019).",
+            "Usar «indulto» y «amnistía» como sinónimos."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cve-11",
+          "niveau": "approfondissement",
+          "titre": "El País Vasco: violencia, respuesta del Estado y autogobierno",
+          "objectif": "Distinguir los actores del conflicto vasco y explicar las etapas del fin de ETA.",
+          "enonce": "Tema: «La democracia española frente a ETA (1975-2018)». Antes de construir un plan, aclare los actores y la paradoja de la violencia en democracia.",
+          "methode": [
+            "Defina primero los actores: ETA, PNV, GAL, Batasuna. Para cada uno, pregúntese si actúa dentro o fuera de la ley.",
+            "Observe la paradoja: ETA nace contra el franquismo, pero la violencia se redobla en democracia. ¿Qué reivindica ETA que la autonomía no le da?",
+            "Para el plan, distinga la respuesta del Estado (legal e ilegal), la respuesta de la sociedad y el desenlace.",
+            "Recuerde que el País Vasco tiene a la vez una de las autonomías más amplias: es un elemento de matiz."
+          ],
+          "questions": [
+            "1. Defina en una frase: ETA, PNV, GAL, Batasuna.",
+            "2. ¿Por qué se habla de paradoja a propósito de la violencia de ETA después de 1975?",
+            "3. Proponga un plan en tres partes con fechas precisas."
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. ETA (Euskadi Ta Askatasuna): organización nacida en 1959 contra el franquismo que reivindica la independencia de un País Vasco que incluya Navarra y el País Vasco francés; unos 850 muertos en total. PNV: nacionalismo vasco moderado e institucional, que gobierna la comunidad la mayor parte del tiempo. GAL: escuadrones vinculados al aparato del Estado que atacaban a presuntos miembros de ETA (1983-1987), contraterrorismo ilegal y escándalo mayor. Batasuna: partido de la izquierda abertzale ilegalizado en 2003 en aplicación de la Ley de Partidos (2002).",
+            "2. Porque, contra lo que esperaban muchos observadores, la violencia no desaparece con la democracia y la autonomía, sino que se redobla (atentado de Hipercor en Barcelona, 1987, 21 muertos). ETA no busca la autonomía, sino la independencia.",
+            "3. Plan posible. I. Una violencia que desafía a la democracia: de Carrero Blanco (1973) a Hipercor (1987). II. Las respuestas: deriva ilegal de los GAL (1983-1987); movilización social tras el asesinato de Miguel Ángel Blanco (1997, «espíritu de Ermua»); respuesta legal con la Ley de Partidos (2002) e ilegalización de Batasuna (2003). III. El final: fracaso de las treguas (Barajas, 2006), cese definitivo de la actividad armada (20 de octubre de 2011), desarme (abril de 2017), disolución (mayo de 2018); mientras tanto, amplia autonomía (policía propia, concierto económico) y rechazo del plan Ibarretxe por el Congreso (2005).",
+            "Por qué es un buen plan: distingue actores y tipos de respuesta, y matiza recordando que el nacionalismo vasco no se reduce a ETA."
+          ],
+          "erreurs": [
+            "Identificar todo el nacionalismo vasco con ETA.",
+            "Presentar los GAL como una rama de ETA: actuaban contra ETA, con vínculos con el Estado."
+          ],
+          "fictif": false
+        }
+      ]
+    },
+    {
+      "id": "cve-s5",
+      "titre": "España desde 2008: crisis y fin del bipartidismo",
+      "chapitre": "cve.actualidad",
+      "notions": ["cve.actualidad.crisis-2008"],
+      "rappel": [
+        "El crecimiento de 1995-2007 se basaba en la construcción y el crédito. Estallido de la burbuja inmobiliaria en 2008, agravado por la crisis financiera mundial: paro superior al 26 % en 2013, más de la mitad de los jóvenes activos afectados, desahucios.",
+        "Respuestas: austeridad del Gobierno de Zapatero (mayo de 2010); reforma del art. 135 (septiembre de 2011, estabilidad presupuestaria); ayuda europea a los bancos y reforma laboral (2012) con Rajoy.",
+        "Sociedad: movimiento 15-M de los «Indignados» (15 de mayo de 2011, Puerta del Sol).",
+        "Política: mayoría absoluta del PP (noviembre de 2011); fin del bipartidismo PSOE-PP con Podemos (2014) y Ciudadanos en el Congreso (2015); elecciones repetidas 2015-2016; moción de censura (1 de junio de 2018) que lleva a Pedro Sánchez al poder; Vox en el Congreso (2019); primer gobierno de coalición (enero de 2020).",
+        "La moción de censura española es constructiva (art. 113): debe incluir un candidato a la presidencia del Gobierno."
+      ],
+      "exercices": [
+        {
+          "id": "cve-12",
+          "niveau": "bases",
+          "titre": "La cadena de la crisis: de la burbuja al fin del bipartidismo",
+          "objectif": "Comprender cómo una crisis económica se convierte en crisis social y luego política.",
+          "enonce": "Los eslabones siguientes forman una cadena de causas y consecuencias. Ordénelos y explique cada flecha.",
+          "donnees": {
+            "entetes": ["Letra", "Eslabón"],
+            "lignes": [
+              ["A", "Movimiento 15-M en la Puerta del Sol"],
+              ["B", "Crecimiento basado en la construcción y el crédito"],
+              ["C", "Entrada de Podemos y Ciudadanos en el Congreso"],
+              ["D", "Estallido de la burbuja inmobiliaria y recesión"],
+              ["E", "Paro superior al 26 % y desahucios"],
+              ["F", "Austeridad y reforma del artículo 135"]
+            ]
+          },
+          "methode": [
+            "Busque el punto de partida: una causa económica anterior a 2008.",
+            "Distinga tres esferas: económica (producción, empleo), social (vida de las personas, protesta), política (partidos, elecciones). Una crisis suele pasar de una a otra.",
+            "Para cada flecha, escriba una frase con un conector: «por eso», «lo que provoca», «como respuesta»."
+          ],
+          "questions": [
+            "1. Ordene los eslabones.",
+            "2. Explique cada paso con una frase.",
+            "3. ¿Qué es el bipartidismo y por qué se dice que la crisis le pone fin?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. B → D → E → F → A → C.",
+            "2. B → D: el crecimiento dependía del ladrillo y del endeudamiento; cuando la burbuja estalla en 2008, agravada por la crisis financiera mundial, la economía entra en recesión. D → E: la construcción se hunde y el paro supera el 26 % en 2013; muchas familias pierden su vivienda (desahucios). E → F: el Gobierno pasa a la austeridad (2010) y se reforma la Constitución para consagrar la estabilidad presupuestaria (2011). F → A: el malestar social y la crítica a los políticos y banqueros se expresan en el 15-M (2011). A → C: la crisis de la representación favorece nuevos partidos; Podemos, que se inspira en el 15-M sin ser su emanación oficial, y Ciudadanos entran en el Congreso en 2015.",
+            "3. El bipartidismo es el dominio de dos grandes partidos, aquí PSOE y PP. Con la entrada de nuevos partidos, ninguno logra formar gobierno fácilmente: elecciones repetidas en 2015 y 2016, y después el primer gobierno de coalición en 2020.",
+            "Resultado: la cadena muestra cómo un modelo de crecimiento frágil termina transformando el sistema político."
+          ],
+          "erreurs": [
+            "Presentar Podemos como el partido oficial del 15-M.",
+            "Situar la austeridad solo bajo Rajoy: empieza con Zapatero en 2010."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cve-13",
+          "niveau": "application",
+          "titre": "La moción de censura de 2018 y la fragmentación política",
+          "objectif": "Explicar un mecanismo constitucional y situarlo en la evolución política posterior a 2008.",
+          "enonce": "Situación ficticia: un estudiante francés escribe en su trabajo: «En 2018, el Parlamento español derrocó al Gobierno de Rajoy y después se organizaron elecciones para elegir a un nuevo presidente». Su profesor subraya la frase en rojo.",
+          "methode": [
+            "Recuerde qué tiene de particular la moción de censura en España (art. 113). ¿Qué debe contener obligatoriamente?",
+            "Pregúntese entonces si hacen falta elecciones después de una moción de censura constructiva.",
+            "Busque el motivo de la moción de 2018 en el recordatorio.",
+            "Sitúe después el acontecimiento en la cronología de la fragmentación: antes y después de 2018."
+          ],
+          "questions": [
+            "1. ¿Qué error contiene la frase del estudiante? Corríjala.",
+            "2. ¿Por qué se presentó la moción de censura de 2018?",
+            "3. Sitúe 2018 entre tres acontecimientos políticos anteriores y dos posteriores."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Error: en España la moción de censura es constructiva; incluye un candidato a la presidencia del Gobierno, que queda investido si la moción prospera. No hacen falta nuevas elecciones. Frase corregida: «El 1 de junio de 2018, el Congreso aprobó una moción de censura contra el Gobierno de Rajoy, que llevó a Pedro Sánchez, candidato incluido en la moción, a la presidencia del Gobierno».",
+            "2. Estaba vinculada a un caso de corrupción del PP (Gürtel).",
+            "3. Antes: mayoría absoluta del PP de Rajoy (noviembre de 2011); entrada de Podemos y Ciudadanos en el Congreso (2015); elecciones repetidas (2015-2016). Después: entrada de Vox en el Congreso (2019); primer gobierno de coalición de la democracia, PSOE - Unidas Podemos (enero de 2020).",
+            "Resultado: la moción de 2018 es a la vez un mecanismo constitucional preciso y un síntoma de la fragmentación posterior a la crisis."
+          ],
+          "erreurs": [
+            "Traducir «moción de censura» por un mecanismo francés sin precisar su carácter constructivo.",
+            "Olvidar que el candidato forma parte de la moción."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "cve-s6",
+      "titre": "Método: el comentario de texto histórico",
+      "chapitre": "cve.metodo",
+      "notions": ["cve.metodo.comentario"],
+      "rappel": [
+        "Comentar es presentar el documento (naturaleza, autor, fecha, fuente, destinatario, contexto), extraer sus ideas principales, explicarlo con conocimientos precisos y medir su alcance y sus límites. La paráfrasis es la falta más penalizada.",
+        "La introducción termina con una problemática (¿En qué medida…? / ¿Cómo…?) y el anuncio de un plan temático en dos o tres partes.",
+        "Citas breves entre comillas «…» con la línea: (l. 12).",
+        "La conclusión responde a la problemática, mide el alcance y abre hacia la continuación histórica.",
+        "Expresiones útiles: «Se trata de…», «En aquel momento, España atravesaba…», «En primer lugar…; luego…; por último…», «Como afirma el autor, «…» (l. 8)», «Sin embargo, cabe matizar…», «En definitiva…». Galicismos: «en efecto» no equivale siempre a «en effet»; «actualmente» significa «hoy en día»."
+      ],
+      "exercices": [
+        {
+          "id": "cve-14",
+          "niveau": "bases",
+          "titre": "Corregir una introducción defectuosa",
+          "objectif": "Reconocer los elementos obligatorios de una introducción y los errores típicos.",
+          "enonce": "Introducción escrita por un estudiante (ficticia) para comentar el mensaje televisado del rey en la noche del 23 al 24 de febrero de 1981: «En este texto, el rey habla a los españoles. Dice que ha dado órdenes para mantener el orden constitucional. En efecto, el rey es muy importante. Actualmente, en 1981, España es una democracia. Vamos a ver lo que dice el texto».",
+          "methode": [
+            "Haga la lista de lo que debe contener una introducción: presentación, contexto, tema, problemática, plan.",
+            "Marque en el texto del estudiante lo que existe y lo que falta.",
+            "Busque las frases que repiten el documento sin explicarlo (paráfrasis) y los galicismos señalados en el curso.",
+            "Proponga después una versión corregida, frase por frase."
+          ],
+          "questions": [
+            "1. ¿Qué elementos obligatorios faltan?",
+            "2. Señale una paráfrasis y dos errores de lengua o de método.",
+            "3. Reescriba la introducción."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Faltan: la naturaleza precisa del documento (mensaje televisado) y su fecha exacta; el contexto (dimisión de Suárez, investidura de Calvo-Sotelo, asalto de Tejero, tanques en Valencia); la problemática; el anuncio de un plan. «Vamos a ver lo que dice el texto» no es un plan.",
+            "2. Paráfrasis: «Dice que ha dado órdenes para mantener el orden constitucional»: repite el documento sin explicarlo. Errores: «En efecto, el rey es muy importante» es un galicismo y una afirmación vaga sin conocimiento; «Actualmente, en 1981» es incorrecto porque «actualmente» significa «hoy en día» (habría que decir «en aquel momento»).",
+            "3. Versión corregida: «Se trata de un mensaje televisado del rey Juan Carlos I, emitido en la madrugada del 24 de febrero de 1981 y dirigido a todos los españoles. Unas horas antes, durante la votación de investidura de Leopoldo Calvo-Sotelo, sucesor de Adolfo Suárez, el teniente coronel Antonio Tejero había asaltado el Congreso de los Diputados, mientras el general Milans del Bosch sacaba los tanques a las calles de Valencia. En este contexto de amenaza golpista, el rey, jefe del Estado y de las Fuerzas Armadas, se dirige a la nación para defender la Constitución de 1978. ¿En qué medida este mensaje contribuye a consolidar la democracia y la monarquía parlamentaria? En primer lugar, analizaremos el llamamiento al orden constitucional; luego, el papel que el rey se atribuye; por último, el alcance y los límites de esta intervención».",
+            "Por qué es mejor: cada frase cumple una función (presentar, contextualizar, preguntar, anunciar) y los conocimientos del curso sustituyen a la paráfrasis."
+          ],
+          "erreurs": [
+            "Escribir una problemática que es una simple pregunta de contenido («¿Qué dice el rey?»).",
+            "Anunciar un plan que sigue el orden de las líneas del texto en vez de un plan temático."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cve-15",
+          "niveau": "application",
+          "titre": "Preparar el comentario de un discurso de Suárez (diciembre de 1976)",
+          "objectif": "Aplicar todas las etapas de la preparación de un comentario a un documento de la Transición.",
+          "enonce": "Documento imaginado para el ejercicio (no son palabras auténticas; se inspira en un ejemplo del curso): extracto de un discurso televisado de Adolfo Suárez, a principios de diciembre de 1976, que llama a votar «sí» en el referéndum sobre la Ley para la Reforma Política. Ideas del extracto: «Queremos que sean los españoles quienes decidan su futuro» (l. 3); «La reforma se hará desde la ley, sin saltos en el vacío» (l. 7-8); «Las próximas Cortes serán elegidas por todos» (l. 12).",
+          "methode": [
+            "Presentación: naturaleza, autor (y su origen político), fecha, destinatarios, finalidad (convencer).",
+            "Contexto: ¿qué ha pasado desde la muerte de Franco? ¿Quién votó ya la ley? ¿Qué exigía la oposición?",
+            "Ideas principales: relacione cada cita con una noción del curso (reforma frente a ruptura, sufragio universal, Cortes bicamerales).",
+            "Alcance: ¿cuál fue el resultado del referéndum? ¿Qué abre esta ley? Límites: ¿qué no dice el discurso?",
+            "Problemática y plan temático en dos o tres partes; cite con la línea."
+          ],
+          "questions": [
+            "1. Redacte la presentación y el contexto (4-5 frases).",
+            "2. Relacione cada una de las tres citas con una noción del curso.",
+            "3. Formule una problemática y un plan en tres partes.",
+            "4. Escriba dos frases de conclusión con apertura."
+          ],
+          "lignes": 22,
+          "corrige": [
+            "1. «Se trata de un discurso televisado pronunciado por Adolfo Suárez, presidente del Gobierno, a principios de diciembre de 1976, dirigido a todos los españoles antes del referéndum del 15 de diciembre. En aquel momento, España atravesaba un periodo de incertidumbre: Franco había muerto el 20 de noviembre de 1975 y el rey Juan Carlos había nombrado a Suárez, procedente del aparato franquista, en julio de 1976. En noviembre, las propias Cortes franquistas habían votado la Ley para la Reforma Política, mientras la oposición reclamaba una ruptura con el régimen».",
+            "2. «Que sean los españoles quienes decidan» (l. 3): la soberanía pasa al pueblo mediante el referéndum y las elecciones. «Desde la ley, sin saltos en el vacío» (l. 7-8): estrategia de reforma «de la ley a la ley», frente a la ruptura. «Cortes elegidas por todos» (l. 12): la ley prevé unas Cortes bicamerales elegidas por sufragio universal.",
+            "3. Problemática: ¿En qué medida este discurso expresa la estrategia de una reforma pactada para pasar de la dictadura a la democracia? Plan: I. Un llamamiento a la participación popular (l. 3, l. 12). II. La legalidad como garantía de una transición sin ruptura (l. 7-8). III. Alcance y límites: el «sí» de cerca del 94 % abre el camino a las elecciones libres de 1977, pero el discurso no dice nada de la legalización de todos los partidos, cuestión aún abierta y arriesgada.",
+            "4. «En definitiva, este discurso pone de manifiesto la apuesta de Suárez por una democracia construida desde la legalidad franquista, ratificada por cerca del 94 % de los votantes. En los meses siguientes, la legalización del PCE (abril de 1977) y las elecciones del 15 de junio de 1977 darán contenido a esta promesa».",
+            "Por qué funciona: cada cita se explica con conocimientos, el plan es temático y la conclusión responde a la problemática antes de abrir."
+          ],
+          "erreurs": [
+            "Inventar datos sobre el autor o la fuente que no se conocen: limítese a lo que da el enunciado y el curso.",
+            "Citar frases largas sin indicar la línea."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

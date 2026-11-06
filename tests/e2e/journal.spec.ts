@@ -193,3 +193,20 @@ test('fil dynamique : ordre conservé dans l’édition, renouvelé à l’actua
   const apres = await ordre();
   expect(apres).not.toEqual(avant);
 });
+
+test('cahiers d’exercices : liste par emploi du temps, impression avec ou sans corrigés', async ({ page }) => {
+  const e = erreursConsole(page);
+  await page.goto('/#/cahiers');
+  await expect(page.getByRole('heading', { name: 'Au programme ce semestre' })).toBeVisible();
+  const premier = index.cahiers[0];
+  test.skip(!premier, 'aucun cahier');
+  await page.goto(`/#/cahier/${premier.matiere}`);
+  await expect(page.locator('.cahier .exo').first()).toBeVisible();
+  await expect(page.locator('.corriges')).toBeVisible();
+  await page.getByLabel('Inclure les corrigés').uncheck();
+  await expect(page.locator('.corriges')).toBeHidden();
+  await page.getByLabel('J’ai fait cet exercice').first().check();
+  await page.reload();
+  await expect(page.getByLabel('J’ai fait cet exercice').first()).toBeChecked();
+  expect(e).toEqual([]);
+});

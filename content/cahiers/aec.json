@@ -1,0 +1,458 @@
+{
+  "matiere": "aec",
+  "titre": "Business English: an explained workbook",
+  "introduction": "This workbook follows the four chapters of the course: business correspondence, vocabulary, the business press and useful grammar. In each section, read the reminder box first: it gives you the rules and phrases you need. Then do each exercise on paper, step by step, following the guided method, without looking at the answer key. When you have finished, compare your work with the key: it explains why each answer is correct and shows a model you can reuse. Finally, read the list of traps and write down the ones that apply to you.",
+  "sections": [
+    {
+      "id": "aec-s1",
+      "titre": "Business correspondence: letters and e-mails",
+      "chapitre": "aec.correspondance",
+      "notions": ["aec.correspondance.layout", "aec.correspondance.salutations", "aec.correspondance.registre", "aec.correspondance.enquiry", "aec.correspondance.offer", "aec.correspondance.order", "aec.correspondance.complaint", "aec.correspondance.reminder", "aec.correspondance.email"],
+      "rappel": [
+        "Full block layout (everything aligned left): letterhead, date, inside address, salutation, subject line (Re:), body in short paragraphs, complimentary close, signature with name and job title, Enc. for enclosures.",
+        "Write the month in letters: 15 October 2026 (UK) or October 15, 2026 (US). 10/03/2026 is 10 March in the UK but 3 October in the US.",
+        "Dear Sir or Madam -> Yours faithfully; Dear Ms Taylor -> Yours sincerely (UK). US: Sincerely in both cases, and a colon after the salutation. E-mail or established relationship: Kind regards, Best regards. Never translate a French closing formula: use a forward-looking sentence ('We look forward to hearing from you.').",
+        "Register: soften requests (Could you...? We would be grateful if...), soften bad news (Unfortunately, I'm afraid...), avoid direct blame (It appears that...), stay clear and concise (plain English).",
+        "The business cycle: enquiry (request for information, no commitment) -> offer or quotation (prices, Incoterm, payment, delivery, validity) -> order and acknowledgement -> possibly complaint and reply (adjustment letter) -> payment reminders (courteous, firm, final demand)."
+      ],
+      "exercices": [
+        {
+          "id": "aec-1",
+          "niveau": "bases",
+          "titre": "Putting a letter in order and choosing the right tone",
+          "objectif": "Master the order of the elements of a full block letter, the salutation and close pairs, and the softened register.",
+          "enonce": "The elements of a short letter written by Loire Valves SA (Orléans, France) to a British customer have been mixed up. Below the jumbled letter, four sentences written by a trainee are too direct for a business letter.",
+          "donnees": {
+            "entetes": ["Label", "Element"],
+            "lignes": [
+              ["A", "Yours sincerely,"],
+              ["B", "Ms Emma Taylor, Purchasing Manager, Midlands Engineering Ltd, Birmingham B1 1AA, United Kingdom"],
+              ["C", "Re: Your enquiry of 10 October"],
+              ["D", "Loire Valves SA, 12 rue des Carmes, 45000 Orléans, France"],
+              ["E", "Enc. Price list"],
+              ["F", "Dear Ms Taylor,"],
+              ["G", "Thank you for your enquiry of 10 October. Please find enclosed our current price list. We look forward to hearing from you."],
+              ["H", "15 October 2026"],
+              ["I", "Claire Martin, Export Sales Assistant"]
+            ]
+          },
+          "methode": [
+            "Follow the logic of a letter from top to bottom: who writes (letterhead), when (date), to whom (inside address), how you greet the reader, what the letter is about (subject line), the message, how you take leave, who signs, what is enclosed.",
+            "For the close, look at the salutation: do you know the reader's name? If yes, the British close is 'Yours sincerely'; if not, 'Yours faithfully'.",
+            "For the date, think of a reader in the United States: how would they read 10/03/2026?",
+            "To soften a sentence, use the tools of the reminder: a question with 'could', 'we would be grateful if', 'unfortunately', 'it appears that', 'I'm afraid we are unable to'. Replace blame by a neutral description of the facts."
+          ],
+          "questions": [
+            "1. Put elements A to I in the right order.",
+            "2. If the letter began with 'Dear Sir or Madam', which close should replace A? Which close would an American writer use?",
+            "3. Why is it better to write '15 October 2026' than '15/10/2026'? Write the same date in American style.",
+            "4. Rewrite these four sentences in a polite business register: (a) 'Send us your catalogue.' (b) 'You are late with the delivery.' (c) 'We want a discount.' (d) 'No, we do not accept your terms.'"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. D (letterhead) - H (date) - B (inside address) - F (salutation) - C (subject line) - G (body) - A (close) - I (signature, name, job title) - E (enclosure). In the full block format, all these elements are aligned to the left.",
+            "2. 'Yours faithfully', because the recipient's name is unknown. An American writer would use 'Sincerely' (or 'Sincerely yours') in both cases, and would write the salutation with a colon: 'Dear Sir or Madam:'.",
+            "3. Writing the month in letters removes any ambiguity: a figure-only date such as 10/03/2026 means 10 March in the UK but 3 October in the US. American style: October 15, 2026.",
+            "4. (a) 'Could you please send us your catalogue?' or 'We would be grateful if you could send us your catalogue.' (a question with 'could' turns an order into a request). (b) 'It appears that the shipment has not yet arrived.' (a neutral observation instead of blame). (c) 'We would appreciate it if you could consider a discount.' (d) 'I'm afraid we are unable to accept these terms.' ('I'm afraid' softens the refusal).",
+            "Final result: order D-H-B-F-C-G-A-I-E; the close always depends on the salutation; politeness comes from indirect phrasing, not from long formulas."
+          ],
+          "erreurs": [
+            "Writing 'Yours faithfully' after 'Dear Ms Taylor'.",
+            "Translating 'Je vous prie d'agréer...' word for word.",
+            "Putting the subject line before the date or the inside address."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "aec-2",
+          "niveau": "application",
+          "titre": "Writing an enquiry to a foreign supplier",
+          "objectif": "Write a complete, concise enquiry that asks for all the information needed to compare suppliers.",
+          "enonce": "You work for Orléans Gourmet SARL, a chain of 12 delicatessens in the Centre-Val de Loire region. At a food trade fair in London you visited the stand of Highland Shortbread Co., a Scottish biscuit maker; you do not know the name of their export manager. Write a letter asking for their export price list, terms of payment and delivery, the delivery time to Orléans, whether they offer quantity discounts, and some samples. Mention that you may place a substantial order before Christmas if their prices are competitive.",
+          "methode": [
+            "Plan the letter with the six steps of an enquiry: source of the contact, introduction of your company, precise request, details, prospect of an order, conclusion.",
+            "Choose the salutation first: the name is unknown, so 'Dear Sir or Madam' and therefore 'Yours faithfully'.",
+            "Use one short paragraph per step. Write the requests as polite questions or with 'We would also like to know whether...'.",
+            "Do not forget the subject line, and do not end with a translated French formula: use 'We look forward to hearing from you.'",
+            "Read your letter again and check that a supplier could answer it point by point."
+          ],
+          "questions": [
+            "1. Write the plan of the letter (one line per step).",
+            "2. Write the full letter (salutation, subject line, body, close, signature)."
+          ],
+          "lignes": 20,
+          "corrige": [
+            "1. Source: we visited your stand at the London food fair. Introduction: chain of 12 delicatessens in central France. Request: export price list, terms of payment and delivery. Details: delivery time to Orléans, quantity discounts, samples. Prospect: substantial order before Christmas if prices are competitive. Conclusion: we look forward to hearing from you.",
+            "2. Model letter: Dear Sir or Madam, / Re: Export price list and terms / We visited your stand at the recent food trade fair in London and were impressed by your range of shortbread. / We are a chain of 12 delicatessens based in the Centre-Val de Loire region of France. / Could you please send us your current export price list, together with details of your terms of payment and delivery? We would also like to know your delivery time to Orléans and whether you offer quantity discounts. In addition, we would be grateful if you could send us some samples. / If your prices are competitive, we may place a substantial order before Christmas. / We look forward to hearing from you. / Yours faithfully, / [Name], Purchasing Assistant, Orléans Gourmet SARL.",
+            "Why it works: the source of the contact shows the supplier how you know them; the introduction tells them what kind of customer you are; each request is precise, so the reply (a quotation) can be complete; the prospect of an order motivates a quick answer; an enquiry does not commit you to buy.",
+            "Final result: a concise letter in six short paragraphs, with 'Dear Sir or Madam' and 'Yours faithfully'."
+          ],
+          "erreurs": [
+            "Writing 'We order...': an enquiry is not an order and does not commit the buyer.",
+            "Forgetting to mention the destination (Orléans), without which the supplier cannot quote a delivery time.",
+            "Using 'inquiry' in a British context: 'enquiry' is the British spelling."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "aec-3",
+          "niveau": "approfondissement",
+          "titre": "Replying to a complaint and chasing a payment",
+          "objectif": "Write a tactful adjustment letter and understand the gradation of payment reminders.",
+          "enonce": "Part A. You work for Verrerie du Val SAS (Orléans), which makes glass jars. Mr David Lee, Purchasing Manager at Harbour Foods Ltd (Bristol), writes on 3 November to complain that order No. 3310 (400 cartons of jars) arrived six days late and that only 380 cartons were delivered. Your investigation shows that a warehouse employee made a mistake on the packing list. The complaint is justified. Part B. Three sentences come from three payment reminders sent to another customer about invoice No. 2041 (8,400 euros, due on 15 September): (1) 'We have not yet received payment despite our letter of 1 October. Please let us know if there is any problem.' (2) 'Unless payment is received within 10 days, we shall be obliged to place the matter in the hands of our solicitors.' (3) 'We would like to remind you that invoice No. 2041 was due on 15 September. Perhaps it has been overlooked.'",
+          "methode": [
+            "An adjustment letter to a justified complaint has five steps: thank the customer, apologise, explain the cause briefly (without over-justifying), offer a concrete solution, reassure about the future.",
+            "Keep the explanation short and neutral: the customer wants a solution, not a long story about your warehouse.",
+            "The solution must answer both problems: the missing cartons (short delivery) and the delay (a gesture of goodwill).",
+            "For Part B, ask for each sentence: does the writer assume a simple oversight, ask for an explanation, or announce measures with a deadline?"
+          ],
+          "questions": [
+            "1. Write the body of the reply to Mr Lee (salutation and close included).",
+            "2. Put the three reminder sentences of Part B in the right order and name each stage.",
+            "3. Explain why 'outstanding' in 'the invoice remains outstanding' does not mean 'exceptional'."
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Model: Dear Mr Lee, / Re: Order No. 3310 / Thank you for your letter of 3 November concerning order No. 3310. / We apologise for the inconvenience caused. On investigation, we found that an error had been made on the packing list, which explains why only 380 of the 400 cartons were shipped. / We will dispatch the 20 missing cartons immediately at our expense, and as a gesture of goodwill we would like to offer you a 5% discount on your next order. / We have taken steps to ensure this does not happen again. / Yours sincerely, / [Name], Customer Service Manager. Explanation: the letter thanks, apologises, explains in one sentence (note the passive 'an error had been made', which avoids blaming a person), solves both problems and reassures. The close is 'Yours sincerely' because the name is known.",
+            "2. (3) first reminder, courteous: it assumes an oversight ('Perhaps it has been overlooked'). (1) second reminder, firmer: it refers to the first letter and asks for an explanation. (2) final demand, formal: it sets a deadline (10 days) and announces a measure (solicitors). The gradation preserves the relationship as long as possible.",
+            "3. In a financial context, 'outstanding' means unpaid, still owed (French « échu », « impayé »). Its other meaning, 'exceptional', makes no sense in a payment reminder: context decides.",
+            "Final result: a good adjustment letter is short, apologetic and concrete; reminders go from courteous to firm to formal."
+          ],
+          "erreurs": [
+            "Over-justifying or blaming the carrier or an employee by name in the reply.",
+            "Promising a solution without a timescale ('we will see what we can do').",
+            "Sending a final demand as the first reminder."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "aec-s2",
+      "titre": "Business vocabulary in context",
+      "chapitre": "aec.lexique",
+      "notions": ["aec.lexique.entreprise", "aec.lexique.finance", "aec.lexique.commerce-international", "aec.lexique.marketing", "aec.lexique.economie", "aec.lexique.faux-amis", "aec.lexique.chiffres"],
+      "rappel": [
+        "Company: private limited company (Ltd), public limited company (plc), corporation (Inc.), board of directors, managing director (UK) / CEO, shareholder, stakeholder, subsidiary, workforce, turnover (UK) / revenue (US), registered office / headquarters.",
+        "Trade: freight forwarder (transitaire), carrier, shipper / consignee, bill of lading (B/L), air waybill (AWB), packing list, customs clearance, tariffs, letter of credit (L/C), lead time. Finance: balance sheet, income statement (P&L), assets / liabilities / equity, trade receivables / payables, depreciation, net profit.",
+        "False friends: actually = en fait (actuellement = currently); eventually = finalement (éventuellement = possibly); to attend = assister à; sensible = raisonnable; fabric = tissu (usine = factory, plant); library = bibliothèque (librairie = bookshop); to pretend = faire semblant (prétendre = to claim); fiscal policy = politique budgétaire.",
+        "Numbers: decimal point and thousands comma (1,250.50); billion = milliard; a rate from 4% to 5% rises by one percentage point, i.e. by 25%. Rise by (the difference) / rise to (the level reached). Trend verbs: rise, increase, grow / fall, decline, drop / soar, rocket / plummet, slump / level off / peak / fluctuate.",
+        "Advertising is uncountable (the activity); a single ad is an advertisement."
+      ],
+      "exercices": [
+        {
+          "id": "aec-4",
+          "niveau": "bases",
+          "titre": "False friends: choosing the right word",
+          "objectif": "Avoid the most frequent false friends of business English by understanding their real meaning.",
+          "enonce": "Each sentence below was written by a French trainee. Choose the correct word in brackets, then explain your choice.",
+          "donnees": {
+            "entetes": ["No.", "Sentence"],
+            "lignes": [
+              ["1", "We are (actually / currently) negotiating with two suppliers. (meaning: « en ce moment »)"],
+              ["2", "We may (eventually / possibly) open an office in Madrid, but nothing has been decided. (meaning: 'éventuellement')"],
+              ["3", "Our sales manager will (attend / wait) the meeting in London."],
+              ["4", "The new staff will receive two weeks of (formation / training)."],
+              ["5", "We are building a new (fabric / factory) near Orléans."],
+              ["6", "The finance minister announced a tighter (fiscal / tax) policy: public spending will be cut. (meaning: 'politique budgétaire')"],
+              ["7", "Their offer seems (sensible / sensitive): the price is fair and the lead time realistic."],
+              ["8", "Our competitor (pretends / claims) that its product is the cheapest on the market. (meaning: « prétend », « affirme »)"]
+            ]
+          },
+          "methode": [
+            "Do not trust the resemblance with French: for each English word, recall its real meaning from the reminder.",
+            "Read the French meaning given in brackets when there is one, and ask: which English word expresses exactly that idea?",
+            "For your justification, give the real meaning of the wrong word: this is what helps you remember the trap.",
+            "Then write a correct sentence with each of the wrong words, to fix their real meaning."
+          ],
+          "questions": [
+            "1. Choose the correct word in each sentence and justify.",
+            "2. Write one correct sentence with 'actually' and one with 'eventually'."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. (1) currently: 'actually' means 'en fait'. (2) possibly: 'eventually' means 'finalement, à la fin'. (3) attend: 'to attend' means to be present at ('assister à'); 'to wait' needs 'for' and means 'attendre'. (4) training: 'formation' in English is a geological or military formation; 'formation professionnelle' is training. (5) factory: 'fabric' means 'tissu'. (6) fiscal: 'fiscal policy' concerns the government budget as a whole (spending and taxation), which matches 'politique budgétaire'; 'tax policy' would be 'politique fiscale' in the narrow sense. (7) sensible: it means 'raisonnable'; 'sensitive' means 'sensible' in French. (8) claims: 'to claim' means 'prétendre, affirmer'; 'to pretend' means 'faire semblant'.",
+            "2. Examples: 'Actually, the order was shipped yesterday.' (= en fait). 'After long negotiations, they eventually signed the contract.' (= finalement).",
+            "Final result: currently, possibly, attend, training, factory, fiscal, sensible, claims."
+          ],
+          "erreurs": [
+            "Using 'actually' for 'actuellement' and 'eventually' for 'éventuellement': the two most frequent mistakes.",
+            "Writing 'to attend someone' for 'attendre quelqu'un' (correct: to wait for someone)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "aec-5",
+          "niveau": "application",
+          "titre": "Following an export transaction: vocabulary in context",
+          "objectif": "Use the vocabulary of the company, finance and international trade in a realistic text.",
+          "enonce": "Complete the text with the following words (one use each): subsidiary, turnover, board, freight forwarder, bill of lading, consignee, customs clearance, letter of credit, market share, packing list. Text: 'Loire Valves SAS, a (1) ........ of a German group, achieved a (2) ........ of 35 million euros last year, 60% of it abroad. Its managing director reports to the group's (3) ........ . To increase its (4) ........ in Asia, the company has just sold 2,000 valves to a distributor in Singapore, who is the (5) ........ of the goods. The valves will be shipped by sea from Le Havre. Our (6) ........ will organise the transport and send the customer a copy of the (7) ........, the document issued by the shipping line, together with the commercial invoice and the (8) ........, which lists the contents of each case. Payment will be made by irrevocable (9) ........ . On arrival, the distributor's customs broker will handle (10) ........ .'",
+          "methode": [
+            "First classify the ten words into three families: company (subsidiary, board, turnover), marketing (market share), trade and transport (the others).",
+            "Then look at the grammar of each gap: an article 'a' or 'the', a preposition 'of', 'in Asia' after 'increase its'... this narrows the choice.",
+            "For trade documents, ask who issues the document and what it proves: the transport document for sea freight is the bill of lading; the list of the contents of each case is the packing list.",
+            "Distinguish the actors: who organises the transport for the shipper (freight forwarder) and who receives the goods (consignee)."
+          ],
+          "questions": [
+            "1. Complete the text.",
+            "2. Give the French equivalent of each word you used.",
+            "3. Which document would replace the bill of lading if the valves were sent by air?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (1) subsidiary (a company controlled by the German group); (2) turnover (total sales, British usage); (3) board (board of directors); (4) market share; (5) consignee (the person the goods are delivered to); (6) freight forwarder (organises transport on behalf of the shipper); (7) bill of lading (the sea transport document issued by the shipping line); (8) packing list; (9) letter of credit; (10) customs clearance.",
+            "2. subsidiary = filiale; turnover = chiffre d'affaires; board = conseil d'administration; market share = part de marché; consignee = destinataire; freight forwarder = transitaire; bill of lading = connaissement; packing list = liste de colisage; letter of credit = crédit documentaire; customs clearance = dédouanement.",
+            "3. The air waybill (AWB), the transport document for air freight.",
+            "Final result: subsidiary, turnover, board, market share, consignee, freight forwarder, bill of lading, packing list, letter of credit, customs clearance."
+          ],
+          "erreurs": [
+            "Confusing shipper (the sender of the goods) and consignee (the receiver).",
+            "Confusing turnover (sales) with staff turnover (rotation du personnel).",
+            "Confusing freight forwarder (organiser) and carrier (the company that actually transports)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "aec-6",
+          "niveau": "application",
+          "titre": "Describing figures and trends: per cent or percentage points?",
+          "objectif": "Calculate changes correctly and describe them in English with the right verbs, prepositions and number format.",
+          "enonce": "The table shows key figures for an imaginary French company, Loire Kitchenware SAS. You must write a short paragraph in English for the company's British partners.",
+          "donnees": {
+            "entetes": ["Indicator", "2024", "2025"],
+            "lignes": [
+              ["Turnover (million euros)", "40.0", "46.0"],
+              ["Share of exports in turnover", "50%", "55%"],
+              ["Operating margin", "8%", "6%"],
+              ["Workforce (employees)", "250", "250"]
+            ]
+          },
+          "methode": [
+            "A change in a value is expressed in per cent: (new - old) / old x 100.",
+            "A change in a rate can be expressed in two ways: the difference in percentage points (new rate - old rate), or the relative change in per cent. Do not confuse them.",
+            "To find the value of exports, multiply turnover by the export share for each year.",
+            "In English: 'rise by' + the difference, 'rise to' + the new level, 'from... to...'. Use the decimal point and write 'million' after the figure: 46 million euros = EUR 46 million or 46m.",
+            "Choose the trend verb according to the size and direction: rise, increase, fall, decline, level off; 'soar' only for a sharp rise."
+          ],
+          "questions": [
+            "1. Calculate the change in turnover in per cent.",
+            "2. Calculate the change in the export share in percentage points and in per cent.",
+            "3. Calculate the value of exports in 2024 and 2025 and the change in per cent.",
+            "4. Calculate the change in the operating margin in points and in per cent.",
+            "5. Write a paragraph of four or five sentences describing these figures in English."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. (46.0 - 40.0) / 40.0 = 6 / 40 = 0.15, so turnover rose by 15%.",
+            "2. 55% - 50% = 5 percentage points. In relative terms: 5 / 50 = 0.10, i.e. an increase of 10%. Saying 'exports rose by 5%' would be wrong: the share rose by five points.",
+            "3. 2024: 50% x 40.0 = 20.0 million euros. 2025: 55% x 46.0 = 25.3 million euros. Change: (25.3 - 20.0) / 20.0 = 5.3 / 20 = 0.265, i.e. +26.5%.",
+            "4. 6% - 8% = -2 percentage points. Relative change: -2 / 8 = -0.25, i.e. a fall of 25%.",
+            "5. Model: In 2025, Loire Kitchenware's turnover rose by 15%, from EUR 40 million to EUR 46 million. Exports grew even faster: they increased by 26.5% to EUR 25.3 million, and their share of turnover rose by five percentage points to 55%. However, the operating margin fell by two percentage points to 6%. The workforce levelled off at 250 employees. Note: 'by' introduces the difference, 'to' the level reached.",
+            "Final result: turnover +15%; export share +5 points (+10%); exports +26.5%; operating margin -2 points (-25%); workforce stable."
+          ],
+          "erreurs": [
+            "Writing 'increased of 15%' instead of 'increased by 15%'.",
+            "Confusing 'rose by 5%' and 'rose by five percentage points'.",
+            "Writing '46,0' with a decimal comma in an English text."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "aec-s3",
+      "titre": "Reading and summarising the business press",
+      "chapitre": "aec.presse",
+      "notions": ["aec.presse.lecture", "aec.presse.synthese"],
+      "rappel": [
+        "Reading in several passes: identify the source, date and type (news, analysis, op-ed); skimming (headline, standfirst, subheadings, first sentences) for the general idea; scanning for figures, names, dates; detailed reading for the line of argument.",
+        "Distinguish facts, the author's opinions and quoted opinions: verbs such as claim, argue and warn signal an attributed opinion. Spot logical connectors: however, therefore, whereas, despite.",
+        "Synthesis: objective and organised, in your own words, within a set length; an introductory sentence ('The documents deal with...'), ideas grouped by theme and compared, a short conclusion with no personal opinion.",
+        "Reporting verbs: state (neutral), argue (defend a position), claim (assert, possibly doubtful), point out (draw attention to a fact), warn (announce a risk), highlight (stress)."
+      ],
+      "exercices": [
+        {
+          "id": "aec-7",
+          "niveau": "bases",
+          "titre": "Skimming, scanning, facts and opinions",
+          "objectif": "Read a business article efficiently and separate facts from opinions.",
+          "enonce": "Article (fictional), The Business Courier, 6 October 2026. Headline: 'Freight costs squeeze small exporters'. Standfirst: 'Rising shipping prices are forcing small British firms to rethink their export plans, a new survey suggests.' Text: 'The cost of shipping a container from the UK to Asia has risen by 40% since January, according to a survey of 300 small manufacturers published on Monday by the Small Exporters' Forum. Almost half of the firms questioned said they had delayed or cancelled orders. \"Many of our members simply cannot pass these costs on to their customers,\" warned Helen Brooks, the forum's director. However, some economists argue that the rise is temporary. \"Freight markets are cyclical, and prices are likely to level off by the end of the year,\" claimed Paul Reid, an analyst at a London consultancy. Meanwhile, larger exporters, which negotiate long-term contracts with shipping lines, appear to have been less affected. The forum is calling on the government to extend export credit support to smaller firms.'",
+          "methode": [
+            "Skimming: read only the headline, the standfirst and the first sentence of the text, then say in one sentence what the article is about.",
+            "Scanning: look only for figures, names and dates, and list them.",
+            "Detailed reading: for each statement, ask 'Can it be checked?' (fact) or 'Is it someone's view or forecast?' (opinion). Look at the reporting verbs: warned, argue, claimed.",
+            "Notice the connectors 'However' and 'Meanwhile': they show the structure of the argument (problem, contrasting view, other situation, demand)."
+          ],
+          "questions": [
+            "1. After skimming, what is the article about?",
+            "2. Scan the article and list the figures, actors and dates.",
+            "3. Classify these statements as fact or opinion: (a) the cost of a container has risen by 40%; (b) the rise is temporary; (c) almost half of the firms delayed or cancelled orders; (d) prices are likely to level off by the end of the year.",
+            "4. What is the role of 'However' and of 'Meanwhile'? Summarise the article in three sentences."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Small British exporters are being hit by rising shipping costs and are reconsidering their export plans.",
+            "2. Figures: +40% since January, 300 small manufacturers, almost half of the firms. Actors: the Small Exporters' Forum, Helen Brooks (director), Paul Reid (analyst), larger exporters, shipping lines, the government. Dates: 6 October 2026 (the article), January, Monday.",
+            "3. (a) fact, reported from a survey (it can be checked). (b) opinion: it is introduced by 'some economists argue'. (c) fact from the survey. (d) opinion: a forecast attributed to Paul Reid with the verb 'claimed'; 'likely' shows uncertainty.",
+            "4. 'However' introduces a contrasting view (the rise may be temporary); 'Meanwhile' introduces another situation at the same time (larger exporters are less affected). Summary: Shipping costs to Asia have risen sharply, and a survey shows that many small British manufacturers have delayed or cancelled orders. Some economists believe the rise is temporary, and larger exporters with long-term contracts seem less affected. The Small Exporters' Forum wants the government to extend export credit support to small firms.",
+            "Final result: the article reports a problem (facts from a survey), a contrasting opinion and a demand."
+          ],
+          "erreurs": [
+            "Presenting an opinion introduced by 'claimed' or 'argue' as a fact.",
+            "Reading word by word from the start instead of skimming first."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "aec-8",
+          "niveau": "application",
+          "titre": "Writing a synthesis of two short articles",
+          "objectif": "Compare two documents and write an objective synthesis in your own words with precise reporting verbs.",
+          "enonce": "Document 1 (fictional, a business magazine): 'A growing number of European manufacturers are moving production closer to home. A French furniture maker recently transferred part of its assembly from Asia to Eastern Europe in order to secure its supply chain and cut delivery times. The move has created several hundred jobs in the region, the company says.' Document 2 (fictional, a financial daily): 'Nearshoring is not a free lunch. Labour costs in Eastern Europe are rising fast, and some analysts warn that firms bringing production closer to home may lose competitiveness. Supply chains may be more secure, but consumers could end up paying higher prices.' Write a synthesis of about 80 to 100 words.",
+          "methode": [
+            "Read both documents and note the main idea of each in one line.",
+            "Find the common theme (it will be your introductory sentence) and the points where the documents agree and disagree.",
+            "Organise by theme, not document by document: first what both say, then where they differ.",
+            "Rephrase: do not copy whole phrases. Use reporting verbs (point out, highlight, warn) and comparison phrases (Both documents..., whereas..., Unlike document 1, document 2...).",
+            "End with a neutral sentence starting with 'All in all', without giving your own opinion."
+          ],
+          "questions": [
+            "1. Note the main idea of each document.",
+            "2. Write the synthesis.",
+            "3. Underline the reporting verbs and connectors you used and explain the nuance of 'warn'."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Document 1: nearshoring brings benefits (secure supply chain, shorter delivery times, jobs). Document 2: nearshoring has costs (rising wages, lower competitiveness, higher prices).",
+            "2. Model (about 90 words): The two documents deal with nearshoring, the trend for European manufacturers to bring production closer to home. Both point out that firms relocate to secure their supply chains. However, while the first document highlights the benefits of such a move, such as shorter delivery times and job creation in Eastern Europe, the second warns that labour costs there are rising quickly, which may reduce competitiveness. It adds that consumers could ultimately face higher prices. All in all, the documents show that nearshoring improves security but may come at a cost.",
+            "3. Reporting verbs: point out (draw attention to a fact both documents share), highlight (stress a positive aspect), warn (announce a risk: it signals that the author is presenting a possible danger), adds. Connectors: Both, However, while, All in all. The synthesis contains no personal opinion.",
+            "Final result: an objective, comparative text organised by theme, with an introductory sentence and a neutral conclusion."
+          ],
+          "erreurs": [
+            "Summarising document 1, then document 2, without comparing them.",
+            "Copying sentences such as 'Nearshoring is not a free lunch'.",
+            "Adding 'I think that...' in a synthesis."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "aec-s4",
+      "titre": "Useful grammar for business English",
+      "chapitre": "aec.grammaire",
+      "notions": ["aec.grammaire.modaux", "aec.grammaire.passif", "aec.grammaire.conditionnels", "aec.grammaire.temps"],
+      "rappel": [
+        "Modals (can, could, may, might, must, shall, should, will, would) + bare infinitive, no -s in the third person. Could / would = polite request; must = obligation; mustn't = prohibition; don't have to / needn't = no obligation; should = advice; may / might / could = possibility; shall = obligation in contracts.",
+        "Passive = be (in the required tense) + past participle: the goods are / were / have been / will be / must be shipped. The agent, if mentioned, is introduced by 'by'. 'We were sent the wrong items' = 'On nous a envoyé...'. The passive puts the action first and avoids assigning blame.",
+        "Conditionals: type 1 if + present, will + base form; type 2 if + simple past, would + base form; type 3 if + past perfect, would have + past participle. No will / would in the if-clause. 'Should you need...' = if you need; 'unless' = except if.",
+        "Simple past for a finished, dated past (yesterday, last week, ago, in 2020). Present perfect for a link with the present: result, review of a current period, duration up to now (since, for, already, yet, so far, this year). 'Depuis 2018' + French present = present perfect in English."
+      ],
+      "exercices": [
+        {
+          "id": "aec-9",
+          "niveau": "bases",
+          "titre": "Modal verbs: obligation, prohibition, politeness",
+          "objectif": "Choose the right modal for each function and understand the difference between mustn't and don't have to.",
+          "enonce": "Complete each sentence with a suitable modal (or don't have to), then correct the two incorrect sentences at the end of the table.",
+          "donnees": {
+            "entetes": ["No.", "Sentence"],
+            "lignes": [
+              ["1", "You ........ pay a deposit: payment on delivery is fine. (no obligation)"],
+              ["2", "You ........ disclose these prices to other customers: they are confidential. (prohibition)"],
+              ["3", "........ you send us a sample of the new model? (polite request)"],
+              ["4", "The Seller ........ deliver the goods by 15 December. (contract clause)"],
+              ["5", "The shipment ........ be delayed because of the strike at the port. (possibility)"],
+              ["6", "You ........ check the Incoterm before signing the contract. (advice)"],
+              ["7", "Invoices ........ be paid within 30 days. (obligation)"],
+              ["8", "Incorrect: 'Our manager musts to sign the contract.'"],
+              ["9", "Incorrect: 'We can to deliver next week.'"]
+            ]
+          },
+          "methode": [
+            "Read the function given in brackets and match it to the table of the reminder.",
+            "Be careful with the negative: in French, 'vous ne devez pas' means prohibition and 'vous n'êtes pas obligé de' means no obligation. In English these are two different structures: mustn't and don't have to.",
+            "For sentences 8 and 9, check the two formal rules of modals: bare infinitive (no 'to') and no -s in the third person."
+          ],
+          "questions": [
+            "1. Complete sentences 1 to 7.",
+            "2. Correct sentences 8 and 9 and state the rule.",
+            "3. Translate: 'Vous n'êtes pas obligé de payer d'acompte' and 'Vous ne devez pas divulguer le prix'."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. (1) don't have to (or needn't): there is no obligation. (2) mustn't: it is forbidden. (3) Could (or Would): a polite request. (4) shall: obligation in a contract. (5) may (or might, could): possibility. (6) should: advice. (7) must: obligation.",
+            "2. (8) 'Our manager must sign the contract.' (9) 'We can deliver next week.' Rule: a modal is followed by the bare infinitive without 'to' and never takes -s in the third person.",
+            "3. 'You don't have to pay a deposit.' (no obligation) / 'You mustn't disclose the price.' (prohibition). Using 'mustn't' in the first sentence would completely change the meaning: it would forbid paying a deposit.",
+            "Final result: don't have to, mustn't, could, shall, may, should, must."
+          ],
+          "erreurs": [
+            "Translating 'vous n'êtes pas obligé de' by 'you mustn't'.",
+            "Adding 'to' after a modal or an -s in the third person."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "aec-10",
+          "niveau": "application",
+          "titre": "Correcting an e-mail: tenses and conditionals",
+          "objectif": "Apply the rules of present perfect, simple past and conditionals to a real business e-mail.",
+          "enonce": "A French assistant has written this e-mail to a British supplier. It contains six grammar mistakes (numbered). 'Dear Mr Lee, We (1) work with your company since 2019 and we (2) have always been satisfied with your service. However, last week we (3) have received order No. 552 with two cartons missing. (4) If you will send them by Friday, we will not need to cancel the order. (5) If we would have known about the problem earlier, we would have informed our own customer. In spite of this, sales of your products (6) increased this year, and we hope to continue our cooperation. Best regards, Julie Moreau'",
+          "methode": [
+            "For each numbered verb, first ask: is it a tense question or a conditional question?",
+            "For tenses, look for the time marker: 'since' (duration up to now), 'last week' (finished, dated), 'this year' (current period).",
+            "For conditionals, identify the type: a possible future condition (type 1) or an unreal past (type 3). Then check the rule: no will / would in the if-clause.",
+            "Be careful: one of the six numbered items is actually correct. Find it and explain why."
+          ],
+          "questions": [
+            "1. Correct each numbered item (or say that it is correct) and state the rule.",
+            "2. Rewrite sentence (4) with 'Should you...' and sentence (4) with 'unless'."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. (1) 'have worked' (or 'have been working') with your company since 2019: 'since' + a duration that continues requires the present perfect, unlike the French present ('nous travaillons depuis'). (2) Correct: 'have always been satisfied' is a review up to now, so the present perfect is right. (3) 'received': 'last week' places the action in a finished, dated past, so the simple past is required. (4) 'If you send them by Friday, we will not need...': type 1, no 'will' in the if-clause. (5) 'If we had known about the problem earlier, we would have informed...': type 3 (unreal past) = if + past perfect, would have + past participle; 'would' is not used in the if-clause. (6) 'have increased': 'this year' is a current period, so the present perfect is used ('increased last year' would be correct with a finished period).",
+            "2. 'Should you send them by Friday, we will not need to cancel the order.' (elegant replacement for 'if you send'). 'Unless you send them by Friday, we will need to cancel the order.' ('unless' = except if: the logic becomes negative, so the main clause changes too).",
+            "Final result: have worked, have always been (correct), received, If you send, If we had known, have increased."
+          ],
+          "erreurs": [
+            "Translating 'depuis' + present by the English present ('we work since 2019').",
+            "Using the present perfect with 'last week', 'yesterday', 'ago'.",
+            "Putting 'will' or 'would' after 'if'."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "aec-11",
+          "niveau": "approfondissement",
+          "titre": "Using the passive to report and to avoid blame",
+          "objectif": "Form the passive in all the useful tenses and understand when it is the right choice in business writing.",
+          "enonce": "Part A: put these active sentences into the passive (do not mention the agent unless it is useful): (a) They ship the goods every Monday. (b) Our warehouse shipped the goods yesterday. (c) We have received your order. (d) We will process your order within 48 hours. (e) The supplier must replace the damaged items. (f) Someone sent us the wrong items. Part B: a customer service manager hesitates between two sentences in a reply to a complaint: 'Our employee Tom made a mistake on your invoice.' and 'A mistake was made on your invoice.'",
+          "methode": [
+            "To build a passive sentence: take the object of the active sentence as the new subject, keep the tense of the active verb on 'be', and add the past participle of the main verb.",
+            "Check the tense carefully: present simple -> are shipped; simple past -> were shipped; present perfect -> has / have been + participle; future -> will be + participle; modal -> must be + participle.",
+            "For (f), remember the special English structure: the person who receives something can become the subject ('We were sent...'), where French uses 'on'.",
+            "For Part B, think about the reader and about the image of your company: is the name of the person useful to the customer?"
+          ],
+          "questions": [
+            "1. Put sentences (a) to (f) into the passive.",
+            "2. Which sentence would you choose in Part B, and why?",
+            "3. Write two sentences of a reply to a complaint using a passive and a type 1 conditional."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. (a) The goods are shipped every Monday. (b) The goods were shipped yesterday (by our warehouse is not useful). (c) Your order has been received. (d) Your order will be processed within 48 hours. (e) The damaged items must be replaced (by the supplier, if you need to say who). (f) We were sent the wrong items. Each time, 'be' takes the tense of the active verb and the main verb becomes a past participle.",
+            "2. 'A mistake was made on your invoice.' The passive puts the emphasis on the problem rather than on the person, avoids blaming an employee in front of a customer and sounds more professional. The customer needs a solution, not a name.",
+            "3. Example: 'We regret that a mistake was made on your invoice. A corrected invoice will be sent to you today, and if you have any further questions, our accounts department will be happy to help.' Here 'was made' and 'will be sent' are passives, and 'if you have... will be happy' is a type 1 conditional (if + present, will + base form).",
+            "Final result: the passive is formed with be + past participle in the tense required, and it is a useful tool for neutral, professional writing."
+          ],
+          "erreurs": [
+            "Changing the tense when switching to the passive (for example 'are shipped' for 'shipped yesterday').",
+            "Translating 'On nous a envoyé' by 'It was sent to us the wrong items' instead of 'We were sent the wrong items'.",
+            "Always adding 'by...' even when the agent is obvious or irrelevant."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

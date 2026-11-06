@@ -1,0 +1,738 @@
+{
+  "matiere": "gfi",
+  "titre": "Cahier d'exercices de gestion financière",
+  "introduction": "Ce cahier reprend les six chapitres du cours de gestion financière, du bilan fonctionnel au choix des financements. Pour chaque section, relisez d'abord le rappel de cours, puis faites les exercices dans l'ordre : « bases » pour comprendre le mécanisme, « application » pour le mettre en œuvre sur un cas chiffré, « approfondissement » pour raisonner sur un cas plus délicat. Suivez la méthode proposée, rédigez vos réponses et vos calculs sur papier en posant chaque formule avant de remplacer par les chiffres. Ne consultez le corrigé qu'ensuite : il explique chaque étape et le pourquoi du résultat, et la rubrique « erreurs » signale les pièges classiques. Les entreprises et les montants sont fictifs mais réalistes, et plusieurs exercices se suivent sur la même société pour que vous voyiez le lien entre bilan, équilibre, activité et ratios.",
+  "sections": [
+    {
+      "id": "gfi-s1",
+      "titre": "Du bilan comptable au bilan fonctionnel",
+      "chapitre": "gfi.bilan-fonctionnel",
+      "notions": ["gfi.bilan-fonctionnel.reclassement", "gfi.bilan-fonctionnel.retraitements"],
+      "rappel": [
+        "Le bilan fonctionnel reclasse les postes selon trois fonctions : investissement, financement, exploitation. Il sert à analyser l'équilibre entre emplois et ressources, alors que le bilan comptable évalue le patrimoine.",
+        "Les actifs sont pris en valeur BRUTE : les amortissements et dépréciations quittent l'actif et s'ajoutent aux ressources stables. Le total du bilan fonctionnel est donc supérieur à celui du bilan comptable.",
+        "Ressources stables = capitaux propres + amortissements et dépréciations + provisions pour risques et charges + dettes financières hors concours bancaires courants. Emplois stables = actif immobilisé brut.",
+        "Le cycle court se découpe en actif et passif circulants d'exploitation (stocks, clients, fournisseurs, dettes fiscales et sociales), hors exploitation (créances diverses, dettes sur immobilisations, impôt sur les sociétés à payer) et trésorerie (disponibilités et VMP très liquides / concours bancaires courants).",
+        "Retraitements usuels : effets escomptés non échus (EENE) ajoutés aux créances clients et à la trésorerie passive ; crédit-bail traité comme un investissement financé par emprunt ; intérêts courus sortis des dettes financières vers le passif circulant hors exploitation."
+      ],
+      "exercices": [
+        {
+          "id": "gfi-1",
+          "niveau": "bases",
+          "titre": "Classer les postes dans le bilan fonctionnel",
+          "objectif": "Savoir dans quelle masse du bilan fonctionnel se range chaque poste du bilan comptable, et pourquoi.",
+          "enonce": "Voici dix postes extraits du bilan comptable d'une PME. Pour chacun, indiquez la masse du bilan fonctionnel où il se range : emplois stables (ES), ressources stables (RS), actif circulant d'exploitation (ACE), passif circulant d'exploitation (PCE), actif circulant hors exploitation (ACHE), passif circulant hors exploitation (PCHE), trésorerie active (TA) ou trésorerie passive (TP).",
+          "donnees": {
+            "entetes": ["N°", "Poste du bilan comptable", "Masse fonctionnelle (à compléter)"],
+            "lignes": [
+              ["1", "Matériel de transport (valeur brute)", ""],
+              ["2", "Amortissements du matériel", ""],
+              ["3", "Stock de marchandises (valeur brute)", ""],
+              ["4", "Emprunt bancaire à 5 ans", ""],
+              ["5", "Concours bancaires courants (découvert)", ""],
+              ["6", "Dettes fournisseurs", ""],
+              ["7", "Dettes fiscales et sociales", ""],
+              ["8", "Dettes sur immobilisations (fournisseur d'une machine)", ""],
+              ["9", "Disponibilités", ""],
+              ["10", "Provisions pour risques et charges", ""]
+            ]
+          },
+          "methode": [
+            "Pour chaque poste, posez-vous d'abord la question de la durée : s'agit-il d'un élément durable (cycle long) ou d'un élément qui se renouvelle avec l'activité (cycle court) ?",
+            "Pour le cycle long, distinguez ce que l'entreprise possède durablement (emplois) de ce qui la finance durablement (ressources). Souvenez-vous que les amortissements et les provisions sont considérés comme des ressources accumulées.",
+            "Pour le cycle court, demandez-vous si le poste naît de l'activité courante (acheter, produire, vendre, payer les salaires) : c'est l'exploitation. Sinon, c'est hors exploitation.",
+            "Pour les dettes financières, séparez l'emprunt (ressource stable) du découvert (trésorerie passive)."
+          ],
+          "questions": [
+            "1. Complétez la troisième colonne du tableau.",
+            "2. Expliquez en deux phrases pourquoi les amortissements sont classés parmi les ressources stables.",
+            "3. Expliquez pourquoi une dette envers le fournisseur d'une machine n'est pas classée avec les dettes fournisseurs ordinaires."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Classement : 1 ES (bien durable, pris en brut) ; 2 RS (amortissements ajoutés aux ressources stables) ; 3 ACE (le stock naît de l'activité d'achat et de vente, pris en brut) ; 4 RS (dette financière durable) ; 5 TP (le découvert est une dette de trésorerie, pas une ressource stable) ; 6 PCE (crédit obtenu dans le cycle d'achat) ; 7 PCE (TVA, charges sociales et salaires à payer naissent de l'exploitation) ; 8 PCHE (dette liée à un investissement, pas au cycle d'exploitation) ; 9 TA ; 10 RS.",
+            "2. Le bilan fonctionnel reprend les immobilisations à leur valeur d'origine pour mesurer tout ce qui a été investi. Les amortissements correspondent à une partie des produits de l'activité conservée dans l'entreprise (charges calculées, non décaissées) : ils constituent donc un financement durable accumulé, c'est pourquoi ils rejoignent les ressources stables.",
+            "3. Le classement dépend de l'origine de la dette, pas de son nom. Une dette envers le fournisseur d'une machine provient d'une opération d'investissement, non du cycle achat-production-vente : elle se range en passif circulant hors exploitation (dettes sur immobilisations).",
+            "Résultat final : 3 postes en ressources stables (2, 4, 10), 1 en emplois stables (1), 1 en ACE (3), 2 en PCE (6, 7), 1 en PCHE (8), 1 en TA (9), 1 en TP (5)."
+          ],
+          "erreurs": [
+            "Classer le découvert bancaire avec les emprunts : c'est de la trésorerie passive.",
+            "Prendre les immobilisations et les stocks en valeur nette : le bilan fonctionnel utilise les valeurs brutes.",
+            "Ranger les dettes sur immobilisations avec les dettes fournisseurs : elles sont hors exploitation."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-2",
+          "niveau": "application",
+          "titre": "Construire le bilan fonctionnel d'Atelier Loire Textile",
+          "objectif": "Passer d'un bilan comptable simplifié à un bilan fonctionnel équilibré, avec le retraitement des effets escomptés non échus.",
+          "enonce": "La SARL Atelier Loire Textile (entreprise fictive) fabrique et négocie du linge de maison. Son bilan comptable au 31/12/N est résumé ci-dessous (montants en euros). Information complémentaire : 20 000 € d'effets de commerce ont été escomptés et ne sont pas encore échus au 31/12/N. Les VMP sont très liquides et assimilées à de la trésorerie. Les autres créances d'exploitation correspondent à de la TVA déductible.",
+          "donnees": {
+            "entetes": ["Poste", "Brut", "Amortissements et dépréciations", "Net"],
+            "lignes": [
+              ["ACTIF", "", "", ""],
+              ["Immobilisations corporelles", "520 000", "180 000", "340 000"],
+              ["Immobilisations financières", "20 000", "0", "20 000"],
+              ["Stocks de marchandises", "95 000", "5 000", "90 000"],
+              ["Créances clients", "130 000", "4 000", "126 000"],
+              ["Autres créances d'exploitation", "12 000", "0", "12 000"],
+              ["Créances diverses (hors exploitation)", "6 000", "0", "6 000"],
+              ["VMP", "8 000", "0", "8 000"],
+              ["Disponibilités", "22 000", "0", "22 000"],
+              ["Total actif", "813 000", "189 000", "624 000"],
+              ["PASSIF", "", "", "Montant"],
+              ["Capital", "", "", "200 000"],
+              ["Réserves", "", "", "60 000"],
+              ["Résultat de l'exercice", "", "", "34 000"],
+              ["Provisions pour risques et charges", "", "", "10 000"],
+              ["Emprunts et dettes auprès des établissements de crédit (dont concours bancaires courants : 16 000)", "", "", "186 000"],
+              ["Dettes fournisseurs", "", "", "88 000"],
+              ["Dettes fiscales et sociales", "", "", "34 000"],
+              ["Dettes sur immobilisations", "", "", "12 000"],
+              ["Total passif", "", "", "624 000"]
+            ]
+          },
+          "methode": [
+            "Emplois stables : additionnez les immobilisations en valeur BRUTE.",
+            "Ressources stables : capitaux propres (capital + réserves + résultat) + TOUS les amortissements et dépréciations (y compris ceux des stocks et des clients) + provisions pour risques et charges + emprunts hors concours bancaires courants (186 000 − 16 000).",
+            "Actif circulant d'exploitation : stocks bruts + clients bruts + EENE + autres créances d'exploitation. Passif circulant d'exploitation : fournisseurs + dettes fiscales et sociales.",
+            "Hors exploitation : créances diverses à l'actif, dettes sur immobilisations au passif.",
+            "Trésorerie active : VMP + disponibilités. Trésorerie passive : concours bancaires courants + EENE.",
+            "Contrôle : total des emplois = total des ressources = total du bilan comptable + amortissements et dépréciations + EENE."
+          ],
+          "questions": [
+            "1. Calculez le montant des emplois stables et des ressources stables.",
+            "2. Calculez l'actif et le passif circulants d'exploitation, puis hors exploitation.",
+            "3. Calculez la trésorerie active et la trésorerie passive.",
+            "4. Présentez le bilan fonctionnel en quatre lignes et vérifiez qu'il est équilibré. Expliquez l'écart avec le total du bilan comptable."
+          ],
+          "lignes": 20,
+          "corrige": [
+            "1. Emplois stables = 520 000 + 20 000 = 540 000 €. Ressources stables = capitaux propres (200 000 + 60 000 + 34 000 = 294 000) + amortissements et dépréciations (180 000 + 5 000 + 4 000 = 189 000) + provisions 10 000 + dettes financières hors concours bancaires (186 000 − 16 000 = 170 000) = 663 000 €. On réintègre les dépréciations des stocks et des clients parce que l'actif est pris en brut : ce qui a été retiré de l'actif doit être rajouté en ressources.",
+            "2. ACE = stocks 95 000 + clients 130 000 + EENE 20 000 + autres créances 12 000 = 257 000 €. Les EENE sont ajoutés car les clients n'ont pas encore payé : économiquement, la créance existe toujours. PCE = 88 000 + 34 000 = 122 000 €. ACHE = 6 000 € ; PCHE = 12 000 €.",
+            "3. Trésorerie active = 8 000 + 22 000 = 30 000 €. Trésorerie passive = 16 000 + 20 000 = 36 000 € : la banque a avancé l'argent des effets escomptés, c'est un crédit de trésorerie.",
+            "4. Bilan fonctionnel. Emplois : stables 540 000 ; ACE 257 000 ; ACHE 6 000 ; trésorerie active 30 000 ; total 833 000 €. Ressources : stables 663 000 ; PCE 122 000 ; PCHE 12 000 ; trésorerie passive 36 000 ; total 833 000 €. Le bilan est équilibré. Écart avec le bilan comptable : 833 000 − 624 000 = 209 000 € = 189 000 (amortissements et dépréciations réintégrés des deux côtés) + 20 000 (EENE ajoutés des deux côtés)."
+          ],
+          "erreurs": [
+            "Oublier les dépréciations des stocks et des clients dans les ressources stables : le bilan ne s'équilibre plus.",
+            "Laisser les 16 000 € de concours bancaires dans les ressources stables.",
+            "Ajouter les EENE d'un seul côté du bilan."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-3",
+          "niveau": "approfondissement",
+          "titre": "Mesurer l'effet des retraitements",
+          "objectif": "Comprendre comment chaque retraitement modifie (ou non) le FRNG, le BFR et la trésorerie nette.",
+          "enonce": "Une entreprise fictive envisage trois retraitements avant d'analyser son bilan fonctionnel : (a) un contrat de crédit-bail porte sur une machine d'une valeur d'origine de 60 000 € ; si elle avait été achetée, elle serait amortie à hauteur de 24 000 € ; (b) 15 000 € d'effets escomptés non échus ; (c) 3 000 € d'intérêts courus non échus inclus dans les dettes financières.",
+          "methode": [
+            "Pour chaque retraitement, écrivez ce qui s'ajoute ou se retire de chaque côté du bilan fonctionnel (voir le tableau du cours).",
+            "Rappelez-vous que FRNG = ressources stables − emplois stables, BFR = actif circulant − passif circulant (hors trésorerie), trésorerie nette = trésorerie active − trésorerie passive.",
+            "Calculez la variation de chaque agrégat ; vérifiez que variation du FRNG − variation du BFR = variation de la trésorerie nette."
+          ],
+          "questions": [
+            "1. Crédit-bail : quels postes sont modifiés, et de combien ? Quel est l'effet sur le FRNG ?",
+            "2. EENE : quels sont les effets sur le BFR d'exploitation et sur la trésorerie nette ?",
+            "3. Intérêts courus : quels sont les effets sur le FRNG, le BFR hors exploitation et la trésorerie nette ?",
+            "4. Pourquoi ces retraitements donnent-ils une image plus fidèle de la situation ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Crédit-bail : emplois stables + 60 000 € (on fait comme si la machine avait été achetée) ; ressources stables + 24 000 € (amortissements théoriques, ressources propres) + 36 000 € (part non amortie, traitée comme une dette financière) = + 60 000 €. Le FRNG ne change pas (+ 60 000 − 60 000 = 0), mais l'endettement apparaît : c'est l'intérêt du retraitement.",
+            "2. EENE : ACE + 15 000 € donc BFRE + 15 000 € ; trésorerie passive + 15 000 € donc trésorerie nette − 15 000 €. Le FRNG ne bouge pas. Contrôle : 0 − 15 000 = − 15 000.",
+            "3. Intérêts courus : dettes financières − 3 000 € donc FRNG − 3 000 € ; PCHE + 3 000 € donc BFRHE − 3 000 €. Trésorerie nette inchangée. Contrôle : − 3 000 − (− 3 000) = 0. Ces intérêts seront payés à court terme : ce ne sont pas des ressources durables.",
+            "4. Le bilan fonctionnel cherche la réalité économique, pas la forme juridique : la machine en crédit-bail est utilisée comme un bien acheté à crédit, l'escompte est un crédit bancaire à court terme qui finance des créances encore impayées, et les intérêts courus sont une dette à court terme. Sans retraitement, on sous-estimerait l'endettement et le BFR, et on surestimerait la trésorerie."
+          ],
+          "erreurs": [
+            "Croire que le crédit-bail modifie le FRNG : il gonfle les deux côtés du haut de bilan du même montant.",
+            "Oublier la vérification variation du FRNG − variation du BFR = variation de la trésorerie nette."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "gfi-s2",
+      "titre": "L'équilibre financier : FRNG, BFR, trésorerie nette",
+      "chapitre": "gfi.equilibre",
+      "notions": ["gfi.equilibre.frng", "gfi.equilibre.bfr", "gfi.equilibre.tresorerie-nette", "gfi.equilibre.situations", "gfi.equilibre.rentabilite-vs-liquidite", "gfi.equilibre.effet-ciseaux"],
+      "rappel": [
+        "FRNG = ressources stables − emplois stables : marge de financement durable qui reste après avoir financé les investissements.",
+        "BFRE = actif circulant d'exploitation − passif circulant d'exploitation ; BFRHE = actif circulant HE − passif circulant HE ; BFR = BFRE + BFRHE. Le BFR est un besoin de financement, pas une charge.",
+        "Trésorerie nette = FRNG − BFR = trésorerie active − trésorerie passive. Les deux calculs doivent donner le même résultat : c'est le contrôle de cohérence.",
+        "Six situations types selon les signes du FRNG et du BFR ; aucune n'est bonne ou mauvaise en soi, il faut tenir compte du secteur (BFR négatif normal dans la distribution) et de l'évolution.",
+        "Rentabilité (gagner de l'argent) et liquidité (payer ses échéances) sont différentes. Quand le CA croît vite, le BFRE (en jours de CA) augmente tout de suite : c'est l'effet de ciseaux, qui consomme de la trésorerie."
+      ],
+      "exercices": [
+        {
+          "id": "gfi-4",
+          "niveau": "bases",
+          "titre": "Calculer et vérifier FRNG, BFR et trésorerie nette",
+          "objectif": "Calculer les trois indicateurs de l'équilibre financier et contrôler le résultat par les deux méthodes.",
+          "enonce": "On reprend le bilan fonctionnel d'Atelier Loire Textile (exercice gfi-2), résumé ci-dessous en euros.",
+          "donnees": {
+            "entetes": ["Emplois", "Montant", "Ressources", "Montant"],
+            "lignes": [
+              ["Emplois stables", "540 000", "Ressources stables", "663 000"],
+              ["Actif circulant d'exploitation", "257 000", "Passif circulant d'exploitation", "122 000"],
+              ["Actif circulant hors exploitation", "6 000", "Passif circulant hors exploitation", "12 000"],
+              ["Trésorerie active", "30 000", "Trésorerie passive", "36 000"],
+              ["Total", "833 000", "Total", "833 000"]
+            ]
+          },
+          "methode": [
+            "Lisez le tableau « par étages » : le haut (cycle long) donne le FRNG, le milieu (cycle court) donne le BFR, le bas donne la trésorerie.",
+            "Calculez le BFRE et le BFRHE séparément, puis additionnez-les (attention au signe du BFRHE).",
+            "Calculez la trésorerie nette par le haut (FRNG − BFR) puis par le bas (TA − TP) : les deux doivent coïncider.",
+            "Situez l'entreprise parmi les six situations du cours."
+          ],
+          "questions": [
+            "1. Calculez le FRNG et interprétez son signe.",
+            "2. Calculez le BFRE, le BFRHE et le BFR.",
+            "3. Calculez la trésorerie nette par les deux méthodes.",
+            "4. Dans quelle situation se trouve l'entreprise ? Proposez deux pistes d'amélioration.",
+            "5. Que serait la trésorerie nette sans le retraitement des 20 000 € d'EENE ? Qu'en concluez-vous ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. FRNG = 663 000 − 540 000 = 123 000 €. Il est positif : les investissements sont entièrement financés par des ressources durables et il reste 123 000 € pour financer le cycle d'exploitation. La règle de l'équilibre financier minimum est respectée.",
+            "2. BFRE = 257 000 − 122 000 = 135 000 € : stocks et crédits clients immobilisent plus que les crédits obtenus des fournisseurs et de l'État. BFRHE = 6 000 − 12 000 = − 6 000 € (une ressource). BFR = 135 000 − 6 000 = 129 000 €.",
+            "3. Par le haut : 123 000 − 129 000 = − 6 000 €. Par le bas : 30 000 − 36 000 = − 6 000 €. Les deux méthodes concordent, les calculs sont cohérents.",
+            "4. FRNG positif, BFR positif et supérieur au FRNG, trésorerie négative : l'entreprise dépend des concours bancaires pour financer une partie de son BFR, situation à surveiller. Pistes : réduire le BFRE (raccourcir les délais clients, réduire les stocks, négocier des délais fournisseurs dans la limite légale) ou renforcer les ressources stables (emprunt à moyen terme, apport en capital, mise en réserve des bénéfices).",
+            "5. Sans les EENE, la trésorerie passive serait de 16 000 € et l'ACE de 237 000 € : BFR 109 000 €, trésorerie nette 30 000 − 16 000 = + 14 000 €. La trésorerie paraîtrait positive alors qu'elle repose en partie sur l'escompte bancaire : le retraitement révèle la dépendance au crédit à court terme."
+          ],
+          "erreurs": [
+            "Oublier le signe négatif du BFRHE et calculer BFR = 135 000 + 6 000.",
+            "Conclure à une faillite imminente : une trésorerie légèrement négative n'est alarmante que si elle persiste ou se dégrade."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-5",
+          "niveau": "application",
+          "titre": "Les six situations et l'effet des décisions",
+          "objectif": "Identifier une situation d'équilibre à partir du FRNG et du BFR, et prévoir l'effet d'une opération sur les trois agrégats.",
+          "enonce": "Partie A : six entreprises fictives présentent les données suivantes (en milliers d'euros). Partie B : une PME dont le FRNG est positif envisage quatre opérations : (a) souscrire un emprunt à 5 ans de 50 k€ ; (b) distribuer 20 k€ de dividendes ; (c) accorder à ses clients 15 jours de délai supplémentaires (le BFRE augmenterait de 40 k€) ; (d) acheter une machine de 30 k€ payée comptant sur ses fonds propres.",
+          "donnees": {
+            "entetes": ["Entreprise", "FRNG", "BFR", "Trésorerie nette (à calculer)", "Situation (à décrire)"],
+            "lignes": [
+              ["A", "150", "90", "", ""],
+              ["B", "80", "140", "", ""],
+              ["C", "40", "− 70", "", ""],
+              ["D", "− 50", "− 120", "", ""],
+              ["E", "− 30", "45", "", ""],
+              ["F", "− 60", "− 20", "", ""]
+            ]
+          },
+          "methode": [
+            "Calculez d'abord chaque trésorerie nette : TN = FRNG − BFR (attention à la soustraction d'un nombre négatif).",
+            "Comparez ensuite le signe du FRNG, le signe du BFR et leur taille relative pour reconnaître la situation dans le tableau du cours.",
+            "Pour la partie B, demandez-vous quelle masse du bilan chaque opération modifie : haut de bilan (FRNG) ou cycle d'exploitation (BFR). La trésorerie nette en découle."
+          ],
+          "questions": [
+            "1. Complétez le tableau de la partie A.",
+            "2. Laquelle de ces entreprises pourrait être un hypermarché ? Justifiez.",
+            "3. Pour chaque opération de la partie B, indiquez l'effet (hausse, baisse, sans effet, et montant) sur le FRNG, le BFR et la trésorerie nette."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. A : TN = 60 ; FRNG finance tout le BFR, équilibre satisfaisant. B : TN = − 60 ; BFR supérieur au FRNG, dépendance aux concours bancaires. C : TN = 40 − (− 70) = 110 ; BFR négatif, situation très confortable. D : TN = − 50 − (− 120) = 70 ; le cycle d'exploitation (BFR très négatif) finance une partie des investissements. E : TN = − 30 − 45 = − 75 ; FRNG négatif et BFR positif, situation très dangereuse, tout repose sur le crédit bancaire. F : TN = − 60 − (− 20) = − 40 ; FRNG négatif plus important que le BFR négatif, des investissements sont financés à court terme, déséquilibre.",
+            "2. L'entreprise D : FRNG négatif mais BFR très négatif. C'est typique de la grande distribution : les clients paient comptant, les fournisseurs sont payés plus tard, et ce décalage finance une partie des magasins. Ce FRNG négatif n'est pas alarmant dans ce secteur.",
+            "3. (a) Emprunt : FRNG + 50, BFR sans effet, TN + 50 (ressource durable nouvelle). (b) Dividendes : FRNG − 20 (les capitaux propres baissent), BFR sans effet, TN − 20. (c) Délais clients : FRNG sans effet, BFR + 40, TN − 40 (le crédit accordé aux clients doit être financé). (d) Machine autofinancée : emplois stables + 30, donc FRNG − 30, BFR sans effet, TN − 30.",
+            "Bilan de l'exercice : la trésorerie nette ne se pilote pas directement, elle résulte des décisions d'investissement et de financement (FRNG) et des conditions d'exploitation (BFR)."
+          ],
+          "erreurs": [
+            "Calculer − 50 − (− 120) = − 170 : soustraire un nombre négatif revient à ajouter.",
+            "Penser qu'un emprunt augmente le BFR : il modifie le haut du bilan, pas le cycle d'exploitation."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-6",
+          "niveau": "approfondissement",
+          "titre": "Croissance et effet de ciseaux",
+          "objectif": "Chiffrer le besoin de financement créé par la croissance et comprendre qu'une entreprise rentable peut manquer de trésorerie.",
+          "enonce": "La société fictive Vélocité, fabricant de vélos électriques, réalise un CA HT de 1 200 000 €. Son BFRE représente 54 jours de CA HT. Elle prévoit une hausse de 25 % de son CA l'an prochain. La CAF supplémentaire attendue grâce à cette croissance est de 18 000 €. Le dirigeant se réjouit : « Plus de ventes, donc plus de trésorerie. »",
+          "methode": [
+            "Calculez le BFRE actuel : BFRE = CA HT × nombre de jours ÷ 360.",
+            "Calculez le CA prévu, puis le BFRE prévu avec le même nombre de jours (le BFRE évolue proportionnellement au CA).",
+            "Comparez l'augmentation du BFRE avec la CAF supplémentaire : la différence est la trésorerie consommée par la croissance.",
+            "Réfléchissez aux remèdes : financer (ressources stables, affacturage) ou réduire le BFRE."
+          ],
+          "questions": [
+            "1. Calculez le BFRE actuel.",
+            "2. Calculez le CA et le BFRE prévus, puis l'augmentation du BFRE.",
+            "3. De combien la trésorerie se dégrade-t-elle au minimum ? Commentez la phrase du dirigeant.",
+            "4. Proposez trois solutions et précisez pour chacune si elle agit sur le FRNG ou sur le BFR."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. BFRE = 1 200 000 × 54 ÷ 360 = 180 000 €.",
+            "2. CA prévu = 1 200 000 × 1,25 = 1 500 000 €. BFRE prévu = 1 500 000 × 54 ÷ 360 = 225 000 €. Augmentation : 225 000 − 180 000 = 45 000 € (on retrouve 180 000 × 25 %).",
+            "3. Besoin supplémentaire 45 000 € − CAF supplémentaire 18 000 € = 27 000 € : la trésorerie se dégrade d'au moins 27 000 €. Le dirigeant confond rentabilité et liquidité : le résultat est constaté à la facturation, mais l'argent rentre à l'encaissement, alors que matières et salaires sont payés tout de suite. À court terme, la croissance consomme de la trésorerie : c'est l'effet de ciseaux.",
+            "4. Exemples : un emprunt à moyen terme ou une augmentation de capital (hausse du FRNG) ; l'affacturage des créances clients (transforme les créances en trésorerie, réduit le besoin financé par l'entreprise) ; la réduction des délais clients ou des stocks (baisse du BFRE) ; l'allongement des délais fournisseurs dans la limite légale (baisse du BFRE)."
+          ],
+          "erreurs": [
+            "Croire que le BFR reste stable quand le CA augmente : exprimé en jours de CA, il suit l'activité.",
+            "Comparer l'augmentation du BFRE au résultat au lieu de la CAF (surplus monétaire potentiel)."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "gfi-s3",
+      "titre": "Analyser l'activité : SIG et CAF",
+      "chapitre": "gfi.performance",
+      "notions": ["gfi.performance.sig", "gfi.performance.caf"],
+      "rappel": [
+        "Marge commerciale = ventes de marchandises − coût d'achat des marchandises vendues (achats + stock initial − stock final). Production = production vendue + stockée + immobilisée.",
+        "Valeur ajoutée = marge commerciale + production − consommations en provenance des tiers. EBE = VA + subventions d'exploitation − impôts et taxes − charges de personnel.",
+        "L'EBE est calculé avant dotations, charges financières et impôt : il mesure la performance de l'exploitation indépendamment des choix d'investissement et de financement.",
+        "CAF (additive) = résultat net + dotations − reprises + VNC des éléments cédés (675) − produits des cessions (775) − quote-part des subventions d'investissement virée au résultat (777).",
+        "CAF (soustractive) = EBE + autres produits − autres charges + produits financiers encaissables − charges financières décaissables ± exceptionnel encaissable/décaissable (hors 675, 775, 777) − participation − impôt. Autofinancement = CAF − dividendes."
+      ],
+      "exercices": [
+        {
+          "id": "gfi-7",
+          "niveau": "bases",
+          "titre": "Calculer les soldes intermédiaires de gestion",
+          "objectif": "Construire pas à pas la cascade des SIG et comprendre ce que mesure chaque solde.",
+          "enonce": "Voici les éléments du compte de résultat de l'exercice N d'Atelier Loire Textile (entreprise fictive), en euros. La variation de stock est présentée comme au compte de résultat : stock initial − stock final.",
+          "donnees": {
+            "entetes": ["Élément", "Montant"],
+            "lignes": [
+              ["Ventes de marchandises", "180 000"],
+              ["Achats de marchandises", "110 000"],
+              ["Variation de stock de marchandises (SI 21 000 − SF 25 000)", "− 4 000"],
+              ["Production vendue", "640 000"],
+              ["Production stockée", "12 000"],
+              ["Achats de matières premières", "230 000"],
+              ["Variation de stock de matières (SI − SF)", "6 000"],
+              ["Autres achats et charges externes", "98 000"],
+              ["Subventions d'exploitation", "5 000"],
+              ["Impôts et taxes", "17 000"],
+              ["Charges de personnel", "296 000"],
+              ["Reprises sur provisions d'exploitation", "2 000"],
+              ["Autres produits d'exploitation", "1 000"],
+              ["Dotations aux amortissements et provisions d'exploitation", "38 000"],
+              ["Autres charges d'exploitation", "1 500"],
+              ["Produits financiers", "1 500"],
+              ["Charges financières (intérêts)", "7 000"],
+              ["Produits des cessions d'éléments d'actif (775)", "9 000"],
+              ["Valeur comptable des éléments d'actif cédés (675)", "6 000"],
+              ["Impôt sur les bénéfices", "11 000"]
+            ]
+          },
+          "methode": [
+            "Marge commerciale : ne concerne que les marchandises (achetées pour être revendues en l'état). Coût d'achat des marchandises vendues = achats + variation de stock (ici négative car le stock a augmenté).",
+            "Production : additionnez ce qui a été produit, vendu ou stocké.",
+            "Valeur ajoutée : ajoutez marge et production, puis retirez ce qui a été consommé auprès des tiers (matières + variation de stock de matières + autres achats et charges externes).",
+            "Continuez la cascade : EBE, résultat d'exploitation, RCAI, résultat exceptionnel, résultat net. Écrivez chaque formule avant de calculer."
+          ],
+          "questions": [
+            "1. Calculez la marge commerciale et la production de l'exercice.",
+            "2. Calculez la valeur ajoutée et l'EBE.",
+            "3. Calculez le résultat d'exploitation, le RCAI, le résultat exceptionnel et le résultat net.",
+            "4. Calculez le taux de marge brute d'exploitation (EBE ÷ CA HT) et expliquez pourquoi l'EBE est utile pour comparer deux entreprises."
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Coût d'achat des marchandises vendues = 110 000 − 4 000 = 106 000 € (le stock a augmenté de 4 000 € : une partie des achats n'a pas été vendue). Marge commerciale = 180 000 − 106 000 = 74 000 €. Production = 640 000 + 12 000 = 652 000 €.",
+            "2. Consommations en provenance des tiers = 230 000 + 6 000 + 98 000 = 334 000 €. VA = 74 000 + 652 000 − 334 000 = 392 000 € : richesse créée par l'entreprise. EBE = 392 000 + 5 000 − 17 000 − 296 000 = 84 000 €.",
+            "3. Résultat d'exploitation = 84 000 + 2 000 + 1 000 − 38 000 − 1 500 = 47 500 €. RCAI = 47 500 + 1 500 − 7 000 = 42 000 €. Résultat exceptionnel = 9 000 − 6 000 = 3 000 € (plus-value de cession). Résultat net = 42 000 + 3 000 − 11 000 = 34 000 € (on retrouve le résultat du bilan de l'exercice gfi-2).",
+            "4. CA HT = 180 000 + 640 000 = 820 000 €. Taux de marge brute d'exploitation = 84 000 ÷ 820 000 ≈ 10,2 %. L'EBE ne dépend ni des dotations (choix d'investissement et d'amortissement), ni des intérêts (choix de financement), ni de l'impôt : il permet de comparer la performance de l'exploitation elle-même entre deux entreprises qui se financent différemment."
+          ],
+          "erreurs": [
+            "Inverser le sens de la variation de stock de marchandises : SI − SF négatif diminue le coût d'achat.",
+            "Confondre production stockée (produits fabriqués, en produit) et variation de stock de marchandises (biens achetés, en charge).",
+            "Déduire les dotations avant l'EBE."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-8",
+          "niveau": "application",
+          "titre": "Calculer la CAF par les deux méthodes",
+          "objectif": "Comprendre que la CAF est un surplus monétaire potentiel et le vérifier en la calculant par les méthodes additive et soustractive.",
+          "enonce": "On reprend les données de l'exercice gfi-7 (EBE 84 000 € ; résultat net 34 000 €). Toutes les dotations et reprises sont d'exploitation. Les produits et charges financiers sont encaissables et décaissables. Il n'y a ni participation ni subvention d'investissement. L'entreprise a versé 12 000 € de dividendes dans l'exercice.",
+          "methode": [
+            "Méthode additive : partez du résultat net, ajoutez les charges qui ne se décaissent pas (dotations), retirez les produits qui ne s'encaissent pas (reprises), puis neutralisez la cession : on ajoute la VNC (675) et on retire le prix de cession (775).",
+            "Méthode soustractive : partez de l'EBE (déjà monétaire) et ajoutez ou retirez seulement les éléments encaissables ou décaissables situés sous l'EBE.",
+            "Les deux méthodes doivent donner le même résultat ; sinon, cherchez l'élément oublié.",
+            "Autofinancement = CAF − dividendes."
+          ],
+          "questions": [
+            "1. Calculez la CAF par la méthode additive.",
+            "2. Calculez la CAF par la méthode soustractive et vérifiez la concordance.",
+            "3. Pourquoi le produit de cession (9 000 €) est-il exclu de la CAF ?",
+            "4. Calculez l'autofinancement. La CAF de 67 000 € est-elle la trésorerie gagnée dans l'année ? Expliquez."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. CAF = 34 000 + 38 000 − 2 000 + 6 000 − 9 000 = 67 000 €.",
+            "2. CAF = EBE 84 000 + autres produits 1 000 − autres charges 1 500 + produits financiers 1 500 − charges financières 7 000 − impôt 11 000 = 67 000 €. Les deux méthodes concordent. Les dotations, reprises et la cession n'apparaissent pas ici car elles sont soit non monétaires, soit hors activité.",
+            "3. La cession procure bien de l'argent, mais elle ne provient pas de l'activité courante : c'est une opération d'investissement (désinvestissement). La CAF mesure ce que l'activité génère ; on retire donc le prix de cession et on neutralise la VNC.",
+            "4. Autofinancement = 67 000 − 12 000 = 55 000 € : c'est ce qui reste pour financer investissements, remboursements d'emprunt et croissance du BFR. La CAF n'est pas la trésorerie de l'année : elle est potentielle. Les ventes non encaissées et les achats non payés (variation du BFR) séparent la CAF de la trésorerie réellement gagnée."
+          ],
+          "erreurs": [
+            "Ajouter le prix de cession à la CAF parce qu'il fait rentrer de l'argent.",
+            "Oublier de retirer les reprises dans la méthode additive.",
+            "Confondre CAF et autofinancement (les dividendes sont à déduire)."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "gfi-s4",
+      "titre": "Les ratios : structure, liquidité, rotation, rentabilité, levier",
+      "chapitre": "gfi.ratios",
+      "notions": ["gfi.ratios.structure", "gfi.ratios.liquidite", "gfi.ratios.rotation", "gfi.ratios.rentabilite", "gfi.ratios.levier"],
+      "rappel": [
+        "Structure : autonomie financière = capitaux propres ÷ total du bilan (souvent attendu au-dessus de 20 à 30 %) ; endettement = dettes financières ÷ capitaux propres (inférieur à 1 en général) ; capacité de remboursement = dettes financières ÷ CAF (moins de 3 ou 4 ans).",
+        "Liquidité générale = actif circulant ÷ dettes à court terme (> 1) ; réduite = (actif circulant − stocks) ÷ dettes à court terme (proche de 1) ; immédiate = disponibilités ÷ dettes à court terme.",
+        "Rotation : délai clients = créances clients TTC (+ EENE) ÷ CA TTC × 360 ; délai fournisseurs = dettes fournisseurs TTC ÷ achats TTC × 360 ; rotation du stock = stock moyen ÷ coût d'achat des marchandises vendues × 360.",
+        "Rentabilité économique = résultat d'exploitation ÷ capitaux investis ; rentabilité financière = résultat net ÷ capitaux propres.",
+        "Effet de levier : Rf = [Re + (Re − i) × D ÷ CP] × (1 − t). Si Re > i, l'endettement augmente Rf ; si Re < i, il la fait chuter (effet de massue)."
+      ],
+      "exercices": [
+        {
+          "id": "gfi-9",
+          "niveau": "bases",
+          "titre": "Ratios de structure et de liquidité",
+          "objectif": "Calculer et interpréter les ratios qu'utilise un banquier pour décider d'un prêt.",
+          "enonce": "La société fictive Vallée Verte (conserverie) présente au 31/12/N les données suivantes, en euros.",
+          "donnees": {
+            "entetes": ["Élément", "Montant"],
+            "lignes": [
+              ["Capitaux propres", "400 000"],
+              ["Dettes financières (emprunts à plus d'un an)", "300 000"],
+              ["Dettes à court terme", "200 000"],
+              ["Total du bilan", "900 000"],
+              ["Actif circulant", "380 000"],
+              ["dont stocks", "150 000"],
+              ["dont disponibilités", "30 000"],
+              ["CAF de l'exercice", "75 000"],
+              ["Ressources stables (bilan fonctionnel)", "820 000"],
+              ["Emplois stables (bilan fonctionnel)", "640 000"]
+            ]
+          },
+          "methode": [
+            "Écrivez chaque formule, remplacez par les chiffres, arrondissez à deux décimales ou au dixième de pourcentage.",
+            "Comparez chaque résultat au repère du cours, puis traduisez-le en une phrase : « l'entreprise peut / ne peut pas… ».",
+            "Pour la liquidité, demandez-vous ce qui se passe si les stocks se vendent mal : c'est le sens de la liquidité réduite."
+          ],
+          "questions": [
+            "1. Calculez l'autonomie financière, le taux d'endettement et la capacité de remboursement.",
+            "2. Calculez le ratio de financement des immobilisations. À quel indicateur de l'équilibre financier correspond-il ?",
+            "3. Calculez les liquidités générale, réduite et immédiate.",
+            "4. En trois phrases, dites si un banquier accepterait facilement un nouvel emprunt."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Autonomie financière = 400 000 ÷ 900 000 ≈ 44,4 % (au-dessus des repères de 20 à 30 %). Endettement = 300 000 ÷ 400 000 = 0,75 (inférieur à 1). Capacité de remboursement = 300 000 ÷ 75 000 = 4 ans : il faudrait 4 années de CAF pour rembourser les dettes financières, à la limite haute du repère.",
+            "2. 820 000 ÷ 640 000 ≈ 1,28. Un ratio supérieur à 1 équivaut à un FRNG positif : FRNG = 820 000 − 640 000 = 180 000 €.",
+            "3. Liquidité générale = 380 000 ÷ 200 000 = 1,90. Liquidité réduite = (380 000 − 150 000) ÷ 200 000 = 230 000 ÷ 200 000 = 1,15. Liquidité immédiate = 30 000 ÷ 200 000 = 0,15. Même sans vendre ses stocks, l'entreprise couvre ses dettes à court terme.",
+            "4. La structure est saine : fonds propres importants, endettement modéré et bonne liquidité. Le point faible est la capacité de remboursement (4 ans) : un nouvel emprunt la porterait au-delà des repères si la CAF n'augmente pas. Le banquier demandera donc à quel point l'investissement financé augmentera la CAF."
+          ],
+          "erreurs": [
+            "Inclure les dettes fournisseurs dans les dettes financières des ratios d'endettement.",
+            "Confondre liquidité (court terme) et solvabilité (capacité globale à rembourser toutes les dettes)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-10",
+          "niveau": "application",
+          "titre": "Délais clients, délais fournisseurs et rotation des stocks",
+          "objectif": "Exprimer les postes du BFRE en jours en respectant l'homogénéité HT / TTC, puis les interpréter.",
+          "enonce": "La société fictive Distrilac, négociant en produits laitiers, communique les données de l'exercice N (TVA au taux de 20 % pour simplifier).",
+          "donnees": {
+            "entetes": ["Élément", "Montant"],
+            "lignes": [
+              ["Chiffre d'affaires HT", "1 500 000"],
+              ["Créances clients au bilan (TTC)", "250 000"],
+              ["Effets escomptés non échus", "20 000"],
+              ["Achats de marchandises HT", "720 000"],
+              ["Dettes fournisseurs au bilan (TTC)", "120 000"],
+              ["Stock de marchandises initial", "70 000"],
+              ["Stock de marchandises final", "90 000"],
+              ["Coût d'achat des marchandises vendues", "720 000"]
+            ]
+          },
+          "methode": [
+            "Les créances et les dettes figurent TTC au bilan : rapportez-les à des flux TTC (CA TTC = CA HT × 1,2 ; achats TTC = achats HT × 1,2).",
+            "N'oubliez pas d'ajouter les EENE aux créances clients : les clients concernés n'ont pas encore payé.",
+            "Le stock est valorisé au coût d'achat (HT) : rapportez le stock moyen au coût d'achat des marchandises vendues, sans TVA.",
+            "Comparez ensuite délai clients et délai fournisseurs, et vérifiez le respect du plafond légal de 60 jours entre professionnels."
+          ],
+          "questions": [
+            "1. Calculez le délai moyen de paiement des clients.",
+            "2. Calculez le délai moyen de paiement des fournisseurs.",
+            "3. Calculez la durée moyenne de stockage des marchandises.",
+            "4. Interprétez ces trois durées pour le BFRE de Distrilac. Quelle erreur ferait-on en divisant les créances TTC par le CA HT ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. CA TTC = 1 500 000 × 1,2 = 1 800 000 €. Délai clients = (250 000 + 20 000) ÷ 1 800 000 × 360 = 54 jours.",
+            "2. Achats TTC = 720 000 × 1,2 = 864 000 €. Délai fournisseurs = 120 000 ÷ 864 000 × 360 = 50 jours.",
+            "3. Stock moyen = (70 000 + 90 000) ÷ 2 = 80 000 €. Durée de stockage = 80 000 ÷ 720 000 × 360 = 40 jours.",
+            "4. Les marchandises restent 40 jours en stock puis sont payées par les clients 54 jours après la vente, soit environ 94 jours entre l'achat et l'encaissement, alors que les fournisseurs sont réglés au bout de 50 jours : Distrilac doit financer ce décalage, d'où un BFRE positif. Les délais restent sous le plafond légal de 60 jours. Diviser les créances TTC par le CA HT donnerait 270 000 ÷ 1 500 000 × 360 = 64,8 jours : un délai surévalué de 20 %, car on compare des grandeurs non homogènes."
+          ],
+          "erreurs": [
+            "Mélanger HT et TTC dans un même ratio.",
+            "Oublier les EENE dans le délai clients.",
+            "Calculer la rotation du stock avec le stock final au lieu du stock moyen."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-11",
+          "niveau": "approfondissement",
+          "titre": "Rentabilité et effet de levier",
+          "objectif": "Calculer les rentabilités économique et financière et comprendre quand l'endettement les améliore ou les dégrade.",
+          "enonce": "La société fictive Hydrolab a investi 800 000 € de capitaux (immobilisations d'exploitation + BFRE), financés par 500 000 € de capitaux propres et 300 000 € de dettes financières au taux de 4 %. Son résultat d'exploitation est de 96 000 €, son CA HT de 1 200 000 € et son EBE de 150 000 €. Le taux d'impôt sur les sociétés est de 25 %.",
+          "methode": [
+            "Rentabilité économique avant impôt : Re = résultat d'exploitation ÷ capitaux investis.",
+            "Appliquez la formule du levier : différentiel (Re − i), bras de levier (D ÷ CP), puis multipliez par (1 − t).",
+            "Vérifiez par les montants : résultat net = (résultat d'exploitation − intérêts) × (1 − t), puis Rf = résultat net ÷ capitaux propres.",
+            "Refaites le calcul sans dette, puis avec une rentabilité économique de 3 %."
+          ],
+          "questions": [
+            "1. Calculez la rentabilité économique avant impôt.",
+            "2. Calculez la rentabilité financière après impôt avec la formule du levier, puis vérifiez avec les montants.",
+            "3. Quelle serait la rentabilité financière si tout était financé par capitaux propres (800 000 €) ? Concluez.",
+            "4. Le résultat d'exploitation tombe à 24 000 €. Calculez la nouvelle rentabilité financière avec et sans dette. Comment s'appelle ce phénomène ?",
+            "5. Calculez les taux de marge brute d'exploitation et de marge nette (situation initiale)."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Re = 96 000 ÷ 800 000 = 12 %.",
+            "2. Différentiel = 12 − 4 = 8 points ; bras de levier = 300 000 ÷ 500 000 = 0,6. Rf avant impôt = 12 + 8 × 0,6 = 16,8 % ; après impôt = 16,8 × 0,75 = 12,6 %. Vérification : intérêts = 300 000 × 4 % = 12 000 € ; résultat net = (96 000 − 12 000) × 0,75 = 63 000 € ; Rf = 63 000 ÷ 500 000 = 12,6 %.",
+            "3. Sans dette : résultat net = 96 000 × 0,75 = 72 000 € ; Rf = 72 000 ÷ 800 000 = 9 %. L'endettement fait passer Rf de 9 % à 12,6 % : levier positif, car chaque euro emprunté rapporte 12 % et ne coûte que 4 %.",
+            "4. Re = 24 000 ÷ 800 000 = 3 %, inférieure au taux d'intérêt de 4 %. Avec dette : [3 + (3 − 4) × 0,6] × 0,75 = 2,4 × 0,75 = 1,8 % (vérification : (24 000 − 12 000) × 0,75 = 9 000 € ; 9 000 ÷ 500 000 = 1,8 %). Sans dette : 3 × 0,75 = 2,25 %. La dette dégrade désormais la rentabilité : c'est l'effet de massue. Le levier amplifie à la fois les gains et les risques.",
+            "5. Taux de marge brute d'exploitation = 150 000 ÷ 1 200 000 = 12,5 %. Taux de marge nette = 63 000 ÷ 1 200 000 = 5,25 %. Une marge mesure le résultat par rapport au CA ; une rentabilité, par rapport aux capitaux engagés."
+          ],
+          "erreurs": [
+            "Appliquer (1 − t) à la rentabilité économique mais oublier de l'appliquer à la formule du levier, ou l'inverse.",
+            "Croire que s'endetter améliore toujours la rentabilité financière : seulement si Re > i.",
+            "Confondre levier financier (dettes) et levier opérationnel (charges fixes)."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "gfi-s5",
+      "titre": "Rédiger un diagnostic financier",
+      "chapitre": "gfi.diagnostic",
+      "notions": ["gfi.diagnostic.methode"],
+      "rappel": [
+        "Le diagnostic synthétise activité, rentabilité, équilibre et structure, sur plusieurs exercices et par comparaison avec le secteur.",
+        "Plan type : contexte ; activité et performance (CA, VA, EBE, marges) ; rentabilité ; équilibre (FRNG, BFR en jours, trésorerie) ; structure et solvabilité ; synthèse avec forces, faiblesses et recommandations.",
+        "Toujours comparer (dans le temps et dans l'espace) et expliquer : « le BFR augmente PARCE QUE les délais clients s'allongent ».",
+        "Rédiger en phrases complètes, avec des chiffres arrondis et commentés ; rester prudent : les ratios sont des indices, pas des preuves."
+      ],
+      "exercices": [
+        {
+          "id": "gfi-12",
+          "niveau": "bases",
+          "titre": "De la description à l'explication",
+          "objectif": "Transformer des constats chiffrés en phrases de diagnostic qui relient causes et conséquences.",
+          "enonce": "Un stagiaire a rédigé les phrases suivantes pour le diagnostic d'une PME fictive. Elles décrivent sans expliquer. Les informations entre parenthèses sont les causes trouvées dans le dossier.",
+          "donnees": {
+            "entetes": ["Phrase du stagiaire", "Information du dossier"],
+            "lignes": [
+              ["« Le BFRE augmente. »", "Délai clients passé de 48 à 60 jours"],
+              ["« L'EBE progresse moins vite que le CA. »", "Charges de personnel + 12 %, CA + 8 %"],
+              ["« La trésorerie devient négative. »", "FRNG stable, BFR en hausse"],
+              ["« La capacité de remboursement se dégrade. »", "Nouvel emprunt, CAF en baisse"]
+            ]
+          },
+          "methode": [
+            "Pour chaque phrase, gardez le constat chiffré et ajoutez la cause avec un connecteur logique (parce que, sous l'effet de, en raison de).",
+            "Ajoutez si possible la conséquence (ce qui en résulte pour l'entreprise) avec un connecteur de conséquence (donc, ce qui, par conséquent).",
+            "Rattachez chaque phrase à une étape du plan de diagnostic."
+          ],
+          "questions": [
+            "1. Réécrivez chacune des quatre phrases sous forme explicative.",
+            "2. Indiquez à quelle partie du plan de diagnostic appartient chaque phrase."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Propositions : (a) « Le BFRE augmente sous l'effet d'un allongement des délais clients, de 48 à 60 jours ; l'entreprise doit donc financer douze jours de ventes supplémentaires. » (b) « L'EBE progresse moins vite que le CA parce que les charges de personnel (+ 12 %) augmentent plus vite que l'activité (+ 8 %) : la marge brute d'exploitation se réduit. » (c) « La trésorerie devient négative car le BFR augmente alors que le FRNG reste stable : l'entreprise finance désormais une partie de son cycle par des concours bancaires. » (d) « La capacité de remboursement se dégrade, car les dettes financières augmentent avec le nouvel emprunt alors que la CAF baisse : il faudrait plus d'années de CAF pour rembourser. »",
+            "2. (a) et (c) : équilibre financier ; (b) : activité et performance ; (d) : structure et solvabilité. Une bonne rédaction suit cet ordre et termine par une synthèse."
+          ],
+          "erreurs": [
+            "Aligner des chiffres sans les relier : le lecteur ne sait pas quoi en conclure.",
+            "Présenter un ratio comme une preuve définitive plutôt que comme un indice."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-13",
+          "niveau": "application",
+          "titre": "Rédiger le diagnostic de la société Bois d'Orléans",
+          "objectif": "Produire un diagnostic structuré, chiffré et argumenté qui débouche sur des recommandations.",
+          "enonce": "La société fictive Bois d'Orléans (menuiserie industrielle) demande un prêt à sa banque. Voici ses principaux indicateurs (montants en milliers d'euros). On suppose que le BFR est entièrement d'exploitation.",
+          "donnees": {
+            "entetes": ["Indicateur", "N−1", "N"],
+            "lignes": [
+              ["Chiffre d'affaires HT", "1 000", "1 150"],
+              ["EBE", "120", "124"],
+              ["Taux de marge brute d'exploitation", "12,0 %", "10,8 %"],
+              ["Délai clients (jours)", "50", "62"],
+              ["BFR (jours de CA HT)", "40", "50"],
+              ["FRNG", "150", "155"],
+              ["BFR", "111", "160"],
+              ["Capitaux propres", "333", "385"],
+              ["Dettes financières", "200", "250"],
+              ["CAF", "80", "78"]
+            ]
+          },
+          "methode": [
+            "Calculez d'abord ce qui manque : évolution du CA et de l'EBE en %, trésorerie nette (FRNG − BFR), endettement (dettes financières ÷ capitaux propres), capacité de remboursement (dettes financières ÷ CAF).",
+            "Organisez votre texte selon le plan du cours : activité, équilibre, structure, synthèse.",
+            "Pour chaque évolution, donnez une cause et une conséquence.",
+            "Terminez par deux ou trois recommandations concrètes adressées au dirigeant et une réponse argumentée au banquier."
+          ],
+          "questions": [
+            "1. Calculez les indicateurs manquants pour N−1 et N.",
+            "2. Rédigez le diagnostic (15 à 20 lignes) en suivant le plan du cours.",
+            "3. Formulez trois recommandations."
+          ],
+          "lignes": 25,
+          "corrige": [
+            "1. CA : + 15 % (1 150 ÷ 1 000 − 1). EBE : + 3,3 % (124 ÷ 120 − 1 ≈ 0,033). Trésorerie nette : N−1 = 150 − 111 = + 39 ; N = 155 − 160 = − 5. Endettement : N−1 = 200 ÷ 333 ≈ 0,60 ; N = 250 ÷ 385 ≈ 0,65. Capacité de remboursement : N−1 = 200 ÷ 80 = 2,5 ans ; N = 250 ÷ 78 ≈ 3,2 ans. Contrôle du BFR : 1 000 × 40 ÷ 360 ≈ 111 et 1 150 × 50 ÷ 360 ≈ 160.",
+            "2. Exemple de rédaction : « Bois d'Orléans connaît une forte croissance (CA + 15 %), mais sa performance d'exploitation progresse peu : l'EBE n'augmente que de 3,3 % et le taux de marge brute d'exploitation recule de 12 % à 10,8 %, ce qui signale des coûts qui croissent plus vite que l'activité. Sur le plan de l'équilibre, le FRNG reste stable (155 k€), alors que le BFR bondit de 111 à 160 k€, soit de 40 à 50 jours de CA, sous l'effet d'un allongement des délais clients de 50 à 62 jours, désormais au-delà du plafond légal de 60 jours entre professionnels. La trésorerie passe ainsi de + 39 k€ à − 5 k€ : l'entreprise commence à financer son cycle par des concours bancaires. La structure reste correcte (endettement 0,65, inférieur à 1), mais la capacité de remboursement se dégrade (3,2 ans contre 2,5), car les dettes augmentent alors que la CAF baisse légèrement. En synthèse, l'entreprise est solide mais subit une croissance mal financée et un relâchement du recouvrement. »",
+            "3. Recommandations : renforcer le recouvrement (relances, pénalités de retard, affacturage) pour ramener le délai clients sous 60 jours ; analyser la hausse des charges pour restaurer la marge ; financer la croissance par des ressources stables (augmentation de capital ou emprunt à moyen terme raisonnable) plutôt que par le découvert. Pour le banquier : un prêt est envisageable si son montant laisse la capacité de remboursement sous 4 ans et s'il s'accompagne d'un plan de réduction du BFR."
+          ],
+          "erreurs": [
+            "Se limiter à une liste de chiffres sans plan ni causes.",
+            "Oublier de conclure par des recommandations chiffrées si possible.",
+            "Ne pas remarquer que le délai clients dépasse le plafond légal."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "gfi-s6",
+      "titre": "Choisir un financement",
+      "chapitre": "gfi.financement",
+      "notions": ["gfi.financement.court-terme", "gfi.financement.long-terme"],
+      "rappel": [
+        "Règle de l'équilibre financier : les emplois durables se financent par des ressources durables ; le cycle d'exploitation se finance à court terme.",
+        "Court terme : facilité de caisse (décalage de quelques jours), découvert autorisé (quelques semaines ou mois), crédit de campagne (activité saisonnière), escompte, cession Dailly (l'entreprise reste garante), affacturage (le factor finance, recouvre et peut garantir).",
+        "Long terme : autofinancement, augmentation de capital (renforce les fonds propres mais dilue le contrôle), emprunt (intérêts déductibles, effet de levier possible, mais endettement), crédit-bail (financement à 100 % sans apport, coût souvent plus élevé).",
+        "Annuité constante a = C × i ÷ (1 − (1 + i)^−n) ; intérêts de l'année = capital restant dû × i ; amortissement de l'emprunt = a − intérêts.",
+        "Amortissement d'un emprunt (remboursement du capital, flux de trésorerie) et amortissement d'une immobilisation (dotation, charge sans décaissement) sont deux choses différentes."
+      ],
+      "exercices": [
+        {
+          "id": "gfi-14",
+          "niveau": "bases",
+          "titre": "À chaque besoin son financement",
+          "objectif": "Associer un besoin de financement à l'outil adapté en raisonnant sur la durée du besoin et le service attendu.",
+          "enonce": "Voici six besoins rencontrés par des entreprises fictives. Pour chacun, choisissez le financement le plus adapté parmi : facilité de caisse, crédit de campagne, affacturage, cession Dailly, emprunt bancaire à moyen terme, crédit-bail, augmentation de capital.",
+          "donnees": {
+            "entetes": ["N°", "Besoin", "Financement choisi (à compléter)"],
+            "lignes": [
+              ["1", "Une PME doit payer les salaires le 28 alors que ses clients paient le 5 du mois suivant.", ""],
+              ["2", "Un fabricant de jouets produit de juin à octobre et vend 60 % de son CA en novembre-décembre.", ""],
+              ["3", "Une PME veut être payée sans attendre 60 jours par la grande distribution et ne plus gérer les relances.", ""],
+              ["4", "Une entreprise veut mobiliser auprès de sa banque un lot de factures clients tout en gardant leur gestion.", ""],
+              ["5", "Une imprimerie veut disposer d'une presse de 200 000 € sans apport ni immobilisation de trésorerie.", ""],
+              ["6", "Une start-up très endettée doit financer un nouveau site de production.", ""]
+            ]
+          },
+          "methode": [
+            "Pour chaque cas, demandez-vous d'abord : le besoin est-il ponctuel, saisonnier, lié aux créances clients, ou durable (investissement) ?",
+            "Pour les créances clients, distinguez financement seul (Dailly) et service complet avec recouvrement (affacturage).",
+            "Pour un investissement, tenez compte de la situation de l'entreprise : peut-elle encore s'endetter ?"
+          ],
+          "questions": [
+            "1. Complétez le tableau.",
+            "2. Justifiez chaque choix en une phrase.",
+            "3. Pourquoi serait-il dangereux de financer la presse du cas 5 par un découvert ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. 1 facilité de caisse ; 2 crédit de campagne ; 3 affacturage ; 4 cession Dailly ; 5 crédit-bail ; 6 augmentation de capital.",
+            "2. (1) Décalage de quelques jours en fin de mois : la facilité de caisse est faite pour cela. (2) Activité saisonnière : le crédit de campagne finance la production et se rembourse avec les ventes de la saison. (3) L'affacturage est un service complet : le factor finance, recouvre et peut garantir contre les impayés. (4) Le Dailly mobilise les créances par bordereau ; l'entreprise garde la relation client et reste garante. (5) Le crédit-bail finance 100 % du bien sans apport. (6) L'entreprise étant déjà très endettée, un nouvel emprunt dégraderait son endettement ; l'augmentation de capital renforce les fonds propres et sa capacité d'emprunt future.",
+            "3. La presse est un emploi durable : la financer par un crédit révocable et coûteux à court terme viole la règle de l'équilibre financier. Le FRNG diminuerait, la trésorerie deviendrait négative, et si la banque retirait le découvert, l'entreprise ne pourrait plus payer ses échéances."
+          ],
+          "erreurs": [
+            "Confondre affacturage (avec recouvrement et souvent garantie) et Dailly (simple financement, l'entreprise reste garante).",
+            "Proposer un emprunt à une entreprise déjà très endettée sans discuter son endettement."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-15",
+          "niveau": "application",
+          "titre": "Tableau d'amortissement d'un emprunt",
+          "objectif": "Construire un tableau d'amortissement à annuités constantes et le comparer à un remboursement par amortissements constants.",
+          "enonce": "La société fictive Atelier Loire Textile emprunte 60 000 € au taux annuel de 5 %, remboursable en 4 ans. Deux modalités sont proposées : annuités constantes ou amortissements constants.",
+          "methode": [
+            "Calculez l'annuité constante avec la formule a = C × i ÷ (1 − (1 + i)^−n). Calculez d'abord 1,05^4, puis son inverse.",
+            "Chaque année : intérêts = capital restant dû en début d'année × 5 % ; amortissement = annuité − intérêts ; capital restant dû en fin d'année = capital début − amortissement.",
+            "Contrôles : la somme des amortissements doit être égale à 60 000 € et le capital restant dû final à 0.",
+            "Pour les amortissements constants : amortissement = 60 000 ÷ 4 chaque année ; les intérêts baissent, donc l'annuité aussi."
+          ],
+          "questions": [
+            "1. Calculez l'annuité constante (arrondie au centime).",
+            "2. Construisez le tableau d'amortissement à annuités constantes.",
+            "3. Calculez le coût total des intérêts dans chaque modalité.",
+            "4. Quelle modalité coûte le moins d'intérêts, et pourquoi ? Quelle est l'autre qui pèse le moins sur la trésorerie la première année ?"
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. 1,05^4 = 1,21550625 ; 1,05^−4 ≈ 0,822702 ; 1 − 0,822702 = 0,177298. a = 60 000 × 0,05 ÷ 0,177298 ≈ 16 920,71 €.",
+            "2. Année 1 : capital début 60 000,00 ; intérêts 3 000,00 ; amortissement 13 920,71 ; annuité 16 920,71 ; capital fin 46 079,29. Année 2 : 46 079,29 ; 2 303,96 ; 14 616,75 ; 16 920,71 ; 31 462,54. Année 3 : 31 462,54 ; 1 573,13 ; 15 347,58 ; 16 920,71 ; 16 114,96. Année 4 : 16 114,96 ; 805,75 ; 16 114,96 ; 16 920,71 ; 0,00. Contrôle : 13 920,71 + 14 616,75 + 15 347,58 + 16 114,96 = 60 000,00 €.",
+            "3. Annuités constantes : 4 × 16 920,71 − 60 000 = 7 682,84 € (ou 3 000,00 + 2 303,96 + 1 573,13 + 805,75). Amortissements constants : amortissement 15 000 € par an ; intérêts 3 000 + 2 250 + 1 500 + 750 = 7 500 € ; annuités 18 000, 17 250, 16 500 et 15 750 €.",
+            "4. Les amortissements constants coûtent 182,84 € d'intérêts en moins, car le capital est remboursé plus vite au début : le capital restant dû, sur lequel on calcule les intérêts, baisse plus rapidement. En revanche, l'annuité constante pèse moins sur la trésorerie la première année (16 920,71 € contre 18 000 €) et facilite les prévisions."
+          ],
+          "erreurs": [
+            "Calculer les intérêts sur le capital initial chaque année au lieu du capital restant dû.",
+            "Confondre l'amortissement de l'emprunt (remboursement) avec une dotation aux amortissements.",
+            "Oublier de vérifier que le capital restant dû final est nul."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "gfi-16",
+          "niveau": "approfondissement",
+          "titre": "Emprunter ou augmenter le capital ?",
+          "objectif": "Mesurer l'effet de deux modes de financement sur les ratios d'endettement et argumenter un choix.",
+          "enonce": "La société fictive Mécaloire doit financer un investissement de 120 000 €. Avant l'opération : capitaux propres 300 000 €, dettes financières 360 000 €, CAF 80 000 €. Deux solutions : (A) un emprunt bancaire de 120 000 € ; (B) une augmentation de capital de 120 000 € souscrite par un nouvel associé. On raisonne sur les ratios au jour de l'opération, avant l'effet de l'investissement sur la CAF.",
+          "methode": [
+            "Calculez le taux d'endettement (dettes financières ÷ capitaux propres) et la capacité de remboursement (dettes financières ÷ CAF) avant l'opération.",
+            "Refaites les calculs après chaque solution en modifiant seulement le poste concerné.",
+            "Comparez aux repères du cours (endettement inférieur à 1, capacité inférieure à 3 ou 4 ans).",
+            "Ajoutez les arguments non chiffrés : contrôle du capital, coût, effet de levier, autres solutions (crédit-bail, autofinancement)."
+          ],
+          "questions": [
+            "1. Calculez les deux ratios avant l'opération et commentez.",
+            "2. Calculez-les après la solution A, puis après la solution B.",
+            "3. Quelle solution recommandez-vous ? Donnez deux arguments pour et un argument contre."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Endettement = 360 000 ÷ 300 000 = 1,2 ; capacité de remboursement = 360 000 ÷ 80 000 = 4,5 ans. L'entreprise est déjà très endettée : les deux ratios dépassent les repères usuels.",
+            "2. Solution A : dettes 480 000 € ; endettement 480 000 ÷ 300 000 = 1,6 ; capacité 480 000 ÷ 80 000 = 6 ans : la banque risque de refuser. Solution B : capitaux propres 420 000 € ; endettement 360 000 ÷ 420 000 ≈ 0,86 ; capacité inchangée à 4,5 ans (les dettes ne changent pas).",
+            "3. La solution B est préférable : elle ramène l'endettement sous 1 et renforce les fonds propres, donc la capacité d'emprunter plus tard ; elle n'ajoute pas de remboursements fixes. Argument contre : le nouvel associé dilue le contrôle des dirigeants actuels et attendra une rémunération. Une solution mixte ou un crédit-bail (financement à 100 %, mais coût souvent plus élevé et retraité comme une dette dans l'analyse) peuvent aussi être étudiés."
+          ],
+          "erreurs": [
+            "Oublier qu'une augmentation de capital ne modifie pas les dettes, donc pas la capacité de remboursement.",
+            "Choisir l'emprunt en invoquant seulement l'effet de levier, sans vérifier que l'entreprise peut encore s'endetter."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

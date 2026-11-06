@@ -1,0 +1,617 @@
+{
+  "matiere": "dai",
+  "titre": "Cahier d'exercices : Droit des affaires internationales",
+  "introduction": "Ce cahier reprend chaque chapitre du cours de droit des affaires internationales, des sources du droit jusqu'à la distribution. Commencez toujours par relire le rappel de cours de la section : il contient les règles et les articles dont vous aurez besoin. Faites ensuite l'exercice en suivant la méthode pas à pas et rédigez votre réponse sur papier, en citant à chaque fois le texte applicable (article de la CVIM, de Rome I, de Bruxelles I bis…). Ne consultez le corrigé qu'après avoir terminé : il explique pourquoi chaque solution est retenue, et la rubrique des erreurs fréquentes vous signale les pièges classiques. Les entreprises et les montants des cas pratiques sont fictifs.",
+  "sections": [
+    {
+      "id": "dai-s1",
+      "titre": "Les sources du droit du commerce international",
+      "chapitre": "dai.normes",
+      "notions": ["dai.normes.sources", "dai.normes.hard-law", "dai.normes.soft-law", "dai.normes.omc"],
+      "rappel": [
+        "Trois familles de sources : internationales (conventions entre États comme la CVIM de 1980 ou la Convention de New York de 1958, et droit de l'UE), nationales (droits des États, désignés par les règles de conflit) et transnationales d'origine privée (Incoterms, RUU 600, principes d'UNIDROIT, usages, lex mercatoria). Le contrat organise le reste par l'autonomie de la volonté.",
+        "Article 288 du TFUE : le règlement est obligatoire dans tous ses éléments et directement applicable (ex. Rome I) ; la directive lie quant au résultat et doit être transposée (ex. directive 86/653 sur les agents commerciaux) ; la décision oblige ses destinataires ; recommandations et avis ne sont pas contraignants.",
+        "Le droit souple (soft law) n'est pas obligatoire par lui-même : il le devient lorsque les parties l'incorporent au contrat (« Incoterms® 2020 », « soumis aux RUU 600 ») ; il ne peut pas déroger aux règles impératives.",
+        "OMC : clause de la nation la plus favorisée (art. I du GATT, un avantage accordé à un membre est étendu à tous) et traitement national (art. III, pas de discrimination intérieure entre produit importé et produit national) ; exception des accords régionaux (art. XXIV).",
+        "Seuls les États membres peuvent saisir l'Organe de règlement des différends de l'OMC ; une entreprise doit passer par son État (ou par la Commission européenne)."
+      ],
+      "exercices": [
+        {
+          "id": "dai-1",
+          "niveau": "bases",
+          "titre": "Classer les sources et mesurer leur force obligatoire",
+          "objectif": "Savoir ranger une règle dans la bonne famille de sources et expliquer pourquoi elle s'impose (ou non) aux parties.",
+          "enonce": "Voici huit textes ou règles que vous pouvez rencontrer dans un dossier d'export. Pour chacun, indiquez la famille de source, sa force obligatoire et la raison pour laquelle il s'appliquerait à un contrat entre une PME française et un client étranger.",
+          "donnees": {
+            "entetes": ["N°", "Texte ou règle"],
+            "lignes": [
+              ["1", "La Convention de Vienne de 1980 (CVIM)"],
+              ["2", "Le règlement Rome I sur la loi applicable aux contrats"],
+              ["3", "La directive 86/653 sur les agents commerciaux"],
+              ["4", "Les Incoterms® 2020 de la CCI"],
+              ["5", "Les RUU 600 (crédit documentaire)"],
+              ["6", "Les principes d'UNIDROIT relatifs aux contrats du commerce international"],
+              ["7", "Le Code civil français"],
+              ["8", "Une recommandation de l'UE sur les délais de paiement"]
+            ]
+          },
+          "methode": [
+            "Posez-vous d'abord la question de l'auteur du texte : des États qui négocient et ratifient un traité, une institution de l'UE, un Parlement national, ou un organisme privé comme la CCI ?",
+            "Déduisez-en la famille : source internationale (convention ou droit de l'UE), nationale ou transnationale (soft law).",
+            "Pour la force obligatoire, demandez-vous : le texte s'impose-t-il de lui-même, doit-il être transposé, ou ne s'applique-t-il que si le contrat y renvoie ?",
+            "Pour le droit de l'UE, appliquez l'article 288 du TFUE acte par acte : règlement, directive, décision, recommandation."
+          ],
+          "questions": [
+            "1. Recopiez le tableau en ajoutant deux colonnes : « famille de source » et « force obligatoire / pourquoi elle s'applique ».",
+            "2. Pourquoi les Incoterms ne sont-ils pas une loi ? Que doit faire le vendeur pour qu'ils s'appliquent ?",
+            "3. Pourquoi le droit des agents commerciaux est-il légèrement différent en France et en Espagne alors qu'il vient du même texte européen ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. CVIM : source internationale (convention), obligatoire dans les États contractants, mais les parties peuvent l'écarter (art. 6). Rome I : droit de l'UE, règlement, directement applicable dans les États membres sans transposition. Directive 86/653 : droit de l'UE, directive, s'applique à travers les lois nationales de transposition (en France, art. L134-1 et suivants du Code de commerce). Incoterms 2020 : source transnationale (règles privées de la CCI), obligatoires seulement si le contrat y renvoie. RUU 600 : même logique, règles de la CCI applicables lorsque le crédit documentaire indique qu'il y est soumis. Principes d'UNIDROIT : soft law, applicables si les parties les choisissent ou comme référence pour un arbitre. Code civil : source nationale, applicable lorsque le droit français est désigné (par le choix des parties ou par la règle de conflit). Recommandation de l'UE : droit de l'UE mais non contraignante.",
+            "2. Les Incoterms sont élaborés par la Chambre de commerce internationale, un organisme privé : aucun État ne les a adoptés ni ratifiés. Ils ne s'appliquent que par incorporation dans le contrat. Le vendeur doit donc écrire la règle choisie, le lieu précis et la version, par exemple « CIP Monterrey, Incoterms® 2020 ».",
+            "3. Parce qu'il s'agit d'une directive : elle fixe un résultat commun mais chaque État choisit ses moyens en la transposant (Code de commerce en France, Ley 12/1992 en Espagne). Les règles de fond sont proches, mais les articles et certaines options diffèrent. Un règlement, lui, s'applique tel quel dans tous les États membres.",
+            "Bilan : retenez la question clé « qui a fait la règle et comment entre-t-elle dans le contrat ? ». Elle permet de classer n'importe quelle source."
+          ],
+          "erreurs": [
+            "Présenter les Incoterms comme une loi ou un règlement européen : ce sont des règles privées de la CCI.",
+            "Croire qu'une directive s'applique directement entre deux entreprises : c'est la loi nationale de transposition qui s'applique.",
+            "Oublier que la CVIM, bien qu'obligatoire dans les États contractants, peut être écartée par les parties."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "dai-2",
+          "niveau": "application",
+          "titre": "Quelle source répond à quelle question ? Un contrat franco-mexicain",
+          "objectif": "Savoir identifier, pour chaque difficulté d'un contrat de vente internationale, la source qui la règle : CVIM, Incoterm, contrat, loi nationale désignée ou Convention de New York.",
+          "enonce": "La société Usinages du Val (Orléans) vend dix machines-outils à Industrias Norte SA (Monterrey, Mexique). Le contrat prévoit : « CIP Monterrey, Incoterms® 2020 », un paiement à 60 jours, une clause de réserve de propriété et un arbitrage CCI. Il ne contient ni clause d'exclusion de la CVIM ni clause de loi applicable. La France et le Mexique sont États contractants de la CVIM. Le directeur juridique de l'acheteur vous pose six questions.",
+          "methode": [
+            "Pour chaque question, demandez-vous d'abord si c'est une question de vente internationale réglée par la CVIM (formation du contrat, obligations, remèdes).",
+            "Si la question porte sur le lieu de livraison, les frais ou le transfert des risques, pensez à l'Incoterm choisi : il complète la CVIM.",
+            "Rappelez-vous que la CVIM ne règle ni la validité du contrat ni le transfert de propriété (art. 4) : ces points relèvent de la loi nationale désignée par les règles de conflit.",
+            "Pour l'exécution d'une sentence arbitrale à l'étranger, pensez à la Convention de New York de 1958.",
+            "Ce que les parties ont négocié elles-mêmes (prix, délai de paiement) relève d'abord du contrat."
+          ],
+          "questions": [
+            "1. Le contrat a-t-il été valablement formé lorsque l'acheteur a répondu à l'offre par courriel ?",
+            "2. Jusqu'où le vendeur doit-il payer le transport et quand les risques passent-ils à l'acheteur ?",
+            "3. Quand le prix doit-il être payé ?",
+            "4. La clause de réserve de propriété est-elle efficace ?",
+            "5. Les machines sont défectueuses : quels recours a l'acheteur ?",
+            "6. Si le vendeur gagne l'arbitrage, comment fera-t-il exécuter la sentence au Mexique ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. La CVIM : vente de marchandises entre parties établies dans deux États contractants (art. 1-1 a), non exclue. Ses articles 14 à 23 règlent l'offre, l'acceptation (effet à réception, art. 18-2) et le moment de conclusion (art. 23).",
+            "2. L'Incoterm CIP Monterrey (Incoterms 2020) : c'est lui que les parties ont choisi pour répartir frais et risques. Il complète la CVIM, qui s'applique au contrat dans son ensemble.",
+            "3. Le contrat : les parties ont fixé un paiement à 60 jours. La CVIM (art. 53 et suivants) impose à l'acheteur de payer le prix, mais c'est la clause du contrat qui fixe l'échéance.",
+            "4. La loi nationale désignée par les règles de conflit : la CVIM ne régit pas le transfert de propriété (art. 4). L'efficacité d'une réserve de propriété dépend aussi du droit du pays où se trouvent les biens, ici le Mexique.",
+            "5. La CVIM : conformité (art. 35), examen et dénonciation (art. 38-39), moyens de l'acheteur (art. 45 et suivants : réparation, remplacement si contravention essentielle, réduction du prix, résolution, dommages-intérêts).",
+            "6. La Convention de New York de 1958 : le Mexique y étant partie, le juge mexicain reconnaît et exécute la sentence sans rejuger le fond, sauf motif de refus de l'article V.",
+            "Conclusion : un même contrat mobilise une convention internationale (CVIM), une règle privée incorporée (Incoterm), le contrat lui-même, une loi nationale pour les questions laissées de côté, et une seconde convention pour l'exécution de la sentence. C'est exactement l'exemple « Orléans–Monterrey » du cours."
+          ],
+          "erreurs": [
+            "Répondre « les Incoterms » à la question du transfert de propriété : les Incoterms ne règlent pas la propriété.",
+            "Croire que l'absence de clause mentionnant la CVIM l'empêche de s'appliquer : c'est l'inverse, il faut l'exclure expressément.",
+            "Confondre l'exécution d'une sentence (Convention de New York) et celle d'un jugement (exequatur ou Bruxelles I bis)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dai-3",
+          "niveau": "application",
+          "titre": "Nation la plus favorisée ou traitement national ?",
+          "objectif": "Distinguer les deux principes de non-discrimination de l'OMC et savoir qui peut agir devant l'ORD.",
+          "enonce": "Un État imaginaire, la République de Valdora, membre de l'OMC, prend trois mesures. A : il baisse de 10 % à 4 % ses droits de douane sur les fromages d'un seul pays partenaire, sans accord de libre-échange avec lui. B : il applique aux vins importés une taxe intérieure sur la consommation de 15 %, contre 5 % pour les vins produits à Valdora. C : il supprime ses droits de douane sur les fromages des pays avec lesquels il vient de conclure une union douanière conforme à l'article XXIV du GATT. Une fromagerie française, pénalisée par la mesure A, souhaite « porter plainte à l'OMC ».",
+          "methode": [
+            "Pour chaque mesure, demandez-vous qui est comparé à qui : deux partenaires étrangers entre eux (nation la plus favorisée) ou un produit importé et un produit national une fois la frontière passée (traitement national) ?",
+            "Vérifiez ensuite si une exception prévue par le cours peut justifier la mesure (accord régional ou union douanière conforme à l'article XXIV).",
+            "Pour la fromagerie, rappelez-vous qui peut saisir l'Organe de règlement des différends."
+          ],
+          "questions": [
+            "1. Qualifiez la mesure A et dites si elle est conforme aux règles de l'OMC.",
+            "2. Qualifiez la mesure B.",
+            "3. La mesure C viole-t-elle la clause de la nation la plus favorisée ?",
+            "4. Que répondez-vous à la fromagerie française ? Décrivez les étapes d'un différend devant l'ORD."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Mesure A : un avantage douanier est accordé à un seul partenaire. La clause de la nation la plus favorisée (art. I du GATT) impose d'étendre cet avantage à tous les membres. Sans accord de libre-échange ou union douanière justifiant l'exception, la mesure est contraire aux règles de l'OMC.",
+            "2. Mesure B : le vin importé, une fois entré, est taxé plus lourdement que le vin local. C'est une violation du traitement national (art. III du GATT), qui compare l'importé et le national sur le marché intérieur.",
+            "3. Non, en principe : les avantages accordés au sein d'une union douanière ou d'une zone de libre-échange conforme à l'article XXIV sont une exception prévue à la clause NPF. C'est pour la même raison qu'un accord entre l'UE et le Mexique ne viole pas cette clause.",
+            "4. Une entreprise ne peut pas saisir l'ORD : seuls les États membres (ou l'UE) le peuvent. La fromagerie doit convaincre les autorités françaises, et donc la Commission européenne, d'agir. Étapes : consultations entre États ; groupe spécial (panel) qui rend un rapport ; appel possible devant l'Organe d'appel, bloqué depuis décembre 2019 ; adoption du rapport, mise en conformité, et à défaut compensation ou mesures de rétorsion autorisées."
+          ],
+          "erreurs": [
+            "Confondre les deux principes : NPF compare les partenaires étrangers entre eux, le traitement national compare l'importé au national.",
+            "Croire qu'une entreprise peut plaider elle-même devant l'OMC.",
+            "Confondre le règlement des différends de l'OMC (entre États) et l'arbitrage commercial (entre entreprises)."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dai-s2",
+      "titre": "La vente internationale de marchandises (CVIM)",
+      "chapitre": "dai.cvim",
+      "notions": ["dai.cvim.champ", "dai.cvim.formation", "dai.cvim.obligations", "dai.cvim.contravention-essentielle", "dai.cvim.remedes", "dai.cvim.exoneration"],
+      "rappel": [
+        "Champ (art. 1 à 6) : vente de marchandises entre parties établies dans des États différents, contractants (art. 1-1 a) ou dont la loi est désignée par la règle de conflit (art. 1-1 b). Exclusions : achats pour usage personnel, enchères, saisies, valeurs mobilières, navires, aéronefs, électricité (art. 2) ; contrats où les services sont prépondérants (art. 3). Ni validité ni transfert de propriété (art. 4). Exclusion possible par les parties, mais expresse (art. 6).",
+        "Formation : offre précise et volonté d'être lié (art. 14), effective à réception (art. 15), révocable tant que l'acceptation n'est pas expédiée sauf offre irrévocable (art. 16) ; acceptation effective quand elle parvient à l'offrant (art. 18-2), le silence seul ne vaut pas acceptation ; modification substantielle (prix, paiement, qualité, quantité, lieu et moment de livraison, responsabilité, litiges) = contre-offre (art. 19) ; contrat conclu quand l'acceptation prend effet (art. 23).",
+        "Obligations : le vendeur livre, remet les documents, transfère la propriété (art. 30) et livre conforme (art. 35) ; l'acheteur paie et prend livraison (art. 53), examine vite (art. 38) et dénonce le défaut dans un délai raisonnable, au plus tard deux ans après la remise (art. 39).",
+        "Contravention essentielle (art. 25) : elle prive substantiellement l'autre partie de ce qu'elle attendait, de façon prévisible. Elle ouvre la résolution (art. 49) et le remplacement (art. 46-2) ; la résolution se notifie (art. 26). Sinon, délai supplémentaire (art. 47 / 63).",
+        "Moyens de l'acheteur : exécution ou réparation (art. 46), réduction du prix (art. 50), dommages-intérêts limités au préjudice prévisible (art. 74), différence avec l'achat de remplacement en cas de résolution (art. 75), obligation de limiter la perte (art. 77).",
+        "Exonération (art. 79) : empêchement indépendant de la volonté, imprévisible, insurmontable, notifié ; elle n'écarte que les dommages-intérêts. Une simple hausse des coûts n'est pas un empêchement."
+      ],
+      "exercices": [
+        {
+          "id": "dai-4",
+          "niveau": "bases",
+          "titre": "La CVIM s'applique-t-elle ? Sept situations",
+          "objectif": "Appliquer pas à pas les conditions d'application de la CVIM et repérer les exclusions.",
+          "enonce": "Pour chacune des situations suivantes, dites si la CVIM s'applique, en citant l'article qui justifie votre réponse. On admet que la France, l'Allemagne, l'Espagne, le Canada et le Mexique sont États contractants, et que le Royaume-Uni ne l'est pas.",
+          "donnees": {
+            "entetes": ["Cas", "Situation"],
+            "lignes": [
+              ["A", "Une société de Bordeaux vend 3 000 bouteilles de vin à un importateur de Toronto qui fournit des restaurants ; aucune clause sur la loi applicable."],
+              ["B", "Un touriste canadien achète à Paris une montre pour son usage personnel, ce que le vendeur sait."],
+              ["C", "Une société de Nantes vend un navire de pêche à un armateur de Vigo."],
+              ["D", "Contrat entre un vendeur de Lyon et un acheteur de Hambourg : « Le présent contrat est soumis au droit français. »"],
+              ["E", "Contrat entre un vendeur de Tours et un acheteur de Puebla : « Les parties excluent l'application de la Convention de Vienne de 1980. »"],
+              ["F", "Un vendeur de Lille vend des pièces à un acheteur de Manchester ; la règle de conflit désigne la loi française."],
+              ["G", "Une société de Rouen vend 2 000 actions d'une société à un investisseur madrilène."]
+            ]
+          },
+          "methode": [
+            "Étape 1 : est-ce une vente de marchandises (biens mobiliers corporels) ?",
+            "Étape 2 : les parties ont-elles leur établissement dans des États différents ?",
+            "Étape 3 : ces États sont-ils contractants (art. 1-1 a) ? Sinon, la règle de conflit désigne-t-elle la loi d'un État contractant (art. 1-1 b) ?",
+            "Étape 4 : l'opération est-elle exclue par l'article 2 (consommateur, navire, valeurs mobilières…) ?",
+            "Étape 5 : les parties ont-elles exclu la Convention de manière claire (art. 6) ? Attention : choisir le droit d'un État contractant n'est pas une exclusion."
+          ],
+          "questions": [
+            "1. Pour chaque cas (A à G), répondez « oui » ou « non » et justifiez par l'étape et l'article décisifs.",
+            "2. Rédigez une clause permettant au vendeur du cas D d'écarter réellement la CVIM, s'il le souhaite."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "A : oui. Vente de marchandises entre parties établies en France et au Canada, deux États contractants (art. 1-1 a) ; l'achat est professionnel (restaurants), donc pas d'exclusion. L'absence de clause ne gêne pas : la CVIM s'applique d'office.",
+            "B : non. Achat pour un usage personnel connu du vendeur : exclusion de l'article 2 a.",
+            "C : non. Les navires sont exclus (art. 2 e), même entre deux États contractants.",
+            "D : oui. Choisir « le droit français » ne suffit pas à exclure la CVIM : la France étant État contractant, la CVIM fait partie du droit français applicable aux ventes internationales.",
+            "E : non. Les parties ont expressément exclu la Convention, ce que permet l'article 6.",
+            "F : oui, en principe. Le Royaume-Uni n'est pas État contractant, mais la règle de conflit désigne la loi française, loi d'un État contractant (art. 1-1 b), sous réserve des déclarations faites par certains États sur cet article.",
+            "G : non. Les valeurs mobilières (actions) sont exclues (art. 2 d).",
+            "2. Exemple : « Le présent contrat est régi par le droit français, à l'exclusion de la Convention des Nations unies sur les contrats de vente internationale de marchandises (Vienne, 1980). » La mention de l'exclusion doit être expresse."
+          ],
+          "erreurs": [
+            "Penser que la CVIM ne s'applique qu'en dehors de l'Union européenne : elle s'applique entre États contractants, y compris entre États membres.",
+            "Croire qu'une clause « droit français » écarte la CVIM.",
+            "Oublier l'article 1-1 b lorsque l'un des pays n'est pas contractant."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dai-5",
+          "niveau": "application",
+          "titre": "Formation du contrat : une chronologie d'échanges",
+          "objectif": "Savoir dater la conclusion d'un contrat sous la CVIM en distinguant offre, révocation, acceptation et contre-offre.",
+          "enonce": "Cas 1. Le 3 mars, Robinetterie Ligérienne (Orléans) envoie à Fontanería Castilla SL (Valladolid) une offre de 500 vannes à 80 € pièce, livraison FCA Orléans, paiement à 30 jours. L'offre parvient le 4 mars. Le 6 mars, l'acheteur expédie la réponse : « Accepté, mais paiement à 90 jours. » Le vendeur ne répond pas et, le 20 mars, l'acheteur demande où en est la livraison. Cas 2. Même offre envoyée le 3 avril à un autre client espagnol, reçue le 4 avril. Le 7 avril, ce client expédie : « Accepté ; merci d'indiquer notre numéro de commande sur la facture. » La réponse parvient au vendeur le 8 avril, qui ne formule aucune objection. Cas 3. Le 10 mai, le vendeur envoie une offre (sans délai ferme) à un troisième client ; le 12 mai, il envoie une révocation qui arrive le 14 mai ; le client avait expédié son acceptation pure et simple le 13 mai.",
+          "methode": [
+            "Repérez d'abord l'offre : est-elle précise (marchandises, quantité, prix) et montre-t-elle la volonté d'être lié (art. 14) ?",
+            "Analysez la réponse : est-elle une acceptation pure et simple, une modification non substantielle (art. 19-2) ou une modification substantielle (art. 19-3) qui en fait une contre-offre ?",
+            "Pour une révocation, comparez la date d'expédition de l'acceptation et la date d'arrivée de la révocation (art. 16).",
+            "Pour dater la conclusion, retenez le moment où l'acceptation parvient à l'offrant (art. 18-2 et 23), et non son envoi.",
+            "N'oubliez pas que le silence, à lui seul, ne vaut pas acceptation (art. 18-1)."
+          ],
+          "questions": [
+            "1. Cas 1 : le contrat est-il formé ? À quelles conditions pourrait-il l'être ?",
+            "2. Cas 2 : le contrat est-il formé et, si oui, à quelle date ?",
+            "3. Cas 3 : la révocation est-elle efficace ? Le contrat est-il formé ?",
+            "4. Si le cas 1 avait été soumis au droit anglais et non à la CVIM, quelle règle aurait pu changer la date de conclusion d'un contrat conclu par courrier postal ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Cas 1 : non. La réponse modifie le paiement, élément substantiel selon l'article 19-3 : c'est une contre-offre, qui vaut rejet de l'offre initiale. Le silence du vendeur ne vaut pas acceptation (art. 18-1). Le contrat ne sera formé que si le vendeur accepte la contre-offre (par une déclaration ou un comportement, par exemple l'expédition des vannes), ou si l'acheteur accepte à nouveau aux conditions initiales et que le vendeur l'accepte.",
+            "2. Cas 2 : oui. Demander que le numéro de commande figure sur la facture n'est pas une modification substantielle : la réponse vaut acceptation, sauf objection sans retard du vendeur (art. 19-2), qui n'a rien objecté. L'acceptation prend effet à sa réception (art. 18-2) : le contrat est conclu le 8 avril (art. 23), et non le 7 avril, date de l'envoi.",
+            "3. Cas 3 : non, la révocation est tardive. Selon l'article 16, l'offre peut être révoquée tant que l'acceptation n'a pas été expédiée ; or l'acceptation a été expédiée le 13 mai, avant l'arrivée de la révocation le 14 mai. Le contrat est formé à la date où l'acceptation parvient au vendeur.",
+            "4. En droit anglais, la postal rule (Adams v Lindsell) fait prendre effet à une acceptation postée dès son envoi. Sous la CVIM, c'est la réception qui compte : il ne faut pas mélanger les deux systèmes."
+          ],
+          "erreurs": [
+            "Dater la conclusion au jour de l'envoi de l'acceptation : la CVIM retient la réception.",
+            "Traiter toute modification comme une contre-offre : seules les modifications substantielles le sont.",
+            "Prendre le silence de l'offrant pour une acceptation."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dai-6",
+          "niveau": "approfondissement",
+          "titre": "Marchandises non conformes : du constat au calcul de l'indemnité",
+          "objectif": "Mener un raisonnement complet sur l'inexécution du vendeur : conformité, dénonciation, contravention essentielle, choix du remède, dommages-intérêts et exonération.",
+          "enonce": "Tissages de Touraine vend à Decoraciones Castilla SL (Madrid) 1 000 rouleaux de toile ignifugée à 20 € le rouleau (total 20 000 €), destinés, comme le contrat le précise, à équiper un théâtre ; le contrat fixe la norme anti-feu exigée. Aucune clause n'exclut la CVIM. À la livraison, des tests montrent que 400 rouleaux ne respectent pas la norme. L'acheteur dénonce le défaut huit jours après la livraison, puis notifie la résolution du contrat. Il achète aussitôt 1 000 rouleaux conformes chez un autre fournisseur à 23 € le rouleau et paie 400 € de transport supplémentaire. Le vendeur répond qu'il n'est pas responsable car le prix des produits chimiques ignifuges a doublé depuis la signature et invoque l'article 79.",
+          "methode": [
+            "Qualifiez le manquement : la toile répond-elle à ce que prévoit le contrat (art. 35) ?",
+            "Vérifiez que l'acheteur n'a pas perdu son droit d'agir : délai de dénonciation (art. 38-39).",
+            "Appréciez la gravité avec l'article 25 : proportion de marchandises touchée, caractéristique concernée, usage connu du vendeur.",
+            "Déduisez les remèdes ouverts ; si la résolution est possible, calculez la différence de prix avec l'achat de remplacement (art. 75) et ajoutez les autres préjudices prévisibles (art. 74).",
+            "Testez l'argument du vendeur en reprenant une à une les conditions de l'article 79.",
+            "Pensez enfin à l'obligation de limiter la perte (art. 77)."
+          ],
+          "questions": [
+            "1. Y a-t-il défaut de conformité, et l'acheteur a-t-il dénoncé à temps ?",
+            "2. Le défaut constitue-t-il une contravention essentielle ? Quels remèdes l'acheteur peut-il choisir ?",
+            "3. Calculez les dommages-intérêts que l'acheteur peut réclamer après la résolution et l'achat de remplacement.",
+            "4. L'argument du vendeur fondé sur l'article 79 est-il recevable ?",
+            "5. En quoi l'achat rapide d'une toile de remplacement est-il aussi dans l'intérêt de l'acheteur ?"
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Oui. La toile ne respecte pas la norme stipulée : défaut de conformité au sens de l'article 35. L'acheteur a examiné rapidement (tests à la livraison, art. 38) et dénoncé huit jours après : délai raisonnable au sens de l'article 39, bien en deçà du délai butoir de deux ans.",
+            "2. Oui, vraisemblablement : 40 % de la marchandise (400 rouleaux sur 1 000) est touchée, sur une caractéristique de sécurité indispensable à l'usage connu du vendeur (un théâtre). L'acheteur est substantiellement privé de ce qu'il attendait et ce résultat était prévisible (art. 25). Il peut donc exiger des marchandises de remplacement (art. 46-2), déclarer la résolution par notification (art. 49 et 26), ou, s'il préfère garder la marchandise, réduire le prix (art. 50) ; il peut dans tous les cas demander des dommages-intérêts (art. 74).",
+            "3. Contrat résolu : l'acheteur ne paie pas les 20 000 € (ou se les fait restituer). Achat de remplacement : 1 000 × 23 € = 23 000 €. Différence (art. 75) : 23 000 − 20 000 = 3 000 €. Transport supplémentaire, préjudice prévisible lors de la conclusion (art. 74) : 400 €. Total réclamable : 3 000 + 400 = 3 400 €.",
+            "4. Non. Une hausse des coûts, même forte, n'est en principe pas un empêchement au sens de l'article 79 : l'exécution reste possible, simplement plus coûteuse. De plus, le problème est la non-conformité de la toile, sans lien avec cette hausse. Une clause de hardship aurait seule permis de demander une renégociation. Et même un vendeur exonéré ne serait libéré que des dommages-intérêts : la résolution resterait possible.",
+            "5. L'article 77 impose à la victime de prendre des mesures raisonnables pour limiter sa perte. En achetant vite, l'acheteur évite de rater l'inauguration du théâtre, ce qui aurait pu entraîner des pertes bien plus élevées que le vendeur pourrait contester. Résultat final : résolution justifiée et indemnité de 3 400 €."
+          ],
+          "erreurs": [
+            "Proposer la résolution pour un défaut mineur : elle suppose une contravention essentielle (ou le non-respect d'un délai supplémentaire pour une livraison).",
+            "Oublier de vérifier le délai de dénonciation de l'article 39.",
+            "Assimiler la hausse des coûts à un empêchement exonératoire.",
+            "Croire que l'exonération de l'article 79 libère de toutes les conséquences : elle n'écarte que les dommages-intérêts."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dai-s3",
+      "titre": "Le contrat international et ses clauses",
+      "chapitre": "dai.contrat",
+      "notions": ["dai.contrat.clauses", "dai.contrat.unidroit"],
+      "rappel": [
+        "Clauses essentielles : objet et spécifications ; prix (devise, révision ou indexation) ; livraison (Incoterm, version, lieu précis) ; paiement et garanties ; transfert de propriété et réserve de propriété ; conformité et garanties ; force majeure ; hardship ; clause pénale ou limitation de responsabilité ; loi applicable ; règlement des litiges ; langue faisant foi.",
+        "Force majeure : l'exécution devient impossible (événement irrésistible) ; la clause suspend ou libère et doit définir les événements, la notification et la durée avant résiliation.",
+        "Hardship : l'exécution reste possible mais l'équilibre économique est bouleversé ; la clause organise une renégociation et doit prévoir l'issue en cas d'échec (juge, arbitre, résiliation).",
+        "Réserve de propriété : le vendeur reste propriétaire jusqu'au paiement complet ; son efficacité dépend du droit du pays où se trouvent les biens.",
+        "Principes d'UNIDROIT (1994, édition 2016) : règles générales non contraignantes pour tous les contrats commerciaux internationaux ; applicables par choix des parties ou comme référence en arbitrage ; bonne foi ; hardship (art. 6.2.1 à 6.2.3 : renégociation puis tribunal qui peut résilier ou adapter)."
+      ],
+      "exercices": [
+        {
+          "id": "dai-7",
+          "niveau": "bases",
+          "titre": "À chaque risque sa clause",
+          "objectif": "Associer un risque concret du commerce international à la clause qui permet de l'anticiper, et distinguer force majeure et hardship.",
+          "enonce": "Une PME exportatrice liste les risques qui l'inquiètent dans ses contrats. Associez chaque risque à la clause adaptée parmi : réserve de propriété, force majeure, hardship, révision de prix, clause de langue, clause pénale, clause de loi applicable, clause de règlement des litiges.",
+          "donnees": {
+            "entetes": ["N°", "Risque"],
+            "lignes": [
+              ["1", "Le client ne paie pas et les marchandises sont déjà dans son entrepôt."],
+              ["2", "Un incendie détruit l'usine du fournisseur : la livraison devient impossible."],
+              ["3", "Le coût de l'énergie triple : l'exécution reste possible mais devient très déficitaire."],
+              ["4", "Le prix de la matière première varie fortement chaque trimestre sur un contrat de trois ans."],
+              ["5", "Les versions française et espagnole du contrat ne disent pas la même chose."],
+              ["6", "Le client veut être indemnisé forfaitairement en cas de retard, sans avoir à prouver son préjudice."],
+              ["7", "Personne ne sait quel droit national régit le contrat."],
+              ["8", "Personne ne sait qui jugera un éventuel litige."]
+            ]
+          },
+          "methode": [
+            "Pour chaque risque, demandez-vous : s'agit-il d'un impayé, d'une impossibilité, d'un déséquilibre économique, d'une variation de prix prévisible, d'un problème de traduction, d'une indemnisation, d'une question de droit ou d'une question de juge ?",
+            "Pour séparer force majeure et hardship, posez la question : l'exécution est-elle impossible, ou seulement ruineuse ?",
+            "Pour la révision de prix et le hardship : la révision répercute une variation attendue grâce à un indice ; le hardship traite un bouleversement exceptionnel."
+          ],
+          "questions": [
+            "1. Associez chaque risque (1 à 8) à une clause et justifiez en une phrase.",
+            "2. Expliquez en trois lignes la différence entre force majeure et hardship.",
+            "3. Pourquoi une clause de hardship est-elle utile même si le droit applicable connaît l'imprévision (par exemple l'article 1195 du Code civil français) ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Risque 1 : réserve de propriété, qui permet de revendiquer les marchandises tant qu'elles ne sont pas payées (efficacité variable selon le pays où elles se trouvent). Risque 2 : force majeure, l'exécution est impossible. Risque 3 : hardship, l'exécution est possible mais l'équilibre est bouleversé. Risque 4 : révision de prix, avec un indice précis et une formule. Risque 5 : clause de langue désignant la version qui prévaut. Risque 6 : clause pénale (indemnité forfaitaire fixée à l'avance). Risque 7 : clause de choix de loi. Risque 8 : clause de règlement des litiges (clause attributive de juridiction ou clause compromissoire).",
+            "2. La force majeure suppose un événement qui rend l'exécution impossible : la clause suspend ou libère les parties. Le hardship vise une exécution toujours possible mais devenue ruineuse : la clause oblige à renégocier et prévoit ce qui se passe si la renégociation échoue.",
+            "3. Parce qu'une clause précise ne dépend pas du droit applicable, qui peut être un droit étranger sans règle équivalente ou avec des conditions différentes ; elle fixe le seuil de déclenchement (par exemple une variation de plus de 25 % des coûts énergétiques), la procédure et l'issue. Dans un contrat international, la prévisibilité vaut mieux que l'incertitude sur le droit applicable."
+          ],
+          "erreurs": [
+            "Classer une forte hausse des coûts en force majeure : c'est du hardship.",
+            "Croire que l'Incoterm règle le transfert de propriété : c'est la réserve de propriété et la loi applicable qui le font.",
+            "Rédiger une clause de hardship sans prévoir l'issue en cas d'échec des négociations."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dai-8",
+          "niveau": "application",
+          "titre": "Auditer un projet de contrat",
+          "objectif": "Repérer les clauses manquantes ou mal rédigées d'un contrat international et proposer une rédaction améliorée.",
+          "enonce": "Emballages du Centre (Châteauroux) va conclure avec Cartonnages Atlas (Casablanca) un contrat de fourniture d'emballages sur trois ans. Le projet rédigé par le commercial contient seulement ceci : « Objet : fourniture de caisses en carton selon le catalogue. Prix : 2,40 la caisse, ferme pendant trois ans. Livraison : CIP. Paiement : 60 jours. En cas de problème, les parties trouveront une solution. Le contrat est rédigé en français et en arabe. » Les deux parties ne veulent pas que le droit national de l'autre s'impose.",
+          "methode": [
+            "Reprenez la liste des clauses essentielles du rappel et cochez celles qui sont présentes, absentes ou insuffisantes.",
+            "Pour chaque clause présente, cherchez ce qui manque : la devise, la version et le lieu de l'Incoterm, la garantie de paiement, la version qui prévaut…",
+            "Pensez aux risques propres à un contrat de longue durée : variation du prix des matières premières et de l'énergie.",
+            "Pour la loi applicable, rappelez-vous la solution « neutre » évoquée en cours : principes d'UNIDROIT complétés par un droit national tiers, avec un arbitrage."
+          ],
+          "questions": [
+            "1. Relevez au moins six faiblesses du projet et expliquez le risque créé par chacune.",
+            "2. Proposez une rédaction améliorée des clauses de prix et de livraison.",
+            "3. Proposez une solution pour la loi applicable et le règlement des litiges qui respecte le souhait de neutralité des parties.",
+            "4. Quelle clause recommandez-vous pour faire face à une flambée des coûts de l'énergie ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Faiblesses : (a) prix sans devise (euros ou dirhams ?) : risque de litige sur le montant ; (b) prix ferme sur trois ans sans révision : le vendeur supporte seul la hausse du carton ; (c) « CIP » sans lieu ni version : on ne sait pas jusqu'où le vendeur paie le transport et l'assurance ; (d) paiement à 60 jours sans garantie ni réserve de propriété : risque d'impayé ; (e) aucune clause de force majeure ni de hardship ; (f) « les parties trouveront une solution » : ni loi applicable, ni juridiction, ni arbitrage ; (g) deux versions linguistiques sans indiquer celle qui fait foi ; (h) objet renvoyant au « catalogue » sans spécifications techniques, ce qui fragilise la preuve d'un défaut de conformité.",
+            "2. Exemple : « Prix : 2,40 EUR hors taxes par caisse, révisé chaque trimestre selon la formule figurant en annexe 2, fondée sur un indice publié des prix du carton. Livraison : CIP Casablanca, entrepôt de l'acheteur, Incoterms® 2020. » La version et le lieu précis sont indispensables.",
+            "3. Comme dans l'exemple du cours, les parties peuvent soumettre le contrat aux principes d'UNIDROIT et, pour les questions non réglées, à un droit national tiers (par exemple le droit suisse), avec un arbitrage CCI dans une ville neutre (siège, nombre d'arbitres, langue précisés). Aucune ne plaide alors devant ses propres juges ni selon son propre droit. Attention : les principes d'UNIDROIT ne s'appliquent que parce que les parties les choisissent.",
+            "4. Une clause de hardship, par exemple déclenchée par une variation de plus de 25 % des coûts énergétiques, obligeant à renégocier de bonne foi et prévoyant, en cas d'échec dans un délai fixé, le recours à l'arbitre (qui pourra adapter ou résilier, comme le prévoient les principes d'UNIDROIT). La force majeure ne conviendrait pas : l'exécution reste possible."
+          ],
+          "erreurs": [
+            "Se contenter d'écrire « CIP » sans version ni lieu.",
+            "Confondre la révision de prix (variation ordinaire, indice et formule) et le hardship (bouleversement exceptionnel).",
+            "Oublier la clause de langue faisant foi dans un contrat bilingue."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dai-s4",
+      "titre": "Loi applicable et juridiction compétente",
+      "chapitre": "dai.conflits",
+      "notions": ["dai.conflits.loi-applicable", "dai.conflits.juridiction", "dai.conflits.distinction"],
+      "rappel": [
+        "Deux questions distinctes : qui juge (conflit de juridictions, Bruxelles I bis ou arbitrage) et selon quel droit (conflit de lois, Rome I). Elles se règlent par deux clauses différentes : clause attributive de juridiction ou compromissoire, et clause de choix de loi.",
+        "Rome I (règl. 593/2008) : liberté de choix (art. 3). À défaut (art. 4) : vente de biens → loi de la résidence habituelle du vendeur ; services → du prestataire ; franchise → du franchisé ; distribution → du distributeur ; sinon prestation caractéristique, sauf liens manifestement plus étroits. Application universelle ; lois de police (art. 9).",
+        "Pour une vente entre États contractants, la CVIM s'applique d'abord ; la loi désignée par Rome I la complète (validité, propriété).",
+        "Bruxelles I bis (règl. 1215/2012) : clause attributive valable (art. 25) ; sinon domicile du défendeur (art. 4) ou, au choix du demandeur en matière contractuelle, lieu de livraison des marchandises ou de fourniture des services (art. 7-1).",
+        "Un jugement d'un État membre est exécutoire dans les autres sans exequatur ; hors UE, il faut un exequatur selon le droit local ou les conventions applicables."
+      ],
+      "exercices": [
+        {
+          "id": "dai-9",
+          "niveau": "bases",
+          "titre": "Sans clause, quelle loi ? Appliquer l'article 4 de Rome I",
+          "objectif": "Savoir déterminer la loi applicable à un contrat en l'absence de choix des parties.",
+          "enonce": "Aucun des contrats suivants ne contient de clause de loi applicable. Pour les ventes, on suppose que la CVIM a été exclue par les parties, afin de vous concentrer sur Rome I.",
+          "donnees": {
+            "entetes": ["Contrat", "Parties"],
+            "lignes": [
+              ["A", "Vente de machines par un vendeur italien à un acheteur français"],
+              ["B", "Prestation de services informatiques par une société française pour un client italien"],
+              ["C", "Contrat de distribution entre un fabricant allemand et un distributeur espagnol"],
+              ["D", "Contrat de franchise entre un franchiseur français et un franchisé portugais"],
+              ["E", "Vente de vin par un producteur de Bordeaux à un importateur belge, avec une clause « Le contrat est régi par le droit belge »"]
+            ]
+          },
+          "methode": [
+            "Vérifiez d'abord s'il existe un choix des parties (art. 3) : si oui, il l'emporte.",
+            "À défaut, identifiez la catégorie du contrat dans la liste de l'article 4 : vente, services, franchise, distribution.",
+            "Appliquez le rattachement correspondant : on regarde toujours la résidence habituelle de la partie qui fournit la prestation typique (jamais celle qui paie).",
+            "Retenez la logique : la prestation caractéristique est la prestation non monétaire."
+          ],
+          "questions": [
+            "1. Indiquez la loi applicable à chaque contrat (A à E) et l'article qui la désigne.",
+            "2. Pourquoi est-ce, dans une vente, la loi du vendeur et non celle de l'acheteur ?",
+            "3. Dans le contrat C, le tribunal compétent serait-il obligatoirement espagnol ? Expliquez."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. A : loi italienne, résidence habituelle du vendeur (art. 4-1 a). B : loi française, résidence du prestataire (art. 4-1 b). C : loi espagnole, résidence du distributeur. D : loi portugaise, résidence du franchisé. E : loi belge, car les parties l'ont choisie (art. 3) ; l'article 4 ne joue qu'à défaut de choix. Comme la CVIM est supposée exclue, la loi choisie régit ici l'ensemble du contrat.",
+            "2. Parce que la prestation caractéristique de la vente est la livraison des marchandises, obligation non monétaire fournie par le vendeur ; le paiement d'une somme d'argent se retrouve dans presque tous les contrats et ne permet pas de les distinguer.",
+            "3. Non. La loi applicable (Rome I) et le tribunal compétent (Bruxelles I bis) sont deux questions distinctes : un tribunal allemand, s'il est compétent, peut appliquer la loi espagnole."
+          ],
+          "erreurs": [
+            "Appliquer la loi de l'acheteur ou du client parce qu'il « paie ».",
+            "Oublier de vérifier d'abord le choix des parties.",
+            "Déduire la loi applicable du tribunal saisi."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dai-10",
+          "niveau": "application",
+          "titre": "Un impayé à Valence : qui juge, selon quel droit, et comment exécuter ?",
+          "objectif": "Raisonner dans l'ordre sur la juridiction compétente, la loi applicable et l'exécution du jugement dans l'Union européenne.",
+          "enonce": "Atelier Loire Bois (Orléans) vend 200 tables à Muebles Turia SL (Valence, Espagne), livraison DAP Valence. Le contrat ne contient ni clause de loi applicable, ni clause de juridiction, ni exclusion de la CVIM. Muebles Turia ne paie pas les 36 000 € dus. Le dirigeant de l'atelier voudrait plaider à Orléans « puisque le droit français s'applique ».",
+          "methode": [
+            "Commencez par la juridiction : cherchez une clause attributive (art. 25), puis appliquez l'article 4 (domicile du défendeur) et l'article 7-1 (lieu de livraison) de Bruxelles I bis.",
+            "Passez ensuite au fond : la CVIM s'applique-t-elle ? Pour ce qu'elle ne règle pas, quelle loi désigne Rome I ?",
+            "Vérifiez si le raisonnement du dirigeant (« droit français donc juge français ») est juste.",
+            "Terminez par l'exécution : le jugement devra-t-il passer par un exequatur en Espagne ?",
+            "Proposez enfin, pour les prochains contrats, deux clauses cohérentes."
+          ],
+          "questions": [
+            "1. Devant quels tribunaux le vendeur peut-il agir ? Peut-il saisir le tribunal d'Orléans ?",
+            "2. Quelles règles de fond le juge appliquera-t-il ?",
+            "3. Que répondez-vous au raisonnement du dirigeant ?",
+            "4. Si un jugement est obtenu, comment sera-t-il exécuté en Espagne ?",
+            "5. Rédigez une clause de loi applicable et une clause attributive de juridiction pour les prochains contrats."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Pas de clause attributive. Selon l'article 4 de Bruxelles I bis, le défendeur est domicilié en Espagne : tribunaux espagnols. En matière contractuelle, l'article 7-1 b permet aussi de saisir le tribunal du lieu où les marchandises ont été ou auraient dû être livrées : avec DAP Valence, c'est aussi Valence. Le vendeur ne peut donc pas saisir Orléans faute de clause.",
+            "2. La CVIM s'applique (France et Espagne sont États contractants, aucune exclusion) : elle impose à l'acheteur de payer le prix (art. 53). Pour les questions qu'elle ne règle pas, Rome I désigne la loi française, loi de la résidence habituelle du vendeur (art. 4-1 a).",
+            "3. Le raisonnement mélange deux questions : la loi applicable ne détermine pas le juge compétent. Un juge espagnol appliquera ici la CVIM complétée par le droit français.",
+            "4. Un jugement rendu dans un État membre est exécutoire dans les autres sans exequatur, sur présentation d'une copie et d'un certificat (Bruxelles I bis), le défendeur pouvant seulement demander un refus pour des motifs limités.",
+            "5. Exemple : « Le présent contrat est régi par le droit français. » et « Tout litige relatif au présent contrat relève de la compétence exclusive du tribunal de commerce d'Orléans. » Deux clauses distinctes et cohérentes : le juge choisi appliquera son propre droit, ce qui évite les expertises de droit étranger."
+          ],
+          "erreurs": [
+            "Croire que le choix (ou la désignation) du droit français donne compétence au juge français.",
+            "Oublier l'option du lieu de livraison (art. 7-1) et la lier à l'Incoterm choisi.",
+            "Exiger un exequatur entre deux États membres de l'UE."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dai-s5",
+      "titre": "Le règlement des litiges internationaux",
+      "chapitre": "dai.litiges",
+      "notions": ["dai.litiges.modes-amiables", "dai.litiges.arbitrage", "dai.litiges.new-york", "dai.litiges.exequatur"],
+      "rappel": [
+        "Modes amiables : négociation (sans tiers), médiation (tiers qui aide les parties à trouver elles-mêmes la solution, sans pouvoir de décision), conciliation (tiers qui peut proposer une solution). L'accord a valeur de contrat ; la relation est préservée.",
+        "Arbitrage : des arbitres choisis rendent une sentence obligatoire. Convention d'arbitrage : clause compromissoire (avant le litige) ou compromis (après). Institutionnel (CCI, LCIA…) ou ad hoc. Avantages : neutralité, expertise, confidentialité, exécution facilitée ; inconvénients : coût, recours limités.",
+        "Une bonne clause compromissoire précise l'institution et son règlement, le siège (ville), le nombre d'arbitres, la langue et éventuellement la loi applicable au fond.",
+        "Convention de New York (1958) : reconnaissance et exécution des sentences dans plus de 170 États ; le juge ne révise pas le fond et ne peut refuser que pour les motifs de l'article V (convention invalide, droits de la défense, ordre public…).",
+        "Jugements : sans exequatur entre États membres de l'UE (Bruxelles I bis) ; hors UE, exequatur selon le droit local ou les conventions de La Haye (2005, 2019)."
+      ],
+      "exercices": [
+        {
+          "id": "dai-11",
+          "niveau": "bases",
+          "titre": "Médiateur, conciliateur, arbitre ou juge ?",
+          "objectif": "Distinguer les modes de règlement des différends selon le rôle du tiers et la force de la solution.",
+          "enonce": "Indiquez si chaque affirmation est vraie ou fausse, et justifiez en une phrase en vous appuyant sur le rôle du tiers et sur la nature de la décision.",
+          "donnees": {
+            "entetes": ["N°", "Affirmation"],
+            "lignes": [
+              ["1", "Le médiateur tranche le litige à la place des parties."],
+              ["2", "Le conciliateur peut proposer une solution, que les parties restent libres de refuser."],
+              ["3", "La sentence arbitrale s'impose aux parties."],
+              ["4", "Un compromis d'arbitrage est conclu avant la naissance de tout litige."],
+              ["5", "L'arbitrage est toujours moins coûteux qu'un procès."],
+              ["6", "Le juge de l'exécution d'une sentence étrangère peut la refuser parce qu'il estime que les arbitres ont mal apprécié les faits."],
+              ["7", "Un jugement rendu à Orléans contre une société espagnole peut être exécuté en Espagne sans exequatur."]
+            ]
+          },
+          "methode": [
+            "Demandez-vous pour chaque mode : le tiers décide-t-il, propose-t-il ou se contente-t-il d'aider ?",
+            "Distinguez les deux formes de convention d'arbitrage selon le moment où elles sont conclues.",
+            "Pour l'exécution, rappelez-vous que ni le juge de New York (art. V) ni le juge européen ne rejugent le fond.",
+            "Méfiez-vous des affirmations contenant « toujours » : elles sont souvent fausses."
+          ],
+          "questions": [
+            "1. Répondez vrai ou faux pour chaque affirmation et justifiez.",
+            "2. Citez trois avantages d'une médiation par rapport à un procès international."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Faux : le médiateur aide les parties à trouver elles-mêmes une solution, sans pouvoir de décision. 2. Vrai : c'est ce qui distingue la conciliation de la médiation. 3. Vrai : l'arbitre tranche par une sentence obligatoire. 4. Faux : c'est la clause compromissoire qui est conclue avant le litige ; le compromis est conclu après. 5. Faux : l'arbitrage peut être coûteux (honoraires des arbitres, frais de l'institution). 6. Faux : le juge ne révise pas le fond et ne peut refuser que pour les motifs limités de l'article V de la Convention de New York. 7. Vrai : Bruxelles I bis a supprimé l'exequatur entre États membres.",
+            "2. Coût plus faible, rapidité, discrétion, et surtout préservation de la relation commerciale, puisque la solution est négociée et non imposée."
+          ],
+          "erreurs": [
+            "Donner au médiateur le pouvoir de l'arbitre.",
+            "Inverser clause compromissoire et compromis.",
+            "Présenter l'arbitrage comme une solution bon marché dans tous les cas."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "dai-12",
+          "niveau": "application",
+          "titre": "Choisir le bon mode de règlement selon la situation",
+          "objectif": "Recommander, de façon argumentée, un mode de règlement des différends adapté au partenaire et au lieu où il a ses biens, puis rédiger une clause compromissoire complète.",
+          "enonce": "Une PME de Blois prépare trois contrats. Contrat 1 : vente ponctuelle à un acheteur de Barcelone dont tous les actifs sont en Espagne. Contrat 2 : vente de 2 M€ de matériel à un acheteur argentin, dont les actifs sont en Argentine ; la PME craint de devoir plaider devant les juges argentins et de faire exécuter un jugement français là-bas. Contrat 3 : contrat de distribution de dix ans avec un distributeur chilien, partenaire stratégique avec qui la PME veut garder de bonnes relations même en cas de désaccord sur les livraisons. On admet que l'Argentine et le Chili sont parties à la Convention de New York.",
+          "methode": [
+            "Pour chaque contrat, identifiez le pays où il faudra exécuter la décision (là où le débiteur a ses biens).",
+            "Dans l'UE, demandez-vous si un jugement suffit (circulation sans exequatur).",
+            "Hors UE, comparez l'exequatur d'un jugement selon le droit local et l'exécution d'une sentence grâce à la Convention de New York.",
+            "Si la relation compte, pensez à une étape amiable préalable (médiation pendant un délai fixé) avant l'arbitrage.",
+            "Pour rédiger la clause compromissoire, reprenez la liste des mentions du rappel."
+          ],
+          "questions": [
+            "1. Contrat 1 : recommandez un mode de règlement et justifiez.",
+            "2. Contrat 2 : recommandez un mode de règlement et justifiez.",
+            "3. Contrat 3 : proposez un dispositif en deux étapes et justifiez.",
+            "4. Rédigez la clause compromissoire du contrat 2 en précisant toutes les mentions utiles."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Une clause attributive de juridiction au profit du tribunal de commerce de Blois (art. 25 de Bruxelles I bis) suffit : le jugement sera exécutoire en Espagne sans exequatur. L'arbitrage n'apporterait pas grand-chose et coûterait plus cher.",
+            "2. Un arbitrage institutionnel : un jugement français devrait obtenir l'exequatur des tribunaux argentins selon leur droit, ce qui peut être long. Une sentence arbitrale sera exécutable en Argentine grâce à la Convention de New York, le juge ne pouvant refuser que pour les motifs de l'article V. L'arbitrage apporte aussi la neutralité : aucune partie ne plaide devant ses propres juges.",
+            "3. Une clause d'escalade : médiation obligatoire sous l'égide d'un centre reconnu pendant un délai fixé (par exemple 60 jours), puis, en cas d'échec, arbitrage. La médiation permet de trouver une solution négociée (avoir, nouveau calendrier) qui préserve la relation ; l'arbitrage garantit une issue si elle échoue, avec exécution facilitée au Chili.",
+            "4. Exemple : « Tous différends découlant du présent contrat ou en relation avec celui-ci seront tranchés définitivement suivant le Règlement d'arbitrage de la Chambre de commerce internationale par un arbitre unique nommé conformément à ce Règlement. Le siège de l'arbitrage est Genève. La langue de l'arbitrage est l'espagnol. Le contrat est régi par le droit français. » Mentions : institution et règlement, nombre d'arbitres, siège (qui détermine le droit de la procédure et le juge du recours en annulation), langue, loi applicable au fond."
+          ],
+          "erreurs": [
+            "Recommander systématiquement l'arbitrage, même lorsque le débiteur est dans l'UE.",
+            "Oublier le siège de l'arbitrage dans la clause.",
+            "Penser qu'une médiation aboutit à une décision obligatoire."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dai-s6",
+      "titre": "Distribution et concurrence",
+      "chapitre": "dai.distribution",
+      "notions": ["dai.distribution.agent", "dai.distribution.concurrence"],
+      "rappel": [
+        "L'agent commercial est un intermédiaire indépendant rémunéré par des commissions sur les opérations conclues grâce à lui. Son statut est harmonisé par la directive 86/653 : loyauté et information réciproques, préavis minimal (1 mois la 1re année, 2 mois la 2e, 3 mois à partir de la 3e, les États pouvant aller jusqu'à 6 mois), indemnité de fin de contrat.",
+        "Fin du contrat d'agent : selon l'État, indemnité plafonnée à une année de commissions calculée sur la moyenne des cinq dernières années, ou réparation du préjudice (choix de la France, art. L134-12 du Code de commerce, évaluée usuellement par la jurisprudence à deux années de commissions). Droit perdu en cas de faute grave, de démission non justifiée ou de cession ; demande à notifier dans l'année.",
+        "Arrêt Ingmar (2000) : ces règles sont impératives quand l'agent exerce dans l'UE, même si le contrat choisit la loi d'un État tiers.",
+        "Le distributeur achète et revend : il n'a pas de statut harmonisé dans l'UE, son indemnisation dépend du droit national et du contrat. Sans choix, Rome I soumet le contrat de distribution à la loi du distributeur.",
+        "Concurrence : art. 101 TFUE (ententes) et 102 (abus de position dominante). Exemption des accords verticaux (règl. 2022/720) si les parts de marché du fournisseur et de l'acheteur ne dépassent pas 30 % et sans restriction caractérisée : prix de revente fixe ou minimal imposé, interdiction des ventes passives (sauf exceptions). Prix conseillé ou maximal admis ; non-concurrence admise jusqu'à 5 ans. Sanctions jusqu'à 10 % du chiffre d'affaires mondial."
+      ],
+      "exercices": [
+        {
+          "id": "dai-13",
+          "niveau": "bases",
+          "titre": "Agent ou distributeur ? Et combien coûte la rupture ?",
+          "objectif": "Distinguer l'agent commercial du distributeur, puis appliquer les règles de préavis et d'indemnité de la directive 86/653.",
+          "enonce": "Partie A. Classez les caractéristiques suivantes : (a) achète les marchandises et les revend en fixant son propre prix ; (b) est rémunéré par une commission ; (c) bénéficie d'un statut harmonisé par une directive européenne ; (d) son indemnisation en fin de contrat dépend surtout du droit national et du contrat ; (e) prospecte et négocie pour le compte d'un fabricant. Partie B. Un fabricant d'Orléans résilie sans faute de l'agent le contrat à durée indéterminée conclu il y a six ans avec son agent en Italie. Commissions annuelles des cinq dernières années : 40 000 €, 45 000 €, 50 000 €, 55 000 € et 60 000 €. Le contrat est soumis à la loi de l'État de New York, qui ne prévoit pas d'indemnité.",
+          "methode": [
+            "Pour la partie A, demandez-vous qui est propriétaire des marchandises et comment l'intermédiaire gagne sa vie : en revendant (marge) ou par une commission.",
+            "Pour le préavis, repérez l'ancienneté du contrat et appliquez l'échelle minimale de la directive.",
+            "Pour le plafond de l'indemnité (système de l'indemnité), calculez la moyenne des cinq dernières années de commissions : faites la somme puis divisez par cinq.",
+            "Pour le système de la réparation (choix français), retenez que l'usage jurisprudentiel, non fixé par la loi, tourne autour de deux années de commissions.",
+            "Enfin, vérifiez si le choix de la loi new-yorkaise peut écarter ces règles (arrêt Ingmar)."
+          ],
+          "questions": [
+            "1. Partie A : classez (a) à (e) entre « agent » et « distributeur ».",
+            "2. Quel préavis minimal le fabricant doit-il respecter ?",
+            "3. Calculez la moyenne annuelle des commissions et le plafond de l'indemnité dans un État ayant retenu le système de l'indemnité.",
+            "4. Donnez l'ordre de grandeur de la réparation selon l'usage jurisprudentiel français, en partant de la même moyenne.",
+            "5. Le choix de la loi de New York prive-t-il l'agent de toute indemnisation ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Agent : (b), (c), (e). Distributeur : (a), (d). L'agent agit pour le compte du fabricant contre commission et bénéficie de la directive 86/653 ; le distributeur achète pour revendre et n'a pas de statut harmonisé.",
+            "2. Le contrat a plus de trois ans : préavis minimal de trois mois selon la directive (un État peut prévoir davantage, jusqu'à six mois).",
+            "3. Somme : 40 000 + 45 000 + 50 000 + 55 000 + 60 000 = 250 000 €. Moyenne : 250 000 / 5 = 50 000 €. Dans le système de l'indemnité, celle-ci est plafonnée à une année de commissions, soit 50 000 € au maximum.",
+            "4. Système de la réparation (France, art. L134-12 du Code de commerce) : la jurisprudence l'évalue usuellement à deux années de commissions, soit un ordre de grandeur de 2 × 50 000 = 100 000 €. C'est un usage, non une règle légale, et le juge apprécie selon les circonstances.",
+            "5. Non. Selon l'arrêt Ingmar (2000), les règles protectrices de la directive sont impératives lorsque l'agent exerce son activité dans l'UE, même si le contrat désigne la loi d'un État tiers. L'agent italien conserve son droit à préavis et à indemnisation, sauf faute grave."
+          ],
+          "erreurs": [
+            "Calculer le plafond sur la dernière année (60 000 €) au lieu de la moyenne des cinq dernières années.",
+            "Présenter les « deux années de commissions » comme une règle de la loi française : c'est un usage jurisprudentiel.",
+            "Croire que le choix d'une loi étrangère écarte la protection de l'agent.",
+            "Appliquer la directive au distributeur."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dai-14",
+          "niveau": "application",
+          "titre": "Un contrat de distribution conforme au droit de la concurrence ?",
+          "objectif": "Contrôler les clauses d'un contrat de distribution au regard de l'article 101 TFUE et du règlement d'exemption 2022/720.",
+          "enonce": "Cosmétiques de Sologne (part de marché : 12 %) conclut un contrat de distribution exclusive pour la Belgique avec Beauté Brabant SA (part de marché à l'achat : 8 %). Le projet contient les clauses suivantes. 1 : le distributeur reçoit un prix de revente conseillé de 29 €. 2 : le distributeur ne doit jamais revendre en dessous de 25 €. 3 : le distributeur ne doit pas répondre aux clients français qui le contactent spontanément par Internet. 4 : le distributeur ne doit pas mener de démarchage actif dans le territoire exclusif attribué au distributeur néerlandais. 5 : le distributeur ne vendra pas de produits concurrents pendant 4 ans. 6 : le prix de revente ne pourra pas dépasser 35 €.",
+          "methode": [
+            "Vérifiez d'abord le seuil de parts de marché de l'exemption (30 % pour le fournisseur et pour l'acheteur).",
+            "Examinez ensuite chaque clause : prix conseillé ou maximal (admis) ou prix fixe ou minimal (restriction caractérisée) ?",
+            "Pour les clauses territoriales, distinguez ventes actives (démarchage, admissible en exclusivité sous conditions) et ventes passives (réponse à une demande spontanée, en principe ne peut pas être interdite).",
+            "Pour la non-concurrence, comparez la durée à la limite de 5 ans.",
+            "Concluez sur les risques : nullité des clauses et sanctions."
+          ],
+          "questions": [
+            "1. Le contrat peut-il, en principe, bénéficier de l'exemption par catégorie ? Sur quel critère ?",
+            "2. Appréciez chacune des six clauses.",
+            "3. Quelles sont les conséquences si le fabricant maintient les clauses illicites ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Oui, en principe : les parts de marché (12 % et 8 %) ne dépassent pas 30 %. Mais l'exemption est perdue si le contrat contient une restriction caractérisée : il faut donc examiner les clauses.",
+            "2. Clause 1 : prix conseillé, admis tant qu'il reste indicatif. Clause 2 : prix de revente minimal imposé, restriction caractérisée interdite. Clause 3 : interdiction des ventes passives (demandes spontanées de clients d'un autre pays de l'UE), restriction caractérisée sauf exceptions. Clause 4 : interdiction des ventes actives dans le territoire d'un autre distributeur exclusif, admise sous conditions. Clause 5 : non-concurrence de 4 ans, admise dans le cadre de l'exemption (jusqu'à 5 ans). Clause 6 : prix maximal, admis.",
+            "3. Les clauses 2 et 3 exposent le fabricant à des sanctions pouvant atteindre 10 % de son chiffre d'affaires mondial et sont nulles. Il doit les supprimer : il peut conseiller un prix sans l'imposer par des pressions ou incitations, et limiter les seules ventes actives."
+          ],
+          "erreurs": [
+            "Confondre prix conseillé (licite) et prix imposé (illicite).",
+            "Confondre ventes actives et ventes passives.",
+            "Croire que le respect du seuil de 30 % suffit, même en présence d'une restriction caractérisée."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

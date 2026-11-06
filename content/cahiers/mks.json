@@ -1,0 +1,308 @@
+{
+  "matiere": "mks",
+  "titre": "Cahier d'exercices de marketing international et supply chain",
+  "introduction": "Ce cahier couvre les deux chapitres du cours : le marketing international (segmentation, ciblage, positionnement, marketing digital) et la supply chain (chaîne logistique, entreposage et stocks). Pour chaque section, relisez d'abord le rappel de cours, puis faites les exercices dans l'ordre en suivant la méthode guidée : elle vous indique le raisonnement à tenir, pas la réponse. Rédigez vos réponses et vos calculs sur papier, en posant chaque formule avant de remplacer par les chiffres. Comparez ensuite avec le corrigé, qui explique chaque étape, et lisez les erreurs à éviter. Les marques, entreprises et chiffres utilisés sont fictifs.",
+  "sections": [
+    {
+      "id": "mks-s1",
+      "titre": "Segmenter, cibler, positionner et mesurer la performance digitale",
+      "chapitre": "mks.marketing",
+      "notions": ["mks.marketing.segmentation", "mks.marketing.digital"],
+      "rappel": [
+        "Démarche STP : segmenter (découper le marché en groupes homogènes en interne et différents entre eux), cibler (évaluer les segments et choisir ceux que l'on sert), positionner (place voulue dans l'esprit des clients face aux concurrents).",
+        "Critères de segmentation : géographiques, démographiques, psychographiques (valeurs, style de vie), comportementaux (usage, fidélité, avantages recherchés). À l'international : macro-segmentation (groupes de pays) puis micro-segmentation (clients dans un pays).",
+        "Stratégies de ciblage : indifférencié, différencié (plusieurs segments, offres adaptées), concentré (un seul segment). Le positionnement se résume en une proposition de valeur et se visualise sur une carte perceptuelle.",
+        "Indicateurs digitaux : CTR = clics ÷ impressions × 100 ; taux de conversion = commandes ÷ visites (ou clics) × 100 ; CAC = dépenses d'acquisition ÷ nombre de nouveaux clients ; ROAS = CA généré ÷ dépenses publicitaires.",
+        "Localiser n'est pas seulement traduire : langue, devise, moyens de paiement, livraison, mentions légales. Dans l'UE, le RGPD (applicable depuis le 25 mai 2018) encadre la collecte de données personnelles."
+      ],
+      "exercices": [
+        {
+          "id": "mks-1",
+          "niveau": "bases",
+          "titre": "Reconnaître les critères et les étapes de la démarche STP",
+          "objectif": "Identifier le type de critère de segmentation utilisé et distinguer segmentation, ciblage et positionnement.",
+          "enonce": "Partie A : une marque fictive de sacs à dos, Altitud, étudie ses marchés étrangers. Classez ses critères. Partie B : classez les décisions suivantes selon l'étape STP : (a) « nous servirons seulement les randonneurs urbains de 25 à 40 ans » ; (b) « le marché se découpe en randonneurs sportifs, voyageurs urbains et étudiants » ; (c) « Altitud est le sac technique éco-conçu, plus durable que les marques de grande surface et moins cher que les marques de montagne haut de gamme ».",
+          "donnees": {
+            "entetes": ["Critère", "Type de critère (à compléter)", "Macro ou micro-segmentation ?"],
+            "lignes": [
+              ["Niveau de revenu moyen par pays", "", ""],
+              ["Âge des clients", "", ""],
+              ["Sensibilité à l'écologie", "", ""],
+              ["Fréquence d'utilisation du sac (quotidienne ou occasionnelle)", "", ""],
+              ["Proximité géographique et cadre réglementaire du pays", "", ""],
+              ["Avantage recherché : légèreté ou robustesse", "", ""]
+            ]
+          },
+          "methode": [
+            "Pour le type, demandez-vous ce que décrit le critère : un lieu ou un pays (géographique), une caractéristique mesurable de la personne (démographique), ses valeurs ou son style de vie (psychographique), son usage ou ce qu'elle attend du produit (comportemental).",
+            "Pour macro ou micro, demandez-vous si le critère sert à regrouper des pays ou à distinguer des clients à l'intérieur d'un pays.",
+            "Pour la partie B : découper, c'est segmenter ; choisir, c'est cibler ; occuper une place dans l'esprit des clients, c'est positionner."
+          ],
+          "questions": [
+            "1. Complétez le tableau de la partie A.",
+            "2. Associez chaque décision (a), (b), (c) à une étape STP.",
+            "3. Expliquez la différence entre positionnement et image."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Revenu moyen par pays : critère de pays (géographique au sens large, il caractérise une zone et non une personne), macro (il regroupe des pays). Âge : démographique, micro. Sensibilité à l'écologie : psychographique (valeurs), micro. Fréquence d'utilisation : comportemental (usage), micro. Proximité et cadre réglementaire : géographique, macro. Avantage recherché : comportemental, micro.",
+            "2. (a) Ciblage : on choisit un segment (stratégie concentrée). (b) Segmentation : on découpe tout le marché. (c) Positionnement : on définit une proposition de valeur par rapport aux concurrents, entre la grande surface et le haut de gamme.",
+            "3. Le positionnement est la perception que l'entreprise veut créer ; l'image est la perception réelle des clients. L'écart entre les deux mesure l'efficacité de la stratégie : si les clients voient Altitud comme un sac bon marché, le positionnement n'est pas atteint."
+          ],
+          "erreurs": [
+            "Confondre segmenter (découper tout le marché) et cibler (choisir une partie des segments).",
+            "Classer le revenu d'une personne et le revenu moyen d'un pays au même niveau : le premier sert la micro-segmentation, le second la macro-segmentation."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mks-2",
+          "niveau": "application",
+          "titre": "Choisir ses cibles à l'export avec une grille pondérée",
+          "objectif": "Évaluer l'attractivité de segments internationaux de façon chiffrée, puis choisir une stratégie de ciblage et formuler un positionnement.",
+          "enonce": "La PME fictive Terra Lenta fabrique des thés bio aromatisés en Touraine. Elle hésite entre trois segments. Elle les note de 1 (peu favorable) à 5 (très favorable) selon quatre critères pondérés : taille (30 %), croissance (25 %), intensité concurrentielle (20 % ; une note élevée signifie une concurrence faible) et accessibilité (25 % : distance, distribution, réglementation, langue).",
+          "donnees": {
+            "entetes": ["Segment", "Taille", "Croissance", "Concurrence", "Accessibilité"],
+            "lignes": [
+              ["A. Espagne : urbaines de 25 à 40 ans sensibles au bio", "4", "3", "2", "5"],
+              ["B. Royaume-Uni : grands consommateurs de thé", "5", "3", "1", "3"],
+              ["C. Mexique : jeunes urbains connectés", "3", "5", "4", "2"]
+            ]
+          },
+          "methode": [
+            "Pour chaque segment, multipliez chaque note par son poids, puis additionnez : on obtient une note sur 5.",
+            "Classez les segments ; regardez aussi les notes extrêmes, car une note globale peut cacher un point faible.",
+            "Choisissez une stratégie de ciblage cohérente avec les ressources d'une PME (concentré ou différencié).",
+            "Rédigez le positionnement en une phrase : pour qui, quel bénéfice, face à quels concurrents. Proposez deux axes pour une carte perceptuelle."
+          ],
+          "questions": [
+            "1. Calculez la note pondérée de chaque segment et classez-les.",
+            "2. Commentez le résultat du segment B et celui du segment C.",
+            "3. Proposez une stratégie de ciblage et justifiez-la.",
+            "4. Rédigez une phrase de positionnement pour le segment retenu et proposez les deux axes d'une carte perceptuelle."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. A : 4 × 0,30 + 3 × 0,25 + 2 × 0,20 + 5 × 0,25 = 1,20 + 0,75 + 0,40 + 1,25 = 3,60. B : 1,50 + 0,75 + 0,20 + 0,75 = 3,20. C : 0,90 + 1,25 + 0,80 + 0,50 = 3,45. Classement : A (3,60), C (3,45), B (3,20). Contrôle : la somme des poids fait bien 100 %.",
+            "2. B est le marché le plus grand, mais la concurrence y est très forte (note 1) : être grand ne suffit pas. C est très dynamique et peu concurrentiel, mais difficile d'accès (distance, distribution, réglementation) : il pourrait devenir prioritaire dans un second temps.",
+            "3. Pour une PME aux ressources limitées, un marketing concentré sur le segment A est le plus prudent : marché proche, accessible et de taille suffisante. Une stratégie différenciée (A puis C avec une offre adaptée) pourra suivre quand l'entreprise aura acquis de l'expérience à l'export.",
+            "4. Exemple : « Pour les citadines espagnoles soucieuses de leur santé et de l'environnement, Terra Lenta est le thé bio artisanal français, plus authentique que les marques de grande distribution et plus accessible que les maisons de luxe. » Axes possibles : prix (accessible / élevé) et caractère artisanal (industriel / artisanal), ou naturalité (standard / bio)."
+          ],
+          "erreurs": [
+            "Additionner les notes sans les pondérer.",
+            "Choisir le plus grand marché sans tenir compte de la concurrence et de l'accessibilité.",
+            "Rédiger un positionnement sans cible ni concurrents de référence."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mks-3",
+          "niveau": "application",
+          "titre": "Calculer et interpréter les indicateurs d'une campagne digitale",
+          "objectif": "Calculer CTR, taux de conversion, CAC et ROAS par canal et en tirer des décisions.",
+          "enonce": "Terra Lenta a lancé en Espagne une campagne d'un mois sur trois canaux. Tous les clients ayant commandé sont de nouveaux clients, sauf sur le référencement payant (SEA), où 75 des 90 commandes viennent de nouveaux clients. Le taux de conversion est calculé par rapport aux clics.",
+          "donnees": {
+            "entetes": ["Canal", "Impressions", "Clics", "Commandes", "Nouveaux clients", "Dépenses (€)", "CA généré (€)"],
+            "lignes": [
+              ["Référencement payant (SEA)", "200 000", "3 000", "90", "75", "2 700", "6 300"],
+              ["Réseaux sociaux", "500 000", "4 000", "40", "40", "2 000", "2 400"],
+              ["Influenceuse", "150 000", "4 500", "45", "45", "3 000", "3 600"]
+            ]
+          },
+          "methode": [
+            "Écrivez les quatre formules du cours avant de calculer ; arrondissez les pourcentages au dixième et les montants au centime.",
+            "Calculez aussi le panier moyen (CA ÷ commandes), utile pour comprendre le ROAS.",
+            "Interprétez canal par canal : un CTR élevé montre que la publicité attire ; un taux de conversion faible montre que le site ou l'offre ne convainc pas.",
+            "Un ROAS inférieur à 1 signifie que la publicité rapporte moins de CA qu'elle ne coûte ; même supérieur à 1, il faut penser à la marge."
+          ],
+          "questions": [
+            "1. Calculez le CTR, le taux de conversion, le CAC, le ROAS et le panier moyen de chaque canal.",
+            "2. Quel canal est le plus efficace ? Justifiez.",
+            "3. L'influenceuse a le meilleur CTR mais un faible taux de conversion. Proposez une explication et deux actions.",
+            "4. Citez trois éléments de localisation du site et une obligation liée au RGPD pour cette campagne."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. SEA : CTR 3 000 ÷ 200 000 × 100 = 1,5 % ; conversion 90 ÷ 3 000 × 100 = 3,0 % ; CAC 2 700 ÷ 75 = 36,00 € ; ROAS 6 300 ÷ 2 700 ≈ 2,33 ; panier 6 300 ÷ 90 = 70 €. Réseaux sociaux : CTR 0,8 % ; conversion 1,0 % ; CAC 2 000 ÷ 40 = 50,00 € ; ROAS 1,2 ; panier 60 €. Influenceuse : CTR 3,0 % ; conversion 1,0 % ; CAC 3 000 ÷ 45 ≈ 66,67 € ; ROAS 1,2 ; panier 80 €.",
+            "2. Le SEA est le plus efficace : meilleur taux de conversion (les internautes cherchaient déjà du thé), CAC le plus bas et ROAS le plus élevé (2,33 € de CA pour 1 € dépensé). Les deux autres canaux ne génèrent que 1,20 € de CA par euro dépensé, ce qui, une fois les coûts du produit déduits, risque de ne pas être rentable.",
+            "3. Un CTR élevé avec peu de ventes signale un problème sur le site ou l'offre : page d'arrivée mal traduite, prix ou frais de livraison découverts trop tard, moyens de paiement locaux absents, ou audience curieuse mais peu acheteuse. Actions : créer une page d'arrivée localisée avec un code promotionnel dédié ; vérifier l'adéquation entre l'audience de l'influenceuse et la cible (citadines de 25 à 40 ans sensibles au bio).",
+            "4. Localisation : langue et références culturelles adaptées (pas une simple traduction automatique), prix TTC en euros et moyens de paiement locaux, conditions de livraison et de retour, mentions légales. RGPD : disposer d'une base légale pour collecter les données (souvent le consentement, par exemple pour les cookies publicitaires et l'e-mailing), informer les personnes et respecter leurs droits ; les sanctions peuvent atteindre 20 millions d'euros ou 4 % du chiffre d'affaires annuel mondial."
+          ],
+          "erreurs": [
+            "Calculer le CAC en divisant par toutes les commandes au lieu des seuls nouveaux clients.",
+            "Confondre CTR (clics ÷ impressions) et taux de conversion (commandes ÷ clics ou visites).",
+            "Croire qu'un ROAS supérieur à 1 garantit une campagne rentable."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "mks-s2",
+      "titre": "La supply chain : flux, stocks et entrepôts",
+      "chapitre": "mks.supply",
+      "notions": ["mks.supply.chaine-logistique", "mks.supply.entreposage"],
+      "rappel": [
+        "La chaîne logistique coordonne trois flux : physiques (marchandises), d'information (commandes, prévisions, suivi) et financiers (paiements). Le modèle SCOR la décompose en : planifier, approvisionner, produire, livrer, gérer les retours.",
+        "Flux poussés : production selon des prévisions, stocks élevés, risque d'invendus. Flux tirés : production déclenchée par la commande réelle (juste-à-temps), stocks réduits, risque de rupture si la chaîne est perturbée.",
+        "Effet coup de fouet (Lee, Padmanabhan et Whang, 1997) : de petites variations de la demande finale s'amplifient en remontant la chaîne ; le partage de l'information le limite. Indicateurs : taux de service OTIF, délai, rotation des stocks, coût logistique rapporté au CA.",
+        "Rotation des stocks = consommation (ou coût des ventes) annuelle ÷ stock moyen ; durée moyenne de stockage = 360 ÷ rotation. Point de commande = consommation journalière × (délai d'approvisionnement + stock de sécurité en jours).",
+        "Entrepôt de stockage (conserver), plateforme de cross-docking (transit sans stockage, moins de 24 à 48 heures), hub (concentrer les flux d'une zone), entrepôt sous douane (stocker en suspension de droits). Règles de sortie : FIFO, FEFO pour les produits datés. Prestataires : 3PL, 4PL."
+      ],
+      "exercices": [
+        {
+          "id": "mks-4",
+          "niveau": "bases",
+          "titre": "Les trois flux et les processus de la chaîne logistique",
+          "objectif": "Reconnaître le type de flux et le processus SCOR concernés par une opération, et distinguer flux poussés et flux tirés.",
+          "enonce": "Voici des opérations de l'entreprise fictive Altitud, qui fait fabriquer ses sacs à dos au Portugal et les vend en France et en Espagne.",
+          "donnees": {
+            "entetes": ["N°", "Opération", "Type de flux", "Processus SCOR"],
+            "lignes": [
+              ["1", "Prévoir les ventes de la saison et dimensionner les stocks", "", ""],
+              ["2", "Sélectionner un fournisseur de tissu recyclé", "", ""],
+              ["3", "Coudre et assembler les sacs à l'usine", "", ""],
+              ["4", "Transporter les sacs vers l'entrepôt de Saragosse", "", ""],
+              ["5", "Envoyer un bon de commande électronique au fabricant", "", ""],
+              ["6", "Payer la facture du fabricant à 30 jours", "", ""],
+              ["7", "Récupérer les sacs défectueux renvoyés par les clients", "", ""]
+            ]
+          },
+          "methode": [
+            "Type de flux : est-ce une marchandise qui se déplace (physique), une donnée qui circule (information), ou de l'argent (financier) ? Certaines opérations relèvent de plusieurs flux : retenez le principal.",
+            "Processus SCOR : planifier (prévoir, dimensionner), approvisionner (choisir et gérer les fournisseurs), produire, livrer (entreposage, transport, douane), retours.",
+            "Pour la question sur les flux, demandez-vous ce qui déclenche la production : une prévision ou une commande réelle ?"
+          ],
+          "questions": [
+            "1. Complétez les deux dernières colonnes du tableau.",
+            "2. Altitud fabrique toute sa collection avant la saison d'après ses prévisions. Est-ce un flux poussé ou tiré ? Donnez un avantage et un risque.",
+            "3. Pourquoi la logistique n'est-elle qu'une partie du supply chain management ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (1) Information, planifier. (2) Information (et décision d'achat), approvisionner. (3) Physique, produire. (4) Physique, livrer. (5) Information, approvisionner. (6) Financier, approvisionner (règlement du fournisseur). (7) Physique, retours (logistique inverse).",
+            "2. Flux poussé : la production est déclenchée par des prévisions puis stockée. Avantage : les produits sont disponibles dès le début de la saison et l'on profite d'économies d'échelle. Risque : invendus et obsolescence si la demande est inférieure aux prévisions.",
+            "3. La logistique concerne surtout le transport et le stockage. Le supply chain management coordonne tous les acteurs (fournisseurs, fabricant, transporteurs, distributeurs) et les trois flux, pour satisfaire le client au meilleur coût en optimisant l'ensemble plutôt que chaque maillon séparément."
+          ],
+          "erreurs": [
+            "Oublier les flux d'information et financiers : la supply chain ne se limite pas au transport.",
+            "Confondre chaîne logistique (flux d'un produit) et chaîne de valeur mondiale (répartition de la valeur entre pays)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mks-5",
+          "niveau": "application",
+          "titre": "Rotation des stocks, point de commande et indicateurs logistiques",
+          "objectif": "Calculer la rotation et la durée de stockage, fixer un point de commande et mesurer la performance logistique.",
+          "enonce": "Le distributeur fictif Iberlog vend des lampes de bureau importées d'Asie. Données de l'année : coût des ventes 720 000 € ; stock au 1er janvier 50 000 € ; stock au 31 décembre 70 000 € (valeurs au coût d'achat). Consommation : 18 000 lampes par an, sur 360 jours. Délai d'approvisionnement depuis l'Asie : 35 jours ; stock de sécurité : 10 jours de consommation. Sur l'année, Iberlog a expédié 480 commandes, dont 444 complètes et à l'heure. Coût logistique total : 54 000 € pour un CA de 900 000 €.",
+          "methode": [
+            "Stock moyen = (stock initial + stock final) ÷ 2 ; rotation = coût des ventes ÷ stock moyen ; durée = 360 ÷ rotation.",
+            "Consommation journalière = consommation annuelle ÷ 360 ; point de commande = consommation journalière × (délai + jours de sécurité).",
+            "Taux OTIF = commandes complètes et à l'heure ÷ commandes expédiées × 100 ; coût logistique en % du CA = coût logistique ÷ CA × 100.",
+            "Pour la dernière question, refaites le calcul du point de commande avec un délai plus court et comparez."
+          ],
+          "questions": [
+            "1. Calculez le stock moyen, la rotation des stocks et la durée moyenne de stockage.",
+            "2. Calculez le point de commande en nombre de lampes et expliquez sa signification.",
+            "3. Calculez le taux OTIF et le coût logistique en pourcentage du CA.",
+            "4. Iberlog envisage un fournisseur en Turquie (délai de 8 jours, même stock de sécurité). Calculez le nouveau point de commande et donnez un avantage et un inconvénient possible de ce choix."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Stock moyen = (50 000 + 70 000) ÷ 2 = 60 000 €. Rotation = 720 000 ÷ 60 000 = 12 : le stock se renouvelle 12 fois par an. Durée moyenne de stockage = 360 ÷ 12 = 30 jours.",
+            "2. Consommation journalière = 18 000 ÷ 360 = 50 lampes. Point de commande = 50 × (35 + 10) = 50 × 45 = 2 250 lampes : dès que le stock descend à 2 250 lampes, Iberlog doit commander, car il faudra 1 750 lampes (50 × 35) pendant le délai d'approvisionnement et l'on veut conserver 500 lampes (50 × 10) de sécurité.",
+            "3. OTIF = 444 ÷ 480 × 100 = 92,5 % : 7,5 % des commandes arrivent incomplètes ou en retard. Coût logistique = 54 000 ÷ 900 000 × 100 = 6 % du CA.",
+            "4. Nouveau point de commande = 50 × (8 + 10) = 900 lampes, soit 1 350 de moins : la commande est déclenchée beaucoup plus tard, moins de marchandises sont immobilisées en transit et l'entreprise réagit plus vite à la demande (nearshoring). Inconvénient possible : un prix d'achat plus élevé qu'en Asie ; il faut comparer le coût total (achat, transport, stock, risque) et pas seulement le prix."
+          ],
+          "erreurs": [
+            "Calculer la rotation avec le stock final au lieu du stock moyen.",
+            "Ajouter le stock de sécurité en lampes à un délai en jours : il faut des unités homogènes.",
+            "Comparer deux fournisseurs sur le seul prix d'achat."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mks-6",
+          "niveau": "bases",
+          "titre": "Quel entrepôt pour quel besoin ?",
+          "objectif": "Associer un besoin logistique au bon type d'entrepôt, à la bonne règle de sortie et au bon type de prestataire.",
+          "enonce": "Un importateur fictif reçoit au Havre des conteneurs d'Asie. Il hésite sur l'organisation de ses entrepôts. Il stocke notamment un lot de pièces d'une valeur en douane de 200 000 €, soumis à un droit de 8 %, dont une partie pourrait être réexportée vers la Suisse.",
+          "donnees": {
+            "entetes": ["N°", "Besoin", "Solution (à compléter)"],
+            "lignes": [
+              ["1", "Faire transiter en moins de 24 heures des palettes déjà préparées vers les magasins espagnols", ""],
+              ["2", "Conserver plusieurs mois des références à faible rotation", ""],
+              ["3", "Stocker des marchandises tierces sans payer tout de suite les droits, avant de savoir si elles seront vendues dans l'UE ou réexportées", ""],
+              ["4", "Concentrer les flux de toute la péninsule ibérique en un point", ""],
+              ["5", "Gérer la sortie de yaourts et de compléments alimentaires datés", ""],
+              ["6", "Confier l'organisation de toute la chaîne à un intégrateur", ""]
+            ]
+          },
+          "methode": [
+            "Pour chaque besoin, demandez-vous si l'objectif est de conserver, de transiter vite, de concentrer, ou de suspendre des droits.",
+            "Pour les produits datés, réfléchissez à ce qui fait perdre de l'argent : l'ordre d'entrée ou la date de péremption ?",
+            "Distinguez le prestataire qui exécute les opérations (3PL) de celui qui organise toute la chaîne (4PL).",
+            "Pour l'entrepôt sous douane, calculez les droits suspendus : valeur en douane × taux."
+          ],
+          "questions": [
+            "1. Complétez le tableau.",
+            "2. Calculez le montant des droits suspendus sur le lot de pièces. Que se passe-t-il pour les pièces réexportées vers la Suisse ?",
+            "3. Expliquez pourquoi FEFO est préférable à FIFO pour les produits datés."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (1) Plateforme de cross-docking : transit sans stockage, du quai de réception au quai d'expédition. (2) Entrepôt de stockage. (3) Entrepôt sous douane. (4) Hub. (5) Règle FEFO (premier périmé, premier sorti). (6) Prestataire 4PL (un 3PL se contente d'exécuter les opérations logistiques).",
+            "2. Droits suspendus = 200 000 × 8 % = 16 000 €. Ils ne seront payés que lors de la mise en libre pratique des pièces vendues dans l'UE. Les pièces réexportées vers la Suisse quittent l'entrepôt sans avoir supporté ces droits : l'entreprise évite de payer des droits sur des marchandises qui ne seront pas vendues dans l'UE et préserve sa trésorerie.",
+            "3. FIFO fait sortir le lot entré en premier, mais un lot arrivé plus tard peut avoir une date de péremption plus proche. FEFO fait sortir en priorité ce qui périme le plus tôt, ce qui évite de jeter des produits périmés."
+          ],
+          "erreurs": [
+            "Confondre plateforme de cross-docking (vitesse, pas de stockage) et entrepôt de stockage.",
+            "Croire que l'entrepôt sous douane supprime les droits : il les suspend jusqu'à la mise en libre pratique ou la réexportation."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mks-7",
+          "niveau": "approfondissement",
+          "titre": "Mesurer et expliquer l'effet coup de fouet",
+          "objectif": "Mesurer l'amplification des variations de commandes le long d'une chaîne et proposer des solutions fondées sur le partage de l'information.",
+          "enonce": "Pour un produit fictif de consommation courante, voici sur quatre semaines la demande des consommateurs finaux et les commandes passées par chaque maillon de la chaîne à son fournisseur (en cartons).",
+          "donnees": {
+            "entetes": ["Maillon", "Semaine 1", "Semaine 2", "Semaine 3", "Semaine 4"],
+            "lignes": [
+              ["Demande des consommateurs", "100", "100", "110", "100"],
+              ["Commandes du détaillant au grossiste", "100", "100", "140", "90"],
+              ["Commandes du grossiste au fabricant", "100", "100", "190", "60"],
+              ["Commandes du fabricant à son fournisseur", "100", "100", "260", "20"]
+            ]
+          },
+          "methode": [
+            "Pour chaque maillon, calculez l'amplitude des commandes : valeur maximale − valeur minimale sur les quatre semaines.",
+            "Comparez chaque amplitude à celle de la demande finale (rapport entre les deux).",
+            "Pour l'explication, pensez aux causes citées dans le cours : prévisions faites isolément par chaque maillon, commandes groupées, promotions.",
+            "Pour les solutions, demandez-vous comment chaque maillon pourrait connaître la demande réelle."
+          ],
+          "questions": [
+            "1. Calculez l'amplitude des variations à chaque niveau et son rapport à celle de la demande finale.",
+            "2. Expliquez le mécanisme qui produit cette amplification.",
+            "3. Quelles conséquences pour le fabricant ?",
+            "4. Proposez deux solutions."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Demande finale : 110 − 100 = 10 cartons. Détaillant : 140 − 90 = 50 (5 fois la demande finale). Grossiste : 190 − 60 = 130 (13 fois). Fabricant : 260 − 20 = 240 (24 fois). Une hausse ponctuelle de 10 % de la demande finale devient une variation énorme en amont : c'est l'effet coup de fouet.",
+            "2. Chaque maillon ne voit que les commandes de son client, pas la demande finale. Voyant la hausse, le détaillant anticipe et commande plus pour reconstituer son stock et se protéger ; le grossiste interprète cette commande comme une forte hausse et surréagit à son tour, et ainsi de suite. Quand la demande revient à la normale, chacun a trop de stock et réduit fortement ses commandes. Les commandes groupées et les promotions accentuent le phénomène.",
+            "3. Le fabricant alterne surcapacité et sous-activité : heures supplémentaires puis chômage technique, stocks excessifs puis ruptures, coûts élevés et taux de service dégradé, alors que la consommation réelle est presque stable.",
+            "4. Partager l'information : transmettre les données de ventes réelles des magasins à tous les maillons ; prévoir et planifier en collaboration ; réduire la taille des lots et lisser les promotions ; raccourcir les délais pour réagir à la demande réelle (flux tirés)."
+          ],
+          "erreurs": [
+            "Attribuer l'effet coup de fouet à une forte variation de la demande finale : celle-ci est ici presque stable.",
+            "Proposer d'augmenter les stocks de sécurité partout : cela coûte cher et ne traite pas la cause, le manque d'information partagée."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

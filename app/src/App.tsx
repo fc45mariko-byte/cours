@@ -11,6 +11,7 @@ import { Chapitre } from './pages/Chapitre';
 import { Notion } from './pages/Notion';
 import { Etudier, Session, Vocabulaire } from './pages/Etudier';
 import { Dissertation } from './pages/Dissertation';
+import { Cahier, Cahiers } from './pages/Cahier';
 import { Progres, Arbre } from './pages/Progres';
 import { Entrainer, SerieQcm } from './pages/Entrainer';
 import { Exercice } from './pages/Exercice';
@@ -47,6 +48,8 @@ function Page() {
       if (id === 'dissertation') return <Layout section="etudier"><Dissertation params={params} key={params.toString()} /></Layout>;
       if (id === 'vocabulaire') return <Layout section="etudier"><Vocabulaire params={params} key={params.toString()} /></Layout>;
       return <Layout section="etudier"><Etudier /></Layout>;
+    case 'cahiers': return <Layout section="etudier"><Cahiers /></Layout>;
+    case 'cahier': return <Layout section="etudier" lecture><Cahier id={id} key={id} /></Layout>;
     case 'entrainer':
       return <Layout section="etudier">{id === 'qcm' ? <SerieQcm key={params.toString()} params={params} /> : <Entrainer key={params.toString()} params={params} />}</Layout>;
     case 'exercice': return <Layout section="etudier" lecture><Exercice id={id} key={id} /></Layout>;

@@ -12,6 +12,10 @@ export interface MatiereCatalogue {
   completude: 'complete' | 'incomplete' | 'absente'; noteCompletude?: string;
   /** Matières de traduction : langues mises en regard (consignes en français). */
   languesEtudiees?: Langue[];
+  /** Code de l'EC sur Celene, quand il est connu. */
+  code?: string;
+  /** Présente à l'emploi du temps du semestre en cours : intitulé affiché et types de séances. */
+  emploiDuTemps?: { intitule: string; seances: string[] };
   chapitres: ChapitreCatalogue[];
 }
 
@@ -110,6 +114,20 @@ export interface IndexGenere {
   exercices: { id: string; notions: string[]; chapitre: string; titre: string; niveau: number; type: string }[];
   questions: { id: string; notion: string; chapitre: string; niveau: number; competence: string }[];
   sources: Source[];
+  cahiers: { matiere: string; titre: string; langue: Langue; sections: number; exercices: number }[];
+}
+
+/** Cahier d'exercices imprimable (content/cahiers/<matière>.json). */
+export interface ExerciceCahier {
+  id: string; niveau: 'bases' | 'application' | 'approfondissement';
+  titre: string; objectif: string; enonce: string;
+  donnees?: { entetes: string[]; lignes: string[][] };
+  methode: string[]; questions: string[]; lignes?: number;
+  corrige: string[]; erreurs?: string[]; fictif: boolean;
+}
+export interface Cahier {
+  matiere: string; titre: string; introduction: string;
+  sections: { id: string; titre: string; chapitre?: string; notions?: string[]; rappel: string[]; exercices: ExerciceCahier[] }[];
 }
 
 /** Publication du fil (générée au build par scripts/feed.mjs). Le contenu est lu dans le chapitre référencé. */

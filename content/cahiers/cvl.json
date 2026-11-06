@@ -1,0 +1,481 @@
+{
+  "matiere": "cvl",
+  "titre": "La ciudad latinoamericana: cuaderno de ejercicios para imprimir",
+  "introduction": "Este cuaderno sigue los cinco capítulos del curso: la urbanización, la informalidad, las fracturas urbanas, las políticas urbanas y las representaciones de la ciudad en el cine. En cada sección, empiece por leer el recordatorio, que resume lo esencial del curso. Luego haga los ejercicios en orden, siguiendo el método paso a paso, y escriba sus respuestas en papel. Solo después compare con el corregido: explica por qué cada respuesta es correcta, y la lista de errores frecuentes le ayuda a evitar las trampas. Los ejercicios marcados como ficticios usan países, ciudades, personas, cifras o películas inventados; los datos históricos proceden siempre del curso.",
+  "sections": [
+    {
+      "id": "cvl-s1",
+      "titre": "Urbanización: éxodo rural y metrópolis",
+      "chapitre": "cvl.urbanizacion",
+      "notions": ["cvl.urbanizacion.exodo", "cvl.urbanizacion.metropolis"],
+      "rappel": [
+        "Éxodo rural (1940-1980): millones de campesinos se van a la ciudad. Factores de expulsión (push): concentración de la tierra (latifundio / minifundio), pobreza rural, crecimiento demográfico, mecanización, violencia (la Violencia en Colombia, 1948-1958; Perú). Factores de atracción (pull): empleos industriales de la ISI, servicios (educación, salud, administración), imagen de modernidad, redes familiares ya instaladas.",
+        "La población urbana pasa de alrededor del 40 % en 1950 a más del 80 % hoy. Las ciudades no absorben a los recién llegados en viviendas y empleos formales: autoconstrucción y economía informal.",
+        "Desde los años ochenta y noventa, el crecimiento de las grandes metrópolis se ralentiza; las ciudades intermedias crecen más rápido y el crecimiento urbano procede sobre todo del crecimiento natural, no del éxodo rural.",
+        "Megaciudad = tamaño absoluto (más de diez millones de habitantes: São Paulo, Ciudad de México, Buenos Aires, Río, Lima, Bogotá). Primacía urbana = peso relativo de una ciudad en la red nacional (Lima, Buenos Aires, Santiago, Montevideo). Montevideo es primada sin ser megaciudad; São Paulo es megaciudad sin ser capital.",
+        "Modelo: el centro colonial en damero en torno a la plaza mayor se degrada y luego se rehabilita; las élites se desplazan hacia un sector residencial; las periferias populares crecen por autoconstrucción."
+      ],
+      "exercices": [
+        {
+          "id": "cvl-1",
+          "niveau": "bases",
+          "titre": "¿Por qué se van? Factores de expulsión y de atracción",
+          "objectif": "Comprender el mecanismo del éxodo rural distinguiendo lo que empuja a salir del campo y lo que atrae hacia la ciudad.",
+          "enonce": "Cuatro testimonios inventados de migrantes que llegaron a una capital latinoamericana entre 1950 y 1975.\nRosa: «Mis padres tenían una parcela muy pequeña; las buenas tierras eran todas del hacendado. Éramos ocho hermanos.»\nJulián: «En mi vereda mataron a varios vecinos. Nos fuimos de noche.»\nAurelio: «Me dijeron que en la fábrica textil de la capital contrataban. Mi primo ya vivía allí y me alojó.»\nMarta: «En el pueblo no había colegio después de la primaria. En la ciudad mis hijos podían estudiar y había hospital.»",
+          "methode": [
+            "Paso 1: para cada frase del testimonio, pregúntese: ¿habla de un problema del campo (expulsión, push) o de una ventaja de la ciudad (atracción, pull)?",
+            "Paso 2: ponga a cada factor el nombre exacto del curso (concentración de la tierra, crecimiento demográfico, violencia, empleo de la ISI, servicios, redes familiares).",
+            "Paso 3: recuerde que un mismo migrante combina casi siempre factores de los dos tipos.",
+            "Paso 4: termine con la consecuencia: ¿qué pasa cuando la ciudad no puede ofrecer vivienda y empleo formal a todos?"
+          ],
+          "questions": [
+            "1. Haga un cuadro de dos columnas (expulsión / atracción) y clasifique los factores de los cuatro testimonios con el término del curso.",
+            "2. ¿Qué factor de expulsión del curso no aparece en los testimonios?",
+            "3. Explique qué es la ISI y por qué atrae a los migrantes.",
+            "4. ¿Qué consecuencias urbanas tiene la llegada masiva de migrantes?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Expulsión: Rosa, concentración de la tierra (latifundio / minifundio) y crecimiento demográfico (ocho hermanos); Julián, violencia rural (como la Violencia en Colombia). Atracción: Aurelio, empleo industrial (ISI) y redes familiares ya instaladas (el primo); Marta, servicios concentrados en la capital (educación, salud). Rosa y Marta muestran que la pobreza rural y la falta de servicios en el campo también empujan a salir.",
+            "2. La mecanización agrícola, que reduce la necesidad de mano de obra en el campo.",
+            "3. La industrialización por sustitución de importaciones consiste en producir en el país los bienes que antes se importaban. Crea fábricas y, por tanto, empleos urbanos: es un factor de atracción.",
+            "4. Las ciudades no logran absorber a los recién llegados en viviendas y empleos formales: crecen los barrios autoconstruidos y la economía informal. Resultado final: el éxodo rural resulta de la combinación de factores de expulsión y de atracción, y su consecuencia urbana es la informalidad."
+          ],
+          "erreurs": [
+            "Clasificar las redes familiares como factor de expulsión: están en la ciudad y facilitan la llegada, son un factor de atracción.",
+            "Pensar que el éxodo rural explica todavía hoy la mayor parte del crecimiento urbano: hoy es sobre todo el crecimiento natural.",
+            "Citar un solo factor: el curso insiste en su combinación."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cvl-2",
+          "niveau": "application",
+          "titre": "Calcular la urbanización y medir la primacía urbana",
+          "objectif": "Calcular una tasa de urbanización y el peso de una capital, y distinguir claramente megaciudad y ciudad primada.",
+          "enonce": "Datos inventados de un país ficticio, la República de Valdora, y de su capital, San Esteban.",
+          "donnees": {
+            "entetes": ["Indicador", "1950", "Hoy"],
+            "lignes": [
+              ["Población total del país", "8 000 000", "30 000 000"],
+              ["Población urbana", "3 200 000", "24 600 000"],
+              ["Área metropolitana de San Esteban (capital)", "1 200 000", "9 000 000"],
+              ["Segunda ciudad del país", "300 000", "1 800 000"]
+            ]
+          },
+          "methode": [
+            "Paso 1: tasa de urbanización = población urbana / población total × 100.",
+            "Paso 2: peso de la capital en el país = población de la capital / población total × 100.",
+            "Paso 3: para comparar la capital con la segunda ciudad, divida una población por la otra: ¿cuántas veces es mayor la capital?",
+            "Paso 4: compare sus resultados con las cifras del curso (alrededor del 40 % en 1950, más del 80 % hoy).",
+            "Paso 5: para la última pregunta, recuerde que megaciudad se refiere al tamaño absoluto y primacía al peso relativo."
+          ],
+          "questions": [
+            "1. Calcule la tasa de urbanización de Valdora en 1950 y hoy. Compárela con la de América Latina.",
+            "2. Calcule el peso de San Esteban en la población del país hoy y cuántas veces es mayor que la segunda ciudad.",
+            "3. ¿San Esteban es una megaciudad? ¿Es una ciudad primada? Justifique.",
+            "4. Cite un caso real del curso de ciudad primada que no es megaciudad y uno de megaciudad que no es capital."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. 1950: 3 200 000 / 8 000 000 × 100 = 40 %. Hoy: 24 600 000 / 30 000 000 × 100 = 82 %. Valdora sigue exactamente la evolución latinoamericana: de alrededor del 40 % en 1950 a más del 80 % hoy, una tasa comparable a la de Europa o América del Norte.",
+            "2. Peso: 9 000 000 / 30 000 000 × 100 = 30 % de la población nacional. Comparación: 9 000 000 / 1 800 000 = 5; la capital es cinco veces mayor que la segunda ciudad.",
+            "3. No es una megaciudad, porque tiene 9 millones de habitantes, menos de diez millones. Sí es una ciudad primada: reúne casi un tercio de la población del país y domina claramente la red urbana (cinco veces la segunda ciudad). Su caso se parece al de Lima, que reúne cerca de un tercio de la población nacional.",
+            "4. Montevideo es muy primada sin ser una megaciudad; São Paulo es una megaciudad sin ser la capital de Brasil, cuya red urbana es policéntrica. Resultado final: 40 % y 82 %; 30 % y cinco veces; San Esteban es primada pero no megaciudad, porque tamaño absoluto y peso relativo son dos nociones distintas."
+          ],
+          "erreurs": [
+            "Calcular la tasa de urbanización dividiendo por la población urbana en lugar de la población total.",
+            "Pensar que toda megaciudad es primada, o al revés.",
+            "Olvidar que estos datos son ficticios y presentarlos como cifras reales."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "cvl-s2",
+      "titre": "Informalidad: barrios autoconstruidos y economía informal",
+      "chapitre": "cvl.informalidad",
+      "notions": ["cvl.informalidad.asentamientos", "cvl.informalidad.economia"],
+      "rappel": [
+        "Barrio informal: hábitat autoconstruido en terrenos ocupados sin título (invasiones, tomas de tierra) o comprados en loteos ilegales, a menudo en laderas, zonas inundables o periferias lejanas. Rasgos: inseguridad en la tenencia del suelo, falta de servicios (agua, saneamiento, vialidad), densidad.",
+        "Nombres: favela (Brasil), villa miseria (Argentina), barriada / pueblo joven / asentamiento humano (Perú), colonia popular (México), rancho / barrio (Venezuela), campamento / población callampa (Chile), barrio de invasión / asentamiento informal (Colombia).",
+        "Consolidación progresiva: ocupación, vivienda precaria (madera, chapa), ladrillos y pisos añadidos, reivindicación de servicios y títulos, regularización o mejoramiento in situ (Favela-Bairro en Río, años noventa), a veces desalojo (sobre todo bajo las dictaduras). Informal no es sinónimo de pobre.",
+        "Economía informal: actividades lícitas que escapan total o parcialmente al registro, al impuesto y a la protección social (vendedores ambulantes, talleres, transporte informal, trabajo doméstico no declarado, recicladores). Según la OIT, alrededor de la mitad de los trabajadores de América Latina y el Caribe. No hay que confundirla con la economía criminal.",
+        "Dos lecturas: Hernando de Soto (El otro sendero, 1986), respuesta racional a una burocracia costosa, hay que simplificar trámites y titular; otros análisis, falta de empleo formal y exclusión social. Consecuencias: supervivencia y flexibilidad, pero sin protección (salud, jubilación) y con pérdidas fiscales para el Estado."
+      ],
+      "exercices": [
+        {
+          "id": "cvl-3",
+          "niveau": "bases",
+          "titre": "Nombrar y comprender los barrios informales",
+          "objectif": "Conocer el vocabulario de los barrios informales según los países y comprender su consolidación progresiva.",
+          "enonce": "Parte A. Complete con el término del curso: en Brasil se dice ...; en Argentina ...; en Perú ... y luego ...; en México ...; en Chile ...\nParte B. Verdadero o falso. Corrija las afirmaciones falsas.\n(a) Un barrio informal sigue siendo siempre un conjunto de chabolas de madera y chapa.\n(b) Lo que define un barrio informal es ante todo su estatus jurídico y su modo de producción.\n(c) Todos los barrios pobres son informales.\n(d) El programa Favela-Bairro de Río consistía en desalojar las favelas.\n(e) Los desalojos fueron frecuentes sobre todo bajo las dictaduras.",
+          "methode": [
+            "Paso 1: para la Parte A, use la tabla de nombres del recordatorio y fíjese en el país.",
+            "Paso 2: para la Parte B, recuerde las cinco etapas de la consolidación: ocupación, vivienda precaria, consolidación, reivindicación, regularización o desalojo.",
+            "Paso 3: distinga el criterio jurídico (tenencia del suelo, construcción sin norma) del criterio social (pobreza).",
+            "Paso 4: recuerde las cuatro políticas posibles: erradicación, tolerancia, regularización, mejoramiento in situ."
+          ],
+          "questions": [
+            "1. Complete la Parte A.",
+            "2. Responda verdadero o falso a (a)-(e) y corrija las falsas.",
+            "3. Describa en tres o cuatro frases cómo un barrio de invasión se transforma en treinta años."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Brasil: favela. Argentina: villa miseria (o villa). Perú: barriada, luego pueblo joven (también asentamiento humano). México: colonia popular. Chile: campamento (antes población callampa).",
+            "2. (a) Falso: la consolidación progresiva es característica; con el tiempo aparecen casas de material, pisos añadidos, conexiones, comercios y organizaciones vecinales. (b) Verdadero: inseguridad en la tenencia y autoconstrucción fuera de las normas. (c) Falso: no todos los barrios pobres son informales, y algunos barrios informales consolidados acogen a clases medias. (d) Falso: Favela-Bairro es un ejemplo de mejoramiento in situ, es decir, mejorar el barrio donde está, sin expulsar a sus habitantes. (e) Verdadero.",
+            "3. Ejemplo: unas familias ocupan un terreno en una ladera y levantan casas de madera y chapa. Con los años las reemplazan por ladrillo y añaden pisos; abren comercios y se organizan en juntas de vecinos para reclamar agua, saneamiento y títulos de propiedad. Finalmente el municipio regulariza la tenencia o mejora el barrio in situ. Resultado final: el barrio informal es un proceso, no un estado fijo."
+          ],
+          "erreurs": [
+            "Confundir informal y pobre.",
+            "Creer que el barrio informal no cambia nunca.",
+            "Mezclar los nombres de los países (por ejemplo, llamar favela a un barrio argentino)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cvl-4",
+          "niveau": "application",
+          "titre": "¿Formal o informal? Dos lecturas de la informalidad",
+          "objectif": "Clasificar empleos según los criterios del curso y aplicar las dos interpretaciones de la economía informal a un caso concreto.",
+          "enonce": "Seis trabajadores inventados de una gran ciudad latinoamericana.\n(a) Lucía, cajera en un supermercado, con contrato y seguridad social.\n(b) Pedro, vendedor ambulante de jugos en el centro, sin registro.\n(c) Carmen, empleada doméstica sin contrato ni cotizaciones.\n(d) Diego, cartonero que recoge y revende cartón.\n(e) Raúl, que vende droga en su barrio.\n(f) Elena, dueña de un pequeño taller de costura con cuatro empleados; no lo ha registrado porque, según ella, los trámites tardarían meses y costarían demasiado.",
+          "methode": [
+            "Paso 1: para cada persona, aplique los tres criterios del cuadro del curso: ¿registro?, ¿protección social?, ¿impuestos pagados?",
+            "Paso 2: antes de decir informal, pregúntese si la actividad es lícita. La OIT separa la economía informal (lícita, no registrada) de la economía criminal.",
+            "Paso 3: para el caso de Elena, aplique primero la lectura de Hernando de Soto, luego la otra lectura del curso.",
+            "Paso 4: termine con las consecuencias para el trabajador y para el Estado."
+          ],
+          "questions": [
+            "1. Clasifique a los seis trabajadores (formal, informal o criminal) y justifique.",
+            "2. ¿Cómo explicaría Hernando de Soto la situación de Elena? ¿Qué propondría?",
+            "3. ¿Qué otra lectura propone el curso, y qué pregunta plantearía sobre el caso de Pedro?",
+            "4. ¿Qué gana y qué pierde Carmen al trabajar en la informalidad? ¿Y el Estado?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Formal: Lucía (contrato, registro, protección social). Informal: Pedro (vendedor ambulante), Carmen (trabajo doméstico no declarado), Diego (reciclador o cartonero) y Elena (taller no registrado): son actividades lícitas que escapan al registro, al impuesto y a la protección social. Criminal: Raúl, porque la venta de droga es ilegal; no forma parte de la economía informal en el sentido de la OIT.",
+            "2. Para De Soto (El otro sendero, 1986), la informalidad es una respuesta racional a unas normas burocráticas demasiado costosas: Elena actúa de forma lógica, porque crear legalmente una pequeña empresa toma demasiado tiempo y dinero. Propondría simplificar los trámites y titular la propiedad.",
+            "3. La otra lectura ve en la informalidad ante todo el producto de una economía que no crea suficiente empleo formal y de una exclusión social. Sobre Pedro preguntaría: ¿vende en la calle porque lo prefiere, o porque no encuentra ningún empleo formal?",
+            "4. Carmen gana un ingreso de supervivencia y cierta flexibilidad, pero no tiene seguro de enfermedad ni jubilación. El Estado pierde ingresos fiscales. Resultado final: la informalidad es lícita pero desprotegida, y se explica según los autores por el coste de la formalidad o por la falta de empleo formal."
+          ],
+          "erreurs": [
+            "Incluir el narcotráfico en la economía informal.",
+            "Presentar la tesis de De Soto como la única explicación.",
+            "Ver solo los aspectos negativos: la informalidad también funciona como amortiguador y fuente de supervivencia."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "cvl-s3",
+      "titre": "Fracturas urbanas: segregación y violencia",
+      "chapitre": "cvl.fracturas",
+      "notions": ["cvl.fracturas.segregacion", "cvl.fracturas.violencia"],
+      "rappel": [
+        "Segregación residencial: separación espacial de los grupos sociales. Modelo antiguo: sector acomodado que se extiende desde el centro / periferias pobres.",
+        "Desde los años ochenta y noventa, fragmentación: barrios cerrados y vigilados (barrios cerrados y countries en Argentina, condomínios fechados en Brasil, fraccionamientos cerrados en México) junto a barrios populares, separados por muros, rejas, cámaras y vigilantes. Ejemplos: Alphaville (São Paulo, desde los años setenta), Nordelta (Buenos Aires, desde finales de los noventa). Teresa Caldeira (City of Walls, 2000): en São Paulo, el miedo al crimen alimenta los enclaves fortificados y transforma el espacio público.",
+        "Violencia: según la UNODC (2019), las Américas concentran alrededor del 37 % de los homicidios del mundo con cerca del 13 % de la población mundial. Se concentra en ciertas ciudades y barrios.",
+        "Causas: estructurales (desigualdades, exclusión, jóvenes sin perspectivas), institucionales (impunidad, corrupción, debilidad de la policía y la justicia), criminales (narcotráfico, extorsión, armas). La pobreza no explica por sí sola la violencia. Formas: cárteles, maras (MS-13, Barrio 18), facciones y milicias en Río.",
+        "Respuestas: mano dura (represión, encarcelamiento masivo), ocupación policial (UPP en Río desde 2008), prevención y urbanismo social (Medellín). Indicador: tasa de homicidios = homicidios / población × 100 000."
+      ],
+      "exercices": [
+        {
+          "id": "cvl-5",
+          "niveau": "bases",
+          "titre": "Segregación o fragmentación",
+          "objectif": "Distinguir la segregación clásica de la fragmentación urbana a partir de la descripción de una ciudad, a las tres escalas del curso.",
+          "enonce": "Descripción de una ciudad inventada, Puerto Alameda.\nEn 1970, las familias ricas vivían en un sector que se extendía desde el centro hacia el sur, y los barrios pobres ocupaban el norte y el oeste, lejos de ellos.\nHoy, en el oeste, junto a un asentamiento informal de casas de ladrillo, se ha construido un barrio cerrado de lujo, Los Pinos: muro de tres metros, barrera, vigilantes privados, cámaras. Sus habitantes van en coche al centro comercial vigilado, también cerrado, y casi nunca caminan por las calles vecinas. A 400 metros, los niños del asentamiento juegan en la calle.",
+          "methode": [
+            "Paso 1: lea la situación de 1970. ¿Los grupos están lejos o cerca? Es el modelo antiguo: sector acomodado / periferias pobres.",
+            "Paso 2: lea la situación actual. ¿Los grupos están cerca físicamente? ¿Tienen relaciones? Es la definición de fragmentación: proximidad física sin relaciones.",
+            "Paso 3: busque en el texto elementos a cada escala: metrópoli, barrio, calle.",
+            "Paso 4: relacione la situación con un caso real y con el análisis de Teresa Caldeira."
+          ],
+          "questions": [
+            "1. ¿Qué modelo ilustra Puerto Alameda en 1970? ¿Y hoy? Explique la diferencia.",
+            "2. Encuentre un elemento del texto para cada escala: metrópoli, barrio, calle.",
+            "3. ¿Cómo se llamaría Los Pinos en Argentina, en Brasil y en México? Cite un ejemplo real del curso.",
+            "4. Según Teresa Caldeira, ¿qué alimenta este tipo de enclaves, y qué consecuencia tiene sobre el espacio público?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. En 1970: segregación clásica, con un sector acomodado que se extiende desde el centro y periferias pobres alejadas. Hoy: fragmentación, porque ricos y pobres son vecinos (400 metros) pero están separados por muros y controles; la proximidad física no crea relaciones.",
+            "2. Metrópoli: el sector acomodado del sur y los barrios populares del norte y el oeste. Barrio: el enclave cerrado Los Pinos vecino de un asentamiento informal. Calle: el muro de tres metros, la barrera, las cámaras y los vigilantes.",
+            "3. En Argentina, barrio cerrado o country (ejemplo: Nordelta, aglomeración de Buenos Aires); en Brasil, condomínio fechado (ejemplo: Alphaville, São Paulo); en México, fraccionamiento cerrado.",
+            "4. El miedo al crimen. Los enclaves fortificados (urbanizaciones cerradas, centros comerciales vigilados) hacen que las clases acomodadas abandonen el espacio público: ya no caminan por la calle, que se convierte en un espacio de paso o de miedo. Resultado final: la segregación separa a distancia; la fragmentación separa de cerca, y reduce la mezcla social y el uso compartido del espacio público."
+          ],
+          "erreurs": [
+            "Decir que la proximidad entre ricos y pobres significa menos segregación: con muros y controles, no hay mezcla social.",
+            "Confundir el barrio cerrado (enclave de lujo) con el barrio de invasión (asentamiento informal).",
+            "Olvidar la dimensión del espacio público."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cvl-6",
+          "niveau": "application",
+          "titre": "Medir y explicar la violencia urbana",
+          "objectif": "Calcular y comparar tasas de homicidios, y comprender por qué la pobreza no basta para explicar la violencia.",
+          "enonce": "Datos inventados de cuatro ciudades ficticias de un mismo país.",
+          "donnees": {
+            "entetes": ["Ciudad", "Población", "Homicidios en un año", "Población en situación de pobreza"],
+            "lignes": [
+              ["Ciudad A", "1 500 000", "450", "30 %"],
+              ["Ciudad B", "4 000 000", "600", "20 %"],
+              ["Ciudad C", "800 000", "40", "45 %"],
+              ["Ciudad D (año 1)", "2 500 000", "2 000", "35 %"],
+              ["Ciudad D (año 10)", "2 800 000", "700", "33 %"]
+            ]
+          },
+          "methode": [
+            "Paso 1: aplique la fórmula del curso: tasa = homicidios / población × 100 000. Haga el cálculo en dos tiempos (dividir, luego multiplicar).",
+            "Paso 2: compare las ciudades por su tasa, no por el número bruto de homicidios: una ciudad grande tiene más homicidios aunque sea menos violenta.",
+            "Paso 3: para la ciudad D, calcule la variación de la tasa: (tasa final - tasa inicial) / tasa inicial × 100.",
+            "Paso 4: compare tasa y pobreza. Si la ciudad más pobre no es la más violenta, ¿qué otros factores del curso hay que buscar?"
+          ],
+          "questions": [
+            "1. Calcule la tasa de homicidios de las ciudades A, B y C, y de D en el año 1 y el año 10.",
+            "2. La ciudad B tiene más homicidios que la ciudad A. ¿Es más violenta? Explique.",
+            "3. ¿Cuánto ha bajado la tasa de la ciudad D en porcentaje? La pobreza casi no ha cambiado: ¿qué tipos de explicaciones habría que buscar?",
+            "4. Compare la ciudad C con las demás. ¿Qué muestra sobre la relación entre pobreza y violencia? Cite los factores del curso."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. A: 450 / 1 500 000 × 100 000 = 30 por cada 100 000. B: 600 / 4 000 000 × 100 000 = 15. C: 40 / 800 000 × 100 000 = 5. D año 1: 2 000 / 2 500 000 × 100 000 = 80. D año 10: 700 / 2 800 000 × 100 000 = 25.",
+            "2. No. B tiene más homicidios en número porque es mucho más grande, pero su tasa (15) es la mitad de la de A (30). Por eso el curso usa la tasa por cada 100 000 habitantes: permite comparar ciudades de tamaños distintos.",
+            "3. (25 - 80) / 80 × 100 = -68,75 %: la tasa ha bajado casi un 69 %. Como la pobreza casi no ha cambiado (del 35 % al 33 %), hay que buscar otros factores: acción pública (prevención, urbanismo social), acción policial (mano dura u ocupación), o recomposición de los grupos criminales, como se discute en el caso de Medellín.",
+            "4. C es la ciudad más pobre (45 %) y la menos violenta (5). La pobreza no explica por sí sola la violencia: hay ciudades pobres poco violentas. Cuentan también los factores institucionales (impunidad, corrupción, debilidad de la policía y la justicia) y criminales (narcotráfico, extorsión, armas), además de las desigualdades y la exclusión de los jóvenes. Resultado final: tasas de 30, 15, 5, 80 y 25; la comparación se hace por tasas, y la violencia tiene causas múltiples."
+          ],
+          "erreurs": [
+            "Comparar números brutos de homicidios entre ciudades de tamaños distintos.",
+            "Olvidar multiplicar por 100 000 (y obtener 0,0003 en lugar de 30).",
+            "Concluir que la pobreza causa directamente la violencia."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "cvl-s4",
+      "titre": "Políticas urbanas: Medellín, Bogotá y Curitiba",
+      "chapitre": "cvl.politicas",
+      "notions": ["cvl.politicas.medellin", "cvl.politicas.otros"],
+      "rappel": [
+        "Medellín a principios de los noventa: cártel de Pablo Escobar (abatido en diciembre de 1993), milicias, paramilitares; más de 350 homicidios por cada 100 000 habitantes en 1991.",
+        "Urbanismo social (años 2000, sobre todo con el alcalde Sergio Fajardo, 2004-2007): concentrar inversiones públicas de calidad en las comunas más pobres de las laderas. Proyectos Urbanos Integrales (PUI): transporte, espacios públicos, equipamientos educativos, participación (presupuesto participativo). Símbolos: Metrocable conectado al metro (2004), parques biblioteca (Biblioteca España, 2007), escaleras eléctricas de la Comuna 13 (2011).",
+        "Matices: la violencia bajó mucho, pero sus causas se debaten (recomposición de los grupos armados, desmovilización de los paramilitares, control criminal de los barrios, operación Orión en la Comuna 13 en 2002); turistificación; desigualdades persistentes.",
+        "Curitiba: Jaime Lerner (alcalde a partir de 1971), BRT en carriles exclusivos (1974), estaciones tubo con pago antes de subir, calle peatonal en el centro (1972); modelo poco costoso frente al metro, copiado en todo el mundo. Límite: expansión urbana.",
+        "Bogotá (1995-2003): Antanas Mockus, cultura ciudadana (campañas pedagógicas, mimos en el tráfico); Enrique Peñalosa, TransMilenio (BRT, diciembre de 2000), ciclorrutas, parques, bibliotecas. Ciclovía (cierre dominical de calles a los coches) ≠ ciclorruta (carril bici permanente). Límite: saturación del TransMilenio."
+      ],
+      "exercices": [
+        {
+          "id": "cvl-7",
+          "niveau": "bases",
+          "titre": "¿Quién hizo qué? Ciudades, actores y políticas",
+          "objectif": "Fijar los actores, fechas y dispositivos de las políticas urbanas del curso y comprender la lógica de cada una.",
+          "enonce": "Relacione cada elemento con su ciudad (Medellín, Bogotá o Curitiba) y su actor cuando lo haya.\n(a) Estaciones tubo donde se paga antes de subir.\n(b) Mimos que regulan el tráfico.\n(c) Teleférico conectado al metro.\n(d) TransMilenio.\n(e) Parque Biblioteca España.\n(f) Calle comercial peatonalizada en 1972.\n(g) Escaleras eléctricas de la Comuna 13.\n(h) Cierre dominical de calles a los coches.\n(i) Ciclorrutas.",
+          "methode": [
+            "Paso 1: empiece por las ciudades: Curitiba, años setenta; Bogotá, 1995-2003; Medellín, años 2000.",
+            "Paso 2: asocie cada actor a su estilo: Lerner (transporte en autobús), Mockus (pedagogía y civismo), Peñalosa (infraestructuras: BRT, parques, ciclorrutas), Fajardo (urbanismo social).",
+            "Paso 3: cuidado con los términos parecidos: ciclovía y ciclorruta.",
+            "Paso 4: para cada política, pregúntese cuál es el problema que quiere resolver."
+          ],
+          "questions": [
+            "1. Haga un cuadro: elemento, ciudad, actor (si lo hay), fecha (si la conoce).",
+            "2. Explique la diferencia entre ciclovía y ciclorruta.",
+            "3. ¿Qué tienen en común el sistema de Curitiba y el TransMilenio? ¿Por qué este modelo fue tan copiado?",
+            "4. Cite un límite de cada experiencia (Curitiba, Bogotá, Medellín)."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (a) Curitiba, Lerner (BRT, 1974). (b) Bogotá, Mockus (cultura ciudadana). (c) Medellín, Metrocable (primera línea en 2004). (d) Bogotá, Peñalosa (diciembre de 2000). (e) Medellín, urbanismo social (2007). (f) Curitiba, Lerner (1972). (g) Medellín (2011). (h) Bogotá, ciclovía dominical (desde los años setenta). (i) Bogotá, Peñalosa.",
+            "2. La ciclovía cierra calles a los coches los domingos para que la gente pasee en bicicleta o a pie; la ciclorruta es un carril bici permanente. Son dos dispositivos distintos en Bogotá.",
+            "3. Los dos son redes de autobuses de tránsito rápido (BRT) en carriles exclusivos. El modelo fue copiado porque cuesta poco en comparación con un metro y mejora rápidamente el transporte.",
+            "4. Curitiba: expansión urbana. Bogotá: saturación del TransMilenio. Medellín: debate sobre las causas del descenso de la violencia (recomposición de los grupos armados), turistificación y persistencia de las desigualdades. Resultado final: las políticas de transporte y espacio público pueden mejorar la ciudad, pero ninguna es un milagro."
+          ],
+          "erreurs": [
+            "Atribuir el TransMilenio a Mockus: es de Peñalosa.",
+            "Confundir ciclovía y ciclorruta.",
+            "Presentar estas experiencias sin sus límites."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "cvl-8",
+          "niveau": "application",
+          "titre": "Aplicar el urbanismo social a una ciudad ficticia",
+          "objectif": "Aplicar las etapas del urbanismo social de Medellín a un caso inventado y redactar una breve nota de propuestas.",
+          "enonce": "Usted trabaja para el municipio de Altamira (ciudad ficticia de 1,2 millones de habitantes). Diagnóstico: en las laderas del este hay barrios informales consolidados (ladrillo, varios pisos), aislados del centro: se tarda una hora y media en autobús y luego a pie por escaleras. No hay biblioteca ni espacio público; la tasa de homicidios del barrio es tres veces la de la ciudad. El presupuesto de inversión de la ciudad es limitado. El alcalde le pide una nota de una página inspirada en el urbanismo social.",
+          "methode": [
+            "Paso 1: siga las etapas del curso: diagnóstico, inversión prioritaria en las zonas más pobres, transporte, equipamientos de calidad, participación, evaluación.",
+            "Paso 2: para cada problema del diagnóstico, proponga una medida inspirada en un dispositivo real del curso (Metrocable, parque biblioteca, escaleras eléctricas, PUI, presupuesto participativo). Si el presupuesto es limitado, recuerde la ventaja del BRT de Curitiba.",
+            "Paso 3: piense en la evaluación: ¿qué indicador permite medir el resultado? (tasa de homicidios, tiempo de transporte).",
+            "Paso 4: termine con los riesgos y límites que el curso señala para Medellín."
+          ],
+          "questions": [
+            "1. Explique en dos frases el principio del urbanismo social.",
+            "2. Proponga tres medidas concretas para los barrios del este, justificando cada una con un ejemplo de Medellín (o de Curitiba).",
+            "3. ¿Cómo asociaría a los habitantes?",
+            "4. ¿Qué indicadores usaría para evaluar la política, y qué precauciones tomaría al interpretar los resultados?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. El urbanismo social consiste en concentrar las inversiones públicas de calidad en los barrios informales más pobres, en lugar de reservarlas para los barrios ricos o el centro. Combina transporte, espacio público, educación y participación en Proyectos Urbanos Integrales.",
+            "2. Ejemplo de medidas: (a) un teleférico conectado a la red de transporte, como el Metrocable de Medellín (2004), que sacó del aislamiento a las comunas del nororiente; en las laderas, es más adaptado que el autobús. (b) Un parque biblioteca, equipamiento de calidad que da al barrio un espacio público y educativo, como la Biblioteca España (2007). (c) Escaleras eléctricas o caminos peatonales, como en la Comuna 13 (2011), para facilitar la circulación interna. Con presupuesto limitado, se puede priorizar un corredor de autobuses en carril exclusivo, poco costoso como el BRT de Curitiba.",
+            "3. Mediante el presupuesto participativo y talleres con las juntas de vecinos, para que los habitantes definan las prioridades: la participación forma parte de los PUI.",
+            "4. Indicadores: tiempo de transporte al centro, tasa de homicidios del barrio comparada con la de la ciudad, uso de los equipamientos. Precauciones: un descenso de la violencia puede deberse también a otros factores (recomposición de los grupos armados, acción policial), como se debate en Medellín; también hay que vigilar la turistificación y la persistencia de las desigualdades. Resultado final: diagnóstico, inversión prioritaria, transporte, equipamientos, participación y evaluación prudente."
+          ],
+          "erreurs": [
+            "Proponer solo medidas policiales: el urbanismo social se basa en la inversión pública y la participación.",
+            "Atribuir automáticamente todo descenso de la violencia a las obras.",
+            "Copiar un modelo sin adaptarlo al diagnóstico (relieve, presupuesto)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cvl-9",
+          "niveau": "approfondissement",
+          "titre": "¿Un milagro de Medellín? Plan de disertación",
+          "objectif": "Construir una argumentación matizada sobre la transformación de Medellín usando solo los datos del curso.",
+          "enonce": "Tema de disertación: «La transformación de Medellín: ¿un milagro urbano?». Trabaje solo con los hechos del curso: violencia de principios de los noventa (más de 350 homicidios por cada 100 000 habitantes en 1991, cártel de Escobar abatido en 1993, milicias, paramilitares); urbanismo social bajo Sergio Fajardo (2004-2007); PUI, Metrocable (2004), Biblioteca España (2007), escaleras eléctricas de la Comuna 13 (2011); operación Orión (2002); desmovilización de los paramilitares; control criminal de los barrios; turistificación; desigualdades persistentes.",
+          "methode": [
+            "Paso 1: analice el tema. La palabra milagro sugiere un cambio súbito y sin explicación racional: la pregunta invita a matizar.",
+            "Paso 2: formule una problemática, por ejemplo: ¿en qué medida el descenso de la violencia en Medellín se debe a la política urbana?",
+            "Paso 3: ordene los hechos en dos columnas: lo que apoya el relato del milagro, lo que lo matiza.",
+            "Paso 4: construya un plan en dos o tres partes con argumentos y ejemplos, y una conclusión que responda a la problemática."
+          ],
+          "questions": [
+            "1. Redacte una introducción breve (presentación del tema, problemática, anuncio del plan).",
+            "2. Proponga un plan detallado en tres partes con un ejemplo del curso por argumento.",
+            "3. Redacte la conclusión en tres o cuatro frases."
+          ],
+          "lignes": 20,
+          "corrige": [
+            "1. Ejemplo: A principios de los años noventa, Medellín, marcada por el cártel de Pablo Escobar, las milicias y los paramilitares, tenía una de las tasas de homicidios más altas del mundo, más de 350 por cada 100 000 habitantes en 1991. En los años 2000, la ciudad se convirtió en un modelo de urbanismo social, citado a menudo como un milagro. ¿En qué medida esta transformación se debe a la política urbana? Veremos primero el contexto de violencia extrema, luego la estrategia del urbanismo social, y finalmente los límites y las explicaciones alternativas.",
+            "2. I. Una ciudad en crisis: violencia extrema (1991), cártel, milicias, paramilitares, barrios informales aislados en las laderas, ausencia del Estado. II. Una estrategia pública innovadora: invertir primero en las comunas más pobres (Fajardo, 2004-2007); PUI que combinan transporte, espacio público, educación y participación; Metrocable (2004), Biblioteca España (2007), escaleras eléctricas de la Comuna 13 (2011). III. Un milagro que hay que matizar: el descenso de la violencia también se explica por la recomposición de los grupos armados (desmovilización de los paramilitares, control criminal de los barrios) y por la operación militar Orión (2002); críticas por la turistificación de algunos barrios y la persistencia de las desigualdades.",
+            "3. Ejemplo: La transformación de Medellín es real: la violencia ha disminuido mucho y la ciudad ha llevado servicios públicos de calidad a los barrios más pobres. Sin embargo, no se trata de un milagro: el descenso de la violencia resulta de varios factores, entre ellos la recomposición de los grupos armados y la acción militar. Más que un milagro, Medellín muestra que el urbanismo social puede contribuir a transformar una ciudad, sin resolver por sí solo las desigualdades. Resultado final: un plan que pasa del problema a la respuesta y luego a los matices responde a la pregunta sin caer en el relato oficial ni en el rechazo total."
+          ],
+          "erreurs": [
+            "Narrar la historia de Medellín sin responder a la pregunta.",
+            "Atribuir todo el descenso de la violencia al Metrocable.",
+            "Añadir cifras o hechos que no están en el curso."
+          ],
+          "fictif": false
+        }
+      ]
+    },
+    {
+      "id": "cvl-s5",
+      "titre": "Representaciones: el cine de la ciudad y el análisis de imágenes",
+      "chapitre": "cvl.representaciones",
+      "notions": ["cvl.representaciones.cine", "cvl.representaciones.metodo-imagen"],
+      "rappel": [
+        "Películas clave: Los olvidados (Buñuel, México, 1950); Rio, 40 graus (Nelson Pereira dos Santos, Brasil, 1955), preludio del Cinema Novo; Rodrigo D. No futuro (Gaviria, Colombia, 1990) y La vendedora de rosas (1998), con actores no profesionales; Cidade de Deus (Meirelles y Lund, Brasil, 2002); Amores perros (2000), Elefante blanco (Trapero, Argentina, 2012), Roma (2018).",
+        "Debates: estética del hambre (Glauber Rocha, 1965: mostrar la miseria para denunciarla); pornomiseria (Ospina y Mayolo, Agarrando pueblo, 1978: explotación espectacular de la pobreza para públicos extranjeros); cosmética del hambre (Ivana Bentes, sobre Cidade de Deus: estetización de la violencia). Una película de ficción no es un documento sociológico.",
+        "Método: presentación del documento y contexto; descripción (¿qué se ve?: lugares, personajes, acciones, primer término y fondo); análisis de los recursos; interpretación (¿qué mirada?, ¿qué punto de vista, interior o exterior al barrio?, ¿qué recepción?); conclusión crítica.",
+        "Escala de planos: plano general (sitúa el decorado, la escala de la ciudad), plano medio, primer plano (emoción, intimidad), primerísimo primer plano. Ángulos: picado (desde arriba, aplasta, vuelve vulnerable) / contrapicado (desde abajo, engrandece, da poder).",
+        "Movimientos y otros recursos: travelling, panorámica, cámara en mano (efecto documental, urgencia); luz, colores, composición; montaje y sonido; fuera de campo (sugiere lo que no se muestra)."
+      ],
+      "exercices": [
+        {
+          "id": "cvl-10",
+          "niveau": "bases",
+          "titre": "El vocabulario del análisis de imagen",
+          "objectif": "Dominar los términos técnicos del análisis de imagen en español y relacionar cada recurso con su efecto posible.",
+          "enonce": "Seis planos de películas inventadas sobre una ciudad latinoamericana.\n(a) La cámara, situada en lo alto de un edificio, muestra un niño solo en medio de una avenida enorme.\n(b) Vista de toda una colina cubierta de casas, con la ciudad al fondo.\n(c) El rostro de una anciana ocupa toda la pantalla; se ven sus lágrimas.\n(d) La cámara, a ras de suelo, filma a un jefe de banda que mira hacia abajo.\n(e) La imagen tiembla mientras la cámara sigue a dos jóvenes que corren por un callejón.\n(f) Se oye un disparo, pero la imagen solo muestra a una mujer que se gira asustada.",
+          "methode": [
+            "Paso 1: para cada plano, pregúntese primero: ¿qué tamaño tiene lo que se ve en la pantalla (todo un decorado, una persona, un rostro)? Es la escala del plano.",
+            "Paso 2: luego: ¿dónde está la cámara respecto al sujeto (arriba, abajo, a su altura)? Es el ángulo.",
+            "Paso 3: ¿la cámara se mueve? ¿Cómo? ¿Hay algo que se oye pero no se ve?",
+            "Paso 4: para cada recurso, escriba un efecto posible, usando el cuadro del curso, y recuerde que el efecto depende siempre del contexto."
+          ],
+          "questions": [
+            "1. Nombre el recurso principal de cada plano (a)-(f) en español.",
+            "2. Dé un efecto posible para cada uno.",
+            "3. Traduzca al español: plongée, contre-plongée, gros plan, hors-champ. ¿Cuál es la trampa entre los dos primeros?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. (a) Picado (cámara desde arriba). (b) Plano general. (c) Primer plano (incluso primerísimo primer plano si solo se ve una parte del rostro). (d) Contrapicado (cámara desde abajo). (e) Cámara en mano. (f) Fuera de campo (sonoro).",
+            "2. (a) El picado aplasta al niño y lo vuelve vulnerable frente a la ciudad. (b) El plano general sitúa el decorado y la escala del barrio en la ciudad. (c) El primer plano transmite emoción e intimidad. (d) El contrapicado engrandece al jefe y le da poder. (e) La cámara en mano crea un efecto documental y de urgencia. (f) El fuera de campo sugiere la violencia sin mostrarla, y el espectador la imagina.",
+            "3. Plongée = picado; contre-plongée = contrapicado; gros plan = primer plano; hors-champ = fuera de campo. Trampa: el picado mira desde arriba y el contrapicado desde abajo; no hay que invertirlos. Resultado final: nombrar el recurso es solo el primer paso; siempre hay que decir qué efecto produce."
+          ],
+          "erreurs": [
+            "Confundir picado y contrapicado.",
+            "Nombrar un recurso sin explicar su efecto.",
+            "Dar un efecto como si fuera automático: depende del contexto de la película."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cvl-11",
+          "niveau": "application",
+          "titre": "Analizar una secuencia de película",
+          "objectif": "Aplicar el método completo (presentación, descripción, recursos, interpretación, conclusión) a una secuencia descrita.",
+          "enonce": "Secuencia de una película ficticia, «La loma» (2015), sobre un barrio informal de una gran ciudad andina.\nPlano 1: plano general en picado, al amanecer, de una ladera cubierta de casas de ladrillo sin pintar; al fondo, los rascacielos del centro bajo la niebla.\nPlano 2: travelling lateral que sigue a una adolescente, Yésica, que baja por una escalera de cemento con su uniforme escolar.\nPlano 3: plano medio de Yésica que sube a una cabina de teleférico llena de trabajadores.\nPlano 4: primer plano de su rostro tranquilo, mirando por la ventana; colores cálidos.\nPlano 5: plano general de la ciudad vista desde la cabina; música suave; se oye fuera de campo la radio de un pasajero que anuncia un tiroteo en otro barrio.",
+          "methode": [
+            "Paso 1: presente el documento (título, fecha, naturaleza, tema). Al ser ficticio, invente solo lo que dice el enunciado.",
+            "Paso 2: describa: lugares, personajes, acciones, primer término y fondo.",
+            "Paso 3: analice los recursos plano por plano: escala, ángulo, movimiento, luz y colores, sonido, fuera de campo, montaje (¿cómo se encadenan los planos?).",
+            "Paso 4: interprete: ¿qué mirada sobre el barrio y la ciudad? ¿Punto de vista interior o exterior? ¿A qué realidad del curso remite el teleférico?",
+            "Paso 5: concluya con una pregunta crítica: ¿la película denuncia, embellece, o propone otra imagen del barrio?"
+          ],
+          "questions": [
+            "1. Presente el documento y describa la secuencia en tres o cuatro frases.",
+            "2. Analice los recursos de los planos 1, 2, 4 y 5.",
+            "3. Interprete la secuencia: qué relación entre el barrio y el centro, qué punto de vista, qué referencia al curso.",
+            "4. Redacte una conclusión crítica que relacione la secuencia con los debates sobre la representación de la pobreza."
+          ],
+          "lignes": 20,
+          "corrige": [
+            "1. «La loma» es una película de ficción de 2015 sobre un barrio informal de una gran ciudad andina. La secuencia muestra el trayecto matinal de una adolescente, Yésica, desde su casa en la ladera hasta el teleférico que la lleva hacia la ciudad. En primer término están el barrio de ladrillo y la joven; al fondo, los rascacielos del centro.",
+            "2. Plano 1: el plano general sitúa el barrio en la escala de la ciudad; el picado puede hacerlo parecer pequeño y dominado, y la oposición entre el ladrillo en primer término y los rascacielos al fondo marca la distancia social. Plano 2: el travelling acompaña a Yésica y nos hace entrar en su vida cotidiana; el uniforme escolar sugiere estudio y futuro. Plano 4: el primer plano crea intimidad y empatía; los colores cálidos dan un tono sereno. Plano 5: el plano general invierte la mirada: ahora la ciudad se ve desde el barrio; el fuera de campo sonoro (la radio y el tiroteo) recuerda la violencia sin mostrarla. El montaje pasa de la escala de la ciudad a la del individuo y luego vuelve a la ciudad.",
+            "3. La secuencia propone una mirada desde el interior del barrio: seguimos a una habitante en su rutina, no a un visitante. El teleférico conecta el barrio con el centro y remite al Metrocable de Medellín (2004) y al urbanismo social, que quiso sacar del aislamiento a las comunas de las laderas. El plano inicial en picado recuerda, sin embargo, la visión exterior y distante que suele imponerse a estos espacios. La violencia existe (fuera de campo) pero no es el centro del relato.",
+            "4. Ejemplo: Lejos de la estética del hambre de Rocha, que mostraba la miseria para denunciarla, y de la estetización de la violencia criticada como cosmética del hambre a propósito de Cidade de Deus, esta secuencia presenta el barrio informal como un lugar de vida cotidiana, conectado con la ciudad. Esta elección evita la pornomiseria, pero podría ser criticada por embellecer la realidad: por eso hay que recordar que una ficción no es un documento sociológico y preguntarse por su contexto de producción y su público. Resultado final: presentar, describir, analizar los recursos, interpretar la mirada y concluir de forma crítica."
+          ],
+          "erreurs": [
+            "Describir sin analizar: decir que hay un plano general no basta, hay que dar su efecto.",
+            "Olvidar el sonido y el fuera de campo.",
+            "Tomar la película como un documento sociológico sobre un barrio real."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cvl-12",
+          "niveau": "approfondissement",
+          "titre": "Denunciar o estetizar: estética del hambre, pornomiseria, cosmética del hambre",
+          "objectif": "Comprender los tres conceptos críticos del curso y aplicarlos a dos imágenes descritas para argumentar sobre la representación de la pobreza.",
+          "enonce": "Dos imágenes inventadas.\nImagen A: cartel de una película ficticia, «Fuego en la favela», para su estreno en Europa. Contrapicado sobre un joven armado, a contraluz, con una puesta de sol naranja y saturada; detrás, las casas de una favela. Título en letras rojas y frase: «La ciudad más peligrosa del mundo».\nImagen B: fotograma en blanco y negro de una película ficticia rodada con actores no profesionales del barrio. Plano medio, a la altura de los ojos, de una madre que cocina en una cocina estrecha; sus hijos hacen los deberes en la mesa. Luz natural de una ventana pequeña.",
+          "methode": [
+            "Paso 1: defina cada concepto con su autor y su fecha: estética del hambre (Rocha, 1965), pornomiseria (Ospina y Mayolo, 1978), cosmética del hambre (Ivana Bentes, a propósito de Cidade de Deus).",
+            "Paso 2: analice los recursos de cada imagen: ángulo, escala, luz, colores, texto, público al que se dirige.",
+            "Paso 3: pregúntese: ¿la imagen busca hacer comprender una realidad o producir un espectáculo? ¿Para quién?",
+            "Paso 4: argumente con matices: el mismo recurso no tiene siempre el mismo sentido, y una imagen puede ser a la vez bella y crítica."
+          ],
+          "questions": [
+            "1. Defina los tres conceptos y explique la relación entre estética del hambre y cosmética del hambre.",
+            "2. Analice los recursos de la imagen A y diga a qué concepto crítico podría remitir.",
+            "3. Analice la imagen B y relaciónela con una tradición del cine del curso.",
+            "4. En un párrafo argumentado, responda: ¿es posible representar la pobreza urbana en el cine sin explotarla?"
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Estética del hambre: en su manifiesto de 1965, Glauber Rocha afirma que el cine debe mostrar el hambre y la miseria para denunciarlas, frente al cine comercial. Pornomiseria: término de Luis Ospina y Carlos Mayolo (Agarrando pueblo, 1978) para denunciar la explotación espectacular de la pobreza para públicos extranjeros. Cosmética del hambre: término de Ivana Bentes a propósito de Cidade de Deus (2002), que retoma la expresión de Rocha para criticar la estetización de la violencia. El segundo término invierte el primero: de mostrar para denunciar se pasa a embellecer para vender.",
+            "2. El contrapicado engrandece al joven armado y le da poder; el contraluz y la puesta de sol saturada producen una imagen espectacular y bella; las letras rojas y la frase sobre la ciudad más peligrosa insisten en la violencia. El cartel se dirige al público europeo. Podría remitir a la pornomiseria (pobreza y violencia como espectáculo para extranjeros) y a la cosmética del hambre (violencia estetizada).",
+            "3. Plano medio a la altura de los ojos (ni picado ni contrapicado: una mirada de igual a igual), luz natural, blanco y negro sobrio, escena cotidiana (cocinar, hacer los deberes). El uso de actores no profesionales del barrio recuerda el cine de Víctor Gaviria en Medellín (Rodrigo D. No futuro, 1990; La vendedora de rosas, 1998) y, por su voluntad de mostrar la realidad, la tradición de Rio, 40 graus y del Cinema Novo.",
+            "4. Ejemplo: Representar la pobreza sin explotarla es difícil pero posible. El riesgo, señalado por Ospina y Mayolo con la pornomiseria y por Bentes con la cosmética del hambre, es convertir la miseria y la violencia en espectáculo para un público lejano, como hace el cartel A. Sin embargo, el cine también puede, como pedía Rocha, mostrar la miseria para denunciarla, o dar la palabra a los habitantes, como Gaviria con actores del barrio, y como sugiere la imagen B con su mirada a la altura de los personajes. Los criterios son el punto de vista (interior o exterior), el contexto de producción y el público. Pero ninguna película es un documento sociológico: incluso la imagen más sobria es una construcción. Resultado final: los tres conceptos permiten juzgar no si una imagen es bella, sino a quién sirve y qué mirada construye."
+          ],
+          "erreurs": [
+            "Confundir estética del hambre (denuncia, Rocha) y cosmética del hambre (crítica de la estetización, Bentes).",
+            "Pensar que una imagen bella es necesariamente cosmética: lo que cuenta es la función de los recursos.",
+            "Olvidar el público al que se dirige la imagen."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

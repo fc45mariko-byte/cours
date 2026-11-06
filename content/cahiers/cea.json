@@ -1,0 +1,356 @@
+{
+  "matiere": "cea",
+  "titre": "Listening and Speaking in English: a Printable Workbook",
+  "introduction": "This workbook trains you, on paper, for the skills of the listening and speaking course: hearing real spoken English, taking notes, reporting on a document and speaking in public. Since you cannot listen to a recording on paper, each exercise gives you a short transcript written for the workbook: read it aloud, or ask someone to read it to you, before working on it. For each section, first read the reminder, then try the exercise by following the method step by step and write your answers on paper. Only then check the answer key: it explains why each answer is right, so read it even when you got the answer right. All the situations, companies and people in the transcripts are invented.",
+  "sections": [
+    {
+      "id": "cea-s1",
+      "titre": "Spoken English: weak forms, connected speech and accents",
+      "chapitre": "cea.oral",
+      "notions": ["cea.oral.formes-faibles", "cea.oral.liaisons", "cea.oral.accents"],
+      "rappel": [
+        "English is a stress-timed language: content words (nouns, verbs, adjectives, adverbs) are stressed; function words (articles, prepositions, auxiliaries, pronouns, conjunctions) are usually said in their weak form, with the vowel reduced to schwa /ə/.",
+        "Common weak forms: to /tə/, for /fə/, and /ən/ or /n/, can /kən/, of /əv/, was /wəz/. The strong form comes back at the end of a sentence or under emphasis (What are you looking for? /fɔː/).",
+        "Can and can't: affirmative can is reduced and unstressed (/kən/); can't is always stressed with a full vowel (/kɑːnt/ UK, /kænt/ US). Stress is the main clue, because the final /t/ is often barely audible.",
+        "Connected speech: linking (pick it up /pɪkɪtʌp/), linking R in British English (far away /fɑːrəweɪ/), assimilation (did you /dɪdʒuː/, would you /wʊdʒuː/, ten pounds /tem paʊndz/), elision (next day /neks deɪ/, last week /lɑːs wiːk/). Gonna, wanna, gotta: recognise them, never write them in professional documents.",
+        "Accents: American English is rhotic (car /kɑːr/), standard British is not (/kɑː/); bath, dance have /ɑː/ in the UK and /æ/ in the US; the American flapped t (water /ˈwɑːɾər/); schedule /ˈʃedjuːl/ UK, /ˈskedʒuːl/ US. A strong accent does not mean poor English, and most business English is spoken between non-native speakers."
+      ],
+      "exercices": [
+        {
+          "id": "cea-1",
+          "niveau": "bases",
+          "titre": "Stressed words and weak forms",
+          "objectif": "Understand why function words seem to disappear in speech, by finding the stressed words and the weak forms in a sentence.",
+          "enonce": "Here are four sentences heard during a phone call between an export assistant and a customer.\n(a) I want to send a sample for the new range.\n(b) We can ship it by the end of the month.\n(c) It was a lot of work, but the order was ready.\n(d) Who is the parcel for?",
+          "methode": [
+            "Step 1: for each sentence, underline the content words: nouns, main verbs, adjectives, adverbs. They carry the meaning, so they are stressed.",
+            "Step 2: circle the function words: articles (a, the), prepositions (to, for, of, by), auxiliaries and modals (can, was), pronouns, conjunctions (and, but).",
+            "Step 3: for each circled word that appears in the reminder table, write its weak form with schwa /ə/.",
+            "Step 4: check the position of each function word. If it is the last word of the sentence, or if it is emphasised, it keeps its strong form.",
+            "Step 5: read the sentence aloud, hitting only the underlined words. The rhythm should feel regular, with small unstressed syllables squeezed between the stressed ones."
+          ],
+          "questions": [
+            "1. In sentence (a), list the stressed words and give the weak forms of to and for.",
+            "2. In sentence (b), how is can pronounced, and why? How would the listener know if the speaker had said can't?",
+            "3. In sentence (c), give the weak forms of was and of, and say which words are stressed.",
+            "4. In sentence (d), is for pronounced /fə/ or /fɔː/? Explain."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Stressed: want, send, sample, new, range (verbs, nouns, adjective). To is said /tə/ and for /fə/: they are prepositions in the middle of the sentence, so they are reduced. Roughly: /aɪ ˈwɒnt tə ˈsend ə ˈsɑːmpl fə ðə ˈnjuː ˈreɪndʒ/.",
+            "2. Can is an affirmative modal in the middle of the sentence: it is reduced to /kən/ and unstressed; the stress falls on ship and end (and month). If the speaker had said can't, the word would be stressed with a full vowel (/kɑːnt/ in British English, /kænt/ in American English). Do not wait for the final /t/: it is often barely heard, so stress and vowel quality are the real clues.",
+            "3. Was becomes /wəz/ (twice) and of becomes /əv/: a lot of work sounds like /ə ˈlɒt əv ˈwɜːk/. Stressed words: lot, work, order, ready. But is a conjunction, so it is not stressed either.",
+            "4. /fɔː/, the strong form, because for is the last word of the sentence. The weak form only appears when the function word is followed by the word it introduces. Final result: the stressed words are the ones you must catch when listening; the weak forms are the ones you must expect to hear as a short /ə/."
+          ],
+          "erreurs": [
+            "Pronouncing every word with the same strength: it sounds unnatural and makes listening harder, because you expect to hear sounds that native speakers do not produce.",
+            "Thinking that can't is recognised by its final /t/: listen for stress and the full vowel.",
+            "Using the weak form at the end of a sentence (Who is it /fə/?): the strong form is required there."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cea-2",
+          "niveau": "application",
+          "titre": "Decoding connected speech",
+          "objectif": "Be able to recognise written words behind connected speech and name the phenomenon (linking, linking R, assimilation, elision, informal contraction).",
+          "enonce": "A trainee wrote down, as she heard them, six extracts from a meeting with a British supplier. Her notes are in the left column; find the written words and name the phenomenon.",
+          "donnees": {
+            "entetes": ["Extract", "What the trainee heard", "Written words", "Phenomenon"],
+            "lignes": [
+              ["1", "/dɪdʒuː/ get the invoice?", "", ""],
+              ["2", "Can you /pɪkɪtʌp/ tomorrow?", "", ""],
+              ["3", "We'll /lɑːs wiːk/ ... no, we did it last week.", "", ""],
+              ["4", "It's /fɑːrəweɪ/ from the port.", "", ""],
+              ["5", "We're /ˈɡʌnə/ need more pallets.", "", ""],
+              ["6", "The fee is /tem paʊndz/ per box.", "", ""]
+            ]
+          },
+          "methode": [
+            "Step 1: read the phonetic part slowly and try to cut it into words. Look for a consonant at the end of one word that has been glued to the vowel of the next one.",
+            "Step 2: ask yourself whether a sound has changed (assimilation: /d/ + /j/ gives /dʒ/; /n/ before /p/ becomes /m/), disappeared (elision: /t/ between two consonants), or been added (linking /r/ between two vowels in British English).",
+            "Step 3: if the form is gonna, wanna or gotta, it is an informal contraction: give the full written form.",
+            "Step 4: check that your written sentence makes sense in a business meeting."
+          ],
+          "questions": [
+            "1. Complete the table: written words and phenomenon for each extract.",
+            "2. Which of these forms must never appear in a professional e-mail, and how should it be written?",
+            "3. Why does the trainee hear /tem/ instead of /ten/ in extract 6?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. (1) Did you get the invoice? Assimilation: /d/ + /j/ merge into /dʒ/. (2) pick it up: linking, the final consonants k and t join the following vowels, so three words sound like one. (3) last week: elision, the /t/ of last disappears between /s/ and /w/. (4) far away: linking R, typical of British English; the r of far, silent before a consonant, is pronounced because a vowel follows. (5) going to: informal contraction gonna. (6) ten pounds: assimilation, /n/ becomes /m/ before /p/.",
+            "2. Gonna must never be written in a professional document: write We are going to need more pallets (or We will need). The course rule is: recognise gonna, wanna, gotta when you hear them, but avoid them in professional writing.",
+            "3. Because of assimilation: /n/ is pronounced with the tongue, /p/ with the lips; to save effort, the speaker already closes the lips, which turns /n/ into /m/. The listener must mentally restore ten. Final result: connected speech changes the sounds, not the words; knowing the five phenomena lets you rebuild the words."
+          ],
+          "erreurs": [
+            "Confusing elision (a sound disappears) with assimilation (a sound changes).",
+            "Expecting a linking R in American English in the same way: the course presents it as a feature of British English.",
+            "Writing gonna or wanna in a report or an e-mail."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cea-3",
+          "niveau": "application",
+          "titre": "One meeting, three accents",
+          "objectif": "Identify British and American pronunciation features and react professionally in a multi-accent conversation.",
+          "enonce": "Transcript (read it aloud). Video conference between Ms Patel (buyer, based in Mumbai), Mr Brooks (supplier, based in Chicago) and Ms Hughes (freight forwarder, based in London).\nBROOKS: We can't change the /ˈskedʒuːl/, I'm afraid. The trucks leave on Monday.\nHUGHES: Then the containers reach the port on Thursday. The /ˈʃedjuːl/ is tight but fine.\nBROOKS: Make sure the /ˈwɑːɾər/-resistant packaging is used, the goods travel by /kɑːr/ and train to the coast.\nPATEL: Thank you. Just to be sure: departure Monday, arrival at the port Thursday?\nHUGHES: That's right. I /kɑːnt/ promise an earlier date.",
+          "methode": [
+            "Step 1: for each phonetic word, find the written word, then compare with the reminder table (UK/US differences).",
+            "Step 2: decide which speaker is likely to have a British accent and which an American accent, using at least two clues each (rhotic /r/, flapped t, schedule, vowel in can't).",
+            "Step 3: look at Ms Patel's line: what is she doing, and why is it a good habit in an international meeting?",
+            "Step 4: remember the confusion in the course: an accent says nothing about someone's level of English."
+          ],
+          "questions": [
+            "1. Write the five phonetic words in normal spelling.",
+            "2. Which speaker shows American features, and which shows British features? Give the clues.",
+            "3. What is Ms Patel doing in her line, and what should the export assistant do after the meeting?",
+            "4. A colleague says: Ms Patel's accent is strong, so her English must be weak. React in one sentence."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. schedule, schedule, water, car, can't. (Two different pronunciations of the same word schedule: /sk/ in the US, /ʃ/ in the UK.)",
+            "2. Mr Brooks shows American features: schedule with /sk/, the flapped t in water (/ɾ/), the /r/ pronounced at the end of car (American English is rhotic). Ms Hughes shows British features: schedule with /ʃ/ and can't with the long vowel /ɑː/ (Americans say /kænt/). This is coherent with the cities where they are based.",
+            "3. She rephrases the key information to check that everyone has understood the same deadlines (departure Monday, arrival Thursday). After the meeting, the assistant should restate the decisions in writing, as in the course example, so that nobody depends on how well they understood each accent.",
+            "4. Possible answer: A strong accent does not indicate a poor command of English; Ms Patel understood and summarised the schedule perfectly. Final result: the more accents you are exposed to, the better you understand them; confirming figures and dates is the professional safety net."
+          ],
+          "erreurs": [
+            "Thinking that only British or American English is correct: most business exchanges in English happen between non-native speakers.",
+            "Mistaking the American flapped t in water for a /d/ and hearing another word.",
+            "Judging competence by accent."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "cea-s2",
+      "titre": "Listening method: listening in stages, note-taking, reporting",
+      "chapitre": "cea.methode",
+      "notions": ["cea.methode.ecoute", "cea.methode.prise-notes", "cea.methode.restitution"],
+      "rappel": [
+        "Before listening, predict: read the instructions and the title, guess the topic and the likely vocabulary.",
+        "Listening 1 (global): situation (who, to whom, where, why), type of document, topic, tone. Listening 2: main ideas and structure. Listening 3: details (figures, names, dates, causes, consequences, opinions). Then rebuild the meaning and check that it is coherent.",
+        "Rely on stressed words, cognates and connectors (but, however, so, because): connectors show contrast, cause and consequence, i.e. the logic of the document.",
+        "Notes are not a transcription: keywords, symbols (↑ increase, ↓ decrease, → consequence, ≠ contrast, = equal, + addition, b/c because), abbreviations (govt, mkt, co., w/, w/o, e.g., i.e.), figures and proper nouns written down at once, a clear layout (columns topic / ideas / details, or a mind map).",
+        "The report: introductory sentence (type of document, source, speakers, topic), main ideas grouped logically, significant details, points of view attributed to their authors (according to the director...), concluding sentence. Full sentences, connectors, objectivity, required length, nothing invented."
+      ],
+      "exercices": [
+        {
+          "id": "cea-4",
+          "niveau": "bases",
+          "titre": "From sentences to notes",
+          "objectif": "Learn to turn spoken sentences into short notes with keywords, symbols and abbreviations, without losing the logical links.",
+          "enonce": "Here are five sentences from a business news bulletin. Turn each one into a line of notes.\n(a) The government has announced that exports of cheese increased by twelve per cent last year.\n(b) Sales in the Asian market fell because the company raised its prices.\n(c) Unlike its competitors, the company sells without intermediaries.\n(d) Shipping costs have doubled, and as a result small firms are delaying their orders.\n(e) The new warehouse, for example the one in Rotterdam, works with robots.",
+          "methode": [
+            "Step 1: find the keywords in each sentence (who, what, how much). Delete everything that does not carry information (articles, has announced that, the fact that).",
+            "Step 2: replace the logical link by a symbol: increase ↑, decrease ↓, consequence →, contrast ≠, cause b/c, addition +.",
+            "Step 3: shorten frequent words with the abbreviations of the course: govt, mkt, co., w/, w/o, e.g.",
+            "Step 4: write figures in digits and keep them exactly (12%).",
+            "Step 5: reread your note and check that you could rebuild the full sentence from it."
+          ],
+          "questions": [
+            "1. Write one line of notes for each sentence (a) to (e).",
+            "2. Which word in each sentence told you which symbol to use?",
+            "3. Why is it a mistake to write the full sentence while listening?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Possible notes: (a) Govt: cheese exports ↑ 12% last yr. (b) Sales Asian mkt ↓ b/c co. ↑ prices. (c) Co. ≠ competitors: sells w/o intermediaries. (d) Shipping costs x2 → small firms delay orders. (e) New warehouse, e.g. Rotterdam: robots. Other abbreviations are acceptable if you can read them back.",
+            "2. (a) increased gives ↑. (b) fell gives ↓, because gives b/c, raised gives ↑. (c) unlike gives ≠, without gives w/o. (d) as a result gives →. (e) for example gives e.g. These words are connectors or verbs of change: they carry the logic, so they must never be lost, even when the rest is cut.",
+            "3. Writing full sentences is too slow: while you write, the speaker goes on and you miss the next idea. The course stresses that notes are not a transcription. Final result: a good note keeps the keywords, the figures and the logical links, and nothing else."
+          ],
+          "erreurs": [
+            "Forgetting the logical link: noting sales Asian mkt ↓, prices ↑ without b/c loses the cause.",
+            "Writing figures in words or rounding them.",
+            "Inventing abbreviations you cannot read back later."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cea-5",
+          "niveau": "application",
+          "titre": "Listening in stages to a radio interview",
+          "objectif": "Apply the three listening stages to a transcript and pick out key information and discourse markers.",
+          "enonce": "Transcript (read it aloud three times, as if you were listening three times). Title: 'Small producers go global'.\nPRESENTER: Good morning. With me today is Laura Kemp, who runs Kemp Teas, a family business in Kent. Laura, you started exporting three years ago. Why?\nKEMP: Well, the home market was saturated. So we looked abroad, first to Germany and then to Japan.\nPRESENTER: And was it easy?\nKEMP: Not at all. The paperwork was a nightmare. However, we got help from a regional export agency, and that made all the difference. Today forty per cent of our turnover comes from exports.\nPRESENTER: Forty per cent! What advice would you give to other small firms?\nKEMP: Start with one market, learn its rules, and visit your customers. Because, in the end, trade is about trust.",
+          "methode": [
+            "Before listening: from the title alone, write three words you expect to hear (predict the topic and vocabulary).",
+            "Listening 1 (global): answer who, to whom, where, why; name the type of document and the tone.",
+            "Listening 2 (main ideas): find the structure. Notice that the presenter's questions divide the interview into parts.",
+            "Listening 3 (details): pick out figures, names of places, the agency, the advice.",
+            "Underline every connector (so, however, because, first, then) and write its function next to it: consequence, contrast, cause, sequence.",
+            "Finally, check coherence: do your details fit your main ideas?"
+          ],
+          "questions": [
+            "1. Global listening: type of document, speakers, topic, tone.",
+            "2. What are the three main ideas of the interview?",
+            "3. List the details: countries, figures, sources of help, three pieces of advice.",
+            "4. Find four connectors and give their function. Which one tells you that a difficulty is followed by a solution?",
+            "5. Take notes on the whole interview in three columns (topic / ideas / details)."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Type: radio interview (a presenter asks questions, a guest answers). Speakers: the presenter and Laura Kemp, head of Kemp Teas, a family business in Kent. Topic: how a small firm started exporting. Tone: positive, encouraging, with a realistic note about difficulties.",
+            "2. (1) Why they exported: the home market was saturated. (2) The difficulties and how they were overcome: paperwork, help from a regional export agency. (3) Results and advice: 40% of turnover from exports; advice to other small firms. The structure follows the presenter's three questions.",
+            "3. Countries: Germany first, then Japan. Figures: three years ago; forty per cent of turnover. Help: a regional export agency. Advice: start with one market, learn its rules, visit your customers (because trade is about trust).",
+            "4. So (consequence: saturated market, therefore exports); first ... then (sequence: Germany before Japan); however (contrast: the difficulty, then the solution); because (cause: why customers must be visited). However is the marker that announces the turn from problem to solution: after it, listen very carefully, because the important information often follows a contrast connector.",
+            "5. Possible notes. Topic: Kemp Teas (family co., Kent), exports since 3 yrs. Ideas: home mkt saturated → export (1. Germany, 2. Japan) | paperwork = nightmare ≠ help regional export agency | 40% turnover = exports. Details / advice: 1 mkt, learn rules, visit customers b/c trade = trust. Final result: three listenings, each with a different goal, give a complete and organised picture without transcribing every word."
+          ],
+          "erreurs": [
+            "Trying to understand everything at the first listening instead of first identifying the situation.",
+            "Writing Kemp Teas exports 40% of its products: the figure concerns turnover, not volume. Note figures with what they measure.",
+            "Ignoring however: you then miss the solution to the problem."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cea-6",
+          "niveau": "application",
+          "titre": "Writing the report from your notes",
+          "objectif": "Write a faithful, organised report of an oral document, with an introductory sentence, grouped ideas and attributed points of view.",
+          "enonce": "Use your notes on the Kemp Teas interview (exercise cea-5). Instruction: write a report in English of about 100 words. Then compare your work with the two student openings below.\nStudent A: 'Exporting is very hard for small companies and the government should help them more.'\nStudent B: 'This document is an extract from a radio interview in which Laura Kemp, who runs the family business Kemp Teas in Kent, explains how her company started exporting.'",
+          "methode": [
+            "Step 1: write the introductory sentence: type of document, source, speaker, topic.",
+            "Step 2: group the ideas in a logical order (cause, difficulties and solution, results, advice). You are not obliged to follow the order of the document.",
+            "Step 3: add the significant details (countries, 40% of turnover, export agency).",
+            "Step 4: attribute the points of view: according to Laura Kemp..., she believes that...",
+            "Step 5: link your sentences with connectors (because, however, as a result, finally) and end with a concluding sentence.",
+            "Step 6: check: nothing invented, no personal opinion, length respected."
+          ],
+          "questions": [
+            "1. Which opening, A or B, is correct? Explain what is wrong with the other.",
+            "2. Write your report (about 100 words).",
+            "3. Underline in your report the phrases that attribute ideas to the speaker."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. B is correct: it presents the document (radio interview), the speaker, her company and the topic. A is a personal opinion; it also adds an idea (the government should help) that is not in the interview. A report stays faithful to the document; a personal opinion is given only if the instructions ask for it.",
+            "2. Model report: This document is an extract from a radio interview in which Laura Kemp, who runs the family business Kemp Teas in Kent, explains how her company started exporting. According to her, the firm turned to foreign markets three years ago because its home market was saturated, first Germany and then Japan. She admits that the paperwork was very difficult; however, the help of a regional export agency made all the difference. As a result, exports now represent forty per cent of the company's turnover. Finally, she advises small firms to start with one market, learn its rules and visit customers, since, in her view, trade is about trust.",
+            "3. According to her; she admits that; she advises; in her view. These phrases show that the ideas are the speaker's, not yours. Final result: introduction, logically grouped ideas, figures, attributed opinions and connectors make a report faithful and easy to follow."
+          ],
+          "erreurs": [
+            "Starting with a personal comment instead of presenting the document.",
+            "Adding facts you did not hear (for example the name of the agency or the products sold in Japan).",
+            "Writing a list of notes instead of full sentences linked by connectors."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "cea-s3",
+      "titre": "Speaking: presentations and interaction",
+      "chapitre": "cea.expression",
+      "notions": ["cea.expression.presentation", "cea.expression.interaction"],
+      "rappel": [
+        "A presentation is signposted. Opening: greet, introduce yourself, announce topic, objective and outline (Today I'd like to talk about... First... Then... Finally...).",
+        "Main body: one idea per part, explicit transitions (Let's move on to..., This brings me to..., Let's now turn to...), commentary on visuals (As you can see on this slide..., This chart shows...).",
+        "Conclusion: summary, recommendation, thanks, invitation to ask questions (To sum up..., I'd recommend that we..., I'd be happy to take any questions). Speak from notes; never read your slides.",
+        "Interaction: give your opinion (In my view...), agree (That's a good point), disagree politely (I see what you mean, but... / I'm afraid I don't quite agree), ask for clarification (Could you clarify...?), rephrase (So, if I understand correctly...), buy time (Let me think about it), interrupt politely (Sorry to interrupt, but...).",
+        "I'm afraid is a softening formula meaning unfortunately, not a statement of fear. On the phone, spell names (Alpha, Bravo...), confirm figures and summarise in writing."
+      ],
+      "exercices": [
+        {
+          "id": "cea-7",
+          "niveau": "bases",
+          "titre": "Sorting signposting expressions",
+          "objectif": "Recognise the function of each signposting expression and know where it goes in a presentation.",
+          "enonce": "Here are ten expressions heard in presentations. Classify them by stage: opening, objective and outline, transition, visual, conclusion, questions.\n(a) Good morning, everyone. My name is Hugo Martin and I'm in charge of export sales.\n(b) Let's move on to the competition.\n(c) As you can see on this slide, orders have risen every month.\n(d) To sum up, the Spanish market is promising.\n(e) I've divided my talk into three parts.\n(f) I'd be happy to take any questions.\n(g) This brings me to my second point.\n(h) The purpose of this presentation is to compare two suppliers.\n(i) This chart shows our market share.\n(j) I'd recommend that we open an office in Madrid.",
+          "methode": [
+            "Step 1: ask what the speaker is doing with each sentence: starting, announcing, changing part, commenting on an image, closing, inviting the audience.",
+            "Step 2: look for clue words: purpose, divided (outline); move on, brings me to (transition); as you can see, chart, slide (visual); to sum up, recommend (conclusion); questions.",
+            "Step 3: put the stages in the order of a real presentation and check that each expression is in a logical place."
+          ],
+          "questions": [
+            "1. Classify the ten expressions by stage.",
+            "2. Put the six stages in the right order.",
+            "3. Why are transitions so important for an audience that is listening, not reading?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Opening: (a). Objective and outline: (h), (e). Transition: (b), (g). Visual: (c), (i). Conclusion: (d), (j). Questions: (f).",
+            "2. Opening, objective and outline, then the main body with transitions and visuals, then conclusion (summary and recommendation), and finally questions.",
+            "3. A listener cannot go back to the previous page or see the titles: signposting tells them where they are in the talk, when one part ends and the next begins. That is why the course calls these expressions signposting: they guide the audience like road signs. Final result: each expression has one function; using them in the right place makes a presentation easy to follow."
+          ],
+          "erreurs": [
+            "Putting I'd recommend that we... in the introduction: a recommendation comes at the end, after the arguments.",
+            "Forgetting to announce the outline: the audience then cannot anticipate.",
+            "Reading the slide aloud instead of commenting on it (As you can see... + what it means)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cea-8",
+          "niveau": "application",
+          "titre": "Preparing a three-minute presentation",
+          "objectif": "Build the plan and the key sentences of a short professional presentation from a set of notes.",
+          "enonce": "You are an intern at Atlantic Foods (an invented company). Your manager asks you to present, in English, the results of a market study on Mexico to the sales team. Your notes:\n- Market: growing demand for imported cheese, mainly in large cities.\n- Competition: two European exporters already present; prices higher than ours.\n- Chart prepared: monthly imports of cheese, rising since 2023.\n- Recommendation: test the market with one distributor in Mexico City.",
+          "methode": [
+            "Step 1: decide on a three-part outline using your notes (one idea per part).",
+            "Step 2: write the opening: greeting, your name and role, topic, purpose, outline with First... Then... Finally...",
+            "Step 3: write one transition between each part, each with a different expression.",
+            "Step 4: write one sentence commenting on the chart (As you can see... / This chart shows...).",
+            "Step 5: write the conclusion: summary, recommendation, thanks, invitation to ask questions.",
+            "Step 6: prepare notes with keywords only (not full sentences) to speak from, and practise aloud, stressing the content words."
+          ],
+          "questions": [
+            "1. Write the outline in three parts.",
+            "2. Write the opening (3 to 4 sentences).",
+            "3. Write the two transitions and the sentence about the chart.",
+            "4. Write the conclusion (2 to 3 sentences).",
+            "5. Why should you not write the whole speech on your slides?"
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Part 1: the Mexican market (growing demand). Part 2: the competition (two European exporters, higher prices). Part 3: recommendation (test with one distributor in Mexico City). The order goes from facts to analysis to action.",
+            "2. Model: Good morning, everyone. My name is ... and I'm an intern in the export department. The purpose of this presentation is to share the results of our market study on Mexico. First, I'll give you an overview of the market; then I'll look at the competition; finally, I'll make a recommendation.",
+            "3. Chart: As you can see on this chart, imports of cheese have risen steadily since 2023. Transitions: Let's now turn to the competition. / This brings me to my recommendation. Using two different expressions avoids repetition and clearly marks each change of part.",
+            "4. Model: To sum up, demand is growing and our prices are lower than those of our two main competitors. I'd recommend that we test the market with one distributor in Mexico City. Thank you for your attention; I'd be happy to answer any questions.",
+            "5. Slides support the talk; they do not replace it. If everything is written, the audience reads instead of listening, and you are tempted to read aloud instead of looking at them. Final result: a clear outline, signposting at every step and a conclusion that leads to action make a professional presentation."
+          ],
+          "erreurs": [
+            "Announcing an outline and then not following it.",
+            "Describing the chart without saying what it means for the company.",
+            "Ending abruptly without a summary or an invitation to ask questions."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "cea-9",
+          "niveau": "approfondissement",
+          "titre": "Making a blunt meeting more professional",
+          "objectif": "Use the softening and checking expressions of spoken interaction to disagree, clarify and rephrase tactfully.",
+          "enonce": "Transcript of a negotiation between Tom (a French exporter, speaking very directly) and Ms Silva (a Brazilian buyer).\nSILVA: We need delivery in two weeks.\nTOM: No. Impossible.\nSILVA: Our previous supplier offered flexible terms.\nTOM: What? Flexible terms means nothing.\nSILVA: (speaking about her company) Our managing director, Mr Gonçalves, will sign.\nTOM: How do you write that?\nSILVA: And the price must be fifteen per cent lower.\nTOM: (says nothing for a long time)",
+          "methode": [
+            "Step 1: for each of Tom's lines, identify the function he needs: disagreeing, asking for clarification, checking a name, buying time.",
+            "Step 2: find in the reminder an expression that performs that function politely (I'm afraid..., I see your point, but..., Could you clarify what you mean by...?, Could you spell...?, That's an interesting question. Let me think about it.).",
+            "Step 3: where possible, add a counter-proposal after the disagreement: refusing without offering anything blocks the negotiation.",
+            "Step 4: finish with a rephrasing sentence that sums up what has been agreed so far."
+          ],
+          "questions": [
+            "1. Rewrite Tom's first line politely, with a counter-proposal.",
+            "2. Rewrite his second line as a request for clarification.",
+            "3. Rewrite his third line to check the name.",
+            "4. What should Tom say instead of remaining silent?",
+            "5. Write a final rephrasing sentence, and translate I'm afraid we can't into French."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. I see your point about the delivery time, but I'm afraid we can't commit to two weeks. Could we agree on three weeks, with a penalty clause if we're late? The first part acknowledges the request, I'm afraid softens the refusal, and the question keeps the negotiation open.",
+            "2. Could you clarify what you mean by flexible terms? Tom does not know what the buyer means: rejecting the phrase is impolite, asking for clarification is professional and gives him information.",
+            "3. Could you spell his name, please? On the phone or in a video conference, names are spelt out (with the phonetic alphabet if needed) to avoid mistakes in the contract.",
+            "4. That's an interesting question. Let me think about it. This expression buys time politely, whereas a long silence can be read as embarrassment or rejection.",
+            "5. Rephrasing: So, if I understand correctly, you need delivery within two weeks and a price fifteen per cent lower, and Mr Gonçalves will sign the contract. In French, I'm afraid we can't = « Malheureusement, nous ne pouvons pas »: it is a polite formula, not « j'ai peur ». Final result: the same content, said with softeners, questions and rephrasing, keeps the relationship good and avoids misunderstandings."
+          ],
+          "erreurs": [
+            "Translating I'm afraid as « j'ai peur ».",
+            "Saying no without a counter-proposal: it blocks the discussion.",
+            "Using informal or rude words (Whatever, What?) in a professional context."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "matiere": "dcl",
+  "titre": "Cahier d'exercices : Droit des contrats de la common law",
+  "introduction": "Ce cahier vous entraîne à raisonner comme un juriste de common law, en français mais avec les termes anglais exacts (offer, consideration, breach…). Pour chaque section, relisez d'abord le rappel : il réunit les règles et les affaires (cases) à citer. Faites ensuite l'exercice sur papier en suivant la méthode : qualifiez les faits, énoncez la règle avec son affaire, appliquez-la, puis concluez. Comparez enfin avec le corrigé, qui explique chaque étape, et lisez les erreurs fréquentes, souvent dues à une confusion avec le droit français ou la CVIM. Les situations des cas pratiques sont fictives ; les affaires citées sont celles du cours.",
+  "sections": [
+    {
+      "id": "dcl-s1",
+      "titre": "Les systèmes juridiques : common law, précédent, equity, statutes",
+      "chapitre": "dcl.systemes",
+      "notions": ["dcl.systemes.civil-common", "dcl.systemes.precedent", "dcl.systemes.equity", "dcl.systemes.statutes"],
+      "rappel": [
+        "Civil law : codes et lois, raisonnement déductif, juge qui applique la loi, contrats courts renvoyant au Code civil, procédure plus inquisitoire. Common law : précédents (case law) et lois (statutes), raisonnement inductif de cas en cas, juge qui fait évoluer le droit, contrats longs et détaillés, procédure accusatoire (adversarial).",
+        "Stare decisis : les juridictions suivent les décisions des juridictions supérieures. Seule la ratio decidendi (principe nécessaire à la solution au regard des faits essentiels) est obligatoire ; les obiter dicta ne sont que persuasifs.",
+        "Distinguishing : écarter un précédent car les faits essentiels diffèrent. Overruling : une juridiction supérieure renverse un précédent dans une autre affaire. Reversing : la juridiction d'appel infirme la décision dans la même affaire. Depuis le Practice Statement de 1966, la plus haute juridiction peut s'écarter de ses précédents.",
+        "Equity : règles de la Court of Chancery corrigeant la rigidité de la common law ; remèdes discrétionnaires (specific performance, injunction, rescission, rectification) ; maximes « clean hands », « delay defeats equity ». Les Judicature Acts 1873-1875 ont fusionné l'administration des deux ordres.",
+        "Statute law : lois du Parlement, qui priment sur la case law (souveraineté parlementaire). Méthodes d'interprétation : literal rule, golden rule, mischief rule, purposive approach."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-1",
+          "niveau": "bases",
+          "titre": "Civil law ou common law ? Classer les caractéristiques",
+          "objectif": "Identifier les traits distinctifs des deux grandes traditions juridiques et comprendre leurs conséquences sur la rédaction des contrats.",
+          "enonce": "Classez chaque caractéristique dans la colonne « civil law » ou « common law », puis répondez aux questions.",
+          "donnees": {
+            "entetes": ["N°", "Caractéristique"],
+            "lignes": [
+              ["1", "Le juge crée et fait évoluer le droit par ses décisions, qui lient les juges inférieurs."],
+              ["2", "La source principale est un code général des contrats."],
+              ["3", "Le raisonnement part d'une règle générale pour l'appliquer au cas (déductif)."],
+              ["4", "Le procès est conduit par les parties devant un juge arbitre, avec contre-interrogatoire."],
+              ["5", "Les contrats commencent souvent par une longue clause « Definitions »."],
+              ["6", "Le juge a traditionnellement un rôle plus actif dans la conduite de la procédure."],
+              ["7", "Le raisonnement procède de cas en cas, par analogie (inductif)."]
+            ]
+          },
+          "methode": [
+            "Demandez-vous pour chaque trait : d'où vient la règle (code ou décisions de justice) ? Qui conduit le procès ?",
+            "Reliez la forme des contrats à l'existence ou non d'un code : sans code général des contrats, les parties doivent tout prévoir.",
+            "Méfiez-vous de l'idée reçue selon laquelle la common law ignorerait la loi écrite."
+          ],
+          "questions": [
+            "1. Classez les caractéristiques 1 à 7.",
+            "2. Expliquez pourquoi un contrat de distribution soumis au droit anglais est souvent beaucoup plus long que le même contrat soumis au droit français.",
+            "3. Vrai ou faux : « La common law ne connaît pas de lois écrites. » Justifiez avec deux exemples de statutes du cours."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Common law : 1, 4, 5, 7. Civil law : 2, 3, 6. Les traits 1 et 7 viennent de la règle du précédent ; le trait 4 décrit la procédure accusatoire (adversarial) ; le trait 5 s'explique par l'absence de code.",
+            "2. En droit français, le contrat peut rester court car il renvoie au Code civil pour ce qu'il ne prévoit pas. En droit anglais, il n'existe pas de code général des contrats : les parties définissent chaque terme, prévoient chaque hypothèse et limitent les obligations implicites. D'où des contrats de 40 pages au lieu de 12, comme dans l'exemple du cours.",
+            "3. Faux. Les statutes sont nombreux et priment sur la case law : par exemple le Sale of Goods Act 1979, l'Unfair Contract Terms Act 1977, le Misrepresentation Act 1967, le Contracts (Rights of Third Parties) Act 1999 ou le Consumer Rights Act 2015. Ils traitent des questions précises sans former un code."
+          ],
+          "erreurs": [
+            "Croire que la common law n'a pas de lois écrites.",
+            "Confondre « statute » (loi précise) et « code » au sens français.",
+            "Oublier que « common law » désigne aussi, dans un autre sens, le droit jurisprudentiel par opposition à l'equity."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "dcl-2",
+          "niveau": "application",
+          "titre": "Lire un précédent : ratio, obiter, distinguishing",
+          "objectif": "Savoir isoler la partie obligatoire d'une décision et choisir le mécanisme qui permet d'appliquer, d'écarter ou de renverser un précédent.",
+          "enonce": "Une décision fictive de la Court of Appeal, Harlow Traders v Penn (2019), juge qu'une liste de prix affichée dans la vitrine d'un grossiste est une simple invitation to treat : le grossiste n'est donc pas obligé de vendre au prix affiché. Dans ses motifs, le juge ajoute : « Il en irait peut-être autrement d'une promesse publiée sur Internet garantissant un prix à tous les clients pendant un mois. » Trois affaires sont ensuite jugées. Affaire 1 : la High Court doit juger un cas identique (prix affiché en vitrine, refus de vendre). Affaire 2 : la High Court doit juger le cas d'un grossiste ayant affiché « Les dix premiers clients obtiendront ce prix, garanti ». Affaire 3 : des années plus tard, la Supreme Court estime, dans une autre affaire, que la solution de Harlow Traders est erronée et la renverse.",
+          "methode": [
+            "Repérez la ratio decidendi : le principe juridique nécessaire pour trancher, au regard des faits essentiels (prix affiché en vitrine, refus de vendre).",
+            "Repérez l'obiter dictum : la remarque faite « en passant », qui n'était pas nécessaire à la solution.",
+            "Pour chaque affaire, situez la juridiction par rapport à la Court of Appeal (inférieure ou supérieure) et comparez les faits essentiels.",
+            "Choisissez le mot juste : appliquer le précédent, distinguishing, overruling ou reversing."
+          ],
+          "questions": [
+            "1. Quelle est la ratio decidendi de Harlow Traders ? Quel passage est un obiter dictum ? Quelle est l'autorité de chacun ?",
+            "2. Affaire 1 : que doit faire la High Court ?",
+            "3. Affaire 2 : quel mécanisme la High Court peut-elle utiliser, et pourquoi ?",
+            "4. Affaire 3 : comment s'appelle le mécanisme utilisé ? En quoi diffère-t-il du reversing ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Ratio : un prix affiché en vitrine constitue une invitation to treat, de sorte que le commerçant n'est pas tenu de vendre. C'est obligatoire pour les juridictions inférieures (binding precedent). La phrase sur la promesse en ligne est un obiter dictum : elle n'était pas nécessaire à la solution et n'a qu'une autorité persuasive.",
+            "2. La High Court est inférieure à la Court of Appeal et les faits essentiels sont identiques : elle doit appliquer la ratio (stare decisis) et juger qu'il s'agit d'une invitation to treat.",
+            "3. Le distinguishing : les faits essentiels diffèrent, car l'affichage contient une promesse ferme (« garanti », « dix premiers clients »), proche de l'offre unilatérale de Carlill v Carbolic Smoke Ball. La High Court peut donc écarter le précédent sans le contredire.",
+            "4. C'est un overruling : une juridiction supérieure renverse un précédent dans une autre affaire ; la Supreme Court peut s'écarter des précédents depuis le Practice Statement de 1966. Le reversing, lui, est l'infirmation par la juridiction d'appel de la décision rendue dans la même affaire."
+          ],
+          "erreurs": [
+            "Considérer toute la décision comme obligatoire, y compris les obiter dicta.",
+            "Confondre overruling (autre affaire) et reversing (même affaire).",
+            "Croire qu'une juridiction inférieure peut écarter un précédent simplement parce qu'elle le désapprouve : il lui faut des faits essentiels différents."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dcl-s2",
+      "titre": "L'organisation judiciaire anglaise et américaine, et le Brexit",
+      "chapitre": "dcl.juridictions",
+      "notions": ["dcl.juridictions.angleterre", "dcl.juridictions.usa", "dcl.juridictions.brexit"],
+      "rappel": [
+        "Angleterre et pays de Galles (matière civile) : County Courts (affaires courantes) ; High Court (King's Bench Division, dont la Commercial Court ; Chancery Division ; Family Division) ; Court of Appeal (Civil Division) ; Supreme Court of the United Kingdom, opérationnelle depuis 2009 (elle a remplacé l'Appellate Committee de la House of Lords).",
+        "États-Unis : double organisation. Fédéral : District Courts, Courts of Appeals (13 circuits), Supreme Court. Chaque État a ses propres juridictions (dans l'État de New York, la « Supreme Court » juge en première instance). Le droit des contrats relève surtout du droit de chaque État (common law de l'État et UCC adopté par lui).",
+        "Les tribunaux fédéraux sont compétents notamment pour les questions de droit fédéral et les litiges entre citoyens d'États différents ou impliquant un étranger (diversity jurisdiction) ; ils appliquent alors le droit de l'État concerné au contrat.",
+        "Brexit : depuis le 1er janvier 2021, Bruxelles I bis ne s'applique plus entre l'UE et le Royaume-Uni ; pas d'adhésion à Lugano. Restent la Convention de La Haye de 2005 (clauses d'élection de for exclusives) et celle de 2019 (en vigueur pour le Royaume-Uni depuis le 1er juillet 2025). L'arbitrage (Convention de New York) n'est pas affecté. Le Royaume-Uni n'est pas partie à la CVIM."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-3",
+          "niveau": "bases",
+          "titre": "Reconstituer les pyramides judiciaires",
+          "objectif": "Situer chaque juridiction anglaise et américaine à son niveau et éviter les pièges de vocabulaire.",
+          "enonce": "Voici des juridictions en désordre : U.S. District Court ; Court of Appeal (Civil Division) ; County Court ; Supreme Court of the United Kingdom ; U.S. Court of Appeals ; Commercial Court ; Supreme Court of New York ; U.S. Supreme Court ; Appellate Division (New York) ; Court of Appeals (New York).",
+          "methode": [
+            "Séparez d'abord les juridictions anglaises, fédérales américaines et de l'État de New York.",
+            "Pour chaque groupe, rangez du bas (première instance) vers le haut (dernier ressort).",
+            "Ne vous fiez pas aux noms : à New York, « Supreme Court » désigne une juridiction de première instance et la plus haute cour de l'État s'appelle Court of Appeals."
+          ],
+          "questions": [
+            "1. Construisez trois pyramides (Angleterre et pays de Galles ; fédéral américain ; État de New York) en indiquant pour chaque juridiction son niveau.",
+            "2. Quelle juridiction anglaise jugera en première instance un litige de plusieurs millions de livres sur un contrat d'affrètement ? Où iront les recours ?",
+            "3. Pourquoi est-il faux d'affirmer qu'aujourd'hui « la House of Lords juge en dernier ressort » ?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Angleterre et pays de Galles : County Court et High Court en première instance (la Commercial Court est rattachée à la King's Bench Division de la High Court) ; Court of Appeal (Civil Division) en appel ; Supreme Court of the United Kingdom au sommet. Fédéral : U.S. District Court (première instance), U.S. Court of Appeals (appel, par circuit), U.S. Supreme Court. New York : Supreme Court of New York (première instance), Appellate Division (appel), Court of Appeals (plus haute cour de l'État).",
+            "2. La Commercial Court (King's Bench Division de la High Court), spécialisée dans les litiges commerciaux complexes ; appel devant la Court of Appeal, puis, avec autorisation, devant la Supreme Court.",
+            "3. Depuis 2009, la fonction judiciaire suprême appartient à la Supreme Court of the United Kingdom, créée par le Constitutional Reform Act 2005 ; l'Appellate Committee de la House of Lords a été remplacé."
+          ],
+          "erreurs": [
+            "Placer la « Supreme Court of New York » au sommet de l'État.",
+            "Situer la House of Lords au sommet actuel du système.",
+            "Croire que la Commercial Court est une juridiction d'appel."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "dcl-4",
+          "niveau": "application",
+          "titre": "Plaider contre un partenaire anglais ou texan",
+          "objectif": "Conseiller une entreprise française sur le choix du juge et sur l'exécution d'une décision, aux États-Unis et au Royaume-Uni après le Brexit.",
+          "enonce": "Cas 1 : la société Vannes du Centre (Orléans) réclame 2 M$ d'impayés à un distributeur texan ; le contrat ne contient aucune clause de choix de loi. Cas 2 : la même société signe en 2026 un contrat avec un distributeur de Manchester et se demande quelle clause de règlement des litiges insérer pour pouvoir faire exécuter facilement une décision.",
+          "methode": [
+            "Cas 1 : demandez-vous si un tribunal fédéral peut être compétent (diversity jurisdiction : litige impliquant un étranger) et quel droit des contrats il appliquera.",
+            "Rappelez-vous que le droit des contrats américain est surtout un droit d'État.",
+            "Cas 2 : listez ce qui a changé depuis le 1er janvier 2021 (fin de Bruxelles I bis, pas de Lugano) et ce qui reste disponible (La Haye 2005 et 2019, Convention de New York).",
+            "Comparez la prévisibilité d'une clause attributive exclusive et d'une clause d'arbitrage."
+          ],
+          "questions": [
+            "1. Cas 1 : devant quelles juridictions la société peut-elle agir ? Quel droit sera appliqué au contrat ?",
+            "2. Cas 2 : un jugement du tribunal de commerce d'Orléans circulerait-il au Royaume-Uni comme avant 2021 ? Pourquoi ?",
+            "3. Cas 2 : proposez deux options de clause et indiquez celle que le cours présente comme la plus prévisible."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. La société peut saisir un tribunal de l'État du Texas ou, au titre de la diversity jurisdiction (litige impliquant un étranger, au-delà d'un certain montant), la U.S. District Court du district concerné. Dans les deux cas, le droit du Texas, y compris l'UCC tel qu'adopté par cet État, s'appliquera aux questions de contrat, sauf clause de choix de loi. Attention toutefois : pour une vente de marchandises entre la France et les États-Unis, la CVIM s'appliquerait d'abord, sauf exclusion.",
+            "2. Non. Depuis la fin de la période de transition (31 décembre 2020), Bruxelles I bis ne s'applique plus entre l'UE et le Royaume-Uni, et l'UE n'a pas accepté l'adhésion du Royaume-Uni à Lugano : il n'y a plus de circulation automatique des jugements.",
+            "3. Option 1 : une clause attributive de juridiction exclusive au profit d'un tribunal de l'UE ou du Royaume-Uni, couverte par la Convention de La Haye de 2005 (la Convention de 2019 peut aussi faciliter la circulation des jugements pour les procédures introduites après son entrée en vigueur). Option 2 : une clause d'arbitrage, couverte par la Convention de New York, inchangée par le Brexit. Le cours présente l'arbitrage comme la solution la plus prévisible."
+          ],
+          "erreurs": [
+            "Croire que le droit des contrats américain est un droit fédéral uniforme.",
+            "Penser que le Brexit a supprimé le droit anglais des contrats : c'est la circulation des jugements avec l'UE qui a changé.",
+            "Croire que le Brexit a affecté l'exécution des sentences arbitrales."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dcl-s3",
+      "titre": "La formation du contrat : offer, acceptance, consideration",
+      "chapitre": "dcl.formation",
+      "notions": ["dcl.formation.offer", "dcl.formation.acceptance", "dcl.formation.consideration", "dcl.formation.intention", "dcl.formation.capacity-formalities"],
+      "rappel": [
+        "Offer : volonté de contracter à des conditions précises, avec l'intention d'être lié dès l'acceptation. Invitation to treat : invitation à faire des offres (vitrine, Fisher v Bell ; libre-service, Pharmaceutical Society v Boots ; annonces, Partridge v Crittenden ; catalogues ; enchères). Exception : offre unilatérale promettant une récompense à quiconque accomplit un acte (Carlill v Carbolic Smoke Ball, 1893).",
+        "Acceptance : assentiment inconditionnel (mirror image rule) ; une réponse qui modifie l'offre est une counter-offer qui la détruit (Hyde v Wrench) ; une simple demande d'information ne la détruit pas ; le silence ne vaut pas acceptation (Felthouse v Bindley).",
+        "Postal rule (Adams v Lindsell) : l'acceptation postée prend effet dès l'envoi ; pour les communications instantanées, effet à la réception (Entores). Battle of the forms : last shot (Butler Machine Tool). Révocation : valable si communiquée avant l'acceptation.",
+        "Consideration : valeur échangée, suffisante mais pas forcément adéquate (Chappell v Nestlé) ; pas de past consideration (Re McArdle) ; une obligation préexistante n'en est pas une (Stilk v Myrick) sauf avantage pratique (Williams v Roffey). Un deed est exécutoire sans consideration. Promissory estoppel (High Trees) : bouclier, pas épée (Combe v Combe).",
+        "Intention to create legal relations : présumée en matière commerciale (Edwards v Skyways), absente en matière familiale (Balfour v Balfour) ; renversable (honour clause, Rose and Frank ; « subject to contract »). Forme libre, sauf terrain (écrit signé) et guarantee (preuve écrite signée) ; capacité des mineurs limitée (necessaries)."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-5",
+          "niveau": "bases",
+          "titre": "Offer ou invitation to treat ?",
+          "objectif": "Qualifier une proposition commerciale en droit anglais en s'appuyant sur les affaires de référence.",
+          "enonce": "Qualifiez chacune des situations suivantes (offer, invitation to treat ou offre unilatérale), puis dites qui fait l'offre.",
+          "donnees": {
+            "entetes": ["Situation", "Description"],
+            "lignes": [
+              ["A", "Une boutique de Bath expose en vitrine un manteau étiqueté 250 £."],
+              ["B", "Dans un supermarché en libre-service, un client pose une bouteille d'huile dans son panier."],
+              ["C", "Un fabricant de Leeds publie un catalogue : « tubes inox : 15 £/m »."],
+              ["D", "Une entreprise publie : « 500 £ à quiconque retrouvera notre chien de garde perdu près de l'entrepôt »."],
+              ["E", "Un vendeur écrit à un client précis : « Je vous vends 10 tonnes de café à 4 £/kg, livraison en mai ; réponse avant vendredi. »"],
+              ["F", "Une annonce dans un magazine propose des oiseaux rares « à 25 £ pièce »."]
+            ]
+          },
+          "methode": [
+            "Demandez-vous si l'auteur exprime une volonté ferme d'être lié dès l'acceptation, ou s'il invite seulement à lui faire des offres.",
+            "Pensez au risque pratique : un commerçant pourrait-il être obligé de vendre plus que son stock ? Si oui, il s'agit en principe d'une invitation to treat.",
+            "Repérez les promesses de récompense à quiconque accomplit un acte précis : c'est le schéma de Carlill.",
+            "Pour chaque cas, citez l'affaire qui sert de modèle."
+          ],
+          "questions": [
+            "1. Qualifiez les situations A à F et citez l'affaire de référence quand elle existe.",
+            "2. Dans les situations A, B, C et F, qui fait l'offre et à quel moment ?",
+            "3. Comment l'offre de la situation D est-elle acceptée ?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. A : invitation to treat (Fisher v Bell). B : invitation to treat ; l'offre est faite par le client à la caisse (Pharmaceutical Society v Boots). C : invitation to treat, un catalogue n'engage pas le fabricant, qui pourrait manquer de stock. D : offre unilatérale à tous, sur le modèle de Carlill v Carbolic Smoke Ball : récompense précise pour un acte précis. E : offer, proposition précise adressée à une personne, avec la volonté d'être lié. F : invitation to treat (Partridge v Crittenden), comme la plupart des annonces.",
+            "2. Le client fait l'offre : en entrant demander le manteau (A), en présentant ses articles à la caisse (B), en passant commande sur la base du catalogue (C) ou en répondant à l'annonce (F). Le commerçant reste libre d'accepter ou non.",
+            "3. Par l'accomplissement de l'acte : la personne qui retrouve le chien accepte l'offre par sa conduite, sans avoir à notifier son acceptation à l'avance."
+          ],
+          "erreurs": [
+            "Traiter toute publicité comme une offre.",
+            "Oublier que, dans le libre-service, c'est le client qui fait l'offre.",
+            "Exiger une acceptation écrite dans une offre unilatérale."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dcl-6",
+          "niveau": "application",
+          "titre": "Une chronologie d'échanges : y a-t-il contrat, et quand ?",
+          "objectif": "Appliquer la mirror image rule, la postal rule et ses limites pour dater la formation d'un contrat en droit anglais.",
+          "enonce": "Contrat soumis au droit anglais. 1er juin : Thames Tools Ltd envoie à Atelier Berry (Bourges) une lettre offrant 300 perceuses à 60 £ pièce, « réponse par courrier ». 3 juin : l'offre parvient à Atelier Berry. 4 juin : Atelier Berry poste une lettre d'acceptation pure et simple. 5 juin : Thames Tools envoie un courriel de révocation, lu par Atelier Berry le jour même. 7 juin : la lettre d'acceptation arrive chez Thames Tools. Variante : le 4 juin, Atelier Berry avait répondu par courriel : « Nous acceptons à 55 £ pièce. » Thames Tools refuse le 5 juin ; le 6 juin, Atelier Berry écrit : « Finalement, nous acceptons à 60 £. »",
+          "methode": [
+            "Identifiez l'offre et vérifiez qu'elle prévoit un mode de réponse (ici le courrier), ce qui rend la poste raisonnable.",
+            "Appliquez la postal rule : à quelle date l'acceptation postée prend-elle effet ?",
+            "Comparez cette date à celle de la révocation : une révocation n'est efficace que si elle est communiquée avant l'acceptation.",
+            "Dans la variante, demandez-vous si la réponse modifie l'offre (mirror image rule) et ce qu'il advient de l'offre initiale.",
+            "Comparez enfin avec la solution de la CVIM (réception)."
+          ],
+          "questions": [
+            "1. Dans le scénario principal, le contrat est-il formé ? À quelle date ?",
+            "2. La révocation du 5 juin est-elle efficace ?",
+            "3. Dans la variante, y a-t-il contrat après la lettre du 6 juin ?",
+            "4. Si l'acceptation du 4 juin avait été envoyée par courriel, quelle règle s'appliquerait ?",
+            "5. Quelle aurait été la date de formation si la CVIM avait régi le scénario principal ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Oui. L'offre prévoit une réponse par courrier : la poste est un mode raisonnable, donc la postal rule (Adams v Lindsell) s'applique. L'acceptation prend effet dès son envoi, le 4 juin : le contrat est formé le 4 juin, même si la lettre n'arrive que le 7.",
+            "2. Non. La révocation n'est efficace que si elle est communiquée avant l'acceptation ; or l'acceptation a pris effet le 4 juin, avant la révocation du 5 juin.",
+            "3. Non. La réponse « à 55 £ » est une counter-offer qui détruit l'offre initiale (Hyde v Wrench). Le refus de Thames Tools met fin à cette contre-offre. La lettre du 6 juin ne peut donc plus accepter l'offre à 60 £ : c'est une nouvelle offre, que Thames Tools est libre d'accepter ou non.",
+            "4. Le courriel est une communication quasi instantanée : la postal rule ne s'applique pas aux communications instantanées, l'acceptation prend effet à sa réception (Entores v Miles Far East).",
+            "5. Sous la CVIM, l'acceptation prend effet quand elle parvient à l'offrant (art. 18-2) : le contrat serait formé le 7 juin. De plus, l'offre pouvait être révoquée tant que l'acceptation n'avait pas été expédiée (art. 16) : la révocation du 5 juin aurait aussi été tardive. Conclusion : contrat formé le 4 juin en droit anglais, le 7 juin sous la CVIM."
+          ],
+          "erreurs": [
+            "Appliquer la postal rule à un courriel.",
+            "Croire que l'offre initiale « revit » après le rejet d'une contre-offre.",
+            "Mélanger la postal rule anglaise et la règle de réception de la CVIM."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dcl-7",
+          "niveau": "approfondissement",
+          "titre": "Consideration, estoppel et intention : la promesse est-elle exécutoire ?",
+          "objectif": "Vérifier les autres conditions de formation (consideration, intention to create legal relations, forme) et utiliser la promissory estoppel à bon escient.",
+          "enonce": "Analysez quatre situations soumises au droit anglais. A : un fournisseur promet par simple courriel de livrer gratuitement 50 échantillons, puis change d'avis. B : après qu'un consultant a terminé une étude, le client lui promet 2 000 £ « pour le remercier ». C : un bailleur promet par écrit de réduire le loyer d'un entrepôt de moitié pendant une crise ; le locataire réorganise son activité en conséquence et paie la moitié pendant deux ans ; le bailleur réclame ensuite l'arriéré. Le locataire voudrait, en plus, agir contre le bailleur pour obtenir une réduction de loyer pour l'avenir sur le fondement de cette promesse. D : deux sociétés signent des « heads of terms subject to contract » pour une joint-venture ; l'une se retire avant le contrat définitif.",
+          "methode": [
+            "Pour chaque promesse, cherchez ce que le bénéficiaire a donné, fait ou promis en échange : y a-t-il une consideration ?",
+            "Vérifiez que la consideration n'est pas passée (antérieure à la promesse).",
+            "Si la consideration manque, demandez-vous si un deed a été signé, ou si la promissory estoppel peut jouer : une promesse, sur laquelle l'autre s'est fondée, invoquée comme défense.",
+            "Rappelez-vous la formule « shield, not sword » : l'estoppel protège mais ne fonde pas une action.",
+            "Pour D, vérifiez l'intention de créer des relations juridiques et le sens de « subject to contract »."
+          ],
+          "questions": [
+            "1. Situation A : la promesse est-elle exécutoire ? Comment le client aurait-il pu la rendre exécutoire ?",
+            "2. Situation B : le consultant peut-il exiger les 2 000 £ ?",
+            "3. Situation C : le bailleur peut-il réclamer l'arriéré ? Le locataire peut-il agir pour obtenir une réduction future ?",
+            "4. Situation D : la société qui s'est retirée a-t-elle violé un contrat ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Non : le destinataire ne donne rien en échange, il n'y a pas de consideration, et un simple courriel n'est pas un deed. Pour rendre la promesse exécutoire, il fallait soit une contrepartie, même modeste (une consideration doit être suffisante mais pas adéquate, Chappell v Nestlé : 1 £ peut suffire), soit un deed, exécutoire sans consideration.",
+            "2. Non : l'étude était déjà terminée au moment de la promesse. C'est une past consideration, qui ne compte pas (Re McArdle).",
+            "3. Le bailleur ne peut pas réclamer rétroactivement l'arriéré : sa promesse, sur laquelle le locataire s'est fondé en réorganisant son activité, est protégée par la promissory estoppel (Central London Property Trust v High Trees House), même sans consideration. En revanche, le locataire ne peut pas fonder une action sur cette promesse pour obtenir un avantage nouveau : l'estoppel est un bouclier, pas une épée (Combe v Combe).",
+            "4. Non, en principe : la mention « subject to contract » indique que les parties n'entendent pas être liées avant le contrat définitif ; la présomption d'intention propre aux relations commerciales (Edwards v Skyways) est renversée, comme avec une honour clause (Rose and Frank). Seules d'éventuelles clauses expressément contraignantes (confidentialité, exclusivité de négociation) lieraient les parties.",
+            "Bilan : en common law, un accord ne suffit pas ; il faut aussi une consideration (ou un deed) et une intention de créer des relations juridiques."
+          ],
+          "erreurs": [
+            "Exiger que la consideration ait une valeur équivalente à la promesse.",
+            "Utiliser la promissory estoppel comme fondement d'une action (épée).",
+            "Assimiler la consideration à la « cause » du droit français."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dcl-s4",
+      "titre": "Le contenu du contrat : terms et clauses d'exclusion",
+      "chapitre": "dcl.contenu",
+      "notions": ["dcl.contenu.terms", "dcl.contenu.classification", "dcl.contenu.exclusion"],
+      "rappel": [
+        "Express terms : clauses convenues par écrit ou oralement ; parol evidence rule et entire agreement clause. Implied terms : en fait (business efficacy, The Moorcock ; officious bystander, Shirlaw), par la loi (Sale of Goods Act 1979, ss. 12-15 : titre, conformité à la description, satisfactory quality, adaptation à l'usage particulier, conformité à l'échantillon), par l'usage.",
+        "Condition : terme essentiel ; sa violation permet de mettre fin au contrat et d'obtenir des dommages-intérêts (Poussard v Spiers). Warranty : terme accessoire ; dommages-intérêts seulement (Bettini v Gye).",
+        "Innominate term (Hongkong Fir, 1962) : tout dépend de la gravité des conséquences ; résiliation seulement si la victime est privée de l'essentiel du bénéfice attendu.",
+        "Clause d'exclusion efficace si : 1) incorporée (signature, L'Estrange v Graucob ; notice raisonnable avant ou lors de la conclusion, Parker ; tardive dans Olley ; clause inhabituelle spécialement signalée, Thornton ; usage constant) ; 2) couvrant le dommage, interprétée contra proferentem ; 3) valable au regard de l'UCTA 1977 (pas d'exclusion pour décès ou dommage corporel par négligence ; test de raisonnabilité entre professionnels) ou du Consumer Rights Act 2015."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-8",
+          "niveau": "bases",
+          "titre": "Condition, warranty ou innominate term ?",
+          "objectif": "Comprendre que la classification d'un terme détermine le remède en cas de violation.",
+          "enonce": "Dans un contrat d'affrètement de deux ans et un contrat de prestation artistique (tous deux soumis au droit anglais), plusieurs termes sont violés. A : une chanteuse, engagée comme vedette d'un spectacle, ne se présente pas à la première ni aux représentations suivantes. B : un chanteur, engagé pour une saison, manque quelques jours de répétition préalable mais est présent pour toutes les représentations. C : l'armateur avait promis un navire en état de naviguer ; le navire est immobilisé cinq semaines pour réparations sur un affrètement de deux ans. D : même engagement, mais le navire est immobilisé dix-huit mois sur les deux ans. E : les parties ont écrit que la date de livraison « est une condition du contrat ».",
+          "methode": [
+            "Repérez si le terme a été qualifié par les parties ou par la loi : dans ce cas, la qualification s'impose en principe.",
+            "Sinon, demandez-vous si le terme est essentiel (condition) ou accessoire (warranty), en vous appuyant sur Poussard v Spiers et Bettini v Gye.",
+            "Pour un terme qui peut être violé de façon très grave ou très légère (l'état de navigabilité), raisonnez comme dans Hongkong Fir : regardez les conséquences de la violation.",
+            "Déduisez le remède : résiliation et dommages-intérêts, ou dommages-intérêts seulement."
+          ],
+          "questions": [
+            "1. Qualifiez le terme violé dans chacune des situations A à E et indiquez le remède.",
+            "2. Pourquoi la catégorie des innominate terms a-t-elle été créée ?",
+            "3. Le mot « warranty » a-t-il toujours ce sens en anglais juridique ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. A : condition (sur le modèle de Poussard v Spiers) : l'absence de la vedette touche l'essentiel du contrat ; le producteur peut mettre fin au contrat et demander des dommages-intérêts. B : warranty (sur le modèle de Bettini v Gye) : les répétitions préalables sont accessoires ; dommages-intérêts seulement, le contrat se poursuit. C : innominate term (Hongkong Fir) : cinq semaines sur deux ans ne privent pas l'affréteur de l'essentiel ; dommages-intérêts seulement. D : même terme, mais dix-huit mois sur deux ans privent l'affréteur de l'essentiel du bénéfice attendu : il peut mettre fin au contrat et obtenir des dommages-intérêts. E : les parties peuvent qualifier un terme de condition : un retard de livraison permettra en principe de mettre fin au contrat.",
+            "2. Pour éviter qu'une violation mineure d'un terme classé « condition » permette de rompre tout le contrat, et inversement qu'une violation très grave d'un terme accessoire ne donne droit qu'à des dommages : le juge regarde les conséquences réelles.",
+            "3. Non : warranty peut aussi désigner une garantie commerciale ou une déclaration dans un contrat de cession. Il faut toujours lire le contexte."
+          ],
+          "erreurs": [
+            "Traduire « warranty » par « garantie » sans réfléchir au sens.",
+            "Classer un innominate term d'après son nom plutôt que d'après la gravité des conséquences.",
+            "Oublier que la violation d'une condition donne aussi droit à des dommages-intérêts."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dcl-9",
+          "niveau": "application",
+          "titre": "La clause d'exclusion résiste-t-elle ? Analyse en trois étapes",
+          "objectif": "Appliquer le test d'incorporation, d'interprétation et de contrôle légal à des clauses d'exclusion, et mobiliser les implied terms du Sale of Goods Act 1979.",
+          "enonce": "Cas 1 : Garden Benches Ltd vend à un distributeur français 500 bancs de jardin ; le contrat ne dit rien de leur résistance aux intempéries ; les bancs se dégradent en quelques semaines. Les conditions générales signées par le distributeur contiennent : « Le vendeur n'est responsable d'aucun défaut d'apparence. » Cas 2 : un client d'hôtel découvre dans sa chambre une affiche excluant la responsabilité de l'hôtel pour les objets volés ; il a payé et reçu sa clé à la réception, où rien n'était signalé. Cas 3 : un fournisseur de logiciels limite sa responsabilité au prix annuel de la licence dans un contrat signé avec un distributeur professionnel. Cas 4 : un prestataire de maintenance industrielle exclut sa responsabilité « pour tout dommage, y compris les blessures causées par la négligence de son personnel ».",
+          "methode": [
+            "Étape 1 : la clause est-elle incorporée ? Signature, notice raisonnable donnée avant ou lors de la conclusion, usage constant.",
+            "Étape 2 : couvre-t-elle le dommage ? En cas d'ambiguïté, interprétez-la contre celui qui l'invoque (contra proferentem).",
+            "Étape 3 : est-elle valable selon l'UCTA 1977 ? Interdiction absolue pour décès ou dommage corporel causé par négligence ; test de raisonnabilité entre professionnels (pouvoir de négociation, possibilité de s'assurer).",
+            "Dans le cas 1, cherchez d'abord quel terme implicite de la loi de 1979 l'acheteur peut invoquer."
+          ],
+          "questions": [
+            "1. Cas 1 : quel implied term l'acheteur peut-il invoquer ? La clause sur les « défauts d'apparence » le prive-t-elle de son recours ?",
+            "2. Cas 2 : la clause est-elle incorporée ?",
+            "3. Cas 3 : la clause est-elle efficace ?",
+            "4. Cas 4 : la clause est-elle valable pour les blessures ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. L'acheteur invoque le terme implicite de satisfactory quality (Sale of Goods Act 1979, s. 14(2)) : des bancs de jardin doivent supporter les intempéries. La clause est incorporée (signature, L'Estrange v Graucob), mais elle vise les « défauts d'apparence » ; or la dégradation rapide est un défaut de qualité et de durabilité. Interprétée strictement, contra proferentem, elle ne couvre pas ce dommage : l'acheteur conserve son recours.",
+            "2. Non. L'affiche a été portée à la connaissance du client après la conclusion du contrat, à la réception : la notice est tardive (Olley v Marlborough Court). La clause ne fait pas partie du contrat.",
+            "3. Probablement oui, sous réserve du contrôle du juge. Elle est incorporée par signature ; entre professionnels, l'UCTA 1977 la soumet au test de raisonnabilité, apprécié notamment au regard du pouvoir de négociation des parties et de la possibilité de s'assurer. Une limitation au prix annuel de la licence, négociée entre professionnels, a de bonnes chances d'être jugée raisonnable.",
+            "4. Non pour les blessures : l'UCTA 1977 interdit d'exclure la responsabilité pour décès ou dommage corporel causé par négligence (s. 2(1)), quel que soit le caractère raisonnable. La clause peut seulement jouer, sous réserve du test de raisonnabilité, pour d'autres dommages."
+          ],
+          "erreurs": [
+            "Commencer par le test de raisonnabilité sans vérifier l'incorporation.",
+            "Oublier la règle contra proferentem.",
+            "Croire qu'une clause raisonnable peut exclure la responsabilité pour dommage corporel causé par négligence."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dcl-s5",
+      "titre": "Les vices du consentement",
+      "chapitre": "dcl.vices",
+      "notions": ["dcl.vices.misrepresentation", "dcl.vices.mistake-duress"],
+      "rappel": [
+        "Misrepresentation : déclaration fausse de fait (pas une opinion sincère, Bisset v Wilkinson, ni une vantardise commerciale), faite avant le contrat par une partie à l'autre, qui l'a incitée à contracter. Le silence n'en est pas une, sauf demi-vérité, changement de circonstances ou contrats de bonne foi (assurance).",
+        "Trois types : frauduleuse (Derry v Peek : rescission et dommages-intérêts en deceit), négligente (Misrepresentation Act 1967, s. 2(1) : rescission et dommages), innocente (rescission ; le juge peut accorder des dommages à la place, s. 2(2)).",
+        "Le contrat est voidable (annulable) ; la rescission est perdue en cas de confirmation, de délai excessif, de droits acquis par des tiers ou d'impossibilité de restitution.",
+        "Mistake : admise très étroitement ; common mistake sur l'existence de l'objet (Couturier v Hastie) : contrat void ; erreur sur la qualité en principe sans effet (Bell v Lever Bros ; Great Peace).",
+        "Duress, y compris economic duress (Atlas Express v Kafco ; Times Travel v PIA) : contrat voidable. Undue influence (equity, RBS v Etridge) : contrat voidable. Void = nul dès l'origine ; voidable = valable jusqu'à la rescission."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-10",
+          "niveau": "bases",
+          "titre": "Déclaration de fait, opinion ou silence ?",
+          "objectif": "Reconnaître les éléments constitutifs d'une misrepresentation.",
+          "enonce": "Dites si chaque déclaration peut constituer une misrepresentation, en vérifiant un à un les éléments de la définition.",
+          "donnees": {
+            "entetes": ["N°", "Déclaration ou comportement"],
+            "lignes": [
+              ["1", "Le vendeur d'un fonds de commerce déclare un chiffre d'affaires de 300 000 £ par an, alors que les comptes qu'il connaît indiquent 180 000 £."],
+              ["2", "Un vendeur de terres, qui n'y a jamais élevé d'animaux, dit qu'elles pourraient « selon lui » nourrir 2 000 moutons."],
+              ["3", "Une publicité vante « le meilleur thé du monde »."],
+              ["4", "Un vendeur se tait sur une fuite dans la toiture que l'acheteur n'a pas remarquée et sur laquelle il ne l'a pas interrogé."],
+              ["5", "Un vendeur déclare que le bâtiment « n'a jamais été inondé », en omettant de préciser qu'il l'a été il y a deux mois, juste après la dernière expertise."],
+              ["6", "Un vendeur annonce honnêtement une production de 40 tonnes par an en se fondant sur un rapport d'expert erroné qu'il aurait pu vérifier facilement."]
+            ]
+          },
+          "methode": [
+            "Élément 1 : est-ce une déclaration de fait, et non une opinion sincère ou une vantardise ?",
+            "Élément 2 : est-elle fausse ?",
+            "Élément 3 : a-t-elle été faite avant le contrat et a-t-elle incité l'autre partie à contracter ?",
+            "Pour le silence, cherchez les exceptions : demi-vérité, changement de circonstances, contrat de bonne foi.",
+            "Si c'est une misrepresentation, précisez son type selon l'état d'esprit de l'auteur (connaissance, négligence, bonne foi)."
+          ],
+          "questions": [
+            "1. Pour chaque cas (1 à 6), dites s'il y a misrepresentation et, si oui, de quel type.",
+            "2. Expliquez la différence entre void et voidable, et pourquoi elle importe aux tiers."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Cas 1 : oui, frauduleuse : déclaration de fait fausse, faite en connaissance de sa fausseté (Derry v Peek) ; rescission et dommages-intérêts. Cas 2 : non, opinion sincère d'une personne sans expérience (Bisset v Wilkinson). Cas 3 : non, simple vantardise commerciale. Cas 4 : non, en principe le silence n'est pas une misrepresentation. Cas 5 : oui, demi-vérité : la déclaration est trompeuse par ce qu'elle omet ; si le vendeur sait, elle est frauduleuse. Cas 6 : oui, en principe négligente (Misrepresentation Act 1967, s. 2(1)) : déclaration de fait, faite sans motifs raisonnables d'y croire ; rescission et dommages-intérêts.",
+            "2. Un contrat void (nul) n'a jamais existé ; un contrat voidable (annulable) existe et produit ses effets jusqu'à ce que la victime obtienne la rescission. La distinction protège les tiers de bonne foi : s'ils ont acquis des droits avant la rescission, celle-ci peut être perdue."
+          ],
+          "erreurs": [
+            "Considérer toute déclaration fausse comme une misrepresentation, même une opinion.",
+            "Oublier l'exception de la demi-vérité au principe du silence.",
+            "Confondre void et voidable."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dcl-11",
+          "niveau": "application",
+          "titre": "Trois contrats contestés : misrepresentation, mistake ou duress ?",
+          "objectif": "Identifier le vice du consentement pertinent dans un cas et en déduire l'effet sur le contrat et les remèdes.",
+          "enonce": "Cas A : le 2 février, une société française achète à un négociant anglais une cargaison de céréales en mer ; à l'insu des deux parties, la cargaison avait péri dans une tempête le 30 janvier. Cas B : à la veille de la haute saison, un transporteur menace un petit importateur de ne plus livrer s'il n'accepte pas immédiatement de doubler ses tarifs ; l'importateur, sans alternative, signe un avenant. Cas C : un acheteur a obtenu un contrat grâce à une fausse déclaration frauduleuse du vendeur ; après avoir découvert la vérité, il continue pendant un an à exécuter le contrat sans protester, puis demande la rescission.",
+          "methode": [
+            "Pour chaque cas, identifiez qui savait quoi et s'il y a eu pression ou déclaration.",
+            "Choisissez le vice : erreur commune sur l'existence de l'objet, contrainte économique illégitime, déclaration fausse.",
+            "Déduisez l'effet (void ou voidable) en citant l'affaire de référence.",
+            "Pour la rescission, vérifiez les obstacles : confirmation, délai excessif, droits des tiers, impossibilité de restitution."
+          ],
+          "questions": [
+            "1. Cas A : quel est l'effet du contrat ?",
+            "2. Cas B : l'importateur peut-il contester l'avenant ?",
+            "3. Cas C : la rescission sera-t-elle accordée ? L'acheteur a-t-il un autre recours ?",
+            "4. Pourquoi le droit anglais admet-il si peu l'erreur (mistake) ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Common mistake sur l'existence de l'objet (res extincta) : le contrat est void, nul dès l'origine (Couturier v Hastie). Aucune partie ne savait : ce n'est pas une misrepresentation.",
+            "2. Oui : la menace illégitime, sans alternative réelle, constitue une economic duress (Atlas Express v Kafco) ; l'avenant est voidable et l'importateur peut en demander l'annulation.",
+            "3. Probablement non : en continuant à exécuter le contrat pendant un an après avoir découvert la vérité, l'acheteur l'a confirmé, et le délai écoulé est excessif ; ce sont deux obstacles à la rescission. La fraude lui ouvre toutefois une action en dommages-intérêts (tort of deceit), qui répare les préjudices directs.",
+            "4. Parce que le droit anglais protège la sécurité des transactions : chaque partie supporte en principe le risque de ses propres erreurs, notamment sur la qualité de la chose (Bell v Lever Bros). Seules les erreurs fondamentales, comme l'inexistence de l'objet, annulent le contrat."
+          ],
+          "erreurs": [
+            "Qualifier le cas A de misrepresentation alors que personne ne savait.",
+            "Croire que la rescission reste toujours possible en cas de fraude.",
+            "Assimiler toute négociation dure à une economic duress : il faut une pression illégitime."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dcl-s6",
+      "titre": "Inexécution et remèdes",
+      "chapitre": "dcl.inexecution",
+      "notions": ["dcl.inexecution.breach", "dcl.inexecution.damages", "dcl.inexecution.equitable", "dcl.inexecution.privity"],
+      "rappel": [
+        "Discharge : performance (Cutter v Powell, tempéré par la substantial performance), accord, frustration, breach. Frustration : événement postérieur, non imputable aux parties, rendant l'exécution impossible, illégale ou radicalement différente (Taylor v Caldwell ; Krell v Henry) ; pas une simple hausse des coûts (Davis Contractors) ; effets réglés par le Law Reform (Frustrated Contracts) Act 1943.",
+        "Breach : dommages-intérêts toujours ; résiliation si repudiatory breach. Anticipatory breach : la victime peut agir immédiatement (Hochster v De la Tour).",
+        "Damages : expectation interest (Robinson v Harman) ; remoteness en deux volets (Hadley v Baxendale) : pertes naturelles, ou pertes que les parties pouvaient envisager compte tenu des circonstances particulières connues ; gains exceptionnels non prévisibles exclus (Victoria Laundry) ; mitigation (British Westinghouse) ; liquidated damages valables si elles protègent un intérêt légitime de façon non exorbitante, sinon penalty (Makdessi).",
+        "Equity : specific performance et injunction, discrétionnaires, seulement si les dommages-intérêts sont inadéquats ; refus pour les services personnels, la surveillance constante, les mains sales.",
+        "Privity : seules les parties peuvent agir (Tweddle v Atkinson ; Dunlop v Selfridge) ; exception : Contracts (Rights of Third Parties) Act 1999 (tiers désigné ou bénéficiaire identifié, sauf exclusion contractuelle)."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-12",
+          "niveau": "bases",
+          "titre": "Comment le contrat a-t-il pris fin ?",
+          "objectif": "Reconnaître les modes de discharge et distinguer frustration, breach et anticipatory breach.",
+          "enonce": "Identifiez le mode d'extinction ou la situation juridique dans chacun des cas suivants (contrats soumis au droit anglais). A : une salle louée pour un salon à Londres est détruite par un incendie avant l'événement. B : le coût de montage d'un stand double ; l'exposant veut se libérer. C : en mars, un fournisseur annonce qu'il ne livrera pas la commande prévue pour septembre. D : un salon est interdit par décision des autorités après la signature du contrat de location de stand. E : les deux parties conviennent de mettre fin au contrat, chacune renonçant à ses droits.",
+          "methode": [
+            "Demandez-vous si l'événement est postérieur au contrat, non imputable aux parties, et s'il rend l'exécution impossible, illégale ou radicalement différente : c'est la frustration.",
+            "Une exécution simplement plus coûteuse ne suffit pas.",
+            "Si une partie refuse d'exécuter avant l'échéance, pensez à l'anticipatory breach.",
+            "Un accord de fin de contrat suppose une consideration ou un deed."
+          ],
+          "questions": [
+            "1. Qualifiez les situations A à E en citant l'affaire de référence quand elle existe.",
+            "2. Dans le cas C, l'acheteur doit-il attendre septembre pour agir ?",
+            "3. Pourquoi les parties ont-elles intérêt à prévoir une clause de force majeure détaillée plutôt que de compter sur la frustration ?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. A : frustration, l'exécution est devenue impossible (Taylor v Caldwell). B : pas de frustration, une simple hausse des coûts ne suffit pas (Davis Contractors v Fareham UDC) : l'exposant reste lié. C : anticipatory breach (Hochster v De la Tour). D : frustration, l'exécution est devenue illégale. E : discharge by agreement : chaque partie renonce à ses droits, ce qui constitue une consideration réciproque.",
+            "2. Non : en cas d'anticipatory breach, la victime peut agir immédiatement, mettre fin au contrat et réclamer des dommages-intérêts sans attendre l'échéance.",
+            "3. La frustration est une doctrine stricte et étroite ; une clause de force majeure permet de définir à l'avance les événements visés, la notification, la suspension et la durée avant résiliation, ce qui rend la situation prévisible."
+          ],
+          "erreurs": [
+            "Invoquer la frustration pour une simple hausse des coûts.",
+            "Croire qu'il faut attendre l'échéance en cas de refus anticipé d'exécuter.",
+            "Confondre frustration (doctrine légale stricte) et force majeure (clause contractuelle)."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dcl-13",
+          "niveau": "application",
+          "titre": "Calculer des damages : remoteness et mitigation",
+          "objectif": "Appliquer Hadley v Baxendale, Victoria Laundry et le principe de mitigation à un calcul de dommages-intérêts.",
+          "enonce": "Cotswold Print Ltd achète à un fabricant français une presse d'imprimerie (contrat soumis au droit anglais, CVIM exclue), livrable le 1er mars. La presse est livrée avec 6 semaines de retard. Pendant ce retard, l'imprimerie perd une marge habituelle de 5 000 £ par semaine. Elle perd aussi un contrat exceptionnel avec un éditeur, qui lui aurait rapporté 50 000 £ ; le fabricant n'en avait jamais entendu parler. Une presse de location n'était disponible qu'à partir du début de la 3e semaine de retard, pour 2 000 £ par semaine ; l'imprimerie l'a louée pour les semaines 3 à 6, ce qui lui a permis de travailler normalement pendant cette période.",
+          "methode": [
+            "Rappelez le but des damages : placer la victime dans la situation où elle serait si le contrat avait été exécuté (expectation interest).",
+            "Triez les pertes avec la remoteness : perte naturelle (premier volet) ou perte particulière connue du débiteur lors du contrat (second volet) ?",
+            "Appliquez la mitigation : les pertes que la victime pouvait éviter raisonnablement ne sont pas réparées, mais le coût raisonnable des mesures prises pour limiter la perte l'est.",
+            "Faites le calcul semaine par semaine : semaines 1-2 (pas de location possible), semaines 3-6 (location)."
+          ],
+          "questions": [
+            "1. La perte de 50 000 £ sur le contrat exceptionnel est-elle réparable ? Pourquoi ?",
+            "2. Calculez la perte de marge réparable pour les semaines 1 et 2.",
+            "3. Calculez le coût de la location pour les semaines 3 à 6. Est-il réparable ?",
+            "4. Calculez le total des dommages-intérêts recouvrables.",
+            "5. Le résultat aurait-il changé si l'imprimerie avait informé le fabricant, lors de la conclusion, de ce contrat exceptionnel et du risque de le perdre en cas de retard ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Non. Ce gain exceptionnel ne découle pas naturellement d'un retard de livraison (premier volet) et le fabricant ignorait cette circonstance particulière (second volet de Hadley v Baxendale). Comme dans Victoria Laundry, les gains exceptionnels non prévisibles sont exclus.",
+            "2. La perte de marge habituelle découle naturellement du retard d'une machine de production (premier volet). Aucune location n'était possible : la perte était inévitable. 2 semaines × 5 000 £ = 10 000 £.",
+            "3. 4 semaines × 2 000 £ = 8 000 £. Oui : c'est le coût raisonnable d'une mesure prise pour limiter le préjudice (mitigation). Grâce à elle, l'imprimerie a évité 4 × 5 000 £ = 20 000 £ de perte de marge, qui ne sont plus réclamables.",
+            "4. Total : 10 000 £ + 8 000 £ = 18 000 £.",
+            "5. Oui, probablement : la perte serait entrée dans le second volet de Hadley v Baxendale, puisque le fabricant aurait connu, lors du contrat, la circonstance particulière. La perte de 50 000 £ aurait pu être réparée, sous réserve de la mitigation (par exemple si la location avait permis d'honorer une partie du contrat)."
+          ],
+          "erreurs": [
+            "Additionner toutes les pertes sans appliquer la remoteness.",
+            "Réclamer la marge des semaines 3 à 6 en plus du coût de la location : ce serait réparer deux fois.",
+            "Oublier que la connaissance des circonstances s'apprécie au moment de la conclusion du contrat."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dcl-14",
+          "niveau": "approfondissement",
+          "titre": "Remèdes d'equity, clause pénale et tiers bénéficiaires",
+          "objectif": "Savoir quand demander autre chose que des dommages-intérêts, apprécier une clause de liquidated damages et déterminer si un tiers peut agir.",
+          "enonce": "A : un collectionneur français a acheté un tableau unique à une galerie londonienne, qui refuse finalement de le livrer. B : un distributeur exclusif anglais apprend que le fabricant va vendre directement sur son territoire, en violation du contrat. C : un théâtre veut obliger un comédien qui a rompu son engagement à jouer quand même. D : un contrat de construction prévoit 500 £ par jour de retard, montant calculé à partir des pertes d'exploitation probables du client ; un autre prévoit 50 000 £ par jour de retard pour un chantier de 100 000 £. E : une société mère anglaise conclut avec un prestataire un contrat prévoyant que « les filiales du groupe pourront bénéficier de l'assistance technique » ; une filiale demande l'assistance, refusée par le prestataire.",
+          "methode": [
+            "Pour A, B et C, vérifiez d'abord si les dommages-intérêts sont inadéquats, puis les limites de l'equity (services personnels, clean hands, surveillance).",
+            "Distinguez specific performance (ordre d'exécuter) et injunction (ordre de ne pas faire ou de réparer).",
+            "Pour D, appliquez le critère de Makdessi : intérêt légitime protégé, montant non exorbitant.",
+            "Pour E, partez de la privity, puis cherchez si le Contracts (Rights of Third Parties) Act 1999 s'applique et si le contrat l'exclut."
+          ],
+          "questions": [
+            "1. Cas A : quel remède demander ? Peut-il être refusé ?",
+            "2. Cas B : quel remède demander, et pourquoi pas seulement des dommages-intérêts ?",
+            "3. Cas C : le théâtre obtiendra-t-il la specific performance ?",
+            "4. Cas D : appréciez les deux clauses.",
+            "5. Cas E : la filiale peut-elle agir contre le prestataire ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. La specific performance : le tableau est unique, des dommages-intérêts ne permettraient pas d'en acheter un équivalent. Le juge peut toutefois la refuser, car le remède est discrétionnaire, par exemple si l'acheteur a agi de mauvaise foi (« He who comes to equity must come with clean hands ») ou a trop tardé (« Delay defeats equity »).",
+            "2. Une injunction (prohibitory) interdisant au fabricant ces ventes directes : le préjudice pour la clientèle du distributeur serait difficile à chiffrer, donc les dommages-intérêts seraient inadéquats ; une injunction interlocutoire est possible en urgence.",
+            "3. Non : la specific performance est refusée pour les contrats de services personnels, on ne force pas une personne à travailler. Le théâtre peut obtenir des dommages-intérêts, et éventuellement une injunction faisant respecter une clause d'exclusivité, sans contraindre indirectement le comédien à jouer (Lumley v Wagner ; Warner Bros v Nelson).",
+            "4. Première clause : liquidated damages valables, elle protège un intérêt légitime (les pertes d'exploitation) par un montant raisonnable. Seconde clause : 50 000 £ par jour pour un chantier de 100 000 £ est exorbitant au regard de tout intérêt légitime : c'est une penalty, inopposable (Cavendish Square Holding v Makdessi, 2015).",
+            "5. En principe, la privity empêche un tiers d'agir (Tweddle v Atkinson). Mais selon le Contracts (Rights of Third Parties) Act 1999, un tiers identifié par une catégorie (« les filiales du groupe ») peut faire exécuter une clause qui entend lui conférer un avantage, sans fournir de consideration, sauf si le contrat exclut cette loi par une clause « no third party rights ». La filiale peut donc agir si aucune clause d'exclusion ne figure au contrat."
+          ],
+          "erreurs": [
+            "Présenter la specific performance comme le remède normal en droit anglais : c'est l'exception, contrairement au droit français (art. 1221 du Code civil).",
+            "Juger une clause pénale d'après son nom (« penalty ») plutôt que d'après le critère de Makdessi.",
+            "Oublier de vérifier si le contrat exclut la loi de 1999."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "dcl-s7",
+      "titre": "L'Uniform Commercial Code",
+      "chapitre": "dcl.ucc",
+      "notions": ["dcl.ucc.article2"],
+      "rappel": [
+        "L'UCC est un texte modèle (Uniform Law Commission et American Law Institute) adopté avec des variantes par les États ; son article 2 régit la vente de marchandises (goods), avec des règles propres aux merchants.",
+        "Formation souple : tout comportement manifestant un accord, même avec des termes ouverts (§ 2-204).",
+        "§ 2-207 (battle of the forms) : une acceptation avec des termes additionnels ou différents vaut acceptation, sauf si elle est expressément conditionnée ; entre merchants, les termes additionnels s'intègrent sauf modification substantielle ou objection ; termes contradictoires : knock-out rule (majorité des juridictions), le Code comble le vide.",
+        "Garanties implicites : merchantability (§ 2-314) et fitness for a particular purpose (§ 2-315) ; perfect tender rule (§ 2-601).",
+        "Comparaison : droit anglais = counter-offer et last shot (Butler Machine Tool) ; CVIM = modification substantielle = contre-offre (art. 19). La CVIM, ratifiée par les États-Unis, prime l'UCC pour les ventes internationales dans son champ."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-15",
+          "niveau": "application",
+          "titre": "Battle of the forms : trois droits, trois solutions",
+          "objectif": "Comparer le traitement de conditions générales contradictoires selon l'UCC, le droit anglais et la CVIM, et savoir lequel s'applique.",
+          "enonce": "Un acheteur de l'Ohio envoie un bon de commande de pièces prévoyant une garantie de 3 ans. Le fournisseur, établi dans le Michigan, accepte sur son propre formulaire, qui limite la garantie à 1 an et ajoute une clause sans importance imposant d'indiquer le numéro de commande sur les factures. Les pièces sont livrées et payées. Un défaut apparaît au bout de 18 mois. Variante 1 : la même situation, mais le contrat est soumis au droit anglais. Variante 2 : l'acheteur est établi à Lyon et le fournisseur dans le Michigan ; le contrat n'exclut pas la CVIM.",
+          "methode": [
+            "Déterminez d'abord le texte applicable : vente interne américaine (UCC de l'État), contrat soumis au droit anglais, ou vente internationale entre États contractants de la CVIM.",
+            "Sous l'UCC, appliquez le § 2-207 en séparant les termes additionnels (numéro de commande) et les termes contradictoires (durée de garantie).",
+            "En droit anglais, raisonnez en offre, contre-offre et last shot.",
+            "Sous la CVIM, demandez-vous si la modification est substantielle (art. 19-3 : la responsabilité en fait partie)."
+          ],
+          "questions": [
+            "1. Cas principal : un contrat est-il formé selon l'UCC ? Quel est le sort de la clause sur le numéro de commande et des clauses de garantie ? L'acheteur est-il protégé pour son défaut à 18 mois ?",
+            "2. Variante 1 : quelle serait la solution en droit anglais ?",
+            "3. Variante 2 : quel texte s'applique, et comment analyser la réponse du fournisseur ?",
+            "4. Résumez dans un tableau à trois colonnes (UCC, droit anglais, CVIM) la solution d'une acceptation contenant des termes différents."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Oui. Selon le § 2-207, l'acceptation contenant des termes additionnels ou différents vaut acceptation, car elle n'est pas expressément conditionnée. La clause sur le numéro de commande est un terme additionnel non substantiel entre merchants : elle s'intègre, sauf objection de l'acheteur. Les clauses de garantie (3 ans contre 1 an) sont contradictoires : selon la knock-out rule majoritaire, elles s'annulent et le Code comble le vide avec la garantie implicite de merchantability (§ 2-314). L'acheteur peut donc invoquer cette garantie implicite pour son défaut, sous réserve des règles de l'État.",
+            "2. En droit anglais, la réponse du fournisseur modifie l'offre : c'est une counter-offer (mirror image rule). En livrant et en payant, les parties ont accepté par leur conduite les derniers documents envoyés et non contestés : selon la logique du last shot (Butler Machine Tool), les conditions du fournisseur (garantie d'un an) l'emporteraient, et l'acheteur ne serait plus couvert à 18 mois.",
+            "3. La CVIM s'applique, puisque la France et les États-Unis sont États contractants et qu'elle n'est pas exclue : elle prime l'UCC, qui ne jouerait que pour les questions non couvertes. La réduction de la garantie touche la responsabilité, élément substantiel selon l'article 19-3 : la réponse est une contre-offre. Le contrat est formé par l'exécution (livraison et paiement) sur la base de cette contre-offre.",
+            "4. UCC : acceptation en principe ; termes additionnels intégrés entre merchants sauf modification substantielle ou objection ; termes contradictoires annulés (knock-out). Droit anglais : contre-offre ; le dernier document non contesté l'emporte (last shot). CVIM : contre-offre si la modification est substantielle (art. 19-3), acceptation si elle ne l'est pas et que l'offrant ne s'y oppose pas (art. 19-2)."
+          ],
+          "erreurs": [
+            "Appliquer l'UCC à une vente franco-américaine sans vérifier la CVIM.",
+            "Croire que l'UCC est une loi fédérale : il est adopté État par État.",
+            "Confondre knock-out rule et last shot."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "dcl-16",
+          "niveau": "bases",
+          "titre": "UCC : vrai ou faux ?",
+          "objectif": "Fixer les notions de base de l'article 2 de l'UCC et sa place par rapport à la CVIM.",
+          "enonce": "Répondez par vrai ou faux et corrigez les affirmations fausses.",
+          "donnees": {
+            "entetes": ["N°", "Affirmation"],
+            "lignes": [
+              ["1", "L'article 2 de l'UCC régit la vente de terrains."],
+              ["2", "L'UCC est un texte modèle que chaque État adopte, parfois avec des variantes."],
+              ["3", "Sous l'UCC, une acceptation qui contient un terme différent est toujours une contre-offre."],
+              ["4", "La garantie implicite de merchantability impose que les marchandises soient propres à leur usage ordinaire."],
+              ["5", "Pour une vente entre une société de New York et une société de Lyon, l'UCC s'applique en principe plutôt que la CVIM."],
+              ["6", "Le § 2-204 permet qu'un contrat soit formé même si certains termes restent ouverts."]
+            ]
+          },
+          "methode": [
+            "Rappelez-vous le champ de l'article 2 : la vente de marchandises (goods).",
+            "Rappelez-vous la nature de l'UCC : texte modèle adopté par les États.",
+            "Pour les affirmations sur la formation, comparez avec la mirror image rule de la common law : l'UCC l'assouplit.",
+            "Pour une vente internationale, vérifiez toujours d'abord la CVIM."
+          ],
+          "questions": [
+            "1. Répondez vrai ou faux pour les affirmations 1 à 6 et corrigez celles qui sont fausses.",
+            "2. Pourquoi dit-on que l'UCC « assouplit » la common law en matière de formation du contrat ?"
+          ],
+          "lignes": 8,
+          "corrige": [
+            "1. Faux : l'article 2 régit la vente de marchandises, les immeubles sont exclus. 2. Vrai. 3. Faux : selon le § 2-207, elle vaut en principe acceptation, sauf si elle est expressément conditionnée à l'accord sur ces termes. 4. Vrai (§ 2-314). 5. Faux : la France et les États-Unis étant États contractants, la CVIM s'applique sauf exclusion ; l'UCC ne joue que pour les questions qu'elle ne couvre pas. 6. Vrai.",
+            "2. Parce qu'il admet la formation du contrat par tout comportement manifestant un accord, même avec des termes ouverts (§ 2-204), et qu'il écarte la mirror image rule stricte : une acceptation avec des termes additionnels ou différents peut former le contrat (§ 2-207)."
+          ],
+          "erreurs": [
+            "Appliquer la mirror image rule anglaise à une vente régie par l'UCC.",
+            "Oublier la primauté de la CVIM dans les ventes internationales."
+          ],
+          "fictif": false
+        }
+      ]
+    },
+    {
+      "id": "dcl-s8",
+      "titre": "Le vocabulaire des contrats anglo-saxons",
+      "chapitre": "dcl.lexique",
+      "notions": ["dcl.lexique.contrat-anglais"],
+      "rappel": [
+        "Structure : parties et date, recitals (« Whereas »), definitions, clauses opérationnelles, boilerplate clauses (entire agreement, severability, waiver, assignment, notices, force majeure, governing law, jurisdiction), signature (« in witness whereof »).",
+        "« Shall » exprime l'obligation (doit, s'engage à) et ne se traduit pas par un futur ; « may » exprime une faculté (peut) ; « will » exprime souvent un engagement ou un futur.",
+        "Formules : hereinafter (ci-après), hereto (aux présentes), notwithstanding (nonobstant), provided that (sous réserve que, à condition que), indemnify and hold harmless (garantir et indemniser).",
+        "Faux amis : consideration (contrepartie), warranty (terme accessoire ou garantie), condition (terme essentiel), damages (dommages-intérêts, pas dégâts), eventually (finalement), actual (réel).",
+        "Severability : une clause nulle n'invalide pas le reste ; waiver : ne pas exercer un droit n'y fait pas renoncer ; assignment : cession ; governing law : loi applicable, distincte de la juridiction."
+      ],
+      "exercices": [
+        {
+          "id": "dcl-17",
+          "niveau": "bases",
+          "titre": "Associer les termes et repérer les faux amis",
+          "objectif": "Maîtriser les équivalents français des termes clés d'un contrat anglais et éviter les contresens classiques.",
+          "enonce": "Associez chaque terme anglais à sa traduction, puis repérez les traductions fautives de la seconde liste.",
+          "donnees": {
+            "entetes": ["Terme anglais", "Traductions proposées (à associer)"],
+            "lignes": [
+              ["1. Whereas", "a. Divisibilité des clauses"],
+              ["2. Shall", "b. Loi applicable"],
+              ["3. Hereinafter referred to as", "c. Renonciation"],
+              ["4. Notwithstanding", "d. Attendu que / préambule"],
+              ["5. Provided that", "e. Doit / s'engage à"],
+              ["6. Severability", "f. Ci-après dénommé"],
+              ["7. Waiver", "g. Nonobstant / par dérogation à"],
+              ["8. Assignment", "h. Sous réserve que"],
+              ["9. Governing law", "i. Cession"],
+              ["10. Indemnify and hold harmless", "j. Garantir et indemniser"]
+            ]
+          },
+          "methode": [
+            "Commencez par les termes que vous connaissez avec certitude, puis procédez par élimination.",
+            "Pour les faux amis, demandez-vous si le mot anglais a le même sens que le mot français qui lui ressemble : « damages », « eventually », « actual ».",
+            "Vérifiez toujours si le contexte est contractuel : « damages » y désigne une somme d'argent, pas des dégâts matériels."
+          ],
+          "questions": [
+            "1. Associez les termes 1 à 10 aux traductions a à j.",
+            "2. Les traductions suivantes sont-elles correctes ? « damages » → « dommages matériels » ; « eventually » → « éventuellement » ; « The Seller shall deliver » → « Le Vendeur livrera peut-être » ; « actual loss » → « perte actuelle ». Corrigez-les si nécessaire.",
+            "3. Quelle différence faites-vous entre « warranty » et « guarantee » ?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. 1-d ; 2-e ; 3-f ; 4-g ; 5-h ; 6-a ; 7-c ; 8-i ; 9-b ; 10-j.",
+            "2. Toutes sont fautives. « damages » → « dommages-intérêts » (somme réparant le préjudice). « eventually » → « finalement » (et non « éventuellement », qui se dit « possibly »). « The Seller shall deliver » → « Le Vendeur doit livrer » ou « s'engage à livrer » : shall exprime une obligation, ni un futur ni une possibilité. « actual loss » → « perte réelle » ou « perte effectivement subie » : actual est un faux ami d'« actuel ».",
+            "3. Warranty désigne un terme accessoire du contrat (dont la violation n'ouvre droit qu'à des dommages-intérêts) ou une garantie/déclaration ; guarantee désigne l'engagement de payer la dette d'autrui (cautionnement), qui doit être prouvé par un écrit signé en droit anglais."
+          ],
+          "erreurs": [
+            "Traduire « shall » par un futur.",
+            "Traduire « eventually » par « éventuellement ».",
+            "Confondre warranty et guarantee."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "dcl-18",
+          "niveau": "application",
+          "titre": "Traduire et commenter des clauses boilerplate",
+          "objectif": "Traduire des clauses types d'un contrat anglais en justifiant ses choix de vocabulaire juridique.",
+          "enonce": "Voici trois clauses rédigées pour un contrat de distribution soumis au droit anglais (textes écrits pour l'exercice). Clause 1 : « The Distributor shall not assign this Agreement without the prior written consent of the Supplier, provided that such consent shall not be unreasonably withheld. » Clause 2 : « If any provision of this Agreement is held to be invalid, the remaining provisions shall continue in full force and effect. » Clause 3 : « This Agreement shall be governed by the laws of England and Wales. Notwithstanding the foregoing, the Supplier may seek an injunction before any competent court. »",
+          "methode": [
+            "Identifiez d'abord le nom de chaque clause boilerplate (assignment, severability, governing law…).",
+            "Repérez les mots-pièges : shall (obligation ou règle, jamais un futur), may (faculté), provided that, notwithstanding.",
+            "Traduisez en français juridique naturel, avec les formules d'usage (« le présent Contrat », « sans l'accord écrit préalable »).",
+            "Justifiez en une phrase chaque choix délicat."
+          ],
+          "questions": [
+            "1. Nommez chaque clause et expliquez sa fonction en une phrase.",
+            "2. Traduisez les trois clauses en français.",
+            "3. Justifiez votre traduction de « shall », « provided that », « notwithstanding » et « may ».",
+            "4. La clause 3 désigne-t-elle le tribunal compétent ? Que faudrait-il ajouter ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Clause 1 : assignment (cession), elle encadre le transfert du contrat à un tiers. Clause 2 : severability (divisibilité), la nullité d'une stipulation n'affecte pas le reste du contrat. Clause 3 : governing law (loi applicable), complétée par une réserve permettant au fournisseur de demander une injunction.",
+            "2. Clause 1 : « Le Distributeur ne peut céder le présent Contrat sans l'accord écrit préalable du Fournisseur, lequel ne pourra refuser cet accord sans motif raisonnable. » Clause 2 : « Si l'une quelconque des stipulations du présent Contrat est jugée nulle, les autres stipulations conservent leur plein effet. » Clause 3 : « Le présent Contrat est régi par le droit de l'Angleterre et du pays de Galles. Nonobstant ce qui précède, le Fournisseur peut solliciter une injonction devant toute juridiction compétente. »",
+            "3. « shall » : obligation ou règle, rendue par le présent de l'indicatif (« ne peut », « conservent », « est régi ») et non par un futur. « provided that » : condition ou réserve, rendue par une relative ou « sous réserve que » ; ici « lequel ne pourra refuser » est plus fluide. « notwithstanding » : « nonobstant » ou « par dérogation à » ; la phrase qui suit prime sur la précédente. « may » : faculté, « peut ».",
+            "4. Non : elle désigne seulement la loi applicable. Loi applicable et juridiction sont deux questions distinctes ; il faudrait ajouter une clause de juridiction, par exemple « The courts of England shall have exclusive jurisdiction », soit « Les tribunaux anglais sont seuls compétents »."
+          ],
+          "erreurs": [
+            "Traduire « shall » par « devra » ou « sera » de façon systématique.",
+            "Traduire mot à mot « in full force and effect » par une formule lourde au lieu de « conservent leur plein effet ».",
+            "Croire que « governing law » désigne aussi le tribunal compétent."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

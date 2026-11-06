@@ -14,6 +14,12 @@
    "couleur": "peach",
    "categorie": "Commerce international",
    "completude": "complete",
+   "emploiDuTemps": {
+    "intitule": "TCI 1 S5",
+    "seances": [
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "tci.operation",
@@ -414,6 +420,12 @@
    "couleur": "peach",
    "categorie": "Commerce international",
    "completude": "complete",
+   "emploiDuTemps": {
+    "intitule": "Introduction au CI S5",
+    "seances": [
+     "CM"
+    ]
+   },
    "chapitres": [
     {
      "id": "ici.diagnostic",
@@ -578,13 +590,22 @@
    "titre": "Introduction au tourisme international",
    "langue": "fr",
    "annee": "L3",
-   "statut": "ORL?",
-   "semestres": [],
+   "statut": "ORL",
+   "semestres": [
+    "S5"
+   ],
    "enseignant": "",
    "couleur": "mint",
    "categorie": "Commerce international",
    "completude": "absente",
-   "noteCompletude": "Matière signalée dans le cahier des charges, absente du dépôt : aucun syllabus ni support de cours n'a été trouvé. Elle sera rédigée à partir du document source dès qu'il sera fourni.",
+   "noteCompletude": "Matière confirmée par l'emploi du temps du semestre 5 (« Intro international tourism », CM et TD le lundi). Son contenu n'est pas encore disponible : aucun syllabus ni support de cours n'a pu être lu (les fichiers transmis depuis Celene sont des pages de connexion). Elle sera rédigée à partir des supports du cours dès qu'ils seront fournis.",
+   "emploiDuTemps": {
+    "intitule": "Intro international tourism",
+    "seances": [
+     "CM",
+     "TD"
+    ]
+   },
    "chapitres": []
   },
   {
@@ -932,10 +953,18 @@
    "semestres": [
     "S5"
    ],
-   "enseignant": "Isabelle Noël",
+   "enseignant": "Izabela Jankiewicz",
    "couleur": "mint",
    "categorie": "Gestion",
    "completude": "complete",
+   "code": "LLA5J6A",
+   "emploiDuTemps": {
+    "intitule": "Compta générale",
+    "seances": [
+     "CM",
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "cpt.cadre",
@@ -1540,10 +1569,17 @@
    "semestres": [
     "S5"
    ],
-   "enseignant": "Sonia Tesson",
+   "enseignant": "Izabela Jankiewicz",
    "couleur": "butter",
    "categorie": "Management",
    "completude": "complete",
+   "code": "LAL5J3D",
+   "emploiDuTemps": {
+    "intitule": "Gestion de projet S5",
+    "seances": [
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "gdp.cadrage",
@@ -1663,7 +1699,7 @@
   },
   {
    "id": "red",
-   "titre": "Rédaction de documents universitaires",
+   "titre": "Initiation à la recherche et rédaction universitaire",
    "langue": "fr",
    "annee": "L3",
    "statut": "ORL",
@@ -1674,6 +1710,12 @@
    "couleur": "sky",
    "categorie": "Méthodologie",
    "completude": "complete",
+   "emploiDuTemps": {
+    "intitule": "Initiation recherche S5",
+    "seances": [
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "red.sources",
@@ -1759,6 +1801,12 @@
    "couleur": "pink",
    "categorie": "Anglais",
    "completude": "complete",
+   "emploiDuTemps": {
+    "intitule": "Anglais éco et comm S5",
+    "seances": [
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "aec.correspondance",
@@ -1909,6 +1957,16 @@
    "couleur": "pink",
    "categorie": "Anglais",
    "completude": "complete",
+   "languesEtudiees": [
+    "fr",
+    "en"
+   ],
+   "emploiDuTemps": {
+    "intitule": "Traduction anglais S5",
+    "seances": [
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "tra.procedes",
@@ -2003,10 +2061,6 @@
       }
      ]
     }
-   ],
-   "languesEtudiees": [
-    "fr",
-    "en"
    ]
   },
   {
@@ -2097,6 +2151,12 @@
    "couleur": "pink",
    "categorie": "Espagnol",
    "completude": "complete",
+   "emploiDuTemps": {
+    "intitule": "Esp éco et commercial S5",
+    "seances": [
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "eec.correspondencia",
@@ -2213,6 +2273,16 @@
    "couleur": "pink",
    "categorie": "Espagnol",
    "completude": "complete",
+   "languesEtudiees": [
+    "fr",
+    "es"
+   ],
+   "emploiDuTemps": {
+    "intitule": "Thème espagnol S5 / Version espagnol S5",
+    "seances": [
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "tve.contrastes",
@@ -2307,10 +2377,6 @@
       }
      ]
     }
-   ],
-   "languesEtudiees": [
-    "fr",
-    "es"
    ]
   },
   {
@@ -2322,10 +2388,18 @@
    "semestres": [
     "S5"
    ],
-   "enseignant": "Karine Rivière de Franco",
+   "enseignant": "Nora Vouteau",
    "couleur": "sky",
    "categorie": "Civilisations",
    "completude": "complete",
+   "code": "LLF5J30",
+   "emploiDuTemps": {
+    "intitule": "Civi britannique S5",
+    "seances": [
+     "CM",
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "cvb.institutions",
@@ -2473,6 +2547,13 @@
    "couleur": "sky",
    "categorie": "Civilisations",
    "completude": "complete",
+   "emploiDuTemps": {
+    "intitule": "Civilisation espagnole S5",
+    "seances": [
+     "CM",
+     "TD"
+    ]
+   },
    "chapitres": [
     {
      "id": "cve.franquismo",

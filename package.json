@@ -9,7 +9,8 @@
     "build": "npm run index && tsc --noEmit && vite build && node scripts/publish.mjs",
     "test": "npm run index && vitest run",
     "test:e2e": "playwright test",
-    "check": "npm run index && tsc --noEmit && vitest run"
+    "check": "npm run index && tsc --noEmit && vitest run",
+    "imprimables": "node scripts/imprimables.mjs"
   },
   "dependencies": {
     "preact": "10.29.8"

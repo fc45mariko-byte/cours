@@ -1,0 +1,434 @@
+{
+  "matiere": "mgi",
+  "titre": "Cahier d'exercices : Management interculturel",
+  "introduction": "Ce cahier vous apprend à analyser des situations interculturelles avec méthode, sans tomber dans les clichés. Relisez d'abord le rappel de la section : il contient les définitions et les grilles (Hofstede, Hall, Trompenaars) à mobiliser. Faites ensuite l'exercice sur papier en suivant la méthode : décrivez les faits, choisissez le concept qui les éclaire, formulez une hypothèse prudente, puis proposez des actions. Comparez enfin avec le corrigé, qui explique le raisonnement, et lisez les erreurs fréquentes. Les situations sont fictives ; aucun score national n'est donné ici, car le cours invite à raisonner en tendances et en hypothèses, jamais en certitudes sur les individus.",
+  "sections": [
+    {
+      "id": "mgi-s1",
+      "titre": "Fondements : culture, stéréotypes et limites des grilles",
+      "chapitre": "mgi.fondements",
+      "notions": ["mgi.fondements.culture", "mgi.fondements.limites"],
+      "rappel": [
+        "La culture est l'ensemble des valeurs, croyances, normes et pratiques partagées par un groupe et transmises par apprentissage ; pour Hofstede, une « programmation collective de l'esprit ». Chacun appartient à plusieurs cultures : nationale, régionale, professionnelle, d'entreprise, générationnelle.",
+        "Modèle de l'oignon (Hofstede) : symboles (mots, gestes, logos), héros (modèles admirés), rituels (salutations, réunions, repas d'affaires), et au cœur les valeurs (ce qui est jugé bien ou mal), les plus difficiles à observer et à changer.",
+        "Généralisation culturelle : tendance formulée avec prudence, utile comme hypothèse. Stéréotype : image figée attribuée à tous les membres d'un groupe. Préjugé : jugement a priori (attitude). Discrimination : traitement défavorable (acte).",
+        "Les grilles décrivent des tendances moyennes de groupes à un moment donné : elles ne prédisent pas le comportement d'un individu (erreur écologique), ignorent souvent les autres appartenances et peuvent vieillir. On les utilise comme hypothèses, en observant, questionnant et vérifiant, et en prenant conscience de sa propre culture (ethnocentrisme)."
+      ],
+      "exercices": [
+        {
+          "id": "mgi-1",
+          "niveau": "bases",
+          "titre": "Stéréotype, généralisation, préjugé ou discrimination ?",
+          "objectif": "Distinguer une généralisation prudente d'un stéréotype, d'un préjugé et d'une discrimination.",
+          "enonce": "Classez chacun des énoncés suivants, entendus dans une entreprise exportatrice, puis réécrivez les stéréotypes en généralisations prudentes.",
+          "donnees": {
+            "entetes": ["N°", "Énoncé"],
+            "lignes": [
+              ["1", "« Les commerciaux de ce pays sont tous des menteurs. »"],
+              ["2", "« Dans de nombreuses entreprises de ce marché, l'horaire des réunions est traité avec souplesse ; vérifions les habitudes de notre interlocuteur. »"],
+              ["3", "« Les clients de cette région ? Inutile de leur envoyer une offre, ils ne paient jamais. »"],
+              ["4", "Le service RH écarte systématiquement les candidatures portant un nom à consonance étrangère."],
+              ["5", "« Tous les ingénieurs sont rigides. »"],
+              ["6", "« Plusieurs collègues ont observé que, dans cette filiale, les décisions remontent souvent à la direction ; demandons comment ils procèdent. »"]
+            ]
+          },
+          "methode": [
+            "Demandez-vous si l'énoncé parle d'une tendance (« souvent », « dans de nombreuses entreprises ») ou de « tous » les membres d'un groupe.",
+            "Repérez s'il contient un jugement de valeur négatif porté a priori : c'est le signe d'un préjugé.",
+            "Distinguez une représentation (ce qu'on pense) d'un acte (ce qu'on fait) : seul l'acte peut être une discrimination.",
+            "Pour réécrire un stéréotype, remplacez « tous » par une tendance, supprimez le jugement de valeur et ajoutez une vérification."
+          ],
+          "questions": [
+            "1. Classez les énoncés 1 à 6 (un énoncé peut relever de deux catégories).",
+            "2. Réécrivez l'énoncé 5 sous forme de généralisation prudente utilisable comme hypothèse.",
+            "3. Pourquoi une généralisation prudente reste-t-elle utile en management interculturel ?"
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Énoncé 1 : stéréotype (« tous ») doublé d'un préjugé (jugement négatif a priori). Énoncé 2 : généralisation culturelle prudente, formulée comme hypothèse à vérifier. Énoncé 3 : préjugé (jugement négatif a priori sur un groupe), qui risque de conduire à un traitement défavorable. Énoncé 4 : discrimination, car c'est un acte : un traitement défavorable fondé sur l'appartenance supposée à un groupe, interdit par la loi dans de nombreux cas. Énoncé 5 : stéréotype appliqué à une culture professionnelle, avec un jugement négatif. Énoncé 6 : généralisation prudente, fondée sur des observations et suivie d'une vérification.",
+            "2. Exemple : « Dans certaines équipes techniques, on accorde beaucoup d'importance aux procédures écrites ; demandons à nos interlocuteurs quelles validations ils attendent avant de modifier un plan. »",
+            "3. Parce qu'elle aide à préparer une interaction et à interpréter un malentendu, à condition de rester une hypothèse : on la confronte ensuite à l'observation et au dialogue, et on accepte que chaque individu puisse s'en écarter fortement."
+          ],
+          "erreurs": [
+            "Croire que toute phrase sur un groupe est un stéréotype : la généralisation prudente est légitime.",
+            "Confondre préjugé (attitude) et discrimination (acte).",
+            "Oublier que les cultures professionnelles peuvent aussi faire l'objet de stéréotypes."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mgi-2",
+          "niveau": "application",
+          "titre": "L'oignon de Hofstede et l'erreur écologique",
+          "objectif": "Classer des manifestations culturelles selon leur profondeur et comprendre pourquoi on ne peut pas déduire le comportement d'une personne de la moyenne de son pays.",
+          "enonce": "Une étudiante en stage dans une filiale étrangère d'une PME note ses observations : (a) tout le monde porte le badge au logo de l'entreprise ; (b) les salariés parlent avec admiration du fondateur, qui a commencé seul dans un garage ; (c) chaque lundi, l'équipe prend le café ensemble avant de parler travail ; (d) on considère qu'il est inacceptable de contredire un aîné en public ; (e) les échanges commencent par une poignée de main suivie d'un échange de nouvelles de la famille. Son tuteur ajoute : « Dans ce pays, les gens sont très hiérarchiques ; le nouveau directeur commercial, qui y a grandi, le sera forcément. » Or ce directeur, formé dans une école de commerce étrangère et passé par une start-up, consulte beaucoup son équipe.",
+          "methode": [
+            "Pour chaque observation, demandez-vous si elle est visible immédiatement (symbole, rituel), si elle renvoie à un modèle admiré (héros) ou si elle exprime ce qui est jugé bien ou mal (valeur).",
+            "Rappelez-vous que les valeurs sont au cœur : on ne les voit pas directement, on les déduit de comportements répétés.",
+            "Pour la phrase du tuteur, comparez une moyenne de groupe et le comportement d'un individu.",
+            "Listez les autres appartenances culturelles du directeur (profession, génération, entreprise, formation)."
+          ],
+          "questions": [
+            "1. Classez les observations (a) à (e) dans les niveaux de l'oignon.",
+            "2. Quel niveau est le plus difficile à observer et à changer ? Pourquoi ?",
+            "3. Quelle erreur de raisonnement le tuteur commet-il ? Comment s'appelle-t-elle ?",
+            "4. Quelles autres appartenances culturelles peuvent expliquer le style du directeur ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (a) symbole (logo, tenue) ; (b) héros (personnage admiré servant de modèle) ; (c) rituel (manière collective de commencer la semaine) ; (d) valeur (ce qui est jugé bien ou mal) ; (e) rituel (façon de saluer).",
+            "2. Les valeurs : elles sont acquises tôt, largement inconscientes, et on ne les observe qu'indirectement à travers les comportements. Les symboles, eux, changent facilement.",
+            "3. Il attribue à un individu la tendance moyenne de son pays : c'est l'erreur écologique. Une grille décrit des moyennes de groupes, et les distributions individuelles se chevauchent largement d'un pays à l'autre.",
+            "4. Sa culture professionnelle et de formation (école de commerce étrangère), sa culture d'entreprise (start-up), sa génération, éventuellement sa région. Une démarche interculturelle sérieuse en tient compte et vérifie par l'observation et le dialogue."
+          ],
+          "erreurs": [
+            "Placer les rituels au cœur de l'oignon : le cœur, ce sont les valeurs.",
+            "Utiliser une grille nationale pour prédire le comportement d'une personne.",
+            "Réduire une personne à sa seule culture nationale."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "mgi-s2",
+      "titre": "Les grilles d'analyse : Hofstede, Hall, Trompenaars",
+      "chapitre": "mgi.grilles",
+      "notions": ["mgi.grilles.hofstede", "mgi.grilles.hofstede-critiques", "mgi.grilles.hall", "mgi.grilles.trompenaars", "mgi.grilles.comparer"],
+      "rappel": [
+        "Hofstede (enquête auprès des salariés d'IBM, fin des années 1960 – années 1970) : distance hiérarchique ; individualisme / collectivisme ; masculinité / féminité ; contrôle de l'incertitude ; orientation à long terme (avec Bond) ; indulgence / retenue (avec Minkov, 2010). Les scores permettent des comparaisons relatives entre pays.",
+        "Critiques de Hofstede : échantillon d'une seule entreprise à une époque donnée ; culture assimilée à la nation ; méthode déclarative ; scores pouvant être datés ; risque d'erreur écologique (critique méthodologique de McSweeney, 2002). Le modèle reste utile comme cadre d'hypothèses.",
+        "Hall : contexte faible (message explicite, écrit, contrats détaillés) / contexte fort (implicite, relation, non-verbal) ; temps monochrone (séquentiel, ponctualité) / polychrone (simultané, relations d'abord) ; proxémie (distances interpersonnelles).",
+        "Trompenaars et Hampden-Turner (1993) : universalisme / particularisme ; individualisme / communautarisme ; neutre / affectif ; spécifique / diffus ; statut acquis / attribué ; rapport au temps (séquentiel / synchronique) ; rapport à la nature (contrôle interne / externe). Objectif : réconcilier les dilemmes.",
+        "Choisir la grille selon le problème : hiérarchie, décision, règles, risque → Hofstede ; communication, temps, espace → Hall ; règles contre relations, statut, émotions → Trompenaars. Ne pas plaquer toutes les dimensions ; discuter les limites."
+      ],
+      "exercices": [
+        {
+          "id": "mgi-3",
+          "niveau": "bases",
+          "titre": "Quelle grille, quel concept ?",
+          "objectif": "Associer une situation observée à la grille et au concept qui l'éclairent le mieux.",
+          "enonce": "Pour chacune des situations suivantes, indiquez la grille (Hofstede, Hall ou Trompenaars) et le concept précis qui l'expliquent le mieux.",
+          "donnees": {
+            "entetes": ["N°", "Situation observée"],
+            "lignes": [
+              ["1", "Un assistant n'ose pas signaler à sa responsable une erreur dans le planning qu'elle a validé."],
+              ["2", "Un partenaire répond « c'est intéressant, nous allons étudier cela » puis ne donne plus de nouvelles."],
+              ["3", "Une réunion commence avec trente minutes de retard ; personne ne semble gêné et plusieurs sujets sont traités en même temps."],
+              ["4", "Un fournisseur demande une dérogation au délai de paiement « au nom de notre longue amitié »."],
+              ["5", "Une équipe refuse de lancer un projet tant que toutes les procédures écrites n'ont pas été validées."],
+              ["6", "Un jeune chef de projet très performant n'est pas pris au sérieux par un client parce qu'il manque d'ancienneté."],
+              ["7", "Un manager invite son équipe à dîner chez lui et attend que les relations personnelles se prolongent au bureau."],
+              ["8", "Lors d'une négociation, un interlocuteur exprime vivement sa déception, ce qui déstabilise un collègue habitué à contrôler ses émotions."]
+            ]
+          },
+          "methode": [
+            "Identifiez d'abord le type de problème : pouvoir et hiérarchie, communication, temps, règles et relations, statut, émotions, frontière vie professionnelle / vie privée.",
+            "Choisissez ensuite la grille qui traite ce type de problème (voir le dernier point du rappel).",
+            "Nommez le pôle précis du concept (par exemple « contexte fort » et non seulement « Hall »).",
+            "Ne cherchez qu'un ou deux concepts par situation : une bonne analyse sélectionne."
+          ],
+          "questions": [
+            "1. Complétez pour chaque situation : grille + concept.",
+            "2. Pour la situation 4, proposez une solution qui « réconcilie » le dilemme au sens de Trompenaars."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. Situation 1 : Hofstede, distance hiérarchique élevée (on évite de contredire ou d'annoncer une mauvaise nouvelle au supérieur). Situation 2 : Hall, contexte fort (un refus poli exprimé indirectement). Situation 3 : Hall, temps polychrone. Situation 4 : Trompenaars, particularisme (la relation prime sur la règle). Situation 5 : Hofstede, contrôle de l'incertitude élevé (besoin de règles et de procédures). Situation 6 : Trompenaars, statut attribué (lié à l'âge, au rang) et non acquis. Situation 7 : Trompenaars, culture diffuse (sphères professionnelle et privée imbriquées). Situation 8 : Trompenaars, affectif contre neutre.",
+            "2. Réconciliation : garder une règle claire de délai de paiement pour tous, assortie d'une procédure d'exception transparente pour les partenaires stratégiques (critères écrits, validation par un responsable). On respecte à la fois l'exigence universaliste d'équité et la valeur particulariste de la relation."
+          ],
+          "erreurs": [
+            "Attribuer le contexte fort / faible à Hofstede : c'est un concept de Hall.",
+            "Confondre l'individualisme de Hofstede et l'individualisme / communautarisme de Trompenaars, notions proches mais issues d'enquêtes différentes.",
+            "Plaquer plusieurs grilles sur une situation simple."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mgi-4",
+          "niveau": "application",
+          "titre": "Analyser un incident critique dans une équipe projet",
+          "objectif": "Mener l'analyse complète d'un malentendu interculturel : description, choix des concepts, hypothèses prudentes et recommandations.",
+          "enonce": "Claire, cheffe de projet dans une PME d'Orléans, coordonne une équipe installée dans une filiale à l'étranger. Elle envoie des consignes très détaillées par courriel et attend des réponses écrites rapides. Après trois semaines, elle découvre que le projet a deux semaines de retard alors que, lors des visioconférences, l'équipe répondait « oui, pas de problème » à chaque point. Le responsable local lui explique qu'on n'annonce pas une mauvaise nouvelle à la cheffe devant tout le monde et que plusieurs collègues attendaient de la rencontrer en personne avant de lui parler franchement. Claire conclut : « Ils ne sont pas fiables. »",
+          "methode": [
+            "Étape 1 : décrivez les faits sans les juger (qui fait quoi, qui attend quoi).",
+            "Étape 2 : identifiez le type de problème (communication, hiérarchie, relation) et choisissez deux concepts pertinents au maximum.",
+            "Étape 3 : formulez l'explication comme une hypothèse, en signalant ce qui reste à vérifier.",
+            "Étape 4 : examinez aussi la culture de Claire : quelles attentes implicites projette-t-elle ?",
+            "Étape 5 : proposez des actions concrètes, réalistes et respectueuses des deux logiques."
+          ],
+          "questions": [
+            "1. Quels concepts (grille et pôle) expliquent le mieux ce malentendu ? Justifiez.",
+            "2. Que révèle la conclusion de Claire (« ils ne sont pas fiables ») ?",
+            "3. Proposez trois recommandations concrètes pour la suite du projet.",
+            "4. Quelles limites devez-vous signaler à votre propre analyse ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Deux concepts suffisent. Distance hiérarchique (Hofstede) : dans une équipe où l'on accepte une hiérarchie marquée, on évite d'annoncer une mauvaise nouvelle au supérieur, surtout en public. Contexte fort (Hall) : le « oui » exprimait l'écoute ou la politesse, pas l'accord ni l'absence de problème ; les signaux étaient implicites. On peut ajouter l'importance de la relation avant la franchise (attente d'une rencontre en personne).",
+            "2. Un jugement ethnocentrique : Claire interprète les comportements à partir de son propre référentiel (communication explicite, alerte rapide par écrit). Elle transforme une différence de codes en défaut moral, ce qui est proche du préjugé.",
+            "3. Exemples : (a) organiser des points individuels réguliers, où il est plus facile de signaler une difficulté qu'en réunion collective ; (b) mettre en place un tableau de suivi partagé où chacun indique l'avancement, ce qui rend les retards visibles sans « annonce » publique ; (c) valoriser explicitement l'alerte précoce (remercier celui qui signale un problème) et, si possible, se déplacer pour construire la relation. Ces pistes reprennent celles du cours.",
+            "4. L'analyse repose sur des tendances : elle ne dit rien de chaque membre de l'équipe. D'autres causes sont possibles (charge de travail, consignes mal comprises en langue étrangère, culture de l'entreprise locale). Il faut vérifier les hypothèses en dialoguant avec l'équipe et le responsable local."
+          ],
+          "erreurs": [
+            "Énumérer toutes les dimensions de Hofstede au lieu de choisir celles qui expliquent le cas.",
+            "Présenter l'explication culturelle comme une certitude.",
+            "Oublier d'analyser la culture de l'observateur."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mgi-5",
+          "niveau": "approfondissement",
+          "titre": "Critiquer l'usage mécanique d'une grille",
+          "objectif": "Mobiliser les critiques du modèle de Hofstede et les limites des grilles pour évaluer un raisonnement trop rapide.",
+          "enonce": "Un consultant remet à une PME la note suivante (rédigée pour l'exercice) : « Le pays X obtient un score élevé en distance hiérarchique et en contrôle de l'incertitude selon Hofstede. Donc tous vos futurs clients de X refuseront de prendre des décisions sans leur directeur et exigeront des contrats de cinquante pages. Ces scores, établis une fois pour toutes, s'appliquent à toutes les régions et à toutes les entreprises du pays. Inutile de rencontrer les clients : la grille suffit. »",
+          "methode": [
+            "Relevez chaque affirmation de la note et confrontez-la aux limites des grilles vues en cours.",
+            "Classez vos critiques : échantillon, nation assimilée à la culture, méthode, évolution dans le temps, usage individuel des moyennes.",
+            "Distinguez critiquer le modèle et le rejeter : demandez-vous ce que la grille peut légitimement apporter.",
+            "Terminez en reformulant la note de manière acceptable."
+          ],
+          "questions": [
+            "1. Relevez au moins quatre erreurs de raisonnement dans la note et expliquez chacune.",
+            "2. Citez trois critiques adressées au modèle de Hofstede lui-même.",
+            "3. Faut-il pour autant abandonner la grille ? Justifiez.",
+            "4. Réécrivez la note du consultant en cinq lignes, de façon prudente et utile."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Erreurs : (a) « tous vos futurs clients » : erreur écologique, une moyenne nationale ne prédit pas le comportement d'un individu ; (b) « établis une fois pour toutes » : les cultures évoluent, certains scores peuvent être datés ; (c) « toutes les régions et toutes les entreprises » : la grille assimile culture et nation et ignore les cultures régionales, professionnelles et d'entreprise (l'exemple du cours : un score unique pour l'Espagne ne rend pas compte des différences entre Catalogne, Pays basque et Andalousie, ni entre une start-up et une entreprise familiale) ; (d) « inutile de rencontrer les clients » : une démarche interculturelle sérieuse combine grilles, observation et dialogue ; (e) la déduction « contrats de cinquante pages » mélange les concepts et transforme une tendance en certitude.",
+            "2. Échantillon limité aux salariés d'une seule entreprise (IBM) dans les années 1970, de représentativité discutable ; méthode déclarative par questionnaires et dimensions issues d'une analyse statistique discutée ; culture réduite à quelques dimensions et assimilée à l'État-nation (critique méthodologique de McSweeney, 2002).",
+            "3. Non : les critiques invitent à un usage prudent, pas forcément à l'abandon. La grille reste utile pour formuler des hypothèses, préparer une rencontre et interpréter un malentendu, à condition de les vérifier sur le terrain.",
+            "4. Exemple : « Les comparaisons de Hofstede suggèrent que, dans de nombreuses organisations de X, la hiérarchie et les procédures comptent davantage qu'en France. Ce sont des tendances moyennes, à vérifier client par client. Lors des premiers rendez-vous, demandez qui participe à la décision et quels documents sont attendus. Tenez compte de la taille et du secteur de chaque entreprise. Adaptez ensuite votre démarche commerciale. »"
+          ],
+          "erreurs": [
+            "Rejeter entièrement le modèle au nom de ses critiques.",
+            "Attribuer à Hofstede des concepts de Hall ou de Trompenaars.",
+            "Inventer des scores nationaux pour appuyer une démonstration."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "mgi-s3",
+      "titre": "Management, équipes multiculturelles et expatriation",
+      "chapitre": "mgi.management",
+      "notions": ["mgi.management.pratiques", "mgi.management.equipes", "mgi.management.expatriation"],
+      "rappel": [
+        "Les pratiques managériales sont imprégnées de culture : décision (consensus long puis exécution rapide, ou décision rapide du chef puis ajustements), feedback (direct et public, ou indirect et en privé), réunions (lieu de décision ou de validation), motivation (reconnaissance individuelle ou réussite du groupe), procédures (règles écrites ou souplesse).",
+        "Le manager interculturel adapte les modalités, explicite ses attentes et construit des règles communes ; les valeurs et objectifs de l'entreprise restent.",
+        "Équipe multiculturelle et à distance : plus créative mais exposée aux malentendus, aux décalages horaires, à la perte du non-verbal et à une langue commune inégalement maîtrisée. Leviers : charte d'équipe (langue, outils, délais de réponse, décision), ordre du jour envoyé à l'avance, tour de parole, compte rendu écrit, anglais simple sans idiomes, temps informel, rotation des horaires de réunion.",
+        "Choc culturel (Oberg, 1960), courbe en U : lune de miel, crise, ajustement, adaptation ; au retour, choc culturel inversé (courbe en W). Causes d'échec : adaptation difficile de la famille, mauvaise préparation, isolement, mission floue. Leviers : sélection, formation interculturelle et linguistique, accompagnement de la famille, mentor, préparation du retour."
+      ],
+      "exercices": [
+        {
+          "id": "mgi-6",
+          "niveau": "bases",
+          "titre": "Les phases du choc culturel",
+          "objectif": "Reconnaître les phases de la courbe en U et du choc culturel inversé à partir d'un récit.",
+          "enonce": "Un responsable logistique d'une PME part trois ans dans une filiale à l'étranger. Voici des extraits de son journal, dans le désordre. A : « Rentré en France depuis un mois : mon ancien poste a disparu, personne ne s'intéresse à ce que j'ai appris là-bas. » B : « Tout est nouveau et passionnant : les marchés, la cuisine, l'accueil chaleureux de l'équipe ! » C : « Je commence à comprendre pourquoi les réunions se déroulent ainsi ; mon mentor m'explique les codes, et mes cours de langue m'aident. » D : « Rien ne fonctionne comme prévu, l'administration est lente, je ne me fais pas comprendre, ma famille s'ennuie. » E : « Je travaille efficacement avec l'équipe locale et je sais passer d'un code à l'autre. »",
+          "methode": [
+            "Rappelez l'ordre des phases de la courbe en U : lune de miel, crise, ajustement, adaptation.",
+            "Repérez dans chaque extrait les émotions dominantes : enthousiasme, frustration, compréhension progressive, aisance.",
+            "N'oubliez pas la phase du retour, qui transforme la courbe en U en courbe en W."
+          ],
+          "questions": [
+            "1. Remettez les extraits dans l'ordre chronologique et nommez chaque phase.",
+            "2. La phase de crise signifie-t-elle que l'expatriation a échoué ? Expliquez.",
+            "3. Proposez deux mesures que l'entreprise aurait pu prendre pour éviter la difficulté décrite dans l'extrait A."
+          ],
+          "lignes": 10,
+          "corrige": [
+            "1. B (lune de miel : découverte, enthousiasme) → D (crise : frustration, incompréhension, difficultés de la famille) → C (ajustement : apprentissage des codes grâce au mentor et à la langue) → E (adaptation : fonctionnement efficace dans les deux cultures) → A (retour : choc culturel inversé).",
+            "2. Non : la crise est une phase normale et attendue du processus. C'est l'absence d'accompagnement (formation, mentor, soutien de la famille) qui transforme la crise en échec.",
+            "3. Préparer le retour dès le départ : définir le poste de retour et maintenir le lien avec le siège pendant l'expatriation ; valoriser l'expérience acquise (par exemple en confiant à l'impatrié de retour une mission de développement sur ce marché ou de formation des futurs expatriés)."
+          ],
+          "erreurs": [
+            "Placer l'ajustement avant la crise.",
+            "Oublier le choc culturel inversé au retour.",
+            "Considérer la crise comme un signe d'échec."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mgi-7",
+          "niveau": "application",
+          "titre": "Rédiger la charte d'une équipe à distance",
+          "objectif": "Concevoir des règles de fonctionnement concrètes pour une équipe multiculturelle répartie dans plusieurs pays.",
+          "enonce": "Une équipe export de six personnes est répartie entre Orléans, Bogotá et Shanghai, sur trois fuseaux horaires très éloignés. Langue de travail : l'anglais, maîtrisé inégalement. Problèmes constatés : la réunion hebdomadaire a toujours lieu à 9 h heure de Paris, ce qui oblige les collègues de deux sites à se connecter très tôt ou très tard ; certains membres ne prennent jamais la parole ; des décisions prises à l'oral sont ensuite contestées ; des messages restent sans réponse pendant plusieurs jours ; un collègue utilise beaucoup d'expressions idiomatiques et de traits d'humour que les autres ne comprennent pas.",
+          "methode": [
+            "Associez chaque problème constaté à un levier du cours : horaires, tour de parole, compte rendu, délai de réponse, langue simple.",
+            "Rédigez des règles précises et vérifiables (« sous 24 heures ouvrées ») plutôt que des intentions (« répondre vite »).",
+            "N'oubliez pas la dimension relationnelle : une équipe à distance a besoin de moments informels.",
+            "Pensez à l'équité : qui supporte l'effort des fuseaux horaires ?"
+          ],
+          "questions": [
+            "1. Rédigez une charte d'équipe en six règles au moins, chacune répondant à un problème identifié.",
+            "2. Justifiez la règle sur l'horaire des réunions.",
+            "3. Pourquoi les comptes rendus écrits sont-ils particulièrement utiles dans cette équipe ?",
+            "4. La diversité de l'équipe est-elle automatiquement un atout ? Expliquez."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Exemple de charte : (a) langue de travail : anglais simple, phrases courtes, sans idiomes ni humour de connivence ; on vérifie la compréhension en reformulant ; (b) réunion hebdomadaire dont l'horaire tourne chaque mois entre les trois sites ; (c) ordre du jour envoyé 48 heures à l'avance, pour que chacun prépare ses interventions ; (d) tour de parole systématique en réunion ; (e) compte rendu écrit des décisions envoyé dans les 24 heures, les décisions n'étant définitives qu'après ce compte rendu ; (f) réponse aux messages sous 24 heures ouvrées, même pour dire « je reviens vers toi » ; (g) un temps informel de quinze minutes par mois et, si possible, une rencontre physique au lancement des projets.",
+            "2. La rotation des horaires partage équitablement l'effort lié aux fuseaux : aucun site ne supporte en permanence les heures pénalisantes, ce qui évite le sentiment d'être une équipe de seconde zone.",
+            "3. Parce que la langue de travail n'est pas maîtrisée de la même manière par tous et que la visioconférence fait perdre une partie du non-verbal : l'écrit laisse le temps de comprendre, crée une trace commune et limite les contestations ultérieures.",
+            "4. Non : une équipe multiculturelle peut être plus créative et mieux connaître ses marchés, mais elle risque aussi davantage de malentendus, de conflits et de lenteurs. La diversité devient un atout seulement si elle est managée par des règles explicites et une attention à la relation."
+          ],
+          "erreurs": [
+            "Rédiger des règles vagues, impossibles à vérifier.",
+            "Faire toujours supporter les horaires pénalisants aux mêmes sites.",
+            "Considérer que la diversité produit automatiquement de la performance."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mgi-8",
+          "niveau": "application",
+          "titre": "Adapter son style de management sans renoncer à ses objectifs",
+          "objectif": "Analyser l'effet d'une pratique managériale dans un contexte culturel différent et proposer une adaptation.",
+          "enonce": "Lars, nommé directeur d'une filiale d'un groupe industriel, a l'habitude de pratiques très participatives : il organise des réunions où chacun est invité à critiquer le projet et laisse l'équipe débattre sans trancher. Il donne aussi ses critiques directement, en réunion, devant tout le monde. Au bout de deux mois, les cadres locaux semblent mal à l'aise : certains attendent qu'il décide et interprètent ses réunions ouvertes comme un manque d'assurance ; un collaborateur critiqué publiquement ne prend plus la parole.",
+          "methode": [
+            "Pour chaque pratique de Lars (décision, feedback), décrivez comment elle peut être perçue dans un contexte où la direction tranche habituellement et où l'on préserve la face.",
+            "Mobilisez la notion de distance hiérarchique et les variations du feedback vues en cours.",
+            "Distinguez ce qui doit rester (objectifs, valeurs) et ce qui peut s'adapter (modalités).",
+            "Proposez une règle explicite qui combine les deux logiques."
+          ],
+          "questions": [
+            "1. Pourquoi les réunions ouvertes de Lars sont-elles perçues comme un manque d'assurance ?",
+            "2. Quel risque prend Lars avec ses critiques publiques ?",
+            "3. Proposez une adaptation de sa manière de décider et de donner du feedback.",
+            "4. Lars doit-il renoncer à associer son équipe aux décisions ? Justifiez."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Dans un contexte de distance hiérarchique plus élevée, les cadres attendent que le chef tranche : une décision participative, signe d'ouverture ailleurs, peut y apparaître comme une faiblesse ou une indécision.",
+            "2. Il risque d'humilier le collaborateur, qui vit la critique publique comme une perte de face, et de dégrader la relation : le silence du collaborateur en est le signe. Un même feedback peut motiver ou humilier selon les normes de communication.",
+            "3. Clarifier la règle : discussion ouverte pendant un temps défini, puis décision explicite annoncée par Lars, comme dans l'exemple du cours. Pour le feedback : critiques négatives en privé, de façon plus indirecte, en commençant par les points positifs ; reconnaissance publique réservée aux réussites, éventuellement collectives.",
+            "4. Non : il adapte les modalités, pas ses objectifs. Il peut continuer à recueillir les avis (par exemple en entretiens individuels ou par écrit avant la réunion), tout en assumant visiblement la décision finale. Les valeurs et objectifs communs restent ; ce sont les manières de faire qui s'adaptent."
+          ],
+          "erreurs": [
+            "Croire qu'un style de management est universel.",
+            "Confondre adaptation des pratiques et abandon des règles de l'entreprise.",
+            "Interpréter le silence du collaborateur comme une approbation."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "mgi-s4",
+      "titre": "La négociation internationale",
+      "chapitre": "mgi.negociation",
+      "notions": ["mgi.negociation.phases", "mgi.negociation.styles", "mgi.negociation.batna"],
+      "rappel": [
+        "Phases : préparation (objectifs, prix plancher et plafond, concessions possibles, solution de repli, informations sur l'interlocuteur et sa culture) ; prise de contact (relation, ordre du jour, langue, interprète) ; échange d'informations (questions ouvertes, écoute, reformulation) ; argumentation et propositions ; concessions réciproques ; conclusion (récapitulatif écrit, contrat) ; suivi. La durée de la prise de contact varie selon les cultures.",
+        "Négociation distributive (gagnant-perdant) : partage d'une valeur fixe, souvent le prix. Négociation intégrative (gagnant-gagnant) : création de valeur en conciliant les intérêts (délais, volumes, services), en explorant les intérêts derrière les positions.",
+        "Variables culturelles : relation ou tâche d'abord, communication directe ou indirecte, rapport au temps, décision individuelle ou collective, contrat définitif ou cadre évolutif, expression des émotions.",
+        "BATNA (Fisher et Ury, 1981) : meilleure solution de rechange si la négociation échoue ; elle fixe le seuil de refus. Prix de réservation : limite de chaque partie. ZOPA = [prix de réservation du vendeur ; prix de réservation de l'acheteur], si le premier est inférieur au second.",
+        "Règles : améliorer sa BATNA avant de négocier, estimer celle de l'autre, ne pas révéler son prix de réservation, concéder peu, de façon décroissante et toujours contre une contrepartie."
+      ],
+      "exercices": [
+        {
+          "id": "mgi-9",
+          "niveau": "bases",
+          "titre": "Remettre la négociation dans l'ordre",
+          "objectif": "Connaître les phases d'une négociation et savoir quelle action relève de quelle phase.",
+          "enonce": "Une PME négocie avec un distributeur étranger. Voici ses actions, dans le désordre : (a) visite de l'usine et déjeuner avec l'interlocuteur avant toute discussion de prix ; (b) envoi d'un récapitulatif écrit des points d'accord, puis signature du contrat (Incoterm, paiement, délais, loi applicable) ; (c) fixation du prix plancher et liste de trois concessions possibles ; (d) questions ouvertes sur les besoins et contraintes du distributeur ; (e) contrôle de la première livraison et appel trimestriel au distributeur ; (f) présentation de l'offre et des arguments ; (g) accord sur un délai de paiement plus long en échange d'un volume minimal.",
+          "methode": [
+            "Rappelez-vous l'ordre : préparation, prise de contact, échange d'informations, argumentation et propositions, concessions, conclusion, suivi.",
+            "Pour chaque action, demandez-vous si elle a lieu avant la rencontre, au début, pendant la discussion ou après l'accord.",
+            "Vérifiez qu'une concession est toujours accompagnée d'une contrepartie."
+          ],
+          "questions": [
+            "1. Remettez les actions (a) à (g) dans l'ordre et nommez la phase correspondant à chacune.",
+            "2. Pourquoi faut-il fixer son prix plancher avant la rencontre et non pendant ?",
+            "3. L'action (g) est-elle une bonne concession ? Pourquoi ?"
+          ],
+          "lignes": 8,
+          "corrige": [
+            "1. (c) préparation → (a) prise de contact → (d) échange d'informations → (f) argumentation et propositions → (g) concessions → (b) conclusion → (e) suivi.",
+            "2. Parce que pendant la discussion, la pression, la relation ou le désir de conclure poussent à céder trop : un seuil fixé à froid, à partir de sa BATNA, permet de savoir quand dire non.",
+            "3. Oui : la PME n'accorde pas un cadeau unilatéral, elle échange un avantage (délai de paiement) contre une contrepartie (volume minimal). Une concession sans contrepartie affaiblit la position et encourage de nouvelles demandes."
+          ],
+          "erreurs": [
+            "Commencer à définir ses marges pendant la négociation.",
+            "Négliger la phase de suivi, qui prépare la relation durable.",
+            "Concéder sans contrepartie pour montrer sa bonne volonté."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mgi-10",
+          "niveau": "application",
+          "titre": "Calculer BATNA, prix de réservation et ZOPA",
+          "objectif": "Déterminer son prix de réservation à partir de sa meilleure alternative, mesurer la zone d'accord possible et comparer deux propositions.",
+          "enonce": "Une fromagerie du Centre négocie la vente d'un fromage affiné avec un importateur étranger. Son coût de revient, rendu chez l'importateur, est de 3,20 € l'unité. Une chaîne d'épiceries fines lui propose ferme de reprendre la même production pour un prix équivalent à 3,80 € l'unité rendu chez l'importateur. L'importateur, de son côté, indique qu'au-delà de 4,50 € l'unité il achètera un fromage concurrent. Deux propositions sont sur la table. Proposition 1 : 4,20 € l'unité pour une commande unique de 10 000 unités. Proposition 2 : 4,00 € l'unité pour 20 000 unités par an pendant deux ans, avec paiement à la commande. Variante : si la chaîne d'épiceries retirait son offre et que l'importateur ne pouvait payer plus de 3,10 €, existerait-il une ZOPA ?",
+          "methode": [
+            "Identifiez la BATNA de la fromagerie : ce qu'elle fera si la négociation échoue.",
+            "Déduisez son prix de réservation : vendre en dessous de sa meilleure alternative n'a pas de sens, même si ce prix couvre le coût de revient.",
+            "Calculez la ZOPA : de la limite du vendeur à la limite de l'acheteur ; sa largeur est la différence entre les deux.",
+            "Pour comparer les propositions, calculez la marge totale sur coût de revient : (prix − coût de revient) × quantité totale.",
+            "Pour la variante, comparez le minimum du vendeur et le maximum de l'acheteur."
+          ],
+          "questions": [
+            "1. Quelle est la BATNA de la fromagerie et son prix de réservation ? Pourquoi n'est-ce pas 3,20 € ?",
+            "2. Déterminez la ZOPA et sa largeur.",
+            "3. Calculez la marge totale sur coût de revient de chaque proposition.",
+            "4. Quelle proposition recommandez-vous ? Quelle logique de négociation illustre-t-elle ?",
+            "5. Variante : existe-t-il une ZOPA ? Que conseillez-vous ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. BATNA : vendre à la chaîne d'épiceries fines, soit l'équivalent de 3,80 € l'unité. Prix de réservation : 3,80 €. Le coût de revient (3,20 €) n'est pas le bon seuil : il ignore l'alternative disponible ; vendre à l'importateur entre 3,20 € et 3,80 € serait moins intéressant que l'autre offre.",
+            "2. ZOPA = [3,80 € ; 4,50 €]. Largeur : 4,50 − 3,80 = 0,70 € par unité.",
+            "3. Proposition 1 : (4,20 − 3,20) × 10 000 = 1,00 × 10 000 = 10 000 €. Proposition 2 : quantité totale 20 000 × 2 = 40 000 unités ; (4,00 − 3,20) × 40 000 = 0,80 × 40 000 = 32 000 €. Les deux prix sont dans la ZOPA (au-dessus de 3,80 € et au-dessous de 4,50 €).",
+            "4. La proposition 2 rapporte 32 000 € de marge contre 10 000 €, avec en plus la sécurité du paiement à la commande et deux ans de visibilité, à condition que la fromagerie puisse produire ces volumes. Elle illustre une négociation intégrative : en combinant plusieurs variables (prix, volume, durée, paiement), on crée de la valeur pour les deux parties au lieu de se disputer uniquement le prix.",
+            "5. Non : le minimum de la fromagerie (son coût de revient, 3,20 €, faute d'autre alternative) est supérieur au maximum de l'importateur (3,10 €) : aucun prix ne satisfait les deux parties. Mieux vaut ne pas conclure à perte et chercher d'autres débouchés, c'est-à-dire améliorer sa BATNA."
+          ],
+          "erreurs": [
+            "Prendre le coût de revient pour prix de réservation alors qu'une meilleure alternative existe.",
+            "Comparer des prix unitaires sans tenir compte des quantités et de la durée.",
+            "Annoncer son prix de réservation à l'acheteur."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "mgi-11",
+          "niveau": "approfondissement",
+          "titre": "Préparer une négociation en tenant compte de la culture",
+          "objectif": "Construire une préparation complète intégrant phases, style intégratif, BATNA et variables culturelles, sans tomber dans le stéréotype.",
+          "enonce": "Thomas, commercial d'une PME de cosmétiques, a échoué lors d'une première rencontre avec un distributeur étranger : il a présenté ses prix dès la première demi-heure, proposé de signer le jour même et répondu à chaque objection en baissant son prix. Son interlocuteur a posé beaucoup de questions sur l'histoire de l'entreprise, a indiqué qu'il devait consulter sa direction et n'a plus donné de nouvelles. Thomas prépare une seconde rencontre ; il dispose aussi d'une offre d'un autre distributeur, moins intéressante mais ferme.",
+          "methode": [
+            "Diagnostiquez la première rencontre phase par phase : qu'est-ce qui a été sauté ou mal géré ?",
+            "Repérez les variables culturelles en jeu : relation ou tâche d'abord, décision individuelle ou collective, rapport au temps.",
+            "Revoyez la gestion des concessions : que révèlent des baisses de prix successives sans contrepartie ?",
+            "Construisez un plan pour la seconde rencontre, en intégrant la BATNA et des contreparties à demander.",
+            "Formulez vos hypothèses culturelles avec prudence."
+          ],
+          "questions": [
+            "1. Analysez les erreurs de Thomas lors de la première rencontre.",
+            "2. Quelles variables culturelles peuvent expliquer la réaction du distributeur ? Formulez-les comme des hypothèses.",
+            "3. Comment Thomas doit-il utiliser l'offre de l'autre distributeur ?",
+            "4. Proposez un plan de la seconde rencontre en quatre étapes, avec au moins deux contreparties à demander en échange d'éventuelles concessions."
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Thomas a quasiment supprimé la prise de contact et l'échange d'informations pour passer directement aux propositions ; il a voulu conclure trop vite ; surtout, il a fait des concessions de prix sans contrepartie, ce qui affaiblit sa position et peut être perçu comme un signe de faiblesse ou comme la preuve que son prix initial n'était pas sérieux.",
+            "2. Hypothèses : l'interlocuteur accorde peut-être plus d'importance à la relation et à la confiance avant l'affaire (questions sur l'histoire de l'entreprise) ; la décision est peut-être collective ou remontée à la hiérarchie (« consulter sa direction »), ce qui allonge les délais ; le rapport au temps peut être plus patient. Ces hypothèses sont à vérifier : elles décrivent des tendances, pas cet interlocuteur avec certitude.",
+            "3. C'est sa BATNA : elle fixe son seuil de refus et lui permet de ne pas céder sous la pression. Il ne doit pas révéler son prix de réservation, mais il peut, avec tact, laisser entendre qu'il dispose d'autres options. Il doit aussi chercher à estimer la BATNA du distributeur.",
+            "4. Plan : (a) prise de contact plus longue : présenter l'entreprise, ses références et son engagement durable, proposer une visite ou un déjeuner ; (b) échange d'informations : questions ouvertes sur les besoins du distributeur, son processus de décision, les personnes à associer ; (c) propositions : une offre qui combine plusieurs variables (prix, volumes, exclusivité territoriale, soutien marketing) ; (d) concessions uniquement contre contreparties, par exemple un engagement de volume minimal sur deux ans, un paiement partiel à la commande, un plan marketing financé par le distributeur ; puis récapitulatif écrit et suivi, en laissant le temps nécessaire à la décision collective."
+          ],
+          "erreurs": [
+            "Attribuer l'échec uniquement à « la culture de l'autre » sans analyser ses propres erreurs.",
+            "Révéler son prix de réservation pour « débloquer » la négociation.",
+            "Transformer des hypothèses culturelles en certitudes sur l'interlocuteur."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

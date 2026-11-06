@@ -21,7 +21,8 @@ export function Matiere({ id }: { id: string }) {
         <Motif categorie={m.categorie} graine={m.id} />
         <p class="surtitre"><span>{m.categorie}</span><span>{m.annee}{m.semestres.length ? ` · ${m.semestres.join(' et ')}` : ''}</span><span>Enseigné en {LIBELLE_LANGUE[m.langue].toLowerCase()}</span></p>
         <h1 class="titre-page" style={{ maxWidth: '16em' }}>{m.titre}</h1>
-        <p class="small">{m.enseignant && <>Enseignement : {m.enseignant} · </>}{STATUT_MATIERE[m.statut]}</p>
+        <p class="small">{m.enseignant && <>Enseignement : {m.enseignant} · </>}{m.code && <>{m.code} · </>}{STATUT_MATIERE[m.statut]}</p>
+        {m.emploiDuTemps && <p class="small"><strong>À l’emploi du temps</strong> : {m.emploiDuTemps.intitule} · {m.emploiDuTemps.seances.join(' et ')}</p>}
         {m.completude !== 'absente' && <div style={{ maxWidth: 420 }}><Jauge valeur={s.ids.length ? (acquis / s.ids.length) * 100 : 0} label="Notions comprises" /><span class="small">{acquis} notion{acquis > 1 ? 's' : ''} comprise{acquis > 1 ? 's' : ''} sur {s.ids.length}</span></div>}
       </header>
 
@@ -38,6 +39,7 @@ export function Matiere({ id }: { id: string }) {
       {m.completude !== 'absente' && (
         <div class="ligne" style={{ margin: '8px 0 0' }}>
           <a class="btn" href={`#/etudier/session?p=${m.id}`}>Session de révision</a>
+          {index.cahiers.some((c) => c.matiere === m.id) && <a class="btn secondaire" href={`#/cahier/${m.id}`}>Cahier d’exercices à imprimer</a>}
           <a class="btn secondaire" href={`#/progres/arbre/${m.id}`}>Arbre de compétences</a>
           <a class="btn discret" href={`#/entrainer/qcm?p=${m.id}`}>QCM ({nbQ})</a>
           <a class="btn discret" href={`#/flashcards?p=${m.id}`}>Flashcards ({nbF})</a>

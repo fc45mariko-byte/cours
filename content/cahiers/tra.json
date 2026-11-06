@@ -1,0 +1,345 @@
+{
+  "matiere": "tra",
+  "titre": "Traduction anglaise (thème et version) : cahier d'exercices expliqués",
+  "introduction": "Ce cahier suit les trois chapitres du cours : les procédés de traduction, les contrastes entre le français et l'anglais, puis la pratique de la version et du thème. Pour chaque section, lisez d'abord l'encadré de rappel, qui résume les règles à connaître. Faites ensuite chaque exercice sur papier en suivant la méthode guidée, étape par étape, sans regarder le corrigé. Comparez enfin votre travail au corrigé : il donne une traduction modèle et explique chaque choix, pour que vous compreniez pourquoi une solution est meilleure qu'une autre. Notez les pièges qui vous concernent dans un journal d'erreurs personnel.",
+  "sections": [
+    {
+      "id": "tra-s1",
+      "titre": "Les procédés de traduction de Vinay et Darbelnet",
+      "chapitre": "tra.procedes",
+      "notions": ["tra.procedes.directs", "tra.procedes.obliques"],
+      "rappel": [
+        "Vinay et Darbelnet (Stylistique comparée du français et de l'anglais, 1958) distinguent sept procédés : trois directs (emprunt, calque, traduction littérale) et quatre obliques (transposition, modulation, équivalence, adaptation).",
+        "Emprunt : mot étranger repris tel quel (le marketing, le leasing). Calque : traduction littérale des éléments d'une expression, admis s'il est consacré (skyscraper → gratte-ciel), fautif sinon (to make sense → « faire du sens », à remplacer par « avoir du sens »). Traduction littérale : possible seulement si les deux langues ont une structure et un sens parallèles.",
+        "Transposition : changement de catégorie grammaticale sans changement de sens (After he arrived → Après son arrivée : verbe → nom).",
+        "Modulation : changement de point de vue (It is not difficult → C'est facile ; Second-hand car → Voiture d'occasion).",
+        "Équivalence : expression entièrement différente pour la même situation, typique des proverbes et formules figées (Wet paint → Peinture fraîche). Adaptation : remplacement d'une réalité culturelle inconnue du lecteur (Thanksgiving rush → la cohue des fêtes de fin d'année, selon le contexte)."
+      ],
+      "exercices": [
+        {
+          "id": "tra-1",
+          "niveau": "bases",
+          "titre": "Reconnaître le procédé employé",
+          "objectif": "Savoir identifier les sept procédés de Vinay et Darbelnet en raisonnant sur ce qui change entre l'original et la traduction.",
+          "enonce": "Voici dix couples anglais / français. Pour chacun, identifiez le procédé de traduction utilisé et dites s'il est acceptable.",
+          "donnees": {
+            "entetes": ["N°", "Anglais", "Français"],
+            "lignes": [
+              ["1", "marketing", "le marketing"],
+              ["2", "skyscraper", "gratte-ciel"],
+              ["3", "The firm employs 200 people.", "L'entreprise emploie 200 personnes."],
+              ["4", "As soon as he arrived", "Dès son arrivée"],
+              ["5", "It is not difficult.", "C'est facile."],
+              ["6", "Wet paint", "Peinture fraîche"],
+              ["7", "Thanksgiving rush", "La cohue des fêtes de fin d'année"],
+              ["8", "It makes sense.", "Ça fait du sens."],
+              ["9", "Keep off the grass", "Pelouse interdite"],
+              ["10", "First come, first served", "Premier arrivé, premier servi"]
+            ]
+          },
+          "methode": [
+            "Posez-vous d'abord la question : la traduction suit-elle de près la forme anglaise (procédé direct) ou s'en éloigne-t-elle pour rendre le sens (procédé oblique) ?",
+            "Si elle suit la forme : le mot est-il repris tel quel (emprunt), ses éléments sont-ils traduits un à un dans une expression (calque), ou la phrase entière est-elle traduite mot à mot de façon correcte (traduction littérale) ?",
+            "Si elle s'en éloigne : comparez les catégories grammaticales (un verbe devenu nom = transposition), le point de vue (négatif devenu positif, ordre devenu interdiction = modulation), l'expression entière (formule figée = équivalence) ou la réalité évoquée (une fête remplacée par une autre = adaptation).",
+            "Pour juger si un calque est acceptable, demandez-vous s'il est consacré par l'usage en français."
+          ],
+          "questions": [
+            "1. Identifiez le procédé de chaque couple.",
+            "2. Lequel de ces couples est fautif ? Corrigez-le.",
+            "3. Expliquez la différence entre l'équivalence (couple 6) et l'adaptation (couple 7)."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (1) Emprunt : le mot anglais est repris tel quel (un équivalent officiel existe : mercatique). (2) Calque admis : sky / scraper → gratte / ciel, consacré par l'usage. (3) Traduction littérale : structure et sens parallèles, le mot à mot donne un français naturel. (4) Transposition : le verbe « arrived » devient le nom « arrivée ». (5) Modulation : la négation d'un contraire (« not difficult ») devient une affirmation (« facile ») ; le point de vue change, pas le sens. (6) Équivalence : formule figée de panneau, rendue par une expression différente (« fraîche » et non « mouillée »). (7) Adaptation : Thanksgiving, réalité culturelle peu parlante pour un lecteur français, est remplacé par une période équivalente. (8) Calque fautif. (9) Modulation : on passe d'un ordre adressé au passant à une interdiction portant sur la pelouse. (10) Équivalence : proverbe rendu par la formule française consacrée.",
+            "2. Le couple 8 : « faire du sens » est un anglicisme. Correction : « Cela a du sens » ou « C'est logique ».",
+            "3. L'équivalence change l'expression mais garde la même situation (un panneau signalant de la peinture fraîche existe dans les deux cultures). L'adaptation change le référent lui-même : on remplace une réalité culturelle (Thanksgiving) par une autre (les fêtes de fin d'année).",
+            "Résultat : emprunt, calque admis, littérale, transposition, modulation, équivalence, adaptation, calque fautif, modulation, équivalence."
+          ],
+          "erreurs": [
+            "Confondre calque et traduction littérale : le calque porte sur une expression ou un mot composé, la traduction littérale sur une phrase entière.",
+            "Confondre modulation et transposition : la transposition change la catégorie grammaticale, la modulation le point de vue.",
+            "Confondre équivalence et adaptation."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "tra-2",
+          "niveau": "application",
+          "titre": "Choisir le bon procédé pour traduire",
+          "objectif": "Appliquer les procédés obliques quand le mot à mot échoue, et justifier chaque choix.",
+          "enonce": "Traduisez en français les phrases suivantes, inventées pour l'exercice, en indiquant le procédé principal utilisé : (a) After the contract was signed, the two firms issued a joint statement. (b) It is not unlikely that sales will pick up next year. (c) The company will implement a new pricing policy. (d) The price increase was sharp. (e) The report is on the director's desk.",
+          "methode": [
+            "Traduisez d'abord mot à mot au brouillon, puis demandez-vous : ce français est-il naturel et exact ? Si oui, gardez la traduction littérale.",
+            "Si une subordonnée verbale alourdit la phrase française, essayez de la transformer en groupe nominal (transposition) : « after + verbe » → « après + nom ».",
+            "Si la phrase anglaise utilise une double négation ou une litote, demandez-vous si le français n'exprime pas plus naturellement la même idée positivement (modulation).",
+            "Méfiez-vous des mots qui ressemblent au français mais dont l'usage n'est pas consacré (calque fautif).",
+            "Pour (d), essayez de faire du nom anglais un verbe français et de l'adjectif un adverbe."
+          ],
+          "questions": [
+            "1. Traduisez les cinq phrases.",
+            "2. Nommez le procédé principal de chaque traduction et justifiez-le."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (a) Après la signature du contrat, les deux entreprises ont publié un communiqué commun. (b) Il est probable que les ventes reprendront l'an prochain. (c) L'entreprise va mettre en œuvre une nouvelle politique tarifaire. (d) Les prix ont fortement augmenté. (e) Le rapport est sur le bureau du directeur.",
+            "2. (a) Transposition : la subordonnée verbale « the contract was signed » devient le nom « la signature », ce qui évite un passif lourd (« après que le contrat a été signé ») ; le français préfère le nom. (b) Modulation : « not unlikely » (pas improbable) est rendu positivement par « probable », comme dans le cours (It is not unlikely that… → Il est probable que…). (c) Refus du calque : « implémenter » est un calque fautif de « to implement » ; on choisit l'expression française « mettre en œuvre ». (d) Transposition (double) : le nom « increase » devient le verbe « augmenter » et l'adjectif « sharp » l'adverbe « fortement ». (e) Traduction littérale : les deux langues ont ici la même structure, le mot à mot est correct.",
+            "Résultat : le bon traducteur ne choisit un procédé oblique que lorsque la traduction littérale ne produit pas un français naturel."
+          ],
+          "erreurs": [
+            "Écrire « implémenter » ou « faire du sens ».",
+            "Traduire systématiquement par des procédés obliques même quand la traduction littérale fonctionne.",
+            "Garder la litote anglaise (« il n'est pas improbable ») là où le français dirait plus simplement « il est probable »."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tra-s2",
+      "titre": "Les contrastes entre le français et l'anglais",
+      "chapitre": "tra.contrastes",
+      "notions": ["tra.contrastes.nominalisation", "tra.contrastes.temps-aspect", "tra.contrastes.articles", "tra.contrastes.ing", "tra.contrastes.passif", "tra.contrastes.prepositions", "tra.contrastes.ordre"],
+      "rappel": [
+        "Nominalisation : le français préfère les noms (« dès la signature »), l'anglais les verbes (as soon as it is signed). Les noms composés anglais se lisent de droite à gauche : price increase → hausse des prix.",
+        "Temps : present perfect + for / since → présent + « depuis » (We have known them for years → Nous les connaissons depuis des années) ; prétérit → passé composé ou passé simple (action ponctuelle), imparfait (habitude) ; progressif → souvent un temps simple.",
+        "Articles : pas d'article en anglais pour un sens général (Inflation is rising → L'inflation augmente), devant les indénombrables (information, advice, news, research) et la plupart des noms de pays (France, mais the United States, the UK) ; « a / an » devant un métier (She is an accountant → Elle est comptable).",
+        "Formes en -ing : identifier la valeur (progressif, gérondif nominal, participe adjectival ou circonstanciel, adjectif) avant de traduire par un infinitif, un nom, une relative ou une subordonnée.",
+        "Passif anglais → « on », tournure pronominale, actif ou nominalisation en français ; « He was given a bonus » → « On lui a accordé une prime ». Verbes à particule : set up (créer), take over (racheter), lay off (licencier), phase out (supprimer progressivement), carry out (réaliser), put off (reporter). Chassé-croisé : He swam across the river → Il a traversé la rivière à la nage."
+      ],
+      "exercices": [
+        {
+          "id": "tra-3",
+          "niveau": "bases",
+          "titre": "Repérer le contraste avant de traduire",
+          "objectif": "Identifier, dans une phrase anglaise, le contraste de langue qui empêche le mot à mot et appliquer la règle correspondante.",
+          "enonce": "Pour chaque phrase, inventée pour l'exercice ou tirée des exemples du cours, nommez le contraste en jeu (nominalisation / nom composé, temps et aspect, articles, forme en -ing, passif, particule, ordre des mots) puis traduisez.",
+          "donnees": {
+            "entetes": ["N°", "Phrase anglaise"],
+            "lignes": [
+              ["1", "Inflation is rising in Europe."],
+              ["2", "We have been negotiating for six months."],
+              ["3", "Exporting to Asia is risky."],
+              ["4", "These products are sold worldwide."],
+              ["5", "The group plans to phase out coal."],
+              ["6", "a fast-growing Spanish start-up"],
+              ["7", "customer satisfaction survey results"],
+              ["8", "She was offered a job in Madrid."]
+            ]
+          },
+          "methode": [
+            "Repérez l'élément qui pose problème : un article absent, un -ing, un « be + participe passé », une particule après le verbe, une suite de noms ou d'adjectifs avant le nom.",
+            "Rappelez-vous la règle du cours correspondante (voir l'encadré) avant d'écrire quoi que ce soit.",
+            "Pour un nom composé, partez du dernier mot (le nom principal) et remontez vers la gauche en ajoutant « de ».",
+            "Pour un passif, demandez-vous si le français dirait plutôt « on », une tournure pronominale (« se vendre ») ou un actif.",
+            "Relisez votre traduction à voix haute : un francophone pourrait-il l'avoir écrite spontanément ?"
+          ],
+          "questions": [
+            "1. Nommez le contraste de chaque phrase.",
+            "2. Traduisez chaque phrase en justifiant brièvement."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. (1) Articles (sens général). (2) Temps et aspect (present perfect progressif + for). (3) Forme en -ing (gérondif sujet). (4) Passif. (5) Verbe à particule. (6) Ordre des mots (groupe adjectival antéposé). (7) Nom composé (nominalisation). (8) Passif à sujet bénéficiaire.",
+            "2. (1) « L'inflation augmente en Europe. » : l'anglais n'a pas d'article devant un nom pris au sens général, le français emploie l'article défini. (2) « Nous négocions depuis six mois. » : l'action continue jusqu'à maintenant, donc présent + « depuis », pas de passé composé. (3) « Exporter en Asie est risqué. » (ou « L'exportation vers l'Asie est risquée ») : le gérondif sujet devient un infinitif ou un nom. (4) « Ces produits se vendent dans le monde entier. » : tournure pronominale à sens passif, plus naturelle que « sont vendus ». (5) « Le groupe prévoit d'abandonner progressivement le charbon. » : « phase out » exprime une suppression par étapes, que le français rend par un verbe et un adverbe. (6) « une jeune entreprise espagnole en forte croissance » : les éléments placés avant le nom en anglais passent après en français. (7) « les résultats de l'enquête de satisfaction des clients » (ou « de satisfaction client ») : on lit de droite à gauche, results → survey → satisfaction → customer. (8) « On lui a proposé un poste à Madrid. » : le passif à sujet bénéficiaire n'existe pas en français, on passe par « on ».",
+            "Résultat : chaque phrase cache un contraste précis ; le nommer avant de traduire évite le calque."
+          ],
+          "erreurs": [
+            "Traduire « have been negotiating for » par « avons négocié pendant ».",
+            "Écrire « Elle a été offerte un travail ».",
+            "Garder l'ordre anglais des mots dans les noms composés."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "tra-4",
+          "niveau": "application",
+          "titre": "Version guidée : un article industriel",
+          "objectif": "Traduire un court texte de presse en appliquant plusieurs contrastes à la fois, et justifier chaque choix.",
+          "enonce": "Traduisez en français ce texte original (fictif) : « Faced with rising energy costs, Midland Ceramics has decided to phase out its oldest kiln and to set up a new production line at its Stoke plant. The investment, which was announced on Monday, is expected to cut energy bills by a third. Around forty workers will be retrained rather than laid off, the company said. \"We have been working on this project for two years,\" explained its managing director. »",
+          "methode": [
+            "Lisez le texte en entier deux fois et résumez-le en une phrase française : de quoi s'agit-il ?",
+            "Soulignez les difficultés : la forme « Faced with » en tête de phrase, le -ing adjectival « rising », les verbes à particule (phase out, set up, laid off), le passif (was announced, is expected to, will be retrained), le present perfect progressif avec « for », l'incise « the company said ».",
+            "Pour « rising energy costs », pensez à la nominalisation : « la hausse de… ».",
+            "« is expected to » exprime une prévision : le français dit souvent « devrait ».",
+            "Pour l'incise de discours rapporté, le français inverse le sujet : « a indiqué l'entreprise ».",
+            "Relisez votre texte sans l'original pour vérifier qu'il sonne français, puis comparez-le à l'original pour vérifier qu'il ne manque rien."
+          ],
+          "questions": [
+            "1. Proposez votre traduction.",
+            "2. Justifiez la traduction de : « Faced with rising energy costs » ; « phase out » et « set up » ; « which was announced on Monday » ; « is expected to cut… by a third » ; « We have been working… for two years »."
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Traduction modèle : « Confrontée à la hausse des coûts de l'énergie, Midland Ceramics a décidé d'abandonner progressivement son plus ancien four et de créer une nouvelle ligne de production dans son usine de Stoke. Cet investissement, annoncé lundi, devrait réduire d'un tiers la facture énergétique. Une quarantaine de salariés seront reconvertis plutôt que licenciés, a indiqué l'entreprise. « Nous travaillons sur ce projet depuis deux ans », a expliqué son directeur général. »",
+            "2. « Faced with » est un participe à valeur circonstancielle : on le rend par un participe passé français accordé avec le sujet (« Confrontée à »), comme dans l'exemple du cours. « rising energy costs » : le participe adjectival devient un nom (« la hausse des coûts ») et le nom composé se lit de droite à gauche (« coûts de l'énergie »).",
+            "« phase out » = supprimer progressivement, ici « abandonner progressivement » ; « set up » = créer. Ces verbes à particule ont un sens figé qu'on ne traduit pas élément par élément.",
+            "« which was announced on Monday » : la relative passive est allégée en simple participe (« annoncé lundi ») ; le français n'a pas besoin de « qui a été ». « is expected to cut… by a third » : passif de prévision rendu par le conditionnel « devrait » ; « by a third » = « d'un tiers ».",
+            "« We have been working… for two years » : l'action dure encore, donc présent + « depuis » (« Nous travaillons… depuis deux ans ») et non « Nous avons travaillé pendant deux ans », qui laisserait croire que le projet est terminé. On notera aussi « will be retrained rather than laid off », dont le passif reste naturel en français, et « managing director » = « directeur général ».",
+            "Résultat : un texte français fluide, sans calque, qui respecte le sens, le registre journalistique et les temps de l'original."
+          ],
+          "erreurs": [
+            "Écrire « Faisant face à des coûts d'énergie montants » (calque du -ing).",
+            "Traduire « is expected to » par « est attendu pour ».",
+            "Traduire le present perfect progressif par un passé composé."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tra-5",
+          "niveau": "approfondissement",
+          "titre": "Thème guidé : les contrastes dans l'autre sens",
+          "objectif": "Traduire vers l'anglais en anticipant les erreurs typiques des francophones (temps, articles, indénombrables, « on », nominalisation).",
+          "enonce": "Traduisez en anglais ce texte original (fictif) : « Depuis trois ans, les PME de la région exportent davantage vers les États-Unis. L'an dernier, on a créé un guichet unique pour les aider : les informations sur les droits de douane y sont gratuites. Après la signature d'un accord avec un transitaire, les entreprises peuvent désormais expédier leurs marchandises en moins d'une semaine. La France reste cependant leur premier marché. »",
+          "methode": [
+            "Repérez d'abord le temps de chaque verbe et son marqueur : « depuis trois ans » + présent → present perfect (progressif) ; « l'an dernier » → prétérit.",
+            "Vérifiez les articles : « les PME » (au sens général ou d'une région précise ?), « les États-Unis » (article obligatoire en anglais), « la France » (pas d'article).",
+            "« Les informations » : « information » est indénombrable en anglais, donc sans -s et avec un verbe au singulier.",
+            "« On a créé » : le sujet n'est pas précisé ; l'anglais préfère souvent un passif.",
+            "« Après la signature de » : groupe nominal français ; l'anglais préfère un verbe (verbalisation), par exemple un gérondif après la préposition.",
+            "Relisez en traquant les faux amis et les calques."
+          ],
+          "questions": [
+            "1. Proposez votre traduction.",
+            "2. Justifiez cinq choix : le temps de la première phrase, le traitement de « on a créé », « les informations », « après la signature », les articles devant les noms de pays."
+          ],
+          "lignes": 18,
+          "corrige": [
+            "1. Traduction modèle : « For the past three years, SMEs in the region have been exporting more to the United States. Last year, a one-stop shop was set up to help them: information on customs duties is free of charge there. After signing an agreement with a freight forwarder, companies can now ship their goods in less than a week. France, however, remains their main market. »",
+            "2. Temps : « Depuis trois ans » + présent français décrit une action qui dure jusqu'à maintenant, donc present perfect progressif (« have been exporting ») et non présent simple (« export since three years » serait doublement fautif : temps et préposition ; avec une durée, « for », pas « since »).",
+            "« On a créé » : l'action est datée (« Last year »), d'où le prétérit, et l'agent n'est pas précisé, d'où le passif « was set up » (« set up » = créer, verbe à particule du cours).",
+            "« Les informations » : « information » est indénombrable, donc « information… is », sans article (sens général) et sans -s.",
+            "« Après la signature de » : on verbalise avec un gérondif après la préposition (« After signing »), tournure plus naturelle en anglais qu'un nom abstrait (« After the signature of »). Articles : « the United States » prend l'article, « France » n'en prend pas ; « SMEs in the region » est précisé par le complément, on peut donc se passer de « the ».",
+            "Résultat : un anglais simple et correct, où chaque structure française a été remplacée par la structure anglaise correspondante plutôt que calquée."
+          ],
+          "erreurs": [
+            "« Since three years » ou « the SMEs export since three years ».",
+            "« The informations are free ».",
+            "« The France » ou « United States » sans article.",
+            "« One created a one-stop shop » : calque de « on »."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tra-s3",
+      "titre": "Pratique et méthode : version, thème, titres, faux amis, nombres",
+      "chapitre": "tra.pratique",
+      "notions": ["tra.pratique.version", "tra.pratique.theme", "tra.pratique.titres-presse", "tra.pratique.faux-amis", "tra.pratique.nombres", "tra.pratique.methode"],
+      "rappel": [
+        "Fautes par ordre de gravité : non-sens (phrase incompréhensible), contresens (sens contraire ou très différent), faux sens (sens voisin mais inexact), omission, puis fautes de français et maladresses (calques, lourdeurs). On n'ajoute rien, on ne supprime rien.",
+        "Faux amis : actual = réel ; to realise = se rendre compte ; deception = tromperie ; effective = efficace ; issue = question, problème ; evidence = preuves ; versatile = polyvalent ; eventually = finalement. En thème : actuel = current ; déception = disappointment.",
+        "Titres de presse anglais : pas d'articles ni d'auxiliaires, présent pour un fait passé (Firm cuts jobs), infinitif pour le futur (PM to visit Mexico), mots courts (cut, axe, hike, bid, row, probe). Le français préfère les titres nominaux (« Hausse des taux »).",
+        "Nombres : €1,250.50 → 1 250,50 € ; $4.2bn → 4,2 milliards de dollars ; £350m → 350 millions de livres ; billion = milliard ; « 5 % » avec une espace ; the 1990s → les années 1990 ; Q3 2026 → le troisième trimestre 2026.",
+        "Méthode d'épreuve : deux lectures complètes, repérage des difficultés, brouillon, relecture sans l'original (naturel), confrontation avec l'original (omissions, contresens), relecture orthographique ; garder environ un quart du temps pour les relectures."
+      ],
+      "exercices": [
+        {
+          "id": "tra-6",
+          "niveau": "bases",
+          "titre": "Corriger des versions d'étudiants : types de fautes et faux amis",
+          "objectif": "Reconnaître et classer les fautes de traduction par gravité, en particulier celles qui viennent des faux amis.",
+          "enonce": "Voici six phrases anglaises (inventées ou tirées des exemples du cours) et la traduction proposée par un étudiant. Chaque traduction contient au moins une faute.",
+          "donnees": {
+            "entetes": ["N°", "Anglais", "Traduction de l'étudiant"],
+            "lignes": [
+              ["1", "Sales will eventually recover.", "Les ventes vont éventuellement se redresser."],
+              ["2", "The actual cost was much higher than expected.", "Le coût actuel a été bien supérieur aux prévisions."],
+              ["3", "Prices rose slightly in May.", "Les prix ont augmenté en mai."],
+              ["4", "This plan doesn't make sense.", "Ce plan ne fait pas de sens."],
+              ["5", "There is no evidence that the new strategy works.", "Il n'y a pas d'évidence que la nouvelle stratégie marche."],
+              ["6", "She realised the contract was not effective.", "Elle a réalisé que le contrat n'était pas effectif."]
+            ]
+          },
+          "methode": [
+            "Pour chaque phrase, comparez mot par mot le sens de l'anglais et celui du français : la traduction dit-elle le contraire (contresens), presque la même chose (faux sens), moins de choses (omission), ou une phrase non française (calque) ?",
+            "Vérifiez les mots qui ressemblent au français : ce sont souvent des faux amis (voir l'encadré).",
+            "Corrigez en écrivant une phrase française naturelle, pas seulement le mot fautif.",
+            "Classez ensuite les fautes de la plus grave à la moins grave."
+          ],
+          "questions": [
+            "1. Nommez la faute de chaque traduction et corrigez-la.",
+            "2. Classez par ordre de gravité : faux sens, non-sens, omission, contresens.",
+            "3. Pourquoi la phrase 1 est-elle plus grave que la phrase 3 ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (1) Contresens : « eventually » signifie « finalement », pas « éventuellement » (= peut-être) ; l'étudiant transforme une certitude en simple possibilité. Correction : « Les ventes finiront par se redresser. » (2) Faux sens dû au faux ami « actual » (= réel) : « Le coût réel a été bien supérieur aux prévisions. » (3) Omission de « slightly » : « Les prix ont légèrement augmenté en mai. » (4) Calque fautif : « Ce plan n'a pas de sens » ou « Ce plan n'est pas logique. » (5) Faux ami « evidence » (= preuves) : « Rien ne prouve que la nouvelle stratégie fonctionne. » (on évite aussi le familier « marche »). (6) Deux faux amis : « to realise » = se rendre compte, « effective » = efficace : « Elle s'est rendu compte que le contrat n'était pas efficace. »",
+            "2. Du plus grave au moins grave : non-sens, contresens, faux sens, omission.",
+            "3. Dans la phrase 1, le sens est inversé (certitude → possibilité) : c'est un contresens. Dans la phrase 3, le sens général est juste mais une nuance manque : c'est une omission, moins grave.",
+            "Résultat : la plupart de ces fautes viennent de la ressemblance trompeuse entre les mots ; il faut traduire le sens, pas la forme."
+          ],
+          "erreurs": [
+            "Penser que l'oubli d'un adverbe est sans importance : c'est une faute sanctionnée.",
+            "Écrire « s'est rendue compte » : avec « se rendre compte », le participe « rendu » ne s'accorde pas."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tra-7",
+          "niveau": "application",
+          "titre": "Traduire des titres de presse et des nombres",
+          "objectif": "Appliquer les conventions des titres de presse et des nombres pour produire des titres et des chiffres français corrects.",
+          "enonce": "Partie A : traduisez ces titres (certains sont tirés des exemples du cours, d'autres inventés) : (a) Bank hikes rates (b) Carmaker to axe 2,000 jobs (c) Minister to unveil export plan (d) Tariff row escalates (e) Retailer cuts 500 jobs. Partie B : traduisez les nombres et la phrase suivants : €1,250.50 ; $2.75bn ; £350m ; the 2010s ; Q3 2026 ; « Exports jumped 7.5% to £1.8bn in Q1. »",
+          "methode": [
+            "Pour un titre, retrouvez d'abord la phrase complète cachée derrière : ajoutez les articles et les auxiliaires manquants.",
+            "Identifiez le temps : un présent relate généralement un fait accompli ; « to + verbe » annonce un futur.",
+            "Traduisez les mots de presse courts (hike, axe, row, unveil, cut) par leur sens, puis choisissez un titre français, souvent nominal.",
+            "Pour les nombres : inversez les séparateurs, placez la devise après le nombre, transformez m et bn en « millions » et « milliards », mettez une espace avant « % ».",
+            "Pour « jumped… to », rappelez-vous que « to » introduit le niveau atteint : « pour atteindre »."
+          ],
+          "questions": [
+            "1. Traduisez les cinq titres (sens, puis titre français possible).",
+            "2. Traduisez les cinq nombres de la partie B.",
+            "3. Traduisez la phrase de la partie B."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. (a) Sens : la banque relève ses taux ; titre : « Hausse des taux ». (b) Sens : le constructeur va supprimer 2 000 emplois (l'infinitif annonce un futur) ; titre : « 2 000 suppressions d'emplois chez le constructeur ». (c) Sens : le ministre va présenter un plan pour l'export ; titre : « Le ministre présentera un plan export » ou « Un plan export bientôt dévoilé ». (d) Sens : le conflit sur les droits de douane s'aggrave ; titre : « Escalade dans la guerre tarifaire ». (e) Sens : le distributeur a supprimé 500 emplois (présent = fait accompli) ; titre : « 500 suppressions d'emplois chez le distributeur ».",
+            "2. €1,250.50 → 1 250,50 € ; $2.75bn → 2,75 milliards de dollars ; £350m → 350 millions de livres ; the 2010s → les années 2010 ; Q3 2026 → le troisième trimestre 2026.",
+            "3. « Les exportations ont bondi de 7,5 % pour atteindre 1,8 milliard de livres au premier trimestre. » Justification : virgule décimale, espace avant « % », « bn » → « milliard » (et non « billion », erreur d'un facteur 1 000), devise après le nombre, Q1 → premier trimestre ; « jumped » est un verbe de forte hausse, rendu par « ont bondi », et « to » par « pour atteindre ».",
+            "Résultat : un titre se traduit par son sens et son effet, un nombre par les conventions françaises."
+          ],
+          "erreurs": [
+            "Traduire « Firm cuts jobs » par un présent d'action en cours.",
+            "Traduire « billion » par « billion ».",
+            "Écrire « 7.5% » ou « €1 250,50 » dans un texte français."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tra-8",
+          "niveau": "approfondissement",
+          "titre": "Méthode d'épreuve : une version complète en temps limité",
+          "objectif": "Organiser son temps et appliquer toute la méthode d'épreuve à une version qui combine faux amis, passifs et chassé-croisé.",
+          "enonce": "Vous disposez de 1 h 30 pour traduire en français un texte d'environ 180 mots ; l'extrait ci-dessous, original et fictif, en est le début. « Small exporters have been hit hard by the strike at the port. \"We realised too late that our goods were stuck,\" said the owner of a family-run cheese business, who eventually had to fly samples to his customers. The actual losses are not yet known, but the issue is expected to be raised in Parliament next week. »",
+          "methode": [
+            "Répartissez votre temps en vous inspirant de l'exemple du cours (pour 2 heures : 15 min de lecture et repérage, 60 min de brouillon, 25 min de relectures, 20 min de mise au propre), en gardant environ un quart du temps pour les relectures.",
+            "Lisez l'extrait deux fois, puis soulignez les difficultés : faux amis (realised, eventually, actual, issue), passifs (have been hit, is expected to be raised), adjectif composé (family-run), verbe de mouvement avec manière (fly… to : pensez au chassé-croisé).",
+            "Faites un brouillon phrase par phrase en cherchant le sens avant la forme.",
+            "Relisez votre français sans l'original : sonne-t-il naturel ? Puis confrontez-le à l'original : avez-vous tout traduit, sans contresens ?",
+            "Terminez par l'orthographe et les accords (attention à « se rendre compte »)."
+          ],
+          "questions": [
+            "1. Proposez une répartition de vos 1 h 30.",
+            "2. Listez les difficultés de l'extrait et la solution envisagée pour chacune.",
+            "3. Rédigez votre traduction de l'extrait."
+          ],
+          "lignes": 20,
+          "corrige": [
+            "1. Répartition proportionnelle à l'exemple du cours : environ 10 min de lecture et de repérage, 45 min de brouillon, 20 min de relectures (sans puis avec l'original), 15 min de mise au propre et de vérification finale, soit 90 min. Les relectures et la mise au propre représentent plus d'un quart du temps, comme le recommande le cours.",
+            "2. « have been hit hard » : passif au present perfect, qui se garde ici (« ont été durement touchés »). « realised » : faux ami, « se sont rendu compte ». « were stuck » : « étaient bloquées ». « family-run cheese business » : groupe antéposé déplié après le nom, « une fromagerie familiale ». « eventually » : faux ami, « a fini par ». « fly samples to his customers » : chassé-croisé, le verbe anglais exprime le moyen (l'avion) et la préposition la direction ; en français, le verbe exprime l'action (« envoyer ») et le moyen passe en complément (« par avion »). « actual » : « réelles ». « issue » : « la question ». « is expected to be raised » : prévision, « devrait être soulevée ».",
+            "3. Traduction modèle : « Les petits exportateurs ont été durement touchés par la grève du port. « Nous nous sommes rendu compte trop tard que nos marchandises étaient bloquées », a déclaré le patron d'une fromagerie familiale, qui a fini par envoyer des échantillons à ses clients par avion. Les pertes réelles ne sont pas encore connues, mais la question devrait être soulevée au Parlement la semaine prochaine. »",
+            "Résultat : la méthode (repérage, brouillon, double relecture) permet de neutraliser les quatre faux amis et de rendre naturellement le passif et le chassé-croisé."
+          ],
+          "erreurs": [
+            "Traduire « eventually » par « éventuellement », « actual » par « actuelles » ou « issue » par « issue ».",
+            "Écrire « a dû voler des échantillons » : contresens sur « fly » employé avec un complément d'objet.",
+            "Consacrer tout le temps au brouillon sans garder de temps pour la relecture."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

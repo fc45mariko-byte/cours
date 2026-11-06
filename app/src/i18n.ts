@@ -35,6 +35,10 @@ const fr = {
   corrigeType: 'Corrigé type', autoEval: 'Autoévaluation : cochez les éléments présents dans votre réponse', enregistrerAutoEval: 'Enregistrer mon autoévaluation',
   voirCorrige: 'Voir le corrigé', criteresOk: 'Tous les critères sont présents.', criteresKo: 'Un ou plusieurs critères manquent : reprenez le corrigé.',
   reponseLibre: 'Votre réponse (facultatif : elle n’est pas analysée automatiquement)', situationFictive: 'situation fictive', notionsLabel: 'Notions',
+  aRetenir: 'À retenir', objectif: 'Objectif', methode: 'Méthode guidée', questionsCahier: 'Questions', corriges: 'Corrigés expliqués',
+  pieges: 'Pièges à éviter', modeEmploi: 'Mode d’emploi', sommaire: 'Sommaire', partieCahier: 'Partie', exerciceCahier: 'Exercice',
+  niveauxCahier: { bases: 'Bases', application: 'Application', approfondissement: 'Pour aller plus loin' } as Record<string, string>,
+  votreReponseEcrite: 'Votre réponse', donneesLabel: 'Données',
   etape: 'Étape', avant: 'à', comparaison: 'Comparaison', mots: 'Lexique', lireFiche: 'Lire la fiche complète',
 };
 type Libelles = typeof fr;
@@ -71,6 +75,10 @@ const en: Libelles = {
   corrigeType: 'Model answer', autoEval: 'Self-assessment: tick the points your answer contains', enregistrerAutoEval: 'Save my self-assessment',
   voirCorrige: 'Show the answer key', criteresOk: 'All criteria are met.', criteresKo: 'One or more criteria are missing: go back over the model answer.',
   reponseLibre: 'Your answer (optional: it is not marked automatically)', situationFictive: 'fictional situation', notionsLabel: 'Concepts',
+  aRetenir: 'Key points', objectif: 'Objective', methode: 'Step-by-step method', questionsCahier: 'Questions', corriges: 'Explained answer key',
+  pieges: 'Traps to avoid', modeEmploi: 'How to use this workbook', sommaire: 'Contents', partieCahier: 'Part', exerciceCahier: 'Exercise',
+  niveauxCahier: { bases: 'Basics', application: 'Application', approfondissement: 'Going further' },
+  votreReponseEcrite: 'Your answer', donneesLabel: 'Data',
   etape: 'Step', avant: 'to', comparaison: 'Comparison', mots: 'Vocabulary', lireFiche: 'Read the full sheet',
 };
 
@@ -106,6 +114,10 @@ const es: Libelles = {
   corrigeType: 'Respuesta modelo', autoEval: 'Autoevaluación: marca los elementos presentes en tu respuesta', enregistrerAutoEval: 'Guardar mi autoevaluación',
   voirCorrige: 'Ver la corrección', criteresOk: 'Se cumplen todos los criterios.', criteresKo: 'Falta uno o varios criterios: revisa la respuesta modelo.',
   reponseLibre: 'Tu respuesta (opcional: no se corrige automáticamente)', situationFictive: 'situación ficticia', notionsLabel: 'Nociones',
+  aRetenir: 'Lo esencial', objectif: 'Objetivo', methode: 'Método guiado', questionsCahier: 'Preguntas', corriges: 'Correcciones explicadas',
+  pieges: 'Errores que hay que evitar', modeEmploi: 'Cómo usar este cuaderno', sommaire: 'Índice', partieCahier: 'Parte', exerciceCahier: 'Ejercicio',
+  niveauxCahier: { bases: 'Bases', application: 'Aplicación', approfondissement: 'Para ir más lejos' },
+  votreReponseEcrite: 'Tu respuesta', donneesLabel: 'Datos',
   etape: 'Paso', avant: 'a', comparaison: 'Comparación', mots: 'Léxico', lireFiche: 'Leer la ficha completa',
 };
 

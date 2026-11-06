@@ -48,7 +48,8 @@ export function Accueil() {
   const tous = statutsPerimetre('', p);
   const compris = tous.parStatut.compris.length + tous.parStatut.maitrise.length;
   const suivies = matieresSuivies(p);
-  const enCours = (suivies.length ? suivies.map((id) => matiere(id)).filter(Boolean) : matieresDisponibles().filter((m) => m.semestres.includes('S5'))).slice(0, 6);
+  const edt = matieresDisponibles().filter((m) => m.emploiDuTemps);
+  const enCours = edt.length ? edt : (suivies.length ? suivies.map((id) => matiere(id)!).filter(Boolean) : matieresDisponibles().filter((m) => m.semestres.includes('S5')));
   const recents = Object.entries(p.chapitres).sort((a, b) => b[1].ouvert - a[1].ouvert).slice(0, 5);
   const derniere = p.historique[0];
   const dernierChap = recents[0];
@@ -141,7 +142,7 @@ export function Accueil() {
         </aside>
       </div>
 
-      <div class="section-titre"><h2>{suivies.length ? 'Mes matières' : 'Matières du semestre 5'}</h2><a href="#/bibliotheque">Bibliothèque →</a></div>
+      <div class="section-titre"><h2>{edt.length ? 'Au programme ce semestre' : suivies.length ? 'Mes matières' : 'Matières du semestre 5'}</h2><a href="#/bibliotheque">Bibliothèque →</a></div>
       <div class="bibliotheque">{enCours.map((m) => <Couverture key={m!.id} m={m!} />)}</div>
     </>
   );

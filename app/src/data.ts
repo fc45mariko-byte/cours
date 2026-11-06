@@ -1,12 +1,21 @@
 // Accès aux données : index léger chargé au démarrage, chapitres chargés à la demande.
 import indexBrut from './generated/index.json';
-import type { FichierChapitre, IndexGenere, Question, Flashcard, Exercice, MatiereCatalogue, Publication, Article, IndexGlossaire, Langue } from './types';
+import type { FichierChapitre, IndexGenere, Question, Flashcard, Exercice, MatiereCatalogue, Publication, Article, IndexGlossaire, Langue, Cahier } from './types';
 import { calculerMaitrise, type Maitrise } from './core/maitrise';
 import type { Progression } from './core/store';
 
 export const index = indexBrut as unknown as IndexGenere;
 
-const fichiers = import.meta.glob<FichierChapitre>(['../../content/*/*.json', '!../../content/publications/*.json'], { import: 'default' });
+const fichiers = import.meta.glob<FichierChapitre>(['../../content/*/*.json', '!../../content/publications/*.json', '!../../content/cahiers/*.json'], { import: 'default' });
+const fichiersCahiers = import.meta.glob<Cahier>('../../content/cahiers/*.json', { import: 'default' });
+
+/** Cahier d'exercices d'une matière (chargé à la demande). */
+export function chargerCahier(matiere: string): Promise<Cahier> {
+  const f = fichiersCahiers[`../../content/cahiers/${matiere}.json`];
+  return f ? f() : Promise.reject(new Error(`Pas encore de cahier d'exercices pour ${matiere}`));
+}
+/** Matières à l'emploi du temps du semestre en cours, dans l'ordre du catalogue. */
+export const matieresEmploiDuTemps = () => index.matieres.filter((m) => m.emploiDuTemps);
 const cache = new Map<string, Promise<FichierChapitre>>();
 
 export function chapitreExiste(chapitre: string): boolean {

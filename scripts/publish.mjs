@@ -1,5 +1,6 @@
 // Copie le site construit (dist/) à la racine du dépôt, pour GitHub Pages en mode « branche ».
-// Fichiers publiés : index.html, assets/ et les fichiers statiques de app/public (manifeste, service worker, icônes).
+// Fichiers publiés : index.html, assets/ et les fichiers statiques de app/public. Les PDF des cahiers sont
+// écrits directement dans imprimables/ par scripts/imprimables.mjs.
 import { cpSync, rmSync, existsSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';

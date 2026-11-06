@@ -1,6 +1,6 @@
 /* Système de design « The Learning Journal ».
    Tous les choix visuels sont ici : couleurs, typographie, espacements, points de rupture.
-   Direction : publication éditoriale (ivoire, encre anthracite et bleu nuit, accents sourds par discipline).
+   Direction : publication éditoriale en rose pastel (fond poudré, encre prune, boutons framboise, filets dorés, accents pastel par discipline).
 
    Points de rupture (les propriétés personnalisées ne sont pas utilisables dans les media queries,
    ils sont donc écrits en dur dans app.css) :
@@ -24,39 +24,44 @@
   --interligne: 1.62;
   --mesure: 68ch;
 
-  /* Couleurs : fonds */
-  --papier: #f5f0e6;
-  --papier-2: #ece5d6;
-  --surface: #fbf8f1;
-  --surface-2: #f3eee3;
-  --nuit: #1c2a3d;
-  --nuit-2: #263851;
+  /* Couleurs : fonds (rose pastel, élégant) */
+  --papier: #fcf0f3;
+  --papier-2: #f8e2e9;
+  --surface: #fff8fa;
+  --surface-2: #fbeaf0;
+  --nuit: #8e3b5f;      /* framboise profonde : boutons, dossiers */
+  --nuit-2: #a3486f;
+  --or: #c29a45;        /* or doux : filets et ornements */
+  --or-pale: #f6ecd2;
 
   /* Couleurs : encres */
-  --encre: #1e2124;
-  --encre-2: #3a3d40;
-  --encre-inverse: #f7f2e8;
-  --discret: #686258;
-  --filet: #d6cdbc;
-  --filet-fort: #1e2124;
-  --focus: #2b5c8a;
+  --encre: #3a2230;
+  --encre-2: #5a3a4a;
+  --encre-inverse: #fff6f8;
+  --discret: #8a6474;
+  --filet: #efcdd8;
+  --filet-fort: #c98aa3;
+  --focus: #c2557a;
 
-  /* Accents par discipline (identité éditoriale, jamais seuls porteurs d'information) */
-  --bleu: #3d5a73;      --bleu-pale: #dde5ea;
-  --sauge: #5f7556;     --sauge-pale: #e1e7d9;
-  --terre: #a85a37;     --terre-pale: #f1dfd3;
-  --bordeaux: #7b2d3b;  --bordeaux-pale: #efdcdc;
-  --ocre: #8f6c22;      --ocre-pale: #f1e6cc;
-  --prune: #5a4a6a;     --prune-pale: #e6e0ea;
+  /* Accents par discipline (pastels, jamais seuls porteurs d'information) */
+  --bleu: #5f6fb8;      --bleu-pale: #e6e9fa;
+  --sauge: #4f8f77;     --sauge-pale: #dcf1e7;
+  --terre: #c0674b;     --terre-pale: #fce3d9;
+  --bordeaux: #b04a70;  --bordeaux-pale: #fbdfe9;
+  --ocre: #a88232;      --ocre-pale: #f7edcf;
+  --prune: #8a5aad;     --prune-pale: #efe2f8;
 
   /* États */
-  --ok: #2f6844;   --ok-fond: #e1ecdf;
-  --ko: #9b2f2f;   --ko-fond: #f5e0dc;
-  --alerte: #7c5612; --alerte-fond: #f4e8cc;
+  --ok: #2f7556;   --ok-fond: #def3e8;
+  --ko: #b0364f;   --ko-fond: #fbdde3;
+  --alerte: #8a6114; --alerte-fond: #f9ecd0;
 
   /* Données (graphiques à une série : une seule teinte) */
-  --donnee: #1c2a3d;
-  --donnee-fond: #e3ddd0;
+  --donnee: #a23e66;
+  --donnee-fond: #f3d6e0;
+
+  /* Ombres douces */
+  --ombre: 0 1px 2px rgba(142, 59, 95, 0.06), 0 8px 24px rgba(142, 59, 95, 0.08);
 
   /* Espacements */
   --e1: 4px; --e2: 8px; --e3: 12px; --e4: 16px; --e5: 24px; --e6: 32px; --e7: 48px; --e8: 64px; --e9: 96px;
@@ -72,27 +77,28 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --papier: #15130f; --papier-2: #1e1b16; --surface: #1b1914; --surface-2: #24211b;
-    --nuit: #0f1724; --nuit-2: #18243a;
-    --encre: #ece6da; --encre-2: #cfc8bb; --encre-inverse: #15130f; --discret: #a59d8f;
-    --filet: #3a352c; --filet-fort: #ece6da; --focus: #8fb6dc;
-    --bleu: #8fb0c9; --bleu-pale: #1f2a33; --sauge: #a3b896; --sauge-pale: #232b1f;
-    --terre: #d99674; --terre-pale: #33241b; --bordeaux: #d58e99; --bordeaux-pale: #33201f;
-    --ocre: #d4b26a; --ocre-pale: #302816; --prune: #b8a6cc; --prune-pale: #2a2431;
-    --ok: #9ccdaa; --ok-fond: #1e2e22; --ko: #eba59b; --ko-fond: #3a201c; --alerte: #e4c27a; --alerte-fond: #33291a;
-    --donnee: #d9d2c4; --donnee-fond: #2c2820;
+    --papier: #1f141a; --papier-2: #281a21; --surface: #2a1b23; --surface-2: #33212b;
+    --nuit: #5e2741; --nuit-2: #6e2f4d; --or: #e0c07a; --or-pale: #3a3020;
+    --encre: #f6e6ec; --encre-2: #e6cdd7; --encre-inverse: #1f141a; --discret: #c6a4b2;
+    --filet: #4a3240; --filet-fort: #b47a93; --focus: #f0a6c2;
+    --bleu: #aab6f0; --bleu-pale: #2a2c44; --sauge: #9fd6bf; --sauge-pale: #20352d;
+    --terre: #f2ab92; --terre-pale: #3e2820; --bordeaux: #f2a0bf; --bordeaux-pale: #3f2231;
+    --ocre: #e5c77d; --ocre-pale: #3a3020; --prune: #cfaaf0; --prune-pale: #33263f;
+    --ok: #9fd6bf; --ok-fond: #1f3329; --ko: #f4a3b3; --ko-fond: #42202a; --alerte: #ebc77d; --alerte-fond: #3a2d17;
+    --donnee: #f2a0bf; --donnee-fond: #3f2a35; --ombre: none;
   }
 }
 :root[data-theme='dark'] {
-  --papier: #15130f; --papier-2: #1e1b16; --surface: #1b1914; --surface-2: #24211b;
-  --nuit: #0f1724; --nuit-2: #18243a;
-  --encre: #ece6da; --encre-2: #cfc8bb; --encre-inverse: #15130f; --discret: #a59d8f;
-  --filet: #3a352c; --filet-fort: #ece6da; --focus: #8fb6dc;
-  --bleu: #8fb0c9; --bleu-pale: #1f2a33; --sauge: #a3b896; --sauge-pale: #232b1f;
-  --terre: #d99674; --terre-pale: #33241b; --bordeaux: #d58e99; --bordeaux-pale: #33201f;
-  --ocre: #d4b26a; --ocre-pale: #302816; --prune: #b8a6cc; --prune-pale: #2a2431;
-  --ok: #9ccdaa; --ok-fond: #1e2e22; --ko: #eba59b; --ko-fond: #3a201c; --alerte: #e4c27a; --alerte-fond: #33291a;
-  --donnee: #d9d2c4; --donnee-fond: #2c2820;
+  --papier: #1f141a; --papier-2: #281a21; --surface: #2a1b23; --surface-2: #33212b;
+  --nuit: #5e2741; --nuit-2: #6e2f4d; --or: #e0c07a; --or-pale: #3a3020;
+  --encre: #f6e6ec; --encre-2: #e6cdd7; --encre-inverse: #1f141a; --discret: #c6a4b2;
+  --filet: #4a3240; --filet-fort: #b47a93; --focus: #f0a6c2;
+  --bleu: #aab6f0; --bleu-pale: #2a2c44; --sauge: #9fd6bf; --sauge-pale: #20352d;
+  --terre: #f2ab92; --terre-pale: #3e2820; --bordeaux: #f2a0bf; --bordeaux-pale: #3f2231;
+  --ocre: #e5c77d; --ocre-pale: #3a3020; --prune: #cfaaf0; --prune-pale: #33263f;
+  --ok: #9fd6bf; --ok-fond: #1f3329; --ko: #f4a3b3; --ko-fond: #42202a; --alerte: #ebc77d; --alerte-fond: #3a2d17;
+  --donnee: #f2a0bf; --donnee-fond: #3f2a35; --ombre: none;
+
 }
 
 /* Teinte d'une discipline : la classe ton-<couleur> fixe --ton et --ton-pale pour tout le bloc. */

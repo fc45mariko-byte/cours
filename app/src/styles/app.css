@@ -444,3 +444,110 @@ main { overflow-wrap: break-word; }
 main a[href^="http"] { overflow-wrap: anywhere; }
 .edition { display: flex; justify-content: space-between; align-items: center; gap: var(--e3); flex-wrap: wrap; margin: var(--e2) 0 var(--e4); }
 .pourquoi { font-size: var(--t-meta); letter-spacing: .04em; color: var(--discret); margin: 8px 0 0; font-style: italic; }
+
+/* ============ Cahiers d'exercices (écran et impression) ============ */
+.outils-impression { position: sticky; top: 0; z-index: 5; display: flex; gap: var(--e3); align-items: center; flex-wrap: wrap; background: var(--papier); padding: var(--e3) 0; border-bottom: 1px solid var(--filet); margin-bottom: var(--e5); }
+@media (max-width: 699px) { .outils-impression { top: 57px; } }
+.cahier-couverture { border-top: 4px solid var(--ton); padding-top: var(--e5); margin-bottom: var(--e7); }
+.cahier-matiere { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--ton); margin: 0; }
+.sommaire-cahier { padding-left: 1.4em; }
+.sommaire-cahier li { display: flex; justify-content: space-between; gap: var(--e3); border-bottom: 1px dotted var(--filet); padding: 4px 0; }
+.legende-niveaux { display: flex; gap: var(--e3); flex-wrap: wrap; }
+.partie-titre { display: flex; flex-direction: column; gap: 2px; border-top: 2px solid var(--filet-fort); padding-top: var(--e3); margin-top: var(--e7); }
+.partie-titre span { font-family: var(--sans); font-size: var(--t-meta); letter-spacing: .14em; text-transform: uppercase; color: var(--discret); }
+.a-retenir { background: var(--ton-pale); border-left: 3px solid var(--ton); padding: var(--e3) var(--e4); margin: var(--e4) 0 var(--e5); }
+.a-retenir ul { margin: 6px 0 0; padding-left: 1.2em; }
+.exo { border-top: 1px solid var(--filet); padding: var(--e4) 0 var(--e5); }
+.exo-entete { display: flex; gap: var(--e3); align-items: center; flex-wrap: wrap; font-size: var(--t-meta); text-transform: uppercase; letter-spacing: .1em; }
+.exo-num { font-weight: 700; }
+.exo-niveau { border: 1px solid currentColor; padding: 0 7px; border-radius: 99px; font-size: var(--t-meta); text-transform: uppercase; letter-spacing: .08em; }
+.niv-bases { color: var(--bleu); } .niv-application { color: var(--terre); } .niv-approfondissement { color: var(--prune); }
+.exo-titre { margin: 6px 0 8px; }
+.exo-objectif { font-style: italic; }
+.exo-methode { border-left: 3px solid var(--filet); padding: 4px 0 4px var(--e4); margin: var(--e3) 0; }
+.exo-methode ol, .exo-questions ul { margin: 6px 0 0; padding-left: 1.3em; }
+.exo-questions ul { list-style: none; padding-left: 0; }
+.exo-questions li { margin: 4px 0; }
+.lignes-reponse { margin: var(--e3) 0; }
+.lignes-reponse span { display: block; height: 30px; border-bottom: 1px solid var(--filet); }
+.exo-fait { display: flex; gap: 8px; align-items: center; font-size: var(--t-petit); color: var(--discret); margin-top: var(--e2); }
+.corriges { margin-top: var(--e8); }
+.corrige { border-top: 1px solid var(--filet); padding: var(--e3) 0; }
+.corrige h3 { font-size: 1.05rem; margin: 0 0 6px; }
+.corrige ol { margin: 0; padding-left: 1.3em; }
+.sans-corriges .corriges { display: none; }
+
+@page { size: A4; margin: 15mm 14mm 16mm; }
+@media print {
+  :root, :root[data-theme='dark'] {
+    --papier: #fff; --papier-2: #f3f3f3; --surface: #fff; --surface-2: #f5f5f5; --encre: #111; --encre-2: #222; --discret: #555; --filet: #bbb; --filet-fort: #111;
+    --bleu: #2c4a63; --terre: #8a4426; --prune: #4a3a5a; --sauge: #4b6143; --ocre: #6e521a; --bordeaux: #6a2433;
+    --bleu-pale: #eef2f5; --terre-pale: #f6ece6; --prune-pale: #f1edf4; --sauge-pale: #eef2ea; --ocre-pale: #f6f0e1; --bordeaux-pale: #f5ebeb;
+  }
+  html, body { background: #fff !important; color: #111; font-size: 10.5pt; }
+  .barre, .entete-mobile, .nav-mobile, .toast, .ecran-seul, .skip { display: none !important; }
+  .shell { display: block; }
+  main { padding: 0 !important; }
+  main > .page, main > .page.lecture { max-width: none; }
+  a { text-decoration: none; color: inherit; }
+  .cahier { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cahier-couverture { break-after: page; border-top-width: 3mm; }
+  .cahier-partie { break-before: page; }
+  .partie-titre { margin-top: 0; }
+  .a-retenir, .exo-methode, .exo-questions, .exo-objectif, .tableau-wrap { break-inside: avoid; }
+  .exo-entete, .exo-titre { break-after: avoid; }
+  .exo { padding-bottom: 4mm; }
+  .corriges { break-before: page; margin-top: 0; }
+  .corrige { break-inside: avoid; }
+  .lignes-reponse span { height: 8.5mm; border-bottom-color: #999; }
+  .tableau-wrap { overflow: visible; }
+  h1.titre-page { font-size: 24pt; }
+  .partie-titre { font-size: 16pt; }
+}
+
+/* ============ Habillage rose pastel (couleurs et finitions ; la mise en page ne change pas) ============ */
+body { background: linear-gradient(180deg, #fdf3f6 0%, var(--papier) 40%, #fbe9ef 100%) fixed; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) body { background: var(--papier); } }
+:root[data-theme='dark'] body { background: var(--papier); }
+.marque b { color: var(--nuit); }
+.marque b::after { content: '✦'; color: var(--or); font-size: 0.42em; vertical-align: super; margin-left: 3px; }
+.marque span { color: var(--bordeaux); }
+.barre { background: linear-gradient(180deg, rgba(255, 248, 250, .9), rgba(252, 236, 242, .9)); border-right-color: var(--filet); }
+.barre .lien-nav { border-top-color: var(--filet); }
+.barre .lien-nav[aria-current='page'] { color: var(--nuit); }
+.barre .lien-nav[aria-current='page'] .num { color: var(--or); }
+.barre .lien-nav .compte { background: var(--nuit); }
+.entete-mobile, .nav-mobile { background: rgba(255, 246, 249, .96); backdrop-filter: blur(6px); }
+.nav-mobile a[aria-current='page'] { color: var(--nuit); }
+.display em, h1.titre em { color: var(--bordeaux); }
+.section-titre { border-top: 1px solid var(--or); box-shadow: 0 -3px 0 -2px var(--or); }
+.partie-titre { border-top-color: var(--or); }
+.btn { border-radius: 999px; box-shadow: 0 2px 8px rgba(142, 59, 95, .18); }
+.btn.secondaire, .btn.discret { box-shadow: none; }
+.btn.secondaire { border-color: var(--nuit); color: var(--nuit); }
+.btn.secondaire:hover { background: var(--bordeaux-pale); }
+.puce { background: var(--surface); }
+.puce[aria-pressed='true'], .puce.active, .puce[aria-selected='true'] { background: var(--nuit); border-color: var(--nuit); }
+.onglets [aria-selected='true'] { color: var(--nuit); border-bottom-color: var(--nuit); }
+.bloc { border-radius: 18px; box-shadow: var(--ombre); }
+.encadre, .definition, .a-retenir, .exo-methode, .formule, .reprise { border-radius: 0 12px 12px 0; }
+.choix { border-radius: 14px; }
+.carte, .couverture, .une .visuel, .une-matiere, .couverture-chapitre, .medaille, .noeud a { border-radius: 18px; }
+.couverture, .carte { box-shadow: var(--ombre); }
+.couverture:hover, .carte:hover { transform: translateY(-2px); transition: transform .2s ease; }
+.une-matiere, .couverture-chapitre { box-shadow: var(--ombre); }
+.pub { border-top-width: 2px; }
+.pub--quiz { border-radius: 18px; }
+.pub--dossier { border-radius: 22px; background: linear-gradient(135deg, var(--nuit) 0%, #6e2a4b 100%); }
+.pub--dossier .surtitre .ton-trait { color: #f3d9a4; }
+.medaille .sceau { border-color: var(--or); box-shadow: inset 0 0 0 5px var(--surface), inset 0 0 0 6px var(--or); color: var(--nuit); background: var(--or-pale); }
+.anneau .val { stroke: var(--nuit); }
+.jauge > span { background: linear-gradient(90deg, var(--bordeaux), var(--nuit)); }
+.statut-compris, .statut-maitrise { color: var(--ok); }
+.lien-notion { border-bottom-color: var(--filet-fort); }
+.toast { background: var(--nuit); border-radius: 999px; }
+.tag-fictif { border-radius: 999px; }
+.exo-niveau { background: var(--surface); }
+.calendrier span.n3 { background: var(--nuit); }
+::selection { background: #f7c6d6; color: #3a2230; }
+.recherche input { border-color: var(--filet-fort); border-radius: 999px; background: var(--surface); }

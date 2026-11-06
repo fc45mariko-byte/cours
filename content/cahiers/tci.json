@@ -1,0 +1,968 @@
+{
+  "matiere": "tci",
+  "titre": "Cahier d'exercices – Techniques du commerce international",
+  "introduction": "Ce cahier suit les neuf chapitres du cours, de l'opération d'import-export aux échanges intracommunautaires. Pour chaque section, relisez d'abord le rappel de cours : il contient les règles et les formules dont vous aurez besoin. Faites ensuite les exercices dans l'ordre, sur papier, en suivant la méthode guidée et en posant chaque calcul en entier. Ne regardez le corrigé qu'après avoir rédigé votre réponse : il explique chaque étape et indique pourquoi, ce qui vous permet de comprendre une erreur plutôt que de simplement la constater. Toutes les entreprises et tous les montants sont fictifs ; les règles appliquées sont celles du cours (Incoterms® 2020, UCP 600, CMR, Code des douanes de l'Union).",
+  "sections": [
+    {
+      "id": "tci-s1",
+      "titre": "L'opération d'import-export : acteurs, flux et documents commerciaux",
+      "chapitre": "tci.operation",
+      "notions": ["tci.operation.acteurs", "tci.operation.flux", "tci.operation.offre-export", "tci.operation.facture-commerciale"],
+      "rappel": [
+        "Autour du vendeur et de l'acheteur interviennent : transporteurs, commissionnaires de transport, transitaires, représentants en douane, banques, assureurs et douane. Chacun est lié par son propre contrat (transport, commission, mandat, police d'assurance…).",
+        "Le commissionnaire de transport organise le transport de bout en bout en son nom et répond du résultat, y compris des fautes des transporteurs qu'il choisit ; le transitaire est un simple mandataire qui ne répond que de sa faute prouvée ; ni l'un ni l'autre ne déplace lui-même la marchandise.",
+        "Toute opération combine trois flux décalés dans le temps : flux physique (marchandise), flux documentaire (documents commerciaux, de transport, d'assurance, douaniers) et flux financier (paiement). La technique de paiement sert à gérer ce décalage.",
+        "La facture pro forma est une facture anticipée : elle n'est pas comptabilisée et sert au client à obtenir une licence, un financement ou l'ouverture d'un crédit documentaire. La facture commerciale constate la vente et sert à la comptabilité, à la TVA et à la douane.",
+        "Mentions indispensables d'une offre : désignation, quantités, prix unitaire et total, monnaie, Incoterm avec lieu et édition, délai de livraison, conditions de paiement, durée de validité, emballage, poids et volume, origine et code tarifaire si possible."
+      ],
+      "exercices": [
+        {
+          "id": "tci-1",
+          "niveau": "bases",
+          "titre": "Qui fait quoi ? Identifier les acteurs et les flux",
+          "objectif": "Savoir reconnaître le rôle de chaque intervenant et classer chaque événement dans le bon flux.",
+          "enonce": "La société Biscuits de Sologne (fictive) vend des sablés à un importateur de Singapour, paiement par crédit documentaire. Le tableau décrit huit situations survenues pendant l'opération.",
+          "donnees": {
+            "entetes": ["N°", "Situation"],
+            "lignes": [
+              ["a", "Une entreprise du Havre réserve le conteneur, choisit la compagnie maritime et le camion de pré-acheminement, et s'engage sur le résultat du transport complet."],
+              ["b", "Une compagnie maritime charge le conteneur à bord et émet un connaissement."],
+              ["c", "Un professionnel établit et dépose la déclaration d'exportation pour le compte de Biscuits de Sologne."],
+              ["d", "La banque de l'importateur s'engage à payer contre remise de documents conformes."],
+              ["e", "Un intermédiaire est chargé uniquement de réserver la place sur le navire, au nom et pour le compte de l'exportateur."],
+              ["f", "Les documents (facture, connaissement, liste de colisage) sont envoyés de la banque française à la banque singapourienne."],
+              ["g", "Le camion transporte les palettes de l'usine au terminal du Havre."],
+              ["h", "Le montant de la vente est porté au crédit du compte de l'exportateur."]
+            ]
+          },
+          "methode": [
+            "Pour chaque situation, demandez-vous d'abord : cette personne déplace-t-elle la marchandise elle-même, organise-t-elle le transport en s'engageant sur le résultat, ou exécute-t-elle seulement une mission précise au nom de son client ?",
+            "Distinguez le commissionnaire (il organise librement et garantit le résultat) du transitaire (mandataire, mission ponctuelle) et du transporteur (exécute le déplacement).",
+            "Pour classer en flux, posez la question : qu'est-ce qui circule ? Des marchandises (flux physique), des papiers ou données (flux documentaire) ou de l'argent, ou un engagement de payer (flux financier) ?"
+          ],
+          "questions": [
+            "1. Nommez l'acteur qui intervient dans les situations a, b, c, d et e.",
+            "2. Pour les situations b, f, g et h, indiquez à quel flux elles appartiennent.",
+            "3. Pourquoi une PME qui exporte rarement a-t-elle intérêt à confier l'opération à un commissionnaire de transport plutôt qu'à un transitaire ?",
+            "4. Dans ce crédit documentaire, quel flux relie les deux autres ? Expliquez."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. a = commissionnaire de transport : il organise l'ensemble et s'engage sur le résultat, donc il répond aussi des transporteurs qu'il choisit. b = transporteur (armateur) : c'est lui qui déplace physiquement la marchandise et émet le document de transport. c = représentant en douane (déclarant), qui agit sur mandat. d = banque émettrice du crédit documentaire. e = transitaire : mission précise, au nom et pour le compte du client, sans garantie du résultat d'ensemble.",
+            "2. b = flux physique (chargement), même si l'émission du connaissement est aussi un acte documentaire ; f = flux documentaire ; g = flux physique ; h = flux financier.",
+            "3. Le commissionnaire offre un interlocuteur unique et une responsabilité de plein droit : en cas de dommage, la PME s'adresse à lui, et c'est lui qui se retourne contre le transporteur fautif. Avec un transitaire, la PME doit prouver la faute du transitaire lui-même, sinon agir seule contre chaque transporteur.",
+            "4. Le flux documentaire : la banque ne paie que contre des documents conformes, et l'acheteur ne peut retirer la marchandise qu'avec ces documents (connaissement). Les documents représentent la marchandise et déclenchent le paiement : ils font le lien entre flux physique et flux financier."
+          ],
+          "erreurs": [
+            "Confondre transitaire et transporteur : le transitaire ne déplace jamais la marchandise.",
+            "Croire que le commissionnaire n'est responsable que de ses propres fautes : il répond aussi de ses substitués."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-2",
+          "niveau": "application",
+          "titre": "Corriger une facture pro forma",
+          "objectif": "Savoir vérifier qu'une offre ou une pro forma contient toutes les mentions utiles au client étranger et comprendre à quoi sert chacune.",
+          "enonce": "Un importateur tunisien demande à la société Pompes du Berry (fictive) une facture pro forma pour faire ouvrir un crédit documentaire. Le commercial envoie le document suivant : « Facture pro forma n° PF-118. Client : Hydro Sud, Sfax. 25 pompes immergées modèle P40. Total : 31 250. Livraison franco. Paiement : à votre convenance. »",
+          "methode": [
+            "Reprenez la liste des mentions indispensables du rappel et cochez celles qui figurent dans le document.",
+            "Pour chaque mention manquante, demandez-vous à quoi elle sert au client : obtenir sa licence ou son crédit, calculer son coût d'importation, préparer le dédouanement.",
+            "Vérifiez la cohérence des chiffres : un total doit pouvoir se retrouver à partir du prix unitaire et de la quantité.",
+            "Pour l'Incoterm, appliquez la formule : règle + lieu précis + « Incoterms® 2020 »."
+          ],
+          "questions": [
+            "1. Relevez au moins six mentions manquantes ou insuffisantes et expliquez l'utilité de chacune pour le client.",
+            "2. Le prix unitaire convenu est de 1 250 €. Le total est-il cohérent ? Indiquez le total complet tel qu'il doit apparaître.",
+            "3. Rédigez une clause Incoterm correcte, sachant que la marchandise sera remise au transitaire de l'acheteur à son entrepôt de Marseille.",
+            "4. Expliquez la différence entre cette pro forma et la facture commerciale qui sera émise à l'expédition."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Manquent : la monnaie (31 250 quoi ? sans monnaie le prix est indéterminé et le crédit ne peut pas être ouvert) ; le prix unitaire (permet au client de vérifier et de modifier la quantité) ; l'Incoterm avec lieu et édition (« franco » ne dit ni où s'arrête l'obligation du vendeur ni qui paie quoi : le client ne peut pas calculer son coût de revient) ; le délai de livraison ou la date d'expédition (le crédit documentaire fixe une date limite d'expédition) ; les conditions de paiement (« à votre convenance » est incompatible avec la demande de crédit documentaire : il faut écrire « crédit documentaire irrévocable ») ; la durée de validité de l'offre (protège le vendeur contre une acceptation tardive) ; l'emballage, le poids et le volume (utiles pour réserver le transport et pour la douane) ; l'origine et si possible le code tarifaire (le client en a besoin pour estimer les droits).",
+            "2. 25 × 1 250 = 31 250 : le calcul est juste, mais il faut l'écrire : « 25 pompes immergées modèle P40, prix unitaire 1 250,00 EUR, total 31 250,00 EUR ».",
+            "3. « FCA entrepôt du transitaire X, [adresse précise], Marseille, France, Incoterms® 2020 ». FCA convient car la marchandise est remise au transporteur ou à la personne désignée par l'acheteur ; comme le lieu n'est pas chez le vendeur, celui-ci y amène la marchandise sur son véhicule, prête à être déchargée.",
+            "4. La pro forma précède la vente : elle n'est pas comptabilisée et sert au client à obtenir l'ouverture du crédit. La facture commerciale constate la vente réalisée ; elle est comptabilisée, sert de base à la TVA (ici exonération à l'export) et à la valeur en douane, et doit reprendre exactement la description des marchandises figurant dans le crédit documentaire."
+          ],
+          "erreurs": [
+            "Écrire « franco » ou « FCA France » : aucun point précis de livraison, donc impossible de savoir où passe le risque.",
+            "Oublier la monnaie : à l'international, plusieurs monnaies sont possibles."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s2",
+      "titre": "Incoterms® 2020 : risques, frais, choix et rédaction",
+      "chapitre": "tci.incoterms",
+      "notions": ["tci.incoterms.fonction", "tci.incoterms.familles", "tci.incoterms.transfert-risque", "tci.incoterms.repartition-couts", "tci.incoterms.dissociation-c", "tci.incoterms.exw", "tci.incoterms.fca", "tci.incoterms.fas-fob", "tci.incoterms.cfr-cif", "tci.incoterms.cpt-cip", "tci.incoterms.dap-dpu-ddp", "tci.incoterms.assurance", "tci.incoterms.dedouanement", "tci.incoterms.chargement-dechargement", "tci.incoterms.choix", "tci.incoterms.redaction", "tci.incoterms.vs-propriete", "tci.incoterms.cas"],
+      "rappel": [
+        "Onze règles : sept pour tout mode de transport (EXW, FCA, CPT, CIP, DAP, DPU, DDP) et quatre pour le maritime et fluvial seulement (FAS, FOB, CFR, CIF). Un Incoterm règle livraison, risques, frais, transport, assurance (CIF, CIP), dédouanement, documents ; il ne règle ni la propriété, ni le prix, ni le paiement.",
+        "Points de transfert des risques : EXW = mise à disposition non chargée chez le vendeur ; FCA = remise au transporteur de l'acheteur (chargée si chez le vendeur, prête à être déchargée ailleurs) ; FAS = le long du navire ; FOB, CFR, CIF = à bord au port d'embarquement ; CPT, CIP = remise au premier transporteur ; DAP et DDP = à destination, prête à être déchargée ; DPU = à destination, déchargée.",
+        "Famille C : deux points critiques. Le risque passe au départ, mais le vendeur paie le transport principal jusqu'à destination (et l'assurance en CIF et CIP).",
+        "Dédouanement export : vendeur sauf en EXW. Dédouanement import : acheteur sauf en DDP. Seul DPU oblige le vendeur à décharger à destination.",
+        "Assurance obligatoire seulement en CIF (clauses C minimum) et CIP (clauses A minimum), au profit de l'acheteur, pour au moins 110 % du prix du contrat. Formule du cours : prime = taux × 110 % × valeur CIF, donc CIF = CFR ÷ (1 − 1,1 × taux).",
+        "Clause complète : règle + lieu ou port précis + « Incoterms® 2020 ». Conteneur, route, air : règles tous modes (FCA, CPT, CIP, D) ; éviter EXW hors UE et DDP si l'on ne peut pas dédouaner chez l'acheteur."
+      ],
+      "exercices": [
+        {
+          "id": "tci-3",
+          "niveau": "bases",
+          "titre": "Le tableau des onze règles",
+          "objectif": "Mémoriser, en le reconstruisant soi-même, ce que dit chaque règle sur le mode de transport, le risque, le transport principal et le dédouanement.",
+          "enonce": "Recopiez et complétez le tableau ci-dessous pour les onze Incoterms® 2020. Pour chaque règle, indiquez la famille (E, F, C, D), la catégorie (tous modes ou maritime), le lieu où le risque passe à l'acheteur, qui paie le transport principal, et qui accomplit le dédouanement export et import.",
+          "donnees": {
+            "entetes": ["Règle", "Famille", "Catégorie", "Transfert du risque", "Transport principal payé par", "Dédouanement export / import"],
+            "lignes": [
+              ["EXW", "", "", "", "", ""],
+              ["FCA", "", "", "", "", ""],
+              ["FAS", "", "", "", "", ""],
+              ["FOB", "", "", "", "", ""],
+              ["CFR", "", "", "", "", ""],
+              ["CIF", "", "", "", "", ""],
+              ["CPT", "", "", "", "", ""],
+              ["CIP", "", "", "", "", ""],
+              ["DAP", "", "", "", "", ""],
+              ["DPU", "", "", "", "", ""],
+              ["DDP", "", "", "", "", ""]
+            ]
+          },
+          "methode": [
+            "Partez de la première lettre : E = départ (Ex) ; F = transport principal non payé par le vendeur (Free) ; C = transport principal payé par le vendeur (Cost/Carriage), risque au départ ; D = livré à destination (Delivered), risque à l'arrivée.",
+            "Retenez les quatre règles maritimes : elles contiennent toutes une référence au navire (Alongside Ship, On Board) ou sont les versions maritimes de CPT et CIP (CFR, CIF).",
+            "Pour le dédouanement, appliquez la règle simple : chacun s'occupe de son pays, sauf aux deux extrémités (EXW : l'acheteur fait tout ; DDP : le vendeur fait tout)."
+          ],
+          "questions": [
+            "1. Complétez le tableau.",
+            "2. Pour quelles règles le point de transfert des risques et le point de transfert des frais sont-ils différents ? Pourquoi ?",
+            "3. Quelle est la seule règle qui oblige le vendeur à décharger à destination ? Quelle est la seule qui l'oblige à dédouaner à l'import ?",
+            "4. Vrai ou faux, en justifiant : « En CIF, le vendeur supporte les risques jusqu'au port de destination puisqu'il paie le fret et l'assurance jusque-là. »"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. EXW : E, tous modes, mise à disposition non chargée chez le vendeur, acheteur, acheteur / acheteur. FCA : F, tous modes, remise au transporteur désigné par l'acheteur, acheteur, vendeur / acheteur. FAS : F, maritime, le long du navire au port d'embarquement, acheteur, vendeur / acheteur. FOB : F, maritime, à bord au port d'embarquement, acheteur, vendeur / acheteur. CFR : C, maritime, à bord au port d'embarquement, vendeur, vendeur / acheteur. CIF : C, maritime, à bord au port d'embarquement, vendeur (plus l'assurance), vendeur / acheteur. CPT : C, tous modes, remise au premier transporteur, vendeur, vendeur / acheteur. CIP : C, tous modes, remise au premier transporteur, vendeur (plus l'assurance), vendeur / acheteur. DAP : D, tous modes, à destination prête à être déchargée, vendeur, vendeur / acheteur. DPU : D, tous modes, à destination une fois déchargée, vendeur, vendeur / acheteur. DDP : D, tous modes, à destination prête à être déchargée, vendeur, vendeur / vendeur.",
+            "2. Pour les quatre règles C (CFR, CIF, CPT, CIP) : le vendeur paie le transport principal jusqu'à destination, mais il a déjà livré au départ (à bord ou à la remise au premier transporteur). Ce sont les deux points critiques. Pour E, F et D, risque et frais passent au même endroit.",
+            "3. DPU est la seule règle où le vendeur décharge à destination. DDP est la seule où il dédouane à l'import et paie les droits et taxes.",
+            "4. Faux. CIF est une vente au départ : le risque passe à bord du navire au port d'embarquement. Le vendeur paie le fret et souscrit l'assurance, mais cette assurance couvre l'acheteur, qui supporte le risque pendant la traversée."
+          ],
+          "erreurs": [
+            "Classer FCA parmi les règles maritimes : FCA est utilisable pour tout mode.",
+            "Penser que « celui qui paie le transport supporte le risque » : c'est faux pour toute la famille C."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "tci-4",
+          "niveau": "application",
+          "titre": "Construire un prix de l'EXW au DDP",
+          "objectif": "Savoir passer d'un Incoterm à l'autre en ajoutant les bons frais dans le bon ordre, y compris la prime d'assurance CIF.",
+          "enonce": "La société Machines Agricoles du Perche (fictive) vend une ensileuse à un importateur de Casablanca, transport maritime en conventionnel depuis Le Havre. Elle veut connaître son prix pour plusieurs Incoterms. Données en euros (hypothèse : on raisonne hors TVA d'importation).",
+          "donnees": {
+            "entetes": ["Élément", "Montant"],
+            "lignes": [
+              ["Prix EXW (machine emballée, à disposition à l'usine)", "48 000 €"],
+              ["Chargement et pré-acheminement usine → quai du Havre", "640 €"],
+              ["Dédouanement export", "160 €"],
+              ["Manutention portuaire et mise à bord", "420 €"],
+              ["Fret maritime Le Havre → Casablanca", "3 380 €"],
+              ["Taux d'assurance", "0,5 % de 110 % de la valeur CIF"],
+              ["Déchargement du navire et manutention au port de Casablanca", "380 €"],
+              ["Post-acheminement port → site de l'acheteur (camion)", "520 €"],
+              ["Déchargement du camion sur le site de l'acheteur (grue)", "150 €"],
+              ["Dédouanement import (honoraires du transitaire local)", "230 €"],
+              ["Droits de douane à l'import (montant communiqué par le transitaire)", "1 850 €"]
+            ]
+          },
+          "methode": [
+            "Suivez la chaîne du cours : EXW → FAS → FOB → CFR → CIF → DAP → DPU, puis DDP. À chaque étape, demandez-vous quel frais le vendeur prend en plus quand il s'engage un cran plus loin.",
+            "FAS : la marchandise est livrée dédouanée export le long du navire. FOB : elle est en plus mise à bord.",
+            "Pour CIF, ne calculez pas la prime sur la valeur CFR : la prime fait partie de la valeur CIF. Résolvez CIF = CFR ÷ (1 − 1,1 × taux), puis vérifiez que prime = taux × 1,1 × CIF.",
+            "DAP : marchandise à destination, prête à être déchargée du camion. DPU : déchargée. DDP : comme DAP, mais dédouanée à l'import, droits payés (le déchargement final n'est pas dû en DDP).",
+            "Arrondissez au centime et gardez la valeur arrondie pour la suite."
+          ],
+          "questions": [
+            "1. Calculez les prix FAS Le Havre et FOB Le Havre.",
+            "2. Calculez le prix CFR Casablanca.",
+            "3. Calculez le prix CIF Casablanca et le montant de la prime ; vérifiez votre résultat.",
+            "4. Calculez le prix DAP (site de l'acheteur), puis le prix DPU.",
+            "5. Calculez le prix DDP (site de l'acheteur) et expliquez pourquoi on n'y ajoute pas le déchargement du camion.",
+            "6. Le vendeur peut-il proposer DDP sans difficulté ? Quelle règle lui conseilleriez-vous si l'acheteur dispose de son propre transitaire au Maroc ?"
+          ],
+          "lignes": 20,
+          "corrige": [
+            "1. FAS = EXW + chargement et pré-acheminement + dédouanement export = 48 000 + 640 + 160 = 48 800 €. FOB = FAS + manutention et mise à bord = 48 800 + 420 = 49 220 €. Le dédouanement export est dans le FAS car, sauf en EXW, il incombe toujours au vendeur.",
+            "2. CFR = FOB + fret maritime = 49 220 + 3 380 = 52 600 €. En CFR, le vendeur paie le fret jusqu'à Casablanca alors que le risque est passé à bord au Havre.",
+            "3. Taux réel appliqué à la valeur CIF : 0,5 % × 1,1 = 0,0055. CIF = CFR + 0,0055 × CIF, donc CIF × (1 − 0,0055) = CFR, soit CIF = 52 600 ÷ 0,9945 = 52 890,90 €. Prime = 52 890,90 − 52 600 = 290,90 €. Vérification : 0,0055 × 52 890,90 = 290,90 €. La couverture minimale est de 110 % × 52 890,90 = 58 179,99 €, en clauses C au minimum.",
+            "4. DAP = CIF + déchargement et manutention au port + post-acheminement = 52 890,90 + 380 + 520 = 53 790,90 €. Le vendeur, qui supporte désormais le risque jusqu'au site, a intérêt à rester assuré : on garde donc la prime dans le prix. DPU = DAP + déchargement du camion = 53 790,90 + 150 = 53 940,90 €.",
+            "5. DDP = DAP + dédouanement import + droits de douane = 53 790,90 + 230 + 1 850 = 55 870,90 €. En DDP, la livraison a lieu comme en DAP, marchandise prête à être déchargée : la grue reste à la charge de l'acheteur. Seul DPU met le déchargement à la charge du vendeur.",
+            "6. DDP oblige le vendeur à accomplir les formalités d'importation au Maroc et à y payer droits et taxes, ce qui suppose un représentant ou un transitaire local ; sans cette capacité, il risque un blocage en douane à ses frais. Si l'acheteur a son propre transitaire, DAP (ou DPU, vu le poids de la machine et si le vendeur sait organiser la grue) est plus adapté : le vendeur livre à destination et l'acheteur dédouane dans son pays. Résultat récapitulatif : FAS 48 800 € ; FOB 49 220 € ; CFR 52 600 € ; CIF 52 890,90 € ; DAP 53 790,90 € ; DPU 53 940,90 € ; DDP 55 870,90 €."
+          ],
+          "erreurs": [
+            "Calculer la prime sur la valeur CFR (52 600 × 0,0055 = 289,30 €) : la prime porte sur la valeur CIF, qui la contient.",
+            "Oublier la majoration de 110 % dans le taux.",
+            "Ajouter le déchargement final dans le prix DDP : en DDP, comme en DAP, l'acheteur décharge."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-5",
+          "niveau": "approfondissement",
+          "titre": "Études de cas : qui supporte le dommage, quel Incoterm choisir ?",
+          "objectif": "Appliquer la méthode de résolution d'un cas (clause, événement, point de transfert, conclusion, amélioration) et savoir choisir et rédiger une clause adaptée.",
+          "enonce": "Partie A. Cinq litiges opposent des vendeurs et des acheteurs (tous fictifs). (a) « CFR port de Montréal, Incoterms® 2020 » au départ du Havre : une partie des caisses est mouillée pendant la traversée. (b) « FCA locaux du vendeur, Vierzon, Incoterms® 2020 » : une palette tombe pendant que le cariste du vendeur la charge sur le camion envoyé par l'acheteur. (c) « DAP entrepôt de l'acheteur, Séville, Incoterms® 2020 » : la machine est endommagée pendant son déchargement par la grue de l'acheteur. (d) « FAS port de Rouen, Incoterms® 2020 » : un lot de tubes déposé sur le quai le long du navire désigné est heurté par un engin de manutention avant le chargement. (e) Un vendeur a livré « FCA Orléans » des machines payables à 90 jours ; l'acheteur italien fait faillite avant de payer, et le vendeur pense pouvoir récupérer les machines grâce à l'Incoterm. Partie B. Trois ventes sont en préparation : (1) un conteneur de 40 pieds de vins de Loire pour Tokyo, remis par l'exportateur au terminal du Havre quatre jours avant le départ, paiement par crédit documentaire, le client japonais veut un prix incluant transport et assurance tous risques ; (2) des pièces détachées envoyées par avion de Toulouse à Mexico, payées d'avance, l'acheteur ayant son propre transitaire et ses tarifs aériens ; (3) une vente de 5 000 tonnes de blé en vrac chargé directement dans les cales d'un navire affrété par l'acheteur égyptien au port de Rouen.",
+          "methode": [
+            "Pour chaque cas de la partie A : lisez la clause (règle, lieu), situez l'événement sur le trajet, comparez-le au point de transfert des risques (A3), concluez sur qui supporte la perte et contre qui il peut se retourner.",
+            "Attention : celui qui manipule la marchandise n'est pas forcément celui qui en supporte le risque. Seul compte le moment de la livraison au sens de l'Incoterm.",
+            "Pour le cas (e), rappelez-vous ce qu'un Incoterm ne règle pas.",
+            "Pour la partie B, appliquez la méthode en cinq questions : mode de transport, maîtrise de la logistique, capacité de dédouanement, argument commercial, moyen de paiement."
+          ],
+          "questions": [
+            "1. Pour chacun des cas a à d, indiquez qui supporte le dommage et justifiez par le point de transfert des risques.",
+            "2. Cas e : le raisonnement du vendeur est-il juste ? Que fallait-il prévoir dans le contrat ?",
+            "3. Pour chacune des trois ventes de la partie B, proposez un Incoterm, justifiez-le et rédigez la clause complète.",
+            "4. Pour la vente 1, pourquoi FOB Le Havre ou CIF Tokyo seraient-ils de mauvais choix ?"
+          ],
+          "lignes": 22,
+          "corrige": [
+            "1. (a) L'acheteur : en CFR, le risque passe à bord au port d'embarquement ; la mouille survient pendant la traversée, donc après la livraison. Le vendeur a payé le fret mais pas le risque. L'acheteur se retourne contre le transporteur ou contre son propre assureur (en CFR, personne n'est obligé d'assurer : c'était à lui de le faire). (b) Le vendeur : en FCA dans les locaux du vendeur, la livraison a lieu marchandise chargée sur le véhicule de l'acheteur ; la palette tombe avant d'être chargée. (c) L'acheteur : en DAP, la livraison a lieu marchandise prête à être déchargée ; le déchargement est à ses frais et à ses risques (en DPU, il aurait été pour le vendeur). (d) L'acheteur : en FAS, la livraison a lieu quand la marchandise est placée le long du navire ; le dommage survient sur le quai après ce dépôt.",
+            "2. Non. L'Incoterm ne règle que livraison, risques, frais et formalités ; il ne dit rien du transfert de propriété ni des conséquences d'un non-paiement. Il fallait une clause de réserve de propriété, dont l'efficacité dépend de la loi applicable, et éventuellement une technique de paiement plus sûre ou une assurance-crédit.",
+            "3. Vente 1 : CIP. Conteneur remis au terminal, donc règle tous modes ; prix incluant transport et assurance ; CIP impose une assurance en clauses A (tous risques sauf exclusions), alors que CIF n'impose que les clauses C. Clause : « CIP port de Tokyo, Japon, Incoterms® 2020 », en précisant si besoin le lieu de remise au départ (terminal du Havre). Vente 2 : FCA. Envoi aérien (tous modes), l'acheteur maîtrise le transport et paie d'avance, donc le vendeur n'a pas besoin d'organiser le transport ; FCA vaut mieux qu'EXW car le vendeur dédouane lui-même à l'export (ce qu'un acheteur mexicain ferait difficilement en France). Clause : « FCA aéroport de Toulouse-Blagnac, [magasin de fret de la compagnie ou du transitaire désigné], France, Incoterms® 2020 ». Vente 3 : FOB. Vrac chargé directement à bord d'un navire affrété par l'acheteur : les règles maritimes sont adaptées et l'acheteur organise le transport. Clause : « FOB port de Rouen, [quai précis], France, Incoterms® 2020 ».",
+            "4. Le conteneur est remis au terminal quatre jours avant le chargement. En FOB ou CIF, le risque ne passerait qu'à bord : pendant quatre jours, le vendeur supporterait un risque sur une marchandise qu'il ne contrôle plus. En outre, FOB laisserait le transport à l'acheteur et ne répondrait pas à la demande d'un prix rendu, et CIF n'offrirait qu'une assurance en clauses C."
+          ],
+          "erreurs": [
+            "Attribuer le dommage à celui qui manipulait la marchandise (cas b et c) au lieu de regarder le point de livraison.",
+            "Écrire une clause sans lieu précis ou sans « Incoterms® 2020 ».",
+            "Croire que l'Incoterm protège le vendeur contre le non-paiement."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s3",
+      "titre": "Transport international : choisir un mode et calculer un fret",
+      "chapitre": "tci.transport",
+      "notions": ["tci.transport.choix-mode", "tci.transport.maritime", "tci.transport.fret-maritime", "tci.transport.aerien", "tci.transport.routier", "tci.transport.multimodal", "tci.transport.responsabilite", "tci.transport.emballage-marquage"],
+      "rappel": [
+        "Le choix d'un mode arbitre coût, délai, fiabilité, sécurité, nature de la marchandise (poids, volume, valeur, fragilité, dangerosité) et géographie. Plus le rapport valeur/poids est élevé, plus l'avion se justifie ; le délai a un coût (stock à financer).",
+        "Maritime : lignes régulières (conteneurs) ou tramping (vrac). Conteneur complet (FCL) ou groupage (LCL). Un 20 pieds fait environ 33 m³, un 40 pieds environ 67 m³ (= 2 EVP).",
+        "Fret maritime conventionnel ou groupage : unité payante UP = max(poids brut en tonnes ; volume en m³), fret de base = UP × taux, plus surcharges (BAF carburant, CAF change, THC manutention au terminal…). Lire la base de chaque surcharge.",
+        "Fret aérien : poids volumétrique (kg) = L × l × h (cm) ÷ 6 000 ; poids taxable = max(poids réel ; poids volumétrique). Document : LTA.",
+        "Route internationale : convention CMR, lettre de voiture en trois originaux, transporteur présumé responsable, indemnité limitée à 8,33 DTS par kg de poids brut manquant ou avarié ; réserves immédiates si dommage apparent, écrites sous 7 jours (hors dimanches et jours fériés) sinon. Mer : 666,67 DTS par colis ou 2 DTS/kg (le plus élevé). Rail CIM : 17 DTS/kg.",
+        "Transport multimodal : au moins deux modes sous un contrat unique avec un seul opérateur qui répond de l'ensemble. L'emballage incombe au vendeur (rubrique A8) ; un emballage inadapté exonère le transporteur et l'assureur."
+      ],
+      "exercices": [
+        {
+          "id": "tci-6",
+          "niveau": "bases",
+          "titre": "Quel mode de transport pour quelle marchandise ?",
+          "objectif": "Savoir justifier le choix d'un mode de transport par les critères du cours, en particulier le rapport valeur/poids et le délai.",
+          "enonce": "Un commissionnaire de transport d'Orléans (fictif) reçoit quatre demandes de ses clients.",
+          "donnees": {
+            "entetes": ["Envoi", "Marchandise", "Poids / volume", "Valeur", "Destination et contrainte"],
+            "lignes": [
+              ["A", "Capteurs électroniques", "60 kg", "250 000 €", "Séoul, livraison sous une semaine"],
+              ["B", "Granulés de plastique", "18 t", "36 000 €", "Montréal, pas d'urgence"],
+              ["C", "Mobilier de bureau", "8 palettes", "22 000 €", "Milan, livraison porte-à-porte en 3 jours"],
+              ["D", "Pièces de rechange", "4 m³, 1,2 t", "15 000 €", "Lagos, pas d'urgence, volume insuffisant pour un conteneur"]
+            ]
+          },
+          "methode": [
+            "Calculez d'abord le rapport valeur/poids de chaque envoi (valeur ÷ poids en kg) : un rapport élevé signifie que le coût du transport pèsera peu dans le prix.",
+            "Regardez ensuite la contrainte de délai et la géographie (continent, accès à la mer).",
+            "Pour un envoi maritime, comparez le volume à la capacité d'un conteneur (environ 33 m³ pour un 20 pieds) pour choisir entre FCL et LCL.",
+            "Pensez au coût logistique total, pas seulement au prix du fret."
+          ],
+          "questions": [
+            "1. Calculez le rapport valeur/poids des envois A et B.",
+            "2. Proposez un mode de transport pour chaque envoi en justifiant par au moins deux critères.",
+            "3. Pour l'envoi D, conteneur complet ou groupage ? Justifiez.",
+            "4. Expliquez pourquoi un fret plus cher peut réduire le coût logistique total."
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. A : 250 000 ÷ 60 ≈ 4 167 € par kg. B : 36 000 ÷ 18 000 = 2 € par kg. L'écart est énorme : quelques centaines d'euros de fret aérien sont négligeables pour A, alors qu'ils représenteraient une part importante de la valeur de B.",
+            "2. A : avion (forte valeur pour un faible poids, urgence d'une semaine ; un transport de plusieurs semaines immobiliserait 250 000 € de stock). B : maritime en conteneur (marchandise lourde, peu chère, pas d'urgence ; le coût par tonne est très faible). C : route (échange européen, porte-à-porte, souplesse, délai court compatible). D : maritime (pas d'urgence, valeur modérée) ; l'avion coûterait trop cher pour 1,2 t.",
+            "3. Groupage (LCL) : 4 m³ occuperaient à peine un huitième d'un 20 pieds (environ 33 m³). On paie alors à l'unité payante (ici max(1,2 t ; 4 m³) = 4 UP) au lieu d'un conteneur entier, en acceptant un délai un peu plus long lié à la consolidation et au dégroupage.",
+            "4. Le coût total inclut le stock immobilisé pendant le voyage, l'emballage, l'assurance, les ruptures et les retards. Un transport rapide réduit le stock à financer et le risque de rupture chez le client : pour une marchandise de forte valeur, ces économies dépassent le supplément de fret."
+          ],
+          "erreurs": [
+            "Choisir systématiquement le mode le moins cher au kilo sans regarder le délai et la valeur.",
+            "Réserver un conteneur complet pour quelques mètres cubes."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-7",
+          "niveau": "application",
+          "titre": "Calculer un fret maritime en groupage",
+          "objectif": "Savoir déterminer l'unité payante et calculer un fret maritime avec ses surcharges, en respectant la base de chacune.",
+          "enonce": "La société Menuiserie de Touraine (fictive) expédie en groupage du Havre à New York 5 caisses de portes en bois. Chaque caisse mesure 1,50 m × 1,20 m × 1,00 m et pèse 450 kg brut. Le commissionnaire communique : taux de base 70 € par UP ; BAF 11 € par UP ; CAF 5 % du fret de base ; THC départ 15 € par UP.",
+          "methode": [
+            "Calculez le volume d'une caisse (L × l × h en mètres), puis le volume total.",
+            "Convertissez le poids total en tonnes (1 000 kg = 1 t).",
+            "Unité payante = la plus grande des deux mesures (1 t = 1 m³).",
+            "Calculez chaque élément séparément en respectant sa base : par UP pour le taux, la BAF et les THC, en pourcentage du fret de base pour la CAF.",
+            "Additionnez et vérifiez."
+          ],
+          "questions": [
+            "1. Calculez le volume total et le poids total en tonnes.",
+            "2. Déterminez l'unité payante et dites si la marchandise est taxée au poids ou au volume.",
+            "3. Calculez le fret de base, la BAF, la CAF, les THC, puis le fret total.",
+            "4. Le bois des caisses n'est pas traité. Quel risque cela fait-il courir à l'expéditeur, et qui en supporte les conséquences ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Volume d'une caisse : 1,50 × 1,20 × 1,00 = 1,80 m³ ; total : 5 × 1,80 = 9,00 m³. Poids : 5 × 450 = 2 250 kg = 2,25 t.",
+            "2. UP = max(2,25 ; 9,00) = 9 UP. La marchandise est taxée au volume : elle est encombrante pour son poids et occupe de la place dans le navire.",
+            "3. Fret de base : 9 × 70 = 630,00 €. BAF : 9 × 11 = 99,00 €. CAF : 5 % × 630 = 31,50 € (calculée sur le fret de base seulement). THC : 9 × 15 = 135,00 €. Fret total : 630 + 99 + 31,50 + 135 = 895,50 €.",
+            "4. De nombreux pays exigent des emballages en bois conformes à la norme NIMP 15 (ISPM 15). Sans marquage, la marchandise peut être bloquée à l'arrivée et devoir être traitée (fumigation). Les délais et frais sont à la charge de l'exportateur, à qui incombe l'emballage (rubrique A8 des Incoterms)."
+          ],
+          "erreurs": [
+            "Calculer sur le poids (2,25 UP) parce qu'on « paie ce qui pèse » : on retient toujours la plus grande des deux mesures.",
+            "Calculer la CAF sur le fret augmenté de la BAF et des THC."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-8",
+          "niveau": "approfondissement",
+          "titre": "Poids taxable en aérien et limite d'indemnisation CMR",
+          "objectif": "Calculer un fret aérien au poids taxable et comprendre pourquoi les plafonds d'indemnisation des transporteurs rendent l'assurance marchandises indispensable.",
+          "enonce": "Partie A. La société Optique de Sologne (fictive) expédie par avion à Montréal 4 cartons de 80 × 60 × 50 cm, pesant 22 kg chacun, valeur totale 26 000 €. Tarif : 4,10 € par kg taxable ; ratio 6 000 cm³ par kg. Partie B. La même entreprise envoie par camion à Barcelone un lot de 120 kg de verres, valeur 7 200 €. À la livraison, le lot est entièrement brisé. Le transporteur est responsable selon la CMR. Hypothèse de l'exercice : 1 DTS = 1,20 €.",
+          "methode": [
+            "Partie A : calculez le volume d'un carton en cm³, divisez par 6 000 pour obtenir son poids volumétrique, multipliez par le nombre de cartons, puis comparez au poids réel total.",
+            "Comparez ensuite le fret à la valeur de la marchandise pour juger si l'avion est raisonnable.",
+            "Partie B : la limite CMR est de 8,33 DTS par kg de poids brut manquant ou avarié ; convertissez en euros avec le cours donné et comparez à la valeur.",
+            "Rappelez-vous les délais de réserves CMR selon que le dommage est apparent ou non."
+          ],
+          "questions": [
+            "1. Calculez le poids volumétrique total et le poids réel total.",
+            "2. Quel est le poids taxable ? Calculez le fret aérien.",
+            "3. Quelle part de la valeur de la marchandise le fret représente-t-il ?",
+            "4. Calculez l'indemnité maximale CMR en DTS puis en euros. Quelle somme reste à la charge de l'ayant droit s'il n'est pas assuré ?",
+            "5. Le destinataire découvre la casse en ouvrant les cartons, deux jours après la livraison, l'emballage extérieur étant intact. Que doit-il faire pour préserver son recours ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Volume d'un carton : 80 × 60 × 50 = 240 000 cm³ ; poids volumétrique : 240 000 ÷ 6 000 = 40 kg ; total : 4 × 40 = 160 kg. Poids réel : 4 × 22 = 88 kg.",
+            "2. Poids taxable = max(88 ; 160) = 160 kg : l'envoi est volumineux pour son poids, et la place est rare en avion. Fret : 160 × 4,10 = 656,00 €.",
+            "3. 656 ÷ 26 000 = 2,52 % environ : le coût est modéré au regard de la valeur, ce qui peut justifier l'avion si le délai compte.",
+            "4. Indemnité maximale : 120 × 8,33 = 999,60 DTS, soit 999,60 × 1,20 = 1 199,52 €. Reste à la charge de l'ayant droit non assuré : 7 200 − 1 199,52 = 6 000,48 €. La limite par kilogramme pénalise les marchandises de forte valeur : seule une assurance marchandises (ad valorem) couvre la valeur réelle.",
+            "5. Le dommage n'était pas apparent à la livraison : il doit adresser au transporteur des réserves écrites, précises et motivées dans les 7 jours (dimanches et jours fériés non compris), conserver marchandise et emballage pour l'expertise et prévenir son assureur. Une mention générale « sous réserve de déballage » n'aurait eu aucune valeur."
+          ],
+          "erreurs": [
+            "Retenir le poids réel en aérien sans calculer le poids volumétrique.",
+            "Croire que le transporteur rembourse toujours la valeur réelle de la marchandise."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s4",
+      "titre": "Les documents du commerce international et leur cohérence",
+      "chapitre": "tci.documents",
+      "notions": ["tci.documents.connaissement", "tci.documents.connaissement-net-clause", "tci.documents.autres-transport", "tci.documents.liste-colisage", "tci.documents.coherence"],
+      "rappel": [
+        "Le connaissement (B/L) a trois fonctions : reçu de la marchandise, preuve du contrat de transport et, s'il est négociable, titre représentatif : seul le porteur légitime d'un original obtient la livraison. Il est souvent émis en trois originaux.",
+        "Connaissement net : aucune réserve sur l'état apparent ; clausé : réserves du transporteur. Nominatif (livraison à la personne désignée), à ordre (transmis par endossement), au porteur (simple remise). En crédit documentaire, les banques exigent un document de transport net et en principe la mention « à bord ».",
+        "Sea waybill, LTA, lettre de voiture CMR et CIM prouvent le contrat et la prise en charge mais ne sont pas négociables : la marchandise est livrée au destinataire désigné, sans présentation d'un original.",
+        "La liste de colisage décrit chaque colis (contenu, poids, dimensions, marques) sans les prix. Certificats : origine non préférentielle (chambre de commerce), preuve d'origine préférentielle (droit réduit), sanitaire ou phytosanitaire, inspection, assurance.",
+        "Cohérence documentaire : les mentions (description, quantités, poids, marques, dates, noms, Incoterm, montants) doivent concorder entre documents et avec le crédit. La description sur la facture doit correspondre exactement à celle du crédit ; ailleurs, une description générale non contradictoire suffit."
+      ],
+      "exercices": [
+        {
+          "id": "tci-9",
+          "niveau": "bases",
+          "titre": "Vrai ou faux sur les documents de transport",
+          "objectif": "Distinguer les documents négociables des documents non négociables et comprendre ce que cela change pour le vendeur et sa banque.",
+          "enonce": "Indiquez si chaque affirmation est vraie ou fausse, puis justifiez en une ou deux phrases.",
+          "methode": [
+            "Pour chaque document, posez-vous la question : faut-il présenter un original pour retirer la marchandise ? Si oui, le document donne la maîtrise de la marchandise.",
+            "Rappelez-vous que la forme (nominatif, à ordre, au porteur) détermine la manière de transmettre un connaissement.",
+            "Pour les affirmations sur le crédit documentaire, pensez à ce que la banque veut obtenir : une sûreté sur la marchandise et une preuve d'expédition en bon état."
+          ],
+          "questions": [
+            "1. Une lettre de transport aérien permet de revendre la marchandise pendant le vol en endossant le document.",
+            "2. Un connaissement à ordre se transmet par endossement puis remise.",
+            "3. Un connaissement portant la mention « 4 pallets torn wrapping » est un connaissement net.",
+            "4. Avec une LTA désignant directement l'importateur comme destinataire, une remise documentaire protège bien le vendeur.",
+            "5. La liste de colisage doit indiquer le prix de chaque colis.",
+            "6. Un certificat d'origine non préférentiel permet d'obtenir un droit de douane réduit grâce à un accord de libre-échange."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Faux. La LTA prouve le contrat et la prise en charge, mais n'est pas un titre négociable : le transporteur livre au destinataire désigné, sans exiger d'original. Seul un connaissement à ordre ou au porteur permet de transmettre la marchandise en transmettant le document.",
+            "2. Vrai. C'est la forme utilisée en crédit documentaire et pour les ventes en cours de route.",
+            "3. Faux. Le transporteur a porté une réserve sur l'état apparent : le connaissement est clausé. Présenté dans un crédit documentaire, il rend la présentation non conforme.",
+            "4. Faux. L'importateur peut retirer la marchandise à l'arrivée sans passer par sa banque, donc sans payer. Il aurait fallu désigner la banque de l'importateur comme destinataire (avec son accord).",
+            "5. Faux. La liste de colisage décrit le contenu, le poids, les dimensions et les marques de chaque colis ; c'est la facture qui porte la valeur.",
+            "6. Faux. Le droit réduit suppose une preuve d'origine préférentielle prévue par l'accord (par exemple EUR.1 ou déclaration d'origine de l'exportateur). Le certificat non préférentiel prouve seulement le pays d'origine quand l'importateur l'exige."
+          ],
+          "erreurs": [
+            "Penser que tous les documents de transport sont des titres représentatifs : seul le connaissement négociable l'est."
+          ],
+          "fictif": false
+        },
+        {
+          "id": "tci-10",
+          "niveau": "application",
+          "titre": "Contrôler un dossier documentaire avant présentation",
+          "objectif": "Savoir repérer les incohérences entre documents et avec un crédit documentaire, et calculer la date limite de présentation.",
+          "enonce": "La société Confitures du Val (fictive) doit présenter ses documents dans le cadre d'un crédit documentaire. Extrait du crédit : « Montant maximum : 86 400 EUR. Marchandise : 1 200 cartons de confiture de fraises, 12 pots de 370 g par carton. Expédition au plus tard le 20/03 de Marseille vers Montréal, CIP Montréal Incoterms® 2020. Documents : facture commerciale ; liste de colisage ; connaissement net à bord, à ordre ; police d'assurance pour 110 % de la valeur facturée. Validité : 10/04. Aucun délai de présentation stipulé. » Les documents préparés sont résumés dans le tableau. L'exportateur prévoit de les présenter le 06/04.",
+          "donnees": {
+            "entetes": ["Document", "Mentions relevées"],
+            "lignes": [
+              ["Facture commerciale", "86 400 EUR ; « 1 200 cartons de confiture » ; CIP Montréal Incoterms® 2020"],
+              ["Liste de colisage", "1 200 cartons ; poids brut 9 840 kg"],
+              ["Connaissement", "Daté du 14/03, « shipped on board », à ordre ; 1 180 cartons ; 9 840 kg ; mention « 3 cartons enfoncés »"],
+              ["Police d'assurance", "Montant assuré : 95 040 EUR ; clauses A"]
+            ]
+          },
+          "methode": [
+            "Comparez d'abord chaque document au crédit, puis les documents entre eux : description, quantités, poids, dates, montants.",
+            "Pour la facture, exigez la description exacte du crédit ; pour les autres documents, une description générale non contradictoire suffit.",
+            "Vérifiez que le connaissement est net et à bord.",
+            "Calculez le montant d'assurance minimum (110 % de la facture).",
+            "Date limite de présentation, à défaut de délai stipulé : 21 jours civils après l'expédition, et toujours avant la validité du crédit ; retenez la plus proche des deux dates."
+          ],
+          "questions": [
+            "1. La police d'assurance est-elle conforme ? Montrez le calcul.",
+            "2. Relevez les autres irrégularités et expliquez pourquoi chacune est un motif de refus.",
+            "3. Calculez la date limite de présentation. La présentation prévue le 06/04 est-elle dans les délais ?",
+            "4. Que peut faire l'exportateur, aujourd'hui et pour ses prochaines opérations ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Minimum : 110 % × 86 400 = 95 040 EUR. La police couvre 95 040 EUR en clauses A (exigées au minimum en CIP) : elle est conforme.",
+            "2. Facture : « 1 200 cartons de confiture » ne reprend pas la description exacte du crédit (« de fraises, 12 pots de 370 g par carton ») : non conforme. Connaissement : 1 180 cartons contre 1 200 sur la facture et la liste de colisage, contradiction entre documents ; et la mention « 3 cartons enfoncés » le rend clausé alors que le crédit exige un connaissement net. Le poids (9 840 kg) est cohérent entre liste et connaissement, et la date d'expédition (14/03) respecte la limite du 20/03.",
+            "3. Expédition le 14/03 + 21 jours = 04/04 (17 jours restent en mars, plus 4 jours en avril). Cette date est antérieure à la validité (10/04) : c'est elle qui s'applique. Une présentation le 06/04 serait tardive, même si le crédit est encore valable.",
+            "4. Aujourd'hui : corriger la facture et présenter au plus tard le 04/04 ; pour le connaissement, qui ne peut plus être modifié, demander à la banque de solliciter l'acheteur pour qu'il lève les réserves (le paiement dépendra alors de son accord). Pour l'avenir : vérifier les conditions du crédit dès réception, contrôler l'état et le nombre de colis au chargement (reconditionner avant chargement plutôt que laisser le transporteur porter une réserve) et présenter rapidement les documents."
+          ],
+          "erreurs": [
+            "Croire que la date de validité du crédit est la seule limite : le délai de 21 jours après l'expédition s'applique aussi.",
+            "Juger une irrégularité « mineure » : en crédit documentaire, la banque statue sur les seuls documents."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s5",
+      "titre": "Paiements internationaux : instruments, techniques et crédit documentaire",
+      "chapitre": "tci.paiement",
+      "notions": ["tci.paiement.risques", "tci.paiement.instruments-vs-techniques", "tci.paiement.virement-swift", "tci.paiement.lettre-change", "tci.paiement.remise-documentaire", "tci.paiement.credit-documentaire", "tci.paiement.credoc-types", "tci.paiement.credoc-realisation", "tci.paiement.credoc-conformite", "tci.paiement.garanties", "tci.paiement.choix"],
+      "rappel": [
+        "Trois risques financiers : commercial (l'acheteur ne peut ou ne veut pas payer), pays ou politique (un événement dans son pays empêche le paiement ou le transfert), change (la valeur en euros d'une créance en devise varie).",
+        "L'instrument transporte l'argent (virement SWIFT, chèque, lettre de change, billet à ordre) ; la technique organise les conditions et la sécurité du paiement. Du plus sûr au moins sûr pour le vendeur : paiement d'avance, crédit documentaire confirmé, crédit documentaire irrévocable, remise documentaire D/P, remise documentaire D/A, encaissement simple (compte ouvert).",
+        "Remise documentaire (URC 522) : les banques transmettent les documents contre paiement (D/P) ou contre acceptation d'une traite (D/A) mais ne s'engagent jamais à payer. Elle ne protège que si les documents donnent la maîtrise de la marchandise (connaissement à ordre).",
+        "Crédit documentaire (UCP 600) : la banque émettrice, à la demande de l'acheteur (donneur d'ordre), s'engage à payer le vendeur (bénéficiaire) contre documents conformes présentés dans les délais. Il est irrévocable ; la banque notificatrice transmet sans s'engager ; la banque confirmante ajoute son propre engagement.",
+        "Réalisation : à vue, paiement différé, acceptation, négociation. Examen : 5 jours ouvrés bancaires au plus ; présentation au plus 21 jours civils après l'expédition à défaut de délai stipulé, et avant la validité. Le crédit est autonome : les banques ne traitent que des documents.",
+        "Garanties à première demande (soumission, restitution d'acompte, bonne exécution, paiement) et lettre de crédit stand-by : engagement bancaire de payer sur simple demande conforme en cas de défaillance."
+      ],
+      "exercices": [
+        {
+          "id": "tci-11",
+          "niveau": "bases",
+          "titre": "Classer les techniques et les risques de paiement",
+          "objectif": "Distinguer instrument et technique de paiement, et identifier le risque qui pèse sur le vendeur dans chaque situation.",
+          "enonce": "Répondez aux questions ci-dessous à partir des situations proposées (toutes fictives).",
+          "methode": [
+            "Pour classer les techniques, demandez-vous à chaque fois : à quel moment le vendeur est-il payé, et qui s'est engagé à le payer (personne, l'acheteur, une banque, deux banques) ?",
+            "Pour identifier un risque, demandez-vous si le problème vient du client lui-même (risque commercial), de son environnement (État, banque centrale, guerre : risque pays) ou de la monnaie (risque de change).",
+            "Pour l'instrument, cherchez le support matériel du transfert de fonds."
+          ],
+          "questions": [
+            "1. Classez de la plus sûre à la moins sûre pour le vendeur : remise documentaire D/A ; paiement d'avance ; compte ouvert ; crédit documentaire irrévocable et confirmé ; remise documentaire D/P ; crédit documentaire irrévocable notifié.",
+            "2. Identifiez le risque : (a) le client chilien, solvable, ne peut acheter de dollars car la banque centrale bloque les transferts ; (b) le client belge est placé en liquidation ; (c) le dollar baisse entre la facture et le paiement.",
+            "3. Dans un crédit documentaire réalisable par acceptation, quel est l'instrument et quelle est la technique ?",
+            "4. Un importateur mexicain vire 25 000 USD avec l'option SHA ; une banque intermédiaire prélève 25 USD. Combien le vendeur reçoit-il et que fallait-il prévoir ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. Paiement d'avance (payé avant d'expédier) ; crédit irrévocable et confirmé (deux banques s'engagent, dont une dans le pays du vendeur) ; crédit irrévocable notifié (seule la banque étrangère s'engage, reste le risque sur cette banque et le risque pays) ; D/P (l'acheteur doit payer pour obtenir les documents, mais peut refuser de les lever) ; D/A (l'acheteur obtient les documents en acceptant une traite et paie plus tard, sans engagement bancaire) ; compte ouvert (le vendeur dépend de la bonne volonté de l'acheteur).",
+            "2. (a) Risque pays (risque de transfert) : le client est de bonne foi, c'est son environnement qui bloque. (b) Risque commercial (insolvabilité). (c) Risque de change, pour une facture libellée en dollars.",
+            "3. L'instrument est la lettre de change (traite), acceptée par la banque ; la technique est le crédit documentaire. C'est la technique, et non l'instrument, qui protège le vendeur.",
+            "4. 25 000 − 25 = 24 975 USD : en SHA, chaque partie supporte les frais de sa banque et les frais d'intermédiaires sont déduits. Le contrat devait préciser l'option OUR ou que les frais bancaires hors de France sont à la charge de l'acheteur."
+          ],
+          "erreurs": [
+            "Confondre risque commercial et risque pays : un client solvable peut ne pas pouvoir transférer les fonds.",
+            "Croire qu'un virement est une garantie : il dépend entièrement de la volonté de l'acheteur."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-12",
+          "niveau": "application",
+          "titre": "Choisir la technique de paiement selon le risque",
+          "objectif": "Savoir proposer et justifier une technique de paiement en fonction du client, du pays, du montant, du transport et de la concurrence.",
+          "enonce": "La société Cosmétiques de Grasse (fictive) prépare quatre ventes. Client 1 : distributeur allemand, client depuis 12 ans, toujours ponctuel, commandes mensuelles de 15 000 €. Client 2 : nouvel importateur d'un pays où les autorités limitent régulièrement les sorties de devises, commande de 240 000 € expédiée par mer. Client 3 : nouveau distributeur canadien de taille moyenne, commande de 35 000 €, refuse le crédit documentaire jugé trop cher, transport maritime avec connaissement à ordre. Client 4 : nouveau client marocain, commande de 18 000 € expédiée par avion, l'exportateur envisage une remise documentaire D/P.",
+          "methode": [
+            "Pour chaque client, répondez aux questions du cours : client connu ou non ? risque pays ? montant justifiant le coût d'un crédit documentaire ? documents donnant la maîtrise de la marchandise ? pratique de la concurrence ? assurance-crédit possible ?",
+            "Plus le risque est élevé, plus il faut un engagement bancaire, et confirmé si le risque pays est fort.",
+            "Pour le client 4, vérifiez le document de transport utilisé en aérien."
+          ],
+          "questions": [
+            "1. Proposez une technique pour le client 1 et justifiez.",
+            "2. Proposez une technique pour le client 2 et justifiez le choix d'une confirmation.",
+            "3. Proposez une technique pour le client 3 ; quel risque reste au vendeur ?",
+            "4. La remise documentaire D/P est-elle adaptée au client 4 ? Que proposez-vous ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. Compte ouvert (virement à échéance), éventuellement couvert par une assurance-crédit. Client connu, pays à faible risque, flux récurrent : un crédit documentaire serait lourd et coûteux, et l'usage dans l'UE est le compte ouvert. L'assurance-crédit couvre le risque d'insolvabilité.",
+            "2. Crédit documentaire irrévocable et confirmé par une banque française. Nouveau client, montant élevé, risque de transfert : un crédit seulement notifié laisserait le vendeur exposé à la défaillance de la banque émettrice et au blocage des transferts. La banque confirmante paie contre documents conformes même si le pays bloque les devises.",
+            "3. Remise documentaire D/P avec connaissement à ordre : le vendeur garde la maîtrise de la marchandise jusqu'au paiement, sans le coût d'un crédit. Risque résiduel : l'acheteur peut refuser de lever les documents ; la marchandise reste alors au port de destination, avec des frais de stationnement, et doit être revendue sur place ou rapatriée. D'où l'intérêt de vérifier la solvabilité du client.",
+            "4. Non, si la LTA désigne l'importateur comme destinataire : il peut retirer la marchandise à l'aéroport sans passer par sa banque, donc sans payer ; la remise ne protège plus le vendeur. Solutions : désigner la banque de l'importateur comme destinataire de la LTA (avec son accord), ou exiger un paiement d'avance ou un acompte, ou un crédit documentaire si le montant le justifie."
+          ],
+          "erreurs": [
+            "Exiger systématiquement un crédit documentaire : on peut perdre la vente face à des concurrents moins exigeants.",
+            "Oublier que la remise documentaire ne vaut que si le document de transport donne la maîtrise de la marchandise."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-13",
+          "niveau": "approfondissement",
+          "titre": "Le déroulement d'un crédit documentaire",
+          "objectif": "Reconstituer les étapes et les acteurs d'un crédit documentaire, calculer ses dates clés et appliquer le principe d'autonomie.",
+          "enonce": "La société Laboratoires d'Orléans (fictive) vend du matériel à une clinique de Dakar pour 140 000 €. Le contrat prévoit un crédit documentaire irrévocable, ouvert par la banque de la clinique à Dakar, confirmé par une banque parisienne, réalisable par acceptation d'une traite à 90 jours de la date d'embarquement. Validité : 20/06 ; aucun délai de présentation stipulé. Le connaissement « à bord » est daté du 18/05. Les étapes ci-dessous sont données dans le désordre : (A) le vendeur expédie et présente les documents ; (B) la clinique demande à sa banque d'ouvrir le crédit ; (C) la banque parisienne notifie et confirme le crédit ; (D) les banques examinent les documents ; (E) le vendeur vérifie que les conditions du crédit sont réalisables ; (F) la banque émettrice remet les documents à la clinique contre remboursement ; (G) le contrat de vente prévoit le crédit documentaire.",
+          "methode": [
+            "Pour ordonner les étapes, suivez la logique : contrat, ouverture, transmission au pays du vendeur, vérification, expédition, examen, remise des documents à l'acheteur.",
+            "Nommez chaque acteur par son rôle dans le crédit : donneur d'ordre, bénéficiaire, banque émettrice, banque notificatrice et confirmante.",
+            "Pour les dates, comptez les jours civils mois par mois (mai a 31 jours, juin 30, juillet 31).",
+            "Pour la dernière question, rappelez-vous que les banques ne traitent que des documents, non des marchandises."
+          ],
+          "questions": [
+            "1. Remettez les étapes dans l'ordre.",
+            "2. Indiquez le rôle de la clinique, de Laboratoires d'Orléans, de la banque de Dakar et de la banque parisienne.",
+            "3. Calculez la date limite de présentation des documents.",
+            "4. Calculez la date d'échéance de la traite. Comment le vendeur peut-il obtenir les fonds plus tôt ?",
+            "5. Les documents sont conformes, mais la clinique affirme qu'un appareil est défectueux et demande à sa banque de ne pas payer. Que se passe-t-il ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. G, B, C, E, A, D, F. Le vendeur doit vérifier le crédit (E) avant d'expédier (A) : s'il découvre ensuite qu'il ne peut pas fournir un document exigé, la banque refusera de payer.",
+            "2. La clinique est le donneur d'ordre (elle demande l'ouverture) ; Laboratoires d'Orléans est le bénéficiaire ; la banque de Dakar est la banque émettrice (elle s'engage à payer) ; la banque parisienne est notificatrice et confirmante : elle transmet le crédit et y ajoute son propre engagement, ce qui couvre le vendeur contre la défaillance de la banque émettrice et le risque pays.",
+            "3. Expédition le 18/05 + 21 jours civils = 08/06 (13 jours restent en mai, plus 8 jours en juin). Cette date précède la validité du 20/06 : la date limite est le 08/06.",
+            "4. 90 jours à partir du 18/05 : 13 jours jusqu'au 31/05, 30 jours en juin (total 43), 31 jours en juillet (total 74), puis 16 jours en août : échéance le 16/08. Le vendeur détient une traite acceptée par une banque : il peut la faire escompter pour obtenir les fonds immédiatement, moyennant des agios.",
+            "5. La banque doit honorer son engagement : le crédit est autonome par rapport au contrat de vente, et les banques ne se prononcent que sur les documents. Le litige sur la qualité relève du contrat de vente : la clinique devra agir contre le vendeur sur ce terrain."
+          ],
+          "erreurs": [
+            "Confondre banque notificatrice (sans engagement) et banque confirmante (engagée).",
+            "Oublier que le délai de 21 jours peut tomber avant la date de validité."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s6",
+      "titre": "Le risque de change et sa couverture",
+      "chapitre": "tci.change",
+      "notions": ["tci.change.notion", "tci.change.couverture-terme", "tci.change.options", "tci.change.techniques-internes"],
+      "rappel": [
+        "Cotation au certain dans la zone euro : 1 EUR = S USD. Montant en EUR = montant en USD ÷ S ; montant en USD = montant en EUR × S. Si S monte, l'euro s'apprécie : l'exportateur facturant en USD perd, l'importateur payant en USD gagne.",
+        "Cours à terme (approximation du cours, base 360 jours) : F = S × (1 + i_USD × n/360) ÷ (1 + i_EUR × n/360). Si le taux du dollar est supérieur à celui de l'euro, F > S.",
+        "Couverture à terme : l'exportateur vend à terme les devises qu'il attend ; l'importateur achète à terme celles qu'il doit payer. Le montant en euros est garanti, mais on renonce à tout gain, et le contrat doit être exécuté même si le client paie en retard ou pas du tout.",
+        "Option de change : droit, non obligation, d'acheter (call) ou de vendre (put) à un prix d'exercice, contre une prime payée d'avance dans tous les cas. Adaptée aux flux incertains (appel d'offres) ; le terme convient aux flux certains.",
+        "Techniques internes : facturer en euros (risque transféré à l'acheteur), compensation des flux de sens contraire, termaillage, clause de change."
+      ],
+      "exercices": [
+        {
+          "id": "tci-14",
+          "niveau": "bases",
+          "titre": "Lire une cotation et mesurer un gain ou une perte de change",
+          "objectif": "Savoir convertir avec une cotation au certain et dire qui gagne ou perd quand le cours évolue.",
+          "enonce": "La société Verrerie de Champagne (fictive) facture 50 000 USD à un client de Boston, payables dans 60 jours ; le jour de la facture, 1 EUR = 1,1000 USD. Elle achète par ailleurs des moules à un fournisseur américain pour 30 000 USD, payables dans 60 jours.",
+          "methode": [
+            "Avec 1 EUR = S USD, on obtient les euros en divisant le montant en dollars par S.",
+            "Comparez toujours la valeur à l'échéance à la valeur le jour de la facture : la différence est le gain ou la perte de change.",
+            "Raisonnez séparément pour la créance (on reçoit des dollars) et la dette (on paie des dollars) : leurs effets sont opposés."
+          ],
+          "questions": [
+            "1. Quelle est la valeur en euros de la créance le jour de la facture ?",
+            "2. À l'échéance, 1 EUR = 1,0500 USD. Combien l'entreprise encaisse-t-elle ? Gagne-t-elle ou perd-elle ?",
+            "3. Même question si 1 EUR = 1,1500 USD.",
+            "4. Dans le cas où 1 EUR = 1,0500 USD, combien coûte en euros la dette de 30 000 USD, comparée au jour de la facture (1,1000) ?",
+            "5. Expliquez pourquoi on peut dire que la « hausse du cours EUR/USD » est une baisse du dollar."
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. 50 000 ÷ 1,1000 = 45 454,55 €.",
+            "2. 50 000 ÷ 1,0500 = 47 619,05 €. Gain de change : 47 619,05 − 45 454,55 = 2 164,50 €. Le cours a baissé : il faut moins de dollars pour un euro, donc chaque dollar vaut plus d'euros.",
+            "3. 50 000 ÷ 1,1500 = 43 478,26 €. Perte de change : 45 454,55 − 43 478,26 = 1 976,29 €. L'euro s'est apprécié : les dollars reçus valent moins d'euros.",
+            "4. Jour de la facture : 30 000 ÷ 1,1000 = 27 272,73 €. À l'échéance : 30 000 ÷ 1,0500 = 28 571,43 €. Surcoût : 1 298,70 €. Quand le dollar monte, l'importateur perd ce que l'exportateur gagne. On note que la dette en dollars compense en partie la créance : seul le solde de 20 000 USD est réellement exposé (idée de la compensation).",
+            "5. Avec 1 EUR = x USD, une hausse de x signifie qu'il faut plus de dollars pour obtenir un euro : l'euro s'apprécie et le dollar se déprécie. Une exportatrice qui facture en dollars souhaite donc que le cours baisse."
+          ],
+          "erreurs": [
+            "Multiplier au lieu de diviser pour passer des dollars aux euros.",
+            "Croire qu'une hausse du chiffre EUR/USD signifie que le dollar monte."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-15",
+          "niveau": "application",
+          "titre": "Couvrir une créance par une vente à terme",
+          "objectif": "Calculer un cours à terme et le montant garanti par une couverture, puis comparer avec l'absence de couverture.",
+          "enonce": "La société Robotique du Centre (fictive) facture 240 000 USD à un client de Houston, payables dans 90 jours. Cours comptant : 1 EUR = 1,0800 USD. Taux d'intérêt annuels : euro 2,4 %, dollar 4,8 %. Base 360 jours.",
+          "methode": [
+            "Identifiez la position : l'entreprise attend des dollars, elle doit donc les vendre à terme.",
+            "Proratisez les taux annuels : taux × 90/360.",
+            "Appliquez F = S × (1 + i_USD × n/360) ÷ (1 + i_EUR × n/360) ; le taux de la devise cotée (USD) est au numérateur. Arrondissez F à 4 décimales.",
+            "Montant garanti = 240 000 ÷ F. Comparez ensuite avec ce qu'aurait donné le cours du jour de l'échéance sans couverture."
+          ],
+          "questions": [
+            "1. Quelle est la valeur de la créance au cours comptant ?",
+            "2. Calculez le cours à terme à 90 jours.",
+            "3. Quel montant en euros la vente à terme garantit-elle ? Combien coûte la couverture par rapport à la valeur au comptant ?",
+            "4. À l'échéance, le cours est 1 EUR = 1,1300 USD. Combien l'entreprise aurait-elle encaissé sans couverture ? Même question avec 1 EUR = 1,0400 USD.",
+            "5. Le client annonce qu'il paiera avec deux mois de retard. Quelle est la conséquence pour la couverture ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. 240 000 ÷ 1,0800 = 222 222,22 €.",
+            "2. Facteurs : 1 + 0,048 × 90/360 = 1,012 et 1 + 0,024 × 90/360 = 1,006. F = 1,0800 × 1,012 ÷ 1,006 = 1,08644… soit 1,0864. F est supérieur à S car le taux du dollar est supérieur à celui de l'euro (déport du dollar).",
+            "3. 240 000 ÷ 1,0864 = 220 913 € environ (220 905 € avec le cours non arrondi 1,086441). Coût par rapport au comptant : 222 222 − 220 913 = 1 309 € environ ; c'est le prix de la certitude.",
+            "4. À 1,1300 : 240 000 ÷ 1,13 = 212 389 € ; la couverture évite une perte d'environ 220 913 − 212 389 = 8 524 €. À 1,0400 : 240 000 ÷ 1,04 = 230 769 € ; sans couverture, l'entreprise aurait gagné environ 9 856 € de plus. La couverture n'est pas une spéculation : elle supprime l'aléa dans les deux sens.",
+            "5. Le contrat à terme doit être exécuté à la date convenue : l'entreprise doit livrer 240 000 USD qu'elle n'a pas encore reçus. Elle devra acheter les dollars sur le marché au cours du jour pour honorer le contrat (ou négocier une prorogation avec la banque), ce qui recrée un risque de change."
+          ],
+          "erreurs": [
+            "Oublier le prorata 90/360 des taux annuels.",
+            "Inverser les taux : avec 1 EUR = x USD, le taux du dollar est au numérateur.",
+            "Acheter à terme alors qu'on attend des devises : l'exportateur vend."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-16",
+          "niveau": "approfondissement",
+          "titre": "Importateur, option ou technique interne : choisir la bonne protection",
+          "objectif": "Adapter l'outil de gestion du risque de change à la position (créance ou dette) et à la certitude du flux.",
+          "enonce": "Situation 1 : la société Jouets de Loire (fictive) doit payer 80 000 USD à un fournisseur dans 60 jours. Cours comptant : 1 EUR = 1,1000 USD ; taux annuels : dollar 4 %, euro 2 % ; base 360 jours. Situation 2 : la même entreprise répond à un appel d'offres en dollars aux États-Unis ; le résultat sera connu dans trois mois. Situation 3 : elle achète chaque mois 40 000 USD de composants et vend chaque mois 65 000 USD de jouets aux États-Unis, aux mêmes dates.",
+          "methode": [
+            "Situation 1 : l'importateur doit payer des devises, il les achète à terme. Calculez F puis le coût en euros garanti, et comparez avec deux cours possibles à l'échéance.",
+            "Situation 2 : demandez-vous ce qui se passe si l'entreprise perd l'appel d'offres après s'être couverte à terme.",
+            "Situation 3 : avant de couvrir, cherchez le montant réellement exposé en compensant les flux de sens contraire."
+          ],
+          "questions": [
+            "1. Situation 1 : calculez le cours à terme à 60 jours (4 décimales) et le coût en euros garanti par un achat à terme.",
+            "2. Situation 1 : quel aurait été le coût sans couverture si le cours à l'échéance était 1,0400 ? et 1,1500 ? Commentez.",
+            "3. Situation 2 : pourquoi une option de vente de dollars (put) est-elle plus adaptée qu'une vente à terme ? Quel est son coût certain ?",
+            "4. Situation 3 : quel montant reste exposé chaque mois ? Quelle technique interne permet ce résultat ?",
+            "5. Quelle technique interne supprimerait totalement le risque de change pour Jouets de Loire sur ses ventes, et quelle en est la limite ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Facteurs : 1 + 0,04 × 60/360 = 1,006667 et 1 + 0,02 × 60/360 = 1,003333. F = 1,1000 × 1,006667 ÷ 1,003333 = 1,10365… soit 1,1037. Coût garanti : 80 000 ÷ 1,1037 = 72 483 € environ (72 486 € avec le cours non arrondi).",
+            "2. À 1,0400 : 80 000 ÷ 1,04 = 76 923 € ; la couverture évite un surcoût d'environ 4 440 €. À 1,1500 : 80 000 ÷ 1,15 = 69 565 € ; sans couverture, l'importateur aurait payé environ 2 918 € de moins. L'achat à terme fixe le coût quel que soit le cours : on renonce au gain pour éliminer la perte.",
+            "3. Le flux est incertain. Si l'entreprise vendait des dollars à terme et perdait l'appel d'offres, elle devrait quand même livrer des dollars qu'elle n'a pas. L'option donne un droit sans obligation : si elle perd le marché, elle abandonne l'option ; si elle le gagne et que le dollar baisse, elle exerce. Le coût certain est la prime, payée d'avance dans tous les cas.",
+            "4. 65 000 − 40 000 = 25 000 USD par mois de solde à recevoir. C'est la compensation (netting) : avec un compte en dollars, elle paie ses fournisseurs avec ses encaissements ; seul le solde doit être couvert (par exemple vendu à terme).",
+            "5. Facturer en euros : le risque de change est transféré à l'acheteur américain. Limite : l'offre devient moins compétitive et le client peut refuser ; en outre, cela ne supprime pas le risque commercial ni le risque pays."
+          ],
+          "erreurs": [
+            "Vendre à terme alors qu'on doit payer des devises : l'importateur achète à terme.",
+            "Couvrir à terme un flux incertain.",
+            "Couvrir les montants bruts sans compenser les flux de sens contraire."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s7",
+      "titre": "Assurances : transport, avaries, réserves et assurance-crédit",
+      "chapitre": "tci.assurance",
+      "notions": ["tci.assurance.transport", "tci.assurance.avaries", "tci.assurance.reserves", "tci.assurance.credit", "tci.incoterms.assurance"],
+      "rappel": [
+        "L'assurance facultés indemnise sur la base de la valeur assurée, et non des plafonds du transporteur. Institute Cargo Clauses : A (tous risques sauf exclusions), B et C (risques énumérés, C la plus restreinte).",
+        "Clauses C : incendie, explosion, naufrage, échouement, chavirement, collision ou renversement, avarie commune et jet à la mer. Clauses B : en plus tremblement de terre, foudre, entrée d'eau de mer. Clauses A : en plus vol, casse, mouille ordinaire. Exclusions même en A : faute intentionnelle, freinte et usure normales, emballage insuffisant, vice propre, retard, guerre et grèves (sauf clauses spécifiques).",
+        "CIF : assurance du vendeur en clauses C minimum ; CIP : clauses A minimum ; dans les deux cas au profit de l'acheteur, pour 110 % du prix du contrat au moins. Police au voyage ou police d'abonnement (flottante).",
+        "Avarie particulière : dommage supporté par le propriétaire de la marchandise ou son assureur. Avarie commune : sacrifice ou dépense décidés par le capitaine pour le salut commun, répartis entre navire et cargaisons au prorata de leur valeur (Règles d'York et d'Anvers) ; chaque chargeur contribue même si sa marchandise est intacte.",
+        "Réserves pour dommage non apparent : CMR 7 jours (hors dimanches et jours fériés) ; mer 3 jours ; air 14 jours (avarie), 21 jours (retard). Elles doivent être écrites, précises et motivées.",
+        "Assurance-crédit : couvre le non-paiement (commercial, et selon le contrat politique), dans la limite d'un agrément par client, pour une quotité de la créance (par exemple 90 %), après un délai de carence."
+      ],
+      "exercices": [
+        {
+          "id": "tci-17",
+          "niveau": "bases",
+          "titre": "Quel événement est couvert par quelle clause ?",
+          "objectif": "Savoir lire l'étendue des clauses A, B et C et en déduire si un acheteur CIF ou CIP est indemnisé.",
+          "enonce": "Pour chacun des événements suivants (fictifs), indiquez s'il est couvert en clauses C, B et A, puis répondez aux questions. (a) Le navire s'échoue et la cargaison est endommagée. (b) Un conteneur est volé au port d'arrivée. (c) De l'eau de mer entre dans le conteneur pendant une tempête. (d) La foudre provoque un incendie à bord. (e) Des pommes pourrissent faute d'avoir été récoltées à maturité (vice propre). (f) Des cartons trop légers s'écrasent à la manutention (emballage insuffisant).",
+          "methode": [
+            "Commencez par les exclusions communes : si l'événement en relève, il n'est couvert dans aucune clause.",
+            "Sinon, partez des clauses C (liste la plus courte) : si l'événement y figure, il est aussi couvert en B et A.",
+            "Puis demandez-vous si l'événement fait partie des ajouts de B (tremblement de terre, foudre, entrée d'eau de mer) ou seulement de A (vol, casse, mouille ordinaire).",
+            "Attention au cas (d) : cherchez la cause et la conséquence, toutes deux peuvent figurer dans la liste."
+          ],
+          "questions": [
+            "1. Présentez vos réponses sous forme de tableau (événement / C / B / A).",
+            "2. L'acheteur du conteneur volé (b) avait acheté CIF, et le vendeur s'en est tenu au minimum obligatoire. Est-il indemnisé ? Et en CIP ?",
+            "3. Pourquoi les cas (e) et (f) ne sont-ils jamais couverts, et qui supporte le dommage dans le cas (f) ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. (a) Échouement : C oui, B oui, A oui. (b) Vol : C non, B non, A oui. (c) Entrée d'eau de mer : C non, B oui, A oui. (d) La foudre en tant que telle n'est couverte qu'en B et A ; mais ici elle provoque un incendie, risque couvert dès les clauses C : les dommages dus à l'incendie sont donc couverts dans les trois clauses. (e) Vice propre : exclu partout. (f) Emballage insuffisant : exclu partout.",
+            "2. En CIF, le minimum est la clause C : le vol n'est pas couvert, l'acheteur n'est pas indemnisé par l'assureur et ne peut obtenir du transporteur que son plafond d'indemnisation. En CIP, le minimum est la clause A : le vol est couvert. D'où l'intérêt, en CIF, de négocier une couverture supérieure ou de s'assurer en complément.",
+            "3. Ce sont des exclusions communes : le vice propre tient à la marchandise elle-même et l'emballage insuffisant à une faute de celui qui devait emballer ; ce ne sont pas des aléas du transport. Dans le cas (f), le dommage est pour la partie chargée de l'emballage, en principe le vendeur (rubrique A8), et le transporteur est lui aussi exonéré."
+          ],
+          "erreurs": [
+            "Croire qu'une assurance en clauses C est « tous risques ».",
+            "Oublier les exclusions communes, valables même en clauses A."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-18",
+          "niveau": "application",
+          "titre": "Gérer un sinistre et un impayé",
+          "objectif": "Calculer une valeur assurée et une indemnité, comprendre l'avarie commune et le fonctionnement de l'assurance-crédit.",
+          "enonce": "La société Électroménager du Loiret (fictive) vend « CIP port de Montréal, Incoterms® 2020 » un lot de 500 cartons de petits appareils pour un prix de 45 000 €. Le vendeur souscrit le minimum prévu par l'Incoterm, au taux de 0,6 %. Pendant la traversée, 100 cartons sont volés. Sur le même navire, un incendie oblige le capitaine à inonder une cale et à se dérouter : l'armateur déclare l'avarie commune et demande à chaque chargeur une garantie de contribution de 15 % de la valeur de sa marchandise. Enfin, l'entreprise a vendu 38 000 € en compte ouvert à un distributeur espagnol, client pour lequel son assureur-crédit lui a accordé un agrément de 50 000 € avec une quotité de 90 % ; le client fait faillite.",
+          "methode": [
+            "Valeur assurée minimale en CIP : 110 % du prix du contrat. La prime se calcule ici en appliquant le taux à cette valeur assurée.",
+            "Hypothèse de l'exercice : l'assureur indemnise la part de la valeur assurée correspondant aux cartons perdus (tous les cartons ont la même valeur).",
+            "Vérifiez que le vol est couvert par le niveau de garantie exigé en CIP.",
+            "Avarie commune : la garantie est demandée même si la marchandise est intacte ; demandez-vous qui la fournit quand on est assuré.",
+            "Assurance-crédit : vérifiez que la créance est dans la limite de l'agrément, puis appliquez la quotité."
+          ],
+          "questions": [
+            "1. Calculez la valeur assurée minimale et la prime.",
+            "2. Le vol est-il couvert ? Calculez l'indemnité. Qui la reçoit, et pourquoi ?",
+            "3. Calculez la garantie de contribution demandée pour la marchandise (sur la base du prix de 45 000 €). Pourquoi l'acheteur doit-il la fournir alors que ses cartons restants sont intacts ? Qui la prend en charge ?",
+            "4. Calculez l'indemnité d'assurance-crédit pour l'impayé espagnol et dites ce qui reste à la charge de l'entreprise.",
+            "5. Pourquoi l'assurance-crédit ne remplace-t-elle pas totalement un crédit documentaire confirmé ?"
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Valeur assurée minimale : 110 % × 45 000 = 49 500 €. Prime : 0,6 % × 49 500 = 297 €.",
+            "2. Oui : en CIP, le minimum est la clause A, qui couvre le vol. 100 cartons sur 500 représentent 1/5 de la marchandise : indemnité = 49 500 × 100 ÷ 500 = 9 900 €. Elle revient à l'acheteur : en CIP, le risque est passé à la remise au premier transporteur, et l'assurance est souscrite au profit de l'acheteur, qui supporte le risque pendant le voyage.",
+            "3. Garantie : 15 % × 45 000 = 6 750 €. L'avarie commune est un sacrifice décidé pour sauver le navire et toutes les cargaisons : chaque intérêt en bénéficie et contribue au prorata de sa valeur, même s'il n'a subi aucun dommage ; l'armateur peut retenir la marchandise tant que la garantie n'est pas fournie. L'assurance marchandises prend en charge cette contribution : l'acheteur assuré obtient la garantie de son assureur, sans décaisser.",
+            "4. La créance (38 000 €) est inférieure à l'agrément (50 000 €). Indemnité : 90 % × 38 000 = 34 200 €, versée après le délai de carence. Reste à la charge de l'entreprise : 3 800 €.",
+            "5. L'assurance-crédit n'indemnise qu'une quotité, et seulement après un délai : la trésorerie est affectée et une part de la perte reste au vendeur. Le crédit documentaire confirmé, lui, assure un paiement complet par une banque dès la présentation de documents conformes."
+          ],
+          "erreurs": [
+            "Calculer l'assurance sur 100 % du prix au lieu de 110 %.",
+            "Penser qu'un chargeur dont la marchandise est intacte n'a rien à payer en avarie commune."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s8",
+      "titre": "Douane : espèce, origine, valeur, droits et TVA à l'importation",
+      "chapitre": "tci.douane",
+      "notions": ["tci.douane.role", "tci.douane.espece", "tci.douane.origine", "tci.douane.valeur", "tci.douane.calcul-droits-tva", "tci.douane.declaration", "tci.douane.regimes-particuliers"],
+      "rappel": [
+        "L'UE est une union douanière : pas de droits ni de formalités entre États membres ; tarif douanier commun et Code des douanes de l'Union vis-à-vis des pays tiers. Trois éléments déterminent la taxation : espèce tarifaire, origine, valeur en douane.",
+        "Nomenclature : SH (6 chiffres, mondial : chapitre 2, position 4, sous-position 6), NC (8 chiffres, UE), TARIC (10 chiffres, mesures propres à l'UE). En cas de doute : renseignement tarifaire contraignant (RTC).",
+        "Origine non préférentielle : dernière transformation substantielle, sert aux mesures commerciales. Origine préférentielle : définie par chaque accord, ouvre droit à un droit réduit ou nul si elle est respectée et prouvée.",
+        "Valeur en douane = valeur transactionnelle « rendu frontière de l'UE » : on ajoute transport et assurance jusqu'à l'entrée dans l'UE, commissions (sauf à l'achat), emballages, prestations fournies gratuitement par l'acheteur (moules, outils), certaines redevances ; on exclut le transport après l'entrée, les droits et taxes dans l'UE, le montage après importation.",
+        "Droits = valeur en douane × taux. Base TVA = valeur en douane + droits + frais jusqu'au premier lieu de destination en France ; TVA = base × 20 %. Depuis 2022, la TVA à l'importation est autoliquidée par les entreprises identifiées en France ; les droits restent un coût définitif.",
+        "Déclaration en douane électronique ; numéro EORI obligatoire ; statut OEA = facilités pour les opérateurs fiables. Régimes particuliers : transit, entrepôt douanier, admission temporaire, perfectionnement actif et passif."
+      ],
+      "exercices": [
+        {
+          "id": "tci-19",
+          "niveau": "bases",
+          "titre": "Les notions clés de la douane",
+          "objectif": "Savoir distinguer espèce, origine et valeur, lire la structure d'un code tarifaire et associer chaque besoin au bon régime douanier.",
+          "enonce": "Un importateur débutant (fictif) pose plusieurs questions à son représentant en douane. Répondez à sa place.",
+          "methode": [
+            "Pour le code tarifaire, rappelez-vous l'emboîtement : 2, 4, 6 chiffres pour le SH mondial, 8 pour la NC, 10 pour le TARIC.",
+            "Pour l'origine, demandez-vous à quoi elle va servir : appliquer une mesure commerciale (non préférentielle) ou obtenir un droit réduit (préférentielle).",
+            "Pour les régimes, repérez si la marchandise est destinée à rester, à être transformée, à être stockée ou à repartir."
+          ],
+          "questions": [
+            "1. Quels sont les trois éléments qui déterminent la taxation d'une marchandise importée ? À quelle question répond chacun ?",
+            "2. Un code TARIC à 10 chiffres est noté AAAABBCCDD. Quelle partie est commune à tous les pays utilisant le SH ? Laquelle correspond à la NC ? Que permet d'ajouter le TARIC ?",
+            "3. Un sac fabriqué en France avec beaucoup de matières asiatiques porte « Made in France ». Est-il forcément d'origine préférentielle UE pour un accord de libre-échange ? Justifiez.",
+            "4. Associez chaque besoin à un régime : (a) présenter des machines japonaises sur un salon à Paris puis les renvoyer ; (b) stocker des vins australiens et payer les droits au fur et à mesure des ventes ; (c) importer du tissu, le transformer en vêtements et les exporter ; (d) envoyer une machine en réparation en Suisse et la réimporter ; (e) débarquer un conteneur au Havre et le dédouaner à Lyon.",
+            "5. Quelle différence entre numéro EORI et statut OEA ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. L'espèce tarifaire (qu'est-ce que c'est ? classement dans la nomenclature, qui donne le taux), l'origine (d'où vient-elle économiquement ? elle conditionne préférences et mesures commerciales) et la valeur en douane (combien vaut-elle ? c'est la base des droits ad valorem).",
+            "2. Les 6 premiers chiffres (AAAABB) forment la sous-position du Système harmonisé, commune à plus de 200 pays : chapitre (2 premiers), position (4), sous-position (6). Les 8 premiers (AAAABBCC) forment la Nomenclature combinée de l'UE, qui fixe le droit et sert aux statistiques. Les 2 derniers (DD) complètent le code TARIC, qui intègre les mesures propres à l'UE (droits préférentiels, antidumping, contingents).",
+            "3. Non. L'origine préférentielle est définie par les règles de chaque accord (changement de position tarifaire, valeur ajoutée minimale…). Une marchandise fabriquée en France avec trop de matières non originaires peut ne pas les respecter ; et il faut en plus une preuve d'origine prévue par l'accord.",
+            "4. (a) Admission temporaire ; (b) entrepôt douanier ; (c) perfectionnement actif ; (d) perfectionnement passif (droits à la réimportation sur la seule plus-value) ; (e) transit (droits suspendus jusqu'au dédouanement à Lyon).",
+            "5. L'EORI est un identifiant obligatoire pour tout opérateur qui dépose une déclaration en douane dans l'UE. L'OEA est une certification facultative accordée aux entreprises fiables, qui donne des facilités (moins de contrôles, procédures simplifiées)."
+          ],
+          "erreurs": [
+            "Confondre origine et provenance : la provenance est le pays d'expédition, l'origine la nationalité économique.",
+            "Croire qu'un marquage « Made in » suffit pour obtenir une préférence tarifaire."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-20",
+          "niveau": "application",
+          "titre": "Valeur en douane, droits et TVA à l'importation",
+          "objectif": "Savoir construire la valeur en douane à partir d'un prix FCA, calculer les droits, la base et le montant de la TVA à l'importation, puis le coût de revient.",
+          "enonce": "La société Luminaires de Touraine (fictive), établie à Tours et identifiée à la TVA en France, importe des lampes de Chine. Données ci-dessous. Taux du droit de douane : 3,5 % ; TVA : 20 %.",
+          "donnees": {
+            "entetes": ["Élément", "Montant"],
+            "lignes": [
+              ["Prix facturé FCA port de Ningbo", "64 000 €"],
+              ["Fret maritime Ningbo → Le Havre", "2 800 €"],
+              ["Assurance transport jusqu'au Havre", "160 €"],
+              ["Moules fournis gratuitement par l'importateur au fabricant chinois (valeur)", "1 500 €"],
+              ["Commission versée à l'agent d'achat de l'importateur en Chine", "900 €"],
+              ["Transport Le Havre → Tours (premier lieu de destination)", "450 €"]
+            ]
+          },
+          "methode": [
+            "Partez du prix facturé et demandez-vous, pour chaque ligne, si le coût est antérieur à l'entrée dans l'UE et fait partie de ce que vaut la marchandise rendue frontière.",
+            "Ajoutez : transport et assurance jusqu'au Havre, prestations fournies gratuitement par l'acheteur (moules). Excluez : commission à l'achat, transport après l'entrée dans l'UE.",
+            "Droits = valeur en douane × taux.",
+            "Base TVA = valeur en douane + droits + frais jusqu'au premier lieu de destination en France.",
+            "Coût de revient hors TVA : tout ce que l'importateur paie pour faire venir ce lot (sans la TVA, récupérable, et sans les moules, déjà supportés par ailleurs)."
+          ],
+          "questions": [
+            "1. Calculez la valeur en douane en justifiant chaque élément retenu ou exclu.",
+            "2. Calculez les droits de douane.",
+            "3. Calculez la base et le montant de la TVA à l'importation.",
+            "4. Comment cette TVA est-elle acquittée par l'entreprise, et pourquoi n'est-elle pas un coût pour elle ?",
+            "5. Calculez le coût de revient du lot hors TVA (prix, fret, assurance, commission d'achat, droits, transport jusqu'à Tours)."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. Valeur en douane = 64 000 (prix) + 2 800 (fret jusqu'à l'entrée dans l'UE) + 160 (assurance jusqu'au Havre) + 1 500 (moules fournis gratuitement : leur valeur est incorporée aux lampes) = 68 460 €. La commission à l'achat (900 €) est exclue : seules les commissions autres qu'à l'achat s'ajoutent. Le transport Le Havre → Tours (450 €) est exclu : il est postérieur à l'entrée dans l'UE.",
+            "2. Droits = 68 460 × 3,5 % = 2 396,10 €.",
+            "3. Base TVA = 68 460 + 2 396,10 + 450 = 71 306,10 € (le transport jusqu'à Tours, premier lieu de destination, entre dans la base TVA même s'il est exclu de la valeur en douane). TVA = 71 306,10 × 20 % = 14 261,22 €.",
+            "4. Elle est autoliquidée : l'entreprise la déclare comme due sur sa déclaration de TVA et la déduit sur la même déclaration ; elle ne la paie plus à la douane et n'en fait pas l'avance de trésorerie. Assujettie avec droit à déduction, elle la récupère : ce n'est pas un coût. Les droits de douane, eux, ne sont pas récupérables.",
+            "5. 64 000 + 2 800 + 160 + 900 + 2 396,10 + 450 = 70 706,10 € hors TVA."
+          ],
+          "erreurs": [
+            "Inclure le transport après Le Havre dans la valeur en douane, ou l'oublier dans la base TVA.",
+            "Oublier les droits de douane dans la base TVA.",
+            "Ajouter la commission à l'achat à la valeur en douane."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-21",
+          "niveau": "approfondissement",
+          "titre": "Retrouver la valeur en douane à partir d'un prix DDP",
+          "objectif": "Comprendre que la valeur en douane est une valeur « rendu frontière » quel que soit l'Incoterm, et savoir la retrouver en retirant les éléments postérieurs à l'entrée.",
+          "enonce": "Un importateur d'Orléans (fictif) achète des pompes à un fabricant turc « DDP entrepôt de l'acheteur, Orléans, Incoterms® 2020 » pour 78 600 € hors TVA. Le vendeur indique que ce prix comprend le transport routier entre la frontière de l'UE et Orléans pour 600 € et les droits de douane, au taux de 4 % de la valeur en douane. Aucun autre élément postérieur à l'entrée dans l'UE n'est inclus.",
+          "methode": [
+            "Rappelez-vous ce qu'il faut exclure d'un prix DDP : les frais postérieurs à l'entrée dans l'UE et les droits et taxes payables dans l'UE.",
+            "Retirez d'abord le transport après la frontière.",
+            "Le reste est égal à valeur en douane + droits, soit V + 0,04 × V = 1,04 × V. Résolvez l'équation.",
+            "Vérifiez en recalculant le prix DDP à partir de la valeur trouvée."
+          ],
+          "questions": [
+            "1. Calculez la valeur en douane V et le montant des droits.",
+            "2. Vérifiez votre résultat.",
+            "3. Les pompes sont d'origine préférentielle et l'exportateur fournit la preuve prévue par l'accord applicable ; le droit préférentiel est de 0 %. Quelle économie l'importateur aurait-il réalisée, et à quelle condition ?",
+            "4. En DDP, qui accomplit le dédouanement à l'import ? Quel risque ce choix fait-il courir au vendeur turc ?"
+          ],
+          "lignes": 12,
+          "corrige": [
+            "1. 78 600 − 600 = 78 000 € = V × 1,04. V = 78 000 ÷ 1,04 = 75 000 €. Droits = 4 % × 75 000 = 3 000 €.",
+            "2. 75 000 + 3 000 + 600 = 78 600 € : on retrouve le prix DDP.",
+            "3. Économie de 3 000 € de droits, à condition que la marchandise respecte la règle d'origine de l'accord et que la preuve d'origine soit fournie ; sans preuve, le droit normal s'applique.",
+            "4. Le vendeur : en DDP, il dédouane à l'import et paie droits et taxes dans le pays de l'acheteur. Il doit pouvoir accomplir les formalités dans l'UE (représentant en douane, numéro EORI) et payer la TVA d'importation ; à défaut, il risque un blocage en douane à ses frais. DAP aurait été plus simple si l'importateur peut dédouaner lui-même."
+          ],
+          "erreurs": [
+            "Calculer les droits sur le prix DDP (78 600 × 4 %) : on taxerait les droits eux-mêmes et le transport intérieur.",
+            "Retirer 4 % du prix au lieu de diviser par 1,04."
+          ],
+          "fictif": true
+        }
+      ]
+    },
+    {
+      "id": "tci-s9",
+      "titre": "Échanges intracommunautaires : TVA et déclarations",
+      "chapitre": "tci.intra-ue",
+      "notions": ["tci.intra-ue.livraison-acquisition", "tci.intra-ue.autoliquidation", "tci.intra-ue.declarations", "tci.intra-ue.vs-pays-tiers"],
+      "rappel": [
+        "Livraison intracommunautaire (LIC) : vente d'un bien par un assujetti, expédié de France vers un autre État membre, à un acquéreur assujetti identifié à la TVA dans cet État. Exonérée en France ; l'acquéreur réalise une acquisition intracommunautaire (AIC) taxable dans son pays.",
+        "Conditions de l'exonération : vente à titre onéreux entre assujettis, transport physique hors de France prouvé, numéro de TVA valide de l'acquéreur sur la facture (vérifiable dans VIES), déclaration sur l'état récapitulatif. Mention : « Exonération de TVA, article 262 ter I du CGI ».",
+        "Autoliquidation : l'acquéreur déclare lui-même la TVA due sur le montant HT et la déduit sur la même déclaration ; l'opération est neutre en trésorerie s'il a un droit à déduction complet.",
+        "Depuis 2022 : état récapitulatif TVA (fiscal, tout assujetti réalisant des LIC exonérées) et enquête statistique EMEBI (entreprises au-dessus des seuils ou sélectionnées).",
+        "Vente à un particulier d'un autre État membre : règles de la vente à distance (TVA du pays de destination au-delà de 10 000 € par an, guichet unique OSS). Pays tiers : déclaration d'export, exonération sur preuve de sortie de l'UE, droits et TVA à l'import dans le pays d'arrivée."
+      ],
+      "exercices": [
+        {
+          "id": "tci-22",
+          "niveau": "bases",
+          "titre": "Classer les opérations et situer la TVA",
+          "objectif": "Savoir qualifier une opération (LIC, AIC, export, import, vente à distance) et dire dans quel pays et par qui la TVA est due.",
+          "enonce": "La société Thés de Bourgogne (fictive), établie à Dijon et identifiée à la TVA en France, réalise les opérations suivantes : (a) vente à un grossiste belge assujetti, numéro de TVA valide, marchandise transportée à Bruxelles ; (b) achat de boîtes métalliques à un fabricant allemand, livrées à Dijon ; (c) vente à un distributeur suisse ; (d) achat de thé en Inde ; (e) vente en ligne à un particulier espagnol.",
+          "donnees": {
+            "entetes": ["Opération", "Qualification", "Formalité douanière ?", "TVA facturée par le vendeur ?", "Où et par qui la TVA est-elle due ?"],
+            "lignes": [
+              ["a", "", "", "", ""],
+              ["b", "", "", "", ""],
+              ["c", "", "", "", ""],
+              ["d", "", "", "", ""],
+              ["e", "", "", "", ""]
+            ]
+          },
+          "methode": [
+            "Première question : la marchandise reste-t-elle dans l'UE (pas de douane) ou franchit-elle la frontière extérieure (douane) ?",
+            "Deuxième question : le client est-il un assujetti identifié à la TVA ou un particulier ?",
+            "Troisième question : la TVA est due dans le pays de consommation ; qui la déclare ? En intracommunautaire B to B, c'est l'acquéreur (autoliquidation)."
+          ],
+          "questions": [
+            "1. Complétez le tableau.",
+            "2. Pour l'opération (a), quelles mentions doivent figurer sur la facture ?",
+            "3. Quelle déclaration périodique l'opération (a) impose-t-elle, et dans quel but ?",
+            "4. Quelles formalités disparaissent pour l'opération (a) par rapport à l'opération (c) ?"
+          ],
+          "lignes": 14,
+          "corrige": [
+            "1. (a) LIC ; pas de formalité douanière ; facture HT sans TVA ; TVA belge autoliquidée par le grossiste belge (AIC en Belgique). (b) AIC pour Thés de Bourgogne ; pas de douane ; facture allemande HT sans TVA ; TVA française autoliquidée par Thés de Bourgogne. (c) Exportation ; déclaration d'export en France (et d'import en Suisse) ; facture HT exonérée ; taxes suisses à l'import, en principe acquittées par l'importateur (sauf DDP). (d) Importation ; déclaration d'import ; pas de TVA facturée par le vendeur indien ; droits de douane et TVA à l'importation en France, la TVA étant autoliquidée par Thés de Bourgogne. (e) Vente à distance à un particulier : pas de douane ; ce n'est pas une LIC B to B : TVA française tant que le seuil européen de 10 000 € par an n'est pas dépassé, TVA espagnole au-delà, déclarable via le guichet unique OSS.",
+            "2. Les numéros de TVA intracommunautaire du vendeur et de l'acquéreur, le montant HT sans TVA, et la mention « Exonération de TVA, article 262 ter I du CGI ».",
+            "3. L'état récapitulatif TVA des livraisons intracommunautaires, mensuel, par client : il permet aux administrations de vérifier que la vente exonérée en France a bien été taxée à l'arrivée en Belgique. Selon ses volumes, l'entreprise peut aussi devoir répondre à l'EMEBI (finalité statistique).",
+            "4. Il n'y a ni déclaration d'export, ni déclaration d'import, ni droits de douane à destination. La preuve de l'exonération repose sur la preuve du transport et le numéro de TVA de l'acquéreur, et non sur la preuve de sortie de l'UE."
+          ],
+          "erreurs": [
+            "Appliquer le régime LIC à un client particulier.",
+            "Croire qu'une vente dans l'UE n'entraîne aucune obligation déclarative."
+          ],
+          "fictif": true
+        },
+        {
+          "id": "tci-23",
+          "niveau": "application",
+          "titre": "Autoliquider une acquisition et sécuriser une livraison",
+          "objectif": "Savoir passer les écritures de TVA d'une acquisition intracommunautaire et vérifier les conditions d'exonération d'une livraison.",
+          "enonce": "Le mois de mars de la société Vélos du Cher (fictive), établie à Bourges et assujettie avec droit à déduction complet : elle achète pour 12 500 € HT de cadres à un fabricant allemand (facture HT sans TVA) ; elle vend pour 18 000 € HT de vélos à un détaillant italien qui lui a communiqué un numéro de TVA ; elle vend pour 9 000 € HT de vélos à un détaillant suisse. Taux de TVA français : 20 %.",
+          "methode": [
+            "Pour l'achat allemand : calculez la TVA française sur le montant HT, puis inscrivez-la à la fois en TVA due et en TVA déductible.",
+            "Pour la vente italienne : reprenez une à une les conditions de l'exonération et demandez-vous comment le vendeur les prouve.",
+            "Pour la vente suisse : comparez avec le régime des pays tiers (douane, preuve de sortie)."
+          ],
+          "questions": [
+            "1. Calculez la TVA sur l'acquisition allemande. Comment apparaît-elle sur la déclaration de TVA et quel est l'effet net sur la trésorerie ?",
+            "2. Avant de facturer l'Italien, quelles vérifications Vélos du Cher doit-elle faire ? Qu'arrive-t-il si le numéro de TVA est invalide ?",
+            "3. Quel montant de TVA la facture italienne doit-elle porter ? Et quel montant serait en jeu si l'exonération était remise en cause ?",
+            "4. Pour la vente suisse : quelles formalités, quelle preuve de l'exonération et quelle mention sur la facture ?",
+            "5. Récapitulez en un tableau : pour chaque opération, TVA facturée, TVA due par Vélos du Cher, TVA déductible."
+          ],
+          "lignes": 16,
+          "corrige": [
+            "1. 12 500 × 20 % = 2 500 €. Elle est déclarée comme TVA due (ligne des acquisitions intracommunautaires) et simultanément comme TVA déductible : 2 500 − 2 500 = 0 € à payer. L'opération est neutre pour la trésorerie, mais elle est tracée.",
+            "2. Vérifier la validité du numéro de TVA de l'acquéreur (dans VIES), s'assurer qu'il s'agit d'une vente entre assujettis, organiser et conserver la preuve du transport physique vers l'Italie, et prévoir la déclaration sur l'état récapitulatif. Si le numéro est invalide, l'une des conditions de l'exonération manque : l'exonération n'est pas acquise et le vendeur s'expose à devoir la TVA française sur la vente.",
+            "3. Aucune TVA : facture de 18 000 € HT avec les deux numéros de TVA et la mention « Exonération de TVA, article 262 ter I du CGI ». Si l'exonération était remise en cause, la TVA française en jeu serait 18 000 × 20 % = 3 600 €.",
+            "4. Déclaration d'exportation en France (et déclaration d'import en Suisse, à la charge de l'acheteur sauf DDP) ; preuve de l'exonération : la preuve de sortie de l'UE (déclaration visée électroniquement) ; facture HT avec mention d'exonération à l'export. Aucune déclaration sur l'état récapitulatif, qui ne concerne que les livraisons intracommunautaires.",
+            "5. Achat allemand : TVA facturée 0 € ; TVA due 2 500 € ; TVA déductible 2 500 €. Vente italienne : TVA facturée 0 € ; TVA due 0 € (exonérée, l'acquéreur autoliquide en Italie) ; déductible 0 €. Vente suisse : TVA facturée 0 € ; TVA due 0 € (exportation exonérée) ; déductible 0 €. Solde net de ces trois opérations : 0 €."
+          ],
+          "erreurs": [
+            "Payer la TVA d'acquisition sans la déduire, ou l'oublier totalement : elle doit être déclarée puis déduite.",
+            "Facturer de la TVA française à un client assujetti d'un autre État membre qui remplit les conditions.",
+            "Déclarer la vente suisse sur l'état récapitulatif."
+          ],
+          "fictif": true
+        }
+      ]
+    }
+  ]
+}

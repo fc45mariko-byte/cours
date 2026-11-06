@@ -19,6 +19,7 @@ export function Etudier() {
   const erreurs = Object.keys(p.erreurs).length;
   const nbEx = (pred: (e: typeof index.exercices[number]) => boolean) => index.exercices.filter(pred).length;
   const outils: { href: string; titre: string; texte: string; meta?: string }[] = [
+    { href: '#/cahiers', titre: 'Cahiers d’exercices à imprimer', texte: 'Par matière : bases, méthode guidée, application, corrigés expliqués. Matières de l’emploi du temps en tête.', meta: `${index.cahiers.length} cahiers` },
     { href: '#/etudier/session', titre: 'Session de révision', texte: 'Choisissez une matière : questions, corrections, explications, renvois au cours et recommandation finale.' },
     { href: '#/entrainer', titre: 'QCM', texte: 'Séries par matière, chapitre ou difficulté, corrigées une à une.', meta: `${index.questions.length} questions` },
     { href: '#/flashcards', titre: 'Flashcards et questions courtes', texte: 'Réponse ouverte, comparaison avec la réponse de référence, répétition espacée.', meta: dues ? `${dues} à revoir` : `${index.flashcards.length} cartes` },

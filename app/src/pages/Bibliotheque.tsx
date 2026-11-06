@@ -22,7 +22,7 @@ export function Couverture({ m }: { m: MatiereCatalogue }) {
   return (
     <a class={`couverture ton-${m.couleur}`} href={`#/matiere/${m.id}`}>
       <Motif categorie={m.categorie} graine={m.id} />
-      <span class="couv-meta"><span>{m.categorie}</span><span>{m.semestres.join(' · ') || 'Complément'}</span></span>
+      <span class="couv-meta"><span>{m.categorie}</span><span>{m.emploiDuTemps ? m.emploiDuTemps.seances.join(' + ') : m.semestres.join(' · ') || 'Complément'}</span></span>
       <span>
         <span class="couv-titre" style={{ display: 'block' }} lang="fr">{m.titre}</span>
         <span class="couv-meta" style={{ marginBottom: 8 }}><span>{m.chapitres.length} chapitres · {s.ids.length} notions</span><span>{m.langue !== 'fr' ? LIBELLE_LANGUE[m.langue] : ''}</span></span>
@@ -36,10 +36,11 @@ export function Bibliotheque() {
   const [langue, setLangue] = useState<'' | Langue>('');
   const ms = index.matieres.filter((m) => !langue || m.langue === langue);
   const groupes: { titre: string; texte: string; liste: MatiereCatalogue[] }[] = [
-    { titre: 'Semestre 5', texte: 'Premier semestre de la L3', liste: ms.filter((m) => m.semestres.includes('S5')) },
+    { titre: 'Au programme ce semestre', texte: 'Emploi du temps du S5', liste: ms.filter((m) => m.emploiDuTemps) },
+    { titre: 'Semestre 5', texte: 'Autres matières du premier semestre', liste: ms.filter((m) => m.semestres.includes('S5') && !m.emploiDuTemps) },
     { titre: 'Semestre 6', texte: 'Second semestre, avec le stage', liste: ms.filter((m) => m.semestres.includes('S6')) },
     { titre: 'Compléments', texte: 'Hors maquette d’Orléans, signalés comme tels', liste: ms.filter((m) => m.statut === 'COMP') },
-    { titre: 'À compléter', texte: 'Matières attendues dont le contenu manque', liste: ms.filter((m) => m.completude === 'absente') },
+    { titre: 'À compléter', texte: 'Matières attendues dont le contenu manque', liste: ms.filter((m) => m.completude === 'absente' && !m.emploiDuTemps) },
   ];
   return (
     <>

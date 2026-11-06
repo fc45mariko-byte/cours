@@ -31,7 +31,7 @@ const COURTS: TypePublication[] = ['concept', 'quiz', 'langue', 'comparaison', '
 
 export type Raison =
   | 'a-revoir' | 'echeance' | 'prochaine-etape' | 'tester' | 'en-cours' | 'matiere-suivie'
-  | 'decouverte' | 'actualite' | 'format-apprecie' | 'moment';
+  | 'decouverte' | 'actualite' | 'format-apprecie' | 'moment' | 'emploi-du-temps';
 export const LIBELLE_RAISON: Record<Raison, string> = {
   'a-revoir': 'Vous l’avez marquée « à revoir »',
   echeance: 'C’est le bon moment pour la revoir',
@@ -43,9 +43,10 @@ export const LIBELLE_RAISON: Record<Raison, string> = {
   actualite: 'Monde et économie',
   'format-apprecie': 'Un format que vous lisez volontiers',
   moment: 'Format adapté à ce moment de la journée',
+  'emploi-du-temps': 'Au programme de votre emploi du temps',
 };
 
-const PRIORITE: Raison[] = ['a-revoir', 'tester', 'echeance', 'prochaine-etape', 'actualite', 'en-cours', 'matiere-suivie', 'format-apprecie', 'moment'];
+const PRIORITE: Raison[] = ['a-revoir', 'tester', 'echeance', 'prochaine-etape', 'actualite', 'en-cours', 'emploi-du-temps', 'matiere-suivie', 'format-apprecie', 'moment'];
 
 export interface Recommandation { pub: Publication; score: number; raison: Raison }
 
@@ -63,6 +64,7 @@ export interface Signaux {
   affiniteMatiere: Map<string, number>; // 0..1, activité récente (demi-vie 7 jours)
   affiniteType: Map<string, number>; // multiplicateur 0,75..1,3 appris des interactions
   suivies: Set<string>;
+  edt: Set<string>; // matières de l'emploi du temps du semestre en cours
   expositionMatiere: Map<string, number>;
 }
 
@@ -116,7 +118,8 @@ export function signaux(p: Progression, maintenant = Date.now()): Signaux {
     const m = n?.split('.')[0];
     if (m) expositionMatiere.set(m, (expositionMatiere.get(m) ?? 0) + 1);
   }
-  return { statut, derniere, affiniteMatiere, affiniteType, suivies: new Set(p.preferences.mesMatieres), expositionMatiere };
+  const edt = new Set(index.matieres.filter((m) => m.emploiDuTemps).map((m) => m.id));
+  return { statut, derniere, affiniteMatiere, affiniteType, suivies: new Set(p.preferences.mesMatieres), edt, expositionMatiere };
 }
 
 // ---------- Score d'une publication ----------
@@ -166,6 +169,8 @@ export function scorer(x: Publication, p: Progression, s: Signaux, graine: strin
   if (m.lu && !m.aRevoir) ajouter(null, -1.2);
 
   // 6. Intérêts : matières suivies ou travaillées récemment, formats lus volontiers.
+  // Les matières de l'emploi du temps passent en priorité : ce sont les cours du semestre.
+  if (s.edt.has(x.m)) ajouter('emploi-du-temps', 0.4);
   const aff = s.affiniteMatiere.get(x.m) ?? 0;
   ajouter(s.suivies.has(x.m) ? 'matiere-suivie' : null, (s.suivies.has(x.m) ? 0.45 : 0) + 0.4 * aff);
   const at = s.affiniteType.get(PREFIXE_TYPE[x.type] ?? x.type) ?? 1;

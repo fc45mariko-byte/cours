@@ -22,6 +22,12 @@ Recherches effectuées (mot-clé « touris », toutes casses) :
 
 **Document nécessaire** : le syllabus, le plan de cours ou les supports de l'EC « Introduction au tourisme international » (intitulé exact, semestre, enseignant, liste et ordre des chapitres, contenu). À réception, la matière sera ajoutée au catalogue dans l'ordre et la terminologie d'origine, avec la mention de la source.
 
+### Mise à jour du 6 novembre 2026
+
+- **L'emploi du temps du semestre 5** (captures d'écran fournies) confirme la matière : « Intro international tourism », CM et TD le lundi (9 h - 11 h, salle 257). Elle est désormais rattachée au S5 et au statut « maquette d'Orléans ».
+- **Les quatre fichiers transmis** (« Gestion du projet.pptx », « Gestion de projet.docx », « CM Compta CH1.pptx », « PLAN LECTURE 1 THE BRITISH SYSTEM OF GOVERNMENT.docx ») ne contiennent pas les documents : ce sont des pages HTML de connexion à Celene (« Les visiteurs anonymes ne peuvent pas accéder à ce cours »). Ils ont seulement permis de relever les enseignantes et les codes : Comptabilité générale (LLA5J6A) et Gestion de projet (LAL5J3D), Izabela Jankiewicz ; Civilisation britannique, LEA 3 semestre 5 (LLF5J30), Nora Vouteau.
+- Le contenu du cours de tourisme reste donc **absent**. Pour le rédiger, il faut les supports téléchargés en étant connecté à Celene (fichiers .pptx, .docx ou .pdf réels).
+
 ## 2. Complétude des matières existantes
 
 Toutes les notions cartographiées sont rédigées. La cartographie elle-même repose sur les intitulés et descriptifs officiels des EC (pages S5 et S6 de l'université, consultées par extrait) : **aucun syllabus détaillé ni support d'enseignant n'a été lu**. La complétude ci-dessous est donc relative au catalogue de l'application, pas au cours réellement dispensé.

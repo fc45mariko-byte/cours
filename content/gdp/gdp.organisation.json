@@ -40,7 +40,7 @@
       "definition": "La matrice RACI croise les tâches (lignes) et les acteurs (colonnes) en attribuant à chaque case un rôle : R (Responsible, réalise la tâche), A (Accountable, rend compte du résultat et valide ; un seul A par tâche), C (Consulted, consulté avant la décision ou pendant la réalisation), I (Informed, informé du résultat). Elle clarifie les responsabilités et la circulation de l'information.",
       "fonctionnement": [
         { "type": "tableau", "entetes": ["Tâche", "Directeur commercial", "Assistante export", "Graphiste", "Comptable"], "lignes": [
-          ["Traduire le catalogue", "I", "A", "C", ""],
+          ["Traduire le catalogue", "A", "R", "C", ""],
           ["Concevoir le stand", "A", "C", "R", ""],
           ["Valider le budget", "A", "R", "", "C"],
           ["Réserver le transport", "I", "A / R", "", "I"]
