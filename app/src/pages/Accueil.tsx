@@ -10,6 +10,7 @@ import { hacher } from '../core/hasard';
 import { jour } from '../core/store';
 import { rangStatut } from '../core/statut';
 import type { Publication } from '../types';
+import { construirePlan, jourDuPlan } from '../plan';
 
 function salutation() {
   const h = new Date().getHours();
@@ -39,6 +40,21 @@ function ALaUne({ fil }: { fil: Publication[] }) {
   );
 }
 
+function CartePlan() {
+  const p = useProgression();
+  const n = jourDuPlan(p.preferences.planDebut);
+  const plan = construirePlan(index.matieres);
+  const j = n ? plan[n - 1] : plan[0];
+  const ms = [...new Set([...j.nouveaux.map((b) => b.matiere), ...j.matieres])].map((id) => matiere(id)?.titre).filter(Boolean);
+  return (
+    <section class="bloc carte-plan" aria-label="Plan de révision">
+      <p class="surtitre"><span class="ton-trait">{n ? `Plan 14 jours · jour ${n}` : 'Plan 14 jours'}</span><span>synthèse · récitation · révisions espacées</span></p>
+      <p style={{ margin: '4px 0 12px' }}>{n ? <>Aujourd’hui : <strong>{ms.join(', ') || 'récitation finale'}</strong>{j.revisions.length ? `, et les révisions des jours ${j.revisions.map((r) => r.jour).join(', ')}` : ''}.</> : <>Apprendre les {plan.flatMap((x) => x.nouveaux).reduce((s, b) => s + b.chapitres.length, 0)} chapitres du semestre en 14 jours, avec des synthèses courtes et de la récitation.</>}</p>
+      <div class="ligne" style={{ gap: 12, flexWrap: 'wrap' }}><a class="btn" href="#/plan">{n ? 'Voir les tâches du jour' : 'Découvrir le plan'}</a><a class="btn discret" href="#/syntheses">Synthèses</a></div>
+    </section>
+  );
+}
+
 export function Accueil() {
   const p = useProgression();
   const c = useAsync(() => chargerFil(), []);
@@ -58,6 +74,8 @@ export function Accueil() {
     <>
       <p class="surtitre">{new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' })} · L3 LEA anglais-espagnol, commerce international</p>
       <h1 class="display">{salutation()}.<br /><em>Qu’apprend-on aujourd’hui ?</em></h1>
+
+      <CartePlan />
 
       <Charge c={c}>{(fil) => <ALaUne fil={fil} />}</Charge>
 

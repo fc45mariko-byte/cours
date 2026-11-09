@@ -43,7 +43,7 @@ export interface Progression {
   xp: Record<string, EvenementXp>; // clé unique = action comptée une seule fois
   badges: Record<string, number>;
   dissertations: Record<string, Dissertation>;
-  preferences: { mesMatieres: string[]; animations: boolean };
+  preferences: { mesMatieres: string[]; animations: boolean; planDebut?: number };
   /** Fil : actualisations demandées, ordre affiché par onglet et par édition, publications déjà montrées. */
   fil: { actualise: number; ordre: Record<string, { edition: string; ids: string[] }>; impressions: Record<string, { n: number; t: number }> };
   [cle: string]: unknown;
@@ -88,6 +88,7 @@ export function migrer(brut: unknown): Progression {
     preferences: {
       mesMatieres: Array.isArray(prefs.mesMatieres) ? prefs.mesMatieres : [],
       animations: typeof prefs.animations === 'boolean' ? prefs.animations : true,
+      ...(typeof prefs.planDebut === 'number' ? { planDebut: prefs.planDebut } : {}),
     },
     fil: {
       actualise: typeof fil.actualise === 'number' ? fil.actualise : 0,

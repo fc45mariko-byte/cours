@@ -1,13 +1,20 @@
 // Accès aux données : index léger chargé au démarrage, chapitres chargés à la demande.
 import indexBrut from './generated/index.json';
-import type { FichierChapitre, IndexGenere, Question, Flashcard, Exercice, MatiereCatalogue, Publication, Article, IndexGlossaire, Langue, Cahier } from './types';
+import type { FichierChapitre, IndexGenere, Question, Flashcard, Exercice, MatiereCatalogue, Publication, Article, IndexGlossaire, Langue, Cahier, Synthese } from './types';
 import { calculerMaitrise, type Maitrise } from './core/maitrise';
 import type { Progression } from './core/store';
 
 export const index = indexBrut as unknown as IndexGenere;
 
-const fichiers = import.meta.glob<FichierChapitre>(['../../content/*/*.json', '!../../content/publications/*.json', '!../../content/cahiers/*.json'], { import: 'default' });
+const fichiers = import.meta.glob<FichierChapitre>(['../../content/*/*.json', '!../../content/publications/*.json', '!../../content/cahiers/*.json', '!../../content/syntheses/*.json'], { import: 'default' });
 const fichiersCahiers = import.meta.glob<Cahier>('../../content/cahiers/*.json', { import: 'default' });
+const fichiersSyntheses = import.meta.glob<Synthese>('../../content/syntheses/*.json', { import: 'default' });
+
+/** Synthèse d'une matière (chargée à la demande). */
+export function chargerSynthese(matiere: string): Promise<Synthese> {
+  const f = fichiersSyntheses[`../../content/syntheses/${matiere}.json`];
+  return f ? f() : Promise.reject(new Error(`Pas encore de synthèse pour ${matiere}`));
+}
 
 /** Cahier d'exercices d'une matière (chargé à la demande). */
 export function chargerCahier(matiere: string): Promise<Cahier> {

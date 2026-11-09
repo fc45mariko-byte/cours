@@ -12,6 +12,8 @@ import { Notion } from './pages/Notion';
 import { Etudier, Session, Vocabulaire } from './pages/Etudier';
 import { Dissertation } from './pages/Dissertation';
 import { Cahier, Cahiers } from './pages/Cahier';
+import { Synthese, Syntheses, SynthesesSemestre, ParCoeur } from './pages/Synthese';
+import { Plan } from './pages/Plan';
 import { Progres, Arbre } from './pages/Progres';
 import { Entrainer, SerieQcm } from './pages/Entrainer';
 import { Exercice } from './pages/Exercice';
@@ -49,7 +51,13 @@ function Page() {
       if (id === 'vocabulaire') return <Layout section="etudier"><Vocabulaire params={params} key={params.toString()} /></Layout>;
       return <Layout section="etudier"><Etudier /></Layout>;
     case 'cahiers': return <Layout section="etudier"><Cahiers /></Layout>;
-    case 'cahier': return <Layout section="etudier" lecture><Cahier id={id} key={id} /></Layout>;
+    case 'cahier': return <Layout section="etudier" lecture><Cahier id={id} key={id + params.toString()} params={params} /></Layout>;
+    case 'syntheses':
+      if (id === 'imprimer') return <Layout section="etudier" lecture><SynthesesSemestre /></Layout>;
+      if (id === 'parcoeur') return <Layout section="etudier"><ParCoeur /></Layout>;
+      return <Layout section="etudier"><Syntheses /></Layout>;
+    case 'synthese': return <Layout section="etudier" lecture><Synthese id={id} key={id + params.toString()} params={params} /></Layout>;
+    case 'plan': return <Layout section="etudier"><Plan /></Layout>;
     case 'entrainer':
       return <Layout section="etudier">{id === 'qcm' ? <SerieQcm key={params.toString()} params={params} /> : <Entrainer key={params.toString()} params={params} />}</Layout>;
     case 'exercice': return <Layout section="etudier" lecture><Exercice id={id} key={id} /></Layout>;

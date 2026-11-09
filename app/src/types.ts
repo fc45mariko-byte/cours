@@ -115,6 +115,19 @@ export interface IndexGenere {
   questions: { id: string; notion: string; chapitre: string; niveau: number; competence: string }[];
   sources: Source[];
   cahiers: { matiere: string; titre: string; langue: Langue; sections: number; exercices: number }[];
+  syntheses: { matiere: string; titre: string; chapitres: number; questions: number }[];
+}
+
+/** Synthèse d'une matière (content/syntheses/<matière>.json) : l'essentiel en 2 ou 3 pages. */
+export interface Synthese {
+  matiere: string; titre: string; essentiel: string;
+  chapitres: {
+    chapitre: string; titre: string; idee: string; points: string[];
+    formules?: string[]; dates?: { date: string; fait: string }[];
+    distinctions?: { a: string; b: string; difference: string }[];
+    memo?: string; questions: { q: string; r: string }[];
+  }[];
+  parCoeur: string[]; pieges: string[];
 }
 
 /** Cahier d'exercices imprimable (content/cahiers/<matière>.json). */

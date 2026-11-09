@@ -1,0 +1,136 @@
+{
+  "matiere": "mgi",
+  "titre": "Management interculturel",
+  "essentiel": "La culture est une « programmation collective de l'esprit » (Hofstede) qui influence management, communication et négociation. Trois grilles (Hofstede, Hall, Trompenaars) permettent de formuler des hypothèses sur un malentendu, jamais de prédire un individu. À l'examen : choisir la grille pertinente pour un cas, adapter ses pratiques managériales et négocier avec BATNA et ZOPA.",
+  "chapitres": [
+    {
+      "chapitre": "mgi.fondements",
+      "titre": "Fondements",
+      "idee": "La culture est un ensemble appris et partagé de valeurs et pratiques, en couches ; les grilles décrivent des tendances de groupe, utiles comme hypothèses, pas comme prédictions individuelles.",
+      "points": [
+        "Culture : valeurs, croyances, normes et pratiques partagées et apprises par un groupe ; « programmation collective de l'esprit » (Hofstede)",
+        "Oignon de Hofstede : symboles → héros → rituels → valeurs (cœur)",
+        "Chacun a plusieurs cultures : nationale, régionale, professionnelle, d'entreprise, générationnelle",
+        "Généralisation (tendance prudente, hypothèse) ≠ stéréotype (image figée attribuée à tous) ≠ préjugé (jugement a priori) ≠ discrimination (acte)",
+        "Limites des grilles : moyennes nationales, datées, oublient les autres appartenances ; risque d'erreur écologique",
+        "Bonne démarche : grilles + observation + dialogue + conscience de sa propre culture"
+      ],
+      "distinctions": [
+        { "a": "Stéréotype", "b": "Généralisation culturelle", "difference": "Le stéréotype est figé et appliqué à tous ; la généralisation est une tendance prudente, vérifiée auprès de l'interlocuteur." },
+        { "a": "Préjugé", "b": "Discrimination", "difference": "Le préjugé est une attitude (jugement) ; la discrimination est un acte, souvent interdit par la loi." }
+      ],
+      "memo": "L'oignon : on voit la peau (symboles), on n'atteint le cœur (valeurs) qu'en épluchant.",
+      "questions": [
+        { "q": "Les 4 couches de l'oignon de Hofstede ?", "r": "Symboles, héros, rituels, valeurs (au cœur)." },
+        { "q": "Peut-on prédire le comportement d'une personne d'après sa nationalité ?", "r": "Non : les grilles décrivent des moyennes de groupe ; les individus s'en écartent (erreur écologique)." }
+      ]
+    },
+    {
+      "chapitre": "mgi.grilles",
+      "titre": "Les grilles d'analyse",
+      "idee": "Hofstede (6 dimensions), Hall (contexte, temps, espace) et Trompenaars (7 dilemmes) éclairent chacun un aspect différent : il faut choisir la grille qui explique le cas.",
+      "points": [
+        "Hofstede (enquête IBM, fin 1960-début 1970) : distance hiérarchique, individualisme/collectivisme, masculinité/féminité, contrôle de l'incertitude",
+        "+ orientation long terme (avec Bond, années 1980-1990) + indulgence/retenue (avec Minkov, 2010)",
+        "Critiques (McSweeney, 2002) : une seule entreprise, nation = culture, méthode déclarative, scores datés, erreur écologique",
+        "Hall : contexte fort (implicite) / faible (explicite) ; temps monochrone / polychrone ; proxémie (distances intime, personnelle, sociale, publique)",
+        "Trompenaars et Hampden-Turner (1993) : universalisme/particularisme, individualisme/communautarisme, neutre/affectif, spécifique/diffus, acquis/attribué, temps, nature",
+        "Trompenaars insiste sur la réconciliation des dilemmes",
+        "Choix : hiérarchie, règles, risque → Hofstede ; communication, temps, espace → Hall ; règles vs relations, statut, émotions → Trompenaars"
+      ],
+      "dates": [
+        { "date": "fin 1960 - début 1970", "fait": "Enquête de Hofstede chez IBM (4 dimensions)" },
+        { "date": "1993", "fait": "Riding the Waves of Culture (Trompenaars et Hampden-Turner)" },
+        { "date": "2002", "fait": "Critique méthodologique de McSweeney" },
+        { "date": "2010", "fait": "6e dimension de Hofstede : indulgence/retenue (avec Minkov)" }
+      ],
+      "distinctions": [
+        { "a": "Masculinité (Hofstede)", "b": "Proportion d'hommes", "difference": "La dimension mesure des valeurs (compétition vs coopération), pas une démographie." },
+        { "a": "Contexte fort", "b": "Mauvaise communication", "difference": "La communication y est riche mais passe par la relation et le non-dit plutôt que par les mots." }
+      ],
+      "memo": "Hofstede = Hiérarchie ; Hall = Heure et implicite (temps, contexte) ; Trompenaars = Tiraillements (dilemmes).",
+      "questions": [
+        { "q": "Un subordonné n'ose pas contredire son chef : quelle grille ?", "r": "Hofstede, distance hiérarchique." },
+        { "q": "Un « oui » qui ne vaut pas accord ; une réunion qui commence 30 min en retard ?", "r": "Hall : contexte fort ; temps polychrone." },
+        { "q": "Un partenaire demande une exception « par amitié » ?", "r": "Trompenaars : particularisme (vs universalisme)." },
+        { "q": "Trois critiques de Hofstede ?", "r": "Échantillon IBM unique et daté ; nation assimilée à la culture ; risque d'appliquer des moyennes aux individus." }
+      ]
+    },
+    {
+      "chapitre": "mgi.management",
+      "titre": "Management",
+      "idee": "Les pratiques managériales sont culturelles : le manager interculturel adapte les modalités (pas les valeurs), explicite les règles, structure les équipes à distance et prépare l'expatriation.",
+      "points": [
+        "Varient selon la culture : décision (consensus ou chef), feedback (direct ou indirect, en privé), réunions (décider ou valider), motivation (individuelle ou collective), procédures",
+        "Adapter les modalités, garder valeurs et objectifs communs ; expliciter ses attentes",
+        "Équipe multiculturelle : plus créative, mais risques de malentendus et lenteurs ; à distance : fuseaux, perte du non-verbal, langue inégalement maîtrisée, isolement",
+        "Leviers : charte d'équipe (langue, outils, délais de réponse), ordre du jour et compte rendu, anglais simple, temps informel, rotation des horaires",
+        "Choc culturel (Oberg, 1960), courbe en U : lune de miel → crise → ajustement → adaptation ; retour : choc inversé (courbe en W)",
+        "Échec d'expatriation : conjoint et famille, préparation, isolement, mission floue ; réussite : sélection, formation, langue, mentor, préparation du retour"
+      ],
+      "dates": [
+        { "date": "1960", "fait": "Oberg décrit le choc culturel" }
+      ],
+      "distinctions": [
+        { "a": "Choc culturel", "b": "Échec de l'expatriation", "difference": "La crise est une phase normale ; c'est l'absence d'accompagnement qui mène à l'échec." },
+        { "a": "Diversité de l'équipe", "b": "Performance", "difference": "La diversité n'est un atout que si elle est managée." }
+      ],
+      "memo": "Courbe en U : « Miel, Mal, Mieux, Maîtrise » ; en W si l'on ajoute le retour.",
+      "questions": [
+        { "q": "Les phases du choc culturel ?", "r": "Lune de miel, crise, ajustement, adaptation ; puis choc culturel inversé au retour (courbe en W)." },
+        { "q": "Trois règles pour une équipe à distance ?", "r": "Charte (langue, outils, délais de réponse), réunions préparées avec compte rendu, rotation des horaires selon les fuseaux." },
+        { "q": "Première cause d'échec d'une expatriation citée ?", "r": "Les difficultés d'adaptation du conjoint et de la famille." }
+      ]
+    },
+    {
+      "chapitre": "mgi.negociation",
+      "titre": "Négociation internationale",
+      "idee": "Une négociation se prépare (BATNA, prix de réservation), suit des phases dont le poids varie selon la culture, et vise si possible un accord intégratif dans la ZOPA.",
+      "points": [
+        "Phases : préparation, prise de contact, échange d'informations, argumentation, concessions, conclusion écrite, suivi",
+        "Distributive (gagnant-perdant, partager une valeur fixe) vs intégrative (gagnant-gagnant, créer de la valeur)",
+        "Explorer les intérêts derrière les positions",
+        "Variables culturelles : relation ou tâche d'abord, communication directe ou indirecte, temps, décision individuelle ou collective, contrat définitif ou évolutif",
+        "BATNA / MESORE (Fisher et Ury, 1981) : ce qu'on fait si l'on n'accorde pas ; fixe le seuil de refus",
+        "Concessions : petites, décroissantes, toujours contre une contrepartie ; ne jamais révéler son prix de réservation"
+      ],
+      "formules": [
+        "ZOPA = [prix de réservation du vendeur ; prix de réservation de l'acheteur], si le premier < le second ; sinon pas d'accord",
+        "Ex. : vendeur min 42 €, acheteur max 48 € → ZOPA de 42 à 48 €"
+      ],
+      "dates": [
+        { "date": "1981", "fait": "Fisher et Ury popularisent la BATNA" }
+      ],
+      "distinctions": [
+        { "a": "BATNA", "b": "Objectif", "difference": "L'objectif est ambitieux ; la BATNA est l'alternative réelle, le plancher qui permet de dire non." },
+        { "a": "Intérêts", "b": "Positions", "difference": "La position est ce qu'on demande ; l'intérêt, pourquoi on le demande." }
+      ],
+      "memo": "BATNA = la porte de sortie ; ZOPA = la zone où les deux portes restent fermées.",
+      "questions": [
+        { "q": "Que signifie BATNA ?", "r": "Best Alternative To a Negotiated Agreement : meilleure solution de rechange en cas d'échec (Fisher et Ury, 1981)." },
+        { "q": "Comment calculer la ZOPA ?", "r": "Intervalle entre le prix minimal acceptable du vendeur et le prix maximal acceptable de l'acheteur ; vide = pas d'accord possible." },
+        { "q": "Règle d'or des concessions ?", "r": "Ne rien céder sans contrepartie ; concessions petites et décroissantes." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "Culture = « programmation collective de l'esprit » (Hofstede)",
+    "Oignon : symboles, héros, rituels, valeurs",
+    "Généralisation / stéréotype / préjugé / discrimination",
+    "Hofstede 6 dimensions : distance hiérarchique, individualisme, masculinité, contrôle de l'incertitude, long terme (Bond), indulgence (Minkov, 2010)",
+    "Hofstede : enquête IBM ; critique McSweeney 2002",
+    "Hall : contexte fort/faible, temps monochrone/polychrone, proxémie",
+    "Trompenaars et Hampden-Turner (1993), 7 dilemmes : universalisme/particularisme, individualisme/communautarisme, neutre/affectif, spécifique/diffus, acquis/attribué, temps, nature",
+    "Choc culturel (Oberg, 1960) : U = lune de miel, crise, ajustement, adaptation ; W avec le retour",
+    "Négociation : préparation, contact, informations, argumentation, concessions, conclusion, suivi",
+    "BATNA (Fisher et Ury, 1981) ; ZOPA = entre les deux prix de réservation"
+  ],
+  "pieges": [
+    "Attribuer le contexte fort/faible à Hofstede : c'est Hall.",
+    "Confondre l'individualisme de Hofstede et celui de Trompenaars (individualisme/communautarisme) : enquêtes différentes.",
+    "Lire « masculinité » comme une proportion d'hommes : ce sont des valeurs (compétition vs coopération).",
+    "Plaquer toutes les dimensions sur un cas au lieu de choisir la grille pertinente, ou déduire un individu d'une moyenne nationale.",
+    "Confondre BATNA (alternative réelle) et objectif ; révéler son prix de réservation ; concéder sans contrepartie.",
+    "Croire qu'un style de management est universel."
+  ]
+}

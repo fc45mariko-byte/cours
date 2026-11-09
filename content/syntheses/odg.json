@@ -1,0 +1,167 @@
+{
+  "matiere": "odg",
+  "titre": "Outils de gestion",
+  "essentiel": "Les outils de gestion servent à décider et à piloter : séparer charges fixes et variables pour trouver le seuil de rentabilité, calculer des coûts complets (centres, ABC), gérer les stocks (CMUP/FIFO, Wilson, stock d'alerte, Pareto), prévoir (moindres carrés, coefficients saisonniers), budgéter et analyser les écarts, puis suivre quelques indicateurs dans un tableau de bord ou un balanced scorecard.",
+  "chapitres": [
+    {
+      "chapitre": "odg.couts",
+      "titre": "Coûts et rentabilité",
+      "idee": "La marge sur coût variable doit couvrir les charges fixes : au-delà du seuil de rentabilité, chaque vente crée du résultat.",
+      "points": [
+        "Charge variable : proportionnelle à l'activité (coût unitaire constant) ; charge fixe : constante par paliers (coût unitaire décroissant)",
+        "MCV = CA − charges variables ; résultat = MCV − charges fixes",
+        "SR = CA à résultat nul ; point mort = date où il est atteint (activité régulière supposée)",
+        "Levier opérationnel = MCV ÷ résultat = 1 ÷ indice de sécurité : plus de charges fixes = plus de levier",
+        "Coûts complets : charges directes affectées ; indirectes en centres (répartition primaire puis secondaire), imputées par unité d'œuvre",
+        "Coût de revient = coût de production des produits vendus + coûts de distribution ; résultat analytique = CA − coût de revient",
+        "ABC : produits consomment des activités, activités consomment des ressources ; imputation par inducteur de coût"
+      ],
+      "formules": [
+        "Taux de MCV = MCV ÷ CA",
+        "SR = CF ÷ taux de MCV ; SR en quantité = CF ÷ MCV unitaire",
+        "Point mort (mois) = SR ÷ CA × 12",
+        "Marge de sécurité = CA − SR ; indice de sécurité = (CA − SR) ÷ CA",
+        "Coût de l'unité d'œuvre = total du centre ÷ nombre d'unités d'œuvre"
+      ],
+      "distinctions": [
+        { "a": "Seuil de rentabilité", "b": "Point mort", "difference": "Un montant de CA / une date." },
+        { "a": "Charge fixe / variable", "b": "Charge directe / indirecte", "difference": "Comportement face au volume / possibilité d'affecter à un produit." },
+        { "a": "MCV", "b": "Marge commerciale (SIG)", "difference": "Déduit toutes les charges variables / seulement le coût d'achat des marchandises vendues." },
+        { "a": "Unité d'œuvre", "b": "Inducteur de coût", "difference": "Souvent un volume / la cause réelle de la consommation (lots, commandes, références)." }
+      ],
+      "questions": [
+        { "q": "CA 800 000, taux de MCV 40 %, CF 240 000 : SR, point mort, indice de sécurité ?", "r": "SR 600 000 € ; point mort 9 mois (30 septembre) ; marge de sécurité 200 000 €, indice 25 %." },
+        { "q": "MCV 320 000, résultat 80 000 : levier opérationnel et effet d'une hausse de 10 % du CA ?", "r": "Levier 4 : le résultat augmente de 40 % (80 000 à 112 000 €)." },
+        { "q": "Pourquoi la méthode ABC ?", "r": "Une unité d'œuvre volumique (heures) sous-impute les produits complexes ; l'inducteur suit la vraie cause de la consommation." }
+      ]
+    },
+    {
+      "chapitre": "odg.stocks",
+      "titre": "Gestion des stocks",
+      "idee": "Gérer un stock, c'est le valoriser, commander la bonne quantité au bon moment et concentrer l'effort sur les articles qui pèsent.",
+      "points": [
+        "Valorisation : CMUP (après chaque entrée ou de période) ou FIFO/PEPS ; LIFO non admis en France (comptes individuels)",
+        "Prix en hausse : FIFO donne des sorties moins chères et un stock final plus élevé ; CMUP intermédiaire",
+        "Wilson : minimise coût de passation (baisse avec Q) + coût de possession (monte avec Q) ; à l'optimum ils sont égaux",
+        "Hypothèses Wilson : demande connue et régulière, prix constant, délai fixe, pas de rupture",
+        "Stock de sécurité = réserve contre les aléas ; stock d'alerte = niveau qui déclenche la commande",
+        "Pareto/ABC : A ≈ 20 % des articles, 70-80 % de la valeur (suivi serré) ; C = majorité des articles, faible valeur"
+      ],
+      "formules": [
+        "CMUP = (valeur stock + valeur entrées) ÷ (quantité stock + quantités entrées)",
+        "Q* = √(2 × D × Cc ÷ Cp) ; N* = D ÷ Q*",
+        "Coût de gestion = (D ÷ Q) × Cc + (Q ÷ 2) × Cp",
+        "Stock d'alerte = consommation journalière × délai de livraison + stock de sécurité",
+        "Stock moyen = Q ÷ 2 + stock de sécurité"
+      ],
+      "distinctions": [
+        { "a": "ABC des stocks (Pareto)", "b": "ABC des coûts (activités)", "difference": "Même sigle : classement d'articles / calcul de coûts." },
+        { "a": "Stock de sécurité", "b": "Stock d'alerte", "difference": "Réserve à ne pas consommer / inclut la consommation pendant le délai." }
+      ],
+      "memo": "Wilson : « 2 D C sur P sous la racine » ; à l'optimum, passation = possession.",
+      "questions": [
+        { "q": "D = 40 000, Cc = 200 €, Cp = 4 € : Q*, nombre de commandes, coût total ?", "r": "Q* = 2 000 u ; 20 commandes ; 4 000 + 4 000 = 8 000 €." },
+        { "q": "100 u/jour, délai 8 jours, sécurité 300 u : stock d'alerte ?", "r": "100 × 8 + 300 = 1 100 unités." },
+        { "q": "Stock 100 u à 10 €, entrée 200 u à 11,50 €, sortie 150 u : CMUP et FIFO ?", "r": "CMUP 11 € : 1 650 € ; FIFO 100 × 10 + 50 × 11,50 = 1 575 €." }
+      ]
+    },
+    {
+      "chapitre": "odg.prevision",
+      "titre": "Prévision",
+      "idee": "On prolonge la tendance (droite des moindres carrés) puis on la module par des coefficients saisonniers.",
+      "points": [
+        "Moindres carrés : droite y = ax + b minimisant la somme des carrés des écarts",
+        "Numéroter les périodes x = 1, 2, 3… (rang, pas l'année civile)",
+        "Coefficient r proche de 1 ou −1 : ajustement pertinent ; la droite ignore les ruptures",
+        "Coefficient saisonnier 1,3 = période habituellement 30 % au-dessus de la moyenne",
+        "Somme des coefficients = nombre de périodes (4 trimestres, 12 mois)"
+      ],
+      "formules": [
+        "a = Σ(xi − x̄)(yi − ȳ) ÷ Σ(xi − x̄)² ; b = ȳ − a x̄",
+        "Prévision de la période = tendance × coefficient saisonnier",
+        "Donnée désaisonnalisée = donnée brute ÷ coefficient"
+      ],
+      "distinctions": [
+        { "a": "Corrélation", "b": "Causalité", "difference": "Une bonne corrélation avec le temps ne dit pas pourquoi les ventes progressent." },
+        { "a": "Saisonnalité", "b": "Tendance", "difference": "Se répète chaque année / évolution de fond d'une année sur l'autre." }
+      ],
+      "questions": [
+        { "q": "Ventes années 1 à 5 : 100, 108, 118, 124, 135. Prévision année 6 ?", "r": "a = 86 ÷ 10 = 8,6 ; b = 117 − 8,6 × 3 = 91,2 ; ŷ = 8,6 × 6 + 91,2 = 142,8 k€." },
+        { "q": "Prévision annuelle 400 000 €, coefficient T3 = 1,3 : prévision T3 ?", "r": "100 000 × 1,3 = 130 000 €." }
+      ]
+    },
+    {
+      "chapitre": "odg.budget",
+      "titre": "Budgets et écarts",
+      "idee": "Les budgets s'enchaînent à partir des ventes jusqu'au budget de trésorerie ; le contrôle budgétaire décompose les écarts pour en trouver les causes.",
+      "points": [
+        "Chaîne : ventes, production et approvisionnements, charges, investissements, TVA, trésorerie",
+        "Trésorerie fin = trésorerie début + encaissements − décaissements",
+        "Budget de trésorerie : montants TTC, au mois du paiement effectif ; pas de dotations ; TVA due payée le mois suivant",
+        "Écarts de charges calculés par rapport au budget flexible (adapté à la production réelle)",
+        "Charge : écart positif = défavorable ; CA : écart positif = favorable"
+      ],
+      "formules": [
+        "Écart sur prix (CA) = (Pr − Pp) × Qr ; sur quantité = (Qr − Qp) × Pp",
+        "Écart sur prix (charge) = (Cr − Cp) × Qr ; sur quantité = (Qr − Q préétablie pour production réelle) × Cp"
+      ],
+      "distinctions": [
+        { "a": "Budget de trésorerie", "b": "Compte de résultat prévisionnel", "difference": "Encaissements/décaissements / produits/charges : une vente à crédit de décembre est encaissée en janvier." },
+        { "a": "Budget initial", "b": "Budget flexible", "difference": "Seul le budget adapté à la production réelle isole les vraies inefficiences." }
+      ],
+      "memo": "Écart sur prix : quantité RÉELLE ; écart sur quantité : prix PRÉVU.",
+      "questions": [
+        { "q": "1 000 u, standard 2 kg à 5 €, réel 2 100 kg à 4,80 € : écarts ?", "r": "Global 80 € défavorable = prix (4,80 − 5) × 2 100 = −420 € favorable + quantité (2 100 − 2 000) × 5 = +500 € défavorable." },
+        { "q": "Ventes janvier 60 000 € TTC, 50 % comptant, 50 % à 30 jours : encaissements ?", "r": "30 000 € en janvier, 30 000 € en février." },
+        { "q": "Les dotations aux amortissements figurent-elles au budget de trésorerie ?", "r": "Non, elles ne donnent lieu à aucun décaissement." }
+      ]
+    },
+    {
+      "chapitre": "odg.pilotage",
+      "titre": "Pilotage et tableau de bord",
+      "idee": "Piloter, c'est suivre peu d'indicateurs liés aux objectifs, comparés à des cibles, pour déclencher des actions.",
+      "points": [
+        "KPI = donnée chiffrée, suivie dans le temps, liée à un objectif ; fiable, compréhensible, rapide, actionnable",
+        "Indicateurs de résultat (après coup : CA, marge) vs de pilotage/avancés (taux de transformation des devis, carnet de commandes)",
+        "Tableau de bord : 5 à 10 indicateurs, réel / objectif / écart / tendance, alertes visuelles, actions correctives",
+        "Il privilégie la rapidité sur l'exactitude et mêle financier et non financier",
+        "Balanced scorecard (Kaplan et Norton, 1992) : 4 axes liés par cause à effet : apprentissage, processus internes, clients, finances"
+      ],
+      "dates": [
+        { "date": "1992", "fait": "Balanced scorecard proposé par Robert Kaplan et David Norton" }
+      ],
+      "distinctions": [
+        { "a": "Tableau de bord", "b": "Reporting", "difference": "Sert d'abord à piloter / sert d'abord à rendre compte à la direction." },
+        { "a": "Balanced scorecard", "b": "Tableau de bord opérationnel", "difference": "Part de la stratégie globale, 4 axes équilibrés / suit une activité." },
+        { "a": "Donnée", "b": "Indicateur", "difference": "Devient indicateur quand elle est rapportée à un objectif et suivie pour décider." }
+      ],
+      "memo": "BSC, de bas en haut : on APPREND, on améliore les PROCESSUS, on satisfait les CLIENTS, la FINANCE suit (« A-P-C-F »).",
+      "questions": [
+        { "q": "Quels sont les quatre axes du balanced scorecard ?", "r": "Financier, clients, processus internes, apprentissage organisationnel, reliés par des relations de cause à effet." },
+        { "q": "Pourquoi le nombre de courriels d'un commercial est-il un mauvais KPI ?", "r": "Mesurable mais non lié directement à l'objectif de vente." },
+        { "q": "Que contient chaque ligne d'un tableau de bord ?", "r": "Réel, objectif, écart, tendance, avec un signal d'alerte et un commentaire d'action." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "MCV = CA − charges variables ; résultat = MCV − CF",
+    "SR = CF ÷ taux de MCV ; point mort = SR ÷ CA × 12",
+    "Indice de sécurité = (CA − SR) ÷ CA ; levier opérationnel = MCV ÷ résultat = 1 ÷ indice de sécurité",
+    "Q* = √(2 × D × Cc ÷ Cp) ; coût = D/Q × Cc + Q/2 × Cp",
+    "Stock d'alerte = consommation journalière × délai + stock de sécurité",
+    "Pareto : classe A ≈ 20 % des articles, 70-80 % de la valeur",
+    "CMUP = (valeur stock + valeur entrées) ÷ (quantités) ; LIFO interdit en France (comptes individuels)",
+    "a = Σ(xi − x̄)(yi − ȳ) ÷ Σ(xi − x̄)² ; b = ȳ − a x̄",
+    "Somme des coefficients saisonniers = nombre de périodes",
+    "Écart sur prix = Δprix × quantité réelle ; écart sur quantité = Δquantité × prix prévu",
+    "BSC (Kaplan et Norton, 1992) : finances, clients, processus internes, apprentissage"
+  ],
+  "pieges": [
+    "Diviser les charges fixes par le taux de charges variables au lieu du taux de MCV.",
+    "Confondre méthode ABC des coûts (activités) et méthode ABC des stocks (Pareto).",
+    "Utiliser le prix d'achat au lieu du coût de possession dans Wilson, ou oublier le stock de sécurité dans le stock d'alerte.",
+    "Calculer les écarts par rapport au budget initial au lieu du budget adapté à la production réelle.",
+    "Mettre les dotations ou des montants HT dans le budget de trésorerie.",
+    "Remplacer x par l'année civile au lieu du rang de la période dans les moindres carrés."
+  ]
+}

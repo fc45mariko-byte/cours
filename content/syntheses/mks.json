@@ -1,0 +1,92 @@
+{
+  "matiere": "mks",
+  "titre": "Marketing international et supply chain",
+  "essentiel": "À l'international, le marketing segmente à deux niveaux (pays puis clients), cible et positionne, et s'appuie sur un digital localisé mesuré par des KPI et encadré par le RGPD. La supply chain coordonne flux physiques, d'information et financiers du fournisseur au client, en arbitrant entre coût, délai et résilience, avec des entrepôts aux fonctions distinctes et des outils de gestion des stocks.",
+  "chapitres": [
+    {
+      "chapitre": "mks.marketing",
+      "titre": "Marketing international",
+      "idee": "Segmenter, cibler, positionner, puis localiser l'offre et la communication, notamment digitale, pays par pays.",
+      "points": [
+        "STP : segmenter (géographique, démographique, psychographique, comportemental), évaluer, cibler, positionner, décliner le mix",
+        "Ciblage : marketing indifférencié, différencié (plusieurs segments) ou concentré (un seul)",
+        "Macro-segmentation = groupes de pays (revenu, culture, réglementation, risque) ; micro-segmentation = clients dans un pays",
+        "Segments transnationaux : standardisation ; perceptions différentes selon les pays : adaptation du positionnement",
+        "Digital : site localisé, SEO/SEA, réseaux sociaux, influence, e-mailing, marketplaces (Amazon, Mercado Libre, Tmall) ; Chine : Baidu, WeChat, Douyin",
+        "RGPD (25 mai 2018) : amendes jusqu'à 20 M€ ou 4 % du CA annuel mondial (le plus élevé) ; TVA ventes à distance : guichet OSS (1er juillet 2021)"
+      ],
+      "formules": [
+        "CTR = clics ÷ impressions × 100",
+        "Taux de conversion = commandes ÷ visites × 100",
+        "CAC = dépenses d'acquisition ÷ nouveaux clients",
+        "ROAS = CA généré ÷ dépenses publicitaires (ROAS 3 : 3 € de CA pour 1 € de publicité)"
+      ],
+      "dates": [
+        { "date": "25 mai 2018", "fait": "Application du RGPD" },
+        { "date": "1er juillet 2021", "fait": "Guichet unique OSS pour la TVA des ventes à distance dans l'UE" }
+      ],
+      "distinctions": [
+        { "a": "Segmentation", "b": "Ciblage", "difference": "Découper tout le marché / choisir une partie des segments." },
+        { "a": "Positionnement", "b": "Image", "difference": "Perception voulue / perception réelle ; l'écart mesure l'efficacité." },
+        { "a": "Traduction", "b": "Localisation", "difference": "La localisation adapte aussi culture, devise, paiement et droit." },
+        { "a": "CTR", "b": "Taux de conversion", "difference": "Clics ÷ impressions / commandes ÷ visites ; CTR élevé mais peu de ventes : problème de site ou d'offre." }
+      ],
+      "memo": "STP = Segmenter (couper), Targeter (choisir), Positionner (se placer dans la tête du client).",
+      "questions": [
+        { "q": "Différence entre macro- et micro-segmentation ?", "r": "Macro : regrouper des pays (revenu, culture, réglementation) ; micro : identifier des clients dans chaque pays (âge, style de vie, usage, secteur)." },
+        { "q": "Que signifie un ROAS de 3 ?", "r": "3 € de chiffre d'affaires générés pour 1 € de dépenses publicitaires." },
+        { "q": "Plafond des amendes RGPD ?", "r": "20 millions d'euros ou 4 % du CA annuel mondial de l'exercice précédent, le montant le plus élevé étant retenu." }
+      ]
+    },
+    {
+      "chapitre": "mks.supply",
+      "titre": "Supply chain",
+      "idee": "La supply chain optimise l'ensemble de la chaîne, du fournisseur au client et aux retours, plutôt que chaque maillon séparément.",
+      "points": [
+        "Trois flux : physiques, d'information, financiers",
+        "SCOR : planifier (plan), approvisionner (source), produire (make), livrer (deliver), retours (return)",
+        "Flux poussé (prévisions, stocks élevés, risque d'invendus) vs flux tiré (commande réelle, juste-à-temps hérité de Toyota, risque de rupture)",
+        "Effet coup de fouet (Lee, Padmanabhan et Whang, 1997) : petites variations de la demande amplifiées en remontant la chaîne ; remède : partage d'information",
+        "Sites : entrepôt de stockage, cross-docking (transit sans stockage, < 24-48 h), hub, entrepôt sous douane (suspension des droits)",
+        "Règles de sortie : FIFO (ordre d'entrée), FEFO (premier périmé) ; WMS ; externalisation 3PL, intégrateur 4PL",
+        "KPI : OTIF (livré complet et à l'heure), lead time, rotation des stocks, coût logistique ÷ CA"
+      ],
+      "formules": [
+        "Rotation = consommation annuelle ÷ stock moyen ; durée moyenne de stockage = 360 ÷ rotation",
+        "Point de commande = consommation journalière × (délai d'approvisionnement + stock de sécurité en jours)"
+      ],
+      "distinctions": [
+        { "a": "Logistique", "b": "Supply chain management", "difference": "Transport et stockage / coordination de tous les acteurs et flux ; la logistique en est une partie." },
+        { "a": "Entrepôt", "b": "Plateforme de cross-docking", "difference": "Conserver / faire transiter vite sans stocker." },
+        { "a": "Chaîne logistique", "b": "Chaîne de valeur mondiale", "difference": "Flux d'un produit / répartition de la valeur entre pays." },
+        { "a": "FIFO", "b": "FEFO", "difference": "Ordre d'entrée / date de péremption (produits datés)." }
+      ],
+      "memo": "Coup de fouet : un petit geste du poignet (client) devient un grand claquement au bout (fournisseur).",
+      "questions": [
+        { "q": "Quels sont les cinq processus du modèle SCOR ?", "r": "Planifier, approvisionner, produire, livrer, gérer les retours." },
+        { "q": "Qu'est-ce que l'effet coup de fouet et comment le limiter ?", "r": "Amplification des variations de demande en remontant la chaîne (prévisions isolées, commandes groupées, promotions) ; partage d'information et collaboration." },
+        { "q": "À quoi sert un entrepôt sous douane ?", "r": "Stocker des marchandises tierces en suspension de droits et taxes jusqu'à leur mise en libre pratique ou réexportation." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "STP : segmentation, ciblage (indifférencié, différencié, concentré), positionnement",
+    "Macro-segmentation = pays ; micro-segmentation = clients dans le pays",
+    "CTR = clics ÷ impressions ; conversion = commandes ÷ visites",
+    "CAC = dépenses d'acquisition ÷ nouveaux clients ; ROAS = CA ÷ dépenses publicitaires",
+    "RGPD 25 mai 2018 : jusqu'à 20 M€ ou 4 % du CA mondial",
+    "Trois flux : physiques, information, financiers",
+    "SCOR : plan, source, make, deliver, return",
+    "Effet coup de fouet : Lee, Padmanabhan et Whang, 1997",
+    "OTIF = on time in full",
+    "Rotation = consommation ÷ stock moyen ; durée = 360 ÷ rotation",
+    "Cross-docking : transit sans stockage en moins de 24 à 48 h ; FEFO = premier périmé, premier sorti"
+  ],
+  "pieges": [
+    "Confondre segmentation (découper) et ciblage (choisir).",
+    "Croire qu'une traduction suffit : il faut localiser (culture, devise, paiement, droit).",
+    "Confondre CTR et taux de conversion.",
+    "Réduire la supply chain à la logistique (transport et stockage).",
+    "Confondre entrepôt de stockage et plateforme de cross-docking, ou FIFO et FEFO."
+  ]
+}

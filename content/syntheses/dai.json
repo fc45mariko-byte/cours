@@ -1,0 +1,190 @@
+{
+  "matiere": "dai",
+  "titre": "Droit des affaires internationales",
+  "essentiel": "Un contrat international se lit à travers plusieurs couches de règles : conventions (CVIM, New York), droit de l'UE (Rome I, Bruxelles I bis), droits nationaux, soft law (Incoterms, UNIDROIT) et le contrat lui-même. Il faut savoir dire quelle règle s'applique, qui juge (tribunal ou arbitre), selon quel droit, et comment faire exécuter la décision.",
+  "chapitres": [
+    {
+      "chapitre": "dai.normes",
+      "titre": "Sources et normes du commerce international",
+      "idee": "Les règles du commerce international mêlent droit dur (traités, droit de l'UE, droits nationaux) et droit souple (CCI, UNIDROIT), ce dernier n'obligeant que s'il est incorporé au contrat.",
+      "points": [
+        "Sources : conventions (CVIM 1980, New York 1958) ; droit de l'UE ; droits nationaux désignés par les règles de conflit ; soft law ; contrat (autonomie de la volonté)",
+        "Art. 55 Constitution : traité ratifié > loi",
+        "Art. 288 TFUE : règlement (direct), directive (à transposer, résultat imposé), décision (destinataires), recommandation et avis (non contraignants)",
+        "Soft law / lex mercatoria : Incoterms 2020, RUU 600 (crédit documentaire), RUE 522, principes UNIDROIT ; obligatoires si les parties y renvoient ; s'effacent devant les lois de police",
+        "OMC (1995, Marrakech, suite du GATT 1947) : nation la plus favorisée (art. I GATT) et traitement national (art. III)",
+        "Exceptions OMC : zones de libre-échange et unions douanières (art. XXIV), préférences pays en développement, défense commerciale",
+        "ORD : consultations, groupe spécial, appel (Organe d'appel bloqué depuis fin 2019), mise en conformité ou rétorsion ; seuls les États agissent"
+      ],
+      "dates": [
+        { "date": "1947", "fait": "GATT" },
+        { "date": "1995", "fait": "Création de l'OMC (accords de Marrakech)" },
+        { "date": "fin 2019", "fait": "Organe d'appel de l'OMC paralysé" }
+      ],
+      "distinctions": [
+        { "a": "Règlement UE", "b": "Directive UE", "difference": "Le règlement s'applique directement ; la directive passe par une loi nationale de transposition (ex. 86/653 → art. L134-1 C. com.)." },
+        { "a": "Nation la plus favorisée", "b": "Traitement national", "difference": "NPF : égalité entre partenaires étrangers ; traitement national : égalité entre produit importé et produit national une fois entré." }
+      ],
+      "memo": "NPF : ce que j'accorde à un membre, je l'accorde à tous ; TN : une fois la frontière passée, l'importé est traité comme le local.",
+      "questions": [
+        { "q": "Les Incoterms sont-ils une loi ?", "r": "Non : règles privées de la CCI (soft law), applicables parce que les parties y renvoient dans le contrat." },
+        { "q": "Différence règlement / directive (art. 288 TFUE) ?", "r": "Règlement : portée générale, directement applicable. Directive : lie les États quant au résultat, doit être transposée." },
+        { "q": "Une entreprise peut-elle saisir l'ORD de l'OMC ?", "r": "Non, seuls les États membres ; les litiges entre entreprises vont à l'arbitrage ou au juge." }
+      ]
+    },
+    {
+      "chapitre": "dai.cvim",
+      "titre": "La vente internationale (CVIM)",
+      "idee": "La CVIM (Vienne, 1980) régit la formation du contrat de vente internationale de marchandises et les obligations et remèdes des parties, la résolution étant réservée à la contravention essentielle.",
+      "points": [
+        "Champ (art. 1) : vente de marchandises entre parties établies dans des États différents, contractants (1-1 a) ou si la règle de conflit désigne un État contractant (1-1 b)",
+        "Exclusions (art. 2) : usage personnel, enchères, saisie, valeurs mobilières, navires, aéronefs, électricité ; ni validité ni propriété (art. 4) ; exclusion possible (art. 6)",
+        "Formation : offre précise + volonté d'être lié (art. 14) ; acceptation effective à réception (art. 18) ; silence ≠ acceptation ; modification substantielle = contre-offre (art. 19)",
+        "Vendeur : livrer, documents, propriété (art. 30), conformité (art. 35). Acheteur : payer, prendre livraison (art. 53), examiner (art. 38), dénoncer (art. 39, max 2 ans)",
+        "Contravention essentielle (art. 25) : prive substantiellement de ce qu'on attendait, si prévisible ; ouvre la résolution (art. 49) et le remplacement ; résolution notifiée (art. 26)",
+        "Remèdes : exécution/réparation (46), délai supplémentaire (47), réduction du prix (50), dommages-intérêts prévisibles (74), obligation de limiter la perte (77)",
+        "Exonération (art. 79) : empêchement extérieur, imprévisible, insurmontable, notifié ; écarte seulement les dommages-intérêts, pendant l'empêchement"
+      ],
+      "dates": [
+        { "date": "11 avril 1980", "fait": "Signature de la CVIM à Vienne" },
+        { "date": "1er janvier 1988", "fait": "Entrée en vigueur de la CVIM" }
+      ],
+      "distinctions": [
+        { "a": "Théorie de la réception (CVIM)", "b": "Postal rule (common law)", "difference": "CVIM : acceptation effective quand elle parvient à l'offrant ; common law : dès l'envoi postal." },
+        { "a": "Résolution", "b": "Résiliation", "difference": "Résolution : anéantit le contrat avec restitutions ; résiliation : y met fin pour l'avenir." }
+      ],
+      "memo": "Articles clés : 1 champ, 6 exclusion, 14-19-23 formation, 25 contravention essentielle, 39 dénonciation (2 ans), 74 prévisible, 77 limiter, 79 exonération.",
+      "questions": [
+        { "q": "« Le contrat est soumis au droit français » exclut-il la CVIM ?", "r": "Non : la France est État contractant, la CVIM fait partie du droit français ; il faut l'exclure expressément (art. 6)." },
+        { "q": "« Accepté, mais paiement à 90 jours » : contrat formé ?", "r": "Non : le paiement est un élément substantiel (art. 19-3), c'est une contre-offre." },
+        { "q": "Que couvrent les dommages-intérêts CVIM ?", "r": "Perte subie et gain manqué, limités au préjudice prévisible à la conclusion (art. 74), réduits si la victime n'a pas limité sa perte (art. 77)." },
+        { "q": "Une forte hausse des coûts exonère-t-elle (art. 79) ?", "r": "En principe non : ce n'est pas un empêchement ; elle relève d'une clause de hardship." }
+      ]
+    },
+    {
+      "chapitre": "dai.contrat",
+      "titre": "Le contrat international",
+      "idee": "Un bon contrat international anticipe la distance, les différences de droit et les aléas par des clauses précises (prix, Incoterm, réserve de propriété, force majeure, hardship, loi, litiges, langue).",
+      "points": [
+        "Clauses : objet, prix (devise, révision/indexation), Incoterm avec version et lieu, paiement et garanties, réserve de propriété, conformité, force majeure, hardship, clause pénale, loi applicable, litiges, langue",
+        "Réserve de propriété : vendeur propriétaire jusqu'au paiement complet ; efficacité selon le droit du pays où sont les biens",
+        "Force majeure : définir les événements, la notification, la durée avant résiliation",
+        "Hardship : renégocier si bouleversement économique ; prévoir l'issue en cas d'échec ; en France, imprévision art. 1195 C. civ. (2016)",
+        "Principes UNIDROIT (1994, éd. 2016) : droit souple pour tous les contrats commerciaux internationaux ; bonne foi, liberté contractuelle ; usage fréquent en arbitrage",
+        "Hardship UNIDROIT (art. 6.2.1 à 6.2.3) : renégociation, puis le tribunal peut résilier ou adapter"
+      ],
+      "distinctions": [
+        { "a": "Force majeure", "b": "Hardship", "difference": "Force majeure : exécution impossible → suspension ou libération. Hardship : exécution possible mais ruineuse → renégociation." },
+        { "a": "Principes UNIDROIT", "b": "CVIM", "difference": "UNIDROIT : tous contrats, non contraignants. CVIM : vente, convention contraignante. Les premiers peuvent compléter la seconde." }
+      ],
+      "memo": "Force majeure = « je ne peux pas » ; hardship = « je peux, mais ça me ruine ».",
+      "questions": [
+        { "q": "Rôle de la clause de réserve de propriété ?", "r": "Le vendeur reste propriétaire jusqu'au paiement complet et peut récupérer les marchandises en cas d'impayé." },
+        { "q": "Comment s'appliquent les principes UNIDROIT ?", "r": "Par choix des parties, par renvoi aux principes généraux ou à la lex mercatoria, ou pour interpréter et compléter d'autres instruments." }
+      ]
+    },
+    {
+      "chapitre": "dai.conflits",
+      "titre": "Loi applicable et juridiction",
+      "idee": "Qui juge (Bruxelles I bis, clause attributive) et selon quel droit (Rome I, clause de choix de loi) sont deux questions distinctes, réglées par deux textes et deux clauses.",
+      "points": [
+        "Rome I (règl. 593/2008, contrats conclus depuis le 17/12/2009) : application universelle ; liberté de choix (art. 3)",
+        "Sans choix (art. 4) : vente → vendeur ; services → prestataire ; franchise → franchisé ; distribution → distributeur ; sinon prestation caractéristique ; clause d'exception",
+        "Lois de police (art. 9) et règles protectrices (consommateurs, salariés) s'imposent",
+        "Bruxelles I bis (règl. 1215/2012, depuis le 10/01/2015) : domicile du défendeur (art. 4) ; option lieu de livraison / fourniture des services (art. 7-1)",
+        "Clause attributive de juridiction (art. 25), en principe exclusive ; jugements circulent dans l'UE sans exequatur",
+        "Vente entre États contractants : la CVIM d'abord, la loi Rome I comble les lacunes (validité, propriété)"
+      ],
+      "formules": [
+        "Juridiction → Bruxelles I bis → clause attributive ou compromissoire",
+        "Loi applicable → Rome I → clause de choix de loi"
+      ],
+      "distinctions": [
+        { "a": "Clause attributive de juridiction", "b": "Clause compromissoire", "difference": "La première désigne un tribunal étatique ; la seconde soumet les litiges à l'arbitrage." }
+      ],
+      "memo": "Rome = la loi (le droit romain) ; Bruxelles = le tribunal (la Cour).",
+      "questions": [
+        { "q": "Prestataire français, client italien, pas de clause de loi : quelle loi ?", "r": "Loi française : résidence habituelle du prestataire (art. 4-1 b Rome I)." },
+        { "q": "Sans clause, où assigner un acheteur espagnol qui ne paie pas ?", "r": "Tribunal du domicile du défendeur (art. 4) ou du lieu de livraison (art. 7-1) ; ici les deux en Espagne." },
+        { "q": "Choisir le droit français donne-t-il compétence au juge français ?", "r": "Non : il faut deux clauses ; un juge peut appliquer un droit étranger." }
+      ]
+    },
+    {
+      "chapitre": "dai.litiges",
+      "titre": "Règlement des litiges",
+      "idee": "On règle un litige à l'amiable, par l'arbitrage (sentence obligatoire, exécutée grâce à la Convention de New York) ou devant le juge (jugement à faire exécuter, sans exequatur seulement dans l'UE).",
+      "points": [
+        "Amiable : négociation (sans tiers), médiation (tiers facilitateur sans pouvoir de décision), conciliation (tiers qui peut proposer) ; accord = contrat",
+        "Arbitrage : convention d'arbitrage = clause compromissoire (avant litige) ou compromis (après) ; institutionnel (CCI Paris, LCIA, ICDR) ou ad hoc (Règlement CNUDCI)",
+        "Bonne clause : institution, siège, nombre d'arbitres, langue ; le siège fixe le droit de la procédure et le juge de l'annulation",
+        "Avantages : neutralité, experts, confidentialité ; inconvénients : coût, recours limités (pas d'appel, recours en annulation)",
+        "New York (10 juin 1958, 170+ États) : exécution des sentences ; pas de révision au fond ; refus seulement pour les motifs de l'art. V (dont ordre public)",
+        "Jugements hors UE : exequatur ; La Haye 2005 (élection de for), 2019 (jugements) ; en France, contrôle Cornelissen (2007) : compétence indirecte, ordre public, absence de fraude"
+      ],
+      "dates": [
+        { "date": "1958", "fait": "Convention de New York sur les sentences arbitrales" },
+        { "date": "2005 / 2019", "fait": "Conventions de La Haye (élection de for / jugements)" },
+        { "date": "2007", "fait": "Arrêt Cornelissen (exequatur en France)" }
+      ],
+      "distinctions": [
+        { "a": "Médiateur", "b": "Arbitre", "difference": "Le médiateur aide à trouver un accord ; l'arbitre tranche par une sentence obligatoire." },
+        { "a": "Clause compromissoire", "b": "Compromis", "difference": "Clause : dans le contrat, avant le litige. Compromis : conclu après la naissance du litige." },
+        { "a": "Reconnaissance", "b": "Exécution", "difference": "Reconnaissance : effet de chose jugée ; exécution : contrainte sur les biens." }
+      ],
+      "questions": [
+        { "q": "Que vérifie le juge saisi d'une sentence sous la Convention de New York ?", "r": "Seulement les motifs de refus de l'art. V (convention invalide, droits de la défense, ordre public…), sans rejuger le fond." },
+        { "q": "Jugement d'Orléans contre un client argentin : comment l'exécuter ?", "r": "Exequatur devant les tribunaux argentins selon leur droit ; une clause d'arbitrage aurait facilité l'exécution (New York)." },
+        { "q": "Quels éléments mettre dans une clause d'arbitrage ?", "r": "Institution et règlement, siège, nombre d'arbitres, langue, éventuellement loi applicable au fond." }
+      ]
+    },
+    {
+      "chapitre": "dai.distribution",
+      "titre": "Distribution et concurrence",
+      "idee": "L'agent commercial bénéficie dans l'UE d'une protection impérative (directive 86/653), et les accords de distribution doivent respecter le droit de la concurrence (art. 101 TFUE, règl. 2022/720).",
+      "points": [
+        "Directive 86/653 (18/12/1986) : loyauté, information, commission ; préavis minimal 1/2/3 mois selon l'ancienneté (jusqu'à 6 possible)",
+        "Fin de contrat : indemnité (max 1 an de commissions, moyenne 5 ans) ou réparation ; France : réparation (art. L134-12), usage 2 ans de commissions",
+        "Perte du droit : faute grave, démission non justifiée, cession ; réclamer dans l'année ; Ingmar (CJCE 2000) : règles impératives même si loi d'un État tiers",
+        "Art. 101 TFUE (ententes) et 102 (abus de position dominante) ; sanctions jusqu'à 10 % du CA mondial",
+        "Exemption des accords verticaux (règl. 2022/720, depuis 1/06/2022) si parts de marché ≤ 30 % et sans restriction caractérisée",
+        "Restrictions caractérisées : prix de revente fixe ou minimal imposé ; interdiction des ventes passives. Admis : prix conseillé ou maximal ; non-concurrence ≤ 5 ans"
+      ],
+      "dates": [
+        { "date": "1986", "fait": "Directive 86/653 sur les agents commerciaux" },
+        { "date": "2000", "fait": "Arrêt Ingmar (CJCE)" },
+        { "date": "2022", "fait": "Règlement 2022/720 d'exemption des accords verticaux" }
+      ],
+      "distinctions": [
+        { "a": "Prix conseillé", "b": "Prix imposé", "difference": "Recommander un prix (ou un maximum) est licite ; imposer un prix fixe ou minimal est une restriction caractérisée." },
+        { "a": "Agent commercial", "b": "Distributeur", "difference": "L'agent a un statut harmonisé UE ; le distributeur non : son indemnisation dépend du droit national et du contrat." }
+      ],
+      "memo": "Préavis agent : 1-2-3 comme l'ancienneté (1re, 2e, 3e année et plus).",
+      "questions": [
+        { "q": "Choisir la loi d'un pays hors UE écarte-t-il la protection de l'agent opérant dans l'UE ?", "r": "Non : arrêt Ingmar (2000), règles impératives." },
+        { "q": "Interdire au distributeur belge de répondre aux clients français spontanés : licite ?", "r": "Non : interdiction des ventes passives = restriction caractérisée." },
+        { "q": "Conditions de l'exemption des accords verticaux ?", "r": "Parts de marché fournisseur et acheteur ≤ 30 % et aucune restriction caractérisée (règl. 2022/720)." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "CVIM : Vienne 11 avril 1980, en vigueur 1er janvier 1988 ; exclusion expresse (art. 6)",
+    "CVIM art. 25 contravention essentielle ; art. 39 dénonciation max 2 ans ; art. 74 préjudice prévisible ; art. 77 limiter la perte ; art. 79 exonération",
+    "Art. 288 TFUE : règlement direct, directive à transposer, décision, recommandation/avis non contraignants",
+    "OMC 1995 : NPF (art. I GATT), traitement national (art. III), exceptions art. XXIV",
+    "Rome I (593/2008) art. 3 choix, art. 4 : vendeur, prestataire, franchisé, distributeur, prestation caractéristique ; art. 9 lois de police",
+    "Bruxelles I bis (1215/2012) : art. 4 domicile défendeur, art. 7-1 lieu de livraison, art. 25 clause attributive ; pas d'exequatur dans l'UE",
+    "Convention de New York 1958 : 170+ États, refus seulement art. V, pas de révision au fond",
+    "Clause compromissoire (avant) / compromis (après) ; CCI Paris, LCIA Londres, ICDR États-Unis",
+    "Agent (86/653) : préavis 1/2/3 mois ; indemnité max 1 an ou réparation (France ≈ 2 ans) ; Ingmar 2000",
+    "Accords verticaux : règl. 2022/720, seuil 30 %, prix imposé et interdiction des ventes passives interdits ; amende max 10 % CA mondial",
+    "Soft law CCI : Incoterms 2020, RUU 600, RUE 522 ; UNIDROIT 1994 (éd. 2016)"
+  ],
+  "pieges": [
+    "Croire que choisir le droit français exclut la CVIM : il faut l'exclure expressément.",
+    "Confondre loi applicable et juridiction : le choix du tribunal n'emporte pas celui de sa loi.",
+    "Appliquer la postal rule à la CVIM : l'acceptation prend effet à réception.",
+    "Confondre force majeure (impossible) et hardship (ruineux) ; croire que l'art. 79 libère de tout (seulement des dommages-intérêts).",
+    "Confondre médiateur (aide) et arbitre (tranche), ou clause attributive (tribunal) et clause compromissoire (arbitrage).",
+    "Confondre NPF et traitement national, ou prix conseillé (licite) et prix imposé (illicite)."
+  ]
+}

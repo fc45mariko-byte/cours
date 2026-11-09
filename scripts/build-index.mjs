@@ -5,6 +5,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { publicationsDuChapitre, publicationEditoriale } from './feed.mjs';
 import { validerCahier } from './cahiers.mjs';
+import { validerSynthese } from './syntheses.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
@@ -54,7 +55,7 @@ export function construireIndex() {
   const liens = [];
 
   const fil = [];
-  const dossiers = readdirSync(CONTENT).filter((d) => d !== 'publications' && d !== 'cahiers' && statSync(join(CONTENT, d)).isDirectory());
+  const dossiers = readdirSync(CONTENT).filter((d) => d !== 'publications' && d !== 'cahiers' && d !== 'syntheses' && statSync(join(CONTENT, d)).isDirectory());
   for (const d of dossiers) {
     for (const f of readdirSync(join(CONTENT, d)).filter((x) => x.endsWith('.json'))) {
       const chemin = `content/${d}/${f}`;
@@ -172,6 +173,18 @@ export function construireIndex() {
     if (r) cahiers.push(r);
   }
 
+  // Synthèses : content/syntheses/<matière>.json
+  const syntheses = [];
+  let fichiersSyntheses = [];
+  try { fichiersSyntheses = readdirSync(join(CONTENT, 'syntheses')).filter((x) => x.endsWith('.json')); } catch { /* aucune synthèse */ }
+  for (const f of fichiersSyntheses) {
+    const chemin = `content/syntheses/${f}`;
+    const sy = lire(join(CONTENT, 'syntheses', f));
+    if (!sy) continue;
+    const r = validerSynthese(sy, { err, chapitres: chapitresIds, matieres: catalogue.matieres, chemin });
+    if (r) syntheses.push(r);
+  }
+
   const idsFil = new Set();
   for (const p of fil) { if (idsFil.has(p.id)) err(p.id, 'publication en double'); idsFil.add(p.id); }
 
@@ -182,7 +195,7 @@ export function construireIndex() {
       // Date déterministe (dernière vérification de contenu) pour un build reproductible.
       genereLe: Object.values(notionsVerifiees).sort().at(-1) ?? '',
       matieres: catalogue.matieres, notions, questionsParNotion,
-      flashcards, exercices, questions, sources, cahiers,
+      flashcards, exercices, questions, sources, cahiers, syntheses,
     },
     glossaire, fil, articles,
   };
@@ -200,5 +213,5 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   writeFileSync(join(OUT, 'fil.json'), JSON.stringify(fil));
   writeFileSync(join(OUT, 'articles.json'), JSON.stringify(articles));
   const red = Object.values(index.notions).filter((n) => n.redigee).length;
-  console.log(`✓ contenu valide : ${red}/${Object.keys(index.notions).length} notions rédigées, ${index.questions.length} QCM, ${index.flashcards.length} flashcards, ${index.exercices.length} exercices, ${glossaire.length} termes, ${fil.length} publications (${articles.length} articles éditoriaux), ${index.cahiers.length} cahiers d'exercices (${index.cahiers.reduce((s, c) => s + c.exercices, 0)} exercices)`);
+  console.log(`✓ contenu valide : ${red}/${Object.keys(index.notions).length} notions rédigées, ${index.questions.length} QCM, ${index.flashcards.length} flashcards, ${index.exercices.length} exercices, ${glossaire.length} termes, ${fil.length} publications (${articles.length} articles éditoriaux), ${index.syntheses.length} synthèses, ${index.cahiers.length} cahiers d'exercices (${index.cahiers.reduce((s, c) => s + c.exercices, 0)} exercices)`);
 }

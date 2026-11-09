@@ -210,3 +210,47 @@ test('cahiers d’exercices : liste par emploi du temps, impression avec ou sans
   await expect(page.getByLabel('J’ai fait cet exercice').first()).toBeChecked();
   expect(e).toEqual([]);
 });
+
+test('exercices express : un exercice par partie, version complète disponible', async ({ page }) => {
+  const premier = index.cahiers.find((c: { exercices: number; sections: number }) => c.exercices > c.sections);
+  test.skip(!premier, 'aucun cahier');
+  await page.goto(`/#/cahier/${premier.matiere}`);
+  await expect(page.locator('.cahier .exo').first()).toBeVisible();
+  expect(await page.locator('.cahier .exo').count()).toBe(premier.sections);
+  await page.getByRole('link', { name: 'Complet' }).click();
+  await expect(page.locator('.cahier .exo')).toHaveCount(premier.exercices);
+});
+
+test('synthèse : lecture, mode récitation et auto-évaluation enregistrée', async ({ page }) => {
+  const e = erreursConsole(page);
+  await page.goto('/#/syntheses');
+  await expect(page.getByRole('heading', { name: 'Au programme ce semestre' })).toBeVisible();
+  const s = index.syntheses[0];
+  await page.goto(`/#/synthese/${s.matiere}`);
+  await expect(page.locator('.synthese-points').first()).toBeVisible();
+  await page.getByRole('button', { name: 'Mode récitation' }).click();
+  await expect(page.locator('.synthese-points')).toHaveCount(0);
+  await expect(page.locator('.synthese-questions details').first()).toBeVisible();
+  await page.getByRole('button', { name: 'Je sais' }).first().click();
+  const p = await progression(page);
+  expect(Object.keys(p.marques).some((k) => k.startsWith('synth:') && p.marques[k].compris)).toBe(true);
+  await page.goto('/#/syntheses/parcoeur');
+  await expect(page.locator('.par-coeur section').first()).toBeVisible();
+  expect(e).toEqual([]);
+});
+
+test('plan 14 jours : commencer, cocher une tâche du jour', async ({ page }) => {
+  const e = erreursConsole(page);
+  await page.goto('/#/plan');
+  await page.getByRole('button', { name: 'Commencer aujourd’hui' }).click();
+  await expect(page.getByRole('heading', { name: /jour 1/ }).first()).toBeVisible();
+  const tache = page.locator('.plan-taches input[type=checkbox]').first();
+  await tache.check();
+  await page.reload();
+  await expect(page.locator('.plan-taches input[type=checkbox]').first()).toBeChecked();
+  await page.getByRole('button', { name: 'Voir les 14 jours' }).click();
+  await expect(page.locator('.plan-jour')).toHaveCount(14);
+  await page.goto('/');
+  await expect(page.getByText('Plan 14 jours · jour 1')).toBeVisible();
+  expect(e).toEqual([]);
+});

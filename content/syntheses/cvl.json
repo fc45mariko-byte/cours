@@ -1,0 +1,177 @@
+{
+  "matiere": "cvl",
+  "titre": "Civilización latinoamericana: la ciudad, lo esencial",
+  "essentiel": "En pocas décadas (1940-1980) el éxodo rural convirtió a América Latina en una de las regiones más urbanizadas del mundo (≈ 40 % en 1950, > 80 % hoy). Las ciudades no absorbieron a los recién llegados: autoconstrucción, informalidad, segregación y violencia. Algunas políticas (Curitiba, Bogotá, Medellín) se volvieron modelos, y el cine representa y debate esta ciudad desigual.",
+  "chapitres": [
+    {
+      "chapitre": "cvl.urbanizacion",
+      "titre": "Urbanización",
+      "idee": "El éxodo rural (1940-1980), empujado por el campo y atraído por la ISI, produjo metrópolis gigantes y muy primadas que no pudieron absorber a los migrantes.",
+      "points": [
+        "Push: concentración de la tierra (latifundio / minifundio), pobreza rural, crecimiento demográfico, mecanización, violencia (la Violencia en Colombia, 1948-1958)",
+        "Pull: empleos de la industrialización por sustitución de importaciones (ISI), servicios en las capitales, imagen de modernidad, redes familiares",
+        "Población urbana: ≈ 40 % (1950) → cerca del 80 % (2010, ONU-Hábitat) → más del 80 % hoy",
+        "Hoy: crecimiento urbano sobre todo natural; las ciudades intermedias crecen más rápido que las metrópolis",
+        "Megaciudades (> 10 M): São Paulo y Ciudad de México (≈ 20 M cada una), Buenos Aires, Río, Lima, Bogotá",
+        "Primacía urbana: Lima (≈ un tercio de la población nacional), Buenos Aires, Santiago, Montevideo; Brasil es policéntrico",
+        "Modelo colonial en damero en torno a la plaza mayor trastocado: élites en un sector o «cono» periférico, centro degradado y rehabilitado, periferias autoconstruidas"
+      ],
+      "dates": [
+        { "date": "1940-1980", "fait": "Éxodo rural masivo" },
+        { "date": "1948-1958", "fait": "La Violencia en Colombia, factor de expulsión" },
+        { "date": "1950", "fait": "≈ 40 % de población urbana" }
+      ],
+      "distinctions": [
+        { "a": "Megaciudad (tamaño)", "b": "Ciudad primada (peso relativo en el país)", "difference": "Montevideo es muy primada sin ser megaciudad; São Paulo es megaciudad sin ser capital." },
+        { "a": "Éxodo rural (motor 1940-1980)", "b": "Crecimiento urbano actual", "difference": "Hoy la ciudad crece sobre todo por sus propios nacimientos." }
+      ],
+      "memo": "Push = el campo expulsa (tierra, pobreza, violencia); Pull = la ciudad atrae (fábricas ISI, escuelas, hospitales).",
+      "questions": [
+        { "q": "¿Qué proporción de población urbana tiene hoy América Latina?", "r": "Más del 80 % (≈ 40 % en 1950)." },
+        { "q": "Cite tres factores push y dos factores pull del éxodo rural.", "r": "Push: concentración de la tierra, pobreza rural, violencia. Pull: empleos de la ISI, servicios urbanos." },
+        { "q": "¿Qué es la primacía urbana?", "r": "El dominio de una ciudad, generalmente la capital, sobre el resto de la red urbana nacional (Lima, Montevideo)." },
+        { "q": "¿Toda megaciudad es una ciudad primada?", "r": "No: São Paulo es megaciudad pero Brasil tiene una red policéntrica." }
+      ]
+    },
+    {
+      "chapitre": "cvl.informalidad",
+      "titre": "Informalidad",
+      "idee": "Sin vivienda ni empleo formales suficientes, los pobres urbanos autoconstruyen barrios informales y viven de la economía informal, que ocupa a cerca de la mitad de los trabajadores.",
+      "points": [
+        "Barrio informal: autoconstrucción en terrenos ocupados (invasiones, tomas) o loteos ilegales, a menudo en laderas, zonas inundables o periferia lejana",
+        "Rasgos: inseguridad en la tenencia, falta de servicios (agua, saneamiento, vialidad), densidad; consolidación progresiva (ladrillos, pisos, comercios)",
+        "Políticas: erradicación (desalojos, sobre todo bajo las dictaduras), tolerancia, regularización de la tenencia, mejoramiento in situ (Favela-Bairro, Río, años noventa)",
+        "Economía informal: actividades lícitas sin registro, impuestos ni protección social (vendedores ambulantes, trabajo doméstico, recicladores)",
+        "OIT: alrededor de la mitad de los trabajadores de América Latina y el Caribe tienen empleo informal",
+        "De Soto («El otro sendero», 1986, Lima): respuesta racional a una burocracia costosa → simplificar trámites, titular; otros: falta de empleo formal y exclusión",
+        "Efectos: supervivencia y flexibilidad, pero sin salud ni jubilación y con pérdidas fiscales para el Estado"
+      ],
+      "dates": [
+        { "date": "1986", "fait": "Hernando de Soto, «El otro sendero»" },
+        { "date": "Años noventa", "fait": "Programa Favela-Bairro en Río" },
+        { "date": "2006", "fait": "Mike Davis, «Planet of Slums»" }
+      ],
+      "distinctions": [
+        { "a": "Barrio informal (estatus jurídico, modo de producción)", "b": "Barrio pobre", "difference": "No todo barrio pobre es informal; algunos barrios informales consolidados acogen a clases medias." },
+        { "a": "Economía informal (actividades lícitas no declaradas)", "b": "Economía criminal (droga)", "difference": "La OIT las distingue." }
+      ],
+      "memo": "Vocabulario por país: favela (BR), villa miseria (AR), barriada / pueblo joven (PE), colonia popular (MX), rancho (VE), campamento / callampa (CL), barrio de invasión (CO).",
+      "questions": [
+        { "q": "¿Cómo se llama un barrio informal en Argentina, Perú y México?", "r": "Villa miseria; barriada, pueblo joven o asentamiento humano; colonia popular." },
+        { "q": "¿Un barrio informal es siempre un conjunto de chabolas precarias?", "r": "No: se consolida con el tiempo (ladrillos, pisos, servicios, comercios)." },
+        { "q": "¿Cómo explica De Soto la informalidad?", "r": "Por el coste y la complejidad de los trámites legales: es una respuesta racional; hay que simplificar y titular la propiedad." },
+        { "q": "Defina la economía informal y su peso.", "r": "Actividades lícitas que escapan al registro, al impuesto y a la protección social; cerca de la mitad del empleo (OIT)." }
+      ]
+    },
+    {
+      "chapitre": "cvl.fracturas",
+      "titre": "Fracturas urbanas",
+      "idee": "La desigualdad se inscribe en el espacio: de la segregación clásica se pasa a la fragmentación (barrios cerrados junto a barrios informales), en ciudades con niveles muy altos de violencia.",
+      "points": [
+        "Modelo antiguo: sector acomodado desde el centro vs periferias pobres; desde 1980-1990: fragmentación",
+        "Barrios cerrados: countries y barrios privados (Argentina), condomínios fechados (Brasil), fraccionamientos cerrados (México); Alphaville (São Paulo), Nordelta (Buenos Aires)",
+        "Teresa Caldeira («City of Walls», 2000): en São Paulo el miedo al crimen alimenta «enclaves fortificados» y transforma el espacio público",
+        "UNODC (2019): las Américas ≈ 37 % de los homicidios mundiales con ≈ 13 % de la población",
+        "Causas: desigualdades, jóvenes sin perspectivas, impunidad y corrupción, armas, narcotráfico y extorsión",
+        "Formas: cárteles (México, Colombia), maras (MS-13, Barrio 18), facciones y milicias en Río",
+        "Respuestas: mano dura, ocupación policial (UPP en Río desde 2008), prevención y urbanismo social (Medellín)"
+      ],
+      "formules": [
+        "Tasa de homicidios = homicidios / población × 100 000 (600 / 2 000 000 → 30 por 100 000)"
+      ],
+      "distinctions": [
+        { "a": "Segregación (separación de los grupos)", "b": "Fragmentación (proximidad física sin relaciones)", "difference": "Con los barrios cerrados, ricos y pobres son vecinos pero están separados." },
+        { "a": "Violencia urbana", "b": "Pobreza", "difference": "La pobreza no basta: hay ciudades pobres poco violentas; cuentan las instituciones y las economías criminales." }
+      ],
+      "memo": "Muro, reja, cámara, vigilante: la ciudad de muros de Caldeira.",
+      "questions": [
+        { "q": "¿Cómo se llama en Brasil un conjunto residencial cerrado y vigilado?", "r": "Condomínio fechado (ej. Alphaville)." },
+        { "q": "Un barrio de lujo cerrado a 500 m de una favela ilustra…", "r": "La fragmentación: proximidad física pero separación social." },
+        { "q": "2 millones de habitantes, 600 homicidios al año: ¿tasa?", "r": "30 por cada 100 000 habitantes." }
+      ]
+    },
+    {
+      "chapitre": "cvl.politicas",
+      "titre": "Políticas urbanas",
+      "idee": "Transporte y espacio público de calidad pueden transformar la ciudad: BRT de Curitiba, TransMilenio y cultura ciudadana en Bogotá, urbanismo social en Medellín, con límites que hay que matizar.",
+      "points": [
+        "Medellín: > 350 homicidios / 100 000 hab. en 1991; Pablo Escobar abatido en diciembre de 1993",
+        "Urbanismo social (Fajardo, 2004-2007): invertir primero en las comunas más pobres de las laderas; PUI = transporte + espacios públicos + educación + participación",
+        "Símbolos: Metrocable (2004), Biblioteca España (2007), escaleras eléctricas de la Comuna 13 (2011)",
+        "Matices: recomposición de grupos armados, operación Orión (2002), turistificación, desigualdades persistentes",
+        "Curitiba (Jaime Lerner, alcalde desde 1971): calle peatonal (1972), BRT en carril exclusivo (1974), estaciones tubo; barato frente al metro",
+        "Bogotá: Mockus = cultura ciudadana (mimos, civismo); Peñalosa = TransMilenio (dic. 2000), ciclorrutas, parques, bibliotecas",
+        "Límites: saturación del TransMilenio, expansión urbana de Curitiba"
+      ],
+      "dates": [
+        { "date": "1972 / 1974", "fait": "Curitiba: calle peatonal / BRT" },
+        { "date": "1991", "fait": "Medellín: más de 350 homicidios por 100 000 hab." },
+        { "date": "2000", "fait": "TransMilenio inaugurado en Bogotá (diciembre)" },
+        { "date": "2002", "fait": "Operación militar Orión en la Comuna 13" },
+        { "date": "2004 / 2007 / 2011", "fait": "Metrocable / Biblioteca España / escaleras eléctricas Comuna 13" }
+      ],
+      "distinctions": [
+        { "a": "Ciclovía (cierre dominical de calles a los coches)", "b": "Ciclorruta (carril bici permanente)", "difference": "Dos dispositivos distintos en Bogotá." },
+        { "a": "Descenso de la violencia por el urbanismo", "b": "Descenso por recomposición de los grupos armados", "difference": "Ambas explicaciones coexisten: matizar el «milagro» de Medellín." }
+      ],
+      "memo": "Tres ciudades, tres alcaldes: Lerner = bus (Curitiba), Mockus = mimos y Peñalosa = TransMilenio (Bogotá), Fajardo = Metrocable (Medellín).",
+      "questions": [
+        { "q": "¿Qué es el urbanismo social de Medellín?", "r": "Concentrar inversiones públicas de calidad en las comunas más pobres (PUI, Metrocable, parques biblioteca) con participación de los habitantes." },
+        { "q": "¿Qué matices hay que aportar al «milagro» de Medellín?", "r": "Papel de la recomposición de los grupos armados y de la operación Orión, turistificación, desigualdades persistentes." },
+        { "q": "¿Qué se asocia a Mockus y a Peñalosa?", "r": "Mockus: cultura ciudadana. Peñalosa: TransMilenio (2000), ciclorrutas, parques." },
+        { "q": "¿Dónde y cuándo nace el BRT?", "r": "En Curitiba, años setenta (1974), con Jaime Lerner." }
+      ]
+    },
+    {
+      "chapitre": "cvl.representaciones",
+      "titre": "Representaciones",
+      "idee": "El cine latinoamericano muestra la ciudad pobre y violenta entre denuncia y espectáculo; analizarlo exige describir, analizar los recursos e interpretar la mirada.",
+      "points": [
+        "«Los olvidados» (Buñuel, México, 1950): niños miserables de la periferia",
+        "«Rio, 40 graus» (Pereira dos Santos, 1955) anuncia el Cinema Novo; Rocha, «estética del hambre» (1965)",
+        "«Agarrando pueblo» (Ospina y Mayolo, 1978) denuncia la «pornomiseria»; Gaviria rueda con actores no profesionales («Rodrigo D. No futuro», 1990)",
+        "«Cidade de Deus» (Meirelles y Lund, 2002): éxito mundial; Ivana Bentes habla de «cosmética del hambre»",
+        "Ciudad fragmentada: «Amores perros» (2000), «Elefante blanco» (2012), «Roma» (2018)",
+        "Método: presentación, descripción, análisis de los recursos, interpretación, conclusión crítica",
+        "Vocabulario: plano general / medio / primer plano, picado, contrapicado, cámara en mano, travelling, panorámica, montaje, fuera de campo"
+      ],
+      "dates": [
+        { "date": "1950", "fait": "«Los olvidados», Buñuel" },
+        { "date": "1965", "fait": "Glauber Rocha, «estética del hambre»" },
+        { "date": "1978", "fait": "«Agarrando pueblo»: la pornomiseria" },
+        { "date": "2002", "fait": "«Cidade de Deus»" }
+      ],
+      "distinctions": [
+        { "a": "Estética del hambre (Rocha, denuncia)", "b": "Cosmética del hambre (Bentes, miseria estetizada)", "difference": "El segundo término retoma el primero para criticar películas espectaculares." },
+        { "a": "Picado (plongée): desde arriba, aplasta", "b": "Contrapicado (contre-plongée): desde abajo, engrandece", "difference": "Ángulo de toma opuesto, efecto opuesto." }
+      ],
+      "memo": "Rocha denuncia el hambre, Ospina denuncia a quien la vende (pornomiseria), Bentes denuncia a quien la maquilla (cosmética).",
+      "questions": [
+        { "q": "¿Qué denuncia el término «pornomiseria»?", "r": "La explotación espectacular de la pobreza en la pantalla para públicos extranjeros («Agarrando pueblo», 1978)." },
+        { "q": "¿Qué efectos produce una secuencia en cámara en mano y planos cerrados en un callejón de favela?", "r": "Realismo documental, urgencia u opresión, inmersión en el punto de vista de los personajes." },
+        { "q": "¿Cómo se dicen «gros plan», «plongée» y «hors-champ»?", "r": "Primer plano, picado, fuera de campo." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "Población urbana: ≈ 40 % en 1950 → más del 80 % hoy; éxodo rural 1940-1980",
+    "Push: tierra, pobreza, demografía, mecanización, violencia; Pull: ISI, servicios, modernidad, redes",
+    "Nombres: favela, villa miseria, barriada / pueblo joven, colonia popular, rancho, campamento",
+    "Economía informal ≈ la mitad de los trabajadores (OIT); De Soto, «El otro sendero» (1986)",
+    "Barrios cerrados: countries, condomínios fechados, fraccionamientos; Alphaville, Nordelta; Caldeira (2000)",
+    "Américas ≈ 37 % de los homicidios con ≈ 13 % de la población (UNODC 2019)",
+    "Tasa de homicidios = homicidios / población × 100 000",
+    "Medellín: Fajardo (2004-2007), PUI, Metrocable (2004), Biblioteca España (2007), Comuna 13 (2011)",
+    "Curitiba: Lerner, calle peatonal 1972, BRT 1974; Bogotá: Mockus (cultura ciudadana), Peñalosa (TransMilenio 2000)",
+    "Cine: Los olvidados 1950, estética del hambre 1965, Agarrando pueblo 1978, Cidade de Deus 2002",
+    "Picado (desde arriba) / contrapicado (desde abajo); plano general / primer plano; fuera de campo"
+  ],
+  "pieges": [
+    "Confundir megaciudad (tamaño) y ciudad primada (peso relativo): Montevideo, São Paulo",
+    "Confundir economía informal (lícita, no declarada) y economía criminal",
+    "Presentar el descenso de la violencia en Medellín como un «milagro» solo debido al urbanismo",
+    "Confundir ciclovía (dominical) y ciclorruta (permanente)",
+    "Confundir picado y contrapicado, o estética del hambre (Rocha) y cosmética del hambre (Bentes)",
+    "Explicar la violencia solo por la pobreza, o creer que el éxodo rural sigue siendo hoy el motor urbano"
+  ]
+}

@@ -1,5 +1,7 @@
-// Génère un PDF A4 par cahier d'exercices (avec corrigés en fin de document) dans imprimables/, à la racine
-// publiée par GitHub Pages (lien ./imprimables/<matière>.pdf).
+// Génère les PDF A4 dans imprimables/, à la racine publiée par GitHub Pages :
+// - <matière>.pdf : exercices express (un par chapitre, corrigés en fin de document) ;
+// - complet/<matière>.pdf : cahier complet ;
+// - syntheses/<matière>.pdf et syntheses/semestre.pdf : synthèses.
 // Usage : npm run build, puis npm run imprimables [matière…].
 import { spawn } from 'node:child_process';
 import { mkdirSync, readFileSync } from 'node:fs';
@@ -23,22 +25,36 @@ const attendre = async () => {
   }
   throw new Error('serveur de prévisualisation indisponible');
 };
+const pied = (texte) => `<div style="font-size:8px;width:100%;padding:0 14mm;display:flex;justify-content:space-between;color:#666;font-family:sans-serif"><span>${texte} · LEA, The Learning Journal</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`;
+const syntheses = index.syntheses.filter((s) => !seulement.length || seulement.includes(s.matiere));
+mkdirSync(join(SORTIE, 'complet'), { recursive: true });
+mkdirSync(join(SORTIE, 'syntheses'), { recursive: true });
 
 try {
   await attendre();
   const navigateur = await chromium.launch({ executablePath: process.env.PW_CHROMIUM || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
   const page = await navigateur.newPage();
+  const imprimer = async (url, selecteur, chemin, texte) => {
+    await page.emulateMedia({ media: 'screen' });
+    await page.goto(`http://127.0.0.1:${PORT}/${url}`);
+    await page.waitForSelector(selecteur, { timeout: 20000 });
+    await page.emulateMedia({ media: 'print' });
+    await page.pdf({ path: chemin, format: 'A4', printBackground: true, preferCSSPageSize: true, displayHeaderFooter: true, headerTemplate: '<span></span>', footerTemplate: pied(texte) });
+  };
   for (const c of cahiers) {
     const m = index.matieres.find((x) => x.id === c.matiere);
-    await page.goto(`http://127.0.0.1:${PORT}/#/cahier/${c.matiere}`);
-    await page.waitForSelector('.cahier .corriges', { timeout: 20000 });
-    await page.emulateMedia({ media: 'print' });
-    await page.pdf({
-      path: join(SORTIE, `${c.matiere}.pdf`), format: 'A4', printBackground: true, preferCSSPageSize: true,
-      displayHeaderFooter: true, headerTemplate: '<span></span>',
-      footerTemplate: `<div style="font-size:8px;width:100%;padding:0 14mm;display:flex;justify-content:space-between;color:#666;font-family:sans-serif"><span>${m.titre} · cahier d’exercices · LEA, The Learning Journal</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`,
-    });
-    console.log(`✓ ${c.matiere}.pdf (${c.exercices} exercices)`);
+    await imprimer(`#/cahier/${c.matiere}`, '.cahier .corriges', join(SORTIE, `${c.matiere}.pdf`), `${m.titre} · exercices express`);
+    await imprimer(`#/cahier/${c.matiere}?format=complet`, '.cahier .corriges', join(SORTIE, 'complet', `${c.matiere}.pdf`), `${m.titre} · cahier d’exercices complet`);
+    console.log(`✓ ${c.matiere}.pdf (express) et complet/${c.matiere}.pdf (${c.exercices} exercices)`);
+  }
+  for (const s of syntheses) {
+    const m = index.matieres.find((x) => x.id === s.matiere);
+    await imprimer(`#/synthese/${s.matiere}`, '.synthese .synthese-fin', join(SORTIE, 'syntheses', `${s.matiere}.pdf`), `${m.titre} · synthèse`);
+    console.log(`✓ syntheses/${s.matiere}.pdf`);
+  }
+  if (!seulement.length) {
+    await imprimer('#/syntheses/imprimer', '.syntheses-semestre .synthese-fin', join(SORTIE, 'syntheses', 'semestre.pdf'), 'Synthèses du semestre (emploi du temps S5)');
+    console.log('✓ syntheses/semestre.pdf');
   }
   await navigateur.close();
 } finally {

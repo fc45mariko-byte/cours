@@ -1,0 +1,157 @@
+{
+  "matiere": "eco",
+  "titre": "Économie internationale",
+  "essentiel": "Les pays échangent en raison de différences de productivité (Smith, Ricardo) ou de dotations factorielles (HOS), mais aussi des rendements croissants et du goût pour la variété (Krugman, Melitz). On mesure ces échanges (balance des paiements, termes de l'échange, taux de couverture), on les règle selon un régime de change, et les États les encadrent (OMC, intégration régionale) face aux chaînes de valeur mondiales.",
+  "chapitres": [
+    {
+      "chapitre": "eco.theories",
+      "titre": "Théories du commerce international",
+      "idee": "L'échange est avantageux même pour un pays moins productif partout, dès qu'il se spécialise là où son coût d'opportunité est le plus faible.",
+      "points": [
+        "Smith (1776) : contre le mercantilisme ; avantage absolu = produire avec moins de travail ; limite : un pays sans avantage absolu serait exclu",
+        "Ricardo (1817) : avantage comparatif = coût relatif (d'opportunité) le plus faible ; Portugal vin, Angleterre drap",
+        "HOS : on exporte le bien intensif en son facteur abondant, on importe celui intensif en son facteur rare",
+        "Stolper-Samuelson (1941) : l'ouverture enrichit le facteur abondant, appauvrit le facteur rare ; paradoxe de Leontief (1953)",
+        "Krugman (fin des années 1970, Nobel 2008) : commerce intrabranche entre pays semblables, rendements croissants, goût pour la variété",
+        "Melitz (2003) : seules les entreprises les plus productives exportent ; Vernon (1966) cycle de vie ; Linder (1961) demande représentative"
+      ],
+      "formules": [
+        "Coût d'opportunité de X = coût de X ÷ coût de Y (en heures) ; ratio le plus faible = avantage comparatif en X",
+        "Ricardo : vin en drap, Angleterre 120/100 = 1,2 ; Portugal 80/90 ≈ 0,89"
+      ],
+      "dates": [
+        { "date": "1776", "fait": "Smith, La Richesse des nations : avantage absolu" },
+        { "date": "1817", "fait": "Ricardo, Principes : avantage comparatif" },
+        { "date": "1919 / 1933", "fait": "Heckscher puis Ohlin : dotations factorielles" },
+        { "date": "1953", "fait": "Paradoxe de Leontief" },
+        { "date": "2003", "fait": "Melitz : hétérogénéité des firmes" }
+      ],
+      "distinctions": [
+        { "a": "Avantage absolu", "b": "Avantage comparatif", "difference": "Coût d'un même bien entre pays / coût relatif entre biens." },
+        { "a": "Ricardo", "b": "HOS", "difference": "Différences de productivité / différences de dotations factorielles, technologie identique." },
+        { "a": "Commerce interbranche", "b": "Commerce intrabranche", "difference": "Vin contre drap / voitures contre voitures (nouvelles théories)." }
+      ],
+      "memo": "Smith compte les heures (absolu), Ricardo compare les ratios (relatif), HOS regarde les ressources (facteurs), Krugman la variété.",
+      "questions": [
+        { "q": "Angleterre 100 h drap / 120 h vin ; Portugal 90 / 80. Qui se spécialise dans quoi ?", "r": "Portugal : vin (coût d'opportunité 0,89 < 1,2) ; Angleterre : drap (0,83 < 1,125). Les deux gagnent." },
+        { "q": "Que dit le théorème Stolper-Samuelson ?", "r": "L'ouverture augmente la rémunération du facteur abondant et diminue celle du facteur rare." },
+        { "q": "Pourquoi la France exporte et importe-t-elle des berlines ?", "r": "Commerce intrabranche : rendements croissants et goût pour la variété (Krugman)." }
+      ]
+    },
+    {
+      "chapitre": "eco.mesure",
+      "titre": "Mesurer les échanges",
+      "idee": "La balance des paiements recense toutes les opérations résidents / non-résidents et est équilibrée par construction : un déficit courant se finance par des entrées de capitaux.",
+      "points": [
+        "MBP6 (FMI, 2009) : transactions courantes, compte de capital, compte financier, erreurs et omissions",
+        "Courant = biens (balance commerciale) + services + revenus primaires (salaires, dividendes, intérêts) + revenus secondaires (transferts sans contrepartie)",
+        "Compte financier : investissements directs, de portefeuille, dérivés, autres investissements, avoirs de réserve",
+        "Investissement direct si ≥ 10 % des droits de vote ; en deçà : portefeuille",
+        "Prebisch-Singer (1950, CEPAL) : dégradation des termes de l'échange des exportateurs de produits primaires",
+        "Termes de l'échange en hausse pas toujours favorables : prix plus hauts si la monnaie s'apprécie, volumes en baisse"
+      ],
+      "formules": [
+        "Solde courant + solde du compte de capital − solde du compte financier + erreurs et omissions = 0",
+        "Termes de l'échange = indice prix X ÷ indice prix M × 100 (> 100 : amélioration)",
+        "Taux de couverture = X ÷ M × 100 (> 100 % : excédent)"
+      ],
+      "distinctions": [
+        { "a": "Balance commerciale", "b": "Balance des transactions courantes", "difference": "Biens seulement / biens + services + revenus." },
+        { "a": "Termes de l'échange", "b": "Taux de couverture", "difference": "Compare des prix / compare des montants échangés." },
+        { "a": "Revenus primaires", "b": "Revenus secondaires", "difference": "Rémunérations du travail et du capital / transferts courants sans contrepartie (remises des migrants)." }
+      ],
+      "questions": [
+        { "q": "Un pays peut-il avoir un déficit commercial et un excédent courant ?", "r": "Oui, grâce aux services et aux revenus." },
+        { "q": "Quel seuil distingue investissement direct et de portefeuille ?", "r": "10 % des droits de vote (MBP6)." },
+        { "q": "Formule et lecture du taux de couverture ?", "r": "X ÷ M × 100 ; au-dessus de 100 % excédent, en dessous déficit ; il ne dit rien des prix." }
+      ]
+    },
+    {
+      "chapitre": "eco.change",
+      "titre": "Le change",
+      "idee": "Le taux de change est le prix d'une monnaie dans une autre ; son vocabulaire et ses contraintes dépendent du régime (flottant, fixe, intermédiaire).",
+      "points": [
+        "EUR/USD = 1,0850 : 1 € = 1,0850 $ ; la première devise est l'unité de base",
+        "Euro qui se déprécie : favorable aux exportateurs de la zone euro, défavorable aux importateurs",
+        "Flottant : appréciation / dépréciation ; fixe : réévaluation / dévaluation",
+        "Formes extrêmes : currency board, union monétaire, dollarisation (Équateur 2000, El Salvador 2001)",
+        "Franc CFA arrimé à l'euro : 1 € = 655,957 F CFA",
+        "Triangle d'incompatibilité (Mundell) : impossible d'avoir à la fois change fixe, libre circulation des capitaux et politique monétaire autonome"
+      ],
+      "formules": [
+        "Montant en € = montant en $ ÷ cours EUR/USD (10 000 $ ÷ 1,0850 ≈ 9 216,59 €)"
+      ],
+      "dates": [
+        { "date": "1944", "fait": "Bretton Woods : parités fixes autour du dollar convertible en or" },
+        { "date": "15 août 1971", "fait": "Nixon suspend la convertibilité du dollar en or" },
+        { "date": "1973", "fait": "Généralisation du flottement" },
+        { "date": "1976", "fait": "Accords de la Jamaïque entérinent le flottement" }
+      ],
+      "distinctions": [
+        { "a": "Dévaluation", "b": "Dépréciation", "difference": "Décision officielle en change fixe / mouvement de marché en change flottant." }
+      ],
+      "memo": "Bretton Woods « 44-71-73-76 » : naissance, coup de Nixon, flottement, Jamaïque.",
+      "questions": [
+        { "q": "Convertir 10 000 USD en euros avec EUR/USD = 1,0850 ?", "r": "On divise : ≈ 9 216,59 €." },
+        { "q": "Quels sont les trois objectifs du triangle de Mundell ?", "r": "Change fixe, libre circulation des capitaux, politique monétaire autonome : on ne peut en avoir que deux." },
+        { "q": "L'Espagne peut-elle dévaluer face à la France ?", "r": "Non : union monétaire, même monnaie." }
+      ]
+    },
+    {
+      "chapitre": "eco.politique",
+      "titre": "Politiques commerciales",
+      "idee": "Les États arbitrent entre libre-échange et protection, dans le cadre de l'OMC et d'accords régionaux, alors que la production se fragmente en chaînes de valeur mondiales.",
+      "points": [
+        "Tarifaire : droits ad valorem (% de la valeur) ou spécifiques (montant par unité) ; non tarifaire : quotas, normes, licences, subventions, marchés publics",
+        "Pour : industries naissantes (List, 1841), emploi, secteurs stratégiques ; contre : hausse des prix, rétorsion, perte d'efficacité",
+        "OMC : nation la plus favorisée, traitement national, consolidation et transparence, règlement des différends",
+        "Balassa (1961) : ZLE, union douanière (+ TEC), marché commun (+ facteurs), union économique et monétaire, intégration totale",
+        "Viner (1950) : création vs détournement de commerce ; l'union n'est bénéfique que si la création l'emporte",
+        "CVM : spécialisation par tâches (second unbundling, Baldwin) ; près de la moitié du commerce mondial (Banque mondiale 2020)",
+        "Courbe du sourire : valeur aux extrémités (R&D, marque, marketing, services), peu à l'assemblage ; mesure en valeur ajoutée (TiVA)"
+      ],
+      "dates": [
+        { "date": "1930", "fait": "Tarif Smoot-Hawley" },
+        { "date": "1947", "fait": "GATT" },
+        { "date": "1er janvier 1995", "fait": "Entrée en fonction de l'OMC (accords de Marrakech 1994)" },
+        { "date": "1991", "fait": "Mercosur (traité d'Asunción)" },
+        { "date": "2020", "fait": "ACEUM remplace l'ALENA (1994)" },
+        { "date": "1968 / 1993 / 1999", "fait": "UE : union douanière, marché unique, euro" }
+      ],
+      "distinctions": [
+        { "a": "Zone de libre-échange", "b": "Union douanière", "difference": "Tarifs extérieurs nationaux et règles d'origine / tarif extérieur commun." },
+        { "a": "Protectionnisme éducateur (List)", "b": "Protectionnisme défensif", "difference": "Temporaire pour industries naissantes / protège des secteurs en déclin." },
+        { "a": "Valeur brute exportée", "b": "Valeur ajoutée exportée", "difference": "La première compte plusieurs fois les composants qui traversent les frontières." }
+      ],
+      "memo": "Balassa monte l'escalier : ZLE, Union douanière, Marché commun, Union économique, Intégration totale ; à chaque marche on ajoute une chose.",
+      "questions": [
+        { "q": "A importait de T à 100 + 20 % = 120 ; après union avec B, de B à 110. Quel effet ?", "r": "Détournement de commerce : le producteur le plus efficace (T) est évincé." },
+        { "q": "Qu'est-ce que la clause de la nation la plus favorisée ?", "r": "Un avantage accordé à un membre de l'OMC doit l'être à tous (sauf accords régionaux, préférences pour pays en développement)." },
+        { "q": "iPhone 3G 2009 : quelle valeur ajoutée chinoise ?", "r": "Environ 6,50 $ sur environ 179 $ (Xing et Detert, 2010) : le reste vient de composants importés." },
+        { "q": "Réponses aux chocs sur les CVM ?", "r": "Diversification, reshoring, nearshoring, friend-shoring." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "Smith 1776 avantage absolu ; Ricardo 1817 avantage comparatif (coût d'opportunité)",
+    "HOS : exporter le bien intensif en facteur abondant ; Stolper-Samuelson 1941 ; Leontief 1953",
+    "Krugman : intrabranche, rendements croissants, variété ; Melitz 2003 : seules les firmes les plus productives exportent",
+    "Balance des paiements : transactions courantes + capital − financier + erreurs et omissions = 0",
+    "IDE : seuil de 10 % des droits de vote",
+    "Termes de l'échange = prix X ÷ prix M × 100 ; taux de couverture = X ÷ M × 100",
+    "EUR/USD = 1,0850 : 1 € = 1,0850 $ ; $ vers € : diviser",
+    "Bretton Woods 1944 ; fin de la convertibilité 15 août 1971 ; flottement 1973 ; Jamaïque 1976",
+    "Triangle de Mundell : change fixe, capitaux libres, politique monétaire autonome (deux sur trois)",
+    "GATT 1947, OMC 1er janvier 1995 : nation la plus favorisée, traitement national",
+    "Balassa 1961 : ZLE, union douanière, marché commun, union économique et monétaire, intégration totale",
+    "Viner 1950 : création vs détournement de commerce"
+  ],
+  "pieges": [
+    "Croire que le pays le plus productif partout doit tout produire : il gagne à se spécialiser selon son avantage comparatif.",
+    "Confondre balance commerciale (biens) et balance des transactions courantes.",
+    "Confondre termes de l'échange (prix) et taux de couverture (valeurs).",
+    "Multiplier au lieu de diviser pour convertir des dollars en euros avec EUR/USD.",
+    "Parler de dévaluation en change flottant (c'est une dépréciation).",
+    "Confondre ZLE et union douanière : le critère est le tarif extérieur commun."
+  ]
+}

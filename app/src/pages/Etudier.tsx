@@ -9,6 +9,7 @@ import { QuestionQcm } from '../ui/Qcm';
 import { Carte } from './Flashcards';
 import { SelecteurPerimetre } from './Entrainer';
 import { statutNotion } from '../jeu';
+import { jourDuPlan } from '../plan';
 import { rangStatut } from '../core/statut';
 import type { Flashcard, Question } from '../types';
 
@@ -19,7 +20,9 @@ export function Etudier() {
   const erreurs = Object.keys(p.erreurs).length;
   const nbEx = (pred: (e: typeof index.exercices[number]) => boolean) => index.exercices.filter(pred).length;
   const outils: { href: string; titre: string; texte: string; meta?: string }[] = [
-    { href: '#/cahiers', titre: 'Cahiers d’exercices à imprimer', texte: 'Par matière : bases, méthode guidée, application, corrigés expliqués. Matières de l’emploi du temps en tête.', meta: `${index.cahiers.length} cahiers` },
+    { href: '#/plan', titre: 'Plan de révision 14 jours', texte: 'Chaque jour : apprendre avec la synthèse, réciter sans regarder, revoir à J+1, J+3 et J+7.', meta: p.preferences.planDebut ? `jour ${jourDuPlan(p.preferences.planDebut)}` : 'à commencer' },
+    { href: '#/syntheses', titre: 'Synthèses', texte: 'L’essentiel de chaque matière en 2 à 3 pages, avec questions de récitation et « par cœur ».', meta: `${index.syntheses.length} synthèses` },
+    { href: '#/cahiers', titre: 'Exercices express à imprimer', texte: 'Un exercice d’application par chapitre, avec corrigé. Version complète disponible.', meta: `${index.cahiers.length} cahiers` },
     { href: '#/etudier/session', titre: 'Session de révision', texte: 'Choisissez une matière : questions, corrections, explications, renvois au cours et recommandation finale.' },
     { href: '#/entrainer', titre: 'QCM', texte: 'Séries par matière, chapitre ou difficulté, corrigées une à une.', meta: `${index.questions.length} questions` },
     { href: '#/flashcards', titre: 'Flashcards et questions courtes', texte: 'Réponse ouverte, comparaison avec la réponse de référence, répétition espacée.', meta: dues ? `${dues} à revoir` : `${index.flashcards.length} cartes` },

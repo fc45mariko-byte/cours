@@ -493,6 +493,15 @@ main a[href^="http"] { overflow-wrap: anywhere; }
   .cahier { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .cahier-couverture { break-after: page; border-top-width: 3mm; }
   .cahier-partie { break-before: page; }
+  .cahier.express .cahier-couverture { break-after: auto; margin-bottom: 4mm; }
+  .cahier.express .cahier-partie { break-before: auto; }
+  .cahier.express .partie-titre { margin-top: 5mm; font-size: 13pt; }
+  .cahier.express .exo { break-inside: auto; padding: 2mm 0 3mm; }
+  .cahier.express { font-size: 9pt; line-height: 1.32; }
+  .cahier.express .partie-titre { margin-top: 4mm; padding-top: 2mm; font-size: 11.5pt; }
+  .cahier.express .lignes-reponse span { height: 7mm; }
+  .cahier.express .corrige { padding: 1.5mm 0; }
+  .cahier.express h1.titre-page { font-size: 18pt; }
   .partie-titre { margin-top: 0; }
   .a-retenir, .exo-methode, .exo-questions, .exo-objectif, .tableau-wrap { break-inside: avoid; }
   .exo-entete, .exo-titre { break-after: avoid; }
@@ -551,3 +560,60 @@ body { background: linear-gradient(180deg, #fdf3f6 0%, var(--papier) 40%, #fbe9e
 .calendrier span.n3 { background: var(--nuit); }
 ::selection { background: #f7c6d6; color: #3a2230; }
 .recherche input { border-color: var(--filet-fort); border-radius: 999px; background: var(--surface); }
+
+/* ============ Synthèses (lecture dense, récitation, impression 2-3 pages) ============ */
+.synthese { --gouttiere: var(--e5); }
+.synthese-entete { border-top: 4px solid var(--ton); padding-top: var(--e4); margin-bottom: var(--e4); }
+.synthese-essentiel { background: var(--ton-pale); border-left: 3px solid var(--ton); padding: var(--e3) var(--e4); }
+.synthese-essentiel p { margin: 4px 0 0; }
+.synthese-chapitres { columns: 2 22rem; column-gap: var(--gouttiere); }
+.synthese-chap { break-inside: avoid; border-top: 1px solid var(--filet); padding: var(--e3) 0 var(--e4); }
+.synthese-chap-titre { font-size: 1.15rem; margin: 0 0 6px; display: flex; gap: 10px; align-items: baseline; }
+.synthese-chap-titre .num { font-family: var(--sans); font-size: var(--t-meta); color: var(--ton); letter-spacing: .1em; }
+.synthese-idee { margin: 0 0 6px; }
+.synthese-points, .synthese-bloc ul, .synthese-bloc ol, .synthese-questions ol { margin: 4px 0 8px; padding-left: 1.2em; }
+.synthese-points li, .synthese-bloc li { margin: 2px 0; }
+.synthese-bloc { margin: 6px 0; }
+.synthese-bloc > strong, .synthese-questions > strong { font-family: var(--sans); font-size: var(--t-meta); text-transform: uppercase; letter-spacing: .1em; color: var(--ton); }
+.synthese-bloc code { font-family: inherit; background: var(--surface-2); padding: 0 4px; border-radius: 4px; }
+.synthese-dates { margin: 4px 0; }
+.synthese-dates div { display: grid; grid-template-columns: 5.5em 1fr; gap: 8px; }
+.synthese-dates dt { font-weight: 700; } .synthese-dates dd { margin: 0; }
+.synthese-memo { font-style: italic; border-left: 3px solid var(--or); padding-left: var(--e3); }
+.synthese-questions li { margin: 4px 0; }
+.synthese-questions .q { font-weight: 600; }
+.synthese-questions .r { color: var(--encre-2); }
+.synthese-questions .r::before { content: '→ '; color: var(--ton); }
+.recitation .synthese-chapitres { columns: 1; }
+.recitation details summary { cursor: pointer; color: var(--ton); font-size: var(--t-petit); }
+.auto-eval { display: flex; gap: 8px; margin-top: 6px; }
+.synthese-fin { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: var(--e5); border-top: 2px solid var(--or); margin-top: var(--e4); padding-top: var(--e3); }
+.syntheses-semestre .synthese + .synthese { margin-top: var(--e8); }
+.par-coeur section { border-top: 1px solid var(--filet); padding-top: var(--e3); }
+.par-coeur details summary { cursor: pointer; color: var(--discret); }
+/* Plan 14 jours */
+.carte-plan { border-top: 3px solid var(--or); }
+.plan-jour.actuel { border-color: var(--nuit); box-shadow: var(--ombre); }
+.plan-jour-entete { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e3); }
+.plan-taches { list-style: none; padding: 0; margin: 0; }
+.plan-taches li { display: flex; justify-content: space-between; align-items: center; gap: var(--e3); border-top: 1px solid var(--filet); padding: 10px 0; }
+.plan-taches label { display: flex; gap: 10px; align-items: flex-start; flex: 1; min-width: 0; }
+.plan-taches input { margin-top: 5px; }
+.plan-taches li.fait .t { text-decoration: line-through; color: var(--discret); }
+@media print {
+  .synthese { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 8.6pt; line-height: 1.3; }
+  .synthese-chap { break-inside: auto; }
+  .synthese-chap-titre { break-after: avoid; }
+  .synthese-questions li, .synthese-points li, .synthese-bloc li, .synthese-memo, .synthese-idee { break-inside: avoid; }
+  .synthese-points, .synthese-bloc ul, .synthese-bloc ol, .synthese-questions ol { margin: 1mm 0 2mm; }
+  .synthese-essentiel { padding: 2mm 3mm; }
+  .synthese-entete { padding-top: 2mm; margin-bottom: 2mm; }
+  .synthese h1.titre-page, .synthese h2.titre-page { font-size: 18pt; margin: 0 0 3mm; }
+  .synthese-chapitres { columns: 2; column-gap: 7mm; }
+  .synthese-chap { padding: 2mm 0 3mm; }
+  .synthese-chap-titre { font-size: 11pt; }
+  .synthese-fin { break-inside: avoid; }
+  .syntheses-semestre .synthese + .synthese { break-before: page; margin-top: 0; }
+  .recitation details > *:not(summary) { display: block; }
+}
+.plan-jour .rubrique { margin: 0; }

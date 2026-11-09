@@ -39,6 +39,7 @@ const fr = {
   pieges: 'Pièges à éviter', modeEmploi: 'Mode d’emploi', sommaire: 'Sommaire', partieCahier: 'Partie', exerciceCahier: 'Exercice',
   niveauxCahier: { bases: 'Bases', application: 'Application', approfondissement: 'Pour aller plus loin' } as Record<string, string>,
   votreReponseEcrite: 'Votre réponse', donneesLabel: 'Données',
+  enBref: 'L’essentiel', ideeCle: 'Idée clé', formules: 'Formules', datesCles: 'Dates clés', aDistinguer: 'À ne pas confondre', memo: 'Pour retenir', reciter: 'Récitez sans regarder', parCoeur: 'À savoir par cœur', reponse: 'Réponse',
   etape: 'Étape', avant: 'à', comparaison: 'Comparaison', mots: 'Lexique', lireFiche: 'Lire la fiche complète',
 };
 type Libelles = typeof fr;
@@ -79,6 +80,7 @@ const en: Libelles = {
   pieges: 'Traps to avoid', modeEmploi: 'How to use this workbook', sommaire: 'Contents', partieCahier: 'Part', exerciceCahier: 'Exercise',
   niveauxCahier: { bases: 'Basics', application: 'Application', approfondissement: 'Going further' },
   votreReponseEcrite: 'Your answer', donneesLabel: 'Data',
+  enBref: 'The big picture', ideeCle: 'Key idea', formules: 'Formulas', datesCles: 'Key dates', aDistinguer: 'Don’t confuse', memo: 'Memory hook', reciter: 'Recite without looking', parCoeur: 'Learn by heart', reponse: 'Answer',
   etape: 'Step', avant: 'to', comparaison: 'Comparison', mots: 'Vocabulary', lireFiche: 'Read the full sheet',
 };
 
@@ -118,6 +120,7 @@ const es: Libelles = {
   pieges: 'Errores que hay que evitar', modeEmploi: 'Cómo usar este cuaderno', sommaire: 'Índice', partieCahier: 'Parte', exerciceCahier: 'Ejercicio',
   niveauxCahier: { bases: 'Bases', application: 'Aplicación', approfondissement: 'Para ir más lejos' },
   votreReponseEcrite: 'Tu respuesta', donneesLabel: 'Datos',
+  enBref: 'En pocas palabras', ideeCle: 'Idea clave', formules: 'Fórmulas', datesCles: 'Fechas clave', aDistinguer: 'No confundir', memo: 'Para recordar', reciter: 'Recita sin mirar', parCoeur: 'Para saber de memoria', reponse: 'Respuesta',
   etape: 'Paso', avant: 'a', comparaison: 'Comparación', mots: 'Léxico', lireFiche: 'Leer la ficha completa',
 };
 

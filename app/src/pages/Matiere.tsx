@@ -38,8 +38,10 @@ export function Matiere({ id }: { id: string }) {
 
       {m.completude !== 'absente' && (
         <div class="ligne" style={{ margin: '8px 0 0' }}>
-          <a class="btn" href={`#/etudier/session?p=${m.id}`}>Session de révision</a>
-          {index.cahiers.some((c) => c.matiere === m.id) && <a class="btn secondaire" href={`#/cahier/${m.id}`}>Cahier d’exercices à imprimer</a>}
+          {index.syntheses.some((s) => s.matiere === m.id) && <a class="btn" href={`#/synthese/${m.id}`}>Synthèse</a>}
+          {index.syntheses.some((s) => s.matiere === m.id) && <a class="btn secondaire" href={`#/synthese/${m.id}?reciter=1`}>Réciter</a>}
+          <a class="btn secondaire" href={`#/etudier/session?p=${m.id}`}>Session de révision</a>
+          {index.cahiers.some((c) => c.matiere === m.id) && <a class="btn secondaire" href={`#/cahier/${m.id}`}>Exercices express</a>}
           <a class="btn secondaire" href={`#/progres/arbre/${m.id}`}>Arbre de compétences</a>
           <a class="btn discret" href={`#/entrainer/qcm?p=${m.id}`}>QCM ({nbQ})</a>
           <a class="btn discret" href={`#/flashcards?p=${m.id}`}>Flashcards ({nbF})</a>

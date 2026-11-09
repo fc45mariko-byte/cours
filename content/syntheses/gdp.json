@@ -1,0 +1,141 @@
+{
+  "matiere": "gdp",
+  "titre": "Gestion de projet : l'essentiel",
+  "essentiel": "Un projet est temporaire et vise un résultat unique sous contraintes de qualité, coût et délai (triangle QCD). On le cadre (charte, objectifs SMART, parties prenantes), on l'organise (WBS, RACI), on le planifie (antériorités, PERT/MPM, dates, marges, chemin critique, Gantt), puis on le pilote (risques, budget, valeur acquise, agile) jusqu'à la clôture et au retour d'expérience.",
+  "chapitres": [
+    {
+      "chapitre": "gdp.cadrage",
+      "titre": "Cadrage",
+      "idee": "Avant d'agir, on fixe pourquoi, quoi et dans quelles limites : charte validée par le commanditaire, objectifs SMART, parties prenantes classées.",
+      "points": [
+        "Projet : activités coordonnées, temporaires, résultat unique ; s'oppose aux opérations courantes répétitives",
+        "Triangle QCD : qualité (périmètre), coût, délai sont liés ; toucher l'un affecte les autres",
+        "Maître d'ouvrage (commanditaire, exprime le besoin) / maître d'œuvre (réalise)",
+        "Charte : contexte, objectifs, périmètre inclus/exclu, livrables, contraintes, risques, parties prenantes, gouvernance",
+        "Cahier des charges : exigences du livrable ; le fonctionnel exprime les fonctions sans imposer de solution",
+        "Matrice pouvoir / intérêt : gérer étroitement, satisfaire, informer, surveiller"
+      ],
+      "distinctions": [
+        { "a": "Charte de projet", "b": "Cahier des charges", "difference": "La charte dit pourquoi et dans quelles limites ; le cahier des charges dit précisément quoi." },
+        { "a": "Objectif (résultat visé)", "b": "Action (moyen)", "difference": "« Participer à deux salons » est une action ; l'objectif est le résultat attendu de ces salons." }
+      ],
+      "memo": "SMART : Spécifique, Mesurable, Atteignable/Acceptable, Réaliste, Temporellement défini.",
+      "questions": [
+        { "q": "Rendez SMART : « Améliorer notre présence au Portugal ».", "r": "« Obtenir 5 distributeurs actifs au Portugal et 150 000 € de CA d'ici le 31 décembre 2027, avec un budget de prospection de 30 000 €. »" },
+        { "q": "Stratégie pour une partie prenante à pouvoir fort et intérêt faible ? faible et fort ?", "r": "Pouvoir fort, intérêt faible : satisfaire. Pouvoir faible, intérêt fort : informer régulièrement." },
+        { "q": "Pourquoi préciser ce qui est exclu du périmètre dans la charte ?", "r": "Pour éviter que le périmètre gonfle en cours de route sans budget supplémentaire." }
+      ]
+    },
+    {
+      "chapitre": "gdp.organisation",
+      "titre": "Organisation",
+      "idee": "Le WBS découpe tout le travail en lots ; la matrice RACI dit qui fait, qui valide, qui est consulté et qui est informé.",
+      "points": [
+        "WBS (OTP) : décomposition hiérarchique jusqu'aux lots de travail estimables, attribuables, suivis",
+        "Règle des 100 % : tout le périmètre et seulement le périmètre",
+        "Niveaux : projet → livrables ou phases → sous-livrables → lots ; codification 1, 1.1, 1.1.1",
+        "RACI : R réalise, A rend compte et valide, C consulté, I informé",
+        "Chaque tâche : exactement un A et au moins un R ; une même personne peut être A et R"
+      ],
+      "distinctions": [
+        { "a": "WBS (quoi faire)", "b": "Gantt (quand le faire)", "difference": "Le WBS structure le travail sans le dater ; il précède la planification." },
+        { "a": "R (réalise)", "b": "A (répond du résultat)", "difference": "Plusieurs personnes peuvent réaliser, une seule rend compte." }
+      ],
+      "memo": "RACI : Réalise, Approuve (un seul !), Consulté, Informé.",
+      "questions": [
+        { "q": "Que signifie la règle des 100 % du WBS ?", "r": "Le WBS couvre tout le travail du périmètre et rien en dehors." },
+        { "q": "Combien de A et de R par tâche dans une RACI ?", "r": "Exactement un A et au moins un R." },
+        { "q": "À quoi sert la codification du WBS (1.1, 1.1.1) ?", "r": "À relier chaque élément au planning et au budget." }
+      ]
+    },
+    {
+      "chapitre": "gdp.planification",
+      "titre": "Planification",
+      "idee": "Des antériorités on tire un réseau (PERT ou MPM), les dates au plus tôt et au plus tard, les marges et le chemin critique, qui fixe la durée minimale du projet.",
+      "points": [
+        "Tableau des antériorités : durée et prédécesseurs immédiats ; niveau 0 = tâches sans antériorité",
+        "PERT : tâches sur les flèches, étapes sur les nœuds ; tâche fictive (pointillés, durée nulle) si antériorités partiellement communes",
+        "MPM (Bernard Roy, fin des années 1950) : tâches sur les nœuds, flèches = antériorités portant la durée de la tâche de départ ; pas de tâche fictive",
+        "Plus tôt : de gauche à droite, on retient le maximum ; plus tard : de droite à gauche, on retient le minimum",
+        "Chemin critique : tâches de marge totale nulle = plus long chemin = durée minimale ; il peut y en avoir plusieurs",
+        "Gantt : tâches en lignes, temps en colonnes, barres au plus tôt ; marges, jalons (losanges), avancement",
+        "PERT probabiliste : 3 estimations a (optimiste), m (probable), b (pessimiste)"
+      ],
+      "formules": [
+        "Marge totale = début au plus tard − début au plus tôt",
+        "Marge libre = min (début au plus tôt des successeurs) − (début au plus tôt + durée)",
+        "te = (a + 4m + b) ÷ 6 ; σ = (b − a) ÷ 6 ; variance = σ²"
+      ],
+      "dates": [
+        { "date": "Début du XXe siècle", "fait": "Diagramme de Gantt (Henry Gantt)" },
+        { "date": "Fin des années 1950", "fait": "PERT (marine américaine) et MPM (Bernard Roy, France)" }
+      ],
+      "distinctions": [
+        { "a": "Marge totale", "b": "Marge libre", "difference": "Totale : retard sans décaler la fin du projet ; libre : sans décaler aucun successeur. Libre ≤ totale." },
+        { "a": "PERT / MPM (logique)", "b": "Gantt (calendrier)", "difference": "On calcule les dates avec le réseau, puis on les visualise sur le Gantt." }
+      ],
+      "memo": "Aller : MAX (on attend le dernier prédécesseur). Retour : MIN (on ne doit retarder aucun successeur).",
+      "questions": [
+        { "q": "Tâche D (durée 5) précédée de A (3) et B (4), débutant à 0 : début au plus tôt ?", "r": "max(0 + 3 ; 0 + 4) = 4." },
+        { "q": "Comment identifier le chemin critique ?", "r": "Repérer les tâches de marge totale nulle, vérifier qu'elles forment un chemin continu du début à la fin et que la somme de leurs durées égale la durée du projet." },
+        { "q": "a = 4, m = 6, b = 14 jours : durée espérée et écart type ?", "r": "te = (4 + 24 + 14) ÷ 6 = 7 jours ; σ = 10 ÷ 6 ≈ 1,67 jour." },
+        { "q": "En MPM, quelle durée porte une flèche ?", "r": "La durée de la tâche dont elle part." }
+      ]
+    },
+    {
+      "chapitre": "gdp.pilotage",
+      "titre": "Pilotage et clôture",
+      "idee": "Piloter, c'est anticiper les risques, suivre coûts et délais par la valeur acquise, s'adapter (agile) puis clôturer en tirant les leçons (REX).",
+      "points": [
+        "Risque : événement incertain affectant délai, coût ou qualité ; identifier, évaluer, répondre, suivre (registre)",
+        "4 réponses : éviter (supprimer la cause), réduire (probabilité ou impact), transférer (assurance, contrat), accepter (réserve)",
+        "Budget : coût de chaque lot du WBS + réserve pour aléas, échelonné selon le planning (courbe en S)",
+        "Valeur acquise : PV (prévu), EV (travail accompli au coût budgété), AC (coût réel) ; écart négatif ou indice < 1 = défavorable",
+        "Agile (Manifeste 2001) : itérations courtes, incréments utilisables, client impliqué, changement bienvenu",
+        "Scrum : sprints, Product Owner, Scrum Master, Developers, backlog, mêlée quotidienne, revue, rétrospective",
+        "Clôture : validation des livrables, clôture financière, bilan vs objectifs SMART, REX, archivage"
+      ],
+      "formules": [
+        "Criticité = Probabilité × Impact",
+        "CV = EV − AC ; SV = EV − PV",
+        "CPI = EV ÷ AC ; SPI = EV ÷ PV ; EAC = BAC ÷ CPI"
+      ],
+      "dates": [
+        { "date": "2001", "fait": "Manifeste agile" }
+      ],
+      "distinctions": [
+        { "a": "Risque (incertain, futur)", "b": "Problème (déjà survenu)", "difference": "La gestion des risques agit avant ; la gestion des problèmes après." },
+        { "a": "Bilan de clôture", "b": "Retour d'expérience", "difference": "Le bilan constate les résultats ; le REX tire des leçons pour l'avenir." },
+        { "a": "Dépense engagée", "b": "Dépense réalisée", "difference": "Engagée = commande passée ; réalisée = facture payée. Suivre les seules factures sous-estime les coûts." }
+      ],
+      "memo": "Valeur acquise : tout part de EV. Coût : EV contre AC ; délai : EV contre PV.",
+      "questions": [
+        { "q": "BAC 100 000, PV 50 000, EV 40 000, AC 45 000 : CV, SV, CPI, SPI, EAC ?", "r": "CV = −5 000 (dépassement) ; SV = −10 000 (retard) ; CPI ≈ 0,89 ; SPI = 0,80 ; EAC = 100 000 ÷ 0,889 ≈ 112 500 €." },
+        { "q": "Assurer les marchandises : quelle réponse au risque ?", "r": "Transférer (comme une clause de pénalités ou la sous-traitance)." },
+        { "q": "Quatre valeurs du Manifeste agile ?", "r": "Individus et interactions, produit opérationnel, collaboration avec le client, adaptation au changement, plutôt que processus, documentation, négociation contractuelle et suivi d'un plan." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "Projet : temporaire, résultat unique, contraintes QCD (qualité, coût, délai)",
+    "SMART : Spécifique, Mesurable, Atteignable/Acceptable, Réaliste, Temporellement défini",
+    "Matrice pouvoir / intérêt : fort/fort gérer étroitement ; fort/faible satisfaire ; faible/fort informer ; faible/faible surveiller",
+    "WBS : décomposition jusqu'aux lots de travail, règle des 100 %",
+    "RACI : R réalise, A rend compte (un seul par tâche), C consulté, I informé",
+    "Plus tôt : max, de gauche à droite ; plus tard : min, de droite à gauche",
+    "Marge totale = plus tard − plus tôt ; marge libre = min(plus tôt successeurs) − fin au plus tôt",
+    "Chemin critique : marge totale nulle, plus long chemin, durée minimale du projet",
+    "te = (a + 4m + b) ÷ 6 ; σ = (b − a) ÷ 6",
+    "Risques : criticité = probabilité × impact ; éviter, réduire, transférer, accepter",
+    "CV = EV − AC ; SV = EV − PV ; CPI = EV ÷ AC ; SPI = EV ÷ PV ; EAC = BAC ÷ CPI",
+    "Scrum : sprints, Product Owner, Scrum Master, Developers, backlog, mêlée, revue, rétrospective"
+  ],
+  "pieges": [
+    "Prendre la tâche la plus longue pour une tâche critique : seule compte la marge totale nulle",
+    "Retenir le minimum au calcul des dates au plus tôt (c'est le maximum) ou le maximum au plus tard (c'est le minimum)",
+    "Croire marge libre et marge totale égales : la libre est toujours inférieure ou égale à la totale",
+    "Comparer AC à PV pour juger les coûts : il faut comparer AC à EV, qui tient compte du travail accompli",
+    "Lister des antériorités indirectes ou de simples préférences : seules les antériorités immédiates et réelles",
+    "Confondre agile et absence de plan : l'agile planifie à court terme et en continu, avec rôles et rituels"
+  ]
+}

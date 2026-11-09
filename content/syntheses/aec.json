@@ -1,0 +1,141 @@
+{
+  "matiere": "aec",
+  "titre": "Business English in 3 pages",
+  "essentiel": "Four skills: write the business correspondence cycle (enquiry, offer, order, complaint, reminder, e-mail) with the right layout, formulas and softened register; master core company, finance, trade, marketing and economics vocabulary, false friends and numbers; read a press article and write a synthesis in your own words; use the grammar that business English relies on (modals, passive, conditionals, present perfect).",
+  "chapitres": [
+    {
+      "chapitre": "aec.correspondance",
+      "titre": "Business correspondence",
+      "idee": "Every business letter follows a fixed full-block layout and a courteous, softened register; each stage of the trade cycle has its own key phrases.",
+      "points": [
+        "Layout: letterhead, date, inside address, reference, salutation, subject line (Re:), body, close, signature + job title, Enc.",
+        "Date with the month in letters: 15 October 2026 (UK) / October 15, 2026 (US); 10/03/2026 = 10 March UK but 3 October US",
+        "Softening: Could you...? We would be grateful if... It appears that... Unfortunately... I'm afraid we are unable to...",
+        "Cycle: enquiry -> offer/quotation -> order + acknowledgement -> complaint + adjustment -> reminders",
+        "Offer: price, currency, Incoterm and place, payment, delivery, discounts, validity ('This offer is valid until...')",
+        "Reminders escalate: courteous (oversight) -> firm (refers to first) -> final demand (deadline + measures)",
+        "E-mail: precise subject line, main message first, clear request + deadline, Best/Kind regards; no capitals, no irony"
+      ],
+      "formules": [
+        "Dear Sir or Madam, ... Yours faithfully, (name unknown)",
+        "Dear Ms Lee, ... Yours sincerely, (name known); US: Sincerely, + 'Dear Mr. Brown:'",
+        "We look forward to hearing from you. (replaces 'Je vous prie d'agréer...')",
+        "Unless payment is received within 10 days, we shall be obliged to place the matter in the hands of our solicitors."
+      ],
+      "distinctions": [
+        { "a": "Yours faithfully", "b": "Yours sincerely", "difference": "Recipient unknown (Dear Sir or Madam) vs named recipient (Dear Ms Jones)." },
+        { "a": "Quotation", "b": "Estimate", "difference": "Exact price vs approximate, indicative figure." },
+        { "a": "Please find attached", "b": "Please find enclosed", "difference": "Attached file (e-mail) vs paper document (letter)." },
+        { "a": "Enquiry", "b": "Order", "difference": "A request for information does not commit the buyer; an order is firm." }
+      ],
+      "memo": "Faithfully goes with the faceless 'Sir or Madam'; sincerely with a name.",
+      "questions": [
+        { "q": "Rewrite 'You have not paid invoice 2041' politely.", "r": "According to our records, invoice No. 2041 remains unpaid. We would be grateful if you could look into this matter." },
+        { "q": "What does an enquiry contain?", "r": "Source of contact, brief company presentation, precise request (prices, terms, lead times, discounts, samples), prospect of an order, closing formula." },
+        { "q": "Structure of a reply to a justified complaint?", "r": "Thank, apologise, briefly explain the cause, offer a concrete solution (replacement, credit note), reassure about the future." },
+        { "q": "What limits a firm offer's commitment?", "r": "'Subject to availability' or 'without engagement'; a firm offer is binding for its validity period." }
+      ]
+    },
+    {
+      "chapitre": "aec.lexique",
+      "titre": "Vocabulary",
+      "idee": "Know the core terms of company, finance, trade, marketing and economics, avoid false friends and write numbers and trends the English way.",
+      "points": [
+        "Company: Ltd (private), plc (public, may be listed), Inc./LLC (US); board of directors, CEO, MD (UK); shareholder, stakeholder, subsidiary",
+        "Finance: balance sheet, income statement / P&L, assets, liabilities, equity, accounts receivable/payable, net profit / net income",
+        "Trade: freight forwarder, carrier, shipper/consignee, bill of lading (B/L), air waybill, packing list, customs clearance, letter of credit",
+        "Marketing: market share, target market, 4 Ps (product, price, place, promotion), USP, skimming / penetration pricing",
+        "Economics: GDP, fiscal policy (= budget), monetary policy, key interest rate, trade surplus, supply chain",
+        "Numbers: 1,250.50 (decimal point, comma for thousands); billion = milliard; rise BY (difference) / rise TO (level)",
+        "Trends: soar/rocket (sharp rise), plummet/slump (sharp fall), level off, peak, fluctuate"
+      ],
+      "distinctions": [
+        { "a": "Per cent", "b": "Percentage point", "difference": "4% -> 5% = +1 percentage point, i.e. +25%." },
+        { "a": "Depreciation", "b": "Impairment / write-down", "difference": "Amortissement (tangible) vs French 'dépréciation'." },
+        { "a": "Advertising (uncountable)", "b": "An advertisement / an ad", "difference": "The activity vs a single ad; never 'an advertising'." },
+        { "a": "Turnover", "b": "Staff turnover", "difference": "Chiffre d'affaires (UK) vs rotation du personnel." }
+      ],
+      "memo": "False friends: actually = en fait, eventually = finalement, sensible = raisonnable, to attend = assister à, library = bibliothèque.",
+      "questions": [
+        { "q": "Translate: chiffre d'affaires, actionnaire, bilan, transitaire, connaissement.", "r": "Turnover (UK) / revenue (US), shareholder, balance sheet, freight forwarder, bill of lading." },
+        { "q": "What is 'fiscal policy'?", "r": "Politique budgétaire (government budget), not politique fiscale (tax policy)." },
+        { "q": "Correct: 'Sales rose to 10%' vs 'Sales rose by 10%'.", "r": "By = the size of the change; to = the level reached." },
+        { "q": "How do you say 'actuellement' and 'éventuellement'?", "r": "Currently / at present; possibly." }
+      ]
+    },
+    {
+      "chapitre": "aec.presse",
+      "titre": "The business press",
+      "idee": "Read in passes (skim, scan, detailed) to separate facts from opinions, then summarise objectively in your own words with reporting verbs.",
+      "points": [
+        "Identify source, date, type (news, analysis, op-ed) and editorial stance",
+        "Skimming: headline, standfirst, subheadings, first sentence of each paragraph",
+        "Scanning: figures, names, places, dates; then detailed reading of arguments and logical connectors",
+        "Claim, argue, warn signal an attributed opinion, not a fact",
+        "Synthesis: intro sentence ('The documents deal with...'), thematic plan comparing sources, rephrase, brief conclusion",
+        "No personal opinion unless instructed; respect the length"
+      ],
+      "formules": [
+        "Both documents agree that... / Unlike document 1, document 2...",
+        "According to..., the author argues / points out / warns that...",
+        "All in all, the documents show that..."
+      ],
+      "distinctions": [
+        { "a": "Skimming", "b": "Scanning", "difference": "Survey for the general topic vs search for specific data." }
+      ],
+      "questions": [
+        { "q": "What do you read when skimming?", "r": "Headline, standfirst, subheadings, first sentence of each paragraph." },
+        { "q": "Three rules of a synthesis in English?", "r": "Thematic structure comparing sources, rephrasing (no copying), no personal opinion unless asked." },
+        { "q": "Name four reporting verbs.", "r": "State, argue, claim, point out (also warn, highlight)." }
+      ]
+    },
+    {
+      "chapitre": "aec.grammaire",
+      "titre": "Useful grammar",
+      "idee": "Four structures carry business English: modals for politeness and obligation, the passive for processes, conditionals for terms, and the present perfect / simple past contrast.",
+      "points": [
+        "Modals + bare infinitive, no -s: could/would (polite request), must (obligation), should (advice), may/might (possibility), shall (contract)",
+        "Passive = be (in the tense) + past participle: 'Your order has been received'; agent with by",
+        "'On nous a envoyé' = 'We were sent' (recipient becomes subject)",
+        "Type 1: if + present, will; Type 2: if + past, would; Type 3: if + past perfect, would have + pp",
+        "Never will/would in the if-clause; 'Should you need...' = elegant if; unless = except if",
+        "Simple past with yesterday, ago, last, in 2020; present perfect with since, for, yet, already, so far, this year"
+      ],
+      "formules": [
+        "If you order 500 units, we will give you a 5% discount.",
+        "We have worked with them since 2018 (not 'We work with them since 2018')."
+      ],
+      "distinctions": [
+        { "a": "Mustn't", "b": "Don't have to / needn't", "difference": "Prohibition vs absence of obligation." },
+        { "a": "Simple past", "b": "Present perfect", "difference": "Finished, dated past vs link with the present (result, ongoing duration, review)." }
+      ],
+      "questions": [
+        { "q": "'You mustn't sign' vs 'You don't have to sign'?", "r": "Forbidden to sign vs no need to sign." },
+        { "q": "Translate 'Nous travaillons avec eux depuis 2018'.", "r": "We have worked / have been working with them since 2018." },
+        { "q": "Correct 'If you will order by Friday, we ship Monday'.", "r": "If you order by Friday, we will ship on Monday." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "Dear Sir or Madam -> Yours faithfully; Dear Ms X -> Yours sincerely; US: Sincerely",
+    "Letter order: letterhead, date, inside address, salutation, Re:, body, close, signature, Enc.",
+    "We would be grateful if you could... / Could you please...? / We look forward to hearing from you.",
+    "Cycle: enquiry, quotation, order, acknowledgement, complaint, adjustment, reminder, final demand",
+    "Please find attached (file) / enclosed (paper)",
+    "Ltd = private, plc = public; turnover (UK) = revenue (US); shareholder vs stakeholder",
+    "Balance sheet, income statement (P&L), assets, liabilities, equity, receivables, payables",
+    "Freight forwarder, carrier, shipper, consignee, B/L, AWB, packing list, customs clearance, L/C",
+    "False friends: actually, eventually, sensible, to attend, library, fabric, commodity, fiscal",
+    "1,250.50; billion = milliard; rise by / rise to; percentage point vs per cent",
+    "Conditionals: if + present / will; if + past / would; if + past perfect / would have",
+    "Since/for/yet/already -> present perfect; ago/last/yesterday -> simple past"
+  ],
+  "pieges": [
+    "Ending 'Dear Sir or Madam' with 'Yours sincerely' (should be 'Yours faithfully').",
+    "Translating French closing formulas word for word instead of a forward-looking sentence + standard close.",
+    "Writing the date in figures only (10/03/2026 is ambiguous between UK and US).",
+    "Confusing mustn't (prohibition) with don't have to (no obligation).",
+    "Using will in the if-clause, or the present simple with since ('We work here since 2018').",
+    "Taking actually, eventually, fiscal or sensible at face value (false friends)."
+  ]
+}

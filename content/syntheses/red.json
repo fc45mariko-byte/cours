@@ -1,0 +1,100 @@
+{
+  "matiere": "red",
+  "titre": "Initiation à la recherche et rédaction universitaire",
+  "essentiel": "Un travail universitaire repose sur trois savoir-faire : trouver et évaluer des sources fiables (primaires, secondaires, tertiaires), construire une démonstration (problématique, plan argumentatif, paragraphes AEI, introduction et conclusion) et attribuer chaque emprunt à sa source selon une norme bibliographique homogène, pour éviter le plagiat.",
+  "chapitres": [
+    {
+      "chapitre": "red.sources",
+      "titre": "Sources",
+      "idee": "On distingue sources primaires, secondaires et tertiaires, on évalue leur fiabilité par une grille de questions, et on mène une recherche organisée en notant tout de suite les références.",
+      "points": [
+        "Primaire : données brutes, textes officiels, statistiques, entretiens, documents d'entreprise (preuves)",
+        "Secondaire : analyses, manuels, articles scientifiques qui interprètent les primaires (cadre théorique)",
+        "Tertiaire : encyclopédies, vulgarisation : première approche, à dépasser ; presse : vérifier les chiffres à la source",
+        "Fiabilité : Qui ? Quand ? Pourquoi ? Comment ? Confirmé ? (auteur, date, objectif, méthode, recoupement)",
+        "Recherche : mots-clés multilingues, catalogue de la BU et bases de données, opérateurs ET, OU, SAUF, guillemets",
+        "Noter la référence complète et la date de consultation dès la lecture ; méthode « boule de neige » par les bibliographies",
+        "Les sources d'un rapport ne peuvent pas se limiter à des sites Internet (livret de stage d'Orléans)"
+      ],
+      "distinctions": [
+        { "a": "Source citée par un site", "b": "Source consultée", "difference": "On ne cite comme consultée que la source réellement lue ; sinon on indique « cité par »." },
+        { "a": "Moteur de recherche généraliste", "b": "Base de données universitaire", "difference": "La seconde donne accès à des documents évalués et à des références complètes." }
+      ],
+      "memo": "Les 5 questions du journaliste critique : Qui, Quand, Pourquoi, Comment, Confirmé ?",
+      "questions": [
+        { "q": "Statistiques douanières, article de revue, encyclopédie : quel type de source ?", "r": "Primaire, secondaire, tertiaire." },
+        { "q": "Quels critères pour évaluer la fiabilité d'une source ?", "r": "Auteur et compétence, éditeur ou institution, date, objectif (informer, convaincre, vendre), méthode et sources citées, relecture par les pairs, cohérence avec d'autres sources." },
+        { "q": "À quoi servent les opérateurs booléens ?", "r": "Combiner les mots-clés : ET restreint, OU élargit, SAUF exclut ; les guillemets cherchent une expression exacte." }
+      ]
+    },
+    {
+      "chapitre": "red.argumentation",
+      "titre": "Argumentation",
+      "idee": "Un devoir démontre : une problématique (question qui révèle une tension) commande un plan en 2 ou 3 parties à titres argumentatifs, développé en paragraphes AEI et encadré par une introduction et une conclusion.",
+      "points": [
+        "Problématique : définir les termes, délimiter le champ, repérer un enjeu ou un paradoxe, poser une question ouverte (« Dans quelle mesure… ? »)",
+        "Plans : analytique (constat, causes, solutions), dialectique (thèse, antithèse, dépassement), thématique (aspects hiérarchisés)",
+        "Titres argumentatifs (qui affirment) et non rubriques ; transitions entre les parties",
+        "Paragraphe AEI (PEEL) : Affirmation, Exemple sourcé, Interprétation, puis liaison ; une seule idée par paragraphe",
+        "Introduction en 5 temps : amorce, définitions, délimitation et enjeux, problématique, annonce du plan",
+        "Conclusion : bilan, réponse claire à la problématique, ouverture ; aucune idée nouvelle",
+        "Note de synthèse : objective, confronte les documents (Doc. 1, Doc. 2) dans un plan thématique, sans opinion ni information extérieure"
+      ],
+      "distinctions": [
+        { "a": "Problématique", "b": "Sujet reformulé en question", "difference": "« Qu'est-ce que le Mercosur ? » appelle une description, pas une démonstration." },
+        { "a": "Synthèse", "b": "Résumé successif des documents", "difference": "La synthèse croise les documents dans chaque partie au lieu de les résumer un par un." },
+        { "a": "Ouverture", "b": "Nouvel argument", "difference": "L'ouverture élargit ; elle n'ajoute pas une preuve oubliée." }
+      ],
+      "memo": "AEI = Affirmer, Exemplifier, Interpréter (PEEL : Point, Evidence, Explanation, Link).",
+      "questions": [
+        { "q": "Quels sont les cinq temps de l'introduction ?", "r": "Amorce, présentation et définition des termes, délimitation et enjeux, problématique, annonce du plan." },
+        { "q": "Pourquoi un exemple seul ne suffit-il pas ?", "r": "Un exemple non relié à l'idée ne prouve rien : il faut l'interpréter pour montrer en quoi il soutient l'affirmation." },
+        { "q": "Donnez des connecteurs d'opposition et de conséquence.", "r": "Opposition : cependant, toutefois, en revanche, néanmoins. Conséquence : donc, ainsi, par conséquent, c'est pourquoi." },
+        { "q": "Quelles sont les règles de la note de synthèse ?", "r": "Objectivité, aucune information extérieure ni opinion, confrontation des documents dans un plan thématique, citation des documents, longueur imposée." }
+      ]
+    },
+    {
+      "chapitre": "red.attribution",
+      "titre": "Citer et référencer",
+      "idee": "Toute idée, donnée ou formulation empruntée doit être attribuée à sa source, selon une norme bibliographique appliquée de façon homogène ; sinon c'est du plagiat.",
+      "points": [
+        "Citation : mots exacts entre guillemets, avec référence et page ; courte, intégrée et commentée ; coupure signalée par […]",
+        "Paraphrase : idée reformulée avec ses propres mots et sa propre structure ; référence obligatoire",
+        "Seule exception : la connaissance générale (« Paris est la capitale de la France »)",
+        "Plagiat : copier-coller non signalé, paraphrase sans référence, traduction présentée comme sienne, auto-plagiat ; fraude sanctionnée",
+        "Normes : ISO 690 (numérique ou auteur-date), APA (auteur-date), notes de bas de page (droit, histoire) ; suivre celle demandée",
+        "Ouvrage : NOM P., Titre, lieu, éditeur, année, pages ; site : auteur, « titre », site, URL, consulté le jj/mm/aaaa",
+        "Bibliographie classée par ordre alphabétique des auteurs ; les sites y figurent selon les mêmes principes"
+      ],
+      "distinctions": [
+        { "a": "Paraphrase", "b": "Remplacement de quelques mots par des synonymes", "difference": "Garder la structure d'origine en changeant quelques mots reste du plagiat." },
+        { "a": "Traduire un texte", "b": "Produire un texte original", "difference": "La traduction reste l'œuvre de l'auteur original : il faut le citer (« notre traduction »)." }
+      ],
+      "questions": [
+        { "q": "Une paraphrase doit-elle être référencée ?", "r": "Oui : toute idée empruntée doit être attribuée, même reformulée. Seule la connaissance générale en est dispensée." },
+        { "q": "Citez quatre formes de plagiat.", "r": "Copier-coller non signalé, paraphrase sans référence, traduction présentée comme personnelle, auto-plagiat (ou reprise de documents internes sans citation)." },
+        { "q": "Comment se présente un appel de référence en style auteur-date ?", "r": "(Nom, année, page) dans le texte, renvoyant à la bibliographie." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "Sources primaires (données brutes), secondaires (analyses), tertiaires (encyclopédies)",
+    "Fiabilité : Qui ? Quand ? Pourquoi ? Comment ? Confirmé ?",
+    "Opérateurs : ET, OU, SAUF ; guillemets = expression exacte",
+    "Problématique = question ouverte qui révèle une tension, un paradoxe ou un enjeu",
+    "Plans : analytique, dialectique, thématique ; 2 ou 3 parties à titres argumentatifs",
+    "Paragraphe AEI : Affirmation, Exemple, Interprétation (+ liaison)",
+    "Introduction : amorce, définitions, délimitation et enjeux, problématique, annonce du plan",
+    "Conclusion : bilan, réponse, ouverture, sans idée nouvelle",
+    "Citation = mots exacts entre guillemets + référence ; coupure […]",
+    "Normes : ISO 690, APA, notes de bas de page ; une seule, appliquée de façon homogène"
+  ],
+  "pieges": [
+    "Reformuler le sujet en question descriptive (« Qu'est-ce que… ? ») au lieu d'une vraie problématique",
+    "Donner des titres rubriques (« Les avantages ») au lieu de titres argumentatifs",
+    "Croire qu'une paraphrase ou une traduction dispense de citer la source",
+    "Ajouter un argument nouveau en conclusion, ou une opinion personnelle dans une note de synthèse",
+    "Résumer les documents un par un dans une note de synthèse au lieu de les confronter",
+    "Citer comme consultée une source seulement lue chez un autre auteur (indiquer « cité par »)"
+  ]
+}

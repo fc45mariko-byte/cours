@@ -1,0 +1,145 @@
+{
+  "matiere": "stg",
+  "titre": "Stage et rapport de stage",
+  "essentiel": "Le stage de L3 LEA Commerce international (Orléans, livret 2021-2022) dure 210 heures, vaut 8 ECTS et doit répondre à une problématique de gestion ou de langues, pas raconter des tâches. Il est encadré par une convention signée avant le début, donne lieu à un rapport de 25-30 pages avec note de synthèse et à une soutenance, et se valide à 50/100 sans compensation.",
+  "chapitres": [
+    {
+      "chapitre": "stg.cadre",
+      "titre": "Cadre du stage",
+      "idee": "Le stage vise à résoudre un problème concret de l'organisme et ne peut commencer qu'après la signature de la convention par toutes les parties.",
+      "points": [
+        "210 heures : 6 semaines de 35 h ou « filé » sur l'année, de septembre au 30 juin ; 8 ECTS",
+        "Contenus : observation, action professionnelle, remplacement (acceptable en licence), mission (demande précise, souvent un rapport)",
+        "Thème lié aux cours (langues, marketing, gestion, TCI, droit), fixé par l'étudiant, le tuteur et la direction du parcours",
+        "Démarches : fiche de renseignement signée (organisme + tuteur) + attestation de responsabilité civile → BSIP → convention signée par tous, en dernier le directeur de l'UFR",
+        "Gratification obligatoire au-delà de 2 mois (308 heures) dans le même organisme : min. 15 % du plafond horaire de la sécurité sociale",
+        "Étranger : convention traduite, assurance rapatriement, visa, formalités accidents du travail 3 semaines avant ; aides : Erasmus+, Mobi-Centre"
+      ],
+      "formules": [
+        "210 h = 6 semaines × 35 h",
+        "Gratification obligatoire si > 2 mois, soit > 308 h"
+      ],
+      "distinctions": [
+        { "a": "Convention de stage", "b": "Attestation de stage", "difference": "La convention est signée avant le début et autorise le stage ; l'attestation, remise à la fin, récapitule durée et gratification." },
+        { "a": "Exécuter des tâches", "b": "Résoudre une problématique", "difference": "Le rapport montre l'analyse d'un problème et des propositions, pas un récit jour après jour." }
+      ],
+      "questions": [
+        { "q": "Durée et crédits du stage de L3 ?", "r": "210 heures (6 × 35 h ou filé), 8 ECTS." },
+        { "q": "Peut-on commencer avant la signature de la convention ?", "r": "Non : sans convention signée, pas de statut de stagiaire ni de couverture." },
+        { "q": "Un stage de 210 h doit-il être gratifié ?", "r": "Non, la gratification n'est obligatoire qu'au-delà de 2 mois (308 h) dans le même organisme." }
+      ]
+    },
+    {
+      "chapitre": "stg.recherche",
+      "titre": "Recherche de stage",
+      "idee": "Une candidature efficace (CV d'une page + lettre vous/moi/nous) montre ce que l'on apporte à l'entreprise, preuves à l'appui, pour obtenir un entretien.",
+      "points": [
+        "CV d'une page : titre précisant le stage recherché, formation, expériences, langues (niveau CECRL), compétences",
+        "Valoriser les expériences même modestes par des résultats chiffrés",
+        "Lettre : vous (besoins de l'entreprise) → moi (ce que j'apporte, preuves) → nous (proposition de rencontre)",
+        "Adapter chaque envoi (entreprise, pays, langue) ; relancer une à deux semaines après",
+        "Le BSIP peut relire CV et lettre"
+      ],
+      "distinctions": [
+        { "a": "CV britannique", "b": "Résumé américain", "difference": "CV souvent sans photo ni date de naissance ; résumé d'une page très orienté résultats : adapter au pays." }
+      ],
+      "memo": "Lettre en VMN : Vous, Moi, Nous.",
+      "questions": [
+        { "q": "Structure de la lettre de motivation ?", "r": "Vous (l'entreprise et ses besoins), moi (ce que j'apporte, avec preuves), nous (proposition d'entretien)." },
+        { "q": "Pourquoi une lettre identique envoyée à 50 entreprises échoue-t-elle ?", "r": "Elle est générique et centrée sur l'étudiant, pas sur les besoins de l'entreprise." }
+      ]
+    },
+    {
+      "chapitre": "stg.rapport",
+      "titre": "Le rapport",
+      "idee": "Le rapport répond à une problématique issue d'un problème réel, par une démonstration en trois parties appuyée sur des faits et des références, résumée dans une note de synthèse obligatoire.",
+      "points": [
+        "Problématique : question ouverte (« Comment… ? », « Dans quelle mesure… ? »), précise, réaliste, utile ; validée avec tuteur et maître de stage ; carnet de bord dès le début",
+        "Structure : page de garde, remerciements, sommaire paginé, note de synthèse (1 page), introduction, développement (idéalement 3 parties), conclusion avec ouverture, annexes numérotées, bibliographie alphabétique",
+        "25 à 30 pages hors annexes ; présentation de l'organisme succincte, dans l'introduction ; introduction rédigée en dernier",
+        "Note de synthèse : contexte, problème, démarche, résultats chiffrés, propositions ; n'annonce pas le plan ; en langue étrangère si stage à l'étranger",
+        "Forme : Arial 10 ou Times New Roman 12, interligne 1,5, justifié, paginé ; tout référencer (même interne), site + date de consultation, pas que Internet",
+        "Confidentiel : anonymiser avec le maître de stage, couverture blanche (aveugle), signaler au tuteur et au bureau des stages",
+        "Erreurs : récit chronologique, posture de sauveur, documents internes copiés (plagiat), tout est parfait, remplissage"
+      ],
+      "distinctions": [
+        { "a": "Thème", "b": "Problématique", "difference": "« L'export vers l'Espagne » délimite un domaine ; « Comment réduire les litiges à l'export vers l'Espagne ? » appelle une démonstration et des propositions." },
+        { "a": "Note de synthèse", "b": "Introduction", "difference": "La note donne les résultats ; l'introduction annonce la démarche et le plan." },
+        { "a": "Rapport de stage", "b": "Mémoire de recherche", "difference": "Le rapport est lié à la mission et débouche sur des propositions opérationnelles, avec une dimension théorique référencée." }
+      ],
+      "memo": "Plan interdit : « Entreprise / Mes missions / Mes apports » = compte rendu, « ne saurait valoir la note moyenne de 10 ».",
+      "questions": [
+        { "q": "Donnez la liste ordonnée des éléments du rapport.", "r": "Page de garde, remerciements, sommaire, note de synthèse, introduction, développement, conclusion, annexes, bibliographie." },
+        { "q": "Que contient la note de synthèse ?", "r": "Sur une page : contexte, problématique, démarche, résultats chiffrés et propositions, sans annonce de plan." },
+        { "q": "Faut-il référencer seulement les citations ?", "r": "Non : toute information empruntée, même de source interne ; site avec adresse et date de consultation." },
+        { "q": "Règles de mise en page ?", "r": "Arial 10 ou Times New Roman 12, interligne 1,5, texte justifié, pagination obligatoire." }
+      ]
+    },
+    {
+      "chapitre": "stg.soutenance",
+      "titre": "La soutenance",
+      "idee": "La soutenance synthétise démarche, résultats et recul devant un jury qui a déjà lu le rapport : on ne le relit pas.",
+      "points": [
+        "Jury : enseignant-tuteur + au moins un représentant de l'organisme (à défaut, un second enseignant)",
+        "15 à 20 min d'exposé + 10 à 15 min de questions ; possible dans la langue du pays pour un stage à l'étranger",
+        "Plan : contexte et problématique ; démarche ; résultats et propositions ; limites et bilan personnel",
+        "Support sobre (PDF de préférence), une idée par diapositive ; s'entraîner chronométré, enregistré ou filmé",
+        "Vérifier le matériel ; anticiper les questions (choix de la problématique, chiffres, limites) ; faire reformuler une question"
+      ],
+      "formules": [
+        "Exposé 15-20 min + questions 10-15 min"
+      ],
+      "distinctions": [
+        { "a": "Résumer le rapport page après page", "b": "Synthétiser démarche et résultats", "difference": "L'oral apporte une valeur ajoutée : hiérarchisation, recul, difficultés, échange." }
+      ],
+      "questions": [
+        { "q": "Composition du jury et durées ?", "r": "Tuteur + représentant de l'organisme ; exposé 15-20 min, questions 10-15 min." },
+        { "q": "Que ne faut-il surtout pas faire à l'oral ?", "r": "Lire des paragraphes du rapport (le jury l'a lu) ou dépasser le temps imparti." }
+      ]
+    },
+    {
+      "chapitre": "stg.evaluation",
+      "titre": "Évaluation",
+      "idee": "Le stage est noté sur 100 (20 organisme, 40 rapport, 40 soutenance), validé à 50, et n'est pas compensable.",
+      "points": [
+        "20 pts : organisme d'accueil (grille du maître de stage) ; 40 pts : rapport ; 40 pts : soutenance",
+        "Validation à partir de 50/100",
+        "UE de stage hors compensation : n'entre pas dans la moyenne du semestre ; diplôme délivré seulement après validation",
+        "Rapport noté sur : présentation et expression, plan, analyse et synthèse, valeur des propositions, caractère scientifique",
+        "Remettre le rapport au tuteur au moins 10 jours avant la soutenance ; vérifier l'envoi de la grille de l'organisme"
+      ],
+      "formules": [
+        "Note = organisme /20 + rapport /40 + soutenance /40 = /100 ; validé si ≥ 50",
+        "Ex. : 15 + 21 + 17 = 53 → validé ; 15 + 14 + 17 = 46 → non validé"
+      ],
+      "distinctions": [
+        { "a": "UE de stage", "b": "Autres UE", "difference": "Les autres UE se compensent entre elles ; le stage non : une bonne moyenne ne le rattrape pas." }
+      ],
+      "memo": "20-40-40, seuil 50 : « 2-4-4, moitié pour passer ».",
+      "questions": [
+        { "q": "Répartition des 100 points ?", "r": "20 organisme, 40 rapport, 40 soutenance ; validation à 50." },
+        { "q": "Une excellente moyenne générale rattrape-t-elle un stage à 46/100 ?", "r": "Non : l'UE de stage est exclue de la compensation." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "210 h (6 × 35 h ou filé), septembre au 30 juin, 8 ECTS",
+    "Objectif : réponses efficaces à une problématique de gestion ou de langues",
+    "4 contenus : observation, action professionnelle, remplacement, mission",
+    "Convention signée par tous avant le début ; attestation de responsabilité civile ; BSIP",
+    "Gratification obligatoire au-delà de 2 mois / 308 h, min. 15 % du plafond horaire de la sécurité sociale",
+    "Lettre vous / moi / nous ; CV d'une page, langues au niveau CECRL",
+    "Rapport 25-30 pages hors annexes, note de synthèse d'une page obligatoire, idéalement 3 parties",
+    "Arial 10 ou Times 12, interligne 1,5, justifié, paginé ; bibliographie alphabétique",
+    "Soutenance : 15-20 min + 10-15 min de questions ; rapport remis au tuteur 10 jours avant",
+    "Barème : 20 organisme + 40 rapport + 40 soutenance ; validation à 50/100 ; non compensable"
+  ],
+  "pieges": [
+    "Faire un plan « entreprise / missions / apports » : c'est un compte rendu, pas un rapport.",
+    "Confondre thème et problématique, ou note de synthèse (résultats) et introduction (plan).",
+    "Commencer le stage avant la signature de la convention, ou confondre convention et attestation.",
+    "Ne référencer que les citations entre guillemets ou copier des documents internes : plagiat.",
+    "Croire que la moyenne générale rattrape un stage non validé.",
+    "Relire le rapport pendant la soutenance ou se présenter en sauveur de l'entreprise."
+  ]
+}

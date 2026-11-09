@@ -1,0 +1,216 @@
+{
+  "matiere": "cva",
+  "titre": "American civilization: advertising and marketing, the essentials",
+  "essentiel": "Modern advertising was born in the United States after the Civil War: mass production and a national market forced manufacturers to create demand and brand loyalty. It then professionalized (agencies, reason-why, PR), learned to measure itself (Gallup, Nielsen), boomed with television (USP, creative revolution), was regulated (FTC, tobacco) and fragmented into segments and digital targeting. Know dates, names, campaigns; analyze ads in context.",
+  "chapitres": [
+    {
+      "chapitre": "cva.naissance",
+      "titre": "The birth of advertising",
+      "idee": "When mass production outran local demand, advertising shifted from announcing products to creating demand and building brands, carried by professional agencies and public relations.",
+      "points": [
+        "Supply exceeds demand; national market unified by railroad, telegraph, mail",
+        "National packaged brands replace bulk goods; national magazines financed by ads; catalogs (Montgomery Ward, Sears)",
+        "Key shift: informational (announcement) → persuasive advertising (create demand, brand loyalty)",
+        "N. W. Ayer & Son: agency serves the advertiser (open contract, transparent commission, creative work)",
+        "Reason-why (Kennedy, Lasker, Hopkins at Lord & Thomas): give concrete reasons to buy; Hopkins: test ads, coupons, precise facts",
+        "Atmosphere school (MacManus, Cadillac 'The Penalty of Leadership', 1915): image, emotion, prestige",
+        "Bernays (Freud's nephew): PR shapes opinion via press, events, experts; 'torches of freedom' (1929) for American Tobacco"
+      ],
+      "dates": [
+        { "date": "1869", "fait": "N. W. Ayer & Son founded in Philadelphia" },
+        { "date": "1879 / 1886 / 1898", "fait": "Ivory soap (P&G) / Coca-Cola / Uneeda biscuits" },
+        { "date": "1883", "fait": "Ladies' Home Journal" },
+        { "date": "1899", "fait": "Ayer's Uneeda campaign for the National Biscuit Company" },
+        { "date": "1904", "fait": "Lasker adopts Kennedy's 'salesmanship in print'" },
+        { "date": "1906", "fait": "Pure Food and Drug Act (patent medicines); Ivy Lee's Declaration of Principles" },
+        { "date": "1917-1919", "fait": "Bernays at the Creel Committee (Committee on Public Information)" },
+        { "date": "1923 / 1928 / 1947", "fait": "Hopkins 'Scientific Advertising' and Bernays 'Crystallizing Public Opinion' / 'Propaganda' / 'engineering of consent'" }
+      ],
+      "distinctions": [
+        { "a": "Reason-why (rational argument)", "b": "Atmosphere (suggestion, prestige)", "difference": "Rival schools that resurface later as USP vs creative revolution." },
+        { "a": "Advertising (paid space, identified sender, sells a product)", "b": "Public relations (press, events, opinion leaders)", "difference": "PR targets image and opinion through unpaid, often indirect channels." }
+      ],
+      "memo": "A-L-H: Ayer builds the agency, Lasker sells in print, Hopkins measures; Bernays works behind the scenes.",
+      "questions": [
+        { "q": "Why was modern advertising born in the US at the end of the 19th century?", "r": "Mass production exceeded local demand in a national market (rail, mail, telegraph): ads had to create demand and brand loyalty." },
+        { "q": "What is 'salesmanship in print'?", "r": "Kennedy's formula adopted by Lasker in 1904: advertising is selling in writing (reason-why copy)." },
+        { "q": "What did Hopkins recommend in 'Scientific Advertising' (1923)?", "r": "Test ads and measure results (reply coupons); prefer precise facts to vague formulas." },
+        { "q": "Name Bernays's two books and his 1929 stunt.", "r": "'Crystallizing Public Opinion' (1923), 'Propaganda' (1928); 'torches of freedom' in the New York Easter Parade." }
+      ]
+    },
+    {
+      "chapitre": "cva.mesure",
+      "titre": "Measurement",
+      "idee": "From the 1920s, advertisers measured audiences and effectiveness: representative samples (Gallup) and ratings (Nielsen) became the currency of the advertising market.",
+      "points": [
+        "Gallup: sample surveys applied to ad readership at Young & Rubicam",
+        "1936: Gallup's representative sample predicts Roosevelt's reelection; Literary Digest's huge mail survey (well-off households) gets it wrong",
+        "Nielsen: radio then TV ratings via the Audimeter; ratings set the price of space",
+        "Dichter's motivation research (1950s): psychoanalysis applied to consumption",
+        "Packard denounces it in 'The Hidden Persuaders' (1957)",
+        "Market research = quantitative (polls, ratings) + qualitative (interviews, groups)"
+      ],
+      "dates": [
+        { "date": "1923", "fait": "Arthur C. Nielsen founds his company" },
+        { "date": "1932", "fait": "Gallup hired by Young & Rubicam" },
+        { "date": "1935", "fait": "Gallup founds the American Institute of Public Opinion" },
+        { "date": "1936", "fait": "Gallup correctly forecasts Roosevelt's reelection" },
+        { "date": "1957", "fait": "Packard, 'The Hidden Persuaders'" }
+      ],
+      "distinctions": [
+        { "a": "Large sample (Literary Digest)", "b": "Representative sample (Gallup)", "difference": "Representativeness, not size, makes a poll reliable." }
+      ],
+      "memo": "Gallup counts opinions, Nielsen counts TV sets, Dichter digs into the unconscious, Packard blows the whistle.",
+      "questions": [
+        { "q": "Why did Gallup beat the Literary Digest in 1936?", "r": "His sample, though smaller, was representative; the Digest surveyed mainly well-off households." },
+        { "q": "What did Nielsen measure and why did it matter?", "r": "Radio then TV audiences (Audimeter); ratings set the price of advertising space." },
+        { "q": "Match Dichter and Packard.", "r": "Dichter: motivation research (1950s); Packard: its critique in 'The Hidden Persuaders' (1957)." }
+      ]
+    },
+    {
+      "chapitre": "cva.age-or",
+      "titre": "The golden age",
+      "idee": "Television made advertising the engine of postwar mass consumption: first the repeated USP of the 1950s, then the witty, ironic creative revolution of the 1960s.",
+      "points": [
+        "TV in households: under 10% in 1950, nearly 90% in 1960",
+        "Sponsorship (one advertiser controls a program) → spots sold by networks after the quiz show scandals (1958-1959)",
+        "USP (Rosser Reeves, Ted Bates): a concrete proposition, unique, strong enough to make people switch, repeated (M&M's)",
+        "Bernbach (DDB, 1949): copywriter + art director team, humor, apparent honesty, reader's intelligence",
+        "DDB: Volkswagen 'Think Small' (1959), Avis 'We try harder' (1962)",
+        "Ogilvy: brand image (Hathaway man, 1951; Rolls-Royce, 1958); Leo Burnett: Marlboro Man (1955)",
+        "Thomas Frank: 'hip consumerism', ads co-opt counterculture codes (nonconformism, irony)"
+      ],
+      "dates": [
+        { "date": "1952", "fait": "Reeves's 'Eisenhower Answers America' spots: TV ads enter presidential campaigns" },
+        { "date": "1958-1959", "fait": "Quiz show scandals: end of sponsorship, rise of spots" },
+        { "date": "1959", "fait": "VW 'Think Small' (DDB)" },
+        { "date": "1961", "fait": "Reeves, 'Reality in Advertising' formalizes the USP" },
+        { "date": "1962", "fait": "Avis 'We try harder'" }
+      ],
+      "distinctions": [
+        { "a": "1950s USP: serious, repetitive; reader convinced by repetition", "b": "Creative revolution: humor, irony; reader intelligent and complicit", "difference": "Opposite tone and organization (separate copywriter and designer vs creative team)." },
+        { "a": "USP", "b": "Any slogan", "difference": "The USP must state a distinctive benefit, not just a catchy phrase." },
+        { "a": "Creative revolution (ad style)", "b": "Counterculture (social movement)", "difference": "For Frank, advertising appropriated counterculture codes rather than being part of it." }
+      ],
+      "memo": "M&M's melts in your mouth (one message, hammered) vs the tiny Beetle in a sea of white space (a wink).",
+      "questions": [
+        { "q": "What are the components of the USP?", "r": "A concrete proposition, unique to the brand, strong enough to win new customers, repeated relentlessly (Reeves, 1961)." },
+        { "q": "Why did networks switch from sponsorship to spots?", "r": "The rigged quiz show scandals (1958-1959) discredited advertisers' control of programs." },
+        { "q": "Name two DDB campaigns with dates.", "r": "Volkswagen 'Think Small' (1959) and Avis 'We try harder' (1962)." },
+        { "q": "What is 'hip consumerism'?", "r": "Thomas Frank: consumption presented as nonconformist and rebellious, co-opting counterculture codes." }
+      ]
+    },
+    {
+      "chapitre": "cva.regulation",
+      "titre": "Regulation",
+      "idee": "US advertising is regulated by the FTC against deceptive practices but protected as commercial speech by the First Amendment; tobacco shows the step-by-step tightening.",
+      "points": [
+        "FTC created in 1914 for unfair competition; Wheeler-Lea Act (1938) adds deceptive practices toward consumers",
+        "FTC tools: substantiation of claims (1972), corrective advertising (Listerine, 1975, upheld 1977)",
+        "Commercial speech protected by the First Amendment (1976), with limits (Central Hudson, 1980)",
+        "Tobacco: Surgeon General (Jan. 1964), pack warning (1965), radio/TV ban (1970 law, effective Jan. 2, 1971), MSA (1998)",
+        "MSA with 46 states: billboards and cartoon characters targeting the young restricted",
+        "Regulation = federal law + FTC + state litigation + self-regulation (NAD, 1971)"
+      ],
+      "dates": [
+        { "date": "1914", "fait": "Federal Trade Commission Act: FTC created" },
+        { "date": "1938", "fait": "Wheeler-Lea Act: unfair or deceptive acts toward consumers" },
+        { "date": "1964", "fait": "Surgeon General's report links smoking and cancer" },
+        { "date": "1965", "fait": "Cigarette Labeling and Advertising Act: warning on packs" },
+        { "date": "January 2, 1971", "fait": "Cigarette ads banned on radio and TV (Public Health Cigarette Smoking Act, 1970)" },
+        { "date": "1976 / 1980", "fait": "Supreme Court: commercial speech protected / Central Hudson limits" },
+        { "date": "1998", "fait": "Master Settlement Agreement (November, 46 states)" }
+      ],
+      "distinctions": [
+        { "a": "FTC (advertising, business practices)", "b": "FDA (food, drugs)", "difference": "The FTC is the general authority on deceptive advertising." },
+        { "a": "1971 ban on radio and TV", "b": "Ban on all tobacco advertising", "difference": "Print and billboards stayed legal, then were restricted in 1998." }
+      ],
+      "memo": "Tobacco ladder 64-65-71-98: report, warning, off the air, settlement.",
+      "questions": [
+        { "q": "What did the Wheeler-Lea Act (1938) change?", "r": "It extended FTC jurisdiction to unfair or deceptive acts toward consumers, allowing it to prosecute false advertising." },
+        { "q": "Since when are cigarette ads banned on US radio and TV?", "r": "January 2, 1971 (Public Health Cigarette Smoking Act, 1970)." },
+        { "q": "Does US advertising enjoy constitutional protection?", "r": "Yes: commercial speech is protected by the First Amendment (1976), within limits (Central Hudson, 1980)." },
+        { "q": "What is corrective advertising? Give the example.", "r": "An FTC order to correct a false claim: Listerine (1975, upheld 1977) had to correct that it prevented colds." }
+      ]
+    },
+    {
+      "chapitre": "cva.contemporain",
+      "titre": "The contemporary era",
+      "idee": "The mass market split into segments from the 1950s-1960s, and digital media pushed targeting down to the individual through personal data, raising privacy issues.",
+      "points": [
+        "Wendell R. Smith (1956): product differentiation vs market segmentation",
+        "Segments: young people (Pepsi Generation, 1963), working women, African American then Hispanic markets, lifestyles (VALS, 1978)",
+        "Criteria: demographic, geographic, psychographic (values, lifestyle), behavioral (frequency, loyalty)",
+        "Lizabeth Cohen, 'A Consumers' Republic' (2003): segmentation fragments the postwar mass market; cable (MTV, 1981)",
+        "Digital: banner (Oct. 1994, HotWired, AT&T), Google AdWords pay-per-click (2000), Facebook ads (2007), programmatic real-time auctions",
+        "Influencers: FTC requires disclosure of paid partnerships (Endorsement Guides)",
+        "Zuboff: 'surveillance capitalism'; Cambridge Analytica (2018); no US equivalent of GDPR, only COPPA (1998, under 13) and state laws (California)"
+      ],
+      "formules": [
+        "Conversion rate = purchases / clicks (300 / 10,000 = 3%)",
+        "CPC = cost per click; CPM = cost per thousand impressions"
+      ],
+      "distinctions": [
+        { "a": "Product differentiation (attract the whole market)", "b": "Market segmentation (adapt offer to distinct groups)", "difference": "Wendell Smith's 1956 distinction." },
+        { "a": "Cookie (technical tracker)", "b": "Personal data (information about a person)", "difference": "The cookie collects; the legal issue is the data." },
+        { "a": "US framework (sector and state laws)", "b": "European GDPR (general regulation)", "difference": "The US has no general federal data protection law." }
+      ],
+      "memo": "From one mass to many slices (Smith, Cohen) to one person per screen (cookies, Zuboff).",
+      "questions": [
+        { "q": "Targeting by values and lifestyle is which type of segmentation?", "r": "Psychographic (e.g. VALS, 1978)." },
+        { "q": "Give four landmarks of US digital advertising.", "r": "First banner (1994, HotWired), AdWords pay-per-click (2000), Facebook advertising (2007), Cambridge Analytica scandal (2018)." },
+        { "q": "10,000 clicks, 300 purchases: conversion rate?", "r": "3%." },
+        { "q": "How is personal data protected in the US?", "r": "No general federal law like GDPR: sector laws (COPPA 1998, children under 13) and state laws (California); FTC disclosure rules." }
+      ]
+    },
+    {
+      "chapitre": "cva.methode",
+      "titre": "Method",
+      "idee": "Analyzing an ad means identifying it, describing it, decoding denotation and connotation, explaining its persuasion and interpreting it in its historical context.",
+      "points": [
+        "Identify: advertiser, brand, product, medium, date, presumed target",
+        "Describe: headline, body copy, visual, tagline/slogan, logo, call to action",
+        "Barthes ('Rhétorique de l'image', 1964): denoted message (what is seen) vs connoted message (cultural meanings); Panzani 'Italianicity'",
+        "Persuasion: logos (argument), ethos (credibility), pathos (emotion); AIDA path",
+        "Context: period and school (reason-why, USP, creative revolution)",
+        "Critical interpretation: gender roles, ethnic representations, values, stereotypes, omissions"
+      ],
+      "formules": [
+        "AIDA = Attention, Interest, Desire, Action"
+      ],
+      "distinctions": [
+        { "a": "Description (what you see)", "b": "Analysis (what it means and why)", "difference": "Description is only one step." },
+        { "a": "Presumed target (inferred)", "b": "Actual target (known to the advertiser)", "difference": "Without a source, speak of a presumed target." },
+        { "a": "Denotation", "b": "Connotation", "difference": "'A smiling woman in a kitchen' is denotation; 'modernity, prosperity' is connotation." }
+      ],
+      "memo": "I-D-D-C-P-C-I: Identify, Describe, Denote, Connote, Persuade, Context, Interpret.",
+      "questions": [
+        { "q": "What is the English term for the argumentative text of an ad?", "r": "Body copy." },
+        { "q": "What are Barthes's two levels of the image?", "r": "Denoted message (literal) and connoted message (cultural associations), e.g. Panzani's 'Italianicity'." },
+        { "q": "1950s fridge ad, 'Give her the kitchen she deserves': what to note?", "r": "Presumed target the husband; gendered division of roles; the fridge connotes modernity and postwar prosperity." }
+      ]
+    }
+  ],
+  "parCoeur": [
+    "N. W. Ayer & Son 1869; 'salesmanship in print' 1904; Hopkins 'Scientific Advertising' 1923",
+    "Brands: Ivory 1879, Coca-Cola 1886, Uneeda 1898; Pure Food and Drug Act 1906",
+    "Bernays: 'Propaganda' 1928, 'torches of freedom' 1929, 'engineering of consent' 1947",
+    "Nielsen 1923; Gallup at Y&R 1932, AIPO 1935, correct forecast 1936; Packard 1957",
+    "TV households: under 10% (1950) → about 90% (1960); quiz show scandals 1958-1959",
+    "USP: Rosser Reeves, Ted Bates, 'Reality in Advertising' 1961, M&M's",
+    "DDB: VW 'Think Small' 1959, Avis 'We try harder' 1962; Marlboro Man 1955",
+    "FTC 1914; Wheeler-Lea 1938; commercial speech 1976; Central Hudson 1980",
+    "Tobacco: 1964 report, 1965 warning, Jan. 2, 1971 radio/TV ban, 1998 MSA",
+    "Wendell Smith 1956; Pepsi Generation 1963; VALS 1978; MTV 1981",
+    "Digital: banner 1994, AdWords 2000, Facebook ads 2007, Cambridge Analytica 2018; COPPA 1998",
+    "Ad analysis: denotation/connotation (Barthes 1964), logos/ethos/pathos, AIDA"
+  ],
+  "pieges": [
+    "Believing all tobacco advertising was banned in 1971: only radio and TV",
+    "Thinking a bigger sample is more reliable: representativeness is what counts (1936)",
+    "Confusing PR (opinion, indirect, unpaid channels) with advertising (paid space)",
+    "Saying US advertising has no constitutional protection: commercial speech is protected, within limits",
+    "Treating the USP as any catchy slogan, or the creative revolution as part of the counterculture",
+    "Stopping at description in an ad analysis, or calling the presumed target the actual target"
+  ]
+}
