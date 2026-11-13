@@ -5,6 +5,7 @@ import { Anneau } from '../ui/visuels';
 import { BADGES, joursActifs, niveau, quetes, serie, statutNotion, statutsPerimetre, xpTotale } from '../jeu';
 import { LIBELLE_STATUT, ORDRE_STATUT, rangStatut } from '../core/statut';
 import { jour } from '../core/store';
+import { estimerSemestre } from '../notes';
 
 const DEFINITIONS: Record<string, string> = {
   inexplore: 'aucune trace d’activité',
@@ -14,6 +15,23 @@ const DEFINITIONS: Record<string, string> = {
   compris: '75 % de réussite, ou déclarée « comprise » avec au moins 40 %',
   maitrise: '75 % ou plus, dont une réussite de niveau 2 ou 3, activité récente',
 };
+
+function NotesResume() {
+  const p = useProgression();
+  const { notes, moyenne } = estimerSemestre(p);
+  return (
+    <section class="bloc note-synthese">
+      <div>
+        <p class="meta">Notes estimées · si l’examen avait lieu aujourd’hui</p>
+        <p class="note-valeur grande">{moyenne !== null ? <><strong>{moyenne.toLocaleString('fr-FR')}</strong><span>/20</span></> : <span class="muted">—</span>}</p>
+      </div>
+      <div>
+        <p class="small">{notes.filter((n) => n.note !== null).map((n) => `${matiere(n.matiere)!.titre} ${n.note!.toLocaleString('fr-FR')}`).join(' · ') || 'Aucune matière estimée pour l’instant : un test rapide suffit.'}</p>
+        <a class="btn" href="#/notes">Voir le détail par matière</a>
+      </div>
+    </section>
+  );
+}
 
 export function Progres() {
   const p = useProgression();
@@ -55,6 +73,8 @@ export function Progres() {
           <p class="small muted">{nv.pour - nv.depuis} XP avant le niveau {nv.niveau + 1}. L’XP récompense des activités vérifiables (réponses justes, exercices réussis, chapitres terminés, notions maîtrisées) ; une même action n’est comptée qu’une fois.</p>
         </div>
       </section>
+
+      <NotesResume />
 
       <div class="section-titre"><h2>Notions</h2><span class="meta">{tous.ids.length} au programme</span></div>
       <div class="chiffres">

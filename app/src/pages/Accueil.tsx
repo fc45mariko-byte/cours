@@ -50,7 +50,7 @@ function CartePlan() {
     <section class="bloc carte-plan" aria-label="Plan de révision">
       <p class="surtitre"><span class="ton-trait">{n ? `Plan 14 jours · jour ${n}` : 'Plan 14 jours'}</span><span>synthèse · récitation · révisions espacées</span></p>
       <p style={{ margin: '4px 0 12px' }}>{n ? <>Aujourd’hui : <strong>{ms.join(', ') || 'récitation finale'}</strong>{j.revisions.length ? `, et les révisions des jours ${j.revisions.map((r) => r.jour).join(', ')}` : ''}.</> : <>Apprendre les {plan.flatMap((x) => x.nouveaux).reduce((s, b) => s + b.chapitres.length, 0)} chapitres du semestre en 14 jours, avec des synthèses courtes et de la récitation.</>}</p>
-      <div class="ligne" style={{ gap: 12, flexWrap: 'wrap' }}><a class="btn" href="#/plan">{n ? 'Voir les tâches du jour' : 'Découvrir le plan'}</a><a class="btn discret" href="#/syntheses">Synthèses</a></div>
+      <div class="ligne" style={{ gap: 12, flexWrap: 'wrap' }}><a class="btn" href="#/plan">{n ? 'Voir les tâches du jour' : 'Découvrir le plan'}</a><a class="btn discret" href="#/syntheses">Synthèses</a><a class="btn discret" href="#/notes">Mes notes estimées</a></div>
     </section>
   );
 }

@@ -119,7 +119,7 @@ test('réglages : export et import de la progression', async ({ page }) => {
 });
 
 test('pas de défilement horizontal', async ({ page }) => {
-  for (const r of ['/', '/#/fil', '/#/bibliotheque', '/#/etudier', '/#/progres', '/#/chapitre/tci.incoterms', '/#/notion/tci.incoterms.transfert-risque', '/#/exercice/e.tci.incoterms.01', '/#/examen', '/#/progres/arbre/cvb']) {
+  for (const r of ['/', '/#/fil', '/#/bibliotheque', '/#/etudier', '/#/progres', '/#/chapitre/tci.incoterms', '/#/notion/tci.incoterms.transfert-risque', '/#/exercice/e.tci.incoterms.01', '/#/examen', '/#/progres/arbre/cvb', '/#/notes', '/#/plan', '/#/synthese/tci', '/#/cahier/cpt']) {
     await page.goto(r);
     await page.waitForTimeout(250);
     const debord = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);

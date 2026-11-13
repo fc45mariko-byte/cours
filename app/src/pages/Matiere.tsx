@@ -43,6 +43,7 @@ export function Matiere({ id }: { id: string }) {
           <a class="btn secondaire" href={`#/etudier/session?p=${m.id}`}>Session de révision</a>
           {index.cahiers.some((c) => c.matiere === m.id) && <a class="btn secondaire" href={`#/cahier/${m.id}`}>Exercices express</a>}
           <a class="btn secondaire" href={`#/progres/arbre/${m.id}`}>Arbre de compétences</a>
+          {m.emploiDuTemps && <a class="btn discret" href="#/notes">Note estimée</a>}
           <a class="btn discret" href={`#/entrainer/qcm?p=${m.id}`}>QCM ({nbQ})</a>
           <a class="btn discret" href={`#/flashcards?p=${m.id}`}>Flashcards ({nbF})</a>
           <a class="btn discret" href={`#/entrainer?p=${m.id}&onglet=exercices`}>Exercices ({nbE})</a>

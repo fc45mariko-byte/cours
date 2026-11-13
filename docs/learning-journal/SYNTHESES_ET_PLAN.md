@@ -19,3 +19,11 @@ Objectif : acquérir le contenu du semestre en deux semaines.
 - Chaque jour : lire la synthèse des chapitres du jour, réciter sans regarder, un exercice express, flashcards ; révisions des chapitres appris à J-1, J-3 et J-7 (récitation).
 - Jours 11-12 : par cœur, récitation complète et examen blanc (piste technique puis langues). Jours 13-14 : chapitres « À revoir », erreurs, récitation finale.
 - Début enregistré dans `preferences.planDebut` ; cases cochées dans `marques['plan:<jour>:<tâche>']`.
+
+## Notes estimées (`#/notes`, `app/src/notes.ts`)
+- Pour chaque matière de l'emploi du temps : note /20 probable si l'examen avait lieu maintenant, fourchette, fiabilité, chapitres les plus faibles.
+- Niveau par notion : maîtrise mesurée (QCM, exercices, flashcards) ; sinon indices déclaratifs plafonnés (« Je sais » 0,5, « compris » 0,45, « lu » 0,25, chapitre terminé 0,25, fiche ouverte 0,1). Les notions jamais travaillées comptent 0.
+- Un examen blanc sur toute la matière (moins de 21 jours, au moins 5 questions) sert de niveau aux notions non interrogées et compte pour moitié.
+- Note = 20 × moyenne, arrondie au demi-point ; fourchette ± (1,5 + 5 × part non mesurée, − 1,5 avec examen), au moins ± 1.
+- Pas de données : pas de note (invitation à un test rapide). Tourisme : indisponible tant que les supports manquent.
+- Moyenne indicative non pondérée (coefficients absents). L'expression écrite et orale n'est pas évaluée (signalé pour les matières de langue, traduction et rédaction).

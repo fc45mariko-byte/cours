@@ -254,3 +254,22 @@ test('plan 14 jours : commencer, cocher une tâche du jour', async ({ page }) =>
   await expect(page.getByText('Plan 14 jours · jour 1')).toBeVisible();
   expect(e).toEqual([]);
 });
+
+test('notes estimées : une ligne par matière du semestre, note après un examen blanc', async ({ page }) => {
+  const e = erreursConsole(page);
+  const edt = index.matieres.filter((m: { emploiDuTemps?: unknown }) => m.emploiDuTemps);
+  await page.goto('/#/notes');
+  await expect(page.locator('.note-matiere')).toHaveCount(edt.length);
+  await expect(page.getByText('Pas encore de données sur cette matière').first()).toBeVisible();
+  await page.evaluate(() => {
+    const p = JSON.parse(localStorage.getItem('cours-l3-lea:progression') ?? '{}');
+    p.examensPasses = [{ id: 'x', t: Date.now(), score: 15, total: 20, filtre: 'cpt' }];
+    localStorage.setItem('cours-l3-lea:progression', JSON.stringify(p));
+  });
+  await page.reload();
+  await expect(page.locator('#note-cpt .note-valeur strong')).toHaveText('15');
+  await expect(page.locator('#note-cpt')).toContainText('examen blanc récent : 15/20');
+  await page.goto('/#/progres');
+  await expect(page.getByRole('link', { name: 'Voir le détail par matière' })).toBeVisible();
+  expect(e).toEqual([]);
+});

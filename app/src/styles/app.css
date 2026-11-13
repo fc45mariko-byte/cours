@@ -617,3 +617,21 @@ body { background: linear-gradient(180deg, #fdf3f6 0%, var(--papier) 40%, #fbe9e
   .recitation details > *:not(summary) { display: block; }
 }
 .plan-jour .rubrique { margin: 0; }
+
+/* ============ Notes estimées ============ */
+.note-synthese { display: grid; grid-template-columns: auto 1fr; gap: var(--e5); align-items: center; border-top: 3px solid var(--or); }
+@media (max-width: 599px) { .note-synthese { grid-template-columns: 1fr; gap: var(--e3); } }
+.note-valeur { font-family: var(--serif); margin: 0; white-space: nowrap; }
+.note-valeur strong { font-size: 2.2rem; font-weight: 600; color: var(--nuit); }
+.note-valeur span { color: var(--discret); margin-left: 2px; }
+.note-valeur.grande strong { font-size: 3.2rem; }
+.note-entete { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--e3); }
+.note-matiere { border-left: 4px solid var(--ton); }
+.note-barre { position: relative; height: 12px; border-radius: 99px; background: var(--surface-2); margin: var(--e3) 0 var(--e2); }
+.note-barre .fourchette { position: absolute; top: 0; bottom: 0; border-radius: 99px; background: var(--ton-pale); border: 1px solid var(--ton); }
+.note-barre .moyenne-trait { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--filet-fort); opacity: .35; }
+.note-barre .point { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--nuit); box-shadow: 0 0 0 3px var(--papier); }
+.note-details { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--discret); }
+.note-appreciation { font-weight: 700; }
+.note-appreciation.danger { color: var(--ko); } .note-appreciation.fragile { color: var(--terre); }
+.note-appreciation.juste { color: var(--ocre); } .note-appreciation.bien { color: var(--sauge); }
